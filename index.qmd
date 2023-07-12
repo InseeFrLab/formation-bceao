@@ -1,0 +1,19 @@
+---
+listing:
+  id: formations
+  contents: cards
+  sort: "order asc"
+  template: style/listing-grid.ejs
+page-layout: full
+toc: false
+---
+
+## Formation BCEAO
+
+Un parcours de formation construit par l'[__Insee__](https://www.insee.fr/fr/accueil).
+
+Tous les supports sont sur le [`Github InseeFrLab` {{< fa brands github >}}](https://github.com/InseeFrLab/formation-bceao)
+
+::: {#formations}
+:::
+

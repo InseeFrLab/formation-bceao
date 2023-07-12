@@ -1,0 +1,24 @@
+project:
+  type: website
+  render:
+    - /slides/day3.qmd
+    - index.qmd
+    - "/cards/**/*.qmd"
+
+website:
+  title: "Formation BCEAO"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: slides/day3.html
+        text: Jour 3
+    background: "#4758AB"
+  # twitter-card:
+  #   image: /cards/version-light/cheetah.png
+
+format:
+  html:
+    theme: cosmo
+    css: style/styles.css
+    toc: true
