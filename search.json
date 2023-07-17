@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "slides/day3.html#context",
+    "href": "slides/day3.html#context",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Context",
+    "text": "Context\n\nPlusieurs changements majeurs:\n\nInterne: Refonte du répertoire Sirene 4.\nExterne: Mise en place d’un guichet unique pour déclarer les créations d’entreprises.\n\nConstat: Sicore n’est plus l’outil adapté ➨ seulement 30% de codification automatique.\nConséquence: moment idéal pour proposer une nouvelle méthodologie de codification automatique de l’APE."
+  },
+  {
+    "objectID": "slides/day3.html#données",
+    "href": "slides/day3.html#données",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Données",
+    "text": "Données\n\n\\(\\approx\\) 10 million de liasses d’entreprises issues de Sirene 3 couvrant la période 2014-2022.\nDonnées labellisées par Sicore ou par un gestionnaire.\nUne observation consiste en :\n\nUn descriptif textuel de l’activité\nLa nature de l’activité – NAT (23 modalités)\nLe type de la liasse – TYP (15 modalités)\nLe type d’évènement – EVT (24 modalités)\nLa surface (\\(m^2\\)) – SUR (4 modalités)"
+  },
+  {
+    "objectID": "slides/day3.html#la-nomenclature-hiérarchique-de-lape",
+    "href": "slides/day3.html#la-nomenclature-hiérarchique-de-lape",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "La nomenclature hiérarchique de l’APE",
+    "text": "La nomenclature hiérarchique de l’APE\n\n\n\n\n\n\n\n\n\nNiveau\nCode\nLibellé\nTaille\n\n\n\n\nSection\nH\nTransports et entreposage\n21\n\n\nDivision\n52\nEntreposage et services auxiliaires des transports\n88\n\n\nGroupe\n522\nServices auxiliaires des transports\n272\n\n\nClasse\n5224\nManutention\n615\n\n\nSous-classe\n5224A\nManutention portuaire\n732"
+  },
+  {
+    "objectID": "slides/day3.html#feature-extraction",
+    "href": "slides/day3.html#feature-extraction",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Feature extraction",
+    "text": "Feature extraction\n\nPlongements lexicaux: méthode de vectorisation.\nPlongements pré-entrainé disponibles en open-source.\nNous apprenons nos propres plongements de mots.\nMais aussi des plogements de :\n\nn-grams de mots et de n-grams de caractères."
+  },
+  {
+    "objectID": "slides/day3.html#classifieur-linéaire",
+    "href": "slides/day3.html#classifieur-linéaire",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Classifieur linéaire",
+    "text": "Classifieur linéaire\n\n2 méthodes pour la classification :\n\nSoftmax : un unique classifieur multiclasse.\nOne-vs-all : de multiples classifieurs binaires.\n\nOptimisation : algorithme de type descente de gradient stochastique.\nFonction de perte : entropie croisée."
+  },
+  {
+    "objectID": "slides/day3.html#le-modèle-fasttext",
+    "href": "slides/day3.html#le-modèle-fasttext",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Le modèle fastText",
+    "text": "Le modèle fastText\n\nfastText: Modèle de type “bag of n-grams” très simple et rapide (C++)."
+  },
+  {
+    "objectID": "slides/day3.html#prise-en-compte-des-variables-catégorielles",
+    "href": "slides/day3.html#prise-en-compte-des-variables-catégorielles",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Prise en compte des variables catégorielles",
+    "text": "Prise en compte des variables catégorielles\n\nConcaténation du libellé avec les noms et valeurs des variables annexes :\n\n\n\n\nText\nNAT\nTYP\nEVT\nSUR\n\n\n\n\nCours de musique\nNaN\nX\n01P\nNaN\n\n\n\n\n🢃\n\n“Cours de musique NAT_NaN TYP_X EVT_01P SUR_NaN”\n\nMéthode imparfaite : 3-grams “AT_” ou “T_0” utilisés."
+  },
+  {
+    "objectID": "slides/day3.html#prétraitements-effectués",
+    "href": "slides/day3.html#prétraitements-effectués",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Prétraitements effectués",
+    "text": "Prétraitements effectués\n\nNettoyage indispensable pour l’analyse textuelle.\nContrainte : simple, léger et facilement reproductible en Java .\n\n\n\n\n\n\n\n\nTransformation\nText description\n\n\n\n\nInput\n3 D: La Deratisation - La Desinsectisation - La Desinfection\n\n\nLower-case conversion\n3 d: la deratisation - la desinsectisation - la desinfection\n\n\nPunctuations removal\n3 d la deratisation la desinsectisation la desinfection"
+  },
+  {
+    "objectID": "slides/day3.html#preprocessing",
+    "href": "slides/day3.html#preprocessing",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Preprocessing",
+    "text": "Preprocessing\n\n\n\n\n\n\n\nTransformation\nLibellé\n\n\n\n\nInput\n3 D: La Deratisation - La Desinsectisation - La Desinfection\n\n\n…\n…\n\n\nNumbers removal\nd la deratisation la desinsectisation la desinfection\n\n\nOne-letter word removal\nla deratisation la desinsectisation la desinfection\n\n\nStopwords removal\nderatisation desinsectisation desinfection"
+  },
+  {
+    "objectID": "slides/day3.html#preprocessing-1",
+    "href": "slides/day3.html#preprocessing-1",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Preprocessing",
+    "text": "Preprocessing\n\n\n\nTransformation\nLibellé\n\n\n\n\nInput\n3 D: La Deratisation - La Desinsectisation - La Desinfection\n\n\n…\n…\n\n\nNaN removal\nderatisation desinsectisation desinfection\n\n\nStemming\nderatis desinsectis desinfect"
+  },
+  {
+    "objectID": "slides/day3.html#une-bonne-performance-globale",
+    "href": "slides/day3.html#une-bonne-performance-globale",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Une bonne performance globale",
+    "text": "Une bonne performance globale\n\nFigure 1: Taux de précision pour chaque niveau de la nomenclature du code APE\nPrès de 80% des libellés issus du guichet unique sont correctement codifiés.\nErreurs de prédiction proches dans la nomenclature."
+  },
+  {
+    "objectID": "slides/day3.html#fludifier-le-processus-de-codification-manuel",
+    "href": "slides/day3.html#fludifier-le-processus-de-codification-manuel",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Fludifier le processus de codification manuel",
+    "text": "Fludifier le processus de codification manuel\n\nFigure 2: Top-\\(k\\) accuracy pour chaque jeu de données.\nConnaissance des probabilités pour chaque classe.\nDans 94% des cas, la bonne classification se trouve dans les 5 prédictions les plus probables."
+  },
+  {
+    "objectID": "slides/day3.html#construction-dun-indice-de-confiance",
+    "href": "slides/day3.html#construction-dun-indice-de-confiance",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Construction d’un indice de confiance",
+    "text": "Construction d’un indice de confiance\n\n\nObjectif : discriminer les mauvaises des bonnes prédictions.\nIndice de confiance retenu : différence entre les deux probabilités les plus élevées."
+  },
+  {
+    "objectID": "slides/day3.html#efficiency-of-the-manual-coding-process",
+    "href": "slides/day3.html#efficiency-of-the-manual-coding-process",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Efficiency of the manual coding process",
+    "text": "Efficiency of the manual coding process\n\nFigure 3: Précision en fonction du taux de reprise manuelle effectuée.\nOptimisation de la reprise manuelle ➨ gain de performance."
+  },
+  {
+    "objectID": "slides/day3.html#deployment-of-the-model",
+    "href": "slides/day3.html#deployment-of-the-model",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Deployment of the model",
+    "text": "Deployment of the model\n\nModels have been deployed in a production environment since November 2022.\nEmerging new challenges include:\n\nOrganisational issues.\nReal-time monitoring.\nRegular re-training.\n\nMLOps approach is required:\n\nJoin us on Wednesday, June 7th for a Hands-on Lab!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Formation BCEAO",
+    "section": "",
+    "text": "Un parcours de formation construit par l’Insee.\nTous les supports sont sur le Github InseeFrLab \n\n\n  \n     \n      \n           \n          \n            \n            \n              Description\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#formation-bceao",
+    "href": "index.html#formation-bceao",
+    "title": "Formation BCEAO",
+    "section": "",
+    "text": "Un parcours de formation construit par l’Insee.\nTous les supports sont sur le Github InseeFrLab \n\n\n  \n     \n      \n           \n          \n            \n            \n              Description\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n\n\nNo matching items"
+  }
+]
