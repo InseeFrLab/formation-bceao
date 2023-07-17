@@ -15,5 +15,5 @@ slides:
 code:
   text: Code 
   url: https://github.com/InseeFrLab/formation-bceao
-order: 3
+order: 1
 ---

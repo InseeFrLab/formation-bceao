@@ -79,36 +79,8 @@ plot_TOPK_Accuracy(TOPK_Accuracy)
 
 ## Construction d'un indice de confiance {.scrollable}
 
+![](img/fig-ic-distrib.png){fig-align="center"}
 
-```{r}
-#| label: fig-ic-distrib
-#| fig-cap: Distribution de l’indice de confiance en fonction du résultat de la prédiction.
-#| fig-width: 13
-#| fig-height: 5
-#| fis-pos: center
-
-plot_IC_distrib <- function(data, thresholds, ypos){
-  plot <- ggplot(data)+
-    geom_histogram(aes(x=Score, fill=Results, y=..density..),binwidth=.01, alpha=.5, position="identity") +
-    scale_fill_manual(values=c(Palette_col),labels=c("Bad predictions", "Good predictions"))+
-    geom_vline(xintercept = thresholds$x, color = rgb(83, 83, 83, maxColorValue = 255))+
-    theme_custom()+
-    theme(
-      plot.title=element_text(size=26, margin=margin(b=0.7, unit='cm')),
-      legend.text = element_text(size = 24),
-      axis.text.y = element_text(size = 24),
-      axis.text.x = element_text(size = 24),
-    )+
-    annotate("text", x = thresholds$x+0.03, y = ypos, label = c("5%", "10%", "15%", "20%", "25%"), size = 7)
-  
-  return(plot)
-  
-}
-
-plot_IC_distrib(IC_distrib, IC_thresholds, 51)
-
-
-```
 
 - [**Objectif**]{.orange} : [**discriminer**]{.blue2} les *mauvaises* des *bonnes* prédictions.
 - [**Indice de confiance retenu**]{.orange} : différence entre les deux probabilités les plus élevées.
