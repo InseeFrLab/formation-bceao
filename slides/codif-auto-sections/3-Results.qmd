@@ -94,7 +94,7 @@ plot_TOPK_Accuracy(TOPK_Accuracy)+
 - [**Indice de confiance retenu**]{.orange} : différence entre les deux probabilités les plus élevées.
 
 
-## Efficiency of the manual coding process
+## Améliorer l'efficacité de la reprise manuelle
 
 
 ```{r, dev = "png", dev.args=list(bg="transparent")}

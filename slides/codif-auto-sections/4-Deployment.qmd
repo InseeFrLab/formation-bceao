@@ -1,4 +1,13 @@
-## Deployment of the model
+## La notion de mise en production
+
+- [**Mettre en production**]{.orange} : faire [**vivre**]{.blue2} une application dans l’espace de ses [**utilisateurs**]{.blue2}
+  - Notion simple mais mise en oeuvre compliquée !
+- Dépasser le stade de l’expérimentation
+  - [**Bonnes pratiques**]{.blue2} de développement
+  - Techniques informatiques [**d’industrialisation**]{.blue2}
+- Enjeu : pouvoir jouer le [**rôle d’interface**]{.orange} entre métier et équipes techniques
+
+## Difficulté de la mise en production
 
 - Models have been deployed in a [**production environment**]{.orange} since November 2022.
 - Emerging [**new challenges**]{.orange} include:
