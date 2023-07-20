@@ -3,7 +3,7 @@
 ## Une bonne performance globale
 
 
-```{r}
+```{r, dev = "png", dev.args=list(bg="transparent")}
 #| label: fig-acc-lvl
 #| fig-cap: Taux de précision pour chaque niveau de la nomenclature du code APE
 #| fig-width: 13
@@ -33,7 +33,11 @@ plot_Accuracy_lvl <- function(data){
   return(plot)
 }
 
-plot_Accuracy_lvl(Accuracy_lvl)
+plot_Accuracy_lvl(Accuracy_lvl)+ 
+    theme(
+        panel.background = element_rect(fill='transparent'),
+         plot.background = element_rect(fill='transparent', color=NA)
+    )
 
 ```
 
@@ -44,7 +48,7 @@ plot_Accuracy_lvl(Accuracy_lvl)
 ## Fludifier le processus de codification manuel
 
 
-```{r}
+```{r, dev = "png", dev.args=list(bg="transparent")}
 #| label: fig-acc-top-k
 #| fig-cap: Top-$k$ accuracy pour chaque jeu de données.
 #| fig-width: 13
@@ -69,7 +73,11 @@ plot_TOPK_Accuracy <- function(data){
   return(plot)
 }
 
-plot_TOPK_Accuracy(TOPK_Accuracy)
+plot_TOPK_Accuracy(TOPK_Accuracy)+ 
+    theme(
+        panel.background = element_rect(fill='transparent'),
+         plot.background = element_rect(fill='transparent', color=NA)
+    )
 
 ```
 
@@ -89,7 +97,7 @@ plot_TOPK_Accuracy(TOPK_Accuracy)
 ## Efficiency of the manual coding process
 
 
-```{r}
+```{r, dev = "png", dev.args=list(bg="transparent")}
 #| label: fig-reprise
 #| fig-cap: Précision en fonction du taux de reprise manuelle effectuée.
 #| fig-width: 13
@@ -118,7 +126,11 @@ plot_Accuracy_reprise <- function(data){
 }
 
 
-plot_Accuracy_reprise(Accuracy_reprise)
+plot_Accuracy_reprise(Accuracy_reprise)+ 
+    theme(
+        panel.background = element_rect(fill='transparent'),
+         plot.background = element_rect(fill='transparent', color=NA)
+    )
 
 
 ```
