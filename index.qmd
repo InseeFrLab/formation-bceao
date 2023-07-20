@@ -3,6 +3,7 @@ listing:
   id: formations
   contents: cards
   sort: "order asc"
+  categories: true
   template: style/listing-grid.ejs
 page-layout: full
 toc: false

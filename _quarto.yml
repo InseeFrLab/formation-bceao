@@ -1,24 +1,53 @@
 project:
   type: website
   render:
-    - /slides/day3.qmd
+    - /slides/*.qmd
     - index.qmd
-    - "/cards/**/*.qmd"
+    - /cards/*.qmd
 
 website:
+  page-navigation: true
   title: "Formation BCEAO"
+  site-url: "https://inseefrlab.github.io/formation-bceao/"
+
+  repo-url: "https://github.com/InseeFrLab/formation-bceao"
+  # repo-actions: [edit, issue]
+
+  open-graph: true
+
+  page-footer:
+    background: "#A7D5E8"
+    left: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    right:
+    - text: "License"
+      href: LICENCE.md
+
   navbar:
+    background: "#A7D5E8"
+    logo: "images/logo-INSEE.png"
+    align: center
+    title: false
+    collapse-below: lg
+
+    right:
+      - icon: github
+        href: "https://github.com/InseeFrLab/formation-bceao"
+        aria-label: GitHub
+
     left:
       - href: index.qmd
-        text: Home
-      - href: slides/day3.html
-        text: Jour 3
-    background: "#4758AB"
+        text: Accueil
+  
   # twitter-card:
   #   image: /cards/version-light/cheetah.png
 
 format:
   html:
-    theme: cosmo
-    css: style/styles.css
+    theme:
+      light: [cosmo, style/styles.css]
+    reference-location: margin
     toc: true
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Atkinson Hyperlegible"
+    include-in-header: "style/fontawesome.html"

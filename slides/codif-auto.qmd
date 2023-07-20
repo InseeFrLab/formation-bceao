@@ -15,7 +15,7 @@ chalkboard: # press the B key to toggle chalkboard
 # multiplex: true
 format:
   onyxia-revealjs:
-    output-file: day3.html
+    output-file: codif-auto.html
 controls: true
 css: custom.css
 from: markdown+emoji
@@ -39,16 +39,16 @@ Accuracy_reprise <- readr::read_csv("data/accuracy_reprise.csv")
 
 # Contexte
 
-{{< include day3-sections/1-Context.qmd >}}
+{{< include codif-auto-sections/1-Context.qmd >}}
 
 # Méthodologie
 
-{{< include day3-sections/2-Methodo.qmd >}}
+{{< include codif-auto-sections/2-Methodo.qmd >}}
 
 # Résultats
 
-{{< include day3-sections/3-Results.qmd >}}
+{{< include codif-auto-sections/3-Results.qmd >}}
 
 # De l'expérimentation à la mise en production
 
-{{< include day3-sections/4-Deployment.qmd >}}
+{{< include codif-auto-sections/4-Deployment.qmd >}}

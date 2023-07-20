@@ -1,3 +1,8 @@
+/*-- scss:defaults --*/
+$primary: #b83352 ;
+
+/*-- scss:rules --*/
+
 .no-anchor.card-title.listing-title {
     font-weight: bolder !important;
     color: #ff562c !important;
@@ -19,5 +24,3 @@
 .grid-item-link:hover {
     transform: scale(1.05); /* Increase the scale for a zoom effect */
 }
-
-$primary: #b83352 ;

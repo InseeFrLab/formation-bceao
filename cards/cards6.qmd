@@ -1,0 +1,16 @@
+
+---
+title: Introduction au MLOps avec MLflow
+image: /images/mlflow-logo.jpg
+date: "2023-09-01"
+description: |
+  <b>Description :</b> Blabla 
+categories:
+  - python
+  - NLP
+  - MLflow
+slides:
+  text: Slides
+  url: https://inseefrlab.github.io/formation-mlops/
+order: 1
+---
