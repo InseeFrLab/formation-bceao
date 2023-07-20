@@ -1,1 +1,1 @@
-Sitemap: https://github.com/InseeFrLab/formation-bceao/sitemap.xml
+Sitemap: https://inseefrlab.github.io/formation-bceao/sitemap.xml

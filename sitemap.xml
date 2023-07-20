@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/InseeFrLab/formation-bceao/cards/day3/index.html</loc>
-    <lastmod>2023-07-17T12:51:38.375Z</lastmod>
+    <loc>https://inseefrlab.github.io/formation-bceao/cards/cards6.html</loc>
+    <lastmod>2023-07-20T10:33:51.330Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/InseeFrLab/formation-bceao/slides/day3.html</loc>
-    <lastmod>2023-07-17T12:51:36.183Z</lastmod>
+    <loc>https://inseefrlab.github.io/formation-bceao/index.html</loc>
+    <lastmod>2023-07-20T10:33:50.650Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/InseeFrLab/formation-bceao/index.html</loc>
-    <lastmod>2023-07-17T12:51:38.043Z</lastmod>
+    <loc>https://inseefrlab.github.io/formation-bceao/slides/codif-auto.html</loc>
+    <lastmod>2023-07-20T10:33:48.786Z</lastmod>
+  </url>
+  <url>
+    <loc>https://inseefrlab.github.io/formation-bceao/cards/cards5.html</loc>
+    <lastmod>2023-07-20T10:33:50.994Z</lastmod>
   </url>
 </urlset>
