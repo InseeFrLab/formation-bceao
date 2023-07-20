@@ -105,17 +105,24 @@
     "text": "Construction d’un indice de confiance\n\n\nObjectif : discriminer les mauvaises des bonnes prédictions.\nIndice de confiance retenu : différence entre les deux probabilités les plus élevées."
   },
   {
-    "objectID": "slides/codif-auto.html#efficiency-of-the-manual-coding-process",
-    "href": "slides/codif-auto.html#efficiency-of-the-manual-coding-process",
+    "objectID": "slides/codif-auto.html#améliorer-lefficacité-de-la-reprise-manuelle",
+    "href": "slides/codif-auto.html#améliorer-lefficacité-de-la-reprise-manuelle",
     "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Efficiency of the manual coding process",
-    "text": "Efficiency of the manual coding process\n\nFigure 3: Précision en fonction du taux de reprise manuelle effectuée.\nOptimisation de la reprise manuelle ➨ gain de performance."
+    "section": "Améliorer l’efficacité de la reprise manuelle",
+    "text": "Améliorer l’efficacité de la reprise manuelle\n\nFigure 3: Précision en fonction du taux de reprise manuelle effectuée.\nOptimisation de la reprise manuelle ➨ gain de performance."
   },
   {
-    "objectID": "slides/codif-auto.html#deployment-of-the-model",
-    "href": "slides/codif-auto.html#deployment-of-the-model",
+    "objectID": "slides/codif-auto.html#la-notion-de-mise-en-production",
+    "href": "slides/codif-auto.html#la-notion-de-mise-en-production",
     "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Deployment of the model",
-    "text": "Deployment of the model\n\nModels have been deployed in a production environment since November 2022.\nEmerging new challenges include:\n\nOrganisational issues.\nReal-time monitoring.\nRegular re-training.\n\nMLOps approach is required:\n\nJoin us on Wednesday, June 7th for a Hands-on Lab!"
+    "section": "La notion de mise en production",
+    "text": "La notion de mise en production\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\n\nNotion simple mais mise en oeuvre compliquée !\n\nDépasser le stade de l’expérimentation\n\nBonnes pratiques de développement\nTechniques informatiques d’industrialisation\n\nEnjeu : pouvoir jouer le rôle d’interface entre métier et équipes techniques"
+  },
+  {
+    "objectID": "slides/codif-auto.html#difficulté-de-la-mise-en-production",
+    "href": "slides/codif-auto.html#difficulté-de-la-mise-en-production",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Difficulté de la mise en production",
+    "text": "Difficulté de la mise en production\n\nModels have been deployed in a production environment since November 2022.\nEmerging new challenges include:\n\nOrganisational issues.\nReal-time monitoring.\nRegular re-training.\n\nMLOps approach is required:\n\nJoin us on Wednesday, June 7th for a Hands-on Lab!"
   }
 ]

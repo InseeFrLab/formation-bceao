@@ -31,6 +31,7 @@
     }
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="_extensions/InseeFrLab/onyxia/logo.css">
   <link rel="stylesheet" href="custom.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -322,6 +323,7 @@
       margin-right: 0; 
     }
   </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <meta property="og:title" content="Formation BCEAO - Codification automatique de l’APE avec de l’apprentissage statistique">
 <meta property="og:description" content="BCEAO - Jour 3">
 <meta property="og:site-name" content="Formation BCEAO">
@@ -330,7 +332,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-size="contain" class="quarto-title-block center">
+<section id="title-slide" data-background-image="_extensions/InseeFrLab/onyxia/background.svg" data-background-size="contain" class="quarto-title-block center">
   <h1 class="title">Codification automatique de l’APE avec de l’apprentissage statistique</h1>
   <p class="subtitle"></p><p><strong><span class="orange">BCEAO - Jour 3</span></strong></p><p></p>
 
@@ -345,11 +347,11 @@
   <p class="date">27 septembre 2023</p>
 </section>
 <section>
-<section id="contexte" class="title-slide slide level1 center" data-background-size="contain">
+<section id="contexte" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>Contexte</h1>
 
 </section>
-<section id="context" class="slide level2" data-background-size="contain">
+<section id="context" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Context</h2>
 <ul>
 <li><p><span class="orange"><strong>Plusieurs changements majeurs</strong></span>:</p>
@@ -361,7 +363,7 @@
 <li><p><span class="orange"><strong>Conséquence</strong></span>: moment idéal pour proposer une nouvelle méthodologie de codification automatique de l’APE.</p></li>
 </ul>
 </section>
-<section id="données" class="slide level2" data-background-size="contain">
+<section id="données" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Données</h2>
 <ul>
 <li><p><span class="orange"><span class="math inline">\(\approx\)</span> <strong>10 million</strong></span> de liasses d’entreprises issues de Sirene 3 couvrant la période 2014-2022.</p></li>
@@ -376,7 +378,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="la-nomenclature-hiérarchique-de-lape" class="slide level2" data-background-size="contain">
+<section id="la-nomenclature-hiérarchique-de-lape" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>La nomenclature hiérarchique de l’APE</h2>
 <table>
 <colgroup>
@@ -428,11 +430,11 @@
 </table>
 </section></section>
 <section>
-<section id="méthodologie" class="title-slide slide level1 center" data-background-size="contain">
+<section id="méthodologie" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>Méthodologie</h1>
 
 </section>
-<section id="feature-extraction" class="slide level2" data-background-size="contain">
+<section id="feature-extraction" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Feature extraction</h2>
 <ul>
 <li><span class="orange"><strong>Plongements lexicaux</strong></span>: méthode de <span class="blue2"><strong>vectorisation</strong></span>.</li>
@@ -449,7 +451,7 @@
 </figure>
 </div>
 </section>
-<section id="classifieur-linéaire" class="slide level2" data-background-size="contain">
+<section id="classifieur-linéaire" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Classifieur linéaire</h2>
 <ul>
 <li><span class="orange"><strong>2 méthodes</strong></span> pour la classification :
@@ -467,7 +469,7 @@
 <li><span class="orange"><strong>fastText</strong></span>: Modèle de type “bag of n-grams” très <span class="blue2"><strong>simple</strong></span> et <span class="blue2"><strong>rapide</strong></span> (<code>C++</code>).</li>
 </ul>
 </section>
-<section id="prise-en-compte-des-variables-catégorielles" class="slide level2" data-background-size="contain">
+<section id="prise-en-compte-des-variables-catégorielles" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Prise en compte des variables catégorielles</h2>
 <ul>
 <li><span class="orange"><strong>Concaténation</strong></span> du libellé avec les noms et valeurs des variables annexes :</li>
@@ -500,7 +502,7 @@
 <li><span class="orange"><strong>Méthode imparfaite</strong></span> : 3-grams “AT_” ou “T_0” utilisés.</li>
 </ul>
 </section>
-<section id="prétraitements-effectués" class="slide level2" data-background-size="contain">
+<section id="prétraitements-effectués" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Prétraitements effectués</h2>
 <ul>
 <li><span class="orange"><strong>Nettoyage</strong></span> indispensable pour l’analyse textuelle.</li>
@@ -533,7 +535,7 @@
 </tbody>
 </table>
 </section>
-<section id="preprocessing" class="slide level2" data-background-size="contain">
+<section id="preprocessing" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Preprocessing</h2>
 <table>
 <colgroup>
@@ -570,7 +572,7 @@
 </tbody>
 </table>
 </section>
-<section id="preprocessing-1" class="slide level2" data-background-size="contain">
+<section id="preprocessing-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Preprocessing</h2>
 <table>
 <thead>
@@ -600,11 +602,11 @@
 </table>
 </section></section>
 <section>
-<section id="résultats" class="title-slide slide level1 center" data-background-size="contain">
+<section id="résultats" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>Résultats</h1>
 
 </section>
-<section id="une-bonne-performance-globale" class="slide level2" data-background-size="contain">
+<section id="une-bonne-performance-globale" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Une bonne performance globale</h2>
 
 <img data-src="codif-auto_files/figure-revealjs/fig-acc-lvl-1.png" width="1248" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;1: Taux de précision pour chaque niveau de la nomenclature du code APE</p><ul>
@@ -612,7 +614,7 @@
 <li>Erreurs de prédiction <span class="orange"><strong>proches</strong></span> dans la nomenclature.</li>
 </ul>
 </section>
-<section id="fludifier-le-processus-de-codification-manuel" class="slide level2" data-background-size="contain">
+<section id="fludifier-le-processus-de-codification-manuel" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Fludifier le processus de codification manuel</h2>
 
 <img data-src="codif-auto_files/figure-revealjs/fig-acc-top-k-1.png" width="1248" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;2: Top-<span class="math inline">\(k\)</span> accuracy pour chaque jeu de données.</p><ul>
@@ -620,7 +622,7 @@
 <li>Dans <span class="orange"><strong>94%</strong></span> des cas, la bonne classification se trouve dans les 5 prédictions les plus probables.</li>
 </ul>
 </section>
-<section id="construction-dun-indice-de-confiance" class="slide level2 scrollable" data-background-size="contain">
+<section id="construction-dun-indice-de-confiance" class="slide level2 scrollable" data-background-image="background.svg" data-background-size="contain">
 <h2>Construction d’un indice de confiance</h2>
 
 <img data-src="img/fig-ic-distrib.png" class="r-stretch quarto-figure-center"><ul>
@@ -628,20 +630,35 @@
 <li><span class="orange"><strong>Indice de confiance retenu</strong></span> : différence entre les deux probabilités les plus élevées.</li>
 </ul>
 </section>
-<section id="efficiency-of-the-manual-coding-process" class="slide level2" data-background-size="contain">
-<h2>Efficiency of the manual coding process</h2>
+<section id="améliorer-lefficacité-de-la-reprise-manuelle" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Améliorer l’efficacité de la reprise manuelle</h2>
 
 <img data-src="codif-auto_files/figure-revealjs/fig-reprise-1.png" width="1248" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;3: Précision en fonction du taux de reprise manuelle effectuée.</p><ul>
 <li>Optimisation de la reprise manuelle ➨ <span class="orange"><strong>gain de performance</strong></span>.</li>
 </ul>
 </section></section>
 <section>
-<section id="de-lexpérimentation-à-la-mise-en-production" class="title-slide slide level1 center" data-background-size="contain">
+<section id="de-lexpérimentation-à-la-mise-en-production" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>De l’expérimentation à la mise en production</h1>
 
 </section>
-<section id="deployment-of-the-model" class="slide level2" data-background-size="contain">
-<h2>Deployment of the model</h2>
+<section id="la-notion-de-mise-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>La notion de mise en production</h2>
+<ul>
+<li><span class="orange"><strong>Mettre en production</strong></span> : faire <span class="blue2"><strong>vivre</strong></span> une application dans l’espace de ses <span class="blue2"><strong>utilisateurs</strong></span>
+<ul>
+<li>Notion simple mais mise en oeuvre compliquée !</li>
+</ul></li>
+<li>Dépasser le stade de l’expérimentation
+<ul>
+<li><span class="blue2"><strong>Bonnes pratiques</strong></span> de développement</li>
+<li>Techniques informatiques <span class="blue2"><strong>d’industrialisation</strong></span></li>
+</ul></li>
+<li>Enjeu : pouvoir jouer le <span class="orange"><strong>rôle d’interface</strong></span> entre métier et équipes techniques</li>
+</ul>
+</section>
+<section id="difficulté-de-la-mise-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Difficulté de la mise en production</h2>
 <ul>
 <li>Models have been deployed in a <span class="orange"><strong>production environment</strong></span> since November 2022.</li>
 <li>Emerging <span class="orange"><strong>new challenges</strong></span> include:
