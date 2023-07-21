@@ -2,17 +2,43 @@
 
 - [**Mettre en production**]{.orange} : faire [**vivre**]{.blue2} une application dans l’espace de ses [**utilisateurs**]{.blue2}
   - Notion simple mais mise en oeuvre compliquée !
-- Dépasser le stade de l’expérimentation
+- Dépasser le stade de [**l’expérimentation**]{.orange}
   - [**Bonnes pratiques**]{.blue2} de développement
   - Techniques informatiques [**d’industrialisation**]{.blue2}
-- Enjeu : pouvoir jouer le [**rôle d’interface**]{.orange} entre métier et équipes techniques
+- [**Enjeu**]{.orange} : pouvoir jouer le [**rôle d’interface**]{.blue2} entre métier et équipes techniques
 
-## Difficulté de la mise en production
+## Retour d'expérience à l'Insee
 
-- Models have been deployed in a [**production environment**]{.orange} since November 2022.
+1. [**Contrainte temporelle**]{.orange} forte : 
+  - Mise en place du [**Guichet Unique**]{.blue2} + refonte [**Sirene 4**]{.blue2}
+  - Équipe en charge de la codification [**surchargée**]{.blue2}
+2. [**Infrastructure**]{.orange} de production rigide : 
+  - Un seul langage disponible, [**Java**]{.blue2}
+  - Pas de modèle de ML en production
+3. [**Confiance**]{.orange} des équipes à acquérir : 
+  - Appréhension concernant la [**performance**]{.blue2} du modèle une fois en production
+- [**Objectif**]{.orange} : Déployer un modèle à la fois [**rapidement**]{.blue2} et [**progressivement**]{.blue2}
+
+
+## Organisation actuelle avant la mise en production
+
+- Schéma expliquant l'absurdité du truc
+- 3 parties prenantes
+
+## Organisation actuelle une fois le modèle déployé production
+
+- Schéma de comment ca marche en prod actuellement
+- Envoie d'une liasse modèle fait une pred, si IC ok, sinon...
+
+## Organisation non optimale
+
+- Montrer les problèmes qu'on a => MLops + changement organisationnel
+
 - Emerging [**new challenges**]{.orange} include:
   - [**Organisational**]{.blue2} issues.
   - Real-time [**monitoring**]{.blue2}.
   - Regular [**re-training**]{.blue2}.
-- [**MLOps**]{.orange} approach is required:
-  - Join us on [**Wednesday, June 7th**]{.blue2} for a [**Hands-on Lab**]{.blue2}!
+
+## Organisation visée
+
+- schéma de l'organisation visée à terme à l'Insee

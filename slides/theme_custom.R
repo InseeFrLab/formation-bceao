@@ -2,7 +2,7 @@ library(ggplot2)
 
 theme_custom <- function(){
   dark_grey <- rgb(83, 83, 83, maxColorValue = 255)
-  light_grey <- rgb(217, 217, 217, maxColorValue = 255) 
+  light_grey <- rgb(100, 100, 100, maxColorValue = 255) 
   dark_blue <-"#003299"
   theme_minimal() %+replace%
     theme(
