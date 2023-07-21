@@ -649,28 +649,68 @@
 <ul>
 <li>Notion simple mais mise en oeuvre compliquée !</li>
 </ul></li>
-<li>Dépasser le stade de l’expérimentation
+<li>Dépasser le stade de <span class="orange"><strong>l’expérimentation</strong></span>
 <ul>
 <li><span class="blue2"><strong>Bonnes pratiques</strong></span> de développement</li>
 <li>Techniques informatiques <span class="blue2"><strong>d’industrialisation</strong></span></li>
 </ul></li>
-<li>Enjeu : pouvoir jouer le <span class="orange"><strong>rôle d’interface</strong></span> entre métier et équipes techniques</li>
+<li><span class="orange"><strong>Enjeu</strong></span> : pouvoir jouer le <span class="blue2"><strong>rôle d’interface</strong></span> entre métier et équipes techniques</li>
 </ul>
 </section>
-<section id="difficulté-de-la-mise-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Difficulté de la mise en production</h2>
+<section id="retour-dexpérience-à-linsee" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Retour d’expérience à l’Insee</h2>
+<ol type="1">
+<li><span class="orange"><strong>Contrainte temporelle</strong></span> forte :</li>
+</ol>
 <ul>
-<li>Models have been deployed in a <span class="orange"><strong>production environment</strong></span> since November 2022.</li>
-<li>Emerging <span class="orange"><strong>new challenges</strong></span> include:
+<li>Mise en place du <span class="blue2"><strong>Guichet Unique</strong></span> + refonte <span class="blue2"><strong>Sirene 4</strong></span></li>
+<li>Équipe en charge de la codification <span class="blue2"><strong>surchargée</strong></span></li>
+</ul>
+<ol start="2" type="1">
+<li><span class="orange"><strong>Infrastructure</strong></span> de production rigide :</li>
+</ol>
+<ul>
+<li>Un seul langage disponible, <span class="blue2"><strong>Java</strong></span></li>
+<li>Pas de modèle de ML en production</li>
+</ul>
+<ol start="3" type="1">
+<li><span class="orange"><strong>Confiance</strong></span> des équipes à acquérir :</li>
+</ol>
+<ul>
+<li>Appréhension concernant la <span class="blue2"><strong>performance</strong></span> du modèle une fois en production</li>
+<li><span class="orange"><strong>Objectif</strong></span> : Déployer un modèle à la fois <span class="blue2"><strong>rapidement</strong></span> et <span class="blue2"><strong>progressivement</strong></span></li>
+</ul>
+</section>
+<section id="organisation-actuelle-avant-la-mise-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Organisation actuelle avant la mise en production</h2>
+<ul>
+<li>Schéma expliquant l’absurdité du truc</li>
+<li>3 parties prenantes</li>
+</ul>
+</section>
+<section id="organisation-actuelle-une-fois-le-modèle-déployé-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Organisation actuelle une fois le modèle déployé production</h2>
+<ul>
+<li>Schéma de comment ca marche en prod actuellement</li>
+<li>Envoie d’une liasse modèle fait une pred, si IC ok, sinon…</li>
+</ul>
+</section>
+<section id="organisation-non-optimale" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Organisation non optimale</h2>
+<ul>
+<li><p>Montrer les problèmes qu’on a =&gt; MLops + changement organisationnel</p></li>
+<li><p>Emerging <span class="orange"><strong>new challenges</strong></span> include:</p>
 <ul>
 <li><span class="blue2"><strong>Organisational</strong></span> issues.</li>
 <li>Real-time <span class="blue2"><strong>monitoring</strong></span>.</li>
 <li>Regular <span class="blue2"><strong>re-training</strong></span>.</li>
 </ul></li>
-<li><span class="orange"><strong>MLOps</strong></span> approach is required:
+</ul>
+</section>
+<section id="organisation-visée" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Organisation visée</h2>
 <ul>
-<li>Join us on <span class="blue2"><strong>Wednesday, June 7th</strong></span> for a <span class="blue2"><strong>Hands-on Lab</strong></span>!</li>
-</ul></li>
+<li>schéma de l’organisation visée à terme à l’Insee</li>
 </ul>
 
 <div class="footer footer-default">

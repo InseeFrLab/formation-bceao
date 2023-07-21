@@ -119,10 +119,38 @@
     "text": "La notion de mise en production\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\n\nNotion simple mais mise en oeuvre compliquée !\n\nDépasser le stade de l’expérimentation\n\nBonnes pratiques de développement\nTechniques informatiques d’industrialisation\n\nEnjeu : pouvoir jouer le rôle d’interface entre métier et équipes techniques"
   },
   {
-    "objectID": "slides/codif-auto.html#difficulté-de-la-mise-en-production",
-    "href": "slides/codif-auto.html#difficulté-de-la-mise-en-production",
+    "objectID": "slides/codif-auto.html#retour-dexpérience-à-linsee",
+    "href": "slides/codif-auto.html#retour-dexpérience-à-linsee",
     "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Difficulté de la mise en production",
-    "text": "Difficulté de la mise en production\n\nModels have been deployed in a production environment since November 2022.\nEmerging new challenges include:\n\nOrganisational issues.\nReal-time monitoring.\nRegular re-training.\n\nMLOps approach is required:\n\nJoin us on Wednesday, June 7th for a Hands-on Lab!"
+    "section": "Retour d’expérience à l’Insee",
+    "text": "Retour d’expérience à l’Insee\n\nContrainte temporelle forte :\n\n\nMise en place du Guichet Unique + refonte Sirene 4\nÉquipe en charge de la codification surchargée\n\n\nInfrastructure de production rigide :\n\n\nUn seul langage disponible, Java\nPas de modèle de ML en production\n\n\nConfiance des équipes à acquérir :\n\n\nAppréhension concernant la performance du modèle une fois en production\nObjectif : Déployer un modèle à la fois rapidement et progressivement"
+  },
+  {
+    "objectID": "slides/codif-auto.html#organisation-actuelle-avant-la-mise-en-production",
+    "href": "slides/codif-auto.html#organisation-actuelle-avant-la-mise-en-production",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Organisation actuelle avant la mise en production",
+    "text": "Organisation actuelle avant la mise en production\n\nSchéma expliquant l’absurdité du truc\n3 parties prenantes"
+  },
+  {
+    "objectID": "slides/codif-auto.html#organisation-actuelle-une-fois-le-modèle-déployé-production",
+    "href": "slides/codif-auto.html#organisation-actuelle-une-fois-le-modèle-déployé-production",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Organisation actuelle une fois le modèle déployé production",
+    "text": "Organisation actuelle une fois le modèle déployé production\n\nSchéma de comment ca marche en prod actuellement\nEnvoie d’une liasse modèle fait une pred, si IC ok, sinon…"
+  },
+  {
+    "objectID": "slides/codif-auto.html#organisation-non-optimale",
+    "href": "slides/codif-auto.html#organisation-non-optimale",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Organisation non optimale",
+    "text": "Organisation non optimale\n\nMontrer les problèmes qu’on a =&gt; MLops + changement organisationnel\nEmerging new challenges include:\n\nOrganisational issues.\nReal-time monitoring.\nRegular re-training."
+  },
+  {
+    "objectID": "slides/codif-auto.html#organisation-visée",
+    "href": "slides/codif-auto.html#organisation-visée",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Organisation visée",
+    "text": "Organisation visée\n\nschéma de l’organisation visée à terme à l’Insee"
   }
 ]
