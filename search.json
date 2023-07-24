@@ -147,10 +147,10 @@
     "text": "Inefficacité organisationelle\n\nProblèmes rencontrés :\n\nMéconnaissance des problèmes métier côté Lab pour la maintenance\nContrôle de version et transmission des modèles\nOrganisation inefficace entre les parties prenantes\n\nDéfis à anticiper :\n\nSurveillance du modèle en temps réel\nRé-entrainement régulier\n\nConséquence : Besoin d’adopter les bonnes pratiques d’un point de vue technique (MLOps) et organisationel"
   },
   {
-    "objectID": "slides/codif-auto.html#organisation-viséeà-linsee",
-    "href": "slides/codif-auto.html#organisation-viséeà-linsee",
+    "objectID": "slides/codif-auto.html#organisation-visée-à-linsee",
+    "href": "slides/codif-auto.html#organisation-visée-à-linsee",
     "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Organisation viséeà l’Insee",
-    "text": "Organisation viséeà l’Insee"
+    "section": "Organisation visée à l’Insee",
+    "text": "Organisation visée à l’Insee"
   }
 ]
