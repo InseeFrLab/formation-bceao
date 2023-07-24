@@ -43,5 +43,5 @@
 
 - [**Conséquence**]{.orange} : Besoin d'adopter les [**bonnes pratiques**]{.blue2} d'un point de vue technique (MLOps) et organisationel
 
-## Organisation viséeà l'Insee
+## Organisation visée à l'Insee
 
