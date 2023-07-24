@@ -130,27 +130,27 @@
     "href": "slides/codif-auto.html#organisation-actuelle-avant-la-mise-en-production",
     "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
     "section": "Organisation actuelle avant la mise en production",
-    "text": "Organisation actuelle avant la mise en production\n\nSchéma expliquant l’absurdité du truc\n3 parties prenantes"
+    "text": "Organisation actuelle avant la mise en production\n\n\n3 parties prenantes"
   },
   {
-    "objectID": "slides/codif-auto.html#organisation-actuelle-une-fois-le-modèle-déployé-production",
-    "href": "slides/codif-auto.html#organisation-actuelle-une-fois-le-modèle-déployé-production",
+    "objectID": "slides/codif-auto.html#organisation-actuelle-une-fois-le-modèle-déployé-en-production",
+    "href": "slides/codif-auto.html#organisation-actuelle-une-fois-le-modèle-déployé-en-production",
     "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Organisation actuelle une fois le modèle déployé production",
-    "text": "Organisation actuelle une fois le modèle déployé production\n\nSchéma de comment ca marche en prod actuellement\nEnvoie d’une liasse modèle fait une pred, si IC ok, sinon…"
+    "section": "Organisation actuelle une fois le modèle déployé en production",
+    "text": "Organisation actuelle une fois le modèle déployé en production"
   },
   {
-    "objectID": "slides/codif-auto.html#organisation-non-optimale",
-    "href": "slides/codif-auto.html#organisation-non-optimale",
+    "objectID": "slides/codif-auto.html#inefficacité-organisationelle",
+    "href": "slides/codif-auto.html#inefficacité-organisationelle",
     "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Organisation non optimale",
-    "text": "Organisation non optimale\n\nMontrer les problèmes qu’on a =&gt; MLops + changement organisationnel\nEmerging new challenges include:\n\nOrganisational issues.\nReal-time monitoring.\nRegular re-training."
+    "section": "Inefficacité organisationelle",
+    "text": "Inefficacité organisationelle\n\nProblèmes rencontrés :\n\nMéconnaissance des problèmes métier côté Lab pour la maintenance\nContrôle de version et transmission des modèles\nOrganisation inefficace entre les parties prenantes\n\nDéfis à anticiper :\n\nSurveillance du modèle en temps réel\nRé-entrainement régulier\n\nConséquence : Besoin d’adopter les bonnes pratiques d’un point de vue technique (MLOps) et organisationel"
   },
   {
-    "objectID": "slides/codif-auto.html#organisation-visée",
-    "href": "slides/codif-auto.html#organisation-visée",
+    "objectID": "slides/codif-auto.html#organisation-visée-à-linsee",
+    "href": "slides/codif-auto.html#organisation-visée-à-linsee",
     "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Organisation visée",
-    "text": "Organisation visée\n\nschéma de l’organisation visée à terme à l’Insee"
+    "section": "Organisation visée à l’Insee",
+    "text": "Organisation visée à l’Insee"
   }
 ]
