@@ -7,7 +7,7 @@
   - Techniques informatiques [**d’industrialisation**]{.blue2}
 - [**Enjeu**]{.orange} : pouvoir jouer le [**rôle d’interface**]{.blue2} entre métier et équipes techniques
 
-## Retour d'expérience à l'Insee
+## Retour d'expérience à l'Insee {.scrollable}
 
 1. [**Contrainte temporelle**]{.orange} forte : 
   - Mise en place du [**Guichet Unique**]{.blue2} + refonte [**Sirene 4**]{.blue2}
@@ -22,23 +22,26 @@
 
 ## Organisation actuelle avant la mise en production
 
-- Schéma expliquant l'absurdité du truc
+![](img/orga_ape_actuelle.png){fig-align="center"}
+
 - 3 parties prenantes
 
-## Organisation actuelle une fois le modèle déployé production
+## Organisation actuelle une fois le modèle déployé en production
 
-- Schéma de comment ca marche en prod actuellement
-- Envoie d'une liasse modèle fait une pred, si IC ok, sinon...
+![](img/orga-post-prod.png){fig-align="center"}
 
-## Organisation non optimale
+## Inefficacité organisationelle
 
-- Montrer les problèmes qu'on a => MLops + changement organisationnel
+- [**Problèmes rencontrés**]{.orange} : 
+  - [**Méconnaissance des problèmes métier**]{.blue2} côté Lab pour la maintenance
+  - [**Contrôle de version**]{.blue2} et [**transmission**]{.blue2} des modèles
+  - Organisation [**inefficace**]{.blue2} entre les parties prenantes
 
-- Emerging [**new challenges**]{.orange} include:
-  - [**Organisational**]{.blue2} issues.
-  - Real-time [**monitoring**]{.blue2}.
-  - Regular [**re-training**]{.blue2}.
+- [**Défis à anticiper**]{.orange} :
+  - [**Surveillance**]{.blue2} du modèle en temps réel
+  - [**Ré-entrainement**]{.blue2} régulier
 
-## Organisation visée
+- [**Conséquence**]{.orange} : Besoin d'adopter les [**bonnes pratiques**]{.blue2} d'un point de vue technique (MLOps) et organisationel
 
-- schéma de l'organisation visée à terme à l'Insee
+## Organisation viséeà l'Insee
+
