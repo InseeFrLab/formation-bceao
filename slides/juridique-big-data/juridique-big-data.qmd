@@ -1,0 +1,30 @@
+---
+title: "Aspects juridiques et réglementaires du big data : un retour d'expérience"
+subtitle: |
+  **[BCEAO - Jour 4]{.orange}**
+author: "[Romain Avouac](https://github.com/avouacr), [Thomas Faria](https://github.com/ThomasFaria)"
+date: "09/28/2023"
+date-format: "D MMMM YYYY"
+slide-number: true
+lang: fr-FR
+# for blind readers:
+slide-tone: false
+chalkboard: # press the B key to toggle chalkboard
+  theme: whiteboard
+# uncomment to use the multiplex mode:
+# multiplex: true
+format:
+  onyxia-revealjs:
+    output-file: index.html
+controls: true
+css: ../custom.css
+from: markdown+emoji
+ascii: true
+execute: 
+  echo: false
+  warning: false
+---
+
+# Coucou
+
+

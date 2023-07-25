@@ -1,6 +1,6 @@
 
 ---
-title: Codification automatique de l’APE avec de l'apprentissage statistique
+title: Codification automatique
 date: "2023-09-01"
 description: |
   <b>Description :</b> Blabla 
@@ -9,5 +9,5 @@ categories:
 slides:
   text: Slides
   url: /slides/codif-auto/index.html
-order: 5
+order: 4
 ---

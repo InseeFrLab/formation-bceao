@@ -11,6 +11,6 @@ categories:
   - MLflow
 slides:
   text: Slides
-  url: https://inseefrlab.github.io/formation-mlops/
-order: 1
+  url: https://inseefrlab.github.io/formation-mlops/slides/fr
+order: 6
 ---

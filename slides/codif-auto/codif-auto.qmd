@@ -15,9 +15,9 @@ chalkboard: # press the B key to toggle chalkboard
 # multiplex: true
 format:
   onyxia-revealjs:
-    output-file: codif-auto.html
+    output-file: index.html
 controls: true
-css: custom.css
+css: ../custom.css
 from: markdown+emoji
 ascii: true
 execute: 
@@ -39,16 +39,16 @@ Accuracy_reprise <- readr::read_csv("data/accuracy_reprise.csv")
 
 # Contexte
 
-{{< include codif-auto-sections/1-Context.qmd >}}
+{{< include sections/1-Context.qmd >}}
 
 # Méthodologie
 
-{{< include codif-auto-sections/2-Methodo.qmd >}}
+{{< include sections/2-Methodo.qmd >}}
 
 # Résultats
 
-{{< include codif-auto-sections/3-Results.qmd >}}
+{{< include sections/3-Results.qmd >}}
 
 # De l'expérimentation à la mise en production
 
-{{< include codif-auto-sections/4-Deployment.qmd >}}
+{{< include sections/4-Deployment.qmd >}}
