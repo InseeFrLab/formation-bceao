@@ -1,6 +1,7 @@
 
 ---
 title: Aspects juridiques et réglementaires du big data
+image: https://www.johndcook.com/computer_law_g.jpg
 date: "2023-09-01"
 description: |
   <b>Description :</b> Blabla 
@@ -8,6 +9,6 @@ categories:
   - NLP
 slides:
   text: Slides
-  url: /slides/codif-auto/index.html
+  url: /slides/intro-big-data/index.html
 order: 7
 ---

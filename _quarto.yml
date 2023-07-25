@@ -24,7 +24,7 @@ website:
 
   navbar:
     background: "#A7D5E8"
-    logo: "images/logo-INSEE.png"
+    logo: https://upload.wikimedia.org/wikipedia/fr/thumb/1/10/Logo_Insee.svg/1200px-Logo_Insee.svg.png
     align: center
     title: false
     collapse-below: lg

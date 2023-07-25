@@ -2,3 +2,6 @@
 /_site/
 
 /.luarc.json
+*background.svg
+*logo.svg
+*favicon-32x32.png

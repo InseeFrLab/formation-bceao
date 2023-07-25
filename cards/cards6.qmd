@@ -1,7 +1,7 @@
 
 ---
 title: Introduction au MLOps avec MLflow
-image: /images/mlflow-logo.jpg
+image: https://miro.medium.com/v2/resize:fit:1000/1*0zMGy7YdRhuSA3X2ymqotg.jpeg
 date: "2023-09-01"
 description: |
   <b>Description :</b> Blabla 

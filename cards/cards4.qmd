@@ -1,13 +1,14 @@
 
 ---
-title: Codification automatique
+title: Calcul d’un indice de prix avec des données bancaires
+image: https://i0.wp.com/therealnews.com/wp-content/uploads/2019/06/cpi.jpg?fit=657%2C425&ssl=1
 date: "2023-09-01"
 description: |
   <b>Description :</b> Blabla 
 categories:
-  - NLP
+  - Spark
 slides:
   text: Slides
-  url: /slides/codif-auto/index.html
+  url: /slides/intro-big-data/index.html
 order: 4
 ---
