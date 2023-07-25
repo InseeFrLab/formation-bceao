@@ -10,7 +10,7 @@
 #| fig-height: 5
 #| fis-pos: center
 
-Accuracy_lvl <- Accuracy_lvl %>%
+Accuracy_lvl <- Accuracy_lvl |>
     mutate(Level = factor(Level, levels = paste("Level", paste(seq(5,1,-1))))
     )
 
@@ -104,7 +104,7 @@ plot_TOPK_Accuracy(TOPK_Accuracy)+
 #| fig-height: 5
 #| fis-pos: center
 
-Accuracy_reprise <- Accuracy_reprise %>%
+Accuracy_reprise <- Accuracy_reprise |>
       mutate(
            Rate = factor(Rate, levels = paste0(paste(seq(0,25,5)), "%"))
       )
