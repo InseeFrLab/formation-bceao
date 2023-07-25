@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr-FR"><head>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.433">
 
-  <meta name="author" content="Romain Avouac, Thomas Faria, Tom Seimandi">
-  <title>Formation BCEAO - Codification automatique de l’APE avec de l’apprentissage statistique</title>
+  <meta name="author" content="Romain Avouac, Thomas Faria">
+  <title>Formation BCEAO - Présentation et prise en main du SSP Cloud</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -30,15 +30,15 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
-  <link rel="stylesheet" href="_extensions/InseeFrLab/onyxia/logo.css">
-  <link rel="stylesheet" href="custom.css">
-  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../_extensions/InseeFrLab/onyxia/logo.css">
+  <link rel="stylesheet" href="../custom.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -324,416 +324,53 @@
     }
   </style>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<meta property="og:title" content="Formation BCEAO - Codification automatique de l’APE avec de l’apprentissage statistique">
-<meta property="og:description" content="BCEAO - Jour 3">
+<meta property="og:title" content="Formation BCEAO - Présentation et prise en main du SSP Cloud">
+<meta property="og:description" content="BCEAO - Jour 1">
 <meta property="og:site-name" content="Formation BCEAO">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="_extensions/InseeFrLab/onyxia/background.svg" data-background-size="contain" class="quarto-title-block center">
-  <h1 class="title">Codification automatique de l’APE avec de l’apprentissage statistique</h1>
-  <p class="subtitle"></p><p><strong><span class="orange">BCEAO - Jour 3</span></strong></p><p></p>
+<section id="title-slide" data-background-image="../_extensions/InseeFrLab/onyxia/background.svg" data-background-size="contain" class="quarto-title-block center">
+  <h1 class="title">Présentation et prise en main du SSP Cloud</h1>
+  <p class="subtitle"></p><p><strong><span class="orange">BCEAO - Jour 1</span></strong></p><p></p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<a href="https://github.com/avouacr">Romain Avouac</a>, <a href="https://github.com/ThomasFaria">Thomas Faria</a>, <a href="https://github.com/tomseimandi/">Tom Seimandi</a> 
+<a href="https://github.com/avouacr">Romain Avouac</a>, <a href="https://github.com/ThomasFaria">Thomas Faria</a> 
 </div>
 </div>
 </div>
 
-  <p class="date">27 septembre 2023</p>
+  <p class="date">25 septembre 2023</p>
 </section>
-<section>
-<section id="contexte" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1>Contexte</h1>
-
-</section>
-<section id="context" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Context</h2>
-<ul>
-<li><p><span class="orange"><strong>Plusieurs changements majeurs</strong></span>:</p>
-<ul>
-<li><span class="blue2"><strong>Interne</strong></span>: Refonte du répertoire <span class="green2"><strong>Sirene 4</strong></span>.</li>
-<li><span class="blue2"><strong>Externe</strong></span>: Mise en place d’un <span class="green2"><strong>guichet unique</strong></span> pour déclarer les créations d’entreprises.</li>
-</ul></li>
-<li><p><span class="orange"><strong>Constat</strong></span>: <span class="blue2"><strong>Sicore</strong></span> n’est plus l’outil adapté ➨ seulement 30% de codification automatique.</p></li>
-<li><p><span class="orange"><strong>Conséquence</strong></span>: moment idéal pour proposer une nouvelle méthodologie de codification automatique de l’APE.</p></li>
-</ul>
-</section>
-<section id="données" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Données</h2>
-<ul>
-<li><p><span class="orange"><span class="math inline">\(\approx\)</span> <strong>10 million</strong></span> de liasses d’entreprises issues de Sirene 3 couvrant la période 2014-2022.</p></li>
-<li><p><span class="orange"><strong>Données labellisées</strong></span> par Sicore ou par un gestionnaire.</p></li>
-<li><p>Une observation consiste en :</p>
-<ul>
-<li>Un <span class="red2"><strong>descriptif textuel</strong></span> de l’activité</li>
-<li>La <span class="blue2"><strong>nature de l’activité</strong></span> – <span class="green2">NAT</span> (23 modalités)</li>
-<li>Le <span class="blue2"><strong>type de la liasse</strong></span> – <span class="green2">TYP</span> (15 modalités)</li>
-<li>Le <span class="blue2"><strong>type d’évènement</strong></span> – <span class="green2">EVT</span> (24 modalités)</li>
-<li>La <span class="blue2"><strong>surface (<span class="math inline">\(m^2\)</span>)</strong></span> – <span class="green2">SUR</span> (4 modalités)</li>
-</ul></li>
-</ul>
-</section>
-<section id="la-nomenclature-hiérarchique-de-lape" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>La nomenclature hiérarchique de l’APE</h2>
-<table>
-<colgroup>
-<col style="width: 19%">
-<col style="width: 16%">
-<col style="width: 61%">
-<col style="width: 2%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Niveau</th>
-<th>Code</th>
-<th>Libellé</th>
-<th>Taille</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Section</td>
-<td>H</td>
-<td>Transports et entreposage</td>
-<td>21</td>
-</tr>
-<tr class="even">
-<td>Division</td>
-<td>52</td>
-<td>Entreposage et services auxiliaires des transports</td>
-<td>88</td>
-</tr>
-<tr class="odd">
-<td>Groupe</td>
-<td>522</td>
-<td>Services auxiliaires des transports</td>
-<td>272</td>
-</tr>
-<tr class="even">
-<td>Classe</td>
-<td>5224</td>
-<td>Manutention</td>
-<td>615</td>
-</tr>
-<tr class="odd">
-<td><strong>Sous-classe</strong></td>
-<td><span class="red2"><strong>5224A</strong></span></td>
-<td><strong>Manutention portuaire</strong></td>
-<td><span class="orange"><strong>732</strong></span></td>
-</tr>
-</tbody>
-</table>
-</section></section>
-<section>
-<section id="méthodologie" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1>Méthodologie</h1>
-
-</section>
-<section id="feature-extraction" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Feature extraction</h2>
-<ul>
-<li><span class="orange"><strong>Plongements lexicaux</strong></span>: méthode de <span class="blue2"><strong>vectorisation</strong></span>.</li>
-<li>Plongements <span class="orange"><strong>pré-entrainé</strong></span> disponibles en open-source.</li>
-<li>Nous apprenons <span class="orange"><strong>nos propres</strong></span> plongements de <span class="blue2"><strong>mots</strong></span>.</li>
-<li>Mais aussi des plogements de :
-<ul>
-<li><span class="blue2"><strong>n-grams de mots</strong></span> et de <span class="blue2"><strong>n-grams de caractères</strong></span>.</li>
-</ul></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/n-grams_eng.png" height="250"></p>
-</figure>
-</div>
-</section>
-<section id="classifieur-linéaire" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Classifieur linéaire</h2>
-<ul>
-<li><span class="orange"><strong>2 méthodes</strong></span> pour la classification :
-<ul>
-<li><span class="blue2"><strong>Softmax</strong></span> : un <span class="green2"><strong>unique</strong></span> classifieur multiclasse.</li>
-<li><span class="blue2"><strong>One-vs-all</strong></span> : de <span class="green2"><strong>multiples</strong></span> classifieurs binaires.</li>
-</ul></li>
-<li><span class="orange"><strong>Optimisation</strong></span> : algorithme de type <span class="blue2"><strong>descente de gradient stochastique</strong></span>.</li>
-<li><span class="orange"><strong>Fonction de perte</strong></span> : <span class="blue2"><strong>entropie croisée</strong></span>.</li>
-</ul>
-</section>
-<section id="le-modèle-fasttext" class="slide level2" data-background-image="img/diag-fasttext.png" data-background-size="95%" data-background-position="50% 75%">
-<h2>Le modèle fastText</h2>
-<ul>
-<li><span class="orange"><strong>fastText</strong></span>: Modèle de type “bag of n-grams” très <span class="blue2"><strong>simple</strong></span> et <span class="blue2"><strong>rapide</strong></span> (<code>C++</code>).</li>
-</ul>
-</section>
-<section id="prise-en-compte-des-variables-catégorielles" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Prise en compte des variables catégorielles</h2>
-<ul>
-<li><span class="orange"><strong>Concaténation</strong></span> du libellé avec les noms et valeurs des variables annexes :</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>Text</th>
-<th>NAT</th>
-<th>TYP</th>
-<th>EVT</th>
-<th>SUR</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Cours de musique</td>
-<td>NaN</td>
-<td>X</td>
-<td>01P</td>
-<td>NaN</td>
-</tr>
-</tbody>
-</table>
-<center>
-🢃
-</center>
-<p>“Cours de musique <span class="green2">NAT</span>_<span class="blue2">NaN</span> <span class="green2">TYP</span>_<span class="blue2">X</span> <span class="green2">EVT</span>_<span class="blue2">01P</span> <span class="green2">SUR</span>_<span class="blue2">NaN</span>”</p>
-<ul>
-<li><span class="orange"><strong>Méthode imparfaite</strong></span> : 3-grams “AT_” ou “T_0” utilisés.</li>
-</ul>
-</section>
-<section id="prétraitements-effectués" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Prétraitements effectués</h2>
-<ul>
-<li><span class="orange"><strong>Nettoyage</strong></span> indispensable pour l’analyse textuelle.</li>
-<li><span class="orange"><strong>Contrainte</strong></span> : <span class="blue2"><strong>simple</strong></span>, <span class="blue2"><strong>léger</strong></span> et facilement <span class="blue2"><strong>reproductible</strong></span> en Java <i class="fab fa-java" style="font-size:36px"></i>.</li>
-</ul>
-<table>
-<colgroup>
-<col style="width: 13%">
-<col style="width: 86%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Transformation</th>
-<th>Text description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Input</td>
-<td>3 D: La Deratisation - La Desinsectisation - La Desinfection</td>
-</tr>
-<tr class="even">
-<td>Lower-case conversion</td>
-<td>3 d: la deratisation - la desinsectisation - la desinfection</td>
-</tr>
-<tr class="odd">
-<td>Punctuations removal</td>
-<td>3 d la deratisation la desinsectisation la desinfection</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="preprocessing" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Preprocessing</h2>
-<table>
-<colgroup>
-<col style="width: 13%">
-<col style="width: 86%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Transformation</th>
-<th>Libellé</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Input</td>
-<td>3 D: La Deratisation - La Desinsectisation - La Desinfection</td>
-</tr>
-<tr class="even">
-<td>…</td>
-<td>…</td>
-</tr>
-<tr class="odd">
-<td>Numbers removal</td>
-<td>d la deratisation la desinsectisation la desinfection</td>
-</tr>
-<tr class="even">
-<td>One-letter word removal</td>
-<td>la deratisation la desinsectisation la desinfection</td>
-</tr>
-<tr class="odd">
-<td>Stopwords removal</td>
-<td>deratisation desinsectisation desinfection</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="preprocessing-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Preprocessing</h2>
-<table>
-<thead>
-<tr class="header">
-<th>Transformation</th>
-<th>Libellé</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Input</td>
-<td>3 D: La Deratisation - La Desinsectisation - La Desinfection</td>
-</tr>
-<tr class="even">
-<td>…</td>
-<td>…</td>
-</tr>
-<tr class="odd">
-<td>NaN removal</td>
-<td>deratisation desinsectisation desinfection</td>
-</tr>
-<tr class="even">
-<td>Stemming</td>
-<td>deratis desinsectis desinfect</td>
-</tr>
-</tbody>
-</table>
-</section></section>
-<section>
-<section id="résultats" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1>Résultats</h1>
-
-</section>
-<section id="une-bonne-performance-globale" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Une bonne performance globale</h2>
-
-<img data-src="codif-auto_files/figure-revealjs/fig-acc-lvl-1.png" width="1248" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;1: Taux de précision pour chaque niveau de la nomenclature du code APE</p><ul>
-<li>Près de <span class="orange"><strong>80%</strong></span> des libellés issus du guichet unique sont correctement codifiés.</li>
-<li>Erreurs de prédiction <span class="orange"><strong>proches</strong></span> dans la nomenclature.</li>
-</ul>
-</section>
-<section id="fludifier-le-processus-de-codification-manuel" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Fludifier le processus de codification manuel</h2>
-
-<img data-src="codif-auto_files/figure-revealjs/fig-acc-top-k-1.png" width="1248" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;2: Top-<span class="math inline">\(k\)</span> accuracy pour chaque jeu de données.</p><ul>
-<li>Connaissance des probabilités pour chaque classe.</li>
-<li>Dans <span class="orange"><strong>94%</strong></span> des cas, la bonne classification se trouve dans les 5 prédictions les plus probables.</li>
-</ul>
-</section>
-<section id="construction-dun-indice-de-confiance" class="slide level2 scrollable" data-background-image="background.svg" data-background-size="contain">
-<h2>Construction d’un indice de confiance</h2>
-
-<img data-src="img/fig-ic-distrib.png" class="r-stretch quarto-figure-center"><ul>
-<li><span class="orange"><strong>Objectif</strong></span> : <span class="blue2"><strong>discriminer</strong></span> les <em>mauvaises</em> des <em>bonnes</em> prédictions.</li>
-<li><span class="orange"><strong>Indice de confiance retenu</strong></span> : différence entre les deux probabilités les plus élevées.</li>
-</ul>
-</section>
-<section id="améliorer-lefficacité-de-la-reprise-manuelle" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Améliorer l’efficacité de la reprise manuelle</h2>
-
-<img data-src="codif-auto_files/figure-revealjs/fig-reprise-1.png" width="1248" class="r-stretch quarto-figure-center"><p class="caption">Figure&nbsp;3: Précision en fonction du taux de reprise manuelle effectuée.</p><ul>
-<li>Optimisation de la reprise manuelle ➨ <span class="orange"><strong>gain de performance</strong></span>.</li>
-</ul>
-</section></section>
-<section>
-<section id="de-lexpérimentation-à-la-mise-en-production" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1>De l’expérimentation à la mise en production</h1>
-
-</section>
-<section id="la-notion-de-mise-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>La notion de mise en production</h2>
-<ul>
-<li><span class="orange"><strong>Mettre en production</strong></span> : faire <span class="blue2"><strong>vivre</strong></span> une application dans l’espace de ses <span class="blue2"><strong>utilisateurs</strong></span>
-<ul>
-<li>Notion simple mais mise en oeuvre compliquée !</li>
-</ul></li>
-<li>Dépasser le stade de <span class="orange"><strong>l’expérimentation</strong></span>
-<ul>
-<li><span class="blue2"><strong>Bonnes pratiques</strong></span> de développement</li>
-<li>Techniques informatiques <span class="blue2"><strong>d’industrialisation</strong></span></li>
-</ul></li>
-<li><span class="orange"><strong>Enjeu</strong></span> : pouvoir jouer le <span class="blue2"><strong>rôle d’interface</strong></span> entre métier et équipes techniques</li>
-</ul>
-</section>
-<section id="retour-dexpérience-à-linsee" class="slide level2 scrollable" data-background-image="background.svg" data-background-size="contain">
-<h2>Retour d’expérience à l’Insee</h2>
-<ol type="1">
-<li><span class="orange"><strong>Contrainte temporelle</strong></span> forte :</li>
-</ol>
-<ul>
-<li>Mise en place du <span class="blue2"><strong>Guichet Unique</strong></span> + refonte <span class="blue2"><strong>Sirene 4</strong></span></li>
-<li>Équipe en charge de la codification <span class="blue2"><strong>surchargée</strong></span></li>
-</ul>
-<ol start="2" type="1">
-<li><span class="orange"><strong>Infrastructure</strong></span> de production rigide :</li>
-</ol>
-<ul>
-<li>Un seul langage disponible, <span class="blue2"><strong>Java</strong></span></li>
-<li>Pas de modèle de ML en production</li>
-</ul>
-<ol start="3" type="1">
-<li><span class="orange"><strong>Confiance</strong></span> des équipes à acquérir :</li>
-</ol>
-<ul>
-<li>Appréhension concernant la <span class="blue2"><strong>performance</strong></span> du modèle une fois en production</li>
-<li><span class="orange"><strong>Objectif</strong></span> : Déployer un modèle à la fois <span class="blue2"><strong>rapidement</strong></span> et <span class="blue2"><strong>progressivement</strong></span></li>
-</ul>
-</section>
-<section id="organisation-actuelle-avant-la-mise-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Organisation actuelle avant la mise en production</h2>
-
-<img data-src="img/orga_ape_actuelle.png" class="r-stretch quarto-figure-center"><ul>
-<li>3 parties prenantes</li>
-</ul>
-</section>
-<section id="organisation-actuelle-une-fois-le-modèle-déployé-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Organisation actuelle une fois le modèle déployé en production</h2>
-
-<img data-src="img/orga-post-prod.png" class="r-stretch quarto-figure-center"></section>
-<section id="inefficacité-organisationelle" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Inefficacité organisationelle</h2>
-<ul>
-<li><span class="orange"><strong>Problèmes rencontrés</strong></span> :
-<ul>
-<li><span class="blue2"><strong>Méconnaissance des problèmes métier</strong></span> côté Lab pour la maintenance</li>
-<li><span class="blue2"><strong>Contrôle de version</strong></span> et <span class="blue2"><strong>transmission</strong></span> des modèles</li>
-<li>Organisation <span class="blue2"><strong>inefficace</strong></span> entre les parties prenantes</li>
-</ul></li>
-<li><span class="orange"><strong>Défis à anticiper</strong></span> :
-<ul>
-<li><span class="blue2"><strong>Surveillance</strong></span> du modèle en temps réel</li>
-<li><span class="blue2"><strong>Ré-entrainement</strong></span> régulier</li>
-</ul></li>
-<li><span class="orange"><strong>Conséquence</strong></span> : Besoin d’adopter les <span class="blue2"><strong>bonnes pratiques</strong></span> d’un point de vue technique (MLOps) et organisationel</li>
-</ul>
-</section>
-<section id="organisation-visée-à-linsee" class="slide level2" data-background-image="img/orga-visee.png" data-background-size="55%">
-<h2>Organisation visée à l’Insee</h2>
+<section id="coucou" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Coucou</h1>
 
 <div class="footer footer-default">
 
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -929,44 +566,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
