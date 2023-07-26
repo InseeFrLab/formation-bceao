@@ -16,14 +16,12 @@ website:
   open-graph: true
 
   page-footer:
-    background: "#A7D5E8"
     left: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
     right:
     - text: "License"
       href: LICENCE.md
 
   navbar:
-    background: "#A7D5E8"
     logo: https://upload.wikimedia.org/wikipedia/fr/thumb/1/10/Logo_Insee.svg/1200px-Logo_Insee.svg.png
     align: center
     title: false
@@ -44,10 +42,10 @@ website:
 format:
   html:
     theme:
-      light: [cosmo, style/styles.css]
+      light: [cosmo, style/styles.scss]
+      dark: [cyborg, style/styles.scss]
     reference-location: margin
     toc: true
     code-copy: true
     code-overflow: wrap
-    mainfont: "Atkinson Hyperlegible"
     include-in-header: "style/fontawesome.html"
