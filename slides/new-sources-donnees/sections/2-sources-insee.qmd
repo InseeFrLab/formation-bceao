@@ -1,0 +1,45 @@
+## Les données d'enquêtes {auto-animate=true}
+
+- Informations collectées auprès d'[**individus**]{.orange} , de [**ménages**]{.orange}  ou d'[**entreprises**]{.orange} selon des méthodes structurées et standardisées
+- Collecte via [**questionnaires**]{.orange}, [**interviews**]{.orange} ou plus récemment [**internet**]{.orange} 
+- Sources traditionnelles des instituts statistiques
+- Exemples : enquête Emploi, enquête conjoncture, recensement de la population...
+
+## Les données d'enquêtes {auto-animate=true}
+
+- [**Avantages**]{.orange}  : 
+    - Contrôle total des questions posées et personnes interrogées
+- [**Désavantages**]{.orange}  :
+    - Coût très importants
+    - Contraignant pour l'enquêteurs et l'enquêté
+    - Baisse tendancielle du taux de réponse
+
+## Les données administratives 
+
+- Informations collectées via les registres [**administratifs**]{.orange} ou [**comptables**]{.orange} 
+- Sources de plus en plus utilisées par les agences de statistiques publiques
+- Exemples : la déclaration sociale nominative (DSN), le Système National des Données de Santé (SNDS)...
+(elles peuvent être big data)
+
+## Les données administratives  {auto-animate=true}
+
+- [**Avantages**]{.orange} : 
+    - Coût de collecte plus faible
+    - Moins de biais de réponse (collecte souvent automatique)
+    - Fréquence de collecte plus rapide et donc volume plus élevé (e.g SIDEP pendant le Covid)
+    - Complémentaire au données d'enquêtes
+- [**Désavantages**]{.orange} :
+    - Contrôle réduit sur l'échantillonage (problèmes de représentativité et biais de sélection)
+    - Contrôle réduit sur la collection des données (incohérence et erreurs)
+    - Confidentialité pouvant réduire le partage des données
+    - Sources potentiellement moins pérennes dans le temps
+
+## Les données émergentes
+
+- Ensemble de données 
+
+Informations collectées auprès d'[**individus**]{.orange} , de [**ménages**]{.orange}  ou d'[**entreprises**]{.orange} selon des méthodes structurées et standardisées
+
+big data ou non
+
+
