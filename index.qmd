@@ -18,3 +18,27 @@ Tous les supports sont sur le [`Github InseeFrLab` {{< fa brands github >}}](htt
 ::: {#formations}
 :::
 
+<!-- Pour info  -->
+
+### Objectifs généraux
+
+- partager avec l’équipe de la BCEAO l’expérience de l’INSEE en matière de mise en place d’un cadre de collecte et d’exploitation des données massives, avec un accent particulier sur la démarche adoptée par l’institut de statistique et les infrastructures techniques implémentées ainsi que son organisation ;
+- partager avec les équipes de la BCEAO les diverses sources de collecte exploitées ainsi que les méthodes et outils de collecte et de centralisation des données utilisés ;
+- partager avec les équipes de la BCEAO les périmètres de données couverts par les big data ;
+- partager avec l’équipe de la BCEAO les différents outils et technique d’analyse des données massives ;
+- édifier les agents de la BCEAO sur les dispositions réglementaires mises en place pour favoriser la collecte des données massives ;
+- partager avec l’équipe de la BCEAO les résultats des expérimentations effectuées avec les big data ainsi que leur utilisation conjointe avec les statistiques officielles.
+
+### Résultats attendus
+
+- les équipes de la BCEAO sont fixées sur une démarche pratique et appropriée à adopter pour la mise en place des big data à la BCEAO ;
+- les équipes de la BCEAO sont informées des infrastructures appropriées à mettre en place pour exploiter les big data à la BCEAO ainsi que l’organisation interne à adopter par l’institut d’émission ;
+- les équipes de la BCEAO sont informées sur les diverses sources de collecte exploitées ainsi que les méthodes et outils de collecte et de centralisation des données utilisés ;
+- les équipes de la BCEAO sont formées sur les différents outils et technique d’analyse des données massives ;
+- les équipes de la BCEAO sont informées des dispositions réglementaires à mettre en place pour favoriser la collecte des données massives ;
+- les équipes de la BCEAO sont informées des expérimentations effectuées avec les big data ainsi que leur utilisation conjointe avec les statistiques officielles.
+- les équipes de la BCEAO sont édifiées sur les principaux enseignements issus des expériences de l’INSEE en matière de big data ;
+- un ou plusieurs points focaux sont désignés par l’INSEE pour accompagner les équipes de la BCEAO dans le processus d’approfondissement des questions relatives à la mise en place d’une stratégie big data à la Banque Centrale.
+
+
+
