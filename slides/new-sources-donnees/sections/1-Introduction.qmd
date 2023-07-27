@@ -1,0 +1,54 @@
+## Big Data, késako ?  {auto-animate=true}
+
+- [**Big Data**]{.orange} : [*"Gestion et analyse d'un volume massif de données, souvent à une échelle bien supérieure à ce que les systèmes traditionnels peuvent traiter efficacement."*]{.green2}
+
+- [**Les 3 V**]{.orange} qui caractérise le Big Data :
+    - [**Volume**]{.blue2} : le Big Data se réfère à des [**quantités énormes**]{.green2} de données [**générées en continu**]{.green2} ($\geq 10^{12} bits$)
+    - [**Vitesse**]{.blue2} : vitesse à laquelle les données sont générées, collectées et traitées
+    - [**Variété**]{.blue2} : le Big Data est généralement caractérisé par une [**diversité de sources**]{.green2} et de [**formats de données**]{.green2}
+
+## Big Data, késako ?  {auto-animate=true}
+
+- [**2 autres V**]{.orange} caractéristique du Big Data :
+    - [**Véracité**]{.blue2} : cela concerne la [**qualité**]{.green2}, la [**fiabilité**]{.green2} et l'[**authenticité**]{.green2} des données
+    - [**Valeur**]{.blue2} : quelle valeur peut-elle être créer de l'analyse de ces données ?
+ 
+<!-- - [**Exemples**]{.orange}  : 
+    - contenus internet et de réseaux sociaux
+    - images satellites
+    - enregistrements automatiques (données de téléphonie, données de CB...) -->
+
+## Le Big Data au service de la Statistique Publique
+
+- Pourquoi s'intéresser au Big Data dans la statistique publique ?
+
+- Plusieurs bénéfices peuvent en être retirer en matière d'[**efficience économique**]{.orange}, de [**qualité statistique**]{.orange}, de [**méthodologie statistique**]{.orange} ou encore d'[**exhaustivité**]{.orange}
+
+## Le Big Data au service de la Statistique Publique
+
+
+- [**Efficience économique**]{.orange} : Accès plus rapide à la données, réduction du coût des enquêtes
+- [**Qualité statistique**]{.orange} : Données plus localisées, plus précises sur des sous-population, plus fréquentes...
+- [**Méthodologie statistique**]{.orange} : Applications de nouvelles méthodes statistiques performantes sur des données massives (ML, deeplearning)... 
+- [**Exhaustivité**]{.orange} : Données pouvant compléter des déclarations d'enquêtes, créer de nouveaux indicateurs...
+
+## Des données très différentes des statistiques publiques usuelles
+
+
+- [**Différence centrale**]{.orange} : 
+- [**Processus de génération**]{.orange} des données n'est pas contrôlé
+- Problème de [**représentativité**]{.orange} des différentes sous population dans les données
+- Formats généralement [**complexes**]{.orange} et souvent [**changeants**]{.orange} ou non pérennes
+- [**Pertinence**]{.orange} et [**complétude**]{.orange} des données parfois douteuse
+
+::: {.callout-note}
+# Différence centrale
+Les données massives ne sont ni collectées ni conceptualisées à des fins de statistiques publiques !
+:::
+
+## Innovations nécessaires pour traiter ces données
+
+- [**Techniques**]{.orange} : nouveaux langages de datascience, nouvelles infrastructures informatiques 
+- [**Méthodologiques**]{.orange} : économétrie en grande dimension, analyse de données textuelles, analyse d'images satellites
+- [**Organisationnelles**]{.orange} : Partenariats avec de nouveaux acteurs privés ou publics pour le partage de données
+
