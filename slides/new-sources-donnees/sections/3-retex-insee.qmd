@@ -1,0 +1,35 @@
+## Améliorer le recensement à l'aide de données satellites
+
+Reprendre prez faite DIRAG
+
+## Les données de caisse pour mesurer les prix à la consommation
+
+Voir JMS lino http://jms-insee.fr/jms2022s28_2/
+
+## Webscrapping de sites vendeurs 
+
+Formation Antoine top : https://inseefrlab.github.io/formation-webscraping/
+http://jms-insee.fr/jms2022s14_1/
+
+## Les données mobiles pour la statistique publique
+
+http://jms-insee.fr/jms2018s25_2/
+
+## Données carte bancaire
+
+http://jms-insee.fr/jms2022s04_3/
+
+
+## Fidélimmo : prédire le patrimoine immobilier des ménages
+
+Olivier fait quelques slides sur fidélimmo
+
+## Prévoir en continu la croissance française 
+
+https://www.insee.fr/fr/statistiques/4268739?sommaire=4268833
+http://jms-insee.fr/jms2022s19_2/
+ggtrends : http://jms-insee.fr/jms2018s25_1/
+
+## Indice de prix des loyers grâce aux site d'annonces
+
+Parler partenariat Seloger/Insee mais peu de ressources

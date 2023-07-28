@@ -5,6 +5,8 @@
 - Sources traditionnelles des instituts statistiques
 - Exemples : enquête Emploi, enquête conjoncture, recensement de la population...
 
+<!-- TODO: @ROMAIN où on met les données de compta nat ? -->
+
 ## Les données d'enquêtes {auto-animate=true}
 
 - [**Avantages**]{.orange}  : 
@@ -36,10 +38,21 @@
 
 ## Les données émergentes
 
-- Ensemble de données 
+- L'État ne détient plus le monopole de la production de la données
+- Ensemble de données non traditionnelles à la statistique publique mais qui peuvent être utilise pour compléter, enrichir ou renouveller les statistiques publiques
+- Données transactionnelles ou comportementales : transactions CB, téléphonie mobile, données de géolocalisation...
+- Données issues d'internet (webscrapping) : offres d'emploi, google trends...
+- Données satellite 
 
-Informations collectées auprès d'[**individus**]{.orange} , de [**ménages**]{.orange}  ou d'[**entreprises**]{.orange} selon des méthodes structurées et standardisées
+Données émergentes &rarr plus souvent les caractéristiques Big Data
 
-big data ou non
+## Les données émergentes  {auto-animate=true}
 
-
+- [**Avantages**]{.orange} : 
+    - Rapidité : temps réel ou quasi temps réel
+    - Volume : souvent données massives
+    - Complémentarité : appui des données traditionelles
+- [**Désavantages**]{.orange} :
+    - Aucun contrôle sur l'échantillonage et la collection des données
+    - Accessibilité limitée ou coûteuse
+    - Quantité $neq$ Qualité
