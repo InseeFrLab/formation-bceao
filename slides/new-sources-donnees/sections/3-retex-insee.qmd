@@ -1,35 +1,113 @@
-## Améliorer le recensement à l'aide de données satellites
 
-Reprendre prez faite DIRAG
-
+<!-- Mis en prod : -->
 ## Les données de caisse pour mesurer les prix à la consommation
 
 Voir JMS lino http://jms-insee.fr/jms2022s28_2/
+
+ parmi les plus prometteuses car elles tirent parti de la dématérialisation de l’économie tout en retraçant au plus près les achats de biens et services qui constituent directement une partie de la consommation des ménages telle qu’elle sera ensuite mesurée par les comptes nationaux.
+
+ partenariats noués ou renforcés à l’occasion de la crise avec les producteurs de ces données constituent des avancées significatives, que l’on espère pouvoir pérenniser
 
 ## Webscrapping de sites vendeurs 
 
 Formation Antoine top : https://inseefrlab.github.io/formation-webscraping/
 http://jms-insee.fr/jms2022s14_1/
 
-## Les données mobiles pour la statistique publique
-
-http://jms-insee.fr/jms2018s25_2/
-
-## Données carte bancaire
-
-http://jms-insee.fr/jms2022s04_3/
-
-
-## Fidélimmo : prédire le patrimoine immobilier des ménages
-
-Olivier fait quelques slides sur fidélimmo
-
 ## Prévoir en continu la croissance française 
 
 https://www.insee.fr/fr/statistiques/4268739?sommaire=4268833
 http://jms-insee.fr/jms2022s19_2/
 ggtrends : http://jms-insee.fr/jms2018s25_1/
+Google: utile qu'en temps de crise
+Des données qui sont affectées d’une forte volatilité naturelle sont utiles en présence d’un choc majeur qui dépasse cette volatilité mais le bruit de fond qui les affecte les rend moins lisibles et moins utiles quand la conjoncture revient un tant soit peu à la normale.
+
+## Améliorer le recensement à l'aide de données satellites
+Reprendre prez faite DIRAG
+
+
+<!-- END -->
+
+
+## Les données mobiles pour la statistique publique
+Savoir comment se répartit effectivement la population sur le territoire est essentiel pour organiser la réponse sanitaire et sociale face à l’épidémie de coronavirus
+
+ Elles ne permettent pas de suivre le déplacement des personnes, mais d’effectuer des comptages par zones à différentes dates, ce qui est l’unique objectif de ces travaux.
+
+estimer la population présente sur un territoire à un moment donné, dans le respect de la vie privée des utilisateurs
+contexte : crise sanitaire
+
+pourquoi ? 
+1) Répondre au besoin des acteurs publics locaux
+ Depuis plusieurs années maintenant, des statistiques de population présente (et non plus résidente) font partie des besoins
+2) un champ de recherche prometteur
+ Données téléphonie mobile pourraient notamment permettre à terme des mises-à-jour plus fréquentes des statistiques de population (mémorandum dit de « Scheveningen » sur les statistiques officielles et les Big Data)
+3) Nouer partenariats
+partenariat de recherche avec un laboratoire de recherche d’Orange et Eurostat. nouveau projet de recherche, MobiTic
+Agence nationale de la Recherche, Orange Labs, Orange Business Services, l’université Gustave Eiffel (Ifsttar) et l’UMR Géographie-Cités du CNRS
+4) Réponse au contexte actuel 
+
+Comment l'Insee s'y est pris ?
+1) Quelles données ont elle été utilisées ?
+comptages de présence dans chaque département croisés avec le département de résidence
+L’opérateur les recale une première fois pour représenter l’ensemble de la population à une échelle locale, car ses clients ne constituent qu’une fraction du parc de téléphonie mobile
+un mobile est localisé sur un territoire donné à un moment donné à partir des antennes auxquelles le terminal se connecte
+Ces données issues du réseau mobile ne doivent pas être confondues avec les données de localisation GPS de certains smartphones
+
+2) Confidentialité garantie
+L’Insee doit connaître dans le détail la méthodologie des opérateurs à l’origine des données qui lui sont fournies
+garantie que ses méthodes ne seront pas divulguées à ses concurrents.
+
+Et maintenant ?
+1) Pas dépendre d'un seul opérateur : biais statistique ?
+2) Cadre européen : définir à l’échelle européenne un cadre d’exploitation des données mobiles pour assurer la qualité des statistiques publiées tout en respectant la vie privée des détenteurs de mobiles.
+3) Approfondir la méthodologie : mobitic
+
+
+http://jms-insee.fr/jms2018s25_2/
+
+données de téléphonie mobile, sur les déplacements domicile-travail et l’accroissement du télétravail.
+
+https://blog.insee.fr/que-peut-faire-linsee-a-partir-des-donnees-de-telephonie-mobile-mesure-de-population-presente-en-temps-de-confinement-et-statistiques-experimentales/
+
+## Données carte bancaire
+
+http://jms-insee.fr/jms2022s04_3/
+
+## Fidélimmo : prédire le patrimoine immobilier des ménages
+
+Olivier fait quelques slides sur fidélimmo
+
 
 ## Indice de prix des loyers grâce aux site d'annonces
 
 Parler partenariat Seloger/Insee mais peu de ressources
+https://www.cnis.fr/wp-content/uploads/2018/05/CR_2018_Cnis_RENCONTRE_Nouvelles_sources.pdf
+
+
+blog de l'insee pour d'autres 
+
+
+
+
+
+
+
+Le terme de big data recouvre un ensemble de sources très disparates
+Le domaine des prix est celui où elles apparaissent les plus prometteuses.
+Il s’agit d’un domaine où elles se présentent sous une forme relativement structurée,
+assez similaire à celles des données administratives que la statistique publique a l’habitude de
+manipuler, et l’objet de la mesure est conceptuellement simple.
+
+Pour les autres choses : 
+On est au plus dans une logique de complémentarité avec la production existante, que l’objectif soit d’aider à en
+raccourcir les délais de publication, ou d’alléger la charge de réponse des unités enquêtées.
+
+l’accès à des données quasi exhaustives permet d’envisager la production de statistiques très localisées ou centrées sur des catégories de population très spécifiques
+Mais deux problèmes apparaissent alors. D’une part, la question de la protection de
+la vie privée et du respect du secret des affaires.
+L’accès à ces données doit pouvoir s’inscrire dans un cadre juridique clair
+et durable.
+Dans le
+cas français, c’est la loi pour la République numérique qui a instauré le cadre juridique
+nécessaire à cette garantie.
+Ce qui remplace enquete on a le droit de demander
