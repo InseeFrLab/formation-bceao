@@ -1,40 +1,67 @@
-## Les données d'enquêtes {auto-animate=true}
+## La collecte directe : les enquêtes par échantillonnage
 
 - Informations collectées auprès d'[**individus**]{.orange} , de [**ménages**]{.orange}  ou d'[**entreprises**]{.orange} selon des méthodes structurées et standardisées
+- Échantillon [**représentatif**] ou au [**hasard**] 
 - Collecte via [**questionnaires**]{.orange}, [**interviews**]{.orange} ou plus récemment [**internet**]{.orange} 
 - Sources traditionnelles des instituts statistiques
-- Exemples : enquête Emploi, enquête conjoncture, recensement de la population...
+- [**Exemples**]{.blue2} : enquête Emploi, enquête conjoncture, recensement de la population...
 
 <!-- TODO: @ROMAIN où on met les données de compta nat ? -->
 
-## Les données d'enquêtes {auto-animate=true}
+## Zoom sur l'enquête Emploi
+
+- Panel rotatif (90k pesonne/ trimestres pendant 6 mois)
+- Objectif principal : calculer le taux de chômage 
+
+<!-- Mettre image du taux de chomage par âge -->
+
+## La collecte directe : les enquêtes par échantillonnage
 
 - [**Avantages**]{.orange}  : 
     - Contrôle total des questions posées et personnes interrogées
 - [**Désavantages**]{.orange}  :
-    - Coût très importants
-    - Contraignant pour l'enquêteurs et l'enquêté
+    - Coûts très importants
+    - Contraignant pour l'enquêteurs et les enquêtés
     - Baisse tendancielle du taux de réponse
 
-## Les données administratives 
+## Les sources administratives 
 
 - Informations collectées via les registres [**administratifs**]{.orange} ou [**comptables**]{.orange} 
 - Sources de plus en plus utilisées par les agences de statistiques publiques
-- Exemples : la déclaration sociale nominative (DSN), le Système National des Données de Santé (SNDS)...
+- Leurs volumes, leurs vitesses et leurs véracité peuvent être caractéristique de Big Data
+- [**Exemples**]{.blue2} : la déclaration sociale nominative (DSN), le Système National des Données de Santé (SNDS)...
 (elles peuvent être big data)
 
-## Les données administratives  {auto-animate=true}
+## Zoom sur la Déclaration Sociale Nominative (DSN)
+
+- Objectifs principaux :
+  - Simplifier les formalités déclaratives : une seule déclaration
+  - Fiabiliser et sécuriser les déclarations : dématérialisation et obligation mensuelle
+- Source de données riches 
+
+<!-- Mettre image de ce que contient la DSN comme info -->
+
+## Les sources administratives 
 
 - [**Avantages**]{.orange} : 
     - Coût de collecte plus faible
-    - Moins de biais de réponse (collecte souvent automatique)
+    - Charge allégée pour les personnes ou entreprises enquêtées
+    - Biais de réponse ammoindri (collecte souvent automatique)
     - Fréquence de collecte plus rapide et donc volume plus élevé (e.g SIDEP pendant le Covid)
+    - Données plus fines et donc volume plus élevé
     - Complémentaire au données d'enquêtes
 - [**Désavantages**]{.orange} :
     - Contrôle réduit sur l'échantillonage (problèmes de représentativité et biais de sélection)
     - Contrôle réduit sur la collection des données (incohérence et erreurs)
-    - Confidentialité pouvant réduire le partage des données
-    - Sources potentiellement moins pérennes dans le temps
+    - Confidentialité pouvant réduire le partage des données : conventions nécessaires
+    - Sources potentiellement moins pérennes dans le temps (modifications législatives, modifications de consignes )
+
+## Fondement juridique de l'utilisation des sources administratives pour la statistique publique
+
+- Dispositif juridique rigoureux 
+- Recours possible depuis 1986 (modification Article 7 bis de la loi du 7 juin 1951)
+- Transmission obligatoire lorsqu’elle émane d’une demande du ministre chargé de l’économie + avis positif du [Cnis](https://www.cnis.fr/)
+- Données protégées par le secret statistique (Article 7 ter de la loi du 7 juin 1951)
 
 ## Les données émergentes
 
