@@ -25,15 +25,15 @@ execute:
   warning: false
 ---
 
-# Introduction
+# :one: Introduction
 
 {{< include sections/1-introduction.qmd >}}
 
-# Les différentes données utilisées à l'Insee
+# :two: Les différentes données utilisées à l'Insee
 
 {{< include sections/2-sources-insee.qmd >}}
 
-# Retour d'expérience sur l'apport des données émergentes
+# :three: Retour d'expérience sur l'apport des données émergentes
 
 {{< include sections/3-retex-insee.qmd >}}
 

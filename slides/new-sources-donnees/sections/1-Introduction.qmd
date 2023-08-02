@@ -1,6 +1,6 @@
 ## Big Data, késako ?  {auto-animate=true}
 
-- [**Big Data**]{.orange} : [*"Gestion et analyse d'un volume massif de données, souvent à une échelle bien supérieure à ce que les systèmes traditionnels peuvent traiter efficacement."*]{.green2}
+- [**Big Data**]{.orange} : [*"Gestion et analyse d'un volume massif de données, souvent à une échelle bien supérieure à ce que les systèmes traditionnels peuvent traiter efficacement."*]{.blue2}
 
 - [**Les 3 V**]{.orange} qui caractérise le Big Data :
     - [**Volume**]{.blue2} : le Big Data se réfère à des [**quantités énormes**]{.green2} de données [**générées en continu**]{.green2} ($\geq 10^{12} bits$)
@@ -9,7 +9,7 @@
 
 ## Big Data, késako ?  {auto-animate=true}
 
-- [**2 autres V**]{.orange} caractéristique du Big Data :
+- [**2 autres V**]{.orange} caractéristiques du Big Data :
     - [**Véracité**]{.blue2} : cela concerne la [**qualité**]{.green2}, la [**fiabilité**]{.green2} et l'[**authenticité**]{.green2} des données
     - [**Valeur**]{.blue2} : quelle valeur peut-elle être créer de l'analyse de ces données ?
  
@@ -48,5 +48,5 @@ Les données massives ne sont ni collectées ni conceptualisées à des fins de 
 ## Innovations nécessaires pour traiter ces données
 
 - [**Techniques**]{.orange} : nouveaux langages de datascience, nouvelles infrastructures informatiques 
-- [**Méthodologiques**]{.orange} : économétrie en grande dimension, analyse de données textuelles, analyse d'images satellites
+- [**Méthodologiques**]{.orange} : économétrie en grande dimension, analyse de données textuelles, analyse d'images
 - [**Organisationnelles**]{.orange} : Partenariats avec de nouveaux acteurs privés ou publics pour le partage de données
