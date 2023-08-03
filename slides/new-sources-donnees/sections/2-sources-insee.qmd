@@ -72,7 +72,7 @@
 - Données issues d'internet (webscrapping) : offres d'emploi, google trends...
 - Données satellites
 
-Données émergentes &rarr plus souvent les caractéristiques Big Data
+Données émergentes &rarr; plus souvent les caractéristiques Big Data
 
 ## Les données émergentes à l'Insee
 
@@ -93,7 +93,7 @@ Données émergentes &rarr plus souvent les caractéristiques Big Data
 - [**Désavantages**]{.orange} :
     - Aucun contrôle sur l'échantillonage et la collection des données
     - Accessibilité limitée ou coûteuse
-    - Quantité $neq$ Qualité
+    - Quantité $\neq$ Qualité
 
 
 ## Les sources émergentes : Fondement juridique 

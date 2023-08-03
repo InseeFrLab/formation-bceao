@@ -37,3 +37,6 @@ execute:
 
 {{< include sections/3-retex-insee.qmd >}}
 
+# :four: Conclusion
+
+{{< include sections/4-conclusion.qmd >}}
