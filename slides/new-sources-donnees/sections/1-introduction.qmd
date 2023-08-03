@@ -41,7 +41,7 @@
 - [**Pertinence**]{.orange} et [**complétude**]{.orange} des données parfois douteuse
 
 ::: {.callout-important}
-# Différence centrale
+## Différence centrale
 Les données massives ne sont ni collectées ni conceptualisées à des fins de statistiques publiques !
 :::
 
