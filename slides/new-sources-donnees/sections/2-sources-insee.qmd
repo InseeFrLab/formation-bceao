@@ -13,7 +13,7 @@
 - Panel rotatif (90k pesonne/ trimestres pendant 6 mois)
 - Objectif principal : calculer le taux de chômage 
 
-<!-- Mettre image du taux de chomage par âge -->
+![](https://blog.insee.fr/wp-content/uploads/2023/05/blogInsee_2023_05-quels_types_de_sources_l_insee_utilise_t_il-figure1.png){fig-align="center"}
 
 ## La collecte directe : les enquêtes par échantillonnage
 
@@ -39,7 +39,8 @@
   - Fiabiliser et sécuriser les déclarations : dématérialisation et obligation mensuelle
 - Source de données riches 
 
-<!-- Mettre image de ce que contient la DSN comme info -->
+![](https://blog.insee.fr/wp-content/uploads/2023/05/blogInsee_2023_05-quels_types_de_sources_l_insee_utilise_t_il-figure2.png){fig-align="center"}
+
 
 ## Les sources administratives 
 
@@ -56,7 +57,7 @@
     - Confidentialité pouvant réduire le partage des données : conventions nécessaires
     - Sources potentiellement moins pérennes dans le temps (modifications législatives, modifications de consignes )
 
-## Fondement juridique de l'utilisation des sources administratives pour la statistique publique
+## Les sources administratives : Fondement juridique 
 
 - Dispositif juridique rigoureux 
 - Recours possible depuis 1986 (modification Article 7 bis de la loi du 7 juin 1951)
@@ -65,15 +66,25 @@
 
 ## Les données émergentes
 
-- L'État ne détient plus le monopole de la production de la données
-- Ensemble de données non traditionnelles à la statistique publique mais qui peuvent être utilise pour compléter, enrichir ou renouveller les statistiques publiques
+- L'État ne détient plus le monopole de la production de la données. De plus en plus de données privées
+- Ensemble de données non traditionnelles à la statistique publique mais qui peuvent être utilise pour compléter, enrichir ou renouveler les statistiques publiques
 - Données transactionnelles ou comportementales : transactions CB, téléphonie mobile, données de géolocalisation...
 - Données issues d'internet (webscrapping) : offres d'emploi, google trends...
-- Données satellite 
+- Données satellites
 
 Données émergentes &rarr plus souvent les caractéristiques Big Data
 
-## Les données émergentes  {auto-animate=true}
+## Les données émergentes à l'Insee
+
+- Une seule statistique est régulièrement produite grâce à des données privées : l'IPC
+- 3 sources de données utilisées pour produire l'IPC :
+  - Les enquêtes
+  - Les relevés de prix dématérialisés (webscrapping, base de données d'institutions...)
+  - Les données de caisse
+
+![](https://www.insee.fr/fr/statistiques/graphique/4254225/figure2.png){fig-align="center"}
+
+## Les données émergentes
 
 - [**Avantages**]{.orange} : 
     - Rapidité : temps réel ou quasi temps réel
@@ -83,3 +94,11 @@ Données émergentes &rarr plus souvent les caractéristiques Big Data
     - Aucun contrôle sur l'échantillonage et la collection des données
     - Accessibilité limitée ou coûteuse
     - Quantité $neq$ Qualité
+
+
+## Les sources émergentes : Fondement juridique 
+
+- Recours possible depuis 2016 (Article 3 bis de la loi du 7 juin 1951) sous des conditions très strictes :
+  - Consultations et étude de faisabilité/opportunité préalables à la décision 
+  - Confidentialité des données assurée
+  - Utilisation des données fixées par voie réglementaire
