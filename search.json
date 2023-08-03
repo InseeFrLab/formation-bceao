@@ -179,7 +179,7 @@
     "href": "slides/new-sources-donnees/index.html#innovations-nécessaires-pour-traiter-ces-données",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Innovations nécessaires pour traiter ces données",
-    "text": "Innovations nécessaires pour traiter ces données\n\nTechniques : nouveaux langages de datascience, nouvelles infrastructures informatiques\nMéthodologiques : économétrie en grande dimension, analyse de données textuelles, analyse d’images\nOrganisationnelles : Partenariats avec de nouveaux acteurs privés ou publics pour le partage de données"
+    "text": "Innovations nécessaires pour traiter ces données\n\nTechniques : nouveaux langages de datascience, nouvelles infrastructures informatiques\nMéthodologiques : économétrie en grande dimension, analyse de données textuelles, analyse d’images\nOrganisationnelles : Partenariats avec de nouveaux acteurs privés ou publics pour le partage de données\n\nLe terme de big data recouvre un ensemble de sources très disparates Le domaine des prix est celui où elles apparaissent les plus prometteuses. Il s’agit d’un domaine où elles se présentent sous une forme relativement structurée, assez similaire à celles des données administratives que la statistique publique a l’habitude de manipuler, et l’objet de la mesure est conceptuellement simple.\nPour les autres choses : On est au plus dans une logique de complémentarité avec la production existante, que l’objectif soit d’aider à en raccourcir les délais de publication, ou d’alléger la charge de réponse des unités enquêtées.\nl’accès à des données quasi exhaustives permet d’envisager la production de statistiques très localisées ou centrées sur des catégories de population très spécifiques Mais deux problèmes apparaissent alors. D’une part, la question de la protection de la vie privée et du respect du secret des affaires. L’accès à ces données doit pouvoir s’inscrire dans un cadre juridique clair et durable. Dans le cas français, c’est la loi pour la République numérique qui a instauré le cadre juridique nécessaire à cette garantie. Ce qui remplace enquete on a le droit de demander"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes-par-échantillonnage",
@@ -235,7 +235,7 @@
     "href": "slides/new-sources-donnees/index.html#les-données-émergentes",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Les données émergentes",
-    "text": "Les données émergentes\n\nL’État ne détient plus le monopole de la production de la données. De plus en plus de données privées\nEnsemble de données non traditionnelles à la statistique publique mais qui peuvent être utilise pour compléter, enrichir ou renouveler les statistiques publiques\nDonnées transactionnelles ou comportementales : transactions CB, téléphonie mobile, données de géolocalisation…\nDonnées issues d’internet (webscrapping) : offres d’emploi, google trends…\nDonnées satellites\n\nDonnées émergentes &rarr plus souvent les caractéristiques Big Data"
+    "text": "Les données émergentes\n\nL’État ne détient plus le monopole de la production de la données. De plus en plus de données privées\nEnsemble de données non traditionnelles à la statistique publique mais qui peuvent être utilise pour compléter, enrichir ou renouveler les statistiques publiques\nDonnées transactionnelles ou comportementales : transactions CB, téléphonie mobile, données de géolocalisation…\nDonnées issues d’internet (webscrapping) : offres d’emploi, google trends…\nDonnées satellites\n\nDonnées émergentes → plus souvent les caractéristiques Big Data"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#les-données-émergentes-à-linsee",
@@ -249,7 +249,7 @@
     "href": "slides/new-sources-donnees/index.html#les-données-émergentes-1",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Les données émergentes",
-    "text": "Les données émergentes\n\nAvantages :\n\nRapidité : temps réel ou quasi temps réel\nVolume : souvent données massives\nComplémentarité : appui des données traditionelles\n\nDésavantages :\n\nAucun contrôle sur l’échantillonage et la collection des données\nAccessibilité limitée ou coûteuse\nQuantité \\(neq\\) Qualité"
+    "text": "Les données émergentes\n\nAvantages :\n\nRapidité : temps réel ou quasi temps réel\nVolume : souvent données massives\nComplémentarité : appui des données traditionelles\n\nDésavantages :\n\nAucun contrôle sur l’échantillonage et la collection des données\nAccessibilité limitée ou coûteuse\nQuantité \\(\\neq\\) Qualité"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#les-sources-émergentes-fondement-juridique",
@@ -259,25 +259,46 @@
     "text": "Les sources émergentes : Fondement juridique\n\nRecours possible depuis 2016 (Article 3 bis de la loi du 7 juin 1951) sous des conditions très strictes :\n\nConsultations et étude de faisabilité/opportunité préalables à la décision\nConfidentialité des données assurée\nUtilisation des données fixées par voie réglementaire"
   },
   {
-    "objectID": "slides/new-sources-donnees/index.html#les-données-de-caisse-pour-mesurer-les-prix-à-la-consommation",
-    "href": "slides/new-sources-donnees/index.html#les-données-de-caisse-pour-mesurer-les-prix-à-la-consommation",
+    "objectID": "slides/new-sources-donnees/index.html#contexte",
+    "href": "slides/new-sources-donnees/index.html#contexte",
     "title": "Présentation des sources big data à l’Insee",
-    "section": "Les données de caisse pour mesurer les prix à la consommation",
-    "text": "Les données de caisse pour mesurer les prix à la consommation\nVoir JMS lino http://jms-insee.fr/jms2022s28_2/\nparmi les plus prometteuses car elles tirent parti de la dématérialisation de l’économie tout en retraçant au plus près les achats de biens et services qui constituent directement une partie de la consommation des ménages telle qu’elle sera ensuite mesurée par les comptes nationaux.\npartenariats noués ou renforcés à l’occasion de la crise avec les producteurs de ces données constituent des avancées significatives, que l’on espère pouvoir pérenniser"
+    "section": "Contexte",
+    "text": "Contexte\n\nL’IPC est calculé à partir de 200 000 relevés mensuels dans des points de vente\nComplété par +190 000 prix mensuels provenant de sources administratives ou webscrapping\nDepuis janvier 2020 une nouvelle sources :\n\nLes données de caisse : \\(\\approx 1,7 milliards\\) d’enregistrements par mois"
   },
   {
-    "objectID": "slides/new-sources-donnees/index.html#webscrapping-de-sites-vendeurs",
-    "href": "slides/new-sources-donnees/index.html#webscrapping-de-sites-vendeurs",
+    "objectID": "slides/new-sources-donnees/index.html#une-opportunité-pour-le-calcul-de-statistiques-de-prix",
+    "href": "slides/new-sources-donnees/index.html#une-opportunité-pour-le-calcul-de-statistiques-de-prix",
     "title": "Présentation des sources big data à l’Insee",
-    "section": "Webscrapping de sites vendeurs",
-    "text": "Webscrapping de sites vendeurs\nFormation Antoine top : https://inseefrlab.github.io/formation-webscraping/ http://jms-insee.fr/jms2022s14_1/"
+    "section": "Une opportunité pour le calcul de statistiques de prix",
+    "text": "Une opportunité pour le calcul de statistiques de prix\n\nD’autres INS plus précurseur : Pays-Bas (2002), Norvège (2005), Suisse (2008), Suède (2012), Belgique (2015), Danemark et Islande (2016), Luxembourg et Italie (2018)\nEntrée dans l’ère du Big Data : prise en compte des opportunités et limites\nExhaustivité des données et potentielles nouvelles informations"
   },
   {
-    "objectID": "slides/new-sources-donnees/index.html#prévoir-en-continu-la-croissance-française",
-    "href": "slides/new-sources-donnees/index.html#prévoir-en-continu-la-croissance-française",
+    "objectID": "slides/new-sources-donnees/index.html#a-quoi-ressemblent-les-données",
+    "href": "slides/new-sources-donnees/index.html#a-quoi-ressemblent-les-données",
     "title": "Présentation des sources big data à l’Insee",
-    "section": "Prévoir en continu la croissance française",
-    "text": "Prévoir en continu la croissance française\nhttps://www.insee.fr/fr/statistiques/4268739?sommaire=4268833 http://jms-insee.fr/jms2022s19_2/ ggtrends : http://jms-insee.fr/jms2018s25_1/ Google: utile qu’en temps de crise Des données qui sont affectées d’une forte volatilité naturelle sont utiles en présence d’un choc majeur qui dépasse cette volatilité mais le bruit de fond qui les affecte les rend moins lisibles et moins utiles quand la conjoncture revient un tant soit peu à la normale."
+    "section": "A quoi ressemblent les données ?",
+    "text": "A quoi ressemblent les données ?\n\nCollectée en continu et centralisées selon un pas journalier\nQuantités vendues et prix du produit pour chaque code barre enregistré\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nID Point de vente\nDate\nHeure\nProduit\nEAN\nPrix unitaire (€)\nQuantité\nTotal (€)\n\n\n\n\n123\n2023-08-01\n10:15\nPommes\n1234567890123\n1.50\n3\n4.50\n\n\n123\n2023-08-01\n11:30\nBacon (150G)\n2345678901234\n2.00\n2\n4.00\n\n\n234\n2023-08-01\n13:45\nYaourt nature\n3456789012345\n1.25\n5\n6.25\n\n\n345\n2023-08-02\n09:20\nFeuilles A4\n4567890123456\n0.75\n2\n1.50\n\n\n456\n2023-08-02\n12:00\nJus d’orange\n5678901234567\n3.50\n1\n3.50\n\n\n234\n2023-08-02\n15:30\nChips au maïs\n6789012345678\n1.00\n3\n3.00\n\n\n123\n2023-08-03\n11:10\nCrayon de couleur\n7890123456789\n1.50\n1\n1.50\n\n\n345\n2023-08-03\n14:20\nSoda cola (1.5L)\n8901234567890\n2.00\n3\n6.00\n\n\n456\n2023-08-03\n16:45\nPâtes fusilli\n9012345678901\n0.90\n4\n3.60"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#des-statistiques-plus-précises-et-plus-détaillées",
+    "href": "slides/new-sources-donnees/index.html#des-statistiques-plus-précises-et-plus-détaillées",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Des statistiques plus précises et plus détaillées",
+    "text": "Des statistiques plus précises et plus détaillées\n\nDisponibilité journalière très utile : contrainte de publications de l’IPC\nProduction d’indices sur des segments de consommation très spécifique\nEchantillons sur des espaces géographiques très fins : vers des indices régionaux\nIdentification les effets de substitution\nProduction d’indice de prix plus proche du ressenti des ménages\nUne réduction des coûts évidente pour l’Insee !"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#un-long-chemin-pour-accéder-aux-données-de-caisse",
+    "href": "slides/new-sources-donnees/index.html#un-long-chemin-pour-accéder-aux-données-de-caisse",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Un long chemin pour accéder aux données de caisse",
+    "text": "Un long chemin pour accéder aux données de caisse"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#retour-dexpérience",
+    "href": "slides/new-sources-donnees/index.html#retour-dexpérience",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Retour d’expérience",
+    "text": "Retour d’expérience\n\nSources parmi les plus prometteuses : \nNouveaux partenariats noués\nDes contraintes fortes :\n\nAccès difficile\nNouvelle architecture informatique indispensable\nAutomatisation des processus statistique nécessaire"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#améliorer-le-recensement-à-laide-de-données-satellites",
@@ -285,13 +306,6 @@
     "title": "Présentation des sources big data à l’Insee",
     "section": "Améliorer le recensement à l’aide de données satellites",
     "text": "Améliorer le recensement à l’aide de données satellites\nReprendre prez faite DIRAG"
-  },
-  {
-    "objectID": "slides/new-sources-donnees/index.html#les-données-mobiles-pour-la-statistique-publique",
-    "href": "slides/new-sources-donnees/index.html#les-données-mobiles-pour-la-statistique-publique",
-    "title": "Présentation des sources big data à l’Insee",
-    "section": "Les données mobiles pour la statistique publique",
-    "text": "Les données mobiles pour la statistique publique\nSavoir comment se répartit effectivement la population sur le territoire est essentiel pour organiser la réponse sanitaire et sociale face à l’épidémie de coronavirus\nElles ne permettent pas de suivre le déplacement des personnes, mais d’effectuer des comptages par zones à différentes dates, ce qui est l’unique objectif de ces travaux.\nestimer la population présente sur un territoire à un moment donné, dans le respect de la vie privée des utilisateurs contexte : crise sanitaire\npourquoi ? 1) Répondre au besoin des acteurs publics locaux Depuis plusieurs années maintenant, des statistiques de population présente (et non plus résidente) font partie des besoins 2) un champ de recherche prometteur Données téléphonie mobile pourraient notamment permettre à terme des mises-à-jour plus fréquentes des statistiques de population (mémorandum dit de « Scheveningen » sur les statistiques officielles et les Big Data) 3) Nouer partenariats partenariat de recherche avec un laboratoire de recherche d’Orange et Eurostat. nouveau projet de recherche, MobiTic Agence nationale de la Recherche, Orange Labs, Orange Business Services, l’université Gustave Eiffel (Ifsttar) et l’UMR Géographie-Cités du CNRS 4) Réponse au contexte actuel\nComment l’Insee s’y est pris ? 1) Quelles données ont elle été utilisées ? comptages de présence dans chaque département croisés avec le département de résidence L’opérateur les recale une première fois pour représenter l’ensemble de la population à une échelle locale, car ses clients ne constituent qu’une fraction du parc de téléphonie mobile un mobile est localisé sur un territoire donné à un moment donné à partir des antennes auxquelles le terminal se connecte Ces données issues du réseau mobile ne doivent pas être confondues avec les données de localisation GPS de certains smartphones\n\nConfidentialité garantie L’Insee doit connaître dans le détail la méthodologie des opérateurs à l’origine des données qui lui sont fournies garantie que ses méthodes ne seront pas divulguées à ses concurrents.\n\nEt maintenant ? 1) Pas dépendre d’un seul opérateur : biais statistique ? 2) Cadre européen : définir à l’échelle européenne un cadre d’exploitation des données mobiles pour assurer la qualité des statistiques publiées tout en respectant la vie privée des détenteurs de mobiles. 3) Approfondir la méthodologie : mobitic\nhttp://jms-insee.fr/jms2018s25_2/\ndonnées de téléphonie mobile, sur les déplacements domicile-travail et l’accroissement du télétravail.\nhttps://blog.insee.fr/que-peut-faire-linsee-a-partir-des-donnees-de-telephonie-mobile-mesure-de-population-presente-en-temps-de-confinement-et-statistiques-experimentales/"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#données-carte-bancaire",
@@ -312,7 +326,14 @@
     "href": "slides/new-sources-donnees/index.html#indice-de-prix-des-loyers-grâce-aux-site-dannonces",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Indice de prix des loyers grâce aux site d’annonces",
-    "text": "Indice de prix des loyers grâce aux site d’annonces\nParler partenariat Seloger/Insee mais peu de ressources https://www.cnis.fr/wp-content/uploads/2018/05/CR_2018_Cnis_RENCONTRE_Nouvelles_sources.pdf\nblog de l’insee pour d’autres\nLe terme de big data recouvre un ensemble de sources très disparates Le domaine des prix est celui où elles apparaissent les plus prometteuses. Il s’agit d’un domaine où elles se présentent sous une forme relativement structurée, assez similaire à celles des données administratives que la statistique publique a l’habitude de manipuler, et l’objet de la mesure est conceptuellement simple.\nPour les autres choses : On est au plus dans une logique de complémentarité avec la production existante, que l’objectif soit d’aider à en raccourcir les délais de publication, ou d’alléger la charge de réponse des unités enquêtées.\nl’accès à des données quasi exhaustives permet d’envisager la production de statistiques très localisées ou centrées sur des catégories de population très spécifiques Mais deux problèmes apparaissent alors. D’une part, la question de la protection de la vie privée et du respect du secret des affaires. L’accès à ces données doit pouvoir s’inscrire dans un cadre juridique clair et durable. Dans le cas français, c’est la loi pour la République numérique qui a instauré le cadre juridique nécessaire à cette garantie. Ce qui remplace enquete on a le droit de demander"
+    "text": "Indice de prix des loyers grâce aux site d’annonces\nParler partenariat Seloger/Insee mais peu de ressources https://www.cnis.fr/wp-content/uploads/2018/05/CR_2018_Cnis_RENCONTRE_Nouvelles_sources.pdf\nblog de l’insee pour d’autres"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#conclusion-1",
+    "href": "slides/new-sources-donnees/index.html#conclusion-1",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Conclusion",
+    "text": "Conclusion\nLe terme de big data recouvre un ensemble de sources très disparates Le domaine des prix est celui où elles apparaissent les plus prometteuses. Il s’agit d’un domaine où elles se présentent sous une forme relativement structurée, assez similaire à celles des données administratives que la statistique publique a l’habitude de manipuler, et l’objet de la mesure est conceptuellement simple.\nPour les autres choses : On est au plus dans une logique de complémentarité avec la production existante, que l’objectif soit d’aider à en raccourcir les délais de publication, ou d’alléger la charge de réponse des unités enquêtées.\nl’accès à des données quasi exhaustives permet d’envisager la production de statistiques très localisées ou centrées sur des catégories de population très spécifiques Mais deux problèmes apparaissent alors. D’une part, la question de la protection de la vie privée et du respect du secret des affaires. L’accès à ces données doit pouvoir s’inscrire dans un cadre juridique clair et durable. Dans le cas français, c’est la loi pour la République numérique qui a instauré le cadre juridique nécessaire à cette garantie. Ce qui remplace enquete on a le droit de demander"
   },
   {
     "objectID": "index.html",
