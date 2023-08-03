@@ -151,7 +151,7 @@
     "href": "slides/new-sources-donnees/index.html#big-data-késako-1",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Big Data, késako ?",
-    "text": "Big Data, késako ?\n\n2 autres V caractéristique du Big Data :\n\nVéracité : cela concerne la qualité, la fiabilité et l’authenticité des données\nValeur : quelle valeur peut-elle être créer de l’analyse de ces données ?"
+    "text": "Big Data, késako ?\n\n2 autres V caractéristiques du Big Data :\n\nVéracité : cela concerne la qualité, la fiabilité et l’authenticité des données\nValeur : quelle valeur peut-elle être créer de l’analyse de ces données ?"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#le-big-data-au-service-de-la-statistique-publique",
@@ -172,14 +172,147 @@
     "href": "slides/new-sources-donnees/index.html#des-données-très-différentes-des-statistiques-publiques-usuelles",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Des données très différentes des statistiques publiques usuelles",
-    "text": "Des données très différentes des statistiques publiques usuelles\n\nDifférence centrale :\nProcessus de génération des données n’est pas contrôlé\nProblème de représentativité des différentes sous population dans les données\nFormats généralement complexes et souvent changeants ou non pérennes\nPertinence et complétude des données parfois douteuse\n\n\n\n\n\n\n\nDifférence centrale\n\n\nLes données massives ne sont ni collectées ni conceptualisées à des fins de statistiques publiques !"
+    "text": "Des données très différentes des statistiques publiques usuelles\n\nProcessus de génération des données n’est pas contrôlé\nProblème de représentativité des différentes sous population dans les données\nFormats généralement complexes et souvent changeants ou non pérennes\nPertinence et complétude des données parfois douteuse\n\n\n\n\n\n\n\nDifférence centrale\n\n\nLes données massives ne sont ni collectées ni conceptualisées à des fins de statistiques publiques !"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#innovations-nécessaires-pour-traiter-ces-données",
     "href": "slides/new-sources-donnees/index.html#innovations-nécessaires-pour-traiter-ces-données",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Innovations nécessaires pour traiter ces données",
-    "text": "Innovations nécessaires pour traiter ces données\n\nTechniques : nouveaux langages de datascience, nouvelles infrastructures informatiques\nMéthodologiques : économétrie en grande dimension, analyse de données textuelles, analyse d’images satellites\nOrganisationnelles : Partenariats avec de nouveaux acteurs privés ou publics pour le partage de données"
+    "text": "Innovations nécessaires pour traiter ces données\n\nTechniques : nouveaux langages de datascience, nouvelles infrastructures informatiques\nMéthodologiques : économétrie en grande dimension, analyse de données textuelles, analyse d’images\nOrganisationnelles : Partenariats avec de nouveaux acteurs privés ou publics pour le partage de données"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes-par-échantillonnage",
+    "href": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes-par-échantillonnage",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "La collecte directe : les enquêtes par échantillonnage",
+    "text": "La collecte directe : les enquêtes par échantillonnage\n\nInformations collectées auprès d’individus , de ménages ou d’entreprises selon des méthodes structurées et standardisées\nÉchantillon [représentatif] ou au [hasard]\nCollecte via questionnaires, interviews ou plus récemment internet\nSources traditionnelles des instituts statistiques\nExemples : enquête Emploi, enquête conjoncture, recensement de la population…"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#zoom-sur-lenquête-emploi",
+    "href": "slides/new-sources-donnees/index.html#zoom-sur-lenquête-emploi",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Zoom sur l’enquête Emploi",
+    "text": "Zoom sur l’enquête Emploi\n\nPanel rotatif (90k pesonne/ trimestres pendant 6 mois)\nObjectif principal : calculer le taux de chômage"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes-par-échantillonnage-1",
+    "href": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes-par-échantillonnage-1",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "La collecte directe : les enquêtes par échantillonnage",
+    "text": "La collecte directe : les enquêtes par échantillonnage\n\nAvantages :\n\nContrôle total des questions posées et personnes interrogées\n\nDésavantages :\n\nCoûts très importants\nContraignant pour l’enquêteurs et les enquêtés\nBaisse tendancielle du taux de réponse"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#les-sources-administratives",
+    "href": "slides/new-sources-donnees/index.html#les-sources-administratives",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Les sources administratives",
+    "text": "Les sources administratives\n\nInformations collectées via les registres administratifs ou comptables\nSources de plus en plus utilisées par les agences de statistiques publiques\nLeurs volumes, leurs vitesses et leurs véracité peuvent être caractéristique de Big Data\nExemples : la déclaration sociale nominative (DSN), le Système National des Données de Santé (SNDS)… (elles peuvent être big data)"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#zoom-sur-la-déclaration-sociale-nominative-dsn",
+    "href": "slides/new-sources-donnees/index.html#zoom-sur-la-déclaration-sociale-nominative-dsn",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Zoom sur la Déclaration Sociale Nominative (DSN)",
+    "text": "Zoom sur la Déclaration Sociale Nominative (DSN)\n\nObjectifs principaux :\n\nSimplifier les formalités déclaratives : une seule déclaration\nFiabiliser et sécuriser les déclarations : dématérialisation et obligation mensuelle\n\nSource de données riches"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#les-sources-administratives-1",
+    "href": "slides/new-sources-donnees/index.html#les-sources-administratives-1",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Les sources administratives",
+    "text": "Les sources administratives\n\nAvantages :\n\nCoût de collecte plus faible\nCharge allégée pour les personnes ou entreprises enquêtées\nBiais de réponse ammoindri (collecte souvent automatique)\nFréquence de collecte plus rapide et donc volume plus élevé (e.g SIDEP pendant le Covid)\nDonnées plus fines et donc volume plus élevé\nComplémentaire au données d’enquêtes\n\nDésavantages :\n\nContrôle réduit sur l’échantillonage (problèmes de représentativité et biais de sélection)\nContrôle réduit sur la collection des données (incohérence et erreurs)\nConfidentialité pouvant réduire le partage des données : conventions nécessaires\nSources potentiellement moins pérennes dans le temps (modifications législatives, modifications de consignes )"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#les-sources-administratives-fondement-juridique",
+    "href": "slides/new-sources-donnees/index.html#les-sources-administratives-fondement-juridique",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Les sources administratives : Fondement juridique",
+    "text": "Les sources administratives : Fondement juridique\n\nDispositif juridique rigoureux\nRecours possible depuis 1986 (modification Article 7 bis de la loi du 7 juin 1951)\nTransmission obligatoire lorsqu’elle émane d’une demande du ministre chargé de l’économie + avis positif du Cnis\nDonnées protégées par le secret statistique (Article 7 ter de la loi du 7 juin 1951)"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#les-données-émergentes",
+    "href": "slides/new-sources-donnees/index.html#les-données-émergentes",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Les données émergentes",
+    "text": "Les données émergentes\n\nL’État ne détient plus le monopole de la production de la données. De plus en plus de données privées\nEnsemble de données non traditionnelles à la statistique publique mais qui peuvent être utilise pour compléter, enrichir ou renouveler les statistiques publiques\nDonnées transactionnelles ou comportementales : transactions CB, téléphonie mobile, données de géolocalisation…\nDonnées issues d’internet (webscrapping) : offres d’emploi, google trends…\nDonnées satellites\n\nDonnées émergentes &rarr plus souvent les caractéristiques Big Data"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#les-données-émergentes-à-linsee",
+    "href": "slides/new-sources-donnees/index.html#les-données-émergentes-à-linsee",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Les données émergentes à l’Insee",
+    "text": "Les données émergentes à l’Insee\n\nUne seule statistique est régulièrement produite grâce à des données privées : l’IPC\n3 sources de données utilisées pour produire l’IPC :\n\nLes enquêtes\nLes relevés de prix dématérialisés (webscrapping, base de données d’institutions…)\nLes données de caisse"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#les-données-émergentes-1",
+    "href": "slides/new-sources-donnees/index.html#les-données-émergentes-1",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Les données émergentes",
+    "text": "Les données émergentes\n\nAvantages :\n\nRapidité : temps réel ou quasi temps réel\nVolume : souvent données massives\nComplémentarité : appui des données traditionelles\n\nDésavantages :\n\nAucun contrôle sur l’échantillonage et la collection des données\nAccessibilité limitée ou coûteuse\nQuantité \\(neq\\) Qualité"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#les-sources-émergentes-fondement-juridique",
+    "href": "slides/new-sources-donnees/index.html#les-sources-émergentes-fondement-juridique",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Les sources émergentes : Fondement juridique",
+    "text": "Les sources émergentes : Fondement juridique\n\nRecours possible depuis 2016 (Article 3 bis de la loi du 7 juin 1951) sous des conditions très strictes :\n\nConsultations et étude de faisabilité/opportunité préalables à la décision\nConfidentialité des données assurée\nUtilisation des données fixées par voie réglementaire"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#les-données-de-caisse-pour-mesurer-les-prix-à-la-consommation",
+    "href": "slides/new-sources-donnees/index.html#les-données-de-caisse-pour-mesurer-les-prix-à-la-consommation",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Les données de caisse pour mesurer les prix à la consommation",
+    "text": "Les données de caisse pour mesurer les prix à la consommation\nVoir JMS lino http://jms-insee.fr/jms2022s28_2/\nparmi les plus prometteuses car elles tirent parti de la dématérialisation de l’économie tout en retraçant au plus près les achats de biens et services qui constituent directement une partie de la consommation des ménages telle qu’elle sera ensuite mesurée par les comptes nationaux.\npartenariats noués ou renforcés à l’occasion de la crise avec les producteurs de ces données constituent des avancées significatives, que l’on espère pouvoir pérenniser"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#webscrapping-de-sites-vendeurs",
+    "href": "slides/new-sources-donnees/index.html#webscrapping-de-sites-vendeurs",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Webscrapping de sites vendeurs",
+    "text": "Webscrapping de sites vendeurs\nFormation Antoine top : https://inseefrlab.github.io/formation-webscraping/ http://jms-insee.fr/jms2022s14_1/"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#prévoir-en-continu-la-croissance-française",
+    "href": "slides/new-sources-donnees/index.html#prévoir-en-continu-la-croissance-française",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Prévoir en continu la croissance française",
+    "text": "Prévoir en continu la croissance française\nhttps://www.insee.fr/fr/statistiques/4268739?sommaire=4268833 http://jms-insee.fr/jms2022s19_2/ ggtrends : http://jms-insee.fr/jms2018s25_1/ Google: utile qu’en temps de crise Des données qui sont affectées d’une forte volatilité naturelle sont utiles en présence d’un choc majeur qui dépasse cette volatilité mais le bruit de fond qui les affecte les rend moins lisibles et moins utiles quand la conjoncture revient un tant soit peu à la normale."
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#améliorer-le-recensement-à-laide-de-données-satellites",
+    "href": "slides/new-sources-donnees/index.html#améliorer-le-recensement-à-laide-de-données-satellites",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Améliorer le recensement à l’aide de données satellites",
+    "text": "Améliorer le recensement à l’aide de données satellites\nReprendre prez faite DIRAG"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#les-données-mobiles-pour-la-statistique-publique",
+    "href": "slides/new-sources-donnees/index.html#les-données-mobiles-pour-la-statistique-publique",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Les données mobiles pour la statistique publique",
+    "text": "Les données mobiles pour la statistique publique\nSavoir comment se répartit effectivement la population sur le territoire est essentiel pour organiser la réponse sanitaire et sociale face à l’épidémie de coronavirus\nElles ne permettent pas de suivre le déplacement des personnes, mais d’effectuer des comptages par zones à différentes dates, ce qui est l’unique objectif de ces travaux.\nestimer la population présente sur un territoire à un moment donné, dans le respect de la vie privée des utilisateurs contexte : crise sanitaire\npourquoi ? 1) Répondre au besoin des acteurs publics locaux Depuis plusieurs années maintenant, des statistiques de population présente (et non plus résidente) font partie des besoins 2) un champ de recherche prometteur Données téléphonie mobile pourraient notamment permettre à terme des mises-à-jour plus fréquentes des statistiques de population (mémorandum dit de « Scheveningen » sur les statistiques officielles et les Big Data) 3) Nouer partenariats partenariat de recherche avec un laboratoire de recherche d’Orange et Eurostat. nouveau projet de recherche, MobiTic Agence nationale de la Recherche, Orange Labs, Orange Business Services, l’université Gustave Eiffel (Ifsttar) et l’UMR Géographie-Cités du CNRS 4) Réponse au contexte actuel\nComment l’Insee s’y est pris ? 1) Quelles données ont elle été utilisées ? comptages de présence dans chaque département croisés avec le département de résidence L’opérateur les recale une première fois pour représenter l’ensemble de la population à une échelle locale, car ses clients ne constituent qu’une fraction du parc de téléphonie mobile un mobile est localisé sur un territoire donné à un moment donné à partir des antennes auxquelles le terminal se connecte Ces données issues du réseau mobile ne doivent pas être confondues avec les données de localisation GPS de certains smartphones\n\nConfidentialité garantie L’Insee doit connaître dans le détail la méthodologie des opérateurs à l’origine des données qui lui sont fournies garantie que ses méthodes ne seront pas divulguées à ses concurrents.\n\nEt maintenant ? 1) Pas dépendre d’un seul opérateur : biais statistique ? 2) Cadre européen : définir à l’échelle européenne un cadre d’exploitation des données mobiles pour assurer la qualité des statistiques publiées tout en respectant la vie privée des détenteurs de mobiles. 3) Approfondir la méthodologie : mobitic\nhttp://jms-insee.fr/jms2018s25_2/\ndonnées de téléphonie mobile, sur les déplacements domicile-travail et l’accroissement du télétravail.\nhttps://blog.insee.fr/que-peut-faire-linsee-a-partir-des-donnees-de-telephonie-mobile-mesure-de-population-presente-en-temps-de-confinement-et-statistiques-experimentales/"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#données-carte-bancaire",
+    "href": "slides/new-sources-donnees/index.html#données-carte-bancaire",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Données carte bancaire",
+    "text": "Données carte bancaire\nhttp://jms-insee.fr/jms2022s04_3/"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#fidélimmo-prédire-le-patrimoine-immobilier-des-ménages",
+    "href": "slides/new-sources-donnees/index.html#fidélimmo-prédire-le-patrimoine-immobilier-des-ménages",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Fidélimmo : prédire le patrimoine immobilier des ménages",
+    "text": "Fidélimmo : prédire le patrimoine immobilier des ménages\nOlivier fait quelques slides sur fidélimmo"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#indice-de-prix-des-loyers-grâce-aux-site-dannonces",
+    "href": "slides/new-sources-donnees/index.html#indice-de-prix-des-loyers-grâce-aux-site-dannonces",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Indice de prix des loyers grâce aux site d’annonces",
+    "text": "Indice de prix des loyers grâce aux site d’annonces\nParler partenariat Seloger/Insee mais peu de ressources https://www.cnis.fr/wp-content/uploads/2018/05/CR_2018_Cnis_RENCONTRE_Nouvelles_sources.pdf\nblog de l’insee pour d’autres\nLe terme de big data recouvre un ensemble de sources très disparates Le domaine des prix est celui où elles apparaissent les plus prometteuses. Il s’agit d’un domaine où elles se présentent sous une forme relativement structurée, assez similaire à celles des données administratives que la statistique publique a l’habitude de manipuler, et l’objet de la mesure est conceptuellement simple.\nPour les autres choses : On est au plus dans une logique de complémentarité avec la production existante, que l’objectif soit d’aider à en raccourcir les délais de publication, ou d’alléger la charge de réponse des unités enquêtées.\nl’accès à des données quasi exhaustives permet d’envisager la production de statistiques très localisées ou centrées sur des catégories de population très spécifiques Mais deux problèmes apparaissent alors. D’une part, la question de la protection de la vie privée et du respect du secret des affaires. L’accès à ces données doit pouvoir s’inscrire dans un cadre juridique clair et durable. Dans le cas français, c’est la loi pour la République numérique qui a instauré le cadre juridique nécessaire à cette garantie. Ce qui remplace enquete on a le droit de demander"
   },
   {
     "objectID": "index.html",
