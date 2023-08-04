@@ -1,6 +1,7 @@
 
 <!-- Mis en prod : -->
 # A. Les données de caisse pour mesurer les prix à la consommation
+<!-- Référence : https://www.insee.fr/fr/information/4254225?sommaire=4254170#titre-bloc-2 -->
 
 ## Contexte
 
@@ -50,19 +51,63 @@
 
 ## Retour d'expérience 
 
-- Sources parmi les plus prometteuses : <!-- tirent parti de la dématérialisation de l’économie tout en retraçant au plus près les achats de biens et services qui constituent directement une partie de la consommation des ménages telle qu’elle sera ensuite mesurée par les comptes nationaux.-->
-- Nouveaux partenariats noués
+- Sources parmi les plus prometteuses car substituables <!-- tirent parti de la dématérialisation de l’économie tout en retraçant au plus près les achats de biens et services qui constituent directement une partie de la consommation des ménages telle qu’elle sera ensuite mesurée par les comptes nationaux.-->
+- Nouveaux partenariats noués pour assurer la pérénité
+- Données de caisse : 2 V (Vélocité, Volume) sur 3 
 - Des contraintes fortes : 
-  - Accès difficile 
+  - Accès long et difficile aux données
   - Nouvelle architecture informatique indispensable
-  - Automatisation des processus statistique nécessaire
+  - Automatisation des processus statistiques nécessaire (la classification, l’identification des relances, le remplacement des produits)
 
 <!-- Voir JMS lino http://jms-insee.fr/jms2022s28_2/ -->
 
-# B. Webscrapping de sites vendeurs 
+# B. Webscrapping
 
-Formation Antoine top : https://inseefrlab.github.io/formation-webscraping/
-http://jms-insee.fr/jms2022s14_1/
+## Contexte
+
+- Même objectif : améliorer l'IPC
+- Les données de caisse ne suffisent pas :
+  - Pas une solution pour prix des services
+  - Produits sans code-barre
+- Webscrapping permet de collecter de nouvelles données de prix
+
+## Un exemple : les prix dans le domaine de l'hotellerie
+
+- Etude réalisée par Adrien Montbroussous, Camille Freppel et Ombéline Guillon
+- Papier et présentation détaillée accessible [ici](https://www.ottawagroup.org/Ottawa/ottawagroup.nsf/4a256353001af3ed4b2562bb00121564/90eefd961765454eca25886a00042203/$FILE/Web%20scraping%20of%20booking.com_Paper.pdf) et [ici](http://www.jms-insee.fr/2022/S14_1_PPT_MONTBROUSSOUS_JMS2022.pdf)
+- Objectif : améliorer l'indice des prix dans le secteur de l'hotellerie
+- Code source pour le webscrapping des prix disponible en [open-source](https://git.lab.sspcloud.fr/methodo-ipc/webscraping-hotel)
+
+## Un exemple : les prix dans le domaine de l'hotellerie
+
+- Le poste location de chambres : 0,8 % de la consommation du panier de l’IPC en 2021
+- Les prix sont collectés sur le terrain par des enquêteurs :
+  - Du lundi au vendredi, une fois par mois pour le jour même
+  - Pour une nuitée pour 2 personnes avec 2 petits-déjeuners
+
+## Un exemple : les prix dans le domaine de l'hotellerie
+
+- Problèmes :
+  - Pas de prise en compte des réservations en avance
+  - Pas de prise en compte de la hausse de la consommation sur internet
+  - Certaines zones touristiques ne sont pas bien représentées
+  - Aucun prix pour des nuitées le samedi ou le dimanche soir ne sont collectés.
+
+- Webscrapping de [Booking]{.blue2} permet de contrecarrer ces problématiques
+
+## D'autres expérimentations
+
+- Indice des prix des articles électroniques : webscrapping de [Boulanger]{.blue2} et [rue du commerce]{.blue2}
+  - Code [open-source](https://git.lab.sspcloud.fr/methodo-ipc/webscraping-biens-electroniques)
+- Indice des prix du transport en train : webscrapping de la [SNCF]{.blue2}
+    - Pris en compte dans l'indice de l'IPC depuis 2020
+
+## Quelques limites au webscrapping
+
+- Dépendance au site internet
+    - Des interruptions de collecte duˆes `a des changements des sites wbe
+    - Maintenance des codes coûteux
+- Fondement juridique important voir séance du jour 4
 
 # C. Prévoir en continu la croissance française 
 
