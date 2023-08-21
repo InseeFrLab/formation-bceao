@@ -298,7 +298,49 @@
     "href": "slides/new-sources-donnees/index.html#retour-dexpérience",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Retour d’expérience",
-    "text": "Retour d’expérience\n\nSources parmi les plus prometteuses : \nNouveaux partenariats noués\nDes contraintes fortes :\n\nAccès difficile\nNouvelle architecture informatique indispensable\nAutomatisation des processus statistique nécessaire"
+    "text": "Retour d’expérience\n\nSources parmi les plus prometteuses car substituables \nNouveaux partenariats noués pour assurer la pérénité\nDonnées de caisse : 2 V (Vélocité, Volume) sur 3\nDes contraintes fortes :\n\nAccès long et difficile aux données\nNouvelle architecture informatique indispensable\nAutomatisation des processus statistiques nécessaire (la classification, l’identification des relances, le remplacement des produits)"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#contexte-1",
+    "href": "slides/new-sources-donnees/index.html#contexte-1",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Contexte",
+    "text": "Contexte\n\nMême objectif : améliorer l’IPC\nLes données de caisse ne suffisent pas :\n\nPas une solution pour prix des services\nProduits sans code-barre\n\nWebscrapping permet de collecter de nouvelles données de prix"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhotellerie",
+    "href": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhotellerie",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Un exemple : les prix dans le domaine de l’hotellerie",
+    "text": "Un exemple : les prix dans le domaine de l’hotellerie\n\nEtude réalisée par Adrien Montbroussous, Camille Freppel et Ombéline Guillon\nPapier et présentation détaillée accessible ici et ici\nObjectif : améliorer l’indice des prix dans le secteur de l’hotellerie\nCode source pour le webscrapping des prix disponible en open-source"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhotellerie-1",
+    "href": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhotellerie-1",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Un exemple : les prix dans le domaine de l’hotellerie",
+    "text": "Un exemple : les prix dans le domaine de l’hotellerie\n\nLe poste location de chambres : 0,8 % de la consommation du panier de l’IPC en 2021\nLes prix sont collectés sur le terrain par des enquêteurs :\n\nDu lundi au vendredi, une fois par mois pour le jour même\nPour une nuitée pour 2 personnes avec 2 petits-déjeuners"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhotellerie-2",
+    "href": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhotellerie-2",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Un exemple : les prix dans le domaine de l’hotellerie",
+    "text": "Un exemple : les prix dans le domaine de l’hotellerie\n\nProblèmes :\n\nPas de prise en compte des réservations en avance\nPas de prise en compte de la hausse de la consommation sur internet\nCertaines zones touristiques ne sont pas bien représentées\nAucun prix pour des nuitées le samedi ou le dimanche soir ne sont collectés.\n\nWebscrapping de Booking permet de contrecarrer ces problématiques"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#dautres-expérimentations",
+    "href": "slides/new-sources-donnees/index.html#dautres-expérimentations",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "D’autres expérimentations",
+    "text": "D’autres expérimentations\n\nIndice des prix des articles électroniques : webscrapping de Boulanger et rue du commerce\n\nCode open-source\n\nIndice des prix du transport en train : webscrapping de la SNCF\n\nPris en compte dans l’indice de l’IPC depuis 2020"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#quelques-limites-au-webscrapping",
+    "href": "slides/new-sources-donnees/index.html#quelques-limites-au-webscrapping",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Quelques limites au webscrapping",
+    "text": "Quelques limites au webscrapping\n\nDépendance au site internet\n\nDes interruptions de collecte duˆes `a des changements des sites wbe\nMaintenance des codes coûteux\n\nFondement juridique important voir séance du jour 4"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#améliorer-le-recensement-à-laide-de-données-satellites",

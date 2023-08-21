@@ -8,7 +8,7 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.433">
+  <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Romain Avouac, Thomas Faria">
   <title>Formation BCEAO - Présentation des sources big data à l’Insee</title>
@@ -576,7 +576,7 @@
 <section>
 <section id="a.-les-données-de-caisse-pour-mesurer-les-prix-à-la-consommation" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>A. Les données de caisse pour mesurer les prix à la consommation</h1>
-
+<!-- R&#xE9;f&#xE9;rence : https://www.insee.fr/fr/information/4254225?sommaire=4254170#titre-bloc-2 -->
 </section>
 <section id="contexte" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Contexte</h2>
@@ -738,22 +738,92 @@
 <section id="retour-dexpérience" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Retour d’expérience</h2>
 <ul>
-<li>Sources parmi les plus prometteuses : <!-- tirent parti de la d&#xE9;mat&#xE9;rialisation de l&#x2019;&#xE9;conomie tout en retra&#xE7;ant au plus pr&#xE8;s les achats de biens et services qui constituent directement une partie de la consommation des m&#xE9;nages telle qu&#x2019;elle sera ensuite mesur&#xE9;e par les comptes nationaux.--></li>
-<li>Nouveaux partenariats noués</li>
+<li>Sources parmi les plus prometteuses car substituables <!-- tirent parti de la d&#xE9;mat&#xE9;rialisation de l&#x2019;&#xE9;conomie tout en retra&#xE7;ant au plus pr&#xE8;s les achats de biens et services qui constituent directement une partie de la consommation des m&#xE9;nages telle qu&#x2019;elle sera ensuite mesur&#xE9;e par les comptes nationaux.--></li>
+<li>Nouveaux partenariats noués pour assurer la pérénité</li>
+<li>Données de caisse : 2 V (Vélocité, Volume) sur 3</li>
 <li>Des contraintes fortes :
 <ul>
-<li>Accès difficile</li>
+<li>Accès long et difficile aux données</li>
 <li>Nouvelle architecture informatique indispensable</li>
-<li>Automatisation des processus statistique nécessaire</li>
+<li>Automatisation des processus statistiques nécessaire (la classification, l’identification des relances, le remplacement des produits)</li>
 </ul></li>
 </ul>
 <!-- Voir JMS lino http://jms-insee.fr/jms2022s28_2/ -->
 </section></section>
-<section id="b.-webscrapping-de-sites-vendeurs" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1>B. Webscrapping de sites vendeurs</h1>
-<p>Formation Antoine top : https://inseefrlab.github.io/formation-webscraping/ http://jms-insee.fr/jms2022s14_1/</p>
-</section>
+<section>
+<section id="b.-webscrapping" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>B. Webscrapping</h1>
 
+</section>
+<section id="contexte-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Contexte</h2>
+<ul>
+<li>Même objectif : améliorer l’IPC</li>
+<li>Les données de caisse ne suffisent pas :
+<ul>
+<li>Pas une solution pour prix des services</li>
+<li>Produits sans code-barre</li>
+</ul></li>
+<li>Webscrapping permet de collecter de nouvelles données de prix</li>
+</ul>
+</section>
+<section id="un-exemple-les-prix-dans-le-domaine-de-lhotellerie" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Un exemple : les prix dans le domaine de l’hotellerie</h2>
+<ul>
+<li>Etude réalisée par Adrien Montbroussous, Camille Freppel et Ombéline Guillon</li>
+<li>Papier et présentation détaillée accessible <a href="https://www.ottawagroup.org/Ottawa/ottawagroup.nsf/4a256353001af3ed4b2562bb00121564/90eefd961765454eca25886a00042203/$FILE/Web%20scraping%20of%20booking.com_Paper.pdf">ici</a> et <a href="http://www.jms-insee.fr/2022/S14_1_PPT_MONTBROUSSOUS_JMS2022.pdf">ici</a></li>
+<li>Objectif : améliorer l’indice des prix dans le secteur de l’hotellerie</li>
+<li>Code source pour le webscrapping des prix disponible en <a href="https://git.lab.sspcloud.fr/methodo-ipc/webscraping-hotel">open-source</a></li>
+</ul>
+</section>
+<section id="un-exemple-les-prix-dans-le-domaine-de-lhotellerie-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Un exemple : les prix dans le domaine de l’hotellerie</h2>
+<ul>
+<li>Le poste location de chambres : 0,8 % de la consommation du panier de l’IPC en 2021</li>
+<li>Les prix sont collectés sur le terrain par des enquêteurs :
+<ul>
+<li>Du lundi au vendredi, une fois par mois pour le jour même</li>
+<li>Pour une nuitée pour 2 personnes avec 2 petits-déjeuners</li>
+</ul></li>
+</ul>
+</section>
+<section id="un-exemple-les-prix-dans-le-domaine-de-lhotellerie-2" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Un exemple : les prix dans le domaine de l’hotellerie</h2>
+<ul>
+<li>Problèmes :
+<ul>
+<li>Pas de prise en compte des réservations en avance</li>
+<li>Pas de prise en compte de la hausse de la consommation sur internet</li>
+<li>Certaines zones touristiques ne sont pas bien représentées</li>
+<li>Aucun prix pour des nuitées le samedi ou le dimanche soir ne sont collectés.</li>
+</ul></li>
+<li>Webscrapping de <span class="blue2">Booking</span> permet de contrecarrer ces problématiques</li>
+</ul>
+</section>
+<section id="dautres-expérimentations" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>D’autres expérimentations</h2>
+<ul>
+<li>Indice des prix des articles électroniques : webscrapping de <span class="blue2">Boulanger</span> et <span class="blue2">rue du commerce</span>
+<ul>
+<li>Code <a href="https://git.lab.sspcloud.fr/methodo-ipc/webscraping-biens-electroniques">open-source</a></li>
+</ul></li>
+<li>Indice des prix du transport en train : webscrapping de la <span class="blue2">SNCF</span>
+<ul>
+<li>Pris en compte dans l’indice de l’IPC depuis 2020</li>
+</ul></li>
+</ul>
+</section>
+<section id="quelques-limites-au-webscrapping" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Quelques limites au webscrapping</h2>
+<ul>
+<li>Dépendance au site internet
+<ul>
+<li>Des interruptions de collecte duˆes `a des changements des sites wbe</li>
+<li>Maintenance des codes coûteux</li>
+</ul></li>
+<li>Fondement juridique important voir séance du jour 4</li>
+</ul>
+</section></section>
 <section id="c.-prévoir-en-continu-la-croissance-française" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>C. Prévoir en continu la croissance française</h1>
 <p>https://www.insee.fr/fr/statistiques/4268739?sommaire=4268833 http://jms-insee.fr/jms2022s19_2/ ggtrends : http://jms-insee.fr/jms2018s25_1/ Google: utile qu’en temps de crise Des données qui sont affectées d’une forte volatilité naturelle sont utiles en présence d’un choc majeur qui dépasse cette volatilité mais le bruit de fond qui les affecte les rend moins lisibles et moins utiles quand la conjoncture revient un tant soit peu à la normale.</p>
