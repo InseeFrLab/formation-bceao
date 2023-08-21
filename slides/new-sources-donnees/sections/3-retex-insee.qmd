@@ -6,9 +6,9 @@
 ## Contexte
 
 - L'IPC est calculé à partir de 200 000 relevés mensuels dans des points de vente
-- Complété par +190 000 prix mensuels provenant de sources administratives ou webscrapping
+- Complété par $+190 000$ prix mensuels provenant de sources administratives ou webscrapping
 - Depuis janvier 2020 une nouvelle sources :
-  - Les données de caisse :  $\approx 1,7 milliards$ d'enregistrements par mois 
+  - Les données de caisse :  $\approx 1,7$ milliards d'enregistrements par mois 
 
 ## Une opportunité pour le calcul de statistiques de prix
 
@@ -35,14 +35,15 @@
 | 345               | 2023-08-03 | 14:20   | Soda cola (1.5L)        | 8901234567890  | 2.00              | 3        | 6.00      |
 | 456               | 2023-08-03 | 16:45   | Pâtes fusilli           | 9012345678901  | 0.90              | 4        | 3.60      |
 
+
 ## Des statistiques plus précises et plus détaillées
 
 - Disponibilité journalière très utile : contrainte de publications de l'IPC
 - Production d'indices sur des segments de consommation très spécifique
 - Echantillons sur des espaces géographiques très fins : vers des indices régionaux
 - Identification les effets de substitution
-- Production d'indice de prix plus proche du ressenti des ménages
-- Une réduction des coûts évidente pour l'Insee !
+- Production d'indices de prix plus proche du ressenti des ménages
+- Une réduction des coûts importante pour l'Insee !
 
 ## Un long chemin pour accéder aux données de caisse
 
@@ -65,7 +66,7 @@
 
 ## Contexte
 
-- Même objectif : améliorer l'IPC
+- Objectif identique : améliorer l'IPC
 - Les données de caisse ne suffisent pas :
   - Pas une solution pour prix des services
   - Produits sans code-barre
@@ -73,27 +74,27 @@
 
 ## Un exemple : les prix dans le domaine de l'hotellerie
 
-- Etude réalisée par Adrien Montbroussous, Camille Freppel et Ombéline Guillon
+- Etude réalisée par [Adrien  Montbroussous]{.blue2}, [Camille Freppel]{.blue2} et [Ombéline Guillon]{.blue2}
 - Papier et présentation détaillée accessible [ici](https://www.ottawagroup.org/Ottawa/ottawagroup.nsf/4a256353001af3ed4b2562bb00121564/90eefd961765454eca25886a00042203/$FILE/Web%20scraping%20of%20booking.com_Paper.pdf) et [ici](http://www.jms-insee.fr/2022/S14_1_PPT_MONTBROUSSOUS_JMS2022.pdf)
-- Objectif : améliorer l'indice des prix dans le secteur de l'hotellerie
+- [Objectif]{.orange} : améliorer l'indice des prix dans le secteur de l'hotellerie
 - Code source pour le webscrapping des prix disponible en [open-source](https://git.lab.sspcloud.fr/methodo-ipc/webscraping-hotel)
 
 ## Un exemple : les prix dans le domaine de l'hotellerie
 
-- Le poste location de chambres : 0,8 % de la consommation du panier de l’IPC en 2021
+- Le poste location de chambres : [$0,8 %$ **de la consommation**]{.orange} du panier de l’IPC en 2021
 - Les prix sont collectés sur le terrain par des enquêteurs :
-  - Du lundi au vendredi, une fois par mois pour le jour même
-  - Pour une nuitée pour 2 personnes avec 2 petits-déjeuners
+  - Du lundi au vendredi, une fois par mois [pour le jour même]{.blue2}
+  - [Pour une nuitée]{.blue2} pour 2 personnes avec 2 petits-déjeuners
 
-## Un exemple : les prix dans le domaine de l'hotellerie
+## Un exemple : les prix dans le domaine de l'hôtellerie
 
-- Problèmes :
-  - Pas de prise en compte des réservations en avance
-  - Pas de prise en compte de la hausse de la consommation sur internet
-  - Certaines zones touristiques ne sont pas bien représentées
-  - Aucun prix pour des nuitées le samedi ou le dimanche soir ne sont collectés.
+- [**Problèmes**]{.orange} :
+  - Pas de prise en compte des [**réservations en avance**]{.blue2}
+  - Pas de prise en compte de la hausse de la consommation sur [**internet**]{.blue2}
+  - Certaines [**zones touristiques**]{.blue2} ne sont pas bien représentées
+  - Aucun prix pour des nuitées le [**samedi**]{.blue2} ou le [**dimanche**]{.blue2} soir ne sont collectés.
 
-- Webscrapping de [Booking]{.blue2} permet de contrecarrer ces problématiques
+- Webscrapping de [Booking](https://www.booking.com/) permet de contrecarrer ces problématiques
 
 ## D'autres expérimentations
 
@@ -104,20 +105,53 @@
 
 ## Quelques limites au webscrapping
 
-- Dépendance au site internet
-    - Des interruptions de collecte duˆes `a des changements des sites wbe
-    - Maintenance des codes coûteux
-- Fondement juridique important voir séance du jour 4
+- [**Dépendance**] au site internet
+    - Des [**interruptions de collecte**] dûes à des changements des sites web
+    - [**Maintenance**] des codes coûteux
+- Fondement juridique important :
+  - Voir [slides](https://inseefrlab.github.io/formation-bceao/slides/intro-big-data) du jour 4
 
 # C. Prévoir en continu la croissance française 
 
-https://www.insee.fr/fr/statistiques/4268739?sommaire=4268833
-http://jms-insee.fr/jms2022s19_2/
-ggtrends : http://jms-insee.fr/jms2018s25_1/
-Google: utile qu'en temps de crise
-Des données qui sont affectées d’une forte volatilité naturelle sont utiles en présence d’un choc majeur qui dépasse cette volatilité mais le bruit de fond qui les affecte les rend moins lisibles et moins utiles quand la conjoncture revient un tant soit peu à la normale.
+## Contexte
+
+- [**Objectif double**]: [**améliorer**] et [**anticiper**] la première estimation du PIB
+- Estimation publiée [**1 mois**] après la fin d'un trimestre
+- Multiplicité de sources de données aux dates de [**publications disparates**] :
+  - Estimation en continue
+  - Nouveaux outils de prévision
+
+## Une diversité de sources de données à haute fréquence
+
+- Enquêtes (qualitatif) et indices (quantitatif) comme principaux indicateurs
+- Délais de publication différents (entre 25 et 90 jours) :
+  - $\approx 1$ nouvelle publication tous les 3 jours
+- Données produites par l'Insee, la Banque de France, l'OCDE, Markit ou des SSM
+- Données *Bid Data* se sont avérées peu efficaces (articles de presse, recherches sur
+les moteurs de recherche, données des réseaux sociaux)
+
+## De nouveaux outils indispensables
+
+- Problèmes méthodologiques : 
+  - Aggrégation de données de fréquences et dates de publication différentes
+  - Nombre de variables >> Nombre d'observations
+- Comparaison de méthodes macroéconomiques traditionnelles (ARIMA, modèles à facteurs dynamiques) et méthodes d'apprentissage automatique (Lasso, forêts aléatoires) 
+
+## Pour quels résultats ?
+
+- Prévisions similaires mais volatilité des modèles diffèrent (Lasso et forêts aléatoires les moins volatiles)
+- Les erreurs de prévisions diminuent au courant d'un trimestre
+- Données les plus volatiles utiles qu'en présence de choc majeur (Covid, guerre Ukraine)
+- Pas encore de mise en production
+
+<!-- https://www.insee.fr/fr/statistiques/fichier/4268739/122019_dossier1.pdf -->
+
+<!-- ggtrends : http://jms-insee.fr/jms2018s25_1/ -->
+
+<!-- Des données qui sont affectées d’une forte volatilité naturelle sont utiles en présence d’un choc majeur qui dépasse cette volatilité mais le bruit de fond qui les affecte les rend moins lisibles et moins utiles quand la conjoncture revient un tant soit peu à la normale. -->
 
 # D. Les données mobiles pour la statistique publique
+
 
 Savoir comment se répartit effectivement la population sur le territoire est essentiel pour organiser la réponse sanitaire et sociale face à l’épidémie de coronavirus
 
