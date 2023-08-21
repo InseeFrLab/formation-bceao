@@ -179,7 +179,7 @@
     "href": "slides/new-sources-donnees/index.html#innovations-nécessaires-pour-traiter-ces-données",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Innovations nécessaires pour traiter ces données",
-    "text": "Innovations nécessaires pour traiter ces données\n\nTechniques : nouveaux langages de datascience, nouvelles infrastructures informatiques\nMéthodologiques : économétrie en grande dimension, analyse de données textuelles, analyse d’images\nOrganisationnelles : Partenariats avec de nouveaux acteurs privés ou publics pour le partage de données\n\nLe terme de big data recouvre un ensemble de sources très disparates Le domaine des prix est celui où elles apparaissent les plus prometteuses. Il s’agit d’un domaine où elles se présentent sous une forme relativement structurée, assez similaire à celles des données administratives que la statistique publique a l’habitude de manipuler, et l’objet de la mesure est conceptuellement simple.\nPour les autres choses : On est au plus dans une logique de complémentarité avec la production existante, que l’objectif soit d’aider à en raccourcir les délais de publication, ou d’alléger la charge de réponse des unités enquêtées.\nl’accès à des données quasi exhaustives permet d’envisager la production de statistiques très localisées ou centrées sur des catégories de population très spécifiques Mais deux problèmes apparaissent alors. D’une part, la question de la protection de la vie privée et du respect du secret des affaires. L’accès à ces données doit pouvoir s’inscrire dans un cadre juridique clair et durable. Dans le cas français, c’est la loi pour la République numérique qui a instauré le cadre juridique nécessaire à cette garantie. Ce qui remplace enquete on a le droit de demander"
+    "text": "Innovations nécessaires pour traiter ces données\n\nTechniques : nouveaux langages de datascience, nouvelles infrastructures informatiques\nMéthodologiques : économétrie en grande dimension, analyse de données textuelles, analyse d’images\nOrganisationnelles : Partenariats avec de nouveaux acteurs privés ou publics pour le partage de données"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes-par-échantillonnage",
@@ -263,7 +263,7 @@
     "href": "slides/new-sources-donnees/index.html#contexte",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Contexte",
-    "text": "Contexte\n\nL’IPC est calculé à partir de 200 000 relevés mensuels dans des points de vente\nComplété par +190 000 prix mensuels provenant de sources administratives ou webscrapping\nDepuis janvier 2020 une nouvelle sources :\n\nLes données de caisse : \\(\\approx 1,7 milliards\\) d’enregistrements par mois"
+    "text": "Contexte\n\nL’IPC est calculé à partir de 200 000 relevés mensuels dans des points de vente\nComplété par \\(+190 000\\) prix mensuels provenant de sources administratives ou webscrapping\nDepuis janvier 2020 une nouvelle sources :\n\nLes données de caisse : \\(\\approx 1,7\\) milliards d’enregistrements par mois"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#une-opportunité-pour-le-calcul-de-statistiques-de-prix",
@@ -284,7 +284,7 @@
     "href": "slides/new-sources-donnees/index.html#des-statistiques-plus-précises-et-plus-détaillées",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Des statistiques plus précises et plus détaillées",
-    "text": "Des statistiques plus précises et plus détaillées\n\nDisponibilité journalière très utile : contrainte de publications de l’IPC\nProduction d’indices sur des segments de consommation très spécifique\nEchantillons sur des espaces géographiques très fins : vers des indices régionaux\nIdentification les effets de substitution\nProduction d’indice de prix plus proche du ressenti des ménages\nUne réduction des coûts évidente pour l’Insee !"
+    "text": "Des statistiques plus précises et plus détaillées\n\nDisponibilité journalière très utile : contrainte de publications de l’IPC\nProduction d’indices sur des segments de consommation très spécifique\nEchantillons sur des espaces géographiques très fins : vers des indices régionaux\nIdentification les effets de substitution\nProduction d’indices de prix plus proche du ressenti des ménages\nUne réduction des coûts importante pour l’Insee !"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#un-long-chemin-pour-accéder-aux-données-de-caisse",
@@ -305,7 +305,7 @@
     "href": "slides/new-sources-donnees/index.html#contexte-1",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Contexte",
-    "text": "Contexte\n\nMême objectif : améliorer l’IPC\nLes données de caisse ne suffisent pas :\n\nPas une solution pour prix des services\nProduits sans code-barre\n\nWebscrapping permet de collecter de nouvelles données de prix"
+    "text": "Contexte\n\nObjectif identique : améliorer l’IPC\nLes données de caisse ne suffisent pas :\n\nPas une solution pour prix des services\nProduits sans code-barre\n\nWebscrapping permet de collecter de nouvelles données de prix"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhotellerie",
@@ -319,14 +319,14 @@
     "href": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhotellerie-1",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Un exemple : les prix dans le domaine de l’hotellerie",
-    "text": "Un exemple : les prix dans le domaine de l’hotellerie\n\nLe poste location de chambres : 0,8 % de la consommation du panier de l’IPC en 2021\nLes prix sont collectés sur le terrain par des enquêteurs :\n\nDu lundi au vendredi, une fois par mois pour le jour même\nPour une nuitée pour 2 personnes avec 2 petits-déjeuners"
+    "text": "Un exemple : les prix dans le domaine de l’hotellerie\n\nLe poste location de chambres : \\(0,8 %\\) de la consommation du panier de l’IPC en 2021\nLes prix sont collectés sur le terrain par des enquêteurs :\n\nDu lundi au vendredi, une fois par mois pour le jour même\nPour une nuitée pour 2 personnes avec 2 petits-déjeuners"
   },
   {
-    "objectID": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhotellerie-2",
-    "href": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhotellerie-2",
+    "objectID": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhôtellerie",
+    "href": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhôtellerie",
     "title": "Présentation des sources big data à l’Insee",
-    "section": "Un exemple : les prix dans le domaine de l’hotellerie",
-    "text": "Un exemple : les prix dans le domaine de l’hotellerie\n\nProblèmes :\n\nPas de prise en compte des réservations en avance\nPas de prise en compte de la hausse de la consommation sur internet\nCertaines zones touristiques ne sont pas bien représentées\nAucun prix pour des nuitées le samedi ou le dimanche soir ne sont collectés.\n\nWebscrapping de Booking permet de contrecarrer ces problématiques"
+    "section": "Un exemple : les prix dans le domaine de l’hôtellerie",
+    "text": "Un exemple : les prix dans le domaine de l’hôtellerie\n\nProblèmes :\n\nPas de prise en compte des réservations en avance\nPas de prise en compte de la hausse de la consommation sur internet\nCertaines zones touristiques ne sont pas bien représentées\nAucun prix pour des nuitées le samedi ou le dimanche soir ne sont collectés.\n\nWebscrapping de Booking permet de contrecarrer ces problématiques"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#dautres-expérimentations",
@@ -340,7 +340,35 @@
     "href": "slides/new-sources-donnees/index.html#quelques-limites-au-webscrapping",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Quelques limites au webscrapping",
-    "text": "Quelques limites au webscrapping\n\nDépendance au site internet\n\nDes interruptions de collecte duˆes `a des changements des sites wbe\nMaintenance des codes coûteux\n\nFondement juridique important voir séance du jour 4"
+    "text": "Quelques limites au webscrapping\n\n[Dépendance] au site internet\n\nDes [interruptions de collecte] dûes à des changements des sites web\n[Maintenance] des codes coûteux\n\nFondement juridique important :\n\nVoir slides du jour 4"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#contexte-2",
+    "href": "slides/new-sources-donnees/index.html#contexte-2",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Contexte",
+    "text": "Contexte\n\n[Objectif double]: [améliorer] et [anticiper] la première estimation du PIB\nEstimation publiée [1 mois] après la fin d’un trimestre\nMultiplicité de sources de données aux dates de [publications disparates] :\n\nEstimation en continue\nNouveaux outils de prévision"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#une-diversité-de-sources-de-données-à-haute-fréquence",
+    "href": "slides/new-sources-donnees/index.html#une-diversité-de-sources-de-données-à-haute-fréquence",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Une diversité de sources de données à haute fréquence",
+    "text": "Une diversité de sources de données à haute fréquence\n\nEnquêtes (qualitatif) et indices (quantitatif) comme principaux indicateurs\nDélais de publication différents (entre 25 et 90 jours) :\n\n\\(\\approx 1\\) nouvelle publication tous les 3 jours\n\nDonnées produites par l’Insee, la Banque de France, l’OCDE, Markit ou des SSM\nDonnées Bid Data se sont avérées peu efficaces (articles de presse, recherches sur les moteurs de recherche, données des réseaux sociaux)"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#de-nouveaux-outils-indispensables",
+    "href": "slides/new-sources-donnees/index.html#de-nouveaux-outils-indispensables",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "De nouveaux outils indispensables",
+    "text": "De nouveaux outils indispensables\n\nProblèmes méthodologiques :\n\nAggrégation de données de fréquences et dates de publication différentes\nNombre de variables &gt;&gt; Nombre d’observations\n\nComparaison de méthodes macroéconomiques traditionnelles (ARIMA, modèles à facteurs dynamiques) et méthodes d’apprentissage automatique (Lasso, forêts aléatoires)"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#pour-quels-résultats",
+    "href": "slides/new-sources-donnees/index.html#pour-quels-résultats",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Pour quels résultats ?",
+    "text": "Pour quels résultats ?\n\nPrévisions similaires mais volatilité des modèles diffèrent (Lasso et forêts aléatoires les moins volatiles)\nLes erreurs de prévisions diminuent au courant d’un trimestre\nDonnées les plus volatiles utiles qu’en présence de choc majeur (Covid, guerre Ukraine)\nPas encore de mise en production"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#améliorer-le-recensement-à-laide-de-données-satellites",
