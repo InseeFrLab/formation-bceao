@@ -182,46 +182,60 @@
     "text": "Innovations nécessaires pour traiter ces données\n\nTechniques : nouveaux langages de programmation, nouvelles infrastructures informatiques\nMéthodologiques : économétrie en grande dimension, analyse de données textuelles, analyse d’images\nOrganisationnelles : partenariats avec de nouveaux acteurs privés ou publics pour le partage de données"
   },
   {
-    "objectID": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes-par-échantillonnage",
-    "href": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes-par-échantillonnage",
+    "objectID": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes",
+    "href": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes",
     "title": "Présentation des sources big data à l’Insee",
-    "section": "La collecte directe : les enquêtes par échantillonnage",
-    "text": "La collecte directe : les enquêtes par échantillonnage\n\nInformations collectées auprès d’individus , de ménages ou d’entreprises selon des méthodes structurées et standardisées\nÉchantillon [représentatif] ou au [hasard]\nCollecte via questionnaires, interviews ou plus récemment internet\nSources traditionnelles des instituts statistiques\nExemples : enquête Emploi, enquête conjoncture, recensement de la population…"
+    "section": "La collecte directe : les enquêtes",
+    "text": "La collecte directe : les enquêtes\n\nInformations collectées auprès d’individus , de ménages ou d’entreprises selon des méthodes structurées et standardisées\nÉchantillon représentatif ou au hasard\nCollecte via questionnaires, interviews ou plus récemment internet\nSources traditionnelles des instituts statistiques\nExemples : enquête Emploi, enquête conjoncture, recensement de la population…"
   },
   {
-    "objectID": "slides/new-sources-donnees/index.html#zoom-sur-lenquête-emploi",
-    "href": "slides/new-sources-donnees/index.html#zoom-sur-lenquête-emploi",
+    "objectID": "slides/new-sources-donnees/index.html#lenquête-emploi",
+    "href": "slides/new-sources-donnees/index.html#lenquête-emploi",
     "title": "Présentation des sources big data à l’Insee",
-    "section": "Zoom sur l’enquête Emploi",
-    "text": "Zoom sur l’enquête Emploi\n\nPanel rotatif (90k pesonne/ trimestres pendant 6 mois)\nObjectif principal : calculer le taux de chômage"
+    "section": "L’enquête Emploi",
+    "text": "L’enquête Emploi\n\nPanel rotatif (90k pesonne/ trimestre pendant 6 mois)\nObjectif principal : calculer le taux de chômage"
   },
   {
-    "objectID": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes-par-échantillonnage-1",
-    "href": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes-par-échantillonnage-1",
+    "objectID": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes-1",
+    "href": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes-1",
     "title": "Présentation des sources big data à l’Insee",
-    "section": "La collecte directe : les enquêtes par échantillonnage",
-    "text": "La collecte directe : les enquêtes par échantillonnage\n\nAvantages :\n\nContrôle total des questions posées et personnes interrogées\n\nDésavantages :\n\nCoûts très importants\nContraignant pour l’enquêteurs et les enquêtés\nBaisse tendancielle du taux de réponse"
+    "section": "La collecte directe : les enquêtes",
+    "text": "La collecte directe : les enquêtes\n\nAvantages :\n\nContrôle total des questions posées et personnes interrogées\n\nDésavantages :\n\nCoûts très importants\nContraignant pour l’enquêteurs et les enquêtés\nBaisse tendancielle du taux de réponse"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#les-sources-administratives",
     "href": "slides/new-sources-donnees/index.html#les-sources-administratives",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Les sources administratives",
-    "text": "Les sources administratives\n\nInformations collectées via les registres administratifs ou comptables\nSources de plus en plus utilisées par les agences de statistiques publiques\nLeurs volumes, leurs vitesses et leurs véracité peuvent être caractéristique de Big Data\nExemples : la déclaration sociale nominative (DSN), le Système National des Données de Santé (SNDS)… (elles peuvent être big data)"
+    "text": "Les sources administratives\n\nInformations collectées via les registres administratifs ou comptables\nDe plus en plus utilisées par les agences de statistiques publiques\nLeurs volumes, leurs vitesses et leurs véracité peuvent souvent être caractéristique de Big Data\nExemples : la déclaration sociale nominative (DSN), le Système National des Données de Santé (SNDS)…"
   },
   {
-    "objectID": "slides/new-sources-donnees/index.html#zoom-sur-la-déclaration-sociale-nominative-dsn",
-    "href": "slides/new-sources-donnees/index.html#zoom-sur-la-déclaration-sociale-nominative-dsn",
+    "objectID": "slides/new-sources-donnees/index.html#la-déclaration-sociale-nominative-dsn",
+    "href": "slides/new-sources-donnees/index.html#la-déclaration-sociale-nominative-dsn",
     "title": "Présentation des sources big data à l’Insee",
-    "section": "Zoom sur la Déclaration Sociale Nominative (DSN)",
-    "text": "Zoom sur la Déclaration Sociale Nominative (DSN)\n\nObjectifs principaux :\n\nSimplifier les formalités déclaratives : une seule déclaration\nFiabiliser et sécuriser les déclarations : dématérialisation et obligation mensuelle\n\nSource de données riches"
+    "section": "La Déclaration Sociale Nominative (DSN)",
+    "text": "La Déclaration Sociale Nominative (DSN)\n\nObjectifs principaux :\n\nSimplifier les formalités déclaratives : une seule déclaration\nFiabiliser et sécuriser les déclarations : dématérialisation et obligation mensuelle\n\nSource de données riches"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#la-déclaration-sociale-nominative-dsn-1",
+    "href": "slides/new-sources-donnees/index.html#la-déclaration-sociale-nominative-dsn-1",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "La Déclaration Sociale Nominative (DSN)",
+    "text": "La Déclaration Sociale Nominative (DSN)"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#les-sources-administratives-1",
     "href": "slides/new-sources-donnees/index.html#les-sources-administratives-1",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Les sources administratives",
-    "text": "Les sources administratives\n\nAvantages :\n\nCoût de collecte plus faible\nCharge allégée pour les personnes ou entreprises enquêtées\nBiais de réponse ammoindri (collecte souvent automatique)\nFréquence de collecte plus rapide et donc volume plus élevé (e.g SIDEP pendant le Covid)\nDonnées plus fines et donc volume plus élevé\nComplémentaire au données d’enquêtes\n\nDésavantages :\n\nContrôle réduit sur l’échantillonage (problèmes de représentativité et biais de sélection)\nContrôle réduit sur la collection des données (incohérence et erreurs)\nConfidentialité pouvant réduire le partage des données : conventions nécessaires\nSources potentiellement moins pérennes dans le temps (modifications législatives, modifications de consignes )"
+    "text": "Les sources administratives\n\nAvantages :\n\nCoût de collecte plus faible\nCharge allégée pour les personnes ou entreprises enquêtées\nBiais de non-réponse ammoindri (collecte souvent automatique)\nFréquence de collecte plus rapide et donc volume plus élevé (e.g SIDEP pendant le Covid)\nDonnées plus fines\nComplémentaire au données d’enquêtes"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#les-sources-administratives-2",
+    "href": "slides/new-sources-donnees/index.html#les-sources-administratives-2",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Les sources administratives",
+    "text": "Les sources administratives\n\nDésavantages :\n\nContrôle réduit sur l’échantillonage (problèmes de représentativité et biais de sélection)\nContrôle réduit sur la collection des données (incohérence et erreurs)\nConfidentialité pouvant réduire le partage des données : conventions nécessaires\nSources potentiellement moins pérennes dans le temps (modifications législatives, modifications de consignes)"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#les-sources-administratives-fondement-juridique",
@@ -235,7 +249,14 @@
     "href": "slides/new-sources-donnees/index.html#les-données-émergentes",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Les données émergentes",
-    "text": "Les données émergentes\n\nL’État ne détient plus le monopole de la production de la données. De plus en plus de données privées\nEnsemble de données non traditionnelles à la statistique publique mais qui peuvent être utilise pour compléter, enrichir ou renouveler les statistiques publiques\nDonnées transactionnelles ou comportementales : transactions CB, téléphonie mobile, données de géolocalisation…\nDonnées issues d’internet (webscrapping) : offres d’emploi, google trends…\nDonnées satellites\n\nDonnées émergentes → plus souvent les caractéristiques Big Data"
+    "text": "Les données émergentes\n\nEnsemble de données non traditionnelles à la statistique publique\nComplètent, enrichissent ou renouvèlent les statistiques publiques\nDe + en + de données privées : l’État ne détient plus le monopole de la production de la données"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#les-données-émergentes-1",
+    "href": "slides/new-sources-donnees/index.html#les-données-émergentes-1",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Les données émergentes",
+    "text": "Les données émergentes\n\nExemples :\nDonnées transactionnelles ou comportementales : transactions CB, téléphonie mobile, données de géolocalisation…\nDonnées issues d’internet (webscrapping) : offres d’emploi, google trends…\nImages satellites\n\n\n\n\n\n\n\nNote\n\n\nDonnées émergentes → plus souvent les caractéristiques Big Data"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#les-données-émergentes-à-linsee",
@@ -245,8 +266,8 @@
     "text": "Les données émergentes à l’Insee\n\nUne seule statistique est régulièrement produite grâce à des données privées : l’IPC\n3 sources de données utilisées pour produire l’IPC :\n\nLes enquêtes\nLes relevés de prix dématérialisés (webscrapping, base de données d’institutions…)\nLes données de caisse"
   },
   {
-    "objectID": "slides/new-sources-donnees/index.html#les-données-émergentes-1",
-    "href": "slides/new-sources-donnees/index.html#les-données-émergentes-1",
+    "objectID": "slides/new-sources-donnees/index.html#les-données-émergentes-2",
+    "href": "slides/new-sources-donnees/index.html#les-données-émergentes-2",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Les données émergentes",
     "text": "Les données émergentes\n\nAvantages :\n\nRapidité : temps réel ou quasi temps réel\nVolume : souvent données massives\nComplémentarité : appui des données traditionelles\n\nDésavantages :\n\nAucun contrôle sur l’échantillonage et la collection des données\nAccessibilité limitée ou coûteuse\nQuantité \\(\\neq\\) Qualité"
@@ -305,7 +326,7 @@
     "href": "slides/new-sources-donnees/index.html#contexte-1",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Contexte",
-    "text": "Contexte\n\nObjectif identique : améliorer l’IPC\nLes données de caisse ne suffisent pas :\n\nPas une solution pour prix des services\nProduits sans code-barre\n\nWebscrapping permet de collecter de nouvelles données de prix"
+    "text": "Contexte\n\nObjectif identique : améliorer l’IPC\nLes données de caisse ne suffisent pas :\n\nPas une solution pour prix des services\nProduits sans code-barre\n\n\n\n\nWebscrapping permet de collecter des données de prix supplémentaires"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhotellerie",
@@ -319,70 +340,70 @@
     "href": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhotellerie-1",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Un exemple : les prix dans le domaine de l’hotellerie",
-    "text": "Un exemple : les prix dans le domaine de l’hotellerie\n\nLe poste location de chambres : \\(0,8 %\\) de la consommation du panier de l’IPC en 2021\nLes prix sont collectés sur le terrain par des enquêteurs :\n\nDu lundi au vendredi, une fois par mois pour le jour même\nPour une nuitée pour 2 personnes avec 2 petits-déjeuners"
+    "text": "Un exemple : les prix dans le domaine de l’hotellerie\n\nLe poste location de chambres : \\(0,8 %\\) de la consommation du panier de l’IPC en 2021\nPrix collectés sur le terrain par des enquêteurs :\n\nDu lundi au vendredi, une fois par mois [pour le jour même]{.blue2}\nPour une nuitée pour 2 personnes avec 2 petits-déjeuners"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhôtellerie",
     "href": "slides/new-sources-donnees/index.html#un-exemple-les-prix-dans-le-domaine-de-lhôtellerie",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Un exemple : les prix dans le domaine de l’hôtellerie",
-    "text": "Un exemple : les prix dans le domaine de l’hôtellerie\n\nProblèmes :\n\nPas de prise en compte des réservations en avance\nPas de prise en compte de la hausse de la consommation sur internet\nCertaines zones touristiques ne sont pas bien représentées\nAucun prix pour des nuitées le samedi ou le dimanche soir ne sont collectés.\n\nWebscrapping de Booking permet de contrecarrer ces problématiques"
+    "text": "Un exemple : les prix dans le domaine de l’hôtellerie\n\nProblèmes :\n\nPas de prise en compte des réservations en avance\nPas de prise en compte de la hausse de la consommation sur internet\nCertaines zones touristiques ne sont pas bien représentées\nAucun prix pour des nuitées le samedi ou le dimanche soir ne sont collectés.\n\n\n Webscrapping de Booking permet de contrecarrer ces problématiques"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#dautres-expérimentations",
     "href": "slides/new-sources-donnees/index.html#dautres-expérimentations",
     "title": "Présentation des sources big data à l’Insee",
     "section": "D’autres expérimentations",
-    "text": "D’autres expérimentations\n\nIndice des prix des articles électroniques : webscrapping de Boulanger et rue du commerce\n\nCode open-source\n\nIndice des prix du transport en train : webscrapping de la SNCF\n\nPris en compte dans l’indice de l’IPC depuis 2020"
+    "text": "D’autres expérimentations\n\nIndice des prix desarticles électroniques : webscrapping de Boulanger et rue du commerce\n\nCode open-source\n\nIndice des prix du transport en train : webscrapping de la SNCF\n\nPris en compte dans l’indice de l’IPC depuis 2020"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#quelques-limites-au-webscrapping",
     "href": "slides/new-sources-donnees/index.html#quelques-limites-au-webscrapping",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Quelques limites au webscrapping",
-    "text": "Quelques limites au webscrapping\n\n[Dépendance] au site internet\n\nDes [interruptions de collecte] dûes à des changements des sites web\n[Maintenance] des codes coûteux\n\nFondement juridique important :\n\nVoir slides du jour 4"
+    "text": "Quelques limites au webscrapping\n\nDépendance au site internet\n\nDes interruptions de collecte dûes à des changements des sites web\nMaintenance des codes coûteux\n\nFondement juridique important :\n\nVoir slides du jour 4"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#contexte-2",
     "href": "slides/new-sources-donnees/index.html#contexte-2",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Contexte",
-    "text": "Contexte\n\n[Objectif double]: [améliorer] et [anticiper] la première estimation du PIB\nEstimation publiée [1 mois] après la fin d’un trimestre\nMultiplicité de sources de données aux dates de [publications disparates] :\n\nEstimation en continue\nNouveaux outils de prévision"
+    "text": "Contexte\n\nObjectif double: améliorer et anticiper la première estimation du PIB\nEstimation publiée 1 mois après la fin d’un trimestre\nMultiplicité de sources de données aux dates de publications disparates :\n\nEstimation en continu\nNouveaux outils de prévision"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#une-diversité-de-sources-de-données-à-haute-fréquence",
     "href": "slides/new-sources-donnees/index.html#une-diversité-de-sources-de-données-à-haute-fréquence",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Une diversité de sources de données à haute fréquence",
-    "text": "Une diversité de sources de données à haute fréquence\n\nEnquêtes (qualitatif) et indices (quantitatif) comme principaux indicateurs\nDélais de publication différents (entre 25 et 90 jours) :\n\n\\(\\approx 1\\) nouvelle publication tous les 3 jours\n\nDonnées produites par l’Insee, la Banque de France, l’OCDE, Markit ou des SSM\nDonnées Bid Data se sont avérées peu efficaces (articles de presse, recherches sur les moteurs de recherche, données des réseaux sociaux)"
+    "text": "Une diversité de sources de données à haute fréquence\n\nEnquêtes (qualitatif) et indices (quantitatif) comme principaux indicateurs\nDélais de publication différents (entre 25 et 90 jours) :\n\n\\(\\approx 1\\) nouvelle publication tous les 3 jours\n\nDonnées produites par l’Insee, la Banque de France, l’OCDE, Markit ou des SSM\nDonnées Big Data se sont avérées peu efficaces (articles de presse, recherches sur les moteurs de recherche, données des réseaux sociaux)"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#de-nouveaux-outils-indispensables",
     "href": "slides/new-sources-donnees/index.html#de-nouveaux-outils-indispensables",
     "title": "Présentation des sources big data à l’Insee",
     "section": "De nouveaux outils indispensables",
-    "text": "De nouveaux outils indispensables\n\nProblèmes méthodologiques :\n\nAggrégation de données de fréquences et dates de publication différentes\nNombre de variables &gt;&gt; Nombre d’observations\n\nComparaison de méthodes macroéconomiques traditionnelles (ARIMA, modèles à facteurs dynamiques) et méthodes d’apprentissage automatique (Lasso, forêts aléatoires)"
+    "text": "De nouveaux outils indispensables\n\nProblèmes méthodologiques :\n\nAggrégation de données de fréquences et dates de publication différentes\nNombre de variables \\(\\gg\\) Nombre d’observations\n\nComparaison de méthodes macroéconomiques traditionnelles (ARIMA, modèles à facteurs dynamiques) et méthodes d’apprentissage automatique (Lasso, forêts aléatoires)"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#pour-quels-résultats",
     "href": "slides/new-sources-donnees/index.html#pour-quels-résultats",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Pour quels résultats ?",
-    "text": "Pour quels résultats ?\n\n\nPrévisions similaires mais volatilité des modèles diffèrent (Lasso et forêts aléatoires les moins volatiles)\nLes erreurs de prévisions diminuent au courant d’un trimestre\nDonnées les plus volatiles utiles qu’en présence de choc majeur (Covid, guerre Ukraine)\nPas encore de mise en production"
+    "text": "Pour quels résultats ?\n\n\nPrévisions proches mais volatilité des modèles diffèrent\nLes erreurs de prévisions diminuent au cours d’un trimestre\nDonnées les plus volatiles utiles qu’en présence de choc majeur (Covid, guerre Ukraine)"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#contexte-3",
     "href": "slides/new-sources-donnees/index.html#contexte-3",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Contexte",
-    "text": "Contexte\n\nEpidémie de coronavirus et [confinement généralisé]\n[Mouvements de population] importants au sein du territoire\nObjectif : [estimer la répartition de la population] pour organiser la réponse sanitaire et sociale"
+    "text": "Contexte\n\nEpidémie de coronavirus et confinement généralisé\nMouvements de population importants au sein du territoire\nObjectif : estimer la répartition de la population pour organiser la réponse sanitaire et sociale"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#pourquoi-estimer-la-répartition-de-la-population",
     "href": "slides/new-sources-donnees/index.html#pourquoi-estimer-la-répartition-de-la-population",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Pourquoi estimer la répartition de la population ?",
-    "text": "Pourquoi estimer la répartition de la population ?\n\nRépondre au besoin des acteurs publics locaux\n\n\navis du Cnis sur les statistiques de population présente et non plus résidente)\n\n\nUn champ de recherche prometteur\n\n\nutilité pour la satistique publique reconnu par le SSE\n\n\nNouveaux partenariats créés\n\n\nOrange, ANR, Eurostat, l’université Gustave Eiffel (Ifsttar), l’UMR Géographie-Cités du CNRS…\n\n\nLe contexte d’urgence\n\n\nproduction de statistiques très rapide (8 avril pour un confinement le 17 mars)"
+    "text": "Pourquoi estimer la répartition de la population ?\n\nRépondre au besoin des acteurs publics locaux : avis du Cnis sur les statistiques de population présente et non plus résidente)\nUn champ de recherche prometteur : utilité pour la satistique publique reconnu par le SSE\nNouveaux partenariats créés : Orange, ANR, Eurostat, l’université Gustave Eiffel (Ifsttar), l’UMR Géographie-Cités du CNRS…\nLe contexte d’urgence : production de statistiques très rapide (8 avril pour un confinement le 17 mars)"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#les-données-utilisées",
@@ -403,28 +424,28 @@
     "href": "slides/new-sources-donnees/index.html#confidentialité-garantie",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Confidentialité garantie",
-    "text": "Confidentialité garantie\n\nAucune information personnelles présentent dans les données\nMéthodologie de l’opérateur connue et validé par l’Insee :\n\nEchanges confidentiels et transparents\nL’Insee s’assure de la validité du secret statistique"
+    "text": "Confidentialité garantie\n\nAucune information personnelles présentent dans les données\nMéthodologie de l’opérateur connue et validée par l’Insee :\n\nEchanges confidentiels et transparents\nL’Insee s’assure de la validité du secret statistique"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#et-maintenant",
     "href": "slides/new-sources-donnees/index.html#et-maintenant",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Et maintenant ?",
-    "text": "Et maintenant ?\nPlusieurs caps identifiés :\n\nPas dépendre d’un seul opérateur : biais statistique ?\nCadre européen sur l’exploitation des données mobiles :\n\n\nla qualité des statistiques publiées\nrespect de la vie privée des détenteurs de mobiles\n\n\nApprofondir la méthodologie :\n\n\nPartenariat avec le projet Mobitic\n\n\nProduction de nouvelles statistiques (déplacements domicile-travail, accroissement du télétravail…) ::: {.callout-note} D’autres études ont été menées à l’Insee utilisant les données de téléphonie mobile, pour analyser la ségrégation urbaine notamment (voir Galiana et al.). :::"
+    "text": "Et maintenant ?\nPlusieurs caps identifiés :\n\nNe plus dépendre d’un seul opérateur : biais statistique ?\nCadre européen sur l’exploitation des données mobiles :\n\n\nla qualité des statistiques publiées\nrespect de la vie privée des détenteurs de mobiles\n\n\nApprofondir la méthodologie :\n\n\nPartenariat avec le projet Mobitic\n\n\nProduction de nouvelles statistiques (déplacements domicile-travail, accroissement du télétravail…)\n\n\n\n\n\n\n\nNote\n\n\nD’autres études ont été menées à l’Insee utilisant les données de téléphonie mobile, pour analyser la ségrégation urbaine notamment (voir Galiana et al.)."
   },
   {
-    "objectID": "slides/new-sources-donnees/index.html#améliorer-le-recensement-à-laide-de-données-satellites",
-    "href": "slides/new-sources-donnees/index.html#améliorer-le-recensement-à-laide-de-données-satellites",
+    "objectID": "slides/new-sources-donnees/index.html#améliorer-le-recensement-à-laide-de-images-satellites",
+    "href": "slides/new-sources-donnees/index.html#améliorer-le-recensement-à-laide-de-images-satellites",
     "title": "Présentation des sources big data à l’Insee",
-    "section": "Améliorer le recensement à l’aide de données satellites",
-    "text": "Améliorer le recensement à l’aide de données satellites\n\nUtilisation de données satellites (Pleiades, Sentinel)\nDétecter les apparitions/disparistions d’habitations\nMéthodes de [deep-learning] :\n\nSegmentation d’image\nDétection de changements\nDétection d’objets"
+    "section": "Améliorer le recensement à l’aide de images satellites",
+    "text": "Améliorer le recensement à l’aide de images satellites\n\nUtilisation d’images satellites (Pleiades, Sentinel)\nDétecter les apparitions/disparistions d’habitations\nMéthodes de deep-learning :\n\nSegmentation d’image\nDétection de changements\nDétection d’objets"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#données-carte-bancaire",
     "href": "slides/new-sources-donnees/index.html#données-carte-bancaire",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Données carte bancaire",
-    "text": "Données carte bancaire\n\nDonnées Carte banciare CB recouvre 82% des opérations\nDonnées agrégées par jour, type de paiement ou département\nPlusieurs exploitations réalisées :\n\nconjoncture agrégée (consommation des ménages)\nconjoncture désagrégée (consommation par secteurs)\ncomportements des consommateurs liés à des chocs (confinement)\nproduction statistique (réduction de la volatilité des estimations)"
+    "text": "Données carte bancaire\n\nDonnées Carte bancaire CB recouvre82% des opérations\nDonnées agrégées par jour, type de paiement ou département\nPlusieurs exploitations réalisées :\n\nconjoncture agrégée (consommation des ménages)\nconjoncture désagrégée (consommation par secteurs)\ncomportements des consommateurs liés à des chocs (confinement)\nproduction statistique (réduction de la volatilité des estimations)"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#fidélimmo-prédire-le-patrimoine-immobilier-des-ménages",

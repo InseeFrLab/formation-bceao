@@ -7,7 +7,9 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Romain Avouac, Thomas Faria">
@@ -428,37 +430,37 @@
 <h1><span class="emoji" data-emoji="two">2️⃣</span> Les différentes données utilisées à l’Insee</h1>
 
 </section>
-<section id="la-collecte-directe-les-enquêtes-par-échantillonnage" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>La collecte directe : les enquêtes par échantillonnage</h2>
+<section id="la-collecte-directe-les-enquêtes" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>La collecte directe : les enquêtes</h2>
 <ul>
 <li>Informations collectées auprès d’<span class="orange"><strong>individus</strong></span> , de <span class="orange"><strong>ménages</strong></span> ou d’<span class="orange"><strong>entreprises</strong></span> selon des méthodes structurées et standardisées</li>
-<li>Échantillon [<strong>représentatif</strong>] ou au [<strong>hasard</strong>]</li>
+<li>Échantillon <span class="orange"><strong>représentatif</strong></span> ou au <span class="orange"><strong>hasard</strong></span></li>
 <li>Collecte via <span class="orange"><strong>questionnaires</strong></span>, <span class="orange"><strong>interviews</strong></span> ou plus récemment <span class="orange"><strong>internet</strong></span></li>
-<li>Sources traditionnelles des instituts statistiques</li>
+<li>Sources <span class="orange"><strong>traditionnelles</strong></span> des instituts statistiques</li>
 <li><span class="blue2"><strong>Exemples</strong></span> : enquête Emploi, enquête conjoncture, recensement de la population…</li>
 </ul>
 <!-- TODO: @ROMAIN o&#xF9; on met les donn&#xE9;es de compta nat ? -->
 </section>
-<section id="zoom-sur-lenquête-emploi" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Zoom sur l’enquête Emploi</h2>
+<section id="lenquête-emploi" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>L’enquête Emploi</h2>
 <ul>
-<li>Panel rotatif (90k pesonne/ trimestres pendant 6 mois)</li>
-<li>Objectif principal : calculer le taux de chômage</li>
+<li><span class="orange"><strong>Panel rotatif</strong></span> (90k pesonne/ trimestre pendant 6 mois)</li>
+<li><span class="orange"><strong>Objectif principal</strong></span> : calculer le <span class="blue2"><strong>taux de chômage</strong></span></li>
 </ul>
 
-<img data-src="https://blog.insee.fr/wp-content/uploads/2023/05/blogInsee_2023_05-quels_types_de_sources_l_insee_utilise_t_il-figure1.png" class="r-stretch quarto-figure-center"></section>
-<section id="la-collecte-directe-les-enquêtes-par-échantillonnage-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>La collecte directe : les enquêtes par échantillonnage</h2>
+<img data-src="img/taux_chomage.png" class="r-stretch quarto-figure-center"></section>
+<section id="la-collecte-directe-les-enquêtes-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>La collecte directe : les enquêtes</h2>
 <ul>
 <li><span class="orange"><strong>Avantages</strong></span> :
 <ul>
-<li>Contrôle total des questions posées et personnes interrogées</li>
+<li><span class="blue2"><strong>Contrôle total</strong></span> des questions posées et personnes interrogées</li>
 </ul></li>
 <li><span class="orange"><strong>Désavantages</strong></span> :
 <ul>
-<li>Coûts très importants</li>
-<li>Contraignant pour l’enquêteurs et les enquêtés</li>
-<li>Baisse tendancielle du taux de réponse</li>
+<li><span class="blue2"><strong>Coûts</strong></span> très importants</li>
+<li><span class="blue2"><strong>Contraignant</strong></span> pour l’enquêteurs et les enquêtés</li>
+<li>Baisse tendancielle du <span class="blue2"><strong>taux de réponse</strong></span></li>
 </ul></li>
 </ul>
 </section>
@@ -466,21 +468,24 @@
 <h2>Les sources administratives</h2>
 <ul>
 <li>Informations collectées via les registres <span class="orange"><strong>administratifs</strong></span> ou <span class="orange"><strong>comptables</strong></span></li>
-<li>Sources de plus en plus utilisées par les agences de statistiques publiques</li>
-<li>Leurs volumes, leurs vitesses et leurs véracité peuvent être caractéristique de Big Data</li>
-<li><span class="blue2"><strong>Exemples</strong></span> : la déclaration sociale nominative (DSN), le Système National des Données de Santé (SNDS)… (elles peuvent être big data)</li>
+<li>De plus en plus utilisées par les agences de statistiques publiques</li>
+<li>Leurs <span class="orange"><strong>volumes</strong></span>, leurs <span class="orange"><strong>vitesses</strong></span> et leurs <span class="orange"><strong>véracité</strong></span> peuvent souvent être caractéristique de <em>Big Data</em></li>
+<li><span class="blue2"><strong>Exemples</strong></span> : la déclaration sociale nominative (DSN), le Système National des Données de Santé (SNDS)…</li>
 </ul>
 </section>
-<section id="zoom-sur-la-déclaration-sociale-nominative-dsn" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Zoom sur la Déclaration Sociale Nominative (DSN)</h2>
+<section id="la-déclaration-sociale-nominative-dsn" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>La Déclaration Sociale Nominative (DSN)</h2>
 <ul>
-<li>Objectifs principaux :
+<li><span class="orange"><strong>Objectifs principaux</strong></span> :
 <ul>
-<li>Simplifier les formalités déclaratives : une seule déclaration</li>
-<li>Fiabiliser et sécuriser les déclarations : dématérialisation et obligation mensuelle</li>
+<li><span class="blue2"><strong>Simplifier</strong></span> les formalités déclaratives : une seule déclaration</li>
+<li><span class="blue2"><strong>Fiabiliser</strong></span> et sécuriser les déclarations : dématérialisation et obligation mensuelle</li>
 </ul></li>
 <li>Source de données riches</li>
 </ul>
+</section>
+<section id="la-déclaration-sociale-nominative-dsn-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>La Déclaration Sociale Nominative (DSN)</h2>
 
 <img data-src="https://blog.insee.fr/wp-content/uploads/2023/05/blogInsee_2023_05-quels_types_de_sources_l_insee_utilise_t_il-figure2.png" class="r-stretch quarto-figure-center"></section>
 <section id="les-sources-administratives-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -488,80 +493,103 @@
 <ul>
 <li><span class="orange"><strong>Avantages</strong></span> :
 <ul>
-<li>Coût de collecte plus faible</li>
-<li>Charge allégée pour les personnes ou entreprises enquêtées</li>
-<li>Biais de réponse ammoindri (collecte souvent automatique)</li>
-<li>Fréquence de collecte plus rapide et donc volume plus élevé (e.g SIDEP pendant le Covid)</li>
-<li>Données plus fines et donc volume plus élevé</li>
-<li>Complémentaire au données d’enquêtes</li>
+<li><span class="blue2"><strong>Coût</strong></span> de collecte plus faible</li>
+<li><span class="blue2"><strong>Charge allégée</strong></span> pour les personnes ou entreprises enquêtées</li>
+<li><span class="blue2"><strong>Biais de non-réponse ammoindri</strong></span> (collecte souvent automatique)</li>
+<li><span class="blue2"><strong>Fréquence</strong></span> de collecte plus rapide et donc volume plus élevé (e.g SIDEP pendant le Covid)</li>
+<li>Données plus <span class="blue2"><strong>fines</strong></span></li>
+<li><span class="blue2"><strong>Complémentaire</strong></span> au données d’enquêtes</li>
 </ul></li>
+</ul>
+</section>
+<section id="les-sources-administratives-2" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Les sources administratives</h2>
+<ul>
 <li><span class="orange"><strong>Désavantages</strong></span> :
 <ul>
-<li>Contrôle réduit sur l’échantillonage (problèmes de représentativité et biais de sélection)</li>
-<li>Contrôle réduit sur la collection des données (incohérence et erreurs)</li>
-<li>Confidentialité pouvant réduire le partage des données : conventions nécessaires</li>
-<li>Sources potentiellement moins pérennes dans le temps (modifications législatives, modifications de consignes )</li>
+<li>Contrôle réduit sur l’<span class="blue2"><strong>échantillonage</strong></span> (problèmes de représentativité et biais de sélection)</li>
+<li>Contrôle réduit sur la <span class="blue2"><strong>collection des données</strong></span> (incohérence et erreurs)</li>
+<li><span class="blue2"><strong>Confidentialité</strong></span> pouvant réduire le partage des données : conventions nécessaires</li>
+<li>Sources potentiellement <span class="blue2"><strong>moins pérennes</strong></span> dans le temps (modifications législatives, modifications de consignes)</li>
 </ul></li>
 </ul>
 </section>
 <section id="les-sources-administratives-fondement-juridique" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Les sources administratives : Fondement juridique</h2>
 <ul>
-<li>Dispositif juridique rigoureux</li>
-<li>Recours possible depuis 1986 (modification Article 7 bis de la loi du 7 juin 1951)</li>
+<li>Dispositif juridique <span class="orange"><strong>rigoureux</strong></span></li>
+<li>Recours possible depuis 1986 (modification <a href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006528427">Article 7 bis de la loi du 7 juin 1951</a>)</li>
 <li>Transmission obligatoire lorsqu’elle émane d’une demande du ministre chargé de l’économie + avis positif du <a href="https://www.cnis.fr/">Cnis</a></li>
-<li>Données protégées par le secret statistique (Article 7 ter de la loi du 7 juin 1951)</li>
+<li>Données protégées par le secret statistique (<a href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000020616375">Article 7 ter de la loi du 7 juin 1951</a>)</li>
 </ul>
 </section>
 <section id="les-données-émergentes" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Les données émergentes</h2>
 <ul>
-<li>L’État ne détient plus le monopole de la production de la données. De plus en plus de données privées</li>
-<li>Ensemble de données non traditionnelles à la statistique publique mais qui peuvent être utilise pour compléter, enrichir ou renouveler les statistiques publiques</li>
-<li>Données transactionnelles ou comportementales : transactions CB, téléphonie mobile, données de géolocalisation…</li>
-<li>Données issues d’internet (webscrapping) : offres d’emploi, google trends…</li>
-<li>Données satellites</li>
+<li>Ensemble de données <span class="orange"><strong>non traditionnelles</strong></span> à la statistique publique</li>
+<li><span class="orange"><strong>Complètent</strong></span>, <span class="orange"><strong>enrichissent</strong></span> ou <span class="orange"><strong>renouvèlent</strong></span> les statistiques publiques</li>
+<li>De + en + de <span class="orange"><strong>données privées</strong></span> : l’État ne détient plus le <span class="orange"><strong>monopole</strong></span> de la production de la données</li>
 </ul>
+</section>
+<section id="les-données-émergentes-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Les données émergentes</h2>
+<ul>
+<li><span class="orange"><strong>Exemples</strong></span> :</li>
+<li>Données <span class="blue2"><strong>transactionnelles</strong></span> ou <span class="blue2"><strong>comportementales</strong></span> : transactions CB, téléphonie mobile, données de géolocalisation…</li>
+<li>Données issues d’internet (<span class="blue2"><strong>webscrapping</strong></span>) : offres d’emploi, google trends…</li>
+<li><span class="blue2"><strong>Images satellites</strong></span></li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
 <p>Données émergentes → plus souvent les caractéristiques Big Data</p>
+</div>
+</div>
+</div>
 </section>
 <section id="les-données-émergentes-à-linsee" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Les données émergentes à l’Insee</h2>
 <ul>
-<li>Une seule statistique est régulièrement produite grâce à des données privées : l’IPC</li>
+<li><span class="orange"><strong>Une seule</strong></span> statistique est régulièrement produite grâce à des données privées : l’IPC</li>
 <li>3 sources de données utilisées pour produire l’IPC :
 <ul>
-<li>Les enquêtes</li>
-<li>Les relevés de prix dématérialisés (webscrapping, base de données d’institutions…)</li>
-<li>Les données de caisse</li>
+<li>Les <span class="blue2"><strong>enquêtes</strong></span></li>
+<li>Les <span class="blue2"><strong>relevés de prix dématérialisés</strong></span> (webscrapping, base de données d’institutions…)</li>
+<li>Les <span class="blue2"><strong>données de caisse</strong></span></li>
 </ul></li>
 </ul>
-
-<img data-src="https://www.insee.fr/fr/statistiques/graphique/4254225/figure2.png" class="r-stretch quarto-figure-center"></section>
-<section id="les-données-émergentes-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+</section>
+<section id="les-données-émergentes-2" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Les données émergentes</h2>
 <ul>
 <li><span class="orange"><strong>Avantages</strong></span> :
 <ul>
-<li>Rapidité : temps réel ou quasi temps réel</li>
-<li>Volume : souvent données massives</li>
-<li>Complémentarité : appui des données traditionelles</li>
+<li><span class="blue2"><strong>Rapidité</strong></span> : temps réel ou quasi temps réel</li>
+<li><span class="blue2"><strong>Volume</strong></span> : souvent données massives</li>
+<li><span class="blue2"><strong>Complémentarité</strong></span> : appui des données traditionelles</li>
 </ul></li>
 <li><span class="orange"><strong>Désavantages</strong></span> :
 <ul>
-<li>Aucun contrôle sur l’échantillonage et la collection des données</li>
-<li>Accessibilité limitée ou coûteuse</li>
-<li>Quantité <span class="math inline">\(\neq\)</span> Qualité</li>
+<li><span class="blue2"><strong>Aucun contrôle</strong></span> sur l’échantillonage et la collection des données</li>
+<li><span class="blue2"><strong>Accessibilité</strong></span> limitée ou coûteuse</li>
+<li><span class="blue2"><strong>Quantité</strong></span> <span class="math inline">\(\neq\)</span> <span class="blue2"><strong>Qualité</strong></span></li>
 </ul></li>
 </ul>
 </section>
 <section id="les-sources-émergentes-fondement-juridique" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Les sources émergentes : Fondement juridique</h2>
 <ul>
-<li>Recours possible depuis 2016 (Article 3 bis de la loi du 7 juin 1951) sous des conditions très strictes :
+<li>Recours possible depuis 2016 (<a href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000033205803">Article 3 bis de la loi du 7 juin 1951</a>) sous des <span class="orange"><strong>conditions très strictes</strong></span> :
 <ul>
-<li>Consultations et étude de faisabilité/opportunité préalables à la décision</li>
-<li>Confidentialité des données assurée</li>
-<li>Utilisation des données fixées par voie réglementaire</li>
+<li>Consultations et <span class="blue2"><strong>étude de faisabilité/opportunité</strong></span> préalables à la décision</li>
+<li><span class="blue2"><strong>Confidentialité</strong></span> des données assurée</li>
+<li>Utilisation des données fixées par <span class="blue2"><strong>voie réglementaire</strong></span></li>
 </ul></li>
 </ul>
 </section></section>
@@ -578,11 +606,11 @@
 <section id="contexte" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Contexte</h2>
 <ul>
-<li>L’IPC est calculé à partir de 200 000 relevés mensuels dans des points de vente</li>
-<li>Complété par <span class="math inline">\(+190 000\)</span> prix mensuels provenant de sources administratives ou webscrapping</li>
+<li>L’IPC est calculé à partir de 200 000 <span class="orange"><strong>relevés mensuels</strong></span> dans des points de vente</li>
+<li>Complété par <span class="math inline">\(+190 000\)</span> <span class="orange"><strong>prix mensuels</strong></span> provenant de sources administratives ou webscrapping</li>
 <li>Depuis janvier 2020 une nouvelle sources :
 <ul>
-<li>Les données de caisse : <span class="math inline">\(\approx 1,7\)</span> milliards d’enregistrements par mois</li>
+<li>Les <span class="orange"><strong>données de caisse</strong></span> : <span class="math inline">\(\approx 1,7\)</span> milliards d’enregistrements par mois</li>
 </ul></li>
 </ul>
 </section>
@@ -590,15 +618,15 @@
 <h2>Une opportunité pour le calcul de statistiques de prix</h2>
 <ul>
 <li><p>D’autres INS plus précurseur : Pays-Bas (2002), Norvège (2005), Suisse (2008), Suède (2012), Belgique (2015), Danemark et Islande (2016), Luxembourg et Italie (2018)</p></li>
-<li><p>Entrée dans l’ère du Big Data : prise en compte des opportunités et limites</p></li>
-<li><p>Exhaustivité des données et potentielles nouvelles informations</p></li>
+<li><p>Entrée dans l’ère du Big Data : prise en compte des <span class="orange"><strong>opportunités</strong></span> et <span class="orange"><strong>limites</strong></span></p></li>
+<li><p><span class="orange"><strong>Exhaustivité</strong></span> des données et potentielles nouvelles informations</p></li>
 </ul>
 </section>
 <section id="a-quoi-ressemblent-les-données" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>A quoi ressemblent les données ?</h2>
 <ul>
-<li>Collectée en continu et centralisées selon un pas journalier</li>
-<li>Quantités vendues et prix du produit pour chaque code barre enregistré</li>
+<li>Collectée <span class="orange"><strong>en continu</strong></span> et centralisées selon un <span class="orange"><strong>pas journalier</strong></span></li>
+<li><span class="orange"><strong>Quantités</strong></span> vendues et <span class="orange"><strong>prix</strong></span> du produit pour chaque code barre enregistré</li>
 </ul>
 <table style="width:100%;">
 <colgroup>
@@ -720,12 +748,12 @@
 <section id="des-statistiques-plus-précises-et-plus-détaillées" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Des statistiques plus précises et plus détaillées</h2>
 <ul>
-<li>Disponibilité journalière très utile : contrainte de publications de l’IPC</li>
-<li>Production d’indices sur des segments de consommation très spécifique</li>
-<li>Echantillons sur des espaces géographiques très fins : vers des indices régionaux</li>
-<li>Identification les effets de substitution</li>
-<li>Production d’indices de prix plus proche du ressenti des ménages</li>
-<li>Une réduction des coûts importante pour l’Insee !</li>
+<li>Disponibilité journalière très utile : <span class="orange"><strong>contrainte de publications</strong></span> de l’IPC</li>
+<li>Production d’indices sur des <span class="orange"><strong>segments de consommation</strong></span> très spécifique</li>
+<li>Echantillons sur des <span class="orange"><strong>espaces géographiques</strong></span> très fins : vers des indices régionaux</li>
+<li>Identification les <span class="orange"><strong>effets de substitution</strong></span></li>
+<li>Production d’indices de prix plus proche du <span class="orange"><strong>ressenti des ménages</strong></span></li>
+<li>Une <span class="orange"><strong>réduction des coûts</strong></span> importante pour l’Insee !</li>
 </ul>
 </section>
 <section id="un-long-chemin-pour-accéder-aux-données-de-caisse" class="slide level2" data-background-image="background.svg" data-background-size="contain">
@@ -735,14 +763,14 @@
 <section id="retour-dexpérience" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Retour d’expérience</h2>
 <ul>
-<li>Sources parmi les plus prometteuses car substituables <!-- tirent parti de la d&#xE9;mat&#xE9;rialisation de l&#x2019;&#xE9;conomie tout en retra&#xE7;ant au plus pr&#xE8;s les achats de biens et services qui constituent directement une partie de la consommation des m&#xE9;nages telle qu&#x2019;elle sera ensuite mesur&#xE9;e par les comptes nationaux.--></li>
-<li>Nouveaux partenariats noués pour assurer la pérénité</li>
-<li>Données de caisse : 2 V (Vélocité, Volume) sur 3</li>
-<li>Des contraintes fortes :
+<li>Sources parmi les plus <span class="orange"><strong>prometteuses</strong></span> car substituables <!-- tirent parti de la d&#xE9;mat&#xE9;rialisation de l&#x2019;&#xE9;conomie tout en retra&#xE7;ant au plus pr&#xE8;s les achats de biens et services qui constituent directement une partie de la consommation des m&#xE9;nages telle qu&#x2019;elle sera ensuite mesur&#xE9;e par les comptes nationaux.--></li>
+<li>Nouveaux partenariats noués pour assurer la <span class="orange"><strong>pérénité</strong></span></li>
+<li>Données de caisse : 2 V (<span class="orange"><strong>Vélocité</strong></span>, <span class="orange"><strong>Volume</strong></span>) sur 3</li>
+<li>Des <span class="orange"><strong>contraintes</strong></span> fortes :
 <ul>
-<li>Accès long et difficile aux données</li>
-<li>Nouvelle architecture informatique indispensable</li>
-<li>Automatisation des processus statistiques nécessaire (la classification, l’identification des relances, le remplacement des produits)</li>
+<li>Accès <span class="blue2"><strong>long</strong></span> et <span class="blue2"><strong>difficile</strong></span> aux données</li>
+<li>Nouvelle <span class="blue2"><strong>architecture informatique</strong></span> indispensable</li>
+<li><span class="blue2"><strong>Automatisation</strong></span> des processus statistiques nécessaire (la classification, l’identification des relances, le remplacement des produits)</li>
 </ul></li>
 </ul>
 <!-- Voir JMS lino http://jms-insee.fr/jms2022s28_2/ -->
@@ -755,21 +783,25 @@
 <section id="contexte-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Contexte</h2>
 <ul>
-<li>Objectif identique : améliorer l’IPC</li>
+<li><span class="orange"><strong>Objectif identique</strong></span> : améliorer l’IPC</li>
 <li>Les données de caisse ne suffisent pas :
 <ul>
-<li>Pas une solution pour prix des services</li>
-<li>Produits sans code-barre</li>
+<li>Pas une solution pour <span class="blue2"><strong>prix des services</strong></span></li>
+<li>Produits <span class="blue2"><strong>sans code-barre</strong></span></li>
 </ul></li>
-<li>Webscrapping permet de collecter de nouvelles données de prix</li>
 </ul>
+<div class="fa-ul">
+<li>
+<i class="fa-li fa fa-arrow-right"></i><span class="orange"><strong>Webscrapping</strong></span> permet de collecter des données de prix supplémentaires
+</li>
+</div>
 </section>
 <section id="un-exemple-les-prix-dans-le-domaine-de-lhotellerie" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Un exemple : les prix dans le domaine de l’hotellerie</h2>
 <ul>
 <li>Etude réalisée par <span class="blue2">Adrien Montbroussous</span>, <span class="blue2">Camille Freppel</span> et <span class="blue2">Ombéline Guillon</span></li>
 <li>Papier et présentation détaillée accessible <a href="https://www.ottawagroup.org/Ottawa/ottawagroup.nsf/4a256353001af3ed4b2562bb00121564/90eefd961765454eca25886a00042203/$FILE/Web%20scraping%20of%20booking.com_Paper.pdf">ici</a> et <a href="http://www.jms-insee.fr/2022/S14_1_PPT_MONTBROUSSOUS_JMS2022.pdf">ici</a></li>
-<li><span class="orange">Objectif</span> : améliorer l’indice des prix dans le secteur de l’hotellerie</li>
+<li><span class="orange"><strong>Objectif</strong></span> : améliorer l’indice des prix dans le secteur de l’<span class="blue2"><strong>hotellerie</strong></span></li>
 <li>Code source pour le webscrapping des prix disponible en <a href="https://git.lab.sspcloud.fr/methodo-ipc/webscraping-hotel">open-source</a></li>
 </ul>
 </section>
@@ -777,10 +809,10 @@
 <h2>Un exemple : les prix dans le domaine de l’hotellerie</h2>
 <ul>
 <li>Le poste location de chambres : <span class="orange"><span class="math inline">\(0,8 %\)</span> <strong>de la consommation</strong></span> du panier de l’IPC en 2021</li>
-<li>Les prix sont collectés sur le terrain par des enquêteurs :
+<li>Prix collectés sur le terrain par des enquêteurs :
 <ul>
-<li>Du lundi au vendredi, une fois par mois <span class="blue2">pour le jour même</span></li>
-<li><span class="blue2">Pour une nuitée</span> pour 2 personnes avec 2 petits-déjeuners</li>
+<li>Du lundi au vendredi, une fois par mois [pour le jour même]{<strong>.blue2</strong>}</li>
+<li><span class="blue2"><strong>Pour une nuitée</strong></span> pour 2 personnes avec 2 petits-déjeuners</li>
 </ul></li>
 </ul>
 </section>
@@ -794,17 +826,17 @@
 <li>Certaines <span class="blue2"><strong>zones touristiques</strong></span> ne sont pas bien représentées</li>
 <li>Aucun prix pour des nuitées le <span class="blue2"><strong>samedi</strong></span> ou le <span class="blue2"><strong>dimanche</strong></span> soir ne sont collectés.</li>
 </ul></li>
-<li>Webscrapping de <a href="https://www.booking.com/">Booking</a> permet de contrecarrer ces problématiques</li>
 </ul>
+<p><i class="fa-solid fa-thumbs-up" aria-label="thumbs-up"></i> Webscrapping de <a href="https://www.booking.com/">Booking</a> permet de contrecarrer ces problématiques</p>
 </section>
 <section id="dautres-expérimentations" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>D’autres expérimentations</h2>
 <ul>
-<li>Indice des prix des articles électroniques : webscrapping de <span class="blue2">Boulanger</span> et <span class="blue2">rue du commerce</span>
+<li>Indice des prix des<span class="orange"><strong>articles électroniques</strong></span> : webscrapping de <a href="https://www.boulanger.com/">Boulanger</a> et <a href="https://www.rueducommerce.fr">rue du commerce</a>
 <ul>
 <li>Code <a href="https://git.lab.sspcloud.fr/methodo-ipc/webscraping-biens-electroniques">open-source</a></li>
 </ul></li>
-<li>Indice des prix du transport en train : webscrapping de la <span class="blue2">SNCF</span>
+<li>Indice des prix du <span class="orange"><strong>transport en train</strong></span> : webscrapping de la <span class="blue2">SNCF</span>
 <ul>
 <li>Pris en compte dans l’indice de l’IPC depuis 2020</li>
 </ul></li>
@@ -813,10 +845,10 @@
 <section id="quelques-limites-au-webscrapping" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Quelques limites au webscrapping</h2>
 <ul>
-<li>[<strong>Dépendance</strong>] au site internet
+<li><span class="orange"><strong>Dépendance</strong></span> au site internet
 <ul>
-<li>Des [<strong>interruptions de collecte</strong>] dûes à des changements des sites web</li>
-<li>[<strong>Maintenance</strong>] des codes coûteux</li>
+<li>Des <span class="blue2"><strong>interruptions de collecte</strong></span> dûes à des changements des sites web</li>
+<li><span class="blue2"><strong>Maintenance</strong></span> des codes coûteux</li>
 </ul></li>
 <li>Fondement juridique important :
 <ul>
@@ -832,11 +864,11 @@
 <section id="contexte-2" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Contexte</h2>
 <ul>
-<li>[<strong>Objectif double</strong>]: [<strong>améliorer</strong>] et [<strong>anticiper</strong>] la première estimation du PIB</li>
-<li>Estimation publiée [<strong>1 mois</strong>] après la fin d’un trimestre</li>
-<li>Multiplicité de sources de données aux dates de [<strong>publications disparates</strong>] :
+<li><span class="orange"><strong>Objectif double</strong></span>: <span class="blue2"><strong>améliorer</strong></span> et <span class="blue2"><strong>anticiper</strong></span> la première estimation du PIB</li>
+<li>Estimation publiée <span class="orange"><strong>1 mois</strong></span> après la fin d’un trimestre</li>
+<li>Multiplicité de sources de données aux dates de <span class="orange"><strong>publications disparates</strong></span> :
 <ul>
-<li>Estimation en continue</li>
+<li>Estimation en continu</li>
 <li>Nouveaux outils de prévision</li>
 </ul></li>
 </ul>
@@ -844,34 +876,33 @@
 <section id="une-diversité-de-sources-de-données-à-haute-fréquence" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Une diversité de sources de données à haute fréquence</h2>
 <ul>
-<li>Enquêtes (qualitatif) et indices (quantitatif) comme principaux indicateurs</li>
+<li><span class="orange"><strong>Enquêtes</strong></span> (qualitatif) et <span class="orange"><strong>indices</strong></span> (quantitatif) comme principaux indicateurs</li>
 <li>Délais de publication différents (entre 25 et 90 jours) :
 <ul>
-<li><span class="math inline">\(\approx 1\)</span> nouvelle publication tous les 3 jours</li>
+<li><span class="math inline">\(\approx 1\)</span> nouvelle publication <span class="blue2"><strong>tous les 3 jours</strong></span></li>
 </ul></li>
 <li>Données produites par l’Insee, la Banque de France, l’OCDE, Markit ou des SSM</li>
-<li>Données <em>Bid Data</em> se sont avérées peu efficaces (articles de presse, recherches sur les moteurs de recherche, données des réseaux sociaux)</li>
+<li>Données <em>Big Data</em> se sont avérées <span class="orange"><strong>peu efficaces</strong></span> (articles de presse, recherches sur les moteurs de recherche, données des réseaux sociaux)</li>
 </ul>
 </section>
 <section id="de-nouveaux-outils-indispensables" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>De nouveaux outils indispensables</h2>
 <ul>
-<li>Problèmes méthodologiques :
+<li><span class="orange"><strong>Problèmes méthodologiques</strong></span> :
 <ul>
-<li>Aggrégation de données de fréquences et dates de publication différentes</li>
-<li>Nombre de variables &gt;&gt; Nombre d’observations</li>
+<li>Aggrégation de données de <span class="blue2"><strong>fréquences</strong></span> et <span class="blue2"><strong>dates</strong></span> de publication différentes</li>
+<li>Nombre de variables <span class="math inline">\(\gg\)</span> Nombre d’observations</li>
 </ul></li>
-<li>Comparaison de méthodes macroéconomiques traditionnelles (ARIMA, modèles à facteurs dynamiques) et méthodes d’apprentissage automatique (Lasso, forêts aléatoires)</li>
+<li>Comparaison de méthodes <span class="orange"><strong>macroéconomiques traditionnelles</strong></span> (ARIMA, modèles à facteurs dynamiques) et <span class="orange"><strong>méthodes d’apprentissage automatique</strong></span> (Lasso, forêts aléatoires)</li>
 </ul>
 </section>
 <section id="pour-quels-résultats" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Pour quels résultats ?</h2>
 
 <img data-src="img/rmsfe_pib.png" class="r-stretch quarto-figure-center"><ul>
-<li>Prévisions similaires mais volatilité des modèles diffèrent (Lasso et forêts aléatoires les moins volatiles)</li>
-<li>Les erreurs de prévisions diminuent au courant d’un trimestre</li>
-<li>Données les plus volatiles utiles qu’en présence de choc majeur (Covid, guerre Ukraine)</li>
-<li>Pas encore de mise en production</li>
+<li>Prévisions proches mais <span class="orange"><strong>volatilité des modèles diffèrent</strong></span></li>
+<li>Les erreurs de prévisions <span class="orange"><strong>diminuent</strong></span> au cours d’un trimestre</li>
+<li>Données les plus volatiles utiles qu’en présence de <span class="orange"><strong>choc majeur</strong></span> (Covid, guerre Ukraine)</li>
 </ul>
 <!-- https://www.insee.fr/fr/statistiques/fichier/4268739/122019_dossier1.pdf -->
 <!-- ggtrends : http://jms-insee.fr/jms2018s25_1/ -->
@@ -885,43 +916,25 @@
 <section id="contexte-3" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Contexte</h2>
 <ul>
-<li>Epidémie de coronavirus et [<strong>confinement généralisé</strong>]</li>
-<li>[<strong>Mouvements de population</strong>] importants au sein du territoire</li>
-<li>Objectif : [<strong>estimer la répartition de la population</strong>] pour organiser la réponse sanitaire et sociale</li>
+<li>Epidémie de coronavirus et <span class="orange"><strong>confinement généralisé</strong></span></li>
+<li><span class="orange"><strong>Mouvements de population</strong></span> importants au sein du territoire</li>
+<li><span class="orange"><strong>Objectif</strong></span> : <span class="blue2"><strong>estimer la répartition de la population</strong></span> pour organiser la réponse sanitaire et sociale</li>
 </ul>
 </section>
 <section id="pourquoi-estimer-la-répartition-de-la-population" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Pourquoi estimer la répartition de la population ?</h2>
 <ol type="1">
-<li>Répondre au besoin des acteurs publics locaux</li>
+<li>Répondre au <span class="orange"><strong>besoin des acteurs publics</strong></span> locaux : avis du Cnis sur les statistiques de population présente et non plus résidente)</li>
+<li>Un <span class="orange"><strong>champ de recherche prometteur</strong></span> : utilité pour la satistique publique reconnu par le SSE</li>
+<li><span class="orange"><strong>Nouveaux partenariats</strong></span> créés : Orange, ANR, Eurostat, l’université Gustave Eiffel (Ifsttar), l’UMR Géographie-Cités du CNRS…</li>
+<li>Le contexte d’<span class="orange"><strong>urgence</strong></span> : production de statistiques très rapide (8 avril pour un confinement le 17 mars)</li>
 </ol>
-<ul>
-<li>avis du Cnis sur les statistiques de population présente et non plus résidente)</li>
-</ul>
-<ol start="2" type="1">
-<li>Un champ de recherche prometteur</li>
-</ol>
-<ul>
-<li>utilité pour la satistique publique reconnu par le SSE</li>
-</ul>
-<ol start="3" type="1">
-<li>Nouveaux partenariats créés</li>
-</ol>
-<ul>
-<li>Orange, ANR, Eurostat, l’université Gustave Eiffel (Ifsttar), l’UMR Géographie-Cités du CNRS…</li>
-</ul>
-<ol start="4" type="1">
-<li>Le contexte d’urgence</li>
-</ol>
-<ul>
-<li>production de statistiques très rapide (8 avril pour un confinement le 17 mars)</li>
-</ul>
 </section>
 <section id="les-données-utilisées" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Les données utilisées</h2>
 <ul>
-<li>Données fournits par un unique opérateur : Orange</li>
-<li>Comptages de présence dans chaque département croisés avec le département de résidence</li>
+<li>Données fournits par un <span class="orange"><strong>unique opérateur</strong></span> : <a href="https://www.orange.fr">Orange</a></li>
+<li><span class="orange"><strong>Comptages de présence</strong></span> dans chaque département croisés avec le département de résidence</li>
 <li>Localisation à partir des antennes auxquelles un mobile se connecte</li>
 </ul>
 <div class="callout callout-important callout-titled callout-style-default">
@@ -946,7 +959,7 @@
 <h2>Confidentialité garantie</h2>
 <ul>
 <li>Aucune information personnelles présentent dans les données</li>
-<li>Méthodologie de l’opérateur connue et validé par l’Insee :
+<li>Méthodologie de l’opérateur connue et validée par l’Insee :
 <ul>
 <li>Echanges confidentiels et transparents</li>
 <li>L’Insee s’assure de la validité du secret statistique</li>
@@ -957,22 +970,35 @@
 <h2>Et maintenant ?</h2>
 <p>Plusieurs caps identifiés :</p>
 <ol type="1">
-<li>Pas dépendre d’un seul opérateur : biais statistique ?</li>
-<li>Cadre européen sur l’exploitation des données mobiles :</li>
+<li><span class="orange"><strong>Ne plus dépendre d’un seul opérateur</strong></span> : biais statistique ?</li>
+<li><span class="orange"><strong>Cadre européen</strong></span> sur l’exploitation des données mobiles :</li>
 </ol>
-<ul>
-<li>la qualité des statistiques publiées</li>
-<li>respect de la vie privée des détenteurs de mobiles</li>
-</ul>
+<ol type="a">
+<li>la <span class="blue2"><strong>qualité</strong></span> des statistiques publiées</li>
+<li><span class="blue2"><strong>respect de la vie privée</strong></span> des détenteurs de mobiles</li>
+</ol>
 <ol start="3" type="1">
-<li>Approfondir la méthodologie :</li>
+<li><span class="orange"><strong>Approfondir la méthodologie</strong></span> :</li>
 </ol>
 <ul>
 <li>Partenariat avec le projet Mobitic</li>
 </ul>
 <ol start="4" type="1">
-<li>Production de nouvelles statistiques (déplacements domicile-travail, accroissement du télétravail…) ::: {.callout-note} D’autres études ont été menées à l’Insee utilisant les données de téléphonie mobile, pour analyser la ségrégation urbaine notamment (voir <a href="http://jms-insee.fr/wp-content/uploads/S25_2_ACTEv2_GALIANA_JMS2018.pdf">Galiana et al.</a>). :::</li>
+<li>Production de <span class="orange"><strong>nouvelles statistiques</strong></span> (déplacements domicile-travail, accroissement du télétravail…)</li>
 </ol>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>D’autres études ont été menées à l’Insee utilisant les données de téléphonie mobile, pour analyser la ségrégation urbaine notamment (voir <a href="http://jms-insee.fr/wp-content/uploads/S25_2_ACTEv2_GALIANA_JMS2018.pdf">Galiana et al.</a>).</p>
+</div>
+</div>
+</div>
 <!-- https://blog.insee.fr/que-peut-faire-linsee-a-partir-des-donnees-de-telephonie-mobile-mesure-de-population-presente-en-temps-de-confinement-et-statistiques-experimentales/ -->
 </section></section>
 <section>
@@ -980,12 +1006,12 @@
 <h1>Autres sources émergentes étudiées à l’Insee</h1>
 
 </section>
-<section id="améliorer-le-recensement-à-laide-de-données-satellites" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Améliorer le recensement à l’aide de données satellites</h2>
+<section id="améliorer-le-recensement-à-laide-de-images-satellites" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Améliorer le recensement à l’aide de images satellites</h2>
 <ul>
-<li>Utilisation de données satellites (Pleiades, Sentinel)</li>
-<li>Détecter les apparitions/disparistions d’habitations</li>
-<li>Méthodes de [<strong>deep-learning</strong>] :
+<li>Utilisation d’<span class="orange"><strong>images satellites</strong></span> (Pleiades, Sentinel)</li>
+<li>Détecter les <span class="orange"><strong>apparitions/disparistions d’habitations</strong></span></li>
+<li>Méthodes de <span class="orange"><strong>deep-learning</strong></span> :
 <ul>
 <li>Segmentation d’image</li>
 <li>Détection de changements</li>
@@ -996,14 +1022,14 @@
 <section id="données-carte-bancaire" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Données carte bancaire</h2>
 <ul>
-<li>Données Carte banciare CB recouvre 82% des opérations</li>
-<li>Données agrégées par jour, type de paiement ou département</li>
+<li>Données Carte bancaire CB recouvre<span class="orange"><strong>82% des opérations</strong></span></li>
+<li><span class="orange"><strong>Données agrégées</strong></span> par jour, type de paiement ou département</li>
 <li>Plusieurs exploitations réalisées :
 <ul>
-<li>conjoncture agrégée (consommation des ménages)</li>
-<li>conjoncture désagrégée (consommation par secteurs)</li>
-<li>comportements des consommateurs liés à des chocs (confinement)</li>
-<li>production statistique (réduction de la volatilité des estimations)</li>
+<li><span class="blue2"><strong>conjoncture agrégée</strong></span> (consommation des ménages)</li>
+<li><span class="blue2"><strong>conjoncture désagrégée</strong></span> (consommation par secteurs)</li>
+<li><span class="blue2"><strong>comportements des consommateurs</strong></span> liés à des chocs (confinement)</li>
+<li><span class="blue2"><strong>production statistique</strong></span> (réduction de la volatilité des estimations)</li>
 </ul></li>
 </ul>
 <!-- http://jms-insee.fr/jms2022s04_3/ -->
@@ -1017,9 +1043,9 @@
 <section id="indice-de-prix-des-loyers-grâce-aux-site-dannonces" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Indice de prix des loyers grâce aux site d’annonces</h2>
 <ul>
-<li>Construction indices des loyers à partir des données de SeLoger</li>
+<li>Construction <span class="orange"><strong>indices des loyers</strong></span> à partir des données de SeLoger</li>
 <li>Partenariat échanges des données / apport méthodologique</li>
-<li>Objectif : valorisation grâce à un outil visuel interactif</li>
+<li><span class="orange"><strong>Objectif</strong></span> : valorisation grâce à un outil visuel interactif</li>
 </ul>
 <!-- https://www.cnis.fr/wp-content/uploads/2018/05/CR_2018_Cnis_RENCONTRE_Nouvelles_sources.pdf -->
 </section></section>
