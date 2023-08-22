@@ -1,5 +1,4 @@
 
-<!-- Mis en prod : -->
 # A. Les données de caisse pour mesurer les prix à la consommation
 <!-- Référence : https://www.insee.fr/fr/information/4254225?sommaire=4254170#titre-bloc-2 -->
 
@@ -139,6 +138,9 @@ les moteurs de recherche, données des réseaux sociaux)
 
 ## Pour quels résultats ?
 
+![](img/rmsfe_pib.png){fig-align="center"}
+
+
 - Prévisions similaires mais volatilité des modèles diffèrent (Lasso et forêts aléatoires les moins volatiles)
 - Les erreurs de prévisions diminuent au courant d'un trimestre
 - Données les plus volatiles utiles qu'en présence de choc majeur (Covid, guerre Ukraine)
@@ -152,68 +154,97 @@ les moteurs de recherche, données des réseaux sociaux)
 
 # D. Les données mobiles pour la statistique publique
 
+## Contexte
 
-Savoir comment se répartit effectivement la population sur le territoire est essentiel pour organiser la réponse sanitaire et sociale face à l’épidémie de coronavirus
+- Epidémie de coronavirus et [**confinement généralisé**]
+- [**Mouvements de population**] importants au sein du territoire
+- Objectif : [**estimer la répartition de la population**] pour organiser la réponse sanitaire et sociale
 
- Elles ne permettent pas de suivre le déplacement des personnes, mais d’effectuer des comptages par zones à différentes dates, ce qui est l’unique objectif de ces travaux.
+## Pourquoi estimer la répartition de la population ?
 
-estimer la population présente sur un territoire à un moment donné, dans le respect de la vie privée des utilisateurs
-contexte : crise sanitaire
+1. Répondre au besoin des acteurs publics locaux 
+  - avis du Cnis sur les statistiques de population présente et non plus résidente)
+2. Un champ de recherche prometteur
+  - utilité pour la satistique publique reconnu par le SSE
+3. Nouveaux partenariats créés
+  - Orange, ANR, Eurostat, l’université Gustave Eiffel (Ifsttar), l’UMR Géographie-Cités du CNRS...
+4. Le contexte d'urgence
+  - production de statistiques très rapide (8 avril pour un confinement le 17 mars)
 
-pourquoi ? 
-1) Répondre au besoin des acteurs publics locaux
- Depuis plusieurs années maintenant, des statistiques de population présente (et non plus résidente) font partie des besoins
-2) un champ de recherche prometteur
- Données téléphonie mobile pourraient notamment permettre à terme des mises-à-jour plus fréquentes des statistiques de population (mémorandum dit de « Scheveningen » sur les statistiques officielles et les Big Data)
-3) Nouer partenariats
-partenariat de recherche avec un laboratoire de recherche d’Orange et Eurostat. nouveau projet de recherche, MobiTic
-Agence nationale de la Recherche, Orange Labs, Orange Business Services, l’université Gustave Eiffel (Ifsttar) et l’UMR Géographie-Cités du CNRS
-4) Réponse au contexte actuel 
+## Les données utilisées
 
-Comment l'Insee s'y est pris ?
-1) Quelles données ont elle été utilisées ?
-comptages de présence dans chaque département croisés avec le département de résidence
-L’opérateur les recale une première fois pour représenter l’ensemble de la population à une échelle locale, car ses clients ne constituent qu’une fraction du parc de téléphonie mobile
-un mobile est localisé sur un territoire donné à un moment donné à partir des antennes auxquelles le terminal se connecte
-Ces données issues du réseau mobile ne doivent pas être confondues avec les données de localisation GPS de certains smartphones
+- Données fournits par un unique opérateur : Orange
+- Comptages de présence dans chaque département croisés avec le département de résidence
+- Localisation à partir des antennes auxquelles un mobile se connecte
 
-2) Confidentialité garantie
-L’Insee doit connaître dans le détail la méthodologie des opérateurs à l’origine des données qui lui sont fournies
-garantie que ses méthodes ne seront pas divulguées à ses concurrents.
+::: {.callout-important}
+Les données utilisées par l’Insee ne sont ni des données GPS ni des données provenant d’applications installées sur les mobiles. Elles ne permettent pas de suivre le déplacement des personnes, mais seulement d’effectuer des comptages par zones à différentes dates.
+:::
 
-Et maintenant ?
-1) Pas dépendre d'un seul opérateur : biais statistique ?
-2) Cadre européen : définir à l’échelle européenne un cadre d’exploitation des données mobiles pour assurer la qualité des statistiques publiées tout en respectant la vie privée des détenteurs de mobiles.
-3) Approfondir la méthodologie : mobitic
+## Résultat
+
+![Taux d'évolution du total des nuitées par département de présence avant et après le début du confinement](img/evol_confinement.png){fig-align="center"}
+
+## Confidentialité garantie
+
+- Aucune information personnelles présentent dans les données
+- Méthodologie de l'opérateur connue et validé par l'Insee :
+  - Echanges confidentiels et transparents
+  - L'Insee s'assure de la validité du secret statistique
 
 
-http://jms-insee.fr/jms2018s25_2/
+## Et maintenant ?
 
-données de téléphonie mobile, sur les déplacements domicile-travail et l’accroissement du télétravail.
+Plusieurs caps identifiés :
 
-https://blog.insee.fr/que-peut-faire-linsee-a-partir-des-donnees-de-telephonie-mobile-mesure-de-population-presente-en-temps-de-confinement-et-statistiques-experimentales/
+1. Pas dépendre d'un seul opérateur : biais statistique ?
+2. Cadre européen sur l'exploitation des données mobiles : 
+  - la qualité des statistiques publiées
+  - respect de la vie privée des détenteurs de mobiles
+3. Approfondir la méthodologie :
+  - Partenariat avec le projet Mobitic
+4. Production de nouvelles statistiques (déplacements domicile-travail, accroissement du télétravail...)
+::: {.callout-note}
+D'autres études ont été menées à l'Insee utilisant les données de téléphonie mobile, pour analyser la ségrégation urbaine notamment (voir [Galiana et al.](http://jms-insee.fr/wp-content/uploads/S25_2_ACTEv2_GALIANA_JMS2018.pdf)).
+:::
 
-<!-- END -->
+<!-- https://blog.insee.fr/que-peut-faire-linsee-a-partir-des-donnees-de-telephonie-mobile-mesure-de-population-presente-en-temps-de-confinement-et-statistiques-experimentales/ -->
+
 
 # Autres sources émergentes étudiées à l'Insee
 
 ## Améliorer le recensement à l'aide de données satellites
-Reprendre prez faite DIRAG
+
+- Utilisation de données satellites (Pleiades, Sentinel)
+- Détecter les apparitions/disparistions d'habitations
+- Méthodes de [**deep-learning**] :
+  - Segmentation d'image
+  - Détection de changements
+  - Détection d'objets
 
 ## Données carte bancaire
 
-http://jms-insee.fr/jms2022s04_3/
+- Données Carte banciare CB recouvre 82% des opérations
+- Données agrégées par jour, type de paiement ou département
+- Plusieurs exploitations réalisées : 
+  - conjoncture agrégée (consommation des ménages)
+  - conjoncture désagrégée (consommation par secteurs)
+  - comportements des consommateurs liés à des chocs (confinement)
+  - production statistique (réduction de la volatilité des estimations)
+
+<!-- http://jms-insee.fr/jms2022s04_3/ -->
 
 ## Fidélimmo : prédire le patrimoine immobilier des ménages
 
-Olivier fait quelques slides sur fidélimmo
+- XGboost
+<!-- Olivier fait quelques slides sur fidélimmo -->
 
 
 ## Indice de prix des loyers grâce aux site d'annonces
 
-Parler partenariat Seloger/Insee mais peu de ressources
-https://www.cnis.fr/wp-content/uploads/2018/05/CR_2018_Cnis_RENCONTRE_Nouvelles_sources.pdf
+- Construction indices des loyers à partir des données de SeLoger
+- Partenariat échanges des données / apport méthodologique
+- Objectif : valorisation grâce à un outil visuel interactif
 
 
-blog de l'insee pour d'autres 
-
+<!-- https://www.cnis.fr/wp-content/uploads/2018/05/CR_2018_Cnis_RENCONTRE_Nouvelles_sources.pdf -->
