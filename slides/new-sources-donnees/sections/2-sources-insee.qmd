@@ -1,43 +1,44 @@
-## La collecte directe : les enquêtes par échantillonnage
+## La collecte directe : les enquêtes
 
 - Informations collectées auprès d'[**individus**]{.orange} , de [**ménages**]{.orange}  ou d'[**entreprises**]{.orange} selon des méthodes structurées et standardisées
-- Échantillon [**représentatif**] ou au [**hasard**] 
+- Échantillon [**représentatif**]{.orange} ou au [**hasard**]{.orange}
 - Collecte via [**questionnaires**]{.orange}, [**interviews**]{.orange} ou plus récemment [**internet**]{.orange} 
-- Sources traditionnelles des instituts statistiques
+- Sources [**traditionnelles**]{.orange} des instituts statistiques
 - [**Exemples**]{.blue2} : enquête Emploi, enquête conjoncture, recensement de la population...
 
 <!-- TODO: @ROMAIN où on met les données de compta nat ? -->
 
-## Zoom sur l'enquête Emploi
+## L'enquête Emploi
 
-- Panel rotatif (90k pesonne/ trimestres pendant 6 mois)
-- Objectif principal : calculer le taux de chômage 
+- [**Panel rotatif**]{.orange} (90k pesonne/ trimestre pendant 6 mois)
+- [**Objectif principal**]{.orange} : calculer le [**taux de chômage**]{.blue2}
 
-![](https://blog.insee.fr/wp-content/uploads/2023/05/blogInsee_2023_05-quels_types_de_sources_l_insee_utilise_t_il-figure1.png){fig-align="center"}
+![](taux_chomage.png){fig-align="center"}
 
-## La collecte directe : les enquêtes par échantillonnage
+## La collecte directe : les enquêtes
 
 - [**Avantages**]{.orange}  : 
-    - Contrôle total des questions posées et personnes interrogées
+    - [**Contrôle total**]{.blue2} des questions posées et personnes interrogées
 - [**Désavantages**]{.orange}  :
-    - Coûts très importants
-    - Contraignant pour l'enquêteurs et les enquêtés
-    - Baisse tendancielle du taux de réponse
+    - [**Coûts**]{.blue2} très importants
+    - [**Contraignant**]{.blue2} pour l'enquêteurs et les enquêtés
+    - Baisse tendancielle du [**taux de réponse**]{.blue2}
 
 ## Les sources administratives 
 
 - Informations collectées via les registres [**administratifs**]{.orange} ou [**comptables**]{.orange} 
-- Sources de plus en plus utilisées par les agences de statistiques publiques
-- Leurs volumes, leurs vitesses et leurs véracité peuvent être caractéristique de Big Data
+- De plus en plus utilisées par les agences de statistiques publiques
+- Leurs [**volumes**]{.orange}, leurs [**vitesses**]{.orange} et leurs [**véracité**]{.orange} peuvent souvent être caractéristique de *Big Data*
 - [**Exemples**]{.blue2} : la déclaration sociale nominative (DSN), le Système National des Données de Santé (SNDS)...
-(elles peuvent être big data)
 
-## Zoom sur la Déclaration Sociale Nominative (DSN)
+## La Déclaration Sociale Nominative (DSN)
 
-- Objectifs principaux :
-  - Simplifier les formalités déclaratives : une seule déclaration
-  - Fiabiliser et sécuriser les déclarations : dématérialisation et obligation mensuelle
+- [**Objectifs principaux**]{.orange} :
+  - [**Simplifier**]{.blue2} les formalités déclaratives : une seule déclaration
+  - [**Fiabiliser**]{.blue2} et sécuriser les déclarations : dématérialisation et obligation mensuelle
 - Source de données riches 
+
+## La Déclaration Sociale Nominative (DSN)
 
 ![](https://blog.insee.fr/wp-content/uploads/2023/05/blogInsee_2023_05-quels_types_de_sources_l_insee_utilise_t_il-figure2.png){fig-align="center"}
 
@@ -45,60 +46,67 @@
 ## Les sources administratives 
 
 - [**Avantages**]{.orange} : 
-    - Coût de collecte plus faible
-    - Charge allégée pour les personnes ou entreprises enquêtées
-    - Biais de réponse ammoindri (collecte souvent automatique)
-    - Fréquence de collecte plus rapide et donc volume plus élevé (e.g SIDEP pendant le Covid)
-    - Données plus fines et donc volume plus élevé
-    - Complémentaire au données d'enquêtes
+    - [**Coût**]{.blue2} de collecte plus faible
+    - [**Charge allégée**]{.blue2} pour les personnes ou entreprises enquêtées
+    - [**Biais de non-réponse ammoindri**]{.blue2} (collecte souvent automatique)
+    - [**Fréquence**]{.blue2} de collecte plus rapide et donc volume plus élevé (e.g SIDEP pendant le Covid)
+    - Données plus [**fines**]{.blue2}
+    - [**Complémentaire**]{.blue2} au données d'enquêtes
+
+## Les sources administratives 
+
 - [**Désavantages**]{.orange} :
-    - Contrôle réduit sur l'échantillonage (problèmes de représentativité et biais de sélection)
-    - Contrôle réduit sur la collection des données (incohérence et erreurs)
-    - Confidentialité pouvant réduire le partage des données : conventions nécessaires
-    - Sources potentiellement moins pérennes dans le temps (modifications législatives, modifications de consignes )
+    - Contrôle réduit sur l'[**échantillonage**]{.blue2} (problèmes de représentativité et biais de sélection)
+    - Contrôle réduit sur la [**collection des données**]{.blue2} (incohérence et erreurs)
+    - [**Confidentialité**]{.blue2} pouvant réduire le partage des données : conventions nécessaires
+    - Sources potentiellement [**moins pérennes**]{.blue2} dans le temps (modifications législatives, modifications de consignes)
 
-## Les sources administratives : Fondement juridique 
+## Les sources administratives : Fondement juridique
 
-- Dispositif juridique rigoureux 
-- Recours possible depuis 1986 (modification Article 7 bis de la loi du 7 juin 1951)
+- Dispositif juridique [**rigoureux**]{.orange}
+- Recours possible depuis 1986 (modification [Article 7 bis de la loi du 7 juin 1951](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006528427))
 - Transmission obligatoire lorsqu’elle émane d’une demande du ministre chargé de l’économie + avis positif du [Cnis](https://www.cnis.fr/)
-- Données protégées par le secret statistique (Article 7 ter de la loi du 7 juin 1951)
+- Données protégées par le secret statistique ([Article 7 ter de la loi du 7 juin 1951](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000020616375))
+
+## Les données émergentes
+- Ensemble de données [**non traditionnelles**]{.orange} à la statistique publique
+- [**Complètent**]{.orange}, [**enrichissent**]{.orange} ou [**renouvèlent**]{.orange} les statistiques publiques
+- De + en + de [**données privées**]{.orange} : l'État ne détient plus le [**monopole**]{.orange} de la production de la données
 
 ## Les données émergentes
 
-- L'État ne détient plus le monopole de la production de la données. De plus en plus de données privées
-- Ensemble de données non traditionnelles à la statistique publique mais qui peuvent être utilise pour compléter, enrichir ou renouveler les statistiques publiques
-- Données transactionnelles ou comportementales : transactions CB, téléphonie mobile, données de géolocalisation...
-- Données issues d'internet (webscrapping) : offres d'emploi, google trends...
-- Données satellites
+- [**Exemples**]{.orange} : 
+- Données [**transactionnelles**]{.blue2} ou [**comportementales**]{.blue2} : transactions CB, téléphonie mobile, données de géolocalisation...
+- Données issues d'internet ([**webscrapping**]{.blue2}) : offres d'emploi, google trends...
+- [**Images satellites**]{.blue2}
 
+::: {.callout-note}
 Données émergentes &rarr; plus souvent les caractéristiques Big Data
+:::
 
 ## Les données émergentes à l'Insee
 
-- Une seule statistique est régulièrement produite grâce à des données privées : l'IPC
+- [**Une seule**]{.orange} statistique est régulièrement produite grâce à des données privées : l'IPC
 - 3 sources de données utilisées pour produire l'IPC :
-  - Les enquêtes
-  - Les relevés de prix dématérialisés (webscrapping, base de données d'institutions...)
-  - Les données de caisse
-
-![](https://www.insee.fr/fr/statistiques/graphique/4254225/figure2.png){fig-align="center"}
+  - Les [**enquêtes**]{.blue2}
+  - Les [**relevés de prix dématérialisés**]{.blue2} (webscrapping, base de données d'institutions...)
+  - Les [**données de caisse**]{.blue2}
 
 ## Les données émergentes
 
 - [**Avantages**]{.orange} : 
-    - Rapidité : temps réel ou quasi temps réel
-    - Volume : souvent données massives
-    - Complémentarité : appui des données traditionelles
+    - [**Rapidité**]{.blue2} : temps réel ou quasi temps réel
+    - [**Volume**]{.blue2} : souvent données massives
+    - [**Complémentarité**]{.blue2} : appui des données traditionelles
 - [**Désavantages**]{.orange} :
-    - Aucun contrôle sur l'échantillonage et la collection des données
-    - Accessibilité limitée ou coûteuse
-    - Quantité $\neq$ Qualité
+    - [**Aucun contrôle**]{.blue2} sur l'échantillonage et la collection des données
+    - [**Accessibilité**]{.blue2} limitée ou coûteuse
+    - [**Quantité**]{.blue2} $\neq$ [**Qualité**]{.blue2}
 
 
 ## Les sources émergentes : Fondement juridique 
 
-- Recours possible depuis 2016 (Article 3 bis de la loi du 7 juin 1951) sous des conditions très strictes :
-  - Consultations et étude de faisabilité/opportunité préalables à la décision 
-  - Confidentialité des données assurée
-  - Utilisation des données fixées par voie réglementaire
+- Recours possible depuis 2016 ([Article 3 bis de la loi du 7 juin 1951](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000033205803)) sous des [**conditions très strictes**]{.orange} :
+  - Consultations et [**étude de faisabilité/opportunité**]{.blue2} préalables à la décision 
+  - [**Confidentialité**]{.blue2} des données assurée
+  - Utilisation des données fixées par [**voie réglementaire**]{.blue2}
