@@ -13,7 +13,7 @@
 - [**Panel rotatif**]{.orange} (90k pesonne/ trimestre pendant 6 mois)
 - [**Objectif principal**]{.orange} : calculer le [**taux de chômage**]{.blue2}
 
-![](taux_chomage.png){fig-align="center"}
+![](img/taux_chomage.png){fig-align="center"}
 
 ## La collecte directe : les enquêtes
 

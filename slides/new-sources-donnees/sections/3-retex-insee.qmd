@@ -4,23 +4,23 @@
 
 ## Contexte
 
-- L'IPC est calculé à partir de 200 000 relevés mensuels dans des points de vente
-- Complété par $+190 000$ prix mensuels provenant de sources administratives ou webscrapping
+- L'IPC est calculé à partir de 200 000 [**relevés mensuels**]{.orange} dans des points de vente
+- Complété par $+190 000$ [**prix mensuels**]{.orange} provenant de sources administratives ou webscrapping
 - Depuis janvier 2020 une nouvelle sources :
-  - Les données de caisse :  $\approx 1,7$ milliards d'enregistrements par mois 
+  - Les [**données de caisse**]{.orange} :  $\approx 1,7$ milliards d'enregistrements par mois 
 
 ## Une opportunité pour le calcul de statistiques de prix
 
 - D'autres INS plus précurseur : Pays-Bas (2002), Norvège (2005), Suisse (2008), Suède (2012), Belgique (2015), Danemark et Islande (2016), Luxembourg et Italie (2018)
 
-- Entrée dans l'ère du Big Data : prise en compte des opportunités et limites
+- Entrée dans l'ère du Big Data : prise en compte des [**opportunités**]{.orange} et [**limites**]{.orange}
 
-- Exhaustivité des données et potentielles nouvelles informations
+- [**Exhaustivité**]{.orange} des données et potentielles nouvelles informations
 
 ## A quoi ressemblent les données ?
 
-- Collectée en continu et centralisées selon un pas journalier
-- Quantités vendues et prix du produit pour chaque code barre enregistré
+- Collectée [**en continu**]{.orange} et centralisées selon un [**pas journalier**]{.orange}
+- [**Quantités**]{.orange} vendues et [**prix**]{.orange} du produit pour chaque code barre enregistré
 
 | ID Point de vente | Date       | Heure   | Produit                 | EAN             | Prix unitaire (€) | Quantité | Total (€) |
 |-------------------|------------|---------|-------------------------|-----------------|-------------------|----------|-----------|
@@ -37,12 +37,12 @@
 
 ## Des statistiques plus précises et plus détaillées
 
-- Disponibilité journalière très utile : contrainte de publications de l'IPC
-- Production d'indices sur des segments de consommation très spécifique
-- Echantillons sur des espaces géographiques très fins : vers des indices régionaux
-- Identification les effets de substitution
-- Production d'indices de prix plus proche du ressenti des ménages
-- Une réduction des coûts importante pour l'Insee !
+- Disponibilité journalière très utile : [**contrainte de publications**]{.orange} de l'IPC
+- Production d'indices sur des [**segments de consommation**]{.orange} très spécifique
+- Echantillons sur des [**espaces géographiques**]{.orange} très fins : vers des indices régionaux
+- Identification les [**effets de substitution**]{.orange}
+- Production d'indices de prix plus proche du [**ressenti des ménages**]{.orange}
+- Une [**réduction des coûts**]{.orange} importante pour l'Insee !
 
 ## Un long chemin pour accéder aux données de caisse
 
@@ -51,13 +51,13 @@
 
 ## Retour d'expérience 
 
-- Sources parmi les plus prometteuses car substituables <!-- tirent parti de la dématérialisation de l’économie tout en retraçant au plus près les achats de biens et services qui constituent directement une partie de la consommation des ménages telle qu’elle sera ensuite mesurée par les comptes nationaux.-->
-- Nouveaux partenariats noués pour assurer la pérénité
-- Données de caisse : 2 V (Vélocité, Volume) sur 3 
-- Des contraintes fortes : 
-  - Accès long et difficile aux données
-  - Nouvelle architecture informatique indispensable
-  - Automatisation des processus statistiques nécessaire (la classification, l’identification des relances, le remplacement des produits)
+- Sources parmi les plus [**prometteuses**]{.orange} car substituables <!-- tirent parti de la dématérialisation de l’économie tout en retraçant au plus près les achats de biens et services qui constituent directement une partie de la consommation des ménages telle qu’elle sera ensuite mesurée par les comptes nationaux.-->
+- Nouveaux partenariats noués pour assurer la [**pérénité**]{.orange}
+- Données de caisse : 2 V ([**Vélocité**]{.orange}, [**Volume**]{.orange}) sur 3 
+- Des [**contraintes**]{.orange} fortes : 
+  - Accès [**long**]{.blue2} et [**difficile**]{.blue2} aux données
+  - Nouvelle [**architecture informatique**]{.blue2} indispensable
+  - [**Automatisation**]{.blue2} des processus statistiques nécessaire (la classification, l’identification des relances, le remplacement des produits)
 
 <!-- Voir JMS lino http://jms-insee.fr/jms2022s28_2/ -->
 
@@ -65,25 +65,31 @@
 
 ## Contexte
 
-- Objectif identique : améliorer l'IPC
+- [**Objectif identique**]{.orange} : améliorer l'IPC
 - Les données de caisse ne suffisent pas :
-  - Pas une solution pour prix des services
-  - Produits sans code-barre
-- Webscrapping permet de collecter de nouvelles données de prix
+  - Pas une solution pour [**prix des services**]{.blue2}
+  - Produits [**sans code-barre**]{.blue2}
+
+::: {.fa-ul}
+
+<li><i class="fa-li fa fa-arrow-right"></i>[**Webscrapping**]{.orange} permet de collecter des données de prix supplémentaires</li>
+
+:::
+
 
 ## Un exemple : les prix dans le domaine de l'hotellerie
 
 - Etude réalisée par [Adrien  Montbroussous]{.blue2}, [Camille Freppel]{.blue2} et [Ombéline Guillon]{.blue2}
 - Papier et présentation détaillée accessible [ici](https://www.ottawagroup.org/Ottawa/ottawagroup.nsf/4a256353001af3ed4b2562bb00121564/90eefd961765454eca25886a00042203/$FILE/Web%20scraping%20of%20booking.com_Paper.pdf) et [ici](http://www.jms-insee.fr/2022/S14_1_PPT_MONTBROUSSOUS_JMS2022.pdf)
-- [Objectif]{.orange} : améliorer l'indice des prix dans le secteur de l'hotellerie
+- [**Objectif**]{.orange} : améliorer l'indice des prix dans le secteur de l'[**hotellerie**]{.blue2}
 - Code source pour le webscrapping des prix disponible en [open-source](https://git.lab.sspcloud.fr/methodo-ipc/webscraping-hotel)
 
 ## Un exemple : les prix dans le domaine de l'hotellerie
 
 - Le poste location de chambres : [$0,8 %$ **de la consommation**]{.orange} du panier de l’IPC en 2021
-- Les prix sont collectés sur le terrain par des enquêteurs :
-  - Du lundi au vendredi, une fois par mois [pour le jour même]{.blue2}
-  - [Pour une nuitée]{.blue2} pour 2 personnes avec 2 petits-déjeuners
+- Prix collectés sur le terrain par des enquêteurs :
+  - Du lundi au vendredi, une fois par mois [pour le jour même]{**.blue2**}
+  - [**Pour une nuitée**]{.blue2} pour 2 personnes avec 2 petits-déjeuners
 
 ## Un exemple : les prix dans le domaine de l'hôtellerie
 
@@ -93,20 +99,21 @@
   - Certaines [**zones touristiques**]{.blue2} ne sont pas bien représentées
   - Aucun prix pour des nuitées le [**samedi**]{.blue2} ou le [**dimanche**]{.blue2} soir ne sont collectés.
 
-- Webscrapping de [Booking](https://www.booking.com/) permet de contrecarrer ces problématiques
+{{< fa thumbs-up >}}  Webscrapping de [Booking](https://www.booking.com/) permet de contrecarrer ces problématiques
+
 
 ## D'autres expérimentations
 
-- Indice des prix des articles électroniques : webscrapping de [Boulanger]{.blue2} et [rue du commerce]{.blue2}
+- Indice des prix des[**articles électroniques**]{.orange} : webscrapping de [Boulanger](https://www.boulanger.com/) et [rue du commerce](https://www.rueducommerce.fr)
   - Code [open-source](https://git.lab.sspcloud.fr/methodo-ipc/webscraping-biens-electroniques)
-- Indice des prix du transport en train : webscrapping de la [SNCF]{.blue2}
+- Indice des prix du [**transport en train**]{.orange} : webscrapping de la [SNCF]{.blue2}
     - Pris en compte dans l'indice de l'IPC depuis 2020
 
 ## Quelques limites au webscrapping
 
-- [**Dépendance**] au site internet
-    - Des [**interruptions de collecte**] dûes à des changements des sites web
-    - [**Maintenance**] des codes coûteux
+- [**Dépendance**]{.orange} au site internet
+    - Des [**interruptions de collecte**]{.blue2} dûes à des changements des sites web
+    - [**Maintenance**]{.blue2} des codes coûteux
 - Fondement juridique important :
   - Voir [slides](https://inseefrlab.github.io/formation-bceao/slides/intro-big-data) du jour 4
 
@@ -114,37 +121,35 @@
 
 ## Contexte
 
-- [**Objectif double**]: [**améliorer**] et [**anticiper**] la première estimation du PIB
-- Estimation publiée [**1 mois**] après la fin d'un trimestre
-- Multiplicité de sources de données aux dates de [**publications disparates**] :
-  - Estimation en continue
+- [**Objectif double**]{.orange}: [**améliorer**]{.blue2} et [**anticiper**]{.blue2} la première estimation du PIB
+- Estimation publiée [**1 mois**]{.orange} après la fin d'un trimestre
+- Multiplicité de sources de données aux dates de [**publications disparates**]{.orange} :
+  - Estimation en continu
   - Nouveaux outils de prévision
 
 ## Une diversité de sources de données à haute fréquence
 
-- Enquêtes (qualitatif) et indices (quantitatif) comme principaux indicateurs
+- [**Enquêtes**]{.orange} (qualitatif) et [**indices**]{.orange} (quantitatif) comme principaux indicateurs
 - Délais de publication différents (entre 25 et 90 jours) :
-  - $\approx 1$ nouvelle publication tous les 3 jours
+  - $\approx 1$ nouvelle publication [**tous les 3 jours**]{.blue2}
 - Données produites par l'Insee, la Banque de France, l'OCDE, Markit ou des SSM
-- Données *Bid Data* se sont avérées peu efficaces (articles de presse, recherches sur
+- Données *Big Data* se sont avérées [**peu efficaces**]{.orange} (articles de presse, recherches sur
 les moteurs de recherche, données des réseaux sociaux)
 
 ## De nouveaux outils indispensables
 
-- Problèmes méthodologiques : 
-  - Aggrégation de données de fréquences et dates de publication différentes
-  - Nombre de variables >> Nombre d'observations
-- Comparaison de méthodes macroéconomiques traditionnelles (ARIMA, modèles à facteurs dynamiques) et méthodes d'apprentissage automatique (Lasso, forêts aléatoires) 
+- [**Problèmes méthodologiques**]{.orange} : 
+  - Aggrégation de données de [**fréquences**]{.blue2} et [**dates**]{.blue2} de publication différentes
+  - Nombre de variables $\gg$ Nombre d'observations
+- Comparaison de méthodes [**macroéconomiques traditionnelles**]{.orange} (ARIMA, modèles à facteurs dynamiques) et [**méthodes d'apprentissage automatique**]{.orange} (Lasso, forêts aléatoires) 
 
 ## Pour quels résultats ?
 
 ![](img/rmsfe_pib.png){fig-align="center"}
 
-
-- Prévisions similaires mais volatilité des modèles diffèrent (Lasso et forêts aléatoires les moins volatiles)
-- Les erreurs de prévisions diminuent au courant d'un trimestre
-- Données les plus volatiles utiles qu'en présence de choc majeur (Covid, guerre Ukraine)
-- Pas encore de mise en production
+- Prévisions proches mais [**volatilité des modèles diffèrent**]{.orange}
+- Les erreurs de prévisions [**diminuent**]{.orange} au cours d'un trimestre
+- Données les plus volatiles utiles qu'en présence de [**choc majeur**]{.orange} (Covid, guerre Ukraine)
 
 <!-- https://www.insee.fr/fr/statistiques/fichier/4268739/122019_dossier1.pdf -->
 
@@ -156,25 +161,25 @@ les moteurs de recherche, données des réseaux sociaux)
 
 ## Contexte
 
-- Epidémie de coronavirus et [**confinement généralisé**]
-- [**Mouvements de population**] importants au sein du territoire
-- Objectif : [**estimer la répartition de la population**] pour organiser la réponse sanitaire et sociale
+- Epidémie de coronavirus et [**confinement généralisé**]{.orange}
+- [**Mouvements de population**]{.orange} importants au sein du territoire
+- [**Objectif**]{.orange} : [**estimer la répartition de la population**]{.blue2} pour organiser la réponse sanitaire et sociale
 
 ## Pourquoi estimer la répartition de la population ?
 
-1. Répondre au besoin des acteurs publics locaux 
-  - avis du Cnis sur les statistiques de population présente et non plus résidente)
-2. Un champ de recherche prometteur
-  - utilité pour la satistique publique reconnu par le SSE
-3. Nouveaux partenariats créés
-  - Orange, ANR, Eurostat, l’université Gustave Eiffel (Ifsttar), l’UMR Géographie-Cités du CNRS...
-4. Le contexte d'urgence
-  - production de statistiques très rapide (8 avril pour un confinement le 17 mars)
+1. Répondre au [**besoin des acteurs publics**]{.orange} locaux :
+  avis du Cnis sur les statistiques de population présente et non plus résidente)
+2. Un [**champ de recherche prometteur**]{.orange} :
+  utilité pour la satistique publique reconnu par le SSE
+3. [**Nouveaux partenariats**]{.orange} créés :
+  Orange, ANR, Eurostat, l’université Gustave Eiffel (Ifsttar), l’UMR Géographie-Cités du CNRS...
+4. Le contexte d'[**urgence**]{.orange} :
+  production de statistiques très rapide (8 avril pour un confinement le 17 mars)
 
 ## Les données utilisées
 
-- Données fournits par un unique opérateur : Orange
-- Comptages de présence dans chaque département croisés avec le département de résidence
+- Données fournits par un [**unique opérateur**]{.orange} : [Orange](https://www.orange.fr)
+- [**Comptages de présence**]{.orange} dans chaque département croisés avec le département de résidence
 - Localisation à partir des antennes auxquelles un mobile se connecte
 
 ::: {.callout-important}
@@ -188,7 +193,7 @@ Les données utilisées par l’Insee ne sont ni des données GPS ni des donnée
 ## Confidentialité garantie
 
 - Aucune information personnelles présentent dans les données
-- Méthodologie de l'opérateur connue et validé par l'Insee :
+- Méthodologie de l'opérateur connue et validée par l'Insee :
   - Echanges confidentiels et transparents
   - L'Insee s'assure de la validité du secret statistique
 
@@ -197,13 +202,14 @@ Les données utilisées par l’Insee ne sont ni des données GPS ni des donnée
 
 Plusieurs caps identifiés :
 
-1. Pas dépendre d'un seul opérateur : biais statistique ?
-2. Cadre européen sur l'exploitation des données mobiles : 
-  - la qualité des statistiques publiées
-  - respect de la vie privée des détenteurs de mobiles
-3. Approfondir la méthodologie :
+1. [**Ne plus dépendre d'un seul opérateur**]{.orange} : biais statistique ?
+2. [**Cadre européen**]{.orange} sur l'exploitation des données mobiles : 
+  a. la [**qualité**]{.blue2} des statistiques publiées
+  b. [**respect de la vie privée**]{.blue2} des détenteurs de mobiles
+3. [**Approfondir la méthodologie**]{.orange} :
   - Partenariat avec le projet Mobitic
-4. Production de nouvelles statistiques (déplacements domicile-travail, accroissement du télétravail...)
+4. Production de [**nouvelles statistiques**]{.orange} (déplacements domicile-travail, accroissement du télétravail...)
+
 ::: {.callout-note}
 D'autres études ont été menées à l'Insee utilisant les données de téléphonie mobile, pour analyser la ségrégation urbaine notamment (voir [Galiana et al.](http://jms-insee.fr/wp-content/uploads/S25_2_ACTEv2_GALIANA_JMS2018.pdf)).
 :::
@@ -213,24 +219,24 @@ D'autres études ont été menées à l'Insee utilisant les données de téléph
 
 # Autres sources émergentes étudiées à l'Insee
 
-## Améliorer le recensement à l'aide de données satellites
+## Améliorer le recensement à l'aide de images satellites
 
-- Utilisation de données satellites (Pleiades, Sentinel)
-- Détecter les apparitions/disparistions d'habitations
-- Méthodes de [**deep-learning**] :
+- Utilisation d'[**images satellites**]{.orange} (Pleiades, Sentinel)
+- Détecter les [**apparitions/disparistions d'habitations**]{.orange}
+- Méthodes de [**deep-learning**]{.orange} :
   - Segmentation d'image
   - Détection de changements
   - Détection d'objets
 
 ## Données carte bancaire
 
-- Données Carte banciare CB recouvre 82% des opérations
-- Données agrégées par jour, type de paiement ou département
+- Données Carte bancaire CB recouvre[**82% des opérations**]{.orange}
+- [**Données agrégées**]{.orange} par jour, type de paiement ou département
 - Plusieurs exploitations réalisées : 
-  - conjoncture agrégée (consommation des ménages)
-  - conjoncture désagrégée (consommation par secteurs)
-  - comportements des consommateurs liés à des chocs (confinement)
-  - production statistique (réduction de la volatilité des estimations)
+  - [**conjoncture agrégée**]{.blue2} (consommation des ménages)
+  - [**conjoncture désagrégée**]{.blue2} (consommation par secteurs)
+  - [**comportements des consommateurs**]{.blue2} liés à des chocs (confinement)
+  - [**production statistique**]{.blue2} (réduction de la volatilité des estimations)
 
 <!-- http://jms-insee.fr/jms2022s04_3/ -->
 
@@ -242,9 +248,8 @@ D'autres études ont été menées à l'Insee utilisant les données de téléph
 
 ## Indice de prix des loyers grâce aux site d'annonces
 
-- Construction indices des loyers à partir des données de SeLoger
+- Construction [**indices des loyers**]{.orange} à partir des données de SeLoger
 - Partenariat échanges des données / apport méthodologique
-- Objectif : valorisation grâce à un outil visuel interactif
-
+- [**Objectif**]{.orange} : valorisation grâce à un outil visuel interactif
 
 <!-- https://www.cnis.fr/wp-content/uploads/2018/05/CR_2018_Cnis_RENCONTRE_Nouvelles_sources.pdf -->
