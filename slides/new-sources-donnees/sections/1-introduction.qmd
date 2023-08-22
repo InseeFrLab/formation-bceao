@@ -27,7 +27,7 @@
 ## Le Big Data au service de la Statistique Publique
 
 
-- [**Efficience économique**]{.orange} : Accès plus rapide à la données, réduction du coût des enquêtes
+- [**Efficience économique**]{.orange} : Accès plus rapide à la données, réduction du coût des enquêtes...
 - [**Qualité statistique**]{.orange} : Données plus localisées, plus précises sur des sous-population, plus fréquentes...
 - [**Méthodologie statistique**]{.orange} : Applications de nouvelles méthodes statistiques performantes sur des données massives (ML, deeplearning)... 
 - [**Exhaustivité**]{.orange} : Données pouvant compléter des déclarations d'enquêtes, créer de nouveaux indicateurs...
@@ -35,10 +35,10 @@
 ## Des données très différentes des statistiques publiques usuelles
 
 
-- [**Processus de génération**]{.orange} des données n'est pas contrôlé
-- Problème de [**représentativité**]{.orange} des différentes sous population dans les données
+- [**Processus de génération**]{.orange} des données non contrôlé
+- Problème de [**représentativité**]{.orange} des différentes sous population
 - Formats généralement [**complexes**]{.orange} et souvent [**changeants**]{.orange} ou non pérennes
-- [**Pertinence**]{.orange} et [**complétude**]{.orange} des données parfois douteuse
+- [**Pertinence**]{.orange} et [**complétude**]{.orange} des données parfois douteuses
 
 ::: {.callout-important}
 ## Différence centrale
@@ -47,6 +47,6 @@ Les données massives ne sont ni collectées ni conceptualisées à des fins de 
 
 ## Innovations nécessaires pour traiter ces données
 
-- [**Techniques**]{.orange} : nouveaux langages de datascience, nouvelles infrastructures informatiques 
+- [**Techniques**]{.orange} : nouveaux langages de programmation, nouvelles infrastructures informatiques 
 - [**Méthodologiques**]{.orange} : économétrie en grande dimension, analyse de données textuelles, analyse d'images
-- [**Organisationnelles**]{.orange} : Partenariats avec de nouveaux acteurs privés ou publics pour le partage de données
+- [**Organisationnelles**]{.orange} : partenariats avec de nouveaux acteurs privés ou publics pour le partage de données
