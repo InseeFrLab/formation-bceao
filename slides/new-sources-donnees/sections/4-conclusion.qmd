@@ -1,21 +1,14 @@
-## Conclusion
+## Le Big Data à l'Insee
 
-Le terme de big data recouvre un ensemble de sources très disparates
-Le domaine des prix est celui où elles apparaissent les plus prometteuses.
-Il s’agit d’un domaine où elles se présentent sous une forme relativement structurée,
-assez similaire à celles des données administratives que la statistique publique a l’habitude de
-manipuler, et l’objet de la mesure est conceptuellement simple.
+- Le terme de [**Big Data**]{.orange} recouvre un ensemble de sources très disparates
+- Le [**secteur des prix**]{.orange} est apparu le plus prometteur pour l'Insee :
+    - Données relativement [**structurées**]{.blue2} {{< fa arrow-right >}} rappellent les données traditionnelles
+- A l'Insee, choix de la [**complémentarité**]{.orange} plutôt que de la substituabilité
+- Les données quasi exhaustives ouvrent la voie à des statistiques locales ou spécifiques {{< fa arrow-right >}} plusieurs travaux expérimentaux en cours
 
-Pour les autres choses : 
-On est au plus dans une logique de complémentarité avec la production existante, que l’objectif soit d’aider à en
-raccourcir les délais de publication, ou d’alléger la charge de réponse des unités enquêtées.
+## Big Data et secret statistique
 
-l’accès à des données quasi exhaustives permet d’envisager la production de statistiques très localisées ou centrées sur des catégories de population très spécifiques
-Mais deux problèmes apparaissent alors. D’une part, la question de la protection de
-la vie privée et du respect du secret des affaires.
-L’accès à ces données doit pouvoir s’inscrire dans un cadre juridique clair
-et durable.
-Dans le
-cas français, c’est la loi pour la République numérique qui a instauré le cadre juridique
-nécessaire à cette garantie.
-Ce qui remplace enquete on a le droit de demander
+- La [**vie privée**] et le [**secret des affaires**] nécessitent une attention particulière
+- L'accès aux données doit être encadré par un [**cadre légal**] clair et durable
+- En France, la [**loi pour la République numérique**] offre ce cadre juridique
+{{< fa arrow-right >}} Les données privées susceptibles de se substituer aux données d'enquêtes peuvent être réquisitionnées par l'Insee

@@ -4,10 +4,10 @@
 
 ## Contexte
 
-- L'IPC est calculé à partir de 200 000 [**relevés mensuels**]{.orange} dans des points de vente
+- L'IPC est calculé à partir de $200 000$ [**relevés mensuels**]{.orange} dans des points de vente
 - Complété par $+190 000$ [**prix mensuels**]{.orange} provenant de sources administratives ou webscrapping
 - Depuis janvier 2020 une nouvelle sources :
-  - Les [**données de caisse**]{.orange} :  $\approx 1,7$ milliards d'enregistrements par mois 
+  - Les [**données de caisse**]{.blue2} :  $\approx 1,7$ milliards d'enregistrements par mois 
 
 ## Une opportunité pour le calcul de statistiques de prix
 
@@ -22,6 +22,17 @@
 - Collectée [**en continu**]{.orange} et centralisées selon un [**pas journalier**]{.orange}
 - [**Quantités**]{.orange} vendues et [**prix**]{.orange} du produit pour chaque code barre enregistré
 
+
+:::{.table-responsive}
+
+<style>
+
+table {
+    font-size: 50%; 
+}
+
+</style>
+
 | ID Point de vente | Date       | Heure   | Produit                 | EAN             | Prix unitaire (€) | Quantité | Total (€) |
 |-------------------|------------|---------|-------------------------|-----------------|-------------------|----------|-----------|
 | 123               | 2023-08-01 | 10:15   | Pommes                  | 1234567890123  | 1.50              | 3        | 4.50      |
@@ -34,6 +45,8 @@
 | 345               | 2023-08-03 | 14:20   | Soda cola (1.5L)        | 8901234567890  | 2.00              | 3        | 6.00      |
 | 456               | 2023-08-03 | 16:45   | Pâtes fusilli           | 9012345678901  | 0.90              | 4        | 3.60      |
 
+:::
+
 
 ## Des statistiques plus précises et plus détaillées
 
@@ -41,7 +54,7 @@
 - Production d'indices sur des [**segments de consommation**]{.orange} très spécifique
 - Echantillons sur des [**espaces géographiques**]{.orange} très fins : vers des indices régionaux
 - Identification les [**effets de substitution**]{.orange}
-- Production d'indices de prix plus proche du [**ressenti des ménages**]{.orange}
+- Production d'indices de prix plus proches du [**ressenti des ménages**]{.orange}
 - Une [**réduction des coûts**]{.orange} importante pour l'Insee !
 
 ## Un long chemin pour accéder aux données de caisse
@@ -77,18 +90,18 @@
 :::
 
 
-## Un exemple : les prix dans le domaine de l'hotellerie
+## Un exemple : les prix dans le domaine de l'hôtellerie
 
 - Etude réalisée par [Adrien  Montbroussous]{.blue2}, [Camille Freppel]{.blue2} et [Ombéline Guillon]{.blue2}
-- Papier et présentation détaillée accessible [ici](https://www.ottawagroup.org/Ottawa/ottawagroup.nsf/4a256353001af3ed4b2562bb00121564/90eefd961765454eca25886a00042203/$FILE/Web%20scraping%20of%20booking.com_Paper.pdf) et [ici](http://www.jms-insee.fr/2022/S14_1_PPT_MONTBROUSSOUS_JMS2022.pdf)
-- [**Objectif**]{.orange} : améliorer l'indice des prix dans le secteur de l'[**hotellerie**]{.blue2}
+- Papier et présentation détaillée accessibles [ici](https://www.ottawagroup.org/Ottawa/ottawagroup.nsf/4a256353001af3ed4b2562bb00121564/90eefd961765454eca25886a00042203/$FILE/Web%20scraping%20of%20booking.com_Paper.pdf) et [ici](http://www.jms-insee.fr/2022/S14_1_PPT_MONTBROUSSOUS_JMS2022.pdf)
+- [**Objectif**]{.orange} : améliorer l'indice des prix dans le secteur de l'[**hôtellerie**]{.blue2}
 - Code source pour le webscrapping des prix disponible en [open-source](https://git.lab.sspcloud.fr/methodo-ipc/webscraping-hotel)
 
-## Un exemple : les prix dans le domaine de l'hotellerie
+## Un exemple : les prix dans le domaine de l'hôtellerie
 
-- Le poste location de chambres : [$0,8 %$ **de la consommation**]{.orange} du panier de l’IPC en 2021
+- Le poste location de chambres : [$0,8 \%$ **de la consommation**]{.orange} du panier de l’IPC en 2021
 - Prix collectés sur le terrain par des enquêteurs :
-  - Du lundi au vendredi, une fois par mois [pour le jour même]{**.blue2**}
+  - Du lundi au vendredi, une fois par mois [**pour le jour même**]{.blue2}
   - [**Pour une nuitée**]{.blue2} pour 2 personnes avec 2 petits-déjeuners
 
 ## Un exemple : les prix dans le domaine de l'hôtellerie
@@ -97,16 +110,16 @@
   - Pas de prise en compte des [**réservations en avance**]{.blue2}
   - Pas de prise en compte de la hausse de la consommation sur [**internet**]{.blue2}
   - Certaines [**zones touristiques**]{.blue2} ne sont pas bien représentées
-  - Aucun prix pour des nuitées le [**samedi**]{.blue2} ou le [**dimanche**]{.blue2} soir ne sont collectés.
+  - Aucun prix collecté pour les nuitées du [**samedi**]{.blue2} et du [**dimanche**]{.blue2} soir.
 
 {{< fa thumbs-up >}}  Webscrapping de [Booking](https://www.booking.com/) permet de contrecarrer ces problématiques
 
 
 ## D'autres expérimentations
 
-- Indice des prix des[**articles électroniques**]{.orange} : webscrapping de [Boulanger](https://www.boulanger.com/) et [rue du commerce](https://www.rueducommerce.fr)
+- Indice des prix des [**articles électroniques**]{.orange} : webscrapping de [Boulanger](https://www.boulanger.com/) et [rue du commerce](https://www.rueducommerce.fr)
   - Code [open-source](https://git.lab.sspcloud.fr/methodo-ipc/webscraping-biens-electroniques)
-- Indice des prix du [**transport en train**]{.orange} : webscrapping de la [SNCF]{.blue2}
+- Indice des prix du [**transport en train**]{.orange} : webscrapping de la [SNCF](https://www.sncf-connect.com)
     - Pris en compte dans l'indice de l'IPC depuis 2020
 
 ## Quelques limites au webscrapping
@@ -114,7 +127,7 @@
 - [**Dépendance**]{.orange} au site internet
     - Des [**interruptions de collecte**]{.blue2} dûes à des changements des sites web
     - [**Maintenance**]{.blue2} des codes coûteux
-- Fondement juridique important :
+- Fondements juridiques importants :
   - Voir [slides](https://inseefrlab.github.io/formation-bceao/slides/intro-big-data) du jour 4
 
 # C. Prévoir en continu la croissance française 
@@ -141,13 +154,13 @@ les moteurs de recherche, données des réseaux sociaux)
 - [**Problèmes méthodologiques**]{.orange} : 
   - Aggrégation de données de [**fréquences**]{.blue2} et [**dates**]{.blue2} de publication différentes
   - Nombre de variables $\gg$ Nombre d'observations
-- Comparaison de méthodes [**macroéconomiques traditionnelles**]{.orange} (ARIMA, modèles à facteurs dynamiques) et [**méthodes d'apprentissage automatique**]{.orange} (Lasso, forêts aléatoires) 
+- Comparaison de méthodes [**macroéconomiques traditionnelles**]{.orange} (ARIMA, modèles à facteurs dynamiques) aux [**méthodes d'apprentissage automatique**]{.orange} (Lasso, forêts aléatoires) 
 
 ## Pour quels résultats ?
 
 ![](img/rmsfe_pib.png){fig-align="center"}
 
-- Prévisions proches mais [**volatilité des modèles diffèrent**]{.orange}
+- Prévisions proches mais [**volatilités des modèles différentes**]{.orange}
 - Les erreurs de prévisions [**diminuent**]{.orange} au cours d'un trimestre
 - Données les plus volatiles utiles qu'en présence de [**choc majeur**]{.orange} (Covid, guerre Ukraine)
 
@@ -168,9 +181,9 @@ les moteurs de recherche, données des réseaux sociaux)
 ## Pourquoi estimer la répartition de la population ?
 
 1. Répondre au [**besoin des acteurs publics**]{.orange} locaux :
-  avis du Cnis sur les statistiques de population présente et non plus résidente)
+  avis du Cnis sur les statistiques de population [**présente**]{.blue2} et non plus [**résidente**]{.blue2}
 2. Un [**champ de recherche prometteur**]{.orange} :
-  utilité pour la satistique publique reconnu par le SSE
+  utilité pour la statistique publique reconnue par le SSE
 3. [**Nouveaux partenariats**]{.orange} créés :
   Orange, ANR, Eurostat, l’université Gustave Eiffel (Ifsttar), l’UMR Géographie-Cités du CNRS...
 4. Le contexte d'[**urgence**]{.orange} :
@@ -178,7 +191,7 @@ les moteurs de recherche, données des réseaux sociaux)
 
 ## Les données utilisées
 
-- Données fournits par un [**unique opérateur**]{.orange} : [Orange](https://www.orange.fr)
+- Données fournies par un [**unique opérateur**]{.orange} : [Orange](https://www.orange.fr)
 - [**Comptages de présence**]{.orange} dans chaque département croisés avec le département de résidence
 - Localisation à partir des antennes auxquelles un mobile se connecte
 
@@ -192,22 +205,21 @@ Les données utilisées par l’Insee ne sont ni des données GPS ni des donnée
 
 ## Confidentialité garantie
 
-- Aucune information personnelles présentent dans les données
-- Méthodologie de l'opérateur connue et validée par l'Insee :
-  - Echanges confidentiels et transparents
-  - L'Insee s'assure de la validité du secret statistique
+- Aucune [**information personnelle**]{.orange} présentent dans les données
+- [**Méthodologie**]{.orange} de l'opérateur connue et validée par l'Insee :
+  - Echanges [**confidentiels**]{.blue2} et [**transparents**]{.blue2}
+  - L'Insee s'assure de la validité du [**secret statistique**]{.blue2}
 
 
-## Et maintenant ?
+## Et maintenant ? {.scrollable}
 
 Plusieurs caps identifiés :
 
-1. [**Ne plus dépendre d'un seul opérateur**]{.orange} : biais statistique ?
-2. [**Cadre européen**]{.orange} sur l'exploitation des données mobiles : 
-  a. la [**qualité**]{.blue2} des statistiques publiées
-  b. [**respect de la vie privée**]{.blue2} des détenteurs de mobiles
-3. [**Approfondir la méthodologie**]{.orange} :
-  - Partenariat avec le projet Mobitic
+1. [**Indépendance vis-à-vis des opérateurs**]{.orange} : biais statistique ?
+2. [**Cadre européen**]{.orange} sur l'exploitation des données mobiles :
+   a. la [**qualité**]{.blue2} des statistiques publiées
+   b. [**respect de la vie privée**]{.blue2} des détenteurs de mobiles
+3. [**Approfondir la méthodologie**]{.orange} : partenariat avec le projet Mobitic
 4. Production de [**nouvelles statistiques**]{.orange} (déplacements domicile-travail, accroissement du télétravail...)
 
 ::: {.callout-note}
@@ -222,7 +234,7 @@ D'autres études ont été menées à l'Insee utilisant les données de téléph
 ## Améliorer le recensement à l'aide de images satellites
 
 - Utilisation d'[**images satellites**]{.orange} (Pleiades, Sentinel)
-- Détecter les [**apparitions/disparistions d'habitations**]{.orange}
+- Détecter les [**apparitions/disparitions d'habitations**]{.orange}
 - Méthodes de [**deep-learning**]{.orange} :
   - Segmentation d'image
   - Détection de changements
@@ -230,7 +242,7 @@ D'autres études ont été menées à l'Insee utilisant les données de téléph
 
 ## Données carte bancaire
 
-- Données Carte bancaire CB recouvre[**82% des opérations**]{.orange}
+- Données [Carte bancaire CB](https://www.cartes-bancaires.com/) recouvrent [**82% des opérations**]{.orange}
 - [**Données agrégées**]{.orange} par jour, type de paiement ou département
 - Plusieurs exploitations réalisées : 
   - [**conjoncture agrégée**]{.blue2} (consommation des ménages)

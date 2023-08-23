@@ -36,11 +36,11 @@
 - [**Objectifs principaux**]{.orange} :
   - [**Simplifier**]{.blue2} les formalités déclaratives : une seule déclaration
   - [**Fiabiliser**]{.blue2} et sécuriser les déclarations : dématérialisation et obligation mensuelle
-- Source de données riches 
+- Source de données extrêmement [**riche**]{.orange}
 
 ## La Déclaration Sociale Nominative (DSN)
 
-![](https://blog.insee.fr/wp-content/uploads/2023/05/blogInsee_2023_05-quels_types_de_sources_l_insee_utilise_t_il-figure2.png){fig-align="center"}
+![Informations contenues dans la DSN](https://blog.insee.fr/wp-content/uploads/2023/05/blogInsee_2023_05-quels_types_de_sources_l_insee_utilise_t_il-figure2.png){fig-align="center"}
 
 
 ## Les sources administratives 
@@ -49,16 +49,16 @@
     - [**Coût**]{.blue2} de collecte plus faible
     - [**Charge allégée**]{.blue2} pour les personnes ou entreprises enquêtées
     - [**Biais de non-réponse ammoindri**]{.blue2} (collecte souvent automatique)
-    - [**Fréquence**]{.blue2} de collecte plus rapide et donc volume plus élevé (e.g SIDEP pendant le Covid)
+    - [**Fréquence**]{.blue2} de collecte plus rapide et donc volume plus élevé (e.g. SIDEP pendant le Covid)
     - Données plus [**fines**]{.blue2}
-    - [**Complémentaire**]{.blue2} au données d'enquêtes
+    - [**Complémentaires**]{.blue2} aux données d'enquêtes
 
 ## Les sources administratives 
 
 - [**Désavantages**]{.orange} :
     - Contrôle réduit sur l'[**échantillonage**]{.blue2} (problèmes de représentativité et biais de sélection)
     - Contrôle réduit sur la [**collection des données**]{.blue2} (incohérence et erreurs)
-    - [**Confidentialité**]{.blue2} pouvant réduire le partage des données : conventions nécessaires
+    - [**Confidentialité**]{.blue2} pouvant réduire le partage des données {{< fa arrow-right >}} conventions nécessaires
     - Sources potentiellement [**moins pérennes**]{.blue2} dans le temps (modifications législatives, modifications de consignes)
 
 ## Les sources administratives : Fondement juridique
@@ -71,17 +71,17 @@
 ## Les données émergentes
 - Ensemble de données [**non traditionnelles**]{.orange} à la statistique publique
 - [**Complètent**]{.orange}, [**enrichissent**]{.orange} ou [**renouvèlent**]{.orange} les statistiques publiques
-- De + en + de [**données privées**]{.orange} : l'État ne détient plus le [**monopole**]{.orange} de la production de la données
+- De + en + de [**données privées**]{.orange} {{< fa arrow-right >}} l'État ne détient plus le [**monopole**]{.orange} de la production de la données
 
 ## Les données émergentes
 
 - [**Exemples**]{.orange} : 
-- Données [**transactionnelles**]{.blue2} ou [**comportementales**]{.blue2} : transactions CB, téléphonie mobile, données de géolocalisation...
-- Données issues d'internet ([**webscrapping**]{.blue2}) : offres d'emploi, google trends...
-- [**Images satellites**]{.blue2}
+    - Données [**transactionnelles**]{.blue2} ou [**comportementales**]{.blue2} : transactions CB, téléphonie mobile, données de géolocalisation...
+    - Données issues d'internet ([**webscrapping**]{.blue2}) : offres d'emploi, google trends...
+    - [**Images satellites**]{.blue2}
 
 ::: {.callout-note}
-Données émergentes &rarr; plus souvent les caractéristiques Big Data
+Données émergentes {{< fa arrow-right >}} plus souvent les caractéristiques Big Data
 :::
 
 ## Les données émergentes à l'Insee
@@ -89,7 +89,7 @@ Données émergentes &rarr; plus souvent les caractéristiques Big Data
 - [**Une seule**]{.orange} statistique est régulièrement produite grâce à des données privées : l'IPC
 - 3 sources de données utilisées pour produire l'IPC :
   - Les [**enquêtes**]{.blue2}
-  - Les [**relevés de prix dématérialisés**]{.blue2} (webscrapping, base de données d'institutions...)
+  - Les [**relevés de prix dématérialisés**]{.blue2} (webscrapping, bases de données d'institutions...)
   - Les [**données de caisse**]{.blue2}
 
 ## Les données émergentes
@@ -97,7 +97,7 @@ Données émergentes &rarr; plus souvent les caractéristiques Big Data
 - [**Avantages**]{.orange} : 
     - [**Rapidité**]{.blue2} : temps réel ou quasi temps réel
     - [**Volume**]{.blue2} : souvent données massives
-    - [**Complémentarité**]{.blue2} : appui des données traditionelles
+    - [**Complémentarité**]{.blue2} : appui aux données traditionelles
 - [**Désavantages**]{.orange} :
     - [**Aucun contrôle**]{.blue2} sur l'échantillonage et la collection des données
     - [**Accessibilité**]{.blue2} limitée ou coûteuse
@@ -107,6 +107,6 @@ Données émergentes &rarr; plus souvent les caractéristiques Big Data
 ## Les sources émergentes : Fondement juridique 
 
 - Recours possible depuis 2016 ([Article 3 bis de la loi du 7 juin 1951](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000033205803)) sous des [**conditions très strictes**]{.orange} :
-  - Consultations et [**étude de faisabilité/opportunité**]{.blue2} préalables à la décision 
-  - [**Confidentialité**]{.blue2} des données assurée
-  - Utilisation des données fixées par [**voie réglementaire**]{.blue2}
+  1. Consultations et [**étude de faisabilité/opportunité**]{.blue2} préalables à la décision 
+  2. [**Confidentialité**]{.blue2} des données assurée
+  3. Utilisation des données fixées par [**voie réglementaire**]{.blue2}
