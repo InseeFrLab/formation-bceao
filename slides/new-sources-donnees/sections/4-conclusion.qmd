@@ -4,11 +4,11 @@
 - Le [**secteur des prix**]{.orange} est apparu le plus prometteur pour l'Insee :
     - Données relativement [**structurées**]{.blue2} {{< fa arrow-right >}} rappellent les données traditionnelles
 - A l'Insee, choix de la [**complémentarité**]{.orange} plutôt que de la substituabilité
-- Les données quasi exhaustives ouvrent la voie à des statistiques locales ou spécifiques {{< fa arrow-right >}} plusieurs travaux expérimentaux en cours
+- Les données quasi exhaustives ouvrent la voie à des [**statistiques locales ou spécifiques**]{.orange} {{< fa arrow-right >}} plusieurs travaux expérimentaux en cours
 
 ## Big Data et secret statistique
 
-- La [**vie privée**] et le [**secret des affaires**] nécessitent une attention particulière
-- L'accès aux données doit être encadré par un [**cadre légal**] clair et durable
-- En France, la [**loi pour la République numérique**] offre ce cadre juridique
-{{< fa arrow-right >}} Les données privées susceptibles de se substituer aux données d'enquêtes peuvent être réquisitionnées par l'Insee
+- La [**vie privée**]{.orange} et le [**secret des affaires**]{.orange} nécessitent une attention particulière
+- L'accès aux données doit être encadré par un [**cadre légal**]{.orange} clair et durable
+- En France, la [**loi pour la République numérique**]{.orange} offre ce cadre juridique
+{{< fa arrow-right >}} les données privées susceptibles de se substituer aux données d'enquêtes peuvent être réquisitionnées par l'Insee

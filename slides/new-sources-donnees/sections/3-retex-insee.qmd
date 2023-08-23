@@ -11,7 +11,7 @@
 
 ## Une opportunité pour le calcul de statistiques de prix
 
-- D'autres INS plus précurseur : Pays-Bas (2002), Norvège (2005), Suisse (2008), Suède (2012), Belgique (2015), Danemark et Islande (2016), Luxembourg et Italie (2018)
+- D'autres INS plus précurseurs : Pays-Bas (2002), Norvège (2005), Suisse (2008), Suède (2012), Belgique (2015), Danemark et Islande (2016), Luxembourg et Italie (2018)
 
 - Entrée dans l'ère du Big Data : prise en compte des [**opportunités**]{.orange} et [**limites**]{.orange}
 

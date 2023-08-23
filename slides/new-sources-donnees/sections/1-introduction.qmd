@@ -1,4 +1,4 @@
-## Big Data, késako ?  {auto-animate=true}
+## Big Data, késako ?
 
 - [**Big Data**]{.orange} : [*"Gestion et analyse d'un volume massif de données, souvent à une échelle bien supérieure à ce que les systèmes traditionnels peuvent traiter efficacement."*]{.blue2}
 
@@ -7,7 +7,7 @@
     - [**Vitesse**]{.blue2} : vitesse à laquelle les données sont générées, collectées et traitées
     - [**Variété**]{.blue2} : le Big Data est généralement caractérisé par une [**diversité de sources**]{.green2} et de [**formats de données**]{.green2}
 
-## Big Data, késako ?  {auto-animate=true}
+## Big Data, késako ?
 
 - [**2 autres V**]{.orange} caractéristiques du Big Data :
     - [**Véracité**]{.blue2} : cela concerne la [**qualité**]{.green2}, la [**fiabilité**]{.green2} et l'[**authenticité**]{.green2} des données
