@@ -1,0 +1,84 @@
+---
+title: "TP : traitement des données volumineuses"
+format: html
+editor: visual
+---
+
+# TP : traitement des données volumineuses
+
+## Limite des fichiers CSV
+
+```{r}
+library(aws.s3)
+library(readr)
+```
+
+```{r}
+aws.s3::get_bucket("projet-formation", region = "", prefix = "diffusion/bceao")
+```
+
+1GB = 10^9 B
+donnees_caisse.csv : 9 GB
+donnees_caisse_sample.csv : 16 KB
+
+```{r}
+df_sample <- s3read_using(
+  FUN = read_csv,
+  object = "diffusion/bceao/donnees_caisse_sample.csv",
+  bucket = "projet-formation",
+  opts = list("region" = "")
+  )
+
+head(df_sample)
+```
+
+```{r}
+#  df_full <- s3read_using(
+#    FUN = read_csv,
+#    object = "diffusion/bceao/donnees_caisse.csv",
+#    bucket = "projet-formation",
+#    opts = list("region" = "")
+#   )
+```
+
+Crash..
+8GB de mémoire pas suffisant pour une table CSV de 5GB
+En général, nécessaire d'avoir au moins 2 fois plus de RAM que la taille de la table à importer
+
+## Parquet
+
+```{r}
+library(arrow)
+```
+
+```{r}
+# aws.s3::s3write_using(
+#   df_full,
+#   FUN = arrow::write_parquet,
+#   object = "diffusion/bceao/donnees_caisse.parquet",
+#   bucket = "projet-formation",
+#   opts = list("region" = "")
+# )
+```
+
+```{r}
+aws.s3::get_bucket("projet-formation", region = "", prefix = "diffusion/bceao")
+```
+
+donnees_caisse.csv : 9 GB
+donnees_caisse.parquet : 3.3 GB
+
+Taille presque divisée par 9 ! Bien plus facile à stocker, mais également bien plus performant à importer ensuite en mémoire.
+
+## Lire un fichier Parquet avec Arrow
+
+### Données peu volumineuses : import en mémoire
+
+### Données volumineuses : 
+
+## DuckDB
+
+
+
+## Spark
+
