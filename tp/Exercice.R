@@ -9,14 +9,6 @@ aws.s3::get_bucket("projet-formation", region = "", prefix = "diffusion/bceao")
 # Importer des données avec Arrow
 ############################################################
 
-df_sample <- s3read_using(
-  FUN = read_csv,
-  object = "diffusion/bceao/donnees_caisse_sample.csv",
-  bucket = "projet-formation",
-  opts = list("region" = "")
-)
-
-
 df_sample2 <- s3read_using(
   FUN = arrow::read_csv_arrow,
   as_data_frame = FALSE,
@@ -38,26 +30,26 @@ df_full <- s3read_using(
 df_full2 <- df_full |> head(5000000) |> compute()
 
 
-############################################################
-# Sauvegarder des données en Parquet sur S3
-############################################################
-
-# Comment écrire un Parquet partitionné sur S3
-minio <- S3FileSystem$create(
-  access_key = Sys.getenv("AWS_ACCESS_KEY_ID"),
-  secret_key = Sys.getenv("AWS_SECRET_ACCESS_KEY"),
-  session_token = Sys.getenv("AWS_SESSION_TOKEN"),
-  scheme = "https",
-  endpoint_override = Sys.getenv("AWS_S3_ENDPOINT")
-)
-
-arrow::write_dataset(
-  df_full2,
-  path = minio$path("oliviermeslin/bceao_parquet/donnees_caisses/"),
-  partitioning = c("code_reg"),
-  hive_style = TRUE,
-  existing_data_behavior = "overwrite"
-)
+# ############################################################
+# # Sauvegarder des données en Parquet sur S3
+# ############################################################
+# 
+# # Comment écrire un Parquet partitionné sur S3
+# minio <- S3FileSystem$create(
+#   access_key = Sys.getenv("AWS_ACCESS_KEY_ID"),
+#   secret_key = Sys.getenv("AWS_SECRET_ACCESS_KEY"),
+#   session_token = Sys.getenv("AWS_SESSION_TOKEN"),
+#   scheme = "https",
+#   endpoint_override = Sys.getenv("AWS_S3_ENDPOINT")
+# )
+# 
+# arrow::write_dataset(
+#   df_full2,
+#   path = minio$path("oliviermeslin/bceao_parquet/donnees_caisses/"),
+#   partitioning = c("code_reg"),
+#   hive_style = TRUE,
+#   existing_data_behavior = "overwrite"
+# )
 
 ############################################################
 # Sauvegarder des données en Parquet en local
