@@ -6,19 +6,24 @@ editor: visual
 
 # TP : traitement des données volumineuses
 
-## Limite des fichiers CSV
+## Stockage Cloud
 
 ```{r}
 library(aws.s3)
+```
+
+## Limite des fichiers CSV
+
+```{r}
 library(readr)
 ```
 
 ```{r}
-aws.s3::get_bucket("projet-formation", region = "", prefix = "diffusion/bceao")
+aws.s3::get_bucket("projet-formation", prefix = "diffusion/bceao", region = "")
 ```
 
-1GB = 10^9 B
-donnees_caisse.csv : 9 GB
+1GB = 10^9 B 
+donnees_caisse.csv : 9 GB 
 donnees_caisse_sample.csv : 16 KB
 
 ```{r}
@@ -41,44 +46,49 @@ head(df_sample)
 #   )
 ```
 
-Crash..
-8GB de mémoire pas suffisant pour une table CSV de 5GB
-En général, nécessaire d'avoir au moins 2 fois plus de RAM que la taille de la table à importer
+Crash.. 8GB de mémoire pas suffisant pour une table CSV de 5GB En général, nécessaire d'avoir au moins 2 fois plus de RAM que la taille de la table à importer
 
-## Parquet
+## Le format Parquet
 
 ```{r}
 library(arrow)
 ```
 
 ```{r}
-# aws.s3::s3write_using(
-#   df_full,
-#   FUN = arrow::write_parquet,
-#   object = "diffusion/bceao/donnees_caisse.parquet",
-#   bucket = "projet-formation",
-#   opts = list("region" = "")
-# )
+bucket <- s3_bucket(bucket = "projet-formation",
+                    access_key = Sys.getenv("AWS_ACCESS_KEY_ID"),
+                    secret_key = Sys.getenv("AWS_SECRET_ACCESS_KEY"),
+                    session_token = Sys.getenv("AWS_SESSION_TOKEN"),
+                    endpoint_override = Sys.getenv("AWS_S3_ENDPOINT")
+                    )
+```
+
+### Ecrire un fichier Parquet
+
+```{r}
+path_out <- bucket$path("diffusion/bceao/donnees_caisse.parquet")
+write_parquet(df_full, parquet_good)
 ```
 
 ```{r}
 aws.s3::get_bucket("projet-formation", region = "", prefix = "diffusion/bceao")
 ```
 
-donnees_caisse.csv : 9 GB
-donnees_caisse.parquet : 3.3 GB
+donnees_caisse.csv : 9 GB donnees_caisse.parquet : 3.3 GB
 
 Taille presque divisée par 9 ! Bien plus facile à stocker, mais également bien plus performant à importer ensuite en mémoire.
 
-## Lire un fichier Parquet avec Arrow
+### Partitionner un fichier Parquet
+
+```{r}
+path_out <- bucket$path("diffusion/bceao/part-test")
+write_dataset(df_full, path_out, format = "parquet", partitioning  = "")
+```
+
+## Lire un fichier Parquet
 
 ### Données peu volumineuses : import en mémoire
 
-### Données volumineuses : 
+### Données volumineuses : requêtes optimisées
 
-## DuckDB
-
-
-
-## Spark
-
+## Le cas des données massives
