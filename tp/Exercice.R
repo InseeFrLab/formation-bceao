@@ -1,70 +1,120 @@
-library(aws.s3)
 library(readr)
 library(dplyr)
 library(arrow)
 
-aws.s3::get_bucket("projet-formation", region = "", prefix = "diffusion/bceao")
+# Installer le package doremifasol
+remotes::install_github("InseeFrLab/doremifasol", build_vignettes = TRUE)
+
+library(doremifasol)
 
 ############################################################
-# Importer des données avec Arrow
+# Télécharger des données brutes
 ############################################################
 
-df_sample2 <- s3read_using(
-  FUN = arrow::read_csv_arrow,
-  as_data_frame = FALSE,
-  object = "diffusion/bceao/donnees_caisse_sample.csv",
-  bucket = "projet-formation",
-  opts = list("region" = "")
+# Créer un dossier temporaire pour accueillir les données brutes
+dir.create("rawdata")
+
+# Télécharger les données du RP (cela peut prendre plusieurs minutes)
+doremifasol::telechargerFichier(
+  donnees = "RP_LOGEMENT",
+  date = "dernier",
+  telDir = "rawdata"
 )
 
-# Toutes les données
-df_full <- s3read_using(
-  FUN = arrow::read_csv_arrow,
-  as_data_frame = FALSE,
-  object = "diffusion/bceao/donnees_caisse.csv",
-  bucket = "projet-formation",
-  opts = list("region" = "")
-)
-
-# Prendre un extrait des données
-df_full2 <- df_full |> head(5000000) |> compute()
-
-
-# ############################################################
-# # Sauvegarder des données en Parquet sur S3
-# ############################################################
-# 
-# # Comment écrire un Parquet partitionné sur S3
-# minio <- S3FileSystem$create(
-#   access_key = Sys.getenv("AWS_ACCESS_KEY_ID"),
-#   secret_key = Sys.getenv("AWS_SECRET_ACCESS_KEY"),
-#   session_token = Sys.getenv("AWS_SESSION_TOKEN"),
-#   scheme = "https",
-#   endpoint_override = Sys.getenv("AWS_S3_ENDPOINT")
-# )
-# 
-# arrow::write_dataset(
-#   df_full2,
-#   path = minio$path("oliviermeslin/bceao_parquet/donnees_caisses/"),
-#   partitioning = c("code_reg"),
-#   hive_style = TRUE,
-#   existing_data_behavior = "overwrite"
-# )
+# Dézipper les données
+unzip("rawdata/RP2017_LOGEMT_csv.zip", exdir = "rawdata/")
 
 ############################################################
-# Sauvegarder des données en Parquet en local
+# Importer des données avec data.table
+############################################################
+
+# Importer avec data.table
+data <- data.table::fread(
+  "rawdata/FD_LOGEMT_2017.csv",
+  sep = ";",
+  colClasses = c(
+    COMMUNE = "character"
+  ),
+  nrows = 1e6
+)
+
+############################################################
+# Sauvegarder des données en Parquet
 ############################################################
 
 # Comment écrire un Parquet en local
 arrow::write_parquet(
-  df_full2,
-  sink = "donnees_caisse.parquet"
+  data,
+  sink = "logements_RP2017.parquet"
 )
 
 # Comment écrire un Parquet partitionné en local
 arrow::write_dataset(
-  df_full2,
-  path = "donnees_caisse/",
+  data,
+  path = "logements_RP2017/",
+  partitioning = c("code_reg"),
+  hive_style = TRUE,
+  existing_data_behavior = "overwrite"
+)
+
+
+############################################################
+# Manipuler des données parquet en mémoire
+############################################################
+
+# Comment importer un fichier Parquet en mémoire
+data <- arrow::read_parquet(
+  file = "logements_RP2017.parquet"
+)
+
+# Apprendre à se servir de select et filter
+extrait_data <- data |> 
+  select(prix, code_reg, variete) |>
+  filter(code_reg %in% c(11, 28, 75))
+
+# Apprendre à faire group_by et summarise  
+resultat <- extrait_data |> 
+  group_by(code_reg, variete) |>
+  summarise(
+    prix_moyen = mean(prix, na.rm = TRUE)
+  )
+
+
+############################################################
+# Manipuler des données parquet en mode lazy
+############################################################
+
+# Se connecter un fichier Parquet partitionné
+data2 <- arrow::open_dataset(
+  source = "donnees_caisse/",
+  partitioning = schema(code_reg = arrow::utf8())
+)
+
+# Afficher les informations sur le fichier partitionné
+data2$schema
+dim(data2)
+names(data2)
+
+# Apprendre à se servir de select et filter
+# Apprendre à faire group_by et summarise
+resultats <- data2 |> 
+  group_by(
+    code_reg, variete
+  ) |>
+  filter(code_reg %in% c(11, 28, 75)) |>
+  summarise(
+    prix_moyen = mean(prix, na.rm = TRUE)
+  ) |> 
+  compute()
+
+
+
+
+
+# Comment écrire un Parquet partitionné en local
+arrow::write_dataset(
+  data,
+  path = "logements_RP2017/",
   partitioning = c("code_reg"),
   hive_style = TRUE,
   existing_data_behavior = "overwrite"
@@ -94,14 +144,19 @@ resultat <- extrait_data |>
 
 
 ############################################################
-# Manipuler des données parquet en méthode lazy
+# Manipuler des données parquet en mode lazy
 ############################################################
 
-# Comment lire un fichier Parquet partitionné
+# Se connecter un fichier Parquet partitionné
 data2 <- arrow::open_dataset(
   source = "donnees_caisse/",
   partitioning = schema(code_reg = arrow::utf8())
 )
+
+# Afficher les informations sur le fichier partitionné
+data2$schema
+dim(data2)
+names(data2)
 
 # Apprendre à se servir de select et filter
 # Apprendre à faire group_by et summarise
@@ -114,5 +169,7 @@ resultats <- data2 |>
     prix_moyen = mean(prix, na.rm = TRUE)
   ) |> 
   compute()
+
+
 
 
