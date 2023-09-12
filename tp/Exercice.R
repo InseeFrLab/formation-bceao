@@ -1,11 +1,17 @@
 library(readr)
 library(dplyr)
 library(arrow)
+library(tictoc)
 
 # Installer le package doremifasol
 remotes::install_github("InseeFrLab/doremifasol", build_vignettes = TRUE)
 
 library(doremifasol)
+
+# Réglages arrow
+arrow:::set_cpu_count(30)
+options(arrow.use_threads = TRUE)
+
 
 ############################################################
 # Télécharger des données brutes
@@ -31,8 +37,13 @@ unzip("rawdata/RP2017_LOGEMT_csv.zip", exdir = "rawdata/")
 # Question: importer le fichier du RP avec data.table. 
 # Conseil: commencer par importer quelques lignes et bien vérifier le type des variables!
 
+##### ATTENTION
+##### ATTENTION J'ai mis trois façons d'importer pour qu'on choisisse la meilleure
+##### ATTENTION
+
 # Importer avec data.table
-input <- data.table::fread(
+tic()
+input1 <- data.table::fread(
   "rawdata/FD_LOGEMT_2017.csv",
   sep = ";",
   colClasses = c(
@@ -40,6 +51,28 @@ input <- data.table::fread(
   ),
   data.table = FALSE
 )
+toc()
+
+# Importer avec readr
+tic()
+input2 <- readr::read_delim(
+  "rawdata/FD_LOGEMT_2017.csv",
+  delim = ";",
+  col_types = cols(COMMUNE = col_character())
+)
+toc()
+
+# Importer avec arrow
+tic()
+input3 <- arrow::read_delim_arrow(
+  "rawdata/FD_LOGEMT_2017.csv",
+  delim = ";",
+  col_types = schema(COMMUNE = arrow::utf8()),
+  as_data_frame = FALSE
+)
+toc()
+
+input <- input3
 
 ############################################################
 # Sauvegarder des données en Parquet
