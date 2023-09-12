@@ -28,31 +28,39 @@ unzip("rawdata/RP2017_LOGEMT_csv.zip", exdir = "rawdata/")
 # Importer des données avec data.table
 ############################################################
 
+# Question: importer le fichier du RP avec data.table. 
+# Conseil: commencer par importer quelques lignes et bien vérifier le type des variables!
+
 # Importer avec data.table
-data <- data.table::fread(
+input <- data.table::fread(
   "rawdata/FD_LOGEMT_2017.csv",
   sep = ";",
   colClasses = c(
     COMMUNE = "character"
   ),
-  nrows = 1e6
+  data.table = FALSE
 )
 
 ############################################################
 # Sauvegarder des données en Parquet
 ############################################################
 
+# Question: écrire les données dans un parquet nommé "logements_RP2017.parquet"
+
 # Comment écrire un Parquet en local
 arrow::write_parquet(
-  data,
+  input,
   sink = "logements_RP2017.parquet"
 )
 
+# Question: écrire les données dans un parquet partitionné par la variable "REGION"
+
 # Comment écrire un Parquet partitionné en local
+dir.create("logements_RP2017")
 arrow::write_dataset(
-  data,
+  input,
   path = "logements_RP2017/",
-  partitioning = c("code_reg"),
+  partitioning = c("REGION"),
   hive_style = TRUE,
   existing_data_behavior = "overwrite"
 )
@@ -61,28 +69,41 @@ arrow::write_dataset(
 ############################################################
 # Manipuler des données parquet en mémoire
 ############################################################
+
+# Question: importer le fichier "logements_RP2017.parquet" sous forme d'un data.frame
 
 # Comment importer un fichier Parquet en mémoire
 data <- arrow::read_parquet(
   file = "logements_RP2017.parquet"
 )
 
-# Apprendre à se servir de select et filter
-extrait_data <- data |> 
-  select(prix, code_reg, variete) |>
-  filter(code_reg %in% c(11, 28, 75))
+# Question: Extraire des données les observations
+# correspondant à la région Auvergne-Rhône-Alpes (REGION == "84")
+# Conserver uniquement les variables suivantes: COMMUNE, TYPL
 
-# Apprendre à faire group_by et summarise  
+extrait_data <- data |> 
+  filter(REGION == "84") |>
+  select(REGION, COMMUNE, TYPL)
+
+# Question: Calculer la part d'habitations de fortune dans chaque commune
+
 resultat <- extrait_data |> 
-  group_by(code_reg, variete) |>
+  group_by(COMMUNE) |>
   summarise(
-    prix_moyen = mean(prix, na.rm = TRUE)
-  )
+    nb_logements_fortune = sum(TYPL == "5"),
+    nb_logements_commune = n()
+  ) |>
+  mutate(
+    part_logements_fortune = nb_logements_fortune / nb_logements_commune
+  ) |>
+  arrange(-part_logements_fortune)
 
 
 ############################################################
 # Manipuler des données parquet en mode lazy
 ############################################################
+
+# Question: Se connecter au fichier Parquet partitionné SANS importer les données en mémoire
 
 # Se connecter un fichier Parquet partitionné
 data2 <- arrow::open_dataset(
@@ -90,86 +111,25 @@ data2 <- arrow::open_dataset(
   partitioning = schema(code_reg = arrow::utf8())
 )
 
-# Afficher les informations sur le fichier partitionné
+# Question: Afficher les informations sur le fichier partitionné: le chema des données, leur dimension et le nom des variables
 data2$schema
 dim(data2)
 names(data2)
 
-# Apprendre à se servir de select et filter
-# Apprendre à faire group_by et summarise
+# Question: Extraire des données les observations
+# correspondant à la région Auvergne-Rhône-Alpes (REGION == "84")
+# Conserver uniquement les variables suivantes: COMMUNE, TYPL
+# Calculer la part d'habitations de fortune dans chaque commune
+
 resultats <- data2 |> 
-  group_by(
-    code_reg, variete
-  ) |>
-  filter(code_reg %in% c(11, 28, 75)) |>
+  filter(REGION == "84") |>
+  select(REGION, COMMUNE, TYPL) |> 
+  group_by(COMMUNE) |>
   summarise(
-    prix_moyen = mean(prix, na.rm = TRUE)
+    nb_logements_fortune = sum(TYPL == "5"),
+    nb_logements_commune = n()
+  ) |>
+  mutate(
+    part_logements_fortune = nb_logements_fortune / nb_logements_commune
   ) |> 
   compute()
-
-
-
-
-
-# Comment écrire un Parquet partitionné en local
-arrow::write_dataset(
-  data,
-  path = "logements_RP2017/",
-  partitioning = c("code_reg"),
-  hive_style = TRUE,
-  existing_data_behavior = "overwrite"
-)
-
-
-############################################################
-# Manipuler des données parquet en mémoire
-############################################################
-
-# Comment importer un fichier Parquet en mémoire
-data <- arrow::read_parquet(
-  file = "donnees_caisse.parquet"
-)
-
-# Apprendre à se servir de select et filter
-extrait_data <- data |> 
-  select(prix, code_reg, variete) |>
-  filter(code_reg %in% c(11, 28, 75))
-
-# Apprendre à faire group_by et summarise  
-resultat <- extrait_data |> 
-  group_by(code_reg, variete) |>
-  summarise(
-    prix_moyen = mean(prix, na.rm = TRUE)
-  )
-
-
-############################################################
-# Manipuler des données parquet en mode lazy
-############################################################
-
-# Se connecter un fichier Parquet partitionné
-data2 <- arrow::open_dataset(
-  source = "donnees_caisse/",
-  partitioning = schema(code_reg = arrow::utf8())
-)
-
-# Afficher les informations sur le fichier partitionné
-data2$schema
-dim(data2)
-names(data2)
-
-# Apprendre à se servir de select et filter
-# Apprendre à faire group_by et summarise
-resultats <- data2 |> 
-  group_by(
-    code_reg, variete
-  ) |>
-  filter(code_reg %in% c(11, 28, 75)) |>
-  summarise(
-    prix_moyen = mean(prix, na.rm = TRUE)
-  ) |> 
-  compute()
-
-
-
-
