@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "slides/outils-techniques/index.html#linformatique-dans-le-ssp",
+    "href": "slides/outils-techniques/index.html#linformatique-dans-le-ssp",
+    "title": "Besoins techniques pour la big data : infrastructures, logiciels et organisation",
+    "section": "L’informatique dans le SSP",
+    "text": "L’informatique dans le SSP\n\nUne “communauté d’artisans”\n\nDiversité des langages de programmation\nDiversité des environnements de travail"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#le-poste-de-travail",
+    "href": "slides/outils-techniques/index.html#le-poste-de-travail",
+    "title": "Besoins techniques pour la big data : infrastructures, logiciels et organisation",
+    "section": "Le poste de travail",
+    "text": "Le poste de travail\n\n\nAvantages :\n\nSimplicité\n\nInconvénients :\n\nPuissance limitée\nReproductibilité limitée\nSécurité faible"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#les-infrastructures-mutualisées-traditionnelles",
+    "href": "slides/outils-techniques/index.html#les-infrastructures-mutualisées-traditionnelles",
+    "title": "Besoins techniques pour la big data : infrastructures, logiciels et organisation",
+    "section": "Les infrastructures mutualisées traditionnelles",
+    "text": "Les infrastructures mutualisées traditionnelles\n\n\nAvantages :\n\nSimplicité\nPuissance\nSécurité des données\nCouvre la majorité des usages\n\nInconvénients :\n\nReproductibilité faible\nDifficultés à innover"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#lenjeu-de-la-reproductibilité",
+    "href": "slides/outils-techniques/index.html#lenjeu-de-la-reproductibilité",
+    "title": "Besoins techniques pour la big data : infrastructures, logiciels et organisation",
+    "section": "L’enjeu de la reproductibilité",
+    "text": "L’enjeu de la reproductibilité\n\n\n\n\n\nSource : Peng R., Reproducible Research in Computational Science, Science (2011)"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#donner-les-moyens-dinnover",
+    "href": "slides/outils-techniques/index.html#donner-les-moyens-dinnover",
+    "title": "Besoins techniques pour la big data : infrastructures, logiciels et organisation",
+    "section": "Donner les moyens d’innover",
+    "text": "Donner les moyens d’innover\n\n\nFournir des ressources adaptées aux nouveaux usages\n\nStockage adapté aux données massives et non-structurées\nParallélisation / Calcul distribué\nEntraînement de modèles de machine learning sur GPUs\n\nPasser du développement à la mise en production"
+  },
+  {
     "objectID": "slides/codif-auto/index.html#context",
     "href": "slides/codif-auto/index.html#context",
     "title": "Codification automatique de l’APE avec de l’apprentissage statistique",

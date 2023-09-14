@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Romain Avouac, Thomas Faria">
-  <title>Formation BCEAO - Présentation et prise en main du SSP Cloud</title>
+  <title>Formation BCEAO - Besoins techniques pour la big data : infrastructures, logiciels et organisation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -324,8 +324,8 @@
     }
   </style>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<meta property="og:title" content="Formation BCEAO - Présentation et prise en main du SSP Cloud">
-<meta property="og:description" content="BCEAO - Jour 1">
+<meta property="og:title" content="Formation BCEAO - Besoins techniques pour la big data : infrastructures, logiciels et organisation">
+<meta property="og:description" content="BCEAO - Jour 2">
 <meta property="og:site-name" content="Formation BCEAO">
 </head>
 <body class="quarto-light">
@@ -333,8 +333,8 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="../_extensions/InseeFrLab/onyxia/background.svg" data-background-size="contain" class="quarto-title-block center">
-  <h1 class="title">Présentation et prise en main du SSP Cloud</h1>
-  <p class="subtitle"></p><p><strong><span class="orange">BCEAO - Jour 1</span></strong></p><p></p>
+  <h1 class="title">Besoins techniques pour la big data : infrastructures, logiciels et organisation</h1>
+  <p class="subtitle"></p><p><strong><span class="orange">BCEAO - Jour 2</span></strong></p><p></p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -346,8 +346,117 @@
 
   <p class="date">25 septembre 2023</p>
 </section>
-<section id="coucou" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1>Coucou</h1>
+<section>
+<section id="introduction" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Introduction</h1>
+
+</section>
+<section id="linformatique-dans-le-ssp" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>L’informatique dans le SSP</h2>
+<ul>
+<li class="fragment">Une <span class="orange">“communauté d’artisans”</span>
+<ul>
+<li class="fragment">Diversité des <span class="blue2"><strong>langages</strong></span> de programmation</li>
+<li class="fragment">Diversité des <span class="blue2"><strong>environnements de travail</strong></span></li>
+</ul></li>
+</ul>
+</section>
+<section id="le-poste-de-travail" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Le poste de travail</h2>
+<div>
+<ul>
+<li class="fragment"><span class="orange"><strong>Avantages</strong></span> :
+<ul>
+<li class="fragment"><span class="blue2"><strong>Simplicité</strong></span></li>
+</ul></li>
+<li class="fragment"><span class="orange"><strong>Inconvénients</strong></span> :
+<ul>
+<li class="fragment"><span class="blue2"><strong>Puissance</strong></span> limitée</li>
+<li class="fragment"><span class="blue2"><strong>Reproductibilité</strong></span> limitée</li>
+<li class="fragment"><span class="blue2"><strong>Sécurité</strong></span> faible</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="les-infrastructures-mutualisées-traditionnelles" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Les infrastructures mutualisées traditionnelles</h2>
+<div>
+<ul>
+<li class="fragment"><span class="orange"><strong>Avantages</strong></span> :
+<ul>
+<li class="fragment"><span class="blue2"><strong>Simplicité</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>Puissance</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>Sécurité</strong></span> des données</li>
+<li class="fragment">Couvre la <span class="blue2"><strong>majorité</strong></span> des usages</li>
+</ul></li>
+<li class="fragment"><span class="orange"><strong>Inconvénients</strong></span> :
+<ul>
+<li class="fragment"><span class="blue2"><strong>Reproductibilité</strong></span> faible</li>
+<li class="fragment">Difficultés à <span class="blue2"><strong>innover</strong></span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="lenjeu-de-la-reproductibilité" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>L’enjeu de la reproductibilité</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/reprospectrum.png" height="200"></p>
+</figure>
+</div>
+<p><strong>Source</strong> : Peng R., Reproducible Research in Computational Science, Science (2011)</p>
+</section>
+<section id="donner-les-moyens-dinnover" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Donner les moyens d’innover</h2>
+<div>
+<ul>
+<li class="fragment">Fournir des <span class="orange"><strong>ressources</strong></span> adaptées aux <span class="orange"><strong>nouveaux usages</strong></span>
+<ul>
+<li class="fragment"><span class="blue2"><strong>Stockage</strong></span> adapté aux données <span class="blue2"><strong>massives</strong></span> et <span class="blue2"><strong>non-structurées</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>Parallélisation</strong></span> / <span class="blue2"><strong>Calcul distribué</strong></span></li>
+<li class="fragment">Entraînement de modèles de <span class="blue2"><strong>machine learning</strong></span> sur <span class="blue2"><strong>GPUs</strong></span></li>
+</ul></li>
+<li class="fragment">Passer du développement à la <span class="orange"><strong>mise en production</strong></span></li>
+</ul>
+</div>
+</section></section>
+<section id="infrastructure" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Infrastructure</h1>
+<ul>
+<li class="fragment">Data Lake : central location that holds a large amount of data in its native, raw format
+<ul>
+<li class="fragment">Standard in the data industry : object storage (our choice : open-source implementation of S3 -&gt; MinIO)</li>
+</ul></li>
+<li class="fragment">Principles of object storage</li>
+<li class="fragment">Object storage &gt; Hadooop : co-localisation plus nécessaire car difficile à maintenir (coût), cloud computing (capacités réseaux ++ -&gt; déplcaements de donnéeds massibes bien moins coûteuse : 1 Gb/S débuts 2000’s -&gt; 100 Gb/s ajd), difficile à adapter à la conteneurisation (choses évoluent vite mais ), big big big data pas dans l’aire du temps, plus besoin de puissance/IA que de big storage -&gt; découplage qui apporte souplesse et scaling</li>
+<li class="fragment">Conteneurisation -&gt; standard pour la reproductibilité</li>
+<li class="fragment">Onyxia</li>
+</ul>
+</section>
+
+<section id="outils-informatiques" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Outils informatiques</h1>
+<ul>
+<li class="fragment">Parquet</li>
+<li class="fragment">Arrow</li>
+<li class="fragment">DuckDB</li>
+<li class="fragment">Spark</li>
+<li class="fragment">Outils de workflows (argo-workflow, airflow)</li>
+<li class="fragment">Outils de déploiement industrialisé (Kubernetes, argo-cd)</li>
+</ul>
+</section>
+
+<section id="organisation-et-compétences" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Organisation et compétences</h1>
+<ul>
+<li class="fragment">Data science</li>
+<li class="fragment">Data engineering</li>
+<li class="fragment">Insee : SSP Lab (innovation méthodo DS) + DIIT (innovation info data ingé / data architect)</li>
+</ul>
+</section>
+
+<section id="conclusion" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1>Conclusion</h1>
 
 <div class="footer footer-default">
 
