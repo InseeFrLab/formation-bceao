@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Romain Avouac, Thomas Faria">
-  <title>Formation BCEAO - Besoins techniques pour la big data : infrastructures, logiciels et organisation</title>
+  <title>Formation BCEAO - Besoins techniques et organisationnels pour la big data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -324,7 +324,7 @@
     }
   </style>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<meta property="og:title" content="Formation BCEAO - Besoins techniques pour la big data : infrastructures, logiciels et organisation">
+<meta property="og:title" content="Formation BCEAO - Besoins techniques et organisationnels pour la big data">
 <meta property="og:description" content="BCEAO - Jour 2">
 <meta property="og:site-name" content="Formation BCEAO">
 </head>
@@ -333,7 +333,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="../_extensions/InseeFrLab/onyxia/background.svg" data-background-size="contain" class="quarto-title-block center">
-  <h1 class="title">Besoins techniques pour la big data : infrastructures, logiciels et organisation</h1>
+  <h1 class="title">Besoins techniques et organisationnels pour la big data</h1>
   <p class="subtitle"></p><p><strong><span class="orange">BCEAO - Jour 2</span></strong></p><p></p>
 
 <div class="quarto-title-authors">
@@ -413,16 +413,55 @@
 <li class="fragment">Fournir des <span class="orange"><strong>ressources</strong></span> adaptées aux <span class="orange"><strong>nouveaux usages</strong></span>
 <ul>
 <li class="fragment"><span class="blue2"><strong>Stockage</strong></span> adapté aux données <span class="blue2"><strong>massives</strong></span> et <span class="blue2"><strong>non-structurées</strong></span></li>
-<li class="fragment"><span class="blue2"><strong>Parallélisation</strong></span> / <span class="blue2"><strong>Calcul distribué</strong></span></li>
-<li class="fragment">Entraînement de modèles de <span class="blue2"><strong>machine learning</strong></span> sur <span class="blue2"><strong>GPUs</strong></span></li>
+<li class="fragment">Outils modernes de <span class="blue2"><strong>data science</strong></span> (R, Python, calcul distribué,…)</li>
+<li class="fragment"><span class="blue2"><strong>GPUs</strong></span> pour l’entraînement de modèles de <span class="blue2"><strong>machine learning</strong></span></li>
 </ul></li>
-<li class="fragment">Passer du développement à la <span class="orange"><strong>mise en production</strong></span></li>
+<li class="fragment">Passer du développement à la <span class="orange"><strong>mise en production</strong></span>
+<ul>
+<li class="fragment">Outils de <span class="blue2"><strong>déploiement</strong></span> et d’<span class="blue2"><strong>automatisation</strong></span></li>
+</ul></li>
 </ul>
 </div>
+</section>
+<section id="des-besoins-à-différents-niveaux" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Des besoins à différents niveaux</h2>
+<ul>
+<li class="fragment"><p><span class="orange"><strong>Infrastructure</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong>Outils informatiques</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong>Changements organisationnels</strong></span></p></li>
+</ul>
 </section></section>
+<section>
 <section id="infrastructure" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>Infrastructure</h1>
+
+</section>
+<section id="comment-construire-une-data-stack-cohérente" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Comment construire une <em>data stack</em> cohérente ?</h2>
 <ul>
+<li class="fragment">Répondre aux besoins des statisticiens publics
+<ul>
+<li class="fragment"><span class="blue2"><strong>Ressources</strong></span> (stockage, GPUs, services etc.) pour l’expérimentation</li>
+<li class="fragment">Permettre la <span class="blue2"><strong>mise en production</strong></span></li>
+</ul></li>
+<li class="fragment">Choisir des technologies à l’<span class="blue2"><strong>état de l’art</strong></span>
+<ul>
+<li class="fragment">Faciliter l’<span class="blue2"><strong>adoption</strong></span> par les statisticiens</li>
+</ul></li>
+</ul>
+</section>
+<section id="la-base-le-data-lake" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>La base : le <em>data lake</em></h2>
+<ul>
+<li class="fragment">Stockage <span class="orange"><strong>centralisé</strong></span> pour données <span class="blue2"><strong>volumineuses</strong></span> et <span class="blue2"><strong>brutes</strong></span> provenant de <span class="blue2"><strong>sources variées</strong></span></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/datalake.png" height="300"></p>
+</figure>
+</div>
+<ul>
+<li class="fragment"></li>
 <li class="fragment">Data Lake : central location that holds a large amount of data in its native, raw format
 <ul>
 <li class="fragment">Standard in the data industry : object storage (our choice : open-source implementation of S3 -&gt; MinIO)</li>
@@ -432,8 +471,7 @@
 <li class="fragment">Conteneurisation -&gt; standard pour la reproductibilité</li>
 <li class="fragment">Onyxia</li>
 </ul>
-</section>
-
+</section></section>
 <section id="outils-informatiques" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>Outils informatiques</h1>
 <ul>
@@ -457,6 +495,11 @@
 
 <section id="conclusion" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>Conclusion</h1>
+
+</section>
+
+<section id="section" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<h1></h1>
 
 <div class="footer footer-default">
 

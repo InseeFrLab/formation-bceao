@@ -2,37 +2,58 @@
   {
     "objectID": "slides/outils-techniques/index.html#linformatique-dans-le-ssp",
     "href": "slides/outils-techniques/index.html#linformatique-dans-le-ssp",
-    "title": "Besoins techniques pour la big data : infrastructures, logiciels et organisation",
+    "title": "Besoins techniques et organisationnels pour la big data",
     "section": "L’informatique dans le SSP",
     "text": "L’informatique dans le SSP\n\nUne “communauté d’artisans”\n\nDiversité des langages de programmation\nDiversité des environnements de travail"
   },
   {
     "objectID": "slides/outils-techniques/index.html#le-poste-de-travail",
     "href": "slides/outils-techniques/index.html#le-poste-de-travail",
-    "title": "Besoins techniques pour la big data : infrastructures, logiciels et organisation",
+    "title": "Besoins techniques et organisationnels pour la big data",
     "section": "Le poste de travail",
     "text": "Le poste de travail\n\n\nAvantages :\n\nSimplicité\n\nInconvénients :\n\nPuissance limitée\nReproductibilité limitée\nSécurité faible"
   },
   {
     "objectID": "slides/outils-techniques/index.html#les-infrastructures-mutualisées-traditionnelles",
     "href": "slides/outils-techniques/index.html#les-infrastructures-mutualisées-traditionnelles",
-    "title": "Besoins techniques pour la big data : infrastructures, logiciels et organisation",
+    "title": "Besoins techniques et organisationnels pour la big data",
     "section": "Les infrastructures mutualisées traditionnelles",
     "text": "Les infrastructures mutualisées traditionnelles\n\n\nAvantages :\n\nSimplicité\nPuissance\nSécurité des données\nCouvre la majorité des usages\n\nInconvénients :\n\nReproductibilité faible\nDifficultés à innover"
   },
   {
     "objectID": "slides/outils-techniques/index.html#lenjeu-de-la-reproductibilité",
     "href": "slides/outils-techniques/index.html#lenjeu-de-la-reproductibilité",
-    "title": "Besoins techniques pour la big data : infrastructures, logiciels et organisation",
+    "title": "Besoins techniques et organisationnels pour la big data",
     "section": "L’enjeu de la reproductibilité",
     "text": "L’enjeu de la reproductibilité\n\n\n\n\n\nSource : Peng R., Reproducible Research in Computational Science, Science (2011)"
   },
   {
     "objectID": "slides/outils-techniques/index.html#donner-les-moyens-dinnover",
     "href": "slides/outils-techniques/index.html#donner-les-moyens-dinnover",
-    "title": "Besoins techniques pour la big data : infrastructures, logiciels et organisation",
+    "title": "Besoins techniques et organisationnels pour la big data",
     "section": "Donner les moyens d’innover",
-    "text": "Donner les moyens d’innover\n\n\nFournir des ressources adaptées aux nouveaux usages\n\nStockage adapté aux données massives et non-structurées\nParallélisation / Calcul distribué\nEntraînement de modèles de machine learning sur GPUs\n\nPasser du développement à la mise en production"
+    "text": "Donner les moyens d’innover\n\n\nFournir des ressources adaptées aux nouveaux usages\n\nStockage adapté aux données massives et non-structurées\nOutils modernes de data science (R, Python, calcul distribué,…)\nGPUs pour l’entraînement de modèles de machine learning\n\nPasser du développement à la mise en production\n\nOutils de déploiement et d’automatisation"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#des-besoins-à-différents-niveaux",
+    "href": "slides/outils-techniques/index.html#des-besoins-à-différents-niveaux",
+    "title": "Besoins techniques et organisationnels pour la big data",
+    "section": "Des besoins à différents niveaux",
+    "text": "Des besoins à différents niveaux\n\nInfrastructure\nOutils informatiques\nChangements organisationnels"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#comment-construire-une-data-stack-cohérente",
+    "href": "slides/outils-techniques/index.html#comment-construire-une-data-stack-cohérente",
+    "title": "Besoins techniques et organisationnels pour la big data",
+    "section": "Comment construire une data stack cohérente ?",
+    "text": "Comment construire une data stack cohérente ?\n\nRépondre aux besoins des statisticiens publics\n\nRessources (stockage, GPUs, services etc.) pour l’expérimentation\nPermettre la mise en production\n\nChoisir des technologies à l’état de l’art\n\nFaciliter l’adoption par les statisticiens"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#la-base-le-data-lake",
+    "href": "slides/outils-techniques/index.html#la-base-le-data-lake",
+    "title": "Besoins techniques et organisationnels pour la big data",
+    "section": "La base : le data lake",
+    "text": "La base : le data lake\n\nStockage centralisé pour données volumineuses et brutes provenant de sources variées\n\n\n\n\n\n\n\n\nData Lake : central location that holds a large amount of data in its native, raw format\n\nStandard in the data industry : object storage (our choice : open-source implementation of S3 -&gt; MinIO)\n\nPrinciples of object storage\nObject storage &gt; Hadooop : co-localisation plus nécessaire car difficile à maintenir (coût), cloud computing (capacités réseaux ++ -&gt; déplcaements de donnéeds massibes bien moins coûteuse : 1 Gb/S débuts 2000’s -&gt; 100 Gb/s ajd), difficile à adapter à la conteneurisation (choses évoluent vite mais ), big big big data pas dans l’aire du temps, plus besoin de puissance/IA que de big storage -&gt; découplage qui apporte souplesse et scaling\nConteneurisation -&gt; standard pour la reproductibilité\nOnyxia"
   },
   {
     "objectID": "slides/codif-auto/index.html#context",
