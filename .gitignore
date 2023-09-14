@@ -1,5 +1,10 @@
 /.quarto/
 /_site/
+**/_site_libs/
+index.html
+index-listing.json
+cards/*.html
+cards/cards*_files
 
 /.luarc.json
 *background.svg

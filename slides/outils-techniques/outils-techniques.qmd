@@ -1,0 +1,107 @@
+---
+title: 'Besoins techniques pour la big data : infrastructures, logiciels et organisation'
+subtitle: |
+  **[BCEAO - Jour 2]{.orange}**
+author: "[Romain Avouac](https://github.com/avouacr), [Thomas Faria](https://github.com/ThomasFaria)"
+date: "09/25/2023"
+date-format: "D MMMM YYYY"
+slide-number: true
+lang: fr-FR
+# for blind readers:
+slide-tone: false
+chalkboard: # press the B key to toggle chalkboard
+  theme: whiteboard
+# uncomment to use the multiplex mode:
+# multiplex: true
+format:
+  onyxia-revealjs:
+    incremental: true
+    output-file: index.html
+controls: true
+css: ../custom.css
+from: markdown+emoji
+ascii: true
+execute: 
+  echo: false
+  warning: false
+---
+
+# Introduction
+
+## L'informatique dans le SSP
+
+- Une ["communauté d'artisans"]{.orange}
+  - Diversité des [**langages**]{.blue2} de programmation 
+  - Diversité des [**environnements de travail**]{.blue2}
+
+## Le poste de travail
+
+::: {.incremental}
+- [**Avantages**]{.orange} :
+  - [**Simplicité**]{.blue2}
+
+- [**Inconvénients**]{.orange} :
+  - [**Puissance**]{.blue2} limitée
+  - [**Reproductibilité**]{.blue2} limitée
+  - [**Sécurité**]{.blue2} faible
+:::
+
+## Les infrastructures mutualisées traditionnelles
+
+::: {.incremental}
+- [**Avantages**]{.orange} :
+  - [**Simplicité**]{.blue2}
+  - [**Puissance**]{.blue2}
+  - [**Sécurité**]{.blue2} des données
+  - Couvre la [**majorité**]{.blue2} des usages
+
+- [**Inconvénients**]{.orange} :
+  - [**Reproductibilité**]{.blue2} faible
+  - Difficultés à [**innover**]{.blue2}
+:::
+
+## L'enjeu de la reproductibilité
+
+![](img/reprospectrum.png){height="200" fig-align="center"}
+
+**Source** : Peng R., Reproducible Research in Computational Science, Science (2011)
+
+## Donner les moyens d'innover
+
+::: {.incremental}
+- Fournir des [**ressources**]{.orange} adaptées aux [**nouveaux usages**]{.orange}
+  - [**Stockage**]{.blue2} adapté aux données [**massives**]{.blue2} et [**non-structurées**]{.blue2}
+  - [**Parallélisation**]{.blue2} / [**Calcul distribué**]{.blue2}
+  - Entraînement de modèles de [**machine learning**]{.blue2} sur [**GPUs**]{.blue2}
+
+- Passer du développement à la [**mise en production**]{.orange}
+:::
+
+
+# Infrastructure
+
+- Data Lake : central location that holds a large amount of data in its native, raw format
+  - Standard in the data industry : object storage (our choice : open-source implementation of S3 -> MinIO)
+- Principles of object storage
+- Object storage > Hadooop : co-localisation plus nécessaire car difficile à maintenir (coût), cloud computing (capacités réseaux ++ -> déplcaements de donnéeds massibes bien moins coûteuse : 1 Gb/S débuts 2000's -> 100 Gb/s ajd), difficile à adapter à la conteneurisation (choses évoluent vite mais ), big big big data pas dans l'aire du temps, plus besoin de puissance/IA que de big storage -> découplage qui apporte souplesse et scaling
+- Conteneurisation -> standard pour la reproductibilité
+- Onyxia
+
+# Outils informatiques
+
+- Parquet
+- Arrow
+- DuckDB
+- Spark
+- Outils de workflows (argo-workflow, airflow)
+- Outils de déploiement industrialisé (Kubernetes, argo-cd)
+
+# Organisation et compétences
+
+- Data science
+- Data engineering
+- Insee : SSP Lab (innovation méthodo DS) + DIIT (innovation info data ingé / data architect)
+
+# Conclusion
+
+
