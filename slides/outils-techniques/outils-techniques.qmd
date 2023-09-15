@@ -92,7 +92,7 @@ execute:
 
 # Infrastructure
 
-## Comment construire une *data stack* cohérente ?
+## Comment construire une *data stack* pertinente ?
 
 - Répondre aux [**besoins**]{.orange} des statisticiens publics
   - [**Ressources**]{.blue2} (stockage, GPUs, services etc.) pour l'expérimentation
@@ -122,20 +122,26 @@ execute:
   - Maîtrise des [**coûts**]{.blue2}
   - [**Compétences**]{.blue2} de maintenance
 
-## La base : le *data lake*
+## Stockage : le *data lake*
 
+- Un stockage [**peu coûteux**]{.orange} fait pour des [**données**]{.orange}
+  - [**volumineuses**]{.blue2}
+  - [**brutes**]{.blue2}
+  - issues de [**sources variées**]{.blue2}
 
+![](img/datalake.png){height="400" fig-align="center"}
 
-- Stockage [**centralisé**]{.orange} pour données [**volumineuses**]{.blue2} et [**brutes**]{.blue2} provenant de [**sources variées**]{.blue2}
+## Le choix du stockage objet
 
-![](img/datalake.png){height="300" fig-align="center"}
+- Choix du [**stockage objet**]{.orange} (type [**S3**]{.orange}) vs. [**Hadoop**]{.orange}
 
-- 
+- La [**co-localisation**]{.orange} des traitements n'est plus justifiée
+  - Plus besoin de [**puissance/IA**]{.blue2} que de [***big storage***]{.blue2}
+  - [**Découplage**]{.blue2} stockage/traitement -> [**évolutivité**]{.blue2}
+  - Coûts de maintenance
 
+![](img/minio.svg){height="300" fig-align="center"}
 
-- Data Lake : central location that holds a large amount of data in its native, raw format
-  - Standard in the data industry : object storage (our choice : open-source implementation of S3 -> MinIO)
-- Principles of object storage
 - Object storage > Hadooop : co-localisation plus nécessaire car difficile à maintenir (coût), cloud computing (capacités réseaux ++ -> déplcaements de donnéeds massibes bien moins coûteuse : 1 Gb/S débuts 2000's -> 100 Gb/s ajd), difficile à adapter à la conteneurisation (choses évoluent vite mais ), big big big data pas dans l'aire du temps, plus besoin de puissance/IA que de big storage -> découplage qui apporte souplesse et scaling
 - Conteneurisation -> standard pour la reproductibilité
 - Onyxia
@@ -145,6 +151,7 @@ execute:
 
 # Outils informatiques
 
+- R, Python
 - Parquet
 - Arrow
 - DuckDB
