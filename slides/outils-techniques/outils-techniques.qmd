@@ -169,7 +169,7 @@ execute:
 
 ## SSP Cloud / Onyxia
 
-- [SSP Cloud](https://datalab.sspcloud.fr/) : [**instance publique**]{.blue2}
+- [SSP Cloud](https://datalab.sspcloud.fr/) : [**instance publique**]{.blue2} d'[**Onyxia**]{.orange}
   - Dédiée à l'[**expérimentation**]{.blue2} sur [**données ouvertes**]{.blue2}
   - Base des [**tutoriels**]{.blue2} de cette formation
 
@@ -177,26 +177,58 @@ execute:
   - Projet [**open-source**]{.blue2} : [https://github.com/InseeFrLab/onyxia-web](https://github.com/InseeFrLab/onyxia-web)
   - Possibilité de créer une [**instance interne**]{.blue2}
 
+
+
+
 # Outils informatiques
 
-- R, Python
-- Parquet
-- Arrow
-- DuckDB
-- Spark
-- Outils de workflows (argo-workflow, airflow)
-- Outils de déploiement industrialisé (Kubernetes, argo-cd)
+## Catalogue de services d'Onyxia
+
+![](img/catalog.png){height="400" fig-align="center"}
+
+## Langages de programmation
+
+R / Python
+
+## Formats de données
+
+parquet
+
+## "Petite" big-data
+
+arrow / duckdb
+
+## Calcul distribué
+
+spark
+
+## Outils de *workflows*
+
+argo-workflow
+
+## Outils de déploiement
+
+- Kubernetes
+- ArgoCD
+
 
 
 
 
 # Organisation et compétences
 
-- Data science
-- Data engineering
+## Labs
+
 - Insee : SSP Lab (innovation méthodo DS) + DIIT (innovation info data ingé / data architect)
 
+## Organisation d'un projet
 
+![](img/competences.png){height="600" fig-align="center"}
+
+## Formation
+
+- ENSAE / ENSAI
+- Liens supports
 
 
 # Conclusion
