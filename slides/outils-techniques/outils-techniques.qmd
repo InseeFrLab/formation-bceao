@@ -1,5 +1,5 @@
 ---
-title: 'Besoins techniques et organisationnels pour la big data'
+title: 'Besoins techniques et changements organisationnels'
 subtitle: |
   **[BCEAO - Jour 2]{.orange}**
 author: "[Romain Avouac](https://github.com/avouacr), [Thomas Faria](https://github.com/ThomasFaria)"
@@ -94,12 +94,33 @@ execute:
 
 ## Comment construire une *data stack* cohérente ?
 
-- Répondre aux besoins des statisticiens publics
+- Répondre aux [**besoins**]{.orange} des statisticiens publics
   - [**Ressources**]{.blue2} (stockage, GPUs, services etc.) pour l'expérimentation
+  - Favoriser la [**reproductibilité**]{.blue2} des traitements
   - Permettre la [**mise en production**]{.blue2}
 
-- Choisir des technologies à l'[**état de l'art**]{.blue2}
+- Choisir des technologies à l'[**état de l'art**]{.orange}
   - Faciliter l'[**adoption**]{.blue2} par les statisticiens
+
+## Notre *data stack*
+
+- [**Infrastructure cloud centralisée**]{.orange}
+
+- [**Stockage objet**]{.orange}
+
+- [**Conteneurisation**]{.orange}
+
+- [**Plateforme**]{.orange} web de data science
+
+## Infrastructure cloud
+
+- Poste de travail comme point d'accès à une [**infrastructure centralisée**]{.orange} de calcul
+  - [**Evolutivité**]{.blue2} (*scaling* horizontal)
+  - [**Sécurité**]{.blue2} (pas de dissemination des données)
+
+- [***On-premise***]{.orange} vs. [***full-cloud***]{.orange}
+  - Maîtrise des [**coûts**]{.blue2}
+  - [**Compétences**]{.blue2} de maintenance
 
 ## La base : le *data lake*
 
