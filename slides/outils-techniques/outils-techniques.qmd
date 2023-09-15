@@ -167,15 +167,15 @@ execute:
 
 ![](img/bricks.png){height="400" fig-align="center"}
 
-## Onyxia / SSP Cloud
-
-- [Onyxia](https://www.onyxia.sh/) : un lanceur de [**plateforme de data science**]{.blue2} moderne
-  - Projet [**open-source**]{.blue2} : [https://github.com/InseeFrLab/onyxia-web](https://github.com/InseeFrLab/onyxia-web)
-  - Possibilité de créer une [**instance interne**]{.blue2}
+## SSP Cloud / Onyxia
 
 - [SSP Cloud](https://datalab.sspcloud.fr/) : [**instance publique**]{.blue2}
   - Dédiée à l'[**expérimentation**]{.blue2} sur [**données ouvertes**]{.blue2}
   - Base des [**tutoriels**]{.blue2} de cette formation
+
+- [Onyxia](https://www.onyxia.sh/) : une [**plateforme de data science**]{.blue2} moderne
+  - Projet [**open-source**]{.blue2} : [https://github.com/InseeFrLab/onyxia-web](https://github.com/InseeFrLab/onyxia-web)
+  - Possibilité de créer une [**instance interne**]{.blue2}
 
 # Outils informatiques
 
