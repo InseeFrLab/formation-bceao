@@ -1,5 +1,5 @@
 ---
-title: 'Besoins techniques et changements organisationnels'
+title: 'Besoins techniques et organisationnels'
 subtitle: |
   **[BCEAO - Jour 2]{.orange}**
 author: "[Romain Avouac](https://github.com/avouacr), [Thomas Faria](https://github.com/ThomasFaria)"
@@ -205,7 +205,7 @@ execute:
     - _Inconvénients_ : pas de gestion des méta-données, peu adapté aux données volumineuses
   - [**Parquet**]{.orange} : pour le traitement de [**données volumineuses**]{.blue2}
     - [**Compressé**]{.blue2} et très [**performant**]{.blue2} en lecture/écriture
-    - Gestion native des méta-données
+    - Gestion native des méta-données ([**schéma**]{.blue2})
 
 ## Le format `Parquet` : compression
 
@@ -217,13 +217,27 @@ execute:
 - "orienté colonne" -> performant pour l'analyse OLAP
 - partionnement
 
-## "Petite" big-data
+## Traitement des données volumineuses
 
-arrow / duckdb
+- `Parquet` ne résout pas tout
+  - L'espace sur disque est optimisé
+  - Les données décompressées doivent passer en mémoire
 
-## Calcul distribué
+- Comment analyser 100 GB de données sur un PC avec 16 GB de RAM ?
+  - Arrow
+  - DuckDB
 
-spark
+## Arrow
+
+- 
+
+## DuckDB
+
+## Traitement des données massives
+
+## Hadoop MapReduce
+
+## Spark
 
 ## En résumé
 
