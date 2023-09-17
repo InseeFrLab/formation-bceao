@@ -182,17 +182,40 @@ execute:
 
 # Outils informatiques
 
-## Catalogue de services d'Onyxia
+## Motivation
 
-![](img/catalog.png){height="400" fig-align="center"}
+- Une infrastructure adaptée au *big data* est nécessaire.. mais pas suffisante !
+
+- Nécessité d'adapter les pratiques
+  - Langages de programmation
+  - Formats de données
+  - Outils informatiques spécifiques
 
 ## Langages de programmation
 
-R / Python
+![](img/skills.png)
+
+[Source](https://towardsdatascience.com/most-in-demand-tech-skills-for-data-engineers-58f4c1ca25ab)
 
 ## Formats de données
 
-parquet
+- Deux formats très populaires :
+  - [**CSV**]{.orange} : pour la [**plupart des usages courants**]{.blue2}
+    - _Avantage_ : [**non-compressé**]{.blue2} donc facilement [**lisible**]{.blue2}
+    - _Inconvénients_ : pas de gestion des méta-données, peu adapté aux données volumineuses
+  - [**Parquet**]{.orange} : pour le traitement de [**données volumineuses**]{.blue2}
+    - [**Compressé**]{.blue2} et très [**performant**]{.blue2} en lecture/écriture
+    - Gestion native des méta-données
+
+## Le format `Parquet` : compression
+
+- schéma
+
+## Le format `Parquet` : autres avantages
+
+- open-source et interopérable
+- "orienté colonne" -> performant pour l'analyse OLAP
+- partionnement
 
 ## "Petite" big-data
 
@@ -202,16 +225,26 @@ arrow / duckdb
 
 spark
 
-## Outils de *workflows*
+## En résumé
 
-argo-workflow
+- Utiliser un format de données adapté (`Parquet`)
 
-## Outils de déploiement
+- Utiliser des outils informatiques adaptés
+  - Données volumineuses : calcul en mémoire optimisé  (`Arrow` / `DuckDB`)
+  - Données massives : calcul distribué (`Spark`)
 
-- Kubernetes
-- ArgoCD
+## Outils pour la mise en production
 
+- Traitements automatisés (*workflows*)
+  - `argo-workflow`
 
+- Déploiement (*batch*, *workflow*, application)
+  - `Kubernetes`
+  - `ArgoCD`
+
+## Catalogue de services d'Onyxia
+
+![](img/catalog.png)
 
 
 
