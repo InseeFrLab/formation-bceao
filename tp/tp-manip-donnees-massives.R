@@ -74,10 +74,18 @@ arrow::write_dataset(df_arrow,
 
 # Ecriture d'une base de données DuckDB à partir du parquet partitionné
 data_arrow <- arrow::open_dataset("tp/data/data_partitioned")
-con <- dbConnect(duckdb::duckdb(), dbdir="tp/data/data_recensement_2017.duckdb", read_only=FALSE)
-arrow::to_duckdb(df_arrow, table_name = "RP2017", con = con)
-dbSendQuery(con, "CREATE TABLE dataset AS SELECT * FROM RP2017")
 
+# In memory connection
+con = dbConnect(duckdb::duckdb(), dbdir=":memory:", read_only=FALSE)
+
+# Connection using a file
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir="tp/data/data_recensement_2017.duckdb", read_only=FALSE)
+
+arrow::to_duckdb(df_arrow, table_name = "RP2017", con = con)
+
+DBI::dbExecute(con, "INSTALL httpfs;")
+DBI::dbExecute(con, "CREATE TABLE corres AS SELECT * FROM read_parquet('https://minio.lab.sspcloud.fr/projet-formation/diffusion/bceao/table_communes.parquet');")
+DBI::dbExecute(con, "CREATE TABLE dataset AS SELECT * FROM RP2017")
 
 disk_size <- fs::dir_info(here::here("tp", "data"), recurse = TRUE) |>
   filter(type == "file") |>
@@ -180,22 +188,34 @@ elapsed_lazy <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 # Manipulation depuis la base de données DuckDB
 ############################################################
 
-con <- dbConnect(duckdb::duckdb(), dbdir="tp/data/data_recensement_2017.duckdb", read_only=TRUE)
-dbListTables(con)
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir="tp/data/data_recensement_2017.duckdb", read_only=TRUE)
+DBI::dbListTables(con)
 query_sql <- "SELECT
-                COMMUNE,
-                SUM(CASE WHEN TYPL = '5' THEN 1 ELSE 0 END) AS nb_logements_fortune,
-                COUNT(*) AS nb_logements_commune,
-                SUM(CASE WHEN TYPL = '5' THEN 1 ELSE 0 END) / COUNT(*) AS part_logements_fortune
-              FROM
-                dataset
-              GROUP BY
-                COMMUNE
+                tc.Commune,
+                tc.Département,
+                nb_logements_fortune,
+                nb_logements_commune,
+                part_logements_fortune
+              FROM (
+                SELECT
+                  dataset.COMMUNE,
+                  SUM(CASE WHEN dataset.TYPL = '5' THEN 1 ELSE 0 END) AS nb_logements_fortune,
+                  COUNT(*) AS nb_logements_commune,
+                  SUM(CASE WHEN dataset.TYPL = '5' THEN 1 ELSE 0 END) / COUNT(*) AS part_logements_fortune
+                FROM
+                  dataset
+                GROUP BY
+                dataset.COMMUNE
+              ) AS subquery
+              LEFT JOIN
+                corres AS tc
+              ON
+                subquery.COMMUNE = tc.\"Code INSEE\"
               ORDER BY
                 part_logements_fortune DESC;"
 
 t <- Sys.time()
-dbGetQuery(con, query_sql) |> as_tibble()
+DBI::dbGetQuery(con, query_sql) |> as_tibble()
 elapsed_duckdb <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 duckdb::dbDisconnect(con)
 
@@ -229,12 +249,32 @@ performance |>
 aws.s3::get_bucket("projet-formation", prefix = "diffusion/bceao", region = "")
 
 # Lecture du dataset parquet directement depuis le cloud
+bucket <- arrow::s3_bucket(
+  "projet-formation/diffusion/bceao/data_partitioned",
+  endpoint_override = "minio.lab.sspcloud.fr"
+)
+
 data_cloud <- arrow::open_dataset(
-  source = "tp/data/data_partitioned",
+  source = bucket,
   partitioning = arrow::schema(REGION = arrow::utf8()))
 
+query <- data_cloud |> 
+  # filter(REGION == "76") |>
+  select(REGION, COMMUNE, TYPL) |> 
+  group_by(COMMUNE) |>
+  summarise(
+    nb_logements_fortune = sum(TYPL %in% "5"),
+    nb_logements_commune = n()
+  ) |>
+  mutate(
+    part_logements_fortune = nb_logements_fortune / nb_logements_commune
+  ) |> 
+  arrange(-part_logements_fortune)
 
-
-
+query |> collect()
+# C'est plus long à run, mais c'est normal car ça dépend de la co internet que l'on a sur le SSPCloud
+# Un petit message sur les credential d'acces au bucket (ok pour une ouverture du service, mais sinon il faut renseigner
+# id et token)
+# dire de bien regarder la RAM sur Rstudio et constater qu'elle bouge quasi pas
 
 
