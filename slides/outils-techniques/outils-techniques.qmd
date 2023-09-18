@@ -197,45 +197,78 @@ execute:
 
 [Source](https://towardsdatascience.com/most-in-demand-tech-skills-for-data-engineers-58f4c1ca25ab)
 
-## Formats de données
+## Limites des formats de données usuels
 
-- Deux formats très populaires :
-  - [**CSV**]{.orange} : pour la [**plupart des usages courants**]{.blue2}
-    - _Avantage_ : [**non-compressé**]{.blue2} donc facilement [**lisible**]{.blue2}
-    - _Inconvénients_ : pas de gestion des méta-données, peu adapté aux données volumineuses
-  - [**Parquet**]{.orange} : pour le traitement de [**données volumineuses**]{.blue2}
-    - [**Compressé**]{.blue2} et très [**performant**]{.blue2} en lecture/écriture
-    - Gestion native des méta-données ([**schéma**]{.blue2})
+- Les formats usuels (CSV, JSON, XML) sont inadaptés à la *big data*
+  - Non-compressés : *human readable* mais espace disque élevé
+  - Orientés ligne : un traitement sur une/des colonne(s) implique une lecture complète du fichier
 
-## Le format `Parquet` : compression
+## Formats de données pour la big data
 
-- schéma
+- Propriétés souhaitées
+  - Orientés colonne
+  - Efficients en stockage disque
+  - Efficients en RAM
+  - Interopérables et open-source
 
-## Le format `Parquet` : autres avantages
+- Deux formats 
+  - Parquet : stockage disque
+  - Arrow : traitement en mémoire
 
-- open-source et interopérable
-- "orienté colonne" -> performant pour l'analyse OLAP
-- partionnement
+## Modes de stockage
 
-## Traitement des données volumineuses
+- Le stockage hybride optimise la lecture
+  - Projection (`SELECT`) : orientation colonne
+  - Predicates (`WHERE`) : orientation ligne
+
+![](img/row-column.png)
+
+[Source](https://towardsdatascience.com/demystifying-the-parquet-file-format-13adb0206705)
+
+## Le format `Parquet`
+
+- Orienté colonne (hybride)
+  - Adapté aux traitements analytiques
+  - Conçu pour être écrit une fois mais lu fréquemment
+
+- Optimisé
+  - Compression (jusqu'à 87 % moins d'espace qu'un CSV)
+  - Parcours du fichier (jusqu'à 34x plus rapide qu'un CSV)
+
+- Interopérable et open-source
+
+## Traitement en mémoire
 
 - `Parquet` ne résout pas tout
-  - L'espace sur disque est optimisé
-  - Les données décompressées doivent passer en mémoire
+  - L'espace disque est optimisé
+  - Les données décompressées doivent passer en RAM
 
 - Comment analyser 100 GB de données sur un PC avec 16 GB de RAM ?
-  - Arrow
-  - DuckDB
 
 ## Arrow
 
-- 
+- Format de données en mémoire orienté colonne
+  - Optimisé pour les traitements analytiques
+  - Pas nécessaire de charger toutes les données en RAM
+  - Interopérable et standardisé
 
-## DuckDB
+![](img/arrow.png)
 
 ## Traitement des données massives
 
+- `Arrow` ne résout pas tout
+  - Les données massives nécessitent des infrastuctures big data
+  - Les algorithmes aussi doivent être adaptés
+
+- Solution : calcul distribué
+
 ## Hadoop MapReduce
+
+- Developed by Google (2004)
+
+- Popularized by Hadoop's open-source implementation
+
+![](img/mapreduce.png)
 
 ## Spark
 
