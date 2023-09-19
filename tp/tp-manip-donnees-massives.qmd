@@ -30,11 +30,7 @@ options(arrow.use_threads = TRUE)
 
 Le format le plus répandu pour le stockage de données est le `.csv` . Ce format a l'avantage d'être facile à lire, aussi bien par un humain que par les différents langages et systèmes informatiques. Cependant ce format n'est pas compressé et prend donc beaucoup de place dans l'espace disque. De plus, il doit être chargé intégralement dans la mémoire même lorsque l'on souhaite analyser qu'un sous-échantillon des données. Cela a évidemment un coût à la fois de stockage et de temps computationnel. Nous allons utiliser une alternative au format `.csv` de plus en plus répandu et qui a été choisi à l'Insee comme format de stockage et de diffusion par défaut pour les prochaines années, il s'agit du format `.parquet` .
 
-Pour commencer nous allons importer le fichier `.csv` mis à votre disposition : `tp/data/data_recensement_2017.csv`. Pour ce faire nous allons voir 3 méthodes différentes et analyser les différentes performances :
-- importation via le package standard `readr`
-- importation via le package `data.table`, qui est une extension au data.frame de R base
-- importation via le package `arrow` 
-
+Pour commencer nous allons importer le fichier `.csv` mis à votre disposition : `tp/data/data_recensement_2017.csv`. Pour ce faire nous allons voir 3 méthodes différentes et analyser les différentes performances : - importation via le package standard `readr` - importation via le package `data.table`, qui est une extension au data.frame de R base - importation via le package `arrow`
 
 ```{r}
 # Importation avec readr
@@ -78,7 +74,6 @@ elapsed_arrow <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 head(df_arrow, 6)
 ```
 
-
 ```{r}
 # On libère de la mémoire
 rm(df_readr, df_datatable)
@@ -88,12 +83,12 @@ gc()
 Analysons les différences de temps d'import du CSV entre les 3 méthodes.
 
 ```{r}
-performance <- dplyr::tibble(format_text = c("readr", "data.table", "arrow"),
+performance <- tibble(format_text = c("readr", "data.table", "arrow"),
                              elapse_time = round(c(elapsed_readr, elapsed_datatable, elapsed_arrow),3))
 
 
 performance |> 
-  dplyr::mutate(format_text = forcats::fct_reorder(format_text, elapse_time)) |> 
+  mutate(format_text = forcats::fct_reorder(format_text, elapse_time)) |> 
   ggplot(aes(format_text, elapse_time))+
   geom_col(fill = "#003299", width=0.6)+
   geom_text(aes(label = glue::glue("{elapse_time} sec")), hjust = 1, nudge_x = 0.4, size = 4, fontface = "bold") +
@@ -105,10 +100,9 @@ performance |>
   theme_light()
 ```
 
-
 On constate que les librairies data.table et arrow sont beaucoup plus adaptés pour importer des gros fichiers CSV dans R. En effet, data.table permet de réduire de moitié le temps d'import et arrow de manière encore plus spectaculaire.
 
-Comme évoqué précedemment, le format .csv n'est pas adapté pour la manipulation de données massives. C'est pourquoi il est préférable de travailler avec des données au format .parquet, ou bien avec une base de données DuckDB. Selon les usages, il peut être utile de travailler sur des fichiers parquet partitionnés plutôt que sur un gros fichier .parquet. 
+Comme évoqué précedemment, le format .csv n'est pas adapté pour la manipulation de données massives. C'est pourquoi il est préférable de travailler avec des données au format .parquet, ou bien avec une base de données DuckDB. Selon les usages, il peut être utile de travailler sur des fichiers parquet partitionnés plutôt que sur un gros fichier .parquet.
 
 #### Stockage
 
@@ -119,8 +113,7 @@ Maintenant que nous avons importé en mémoire notre fichier CSV, commencez par 
 arrow::write_parquet(df_arrow, "data/data_recensement_2017.parquet")
 ```
 
-
-On peut également créer le un dossier `data/data_partition` dans lequel sont enregistrés nos fichiers parquet partitionnés par région. 
+On peut également créer le un dossier `data/data_partition` dans lequel sont enregistrés nos fichiers parquet partitionnés par région.
 
 ```{r}
 # Ecriture d'un dossier contenant des fichiers parquet partitionnés par la région
@@ -130,17 +123,15 @@ arrow::write_dataset(df_arrow,
                      partitioning = c("REGION"))
 ```
 
-
 Prenez le temps de regarder la manière dont sont sauvegarder les fichiers parquet dans le dossier `data_partition`.
-
 
 ```{r}
 fs::dir_tree("data/data_partition")
 ```
 
-Un autre moyen efficace pour sauvegarder nos données est de les intégrer à une base de données `.duckdb` afin d'y réaliser plusieurs requêtes ensuite. Si DuckDB n'est pas encore capable d'ouvrir des fichiers multi-niveau crées par partition, il est tout de même possible de lire directement des fichiers CSV ou parquet. Cependant, comme toute base de données, le format .duckdb peut contenir plusieurs tables et réaliser toutes les opérations standards de database management. 
+Un autre moyen efficace pour sauvegarder nos données est de les intégrer à une base de données `.duckdb` afin d'y réaliser plusieurs requêtes ensuite. Si DuckDB n'est pas encore capable d'ouvrir des fichiers multi-niveau crées par partition, il est tout de même possible de lire directement des fichiers CSV ou parquet. Cependant, comme toute base de données, le format .duckdb peut contenir plusieurs tables et réaliser toutes les opérations standards de database management.
 
-Pour créer une database depuis R, il suffit d'utiliser la fonction `duckdb()` et de renseigner le chemin où l'on souhaite l'écrire. 
+Pour créer une database depuis R, il suffit d'utiliser la fonction `duckdb()` et de renseigner le chemin où l'on souhaite l'écrire.
 
 ```{r}
 con <- DBI::dbConnect(duckdb::duckdb(), dbdir="data/data_recensement_2017.duckdb", read_only=FALSE)
@@ -158,9 +149,341 @@ Les données sont maintenant accessibles depuis DuckDB, on peut donc créer une 
 DBI::dbSendQuery(con, "CREATE TABLE dataset AS SELECT * FROM RP2017")
 ```
 
+Avant de manipuler directement les données, regardons les performances de stockage des différents formats.
+
+```{r}
+disk_size <- fs::dir_info(here::here("tp", "data"), recurse = TRUE) |>
+  filter(type == "file") |>
+  mutate(name = basename(path)) |> 
+  arrange(name) |>
+  group_by(name) |> 
+  summarise(total = sum(size)) |> 
+  ungroup() |>
+  mutate(name = case_when(
+    startsWith(name, "part-0") ~ "parquet partitionné",
+    TRUE ~ tools::file_ext(name)
+  ),
+  name = forcats::fct_reorder(name, total)
+  ) |> 
+  filter(name != "wal")
+
+disk_size |> 
+  ggplot(aes(name, total)) +
+  geom_col(fill = "#003299", width=0.6)+
+  geom_text(aes(label = glue::glue("{total}B")), hjust = 1, nudge_x = 0.4, size = 3.5, fontface = "bold") +
+  coord_flip()+
+  scale_y_continuous(labels = scales::label_bytes(units = "auto_si", accuracy = 1))+
+  labs(title = "Taille sur l'espace disque",
+       subtitle ="entre CSV, Parquet, Parquet partitionné et DuckDB",
+       x = "Format",
+       y = "Size")+
+  theme_light()
+```
+
+On libère de la mémoire.
+
+```{r}
+rm(df_arrow)
+gc()
+```
+
+### B - Comparaison des performances de requêtes
+
+Afin de comparer différentes méthodes nous allons réaliser une même requête relativement simple. L'objectif est de déterminer le pourcentage de logement dits de "fortune" dans chaque commune de France. Dans notre jeu de données les logements de fortune sont codés sur la variable `TYPL` avec la modalité 5. Afin de rajouter une jointure à notre requête nous allons utiliser une table de correspondance des communes qui permet d'associer le nom de la commune à un code commune Insee.
+
+#### 1) In-memory
+
+La manière traditionnelle pour manipuler des données non massives consiste simplement à lire en mémoire le jeu de données et effectuer ensuite différentes opérations. Commençons donc par importer les deux jeux de données en mémoire.
+
+```{r}
+# jeu de données au format parquet
+data <- arrow::read_parquet(
+  file = "data/data_recensement_2017.parquet"
+)
+```
+
+```{r}
+# table de correspondance au format parquet
+table_communes <- arrow::read_parquet(
+  file = arrow::s3_bucket(
+    "projet-formation/diffusion/bceao/table_communes.parquet",
+    endpoint_override = "minio.lab.sspcloud.fr"
+  )
+)
+```
+
+On définit notre requête qui réalise les opérations suivantes : - Calcule le nombre de logements dans chaque communes - Calcule le nombre de logements de fortune dans chaque communes - Calcule la part de logement de fortune - Réalise une jointure avec la table de correspondance des communes - renvoie une certaine sélection de colonne
+
+```{r}
+t <- Sys.time()
+data |> 
+  select(REGION, COMMUNE, TYPL) |> 
+  group_by(COMMUNE) |>
+  summarise(
+    nb_logements_fortune = sum(TYPL %in% "5"),
+    nb_logements_commune = n()
+  ) |>
+  mutate(
+    part_logements_fortune = nb_logements_fortune / nb_logements_commune
+  ) |>
+  arrange(-part_logements_fortune) |>
+  left_join(table_communes, by=c("COMMUNE"="Code INSEE")) |>
+  select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune)
+
+elapsed_in_memory <- as.numeric(difftime(Sys.time(), t, units = "secs"))
+```
+
+On libère de la mémoire.
+
+```{r}
+rm(data)
+gc()
+```
+
+#### 2) Lazy evaluation avec Arrow
+
+Arrow permet d'effectuer des évaluations en mode "*lazy*". Cette méthode permet de réaliser les calculs seulement lorsqu'ils sont nécessaires et ainsi de les optimiser au mieux. Ainsi, en fonction de la requête pré-définit, Arrow ne va importer en mémoire que les données strictement nécessaires à la réalisation de cette dernière.
+Pour importer les données de manière *lazy* on peut utiliser la fonction `open_dataset()` 
+
+```{r}
+data_lazy <- arrow::open_dataset(
+  source = "data/data_partition",
+  partitioning = arrow::schema(REGION = arrow::utf8()))
+```
+A ce stade l'objet `data_lazy` contient certaines informations sur le jeu de données, mais ne contient pas les données en tant que telles.  
+
+On peut obtenir le schema du jeu de données,
+
+```{r}
+data_lazy$schema
+```
+la dimension du jeu de données, 
+
+```{r}
+dim(data_lazy)
+```
+
+ainsi que les noms des colonnes.
+
+```{r}
+names(data_lazy)
+```
+
+Grâce à l'intégration d'Arrow avec dplyr on peut reprendre la même requête que précedemment : 
+
+```{r}
+query <- data_lazy |> 
+  select(REGION, COMMUNE, TYPL) |> 
+  group_by(COMMUNE) |>
+  summarise(
+    nb_logements_fortune = sum(TYPL %in% "5"),
+    nb_logements_commune = n()
+  ) |>
+  mutate(
+    part_logements_fortune = nb_logements_fortune / nb_logements_commune
+  ) |> 
+  left_join(table_communes, by=c("COMMUNE"="Code INSEE")) |>
+  select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune) |>
+  arrange(-part_logements_fortune) 
+```
+
+Comme vous pouvez le constater, lors de la définition de la requête les calculs n'ont pas encore été réalisés. Cependant, arrow a d'ores et déjà identifié les colonnes qui lui seront utiles pour réaliser les calculs.
+
+```{r}
+query 
+```
+
+Pour enclencher les calculs il existe deux méthodes différentes, `collect()` et `compute()`. La première renvoie le résultat de la requête au format `tibble` tandis que la seconde renvoie le résultat sous la forme d'un objet Arrow. 
+
+```{r}
+t <- Sys.time()
+query |> 
+  collect()
+elapsed_lazy <- as.numeric(difftime(Sys.time(), t, units = "secs"))
+```
 
 
+#### 3) DuckDB
+
+Une autre alternative à Arrow qui évite d'importer les données en mémoire est DuckDB. En effet, grâce à DuckDB on peut définir une requête SQL pour réaliser les calculs. Pour cela, on peut commencer par se reconnecter à la base de données précédemment créée.
+
+```{r}
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir="data/data_recensement_2017.duckdb", read_only=FALSE)
+```
+
+```{r}
+DBI::dbListTables(con)
+```
+
+Pour le moment on voit que seule la table "dataset" est présente dans notre base de données. Nous devons rajouter notre table de correspondance des communes. Pour éviter de télécharger la base de données localement nous allons directement la lire depuis le cloud où elle est actuellement sauvegarder. Pour cela, nous avon besoin d'installer l'extension `httpfs` à DuckDB.
+
+```{r}
+DBI::dbSendQuery(con, "INSTALL httpfs;")
+```
+
+Nous pouvons dès à présent rajouter la table que nous appellons `corres`.
+
+```{r}
+DBI::dbSendQuery(con, "CREATE TABLE corres AS SELECT * FROM read_parquet('https://minio.lab.sspcloud.fr/projet-formation/diffusion/bceao/table_communes.parquet');")
+DBI::dbListTables(con)
+```
+La table `corres` a bien été rajoutée à notre base de données ! Il ne manque plus qu'à traduire notre requête précedente au format SQL.
 
 
+```{r}
+query_sql <- "SELECT
+                tc.Commune,
+                tc.Département,
+                nb_logements_fortune,
+                nb_logements_commune,
+                part_logements_fortune
+              FROM (
+                SELECT
+                  dataset.COMMUNE,
+                  SUM(CASE WHEN dataset.TYPL = '5' THEN 1 ELSE 0 END) AS nb_logements_fortune,
+                  COUNT(*) AS nb_logements_commune,
+                  SUM(CASE WHEN dataset.TYPL = '5' THEN 1 ELSE 0 END) / COUNT(*) AS part_logements_fortune
+                FROM
+                  dataset
+                GROUP BY
+                dataset.COMMUNE
+              ) AS subquery
+              LEFT JOIN
+                corres AS tc
+              ON
+                subquery.COMMUNE = tc.\"Code INSEE\"
+              ORDER BY
+                part_logements_fortune DESC;"
+```
+
+Une fois la requête défini il ne reste plus qu'à l'executer et récupérer le résultat, ce qui peut se faire grâce à la fonction `dbGetQuery()`. 
+
+```{r}
+t <- Sys.time()
+DBI::dbGetQuery(con, query_sql) |> as_tibble()
+elapsed_duckdb_sql <- as.numeric(difftime(Sys.time(), t, units = "secs"))
+```
+
+Lorsque les manipulations de données ont été faites, ne pas oublier de fermer la connexion.
+
+```{r}
+duckdb::dbDisconnect(con, shutdown=TRUE)
+```
+
+On libère de la mémoire.
+
+```{r}
+rm(con)
+gc()
+```
+
+Si jamais vous n'aimez pas SQL, pas de soucis ! Il est toujours possible de profiter de la rapidité de DuckDB tout en gardant la même requête dplyr. Pour cela, rien de plus simple que d'utiliser la fonction `to_duckdb`.
 
 
+```{r}
+query <- data_lazy |>
+  arrow::to_duckdb() |>
+  select(REGION, COMMUNE, TYPL) |> 
+  group_by(COMMUNE) |>
+  summarise(
+    nb_logements_fortune = sum(as.integer(TYPL %in% "5")),
+    nb_logements_commune = n()
+  ) |>
+  mutate(
+    part_logements_fortune = nb_logements_fortune / nb_logements_commune
+  ) |> 
+  left_join(table_communes |> arrow::to_duckdb()
+            , by=c("COMMUNE"="Code INSEE")) |>
+  select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune) |>
+  arrange(-part_logements_fortune) 
+```
+
+
+```{r}
+t <- Sys.time()
+query |> 
+  collect()
+elapsed_duckdb_dplyr <- as.numeric(difftime(Sys.time(), t, units = "secs"))
+```
+
+Et si vous souhaitez connaître la requête SQL qui est utilisée sous le capot, vous pouvez toujours l'afficher grâce à la fonction `show_query()`.
+
+```{r}
+query |>
+  show_query()
+```
+
+
+#### 4) Résultats
+
+```{r}
+performance <- tibble(format_text = c("in memory", "arrow lazy", "duckDB SQL", "duckDB dplyr"),
+                             elapse_time = round(c(elapsed_in_memory, elapsed_lazy, elapsed_duckdb_sql, elapsed_duckdb_dplyr),3))
+
+performance |> 
+  mutate(format_text = forcats::fct_reorder(format_text, elapse_time)) |> 
+  ggplot(aes(format_text, elapse_time))+
+  geom_col(fill = "lightblue", width=0.6)+
+  geom_text(aes(label = glue::glue("{elapse_time} sec")), hjust = 1, nudge_x = 0.4, size = 4, fontface = "bold") +
+  coord_flip()+
+  labs(title = "Performances des requêtes",
+       x = "",
+       y = "Temps de calcul en secondes")+
+  theme_light()
+```
+
+
+## II - Manipulation de données sur le Cloud
+
+Cloud = pas besoin de stocker les données en local.
+Cloud = puissance de calcul plus élevé
+
+### A - Arrow
+
+On peut
+
+```{r}
+aws.s3::get_bucket("projet-formation", prefix = "diffusion/bceao", region = "")
+```
+
+
+```{r}
+bucket <- arrow::s3_bucket(
+  "projet-formation/diffusion/bceao/data_partitioned",
+  endpoint_override = "minio.lab.sspcloud.fr"
+)
+
+data_cloud <- arrow::open_dataset(
+  source = bucket,
+  partitioning = arrow::schema(REGION = arrow::utf8()))
+
+```
+
+
+```{r}
+query <- data_cloud |> 
+  select(REGION, COMMUNE, TYPL) |> 
+  group_by(COMMUNE) |>
+  summarise(
+    nb_logements_fortune = sum(TYPL %in% "5"),
+    nb_logements_commune = n()
+  ) |>
+  mutate(
+    part_logements_fortune = nb_logements_fortune / nb_logements_commune
+  ) |> 
+  left_join(table_communes, by=c("COMMUNE"="Code INSEE")) |>
+  select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune) |>
+  arrange(-part_logements_fortune)
+```
+
+
+```{r}
+query |> collect()
+```
+
+C'est plus long à run, mais c'est normal ? comment expliqué ? flux intra cluster @romain
+Un petit message sur les credential d'acces au bucket (ok pour une ouverture du service, mais sinon il faut renseigner id et token)
+dire de bien regarder la RAM sur Rstudio et constater qu'elle bouge quasi pas
+
+
+### B - Spark
