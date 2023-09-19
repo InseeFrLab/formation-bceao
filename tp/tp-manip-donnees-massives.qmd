@@ -1,0 +1,166 @@
+---
+title: "Manipulation de données massives"
+editor: visual
+---
+
+# Manipulation de données massives avec R
+
+L'objectif de ce TP est de d'explorer les principes et les techniques essentiels pour travailler avec des données massives grâce au langage statistique R. Les outils présentés ont tous leur propres avantages et incovénients et le choix de leur utilisation ou non dépend en premier lieu du besoin que chacun peu avoir. De plus, certains outils nécessitent des infrastructures informatiques qui ne sont pas forcément accessible pour chacun de vos projets. Ainsi, l'idée est de présenter les techniques avec une complexité croissante.
+
+Nous allons utiliser les données du recensement de la population française de 2017 pour illustrer les différentes méthodes. Si le jeu de données est déjà relativement lourd pour poser des problèmes de mémoire sur certain ordinateur, il ne s'agit pas de données massive à proprement dit. Cependant, l'objectif est de vous familiariser avec les techniques présenter de sorte à ce que vous puissiez les réutiliser dans vos propres cas d'usages.
+
+Dans un premier temps nous allons voir comment on peut manipuler des quantités de données importantes **localement**, même lorsque la RAM est inférieure à la taille des données analysées. Ensuite, nous verrons comment manipuler des données directement sur le **cloud**, lorsque la puissance locale n'est plus suffisante.
+
+## I - Manipulation de données en local
+
+Avant de commencer, chargeons quelques librairies qui nous seront utiles ultérieurement et définissons quelques réglages.
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+# Réglages arrow
+arrow:::set_cpu_count(30)
+options(arrow.use_threads = TRUE)
+```
+
+### A - Importation et stockage de données massives
+
+#### Importation
+
+Le format le plus répandu pour le stockage de données est le `.csv` . Ce format a l'avantage d'être facile à lire, aussi bien par un humain que par les différents langages et systèmes informatiques. Cependant ce format n'est pas compressé et prend donc beaucoup de place dans l'espace disque. De plus, il doit être chargé intégralement dans la mémoire même lorsque l'on souhaite analyser qu'un sous-échantillon des données. Cela a évidemment un coût à la fois de stockage et de temps computationnel. Nous allons utiliser une alternative au format `.csv` de plus en plus répandu et qui a été choisi à l'Insee comme format de stockage et de diffusion par défaut pour les prochaines années, il s'agit du format `.parquet` .
+
+Pour commencer nous allons importer le fichier `.csv` mis à votre disposition : `tp/data/data_recensement_2017.csv`. Pour ce faire nous allons voir 3 méthodes différentes et analyser les différentes performances :
+- importation via le package standard `readr`
+- importation via le package `data.table`, qui est une extension au data.frame de R base
+- importation via le package `arrow` 
+
+
+```{r}
+# Importation avec readr
+t <- Sys.time()
+df_readr <- readr::read_delim(
+  "data/data_recensement_2017.csv",
+  delim = ";",
+  col_types = readr::cols(COMMUNE = readr::col_character())
+)
+elapsed_readr <- as.numeric(difftime(Sys.time(), t, units = "secs"))
+```
+
+```{r}
+# Importation avec data.table
+t <- Sys.time()
+df_datatable <- data.table::fread(
+  "data/data_recensement_2017.csv",
+  sep = ";",
+  colClasses = c(
+    COMMUNE = "character"
+  ),
+  data.table = FALSE
+)
+elapsed_datatable <- as.numeric(difftime(Sys.time(), t, units = "secs"))
+```
+
+```{r}
+# Importer avec arrow
+t <- Sys.time()
+df_arrow <- arrow::read_delim_arrow(
+  "data/data_recensement_2017.csv",
+  delim = ";",
+  col_types = arrow::schema(COMMUNE = arrow::utf8()),
+  as_data_frame = TRUE
+)
+elapsed_arrow <- as.numeric(difftime(Sys.time(), t, units = "secs"))
+```
+
+```{r}
+# On libère de la mémoire
+head(df_arrow, 6)
+```
+
+
+```{r}
+# On libère de la mémoire
+rm(df_readr, df_datatable)
+gc()
+```
+
+Analysons les différences de temps d'import du CSV entre les 3 méthodes.
+
+```{r}
+performance <- dplyr::tibble(format_text = c("readr", "data.table", "arrow"),
+                             elapse_time = round(c(elapsed_readr, elapsed_datatable, elapsed_arrow),3))
+
+
+performance |> 
+  dplyr::mutate(format_text = forcats::fct_reorder(format_text, elapse_time)) |> 
+  ggplot(aes(format_text, elapse_time))+
+  geom_col(fill = "#003299", width=0.6)+
+  geom_text(aes(label = glue::glue("{elapse_time} sec")), hjust = 1, nudge_x = 0.4, size = 4, fontface = "bold") +
+  coord_flip()+
+  labs(title = "Performances de l'importation d'un fichier CSV",
+       subtitle ="entre readr, data.table et arrow",
+       x = "",
+       y = "Temps d'import en secondes")+
+  theme_light()
+```
+
+
+On constate que les librairies data.table et arrow sont beaucoup plus adaptés pour importer des gros fichiers CSV dans R. En effet, data.table permet de réduire de moitié le temps d'import et arrow de manière encore plus spectaculaire.
+
+Comme évoqué précedemment, le format .csv n'est pas adapté pour la manipulation de données massives. C'est pourquoi il est préférable de travailler avec des données au format .parquet, ou bien avec une base de données DuckDB. Selon les usages, il peut être utile de travailler sur des fichiers parquet partitionnés plutôt que sur un gros fichier .parquet. 
+
+#### Stockage
+
+Maintenant que nous avons importé en mémoire notre fichier CSV, commencez par écrire le fichier `data/data_recensement_2017.parquet`.
+
+```{r}
+# Ecriture d'un fichier parquet unique
+arrow::write_parquet(df_arrow, "data/data_recensement_2017.parquet")
+```
+
+
+On peut également créer le un dossier `data/data_partition` dans lequel sont enregistrés nos fichiers parquet partitionnés par région. 
+
+```{r}
+# Ecriture d'un dossier contenant des fichiers parquet partitionnés par la région
+arrow::write_dataset(df_arrow,
+                     "data/data_partition", 
+                     format = "parquet",
+                     partitioning = c("REGION"))
+```
+
+
+Prenez le temps de regarder la manière dont sont sauvegarder les fichiers parquet dans le dossier `data_partition`.
+
+
+```{r}
+fs::dir_tree("data/data_partition")
+```
+
+Un autre moyen efficace pour sauvegarder nos données est de les intégrer à une base de données `.duckdb` afin d'y réaliser plusieurs requêtes ensuite. Si DuckDB n'est pas encore capable d'ouvrir des fichiers multi-niveau crées par partition, il est tout de même possible de lire directement des fichiers CSV ou parquet. Cependant, comme toute base de données, le format .duckdb peut contenir plusieurs tables et réaliser toutes les opérations standards de database management. 
+
+Pour créer une database depuis R, il suffit d'utiliser la fonction `duckdb()` et de renseigner le chemin où l'on souhaite l'écrire. 
+
+```{r}
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir="data/data_recensement_2017.duckdb", read_only=FALSE)
+```
+
+L'un des principaux avantages de DuckDB est son interopérabilité avec Arrow, ce qui permet de très facilement passer d'un object arrow à un object duckdb et vice-versa. Pour cela il suffit d'utiliser les fonctions `to_duckdb()` et `to_arrow()`.
+
+```{r}
+arrow::to_duckdb(df_arrow, table_name = "RP2017", con = con)
+```
+
+Les données sont maintenant accessibles depuis DuckDB, on peut donc créer une table dans notre base de données avec une requête SQL standard.
+
+```{r}
+DBI::dbSendQuery(con, "CREATE TABLE dataset AS SELECT * FROM RP2017")
+```
+
+
+
+
+
+
+
