@@ -2,6 +2,12 @@
 
 library(ggplot2)
 library(dplyr)
+
+# Réglages arrow
+arrow:::set_cpu_count(30)
+options(arrow.use_threads = TRUE)
+
+
 # Nous avons mis à votre disposition un jeu de données de 4Go provenant du recensement de la population. 
 # Il ne s'agit pas à proprement parler de données massives, mais l'objectif est de retracer les différentes 
 # étapes, souvent indispensables, lorsque l'on travaille avec des données massives en R.
@@ -64,7 +70,7 @@ performance |>
 
 # Ecriture d'un fichier parquet unique
 arrow::write_parquet(df_arrow,
-                    "tp/data/data_recensement_2017.parquet")
+                     "tp/data/data_recensement_2017.parquet")
 
 # Ecriture d'un dossier contenant des fichiers parquet partitionnés par la Région
 arrow::write_dataset(df_arrow,
@@ -75,17 +81,15 @@ arrow::write_dataset(df_arrow,
 # Ecriture d'une base de données DuckDB à partir du parquet partitionné
 data_arrow <- arrow::open_dataset("tp/data/data_partitioned")
 
-# In memory connection
-con = dbConnect(duckdb::duckdb(), dbdir=":memory:", read_only=FALSE)
-
 # Connection using a file
 con <- DBI::dbConnect(duckdb::duckdb(), dbdir="tp/data/data_recensement_2017.duckdb", read_only=FALSE)
-
 arrow::to_duckdb(df_arrow, table_name = "RP2017", con = con)
+DBI::dbSendQuery(con, "CREATE TABLE dataset AS SELECT * FROM RP2017")
+DBI::dbDisconnect(con)
 
-DBI::dbExecute(con, "INSTALL httpfs;")
-DBI::dbExecute(con, "CREATE TABLE corres AS SELECT * FROM read_parquet('https://minio.lab.sspcloud.fr/projet-formation/diffusion/bceao/table_communes.parquet');")
-DBI::dbExecute(con, "CREATE TABLE dataset AS SELECT * FROM RP2017")
+# In memory connection
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir=":memory:", read_only=FALSE)
+DBI::dbDisconnect(con)
 
 disk_size <- fs::dir_info(here::here("tp", "data"), recurse = TRUE) |>
   filter(type == "file") |>
@@ -95,11 +99,12 @@ disk_size <- fs::dir_info(here::here("tp", "data"), recurse = TRUE) |>
   summarise(total = sum(size)) |> 
   ungroup() |>
   mutate(name = case_when(
-                          startsWith(name, "part-0") ~ "parquet partitionné",
-                          TRUE ~ tools::file_ext(name)
-                ),
+    startsWith(name, "part-0") ~ "parquet partitionné",
+    TRUE ~ tools::file_ext(name)
+  ),
   name = forcats::fct_reorder(name, total)
-  ) 
+  ) |> 
+  filter(name != "wal")
 
 disk_size |> 
   ggplot(aes(name, total)) +
@@ -113,6 +118,9 @@ disk_size |>
        y = "Size")+
   theme_light()
 
+rm(df_arrow)
+gc()
+
 ############################################################
 # Manipulation des données parquet en mémoire
 ############################################################
@@ -122,25 +130,39 @@ data <- arrow::read_parquet(
   file = "tp/data/data_recensement_2017.parquet"
 )
 
+# Importation d'un fichier de correspondance des communes 
+table_communes <- arrow::read_parquet(
+  file = arrow::s3_bucket(
+    "projet-formation/diffusion/bceao/table_communes.parquet",
+    endpoint_override = "minio.lab.sspcloud.fr"
+  )
+)
+
+
 # On va calculer la part de logement de fortune pour chaque commune d'une région donnée
 # Un logement de de fortune est caractérisé par la modalité 5 de la variable TYPL
 t <- Sys.time()
 data |> 
-  # filter(REGION == "76") |>
   select(REGION, COMMUNE, TYPL) |> 
   group_by(COMMUNE) |>
   summarise(
-    nb_logements_fortune = sum(TYPL == "5"),
+    nb_logements_fortune = sum(TYPL %in% "5"),
     nb_logements_commune = n()
   ) |>
   mutate(
     part_logements_fortune = nb_logements_fortune / nb_logements_commune
   ) |>
-  arrange(-part_logements_fortune)
+  arrange(-part_logements_fortune) |>
+  left_join(table_communes, by=c("COMMUNE"="Code INSEE")) |>
+  select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune)
+
 elapsed_in_memory <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 
+rm(data)
+gc()
+
 ############################################################
-# Manipulation des données parquet en évalutaion "Lazy"
+# Manipulation des données parquet en évaluation "Lazy"
 ############################################################
 
 # On importe le dataset en mode lazy
@@ -158,7 +180,6 @@ names(data_lazy)
 # On reproduit le même calcul que précedemment. Pour cela on définit dans un premier temps la requête.
 # L'execution est instantanée puisqu'aucun calcul n'a encore été réalisé
 query <- data_lazy |> 
-  # filter(REGION == "76") |>
   select(REGION, COMMUNE, TYPL) |> 
   group_by(COMMUNE) |>
   summarise(
@@ -168,7 +189,9 @@ query <- data_lazy |>
   mutate(
     part_logements_fortune = nb_logements_fortune / nb_logements_commune
   ) |> 
-  arrange(-part_logements_fortune)
+  left_join(table_communes, by=c("COMMUNE"="Code INSEE")) |>
+  select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune) |>
+  arrange(-part_logements_fortune) 
 
 
 # Une fois la requête créée, il existe deux méthodes pour évaluer la requête (i.e. réaliser le calcul).
@@ -183,13 +206,15 @@ t <- Sys.time()
 query |> collect()
 elapsed_lazy <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 
-
 ############################################################
 # Manipulation depuis la base de données DuckDB
 ############################################################
 
-con <- DBI::dbConnect(duckdb::duckdb(), dbdir="tp/data/data_recensement_2017.duckdb", read_only=TRUE)
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir="tp/data/data_recensement_2017.duckdb", read_only=FALSE)
+DBI::dbSendQuery(con, "INSTALL httpfs;")
+DBI::dbSendQuery(con, "CREATE TABLE corres AS SELECT * FROM read_parquet('https://minio.lab.sspcloud.fr/projet-formation/diffusion/bceao/table_communes.parquet');")
 DBI::dbListTables(con)
+
 query_sql <- "SELECT
                 tc.Commune,
                 tc.Département,
@@ -217,8 +242,10 @@ query_sql <- "SELECT
 t <- Sys.time()
 DBI::dbGetQuery(con, query_sql) |> as_tibble()
 elapsed_duckdb <- as.numeric(difftime(Sys.time(), t, units = "secs"))
-duckdb::dbDisconnect(con)
+duckdb::dbDisconnect(con, shutdown=TRUE)
 
+rm(con)
+gc()
 ############################################################
 # Evaluation de la performance
 ############################################################
@@ -242,8 +269,6 @@ performance |>
 ############################################################
 # Accès au données depuis le Cloud
 ############################################################
-# mc cp -r formation-bceao/tp/data/data_partitioned/ s3/projet-formation/diffusion/bceao/data_partitioned/
-
 
 # On peut lister les fichiers présent dans le bucket
 aws.s3::get_bucket("projet-formation", prefix = "diffusion/bceao", region = "")
@@ -259,7 +284,6 @@ data_cloud <- arrow::open_dataset(
   partitioning = arrow::schema(REGION = arrow::utf8()))
 
 query <- data_cloud |> 
-  # filter(REGION == "76") |>
   select(REGION, COMMUNE, TYPL) |> 
   group_by(COMMUNE) |>
   summarise(
@@ -269,12 +293,16 @@ query <- data_cloud |>
   mutate(
     part_logements_fortune = nb_logements_fortune / nb_logements_commune
   ) |> 
+  left_join(table_communes, by=c("COMMUNE"="Code INSEE")) |>
+  select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune) |>
   arrange(-part_logements_fortune)
 
+t <- Sys.time()
 query |> collect()
+elapsed_ <- as.numeric(difftime(Sys.time(), t, units = "secs"))
+
 # C'est plus long à run, mais c'est normal car ça dépend de la co internet que l'on a sur le SSPCloud
 # Un petit message sur les credential d'acces au bucket (ok pour une ouverture du service, mais sinon il faut renseigner
 # id et token)
 # dire de bien regarder la RAM sur Rstudio et constater qu'elle bouge quasi pas
-
 
