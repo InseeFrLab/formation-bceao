@@ -10,3 +10,7 @@ cards/cards*_files
 *background.svg
 *logo.svg
 *favicon-32x32.png
+.Rproj.user
+*.Rproj
+
+tp/data/*
