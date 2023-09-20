@@ -9,6 +9,6 @@ categories:
   - NLP
 slides:
   text: Slides
-  url: /slides/intro-big-data/index.html
+  url: /slides/juridique-big-data/index.html
 order: 7
 ---
