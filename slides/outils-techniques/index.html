@@ -532,7 +532,7 @@
 <section id="une-plateforme-de-data-science" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Une plateforme de data science</h2>
 <ul>
-<li class="fragment">Les choix techniques ne suffisent pas
+<li class="fragment">Les <span class="orange"><strong>choix techniques</strong></span> ne suffisent pas
 <ul>
 <li class="fragment">Les technologies <em>cloud</em> sont <span class="blue2"><strong>difficiles d’accès</strong></span></li>
 <li class="fragment">Une <span class="blue2"><strong>interface web</strong></span> comme liant technique</li>
@@ -570,7 +570,7 @@
 <h2>Motivation</h2>
 <ul>
 <li class="fragment"><p>Une <span class="orange"><strong>infrastructure</strong></span> adaptée au <em>big data</em> est nécessaire.. mais pas suffisante !</p></li>
-<li class="fragment"><p>Nécessité d’adapter les pratiques</p>
+<li class="fragment"><p>Nécessité d’<span class="orange"><strong>adapter les pratiques</strong></span></p>
 <ul>
 <li class="fragment"><span class="blue2"><strong>Langages</strong></span> de programmation</li>
 <li class="fragment"><span class="blue2"><strong>Formats</strong></span> de données</li>
@@ -581,12 +581,12 @@
 <section id="langages-de-programmation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Langages de programmation</h2>
 
-<img data-src="img/skills.png" class="r-stretch"><p><a href="https://towardsdatascience.com/most-in-demand-tech-skills-for-data-engineers-58f4c1ca25ab">Source</a></p>
+<img data-src="img/skills.png" class="r-stretch quarto-figure-center"><p><a href="https://towardsdatascience.com/most-in-demand-tech-skills-for-data-engineers-58f4c1ca25ab">Source</a></p>
 </section>
 <section id="limites-des-formats-de-données-usuels" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Limites des formats de données usuels</h2>
 <ul>
-<li class="fragment">Les formats usuels (CSV, JSON, XML) sont inadaptés à la <em>big data</em>
+<li class="fragment">Les <span class="orange"><strong>formats usuels</strong></span> (CSV, JSON, XML) sont <span class="orange"><strong>inadaptés</strong></span> à la <em>big data</em>
 <ul>
 <li class="fragment"><span class="blue2"><strong>Non-compressés</strong></span> : <em>human readable</em> mais espace disque élevé</li>
 <li class="fragment"><span class="blue2"><strong>Orientés ligne</strong></span> : un traitement sur une/des colonne(s) implique une lecture complète du fichier</li>
@@ -598,15 +598,15 @@
 <ul>
 <li class="fragment"><span class="orange"><strong>Propriétés souhaitées</strong></span>
 <ul>
-<li class="fragment">Orientés colonne</li>
-<li class="fragment">Efficients en stockage disque</li>
-<li class="fragment">Efficients en RAM</li>
-<li class="fragment">Interopérables et open-source</li>
+<li class="fragment">Orientés <span class="blue2"><strong>colonne</strong></span></li>
+<li class="fragment">Efficients en <span class="blue2"><strong>stockage disque</strong></span></li>
+<li class="fragment">Efficients en <span class="blue2"><strong>RAM</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>Interopérables</strong></span> et open-source</li>
 </ul></li>
-<li class="fragment">Deux formats
+<li class="fragment">Formats <span class="orange"><strong>candidatsd</strong></span>
 <ul>
-<li class="fragment"><code>Parquet</code> : stockage disque</li>
-<li class="fragment"><code>Arrow</code> : traitement en mémoire</li>
+<li class="fragment"><code>Parquet</code> : <span class="blue2"><strong>stockage disque</strong></span></li>
+<li class="fragment"><code>Arrow</code> : traitement en <span class="blue2"><strong>mémoire</strong></span></li>
 </ul></li>
 </ul>
 </section>
@@ -615,12 +615,18 @@
 <ul>
 <li class="fragment">Le <span class="orange"><strong>stockage hybride</strong></span> optimise la lecture
 <ul>
-<li class="fragment">Projection (<code>SELECT</code>) : orientation colonne</li>
-<li class="fragment">Predicates (<code>WHERE</code>) : orientation ligne</li>
+<li class="fragment"><span class="blue2"><strong>Projection</strong></span> (<code>SELECT</code>) : orientation <span class="blue2"><strong>colonne</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>Predicates</strong></span> (<code>WHERE</code>) : orientation <span class="blue2"><strong>ligne</strong></span></li>
 </ul></li>
 </ul>
-
-<img data-src="img/row-column.png" class="r-stretch"><p><a href="https://towardsdatascience.com/demystifying-the-parquet-file-format-13adb0206705">Source</a></p>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/row-column.png"></p>
+</figure>
+</div>
+<p><a href="https://towardsdatascience.com/demystifying-the-parquet-file-format-13adb0206705">Source</a></p>
+</div>
 </section>
 <section id="le-format-parquet" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Le format <code>Parquet</code></h2>
@@ -632,7 +638,7 @@
 </ul></li>
 <li class="fragment"><span class="orange"><strong>Optimisé</strong></span>
 <ul>
-<li class="fragment">Compression (jusqu’à 87 % moins d’espace qu’un CSV)</li>
+<li class="fragment"><span class="blue2"><strong>Compression</strong></span> (jusqu’à 87 % moins d’espace qu’un CSV)</li>
 <li class="fragment">Parcours du fichier (jusqu’à 34x plus rapide qu’un CSV)</li>
 </ul></li>
 <li class="fragment"><span class="blue2"><strong>Interopérable</strong></span> et open-source</li>
@@ -644,7 +650,7 @@
 <li class="fragment"><code>Parquet</code> ne résout pas tout
 <ul>
 <li class="fragment">L’espace disque est optimisé</li>
-<li class="fragment">Les données décompressées doivent passer en RAM</li>
+<li class="fragment">Les données décompressées doivent <span class="blue2"><strong>passer en RAM</strong></span></li>
 </ul></li>
 <li class="fragment">Comment analyser 100 GB de données sur un PC avec 16 GB de RAM ?</li>
 </ul>
@@ -659,15 +665,21 @@
 <li class="fragment"><span class="blue2"><strong>Interopérable</strong></span> et standardisé</li>
 </ul></li>
 </ul>
-
-<img data-src="img/arrow.png" class="r-stretch"></section>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/arrow.png"></p>
+</figure>
+</div>
+</div>
+</section>
 <section id="traitement-des-données-massives" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Traitement des données massives</h2>
 <ul>
 <li class="fragment"><code>Arrow</code> ne résout pas tout
 <ul>
-<li class="fragment">Les données massives nécessitent des infrastuctures big data</li>
-<li class="fragment">Les algorithmes aussi doivent être adaptés</li>
+<li class="fragment">Les données massives nécessitent des <span class="blue2"><strong>infrastructures big data</strong></span></li>
+<li class="fragment">Les <span class="blue2"><strong>algorithmes</strong></span> aussi doivent être <span class="blue2"><strong>adaptés</strong></span></li>
 </ul></li>
 <li class="fragment">Solution : <span class="orange"><strong>calcul distribué</strong></span></li>
 </ul>
@@ -679,7 +691,7 @@
 <li class="fragment"><p>Popularisé par l’implémentation open-source d’<span class="orange"><strong>Hadoop</strong></span></p></li>
 </ul>
 
-<img data-src="img/mapreduce.png" class="r-stretch"></section>
+<img data-src="img/mapreduce.png" class="r-stretch quarto-figure-center"></section>
 <section id="apache-spark" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Apache Spark</h2>
 <ul>
@@ -690,15 +702,15 @@
 </ul></li>
 </ul>
 
-<img data-src="img/spark.png" class="r-stretch"></section>
+<img data-src="img/spark.png" class="r-stretch quarto-figure-center"></section>
 <section id="outils-pour-la-mise-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Outils pour la mise en production</h2>
 <ul>
-<li class="fragment">Traitements automatisés (<em>workflows</em>)
+<li class="fragment"><span class="orange"><strong>Traitements automatisés</strong></span> (<em>workflows</em>)
 <ul>
 <li class="fragment"><code>argo-workflow</code></li>
 </ul></li>
-<li class="fragment">Déploiement (<em>batch</em>, <em>workflow</em>, application)
+<li class="fragment"><span class="orange"><strong>Déploiement</strong></span> (<em>batch</em>, <em>workflow</em>, application)
 <ul>
 <li class="fragment"><code>Kubernetes</code></li>
 <li class="fragment"><code>ArgoCD</code></li>
@@ -719,7 +731,7 @@
 <section id="catalogue-de-services-donyxia" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Catalogue de services d’Onyxia</h2>
 
-<img data-src="img/catalog.png" class="r-stretch"></section></section>
+<img data-src="img/catalog.png" class="r-stretch quarto-figure-center"></section></section>
 <section>
 <section id="organisation-et-compétences" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>Organisation et compétences</h1>
@@ -745,8 +757,14 @@
 <ul>
 <li class="fragment">Besoin de trouver des <span class="orange"><strong>organisations hybrides</strong></span></li>
 </ul>
-
-<img data-src="img/mlops.png" class="r-stretch"></section>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/mlops.png"></p>
+</figure>
+</div>
+</div>
+</section>
 <section id="organisation-dun-projet" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Organisation d’un projet</h2>
 <div class="quarto-figure quarto-figure-center">
@@ -758,7 +776,7 @@
 <section id="formation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Formation</h2>
 <ul>
-<li class="fragment">Toutes nos <a href="https://www.sspcloud.fr/formation">formations</a> sont <span class="blue2"><strong>open-source</strong></span>
+<li class="fragment">Toutes nos formations sont <span class="blue2"><strong>open-source</strong></span> (<a href="[formations](https://www.sspcloud.fr/formation)">catalogue</a>)
 <ul>
 <li class="fragment">Parcours de formation à R / Python</li>
 <li class="fragment">Formation à Spark</li>

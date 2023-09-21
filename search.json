@@ -123,14 +123,14 @@
     "href": "slides/outils-techniques/index.html#formats-de-données-pour-la-big-data",
     "title": "Besoins techniques et organisationnels",
     "section": "Formats de données pour la big data",
-    "text": "Formats de données pour la big data\n\nPropriétés souhaitées\n\nOrientés colonne\nEfficients en stockage disque\nEfficients en RAM\nInteropérables et open-source\n\nDeux formats\n\nParquet : stockage disque\nArrow : traitement en mémoire"
+    "text": "Formats de données pour la big data\n\nPropriétés souhaitées\n\nOrientés colonne\nEfficients en stockage disque\nEfficients en RAM\nInteropérables et open-source\n\nFormats candidatsd\n\nParquet : stockage disque\nArrow : traitement en mémoire"
   },
   {
     "objectID": "slides/outils-techniques/index.html#modes-de-stockage",
     "href": "slides/outils-techniques/index.html#modes-de-stockage",
     "title": "Besoins techniques et organisationnels",
     "section": "Modes de stockage",
-    "text": "Modes de stockage\n\nLe stockage hybride optimise la lecture\n\nProjection (SELECT) : orientation colonne\nPredicates (WHERE) : orientation ligne\n\n\n\nSource"
+    "text": "Modes de stockage\n\nLe stockage hybride optimise la lecture\n\nProjection (SELECT) : orientation colonne\nPredicates (WHERE) : orientation ligne\n\n\n\n\n\n\n\n\nSource"
   },
   {
     "objectID": "slides/outils-techniques/index.html#le-format-parquet",
@@ -158,7 +158,7 @@
     "href": "slides/outils-techniques/index.html#traitement-des-données-massives",
     "title": "Besoins techniques et organisationnels",
     "section": "Traitement des données massives",
-    "text": "Traitement des données massives\n\nArrow ne résout pas tout\n\nLes données massives nécessitent des infrastuctures big data\nLes algorithmes aussi doivent être adaptés\n\nSolution : calcul distribué"
+    "text": "Traitement des données massives\n\nArrow ne résout pas tout\n\nLes données massives nécessitent des infrastructures big data\nLes algorithmes aussi doivent être adaptés\n\nSolution : calcul distribué"
   },
   {
     "objectID": "slides/outils-techniques/index.html#hadoop-mapreduce",
@@ -221,7 +221,7 @@
     "href": "slides/outils-techniques/index.html#formation",
     "title": "Besoins techniques et organisationnels",
     "section": "Formation",
-    "text": "Formation\n\nToutes nos formations sont open-source\n\nParcours de formation à R / Python\nFormation à Spark\nTutoriels de Machine Learning\nMise en production\netc."
+    "text": "Formation\n\nToutes nos formations sont open-source (catalogue)\n\nParcours de formation à R / Python\nFormation à Spark\nTutoriels de Machine Learning\nMise en production\netc."
   },
   {
     "objectID": "slides/juridique-big-data/index.html#quest-ce-que-le-web-scraping",
