@@ -184,12 +184,12 @@ execute:
 
 ## Motivation
 
-- Une infrastructure adaptée au *big data* est nécessaire.. mais pas suffisante !
+- Une [**infrastructure**]{.orange} adaptée au *big data* est nécessaire.. mais pas suffisante !
 
 - Nécessité d'adapter les pratiques
-  - Langages de programmation
-  - Formats de données
-  - Outils informatiques spécifiques
+  - [**Langages**]{.blue2} de programmation
+  - [**Formats**]{.blue2} de données
+  - [**Librairies**]{.blue2} informatiques spécifiques
 
 ## Langages de programmation
 
@@ -200,24 +200,24 @@ execute:
 ## Limites des formats de données usuels
 
 - Les formats usuels (CSV, JSON, XML) sont inadaptés à la *big data*
-  - Non-compressés : *human readable* mais espace disque élevé
-  - Orientés ligne : un traitement sur une/des colonne(s) implique une lecture complète du fichier
+  - [**Non-compressés**]{.blue2} : *human readable* mais espace disque élevé
+  - [**Orientés ligne**]{.blue2} : un traitement sur une/des colonne(s) implique une lecture complète du fichier
 
 ## Formats de données pour la big data
 
-- Propriétés souhaitées
+- [**Propriétés souhaitées**]{.orange} 
   - Orientés colonne
   - Efficients en stockage disque
   - Efficients en RAM
   - Interopérables et open-source
 
 - Deux formats 
-  - Parquet : stockage disque
-  - Arrow : traitement en mémoire
+  - `Parquet` : stockage disque
+  - `Arrow` : traitement en mémoire
 
 ## Modes de stockage
 
-- Le stockage hybride optimise la lecture
+- Le [**stockage hybride**]{.orange} optimise la lecture
   - Projection (`SELECT`) : orientation colonne
   - Predicates (`WHERE`) : orientation ligne
 
@@ -227,15 +227,15 @@ execute:
 
 ## Le format `Parquet`
 
-- Orienté colonne (hybride)
-  - Adapté aux traitements analytiques
+- [**Orienté colonne**]{.orange} (hybride)
+  - Adapté aux traitements [**analytiques**]{.blue2}
   - Conçu pour être écrit une fois mais lu fréquemment
 
-- Optimisé
+- [**Optimisé**]{.orange}
   - Compression (jusqu'à 87 % moins d'espace qu'un CSV)
   - Parcours du fichier (jusqu'à 34x plus rapide qu'un CSV)
 
-- Interopérable et open-source
+- [**Interopérable**]{.blue2} et open-source
 
 ## Traitement en mémoire
 
@@ -247,10 +247,10 @@ execute:
 
 ## Arrow
 
-- Format de données en mémoire orienté colonne
-  - Optimisé pour les traitements analytiques
+- Format de données [**en mémoire, orienté colonne**]{.orange}
+  - Optimisé pour les traitements [**analytiques**]{.blue2}
   - Pas nécessaire de charger toutes les données en RAM
-  - Interopérable et standardisé
+  - [**Interopérable**]{.blue2} et standardisé
 
 ![](img/arrow.png)
 
@@ -260,19 +260,19 @@ execute:
   - Les données massives nécessitent des infrastuctures big data
   - Les algorithmes aussi doivent être adaptés
 
-- Solution : calcul distribué
+- Solution : [**calcul distribué**]{.orange}
 
 ## Hadoop MapReduce
 
-- Developed by Google (2004)
+- Développé par Google (2004)
 
-- Popularized by Hadoop's open-source implementation
+- Popularisé par l'implémentation open-source d'[**Hadoop**]{.orange}
 
 ![](img/mapreduce.png)
 
 ## Apache Spark
 
-- Démocratisation du calcul distribué
+- Démocratisation du [**calcul distribué**]{.orange}
   - Abstraction des opérations MapReduce
   - Vitesse d'exécution ++ (RAM vs. disque)
 
@@ -289,13 +289,11 @@ execute:
 
 ## En résumé
 
-- Utiliser un format de données adapté (`Parquet`)
+- Utiliser un [**format**]{.orange} de données adapté (`Parquet`)
 
-- Utiliser des outils informatiques adaptés
-  - Données volumineuses : calcul en mémoire optimisé  (`Arrow` / `DuckDB`)
-  - Données massives : calcul distribué (`Spark`)
-
-- Passer de l'expérimentation à la production
+- Utiliser des [**outils**]{.orange} informatiques adaptés
+  - Données [**volumineuses**]{.blue2} : calcul [**en mémoire**]{.blue2} optimisé  (`Arrow` / `DuckDB`)
+  - Données [**massives**]{.blue2} : calcul [**distribué**]{.blue2} (`Spark`)
 
 ## Catalogue de services d'Onyxia
 
@@ -307,7 +305,19 @@ execute:
 
 ## Labs
 
-- Insee : SSP Lab (innovation méthodo DS) + DIIT (innovation info data ingé / data architect)
+- L'innovation [**méthodologie**]{.orange} ET [**informatique**]{.orange} sont complémentaires
+  - Pas de big data sans [**infrastructure**]{.blue2} adaptée
+  - Pas de big data sans [**outils**]{.blue2} et [**algorithmes**]{.blue2} adaptés
+
+- Insee : deux [**labs**]{.orange} qui travaillent en synérgie
+  - [**SSP Lab**]{.orange} : innovation méthodologique en data science
+  - [**DIIT**]{.orange} : innovation informatique (Onyxia / SSP Cloud)
+
+## Approche MLOps
+
+- Besoin de trouver des [**organisations hybrides**]{.orange}
+
+![](img/mlops.png)
 
 ## Organisation d'un projet
 
@@ -315,10 +325,22 @@ execute:
 
 ## Formation
 
-- ENSAE / ENSAI
-- Liens supports
+- Toutes nos [formations](https://www.sspcloud.fr/formation) sont [**open-source**]{.blue2}
+  - Parcours de formation à R / Python
+  - Formation à Spark
+  - Tutoriels de Machine Learning
+  - Mise en production
+  - etc.
 
 
 # Conclusion
 
-# 
+- Donner les [**moyens d'innover**]{.orange}
+  - Une [**infrastructure**]{.blue2} moderne est primordiale
+  - Adopter une [**organisation**]{.blue2} souple favorisant l'[**autonomie**]{.blue2}
+  - Investir dans la [**formation**]{.blue2}
+
+- Adopter les [**bonnes pratiques**]{.orange} de développement
+  - [**Formats**]{.blue2} de données et [**librairies**]{.blue2} logicielles adaptés
+  - Passer de l'[**expérimentation**]{.blue2} à la [**production**]{.blue2}
+
