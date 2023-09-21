@@ -159,7 +159,7 @@ execute:
 
 ## Une plateforme de data science
 
-- Les choix techniques ne suffisent pas
+- Les [**choix techniques**]{.orange} ne suffisent pas
    - Les technologies *cloud* sont [**difficiles d'accès**]{.blue2}
    - Une [**interface web**]{.blue2} comme liant technique
 
@@ -186,42 +186,44 @@ execute:
 
 - Une [**infrastructure**]{.orange} adaptée au *big data* est nécessaire.. mais pas suffisante !
 
-- Nécessité d'adapter les pratiques
+- Nécessité d'[**adapter les pratiques**]{.orange}
   - [**Langages**]{.blue2} de programmation
   - [**Formats**]{.blue2} de données
   - [**Librairies**]{.blue2} informatiques spécifiques
 
 ## Langages de programmation
 
-![](img/skills.png)
+![](img/skills.png){fig-align="center"}
 
 [Source](https://towardsdatascience.com/most-in-demand-tech-skills-for-data-engineers-58f4c1ca25ab)
 
 ## Limites des formats de données usuels
 
-- Les formats usuels (CSV, JSON, XML) sont inadaptés à la *big data*
+- Les [**formats usuels**]{.orange} (CSV, JSON, XML) sont [**inadaptés**]{.orange} à la *big data*
   - [**Non-compressés**]{.blue2} : *human readable* mais espace disque élevé
   - [**Orientés ligne**]{.blue2} : un traitement sur une/des colonne(s) implique une lecture complète du fichier
 
 ## Formats de données pour la big data
 
 - [**Propriétés souhaitées**]{.orange} 
-  - Orientés colonne
-  - Efficients en stockage disque
-  - Efficients en RAM
-  - Interopérables et open-source
+  - Orientés [**colonne**]{.blue2}
+  - Efficients en [**stockage disque**]{.blue2}
+  - Efficients en [**RAM**]{.blue2}
+  - [**Interopérables**]{.blue2} et open-source
 
-- Deux formats 
-  - `Parquet` : stockage disque
-  - `Arrow` : traitement en mémoire
+- Formats [**candidatsd**]{.orange} 
+  - `Parquet` : [**stockage disque**]{.blue2}
+  - `Arrow` : traitement en [**mémoire**]{.blue2}
 
 ## Modes de stockage
 
 - Le [**stockage hybride**]{.orange} optimise la lecture
-  - Projection (`SELECT`) : orientation colonne
-  - Predicates (`WHERE`) : orientation ligne
+  - [**Projection**]{.blue2} (`SELECT`) : orientation [**colonne**]{.blue2}
+  - [**Predicates**]{.blue2} (`WHERE`) : orientation [**ligne**]{.blue2}
 
-![](img/row-column.png)
+. . .
+
+![](img/row-column.png){fig-align="center"}
 
 [Source](https://towardsdatascience.com/demystifying-the-parquet-file-format-13adb0206705)
 
@@ -232,7 +234,7 @@ execute:
   - Conçu pour être écrit une fois mais lu fréquemment
 
 - [**Optimisé**]{.orange}
-  - Compression (jusqu'à 87 % moins d'espace qu'un CSV)
+  - [**Compression**]{.blue2} (jusqu'à 87 % moins d'espace qu'un CSV)
   - Parcours du fichier (jusqu'à 34x plus rapide qu'un CSV)
 
 - [**Interopérable**]{.blue2} et open-source
@@ -241,7 +243,7 @@ execute:
 
 - `Parquet` ne résout pas tout
   - L'espace disque est optimisé
-  - Les données décompressées doivent passer en RAM
+  - Les données décompressées doivent [**passer en RAM**]{.blue2}
 
 - Comment analyser 100 GB de données sur un PC avec 16 GB de RAM ?
 
@@ -252,13 +254,15 @@ execute:
   - Pas nécessaire de charger toutes les données en RAM
   - [**Interopérable**]{.blue2} et standardisé
 
-![](img/arrow.png)
+. . .
+
+![](img/arrow.png){fig-align="center"}
 
 ## Traitement des données massives
 
 - `Arrow` ne résout pas tout
-  - Les données massives nécessitent des infrastuctures big data
-  - Les algorithmes aussi doivent être adaptés
+  - Les données massives nécessitent des [**infrastructures big data**]{.blue2}
+  - Les [**algorithmes**]{.blue2} aussi doivent être [**adaptés**]{.blue2}
 
 - Solution : [**calcul distribué**]{.orange}
 
@@ -268,7 +272,7 @@ execute:
 
 - Popularisé par l'implémentation open-source d'[**Hadoop**]{.orange}
 
-![](img/mapreduce.png)
+![](img/mapreduce.png){fig-align="center"}
 
 ## Apache Spark
 
@@ -276,14 +280,14 @@ execute:
   - Abstraction des opérations MapReduce
   - Vitesse d'exécution ++ (RAM vs. disque)
 
-![](img/spark.png)
+![](img/spark.png){fig-align="center"}
 
 ## Outils pour la mise en production
 
-- Traitements automatisés (*workflows*)
+- [**Traitements automatisés**]{.orange} (*workflows*)
   - `argo-workflow`
 
-- Déploiement (*batch*, *workflow*, application)
+- [**Déploiement**]{.orange} (*batch*, *workflow*, application)
   - `Kubernetes`
   - `ArgoCD`
 
@@ -297,7 +301,7 @@ execute:
 
 ## Catalogue de services d'Onyxia
 
-![](img/catalog.png)
+![](img/catalog.png){fig-align="center"}
 
 
 
@@ -317,7 +321,9 @@ execute:
 
 - Besoin de trouver des [**organisations hybrides**]{.orange}
 
-![](img/mlops.png)
+. . .
+
+![](img/mlops.png){fig-align="center"}
 
 ## Organisation d'un projet
 
@@ -325,7 +331,7 @@ execute:
 
 ## Formation
 
-- Toutes nos [formations](https://www.sspcloud.fr/formation) sont [**open-source**]{.blue2}
+- Toutes nos formations sont [**open-source**]{.blue2} ([catalogue]([formations](https://www.sspcloud.fr/formation)))
   - Parcours de formation à R / Python
   - Formation à Spark
   - Tutoriels de Machine Learning
