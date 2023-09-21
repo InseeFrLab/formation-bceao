@@ -1,0 +1,6 @@
+## Collecte des données
+
+- Webscrapping à l'Insee
+- Mobitic ? Cnis doit valider besoin
+
+le cas du webscrapping
