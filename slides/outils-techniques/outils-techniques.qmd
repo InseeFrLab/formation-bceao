@@ -272,15 +272,27 @@ execute:
 
 - Popularisé par l'implémentation open-source d'[**Hadoop**]{.orange}
 
+. . .
+
 ![](img/mapreduce.png){fig-align="center"}
 
 ## Apache Spark
 
 - Démocratisation du [**calcul distribué**]{.orange}
-  - Abstraction des opérations MapReduce
-  - Vitesse d'exécution ++ (RAM vs. disque)
+  - [**Abstraction**]{.blue2} des opérations MapReduce
+  - [**Vitesse d'exécution**]{.blue2} (RAM vs. disque)
+
+. . .
 
 ![](img/spark.png){fig-align="center"}
+
+## En résumé
+
+- Utiliser un [**format**]{.orange} de données adapté (`Parquet`)
+
+- Utiliser des [**outils**]{.orange} informatiques adaptés
+  - Données [**volumineuses**]{.blue2} : calcul [**en mémoire**]{.blue2} optimisé  (`Arrow` / `DuckDB`)
+  - Données [**massives**]{.blue2} : calcul [**distribué**]{.blue2} (`Spark`)
 
 ## Outils pour la mise en production
 
@@ -290,14 +302,6 @@ execute:
 - [**Déploiement**]{.orange} (*batch*, *workflow*, application)
   - `Kubernetes`
   - `ArgoCD`
-
-## En résumé
-
-- Utiliser un [**format**]{.orange} de données adapté (`Parquet`)
-
-- Utiliser des [**outils**]{.orange} informatiques adaptés
-  - Données [**volumineuses**]{.blue2} : calcul [**en mémoire**]{.blue2} optimisé  (`Arrow` / `DuckDB`)
-  - Données [**massives**]{.blue2} : calcul [**distribué**]{.blue2} (`Spark`)
 
 ## Catalogue de services d'Onyxia
 
@@ -313,9 +317,9 @@ execute:
   - Pas de big data sans [**infrastructure**]{.blue2} adaptée
   - Pas de big data sans [**outils**]{.blue2} et [**algorithmes**]{.blue2} adaptés
 
-- Insee : deux [**labs**]{.orange} qui travaillent en synérgie
-  - [**SSP Lab**]{.orange} : innovation méthodologique en data science
-  - [**DIIT**]{.orange} : innovation informatique (Onyxia / SSP Cloud)
+- Insee : deux [**labs**]{.orange} qui travaillent en [**synérgie**]{.blue2}
+  - [**SSP Lab**]{.orange} : innovation [**méthodologique**]{.blue2} en data science
+  - [**DIIT**]{.orange} : innovation [**informatique**]{.blue2} (Onyxia / SSP Cloud)
 
 ## Approche MLOps
 
@@ -332,10 +336,10 @@ execute:
 ## Formation
 
 - Toutes nos formations sont [**open-source**]{.blue2} ([catalogue]([formations](https://www.sspcloud.fr/formation)))
-  - Parcours de formation à R / Python
-  - Formation à Spark
-  - Tutoriels de Machine Learning
-  - Mise en production
+  - Parcours de formation à `R` / `Python`
+  - Formation à `Spark`
+  - Tutoriels de [machine learning]{.orange}
+  - [MLOps]{.orange}
   - etc.
 
 
