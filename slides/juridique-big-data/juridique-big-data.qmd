@@ -25,49 +25,24 @@ execute:
   warning: false
 ---
 
-# :one: Introduction
+Disclaimer
+- Aucune formation de juriste
+- présentations de concepts
+- pour pb concret voir avec UAJC 
 
-{{< include sections/1-introduction.qmd >}}
+Patrick rudor, patrick.redor@insee.fr,  Unité Affaires juridiques et contentieuses (UAJC)
+
+# :one: Les nouveaux enjeux juridiques du big data
+
+{{< include sections/1-nouveaux-enjeux.qmd >}}
+
+# :two: Réglementations clés
 
 {{< include sections/2-juridique.qmd >}}
 
-{{< include sections/3-scrapping-insee.qmd >}}
+# :three: Retour d'expériences à l'Insee
 
-Patrick rudor UAJC
-voir avec eux
-
-Webscrapping + attention RGPD
-slide sur les LLM avec les contentieux en cours (OpenAI) + modele de diffusion avec les artistes
-questions des données générées
-
-1- Les nouveaux enjeux juridiques du big data
-
-Collecte des données
-Stockage des données (souveraineté)
-Traitements des données
-Partage de données
-
-
-Data Ownership 
-Open Data & Public Sector 
-Database Licensing 
-Copyright Infringement 
-Security Breaches
-le cas du webscrapping
-Aujourd'hui : cas des LLM (contentieux en cours avec OpenAI) + cas des modèles de diffusion avec les artistes + cas données générées (pb Amazon)
-
-2- Réglementations clés
-
-  Loi modernisation du numérque 2016 : https://www.vie-publique.fr/eclairage/20301-loi-republique-numerique-7-octobre-2016-loi-lemaire-quels-changements
-
-  Règlement Général sur la Protection des Données (RGPD) de l'UE : https://fr.wikipedia.org/wiki/R%C3%A8glement_g%C3%A9n%C3%A9ral_sur_la_protection_des_donn%C3%A9es#
-  Loi sur la Protection de la Vie Privée en Ligne (CCPA) de Californie : https://fr.wikipedia.org/wiki/Loi_californienne_sur_la_protection_de_la_vie_priv%C3%A9e_des_consommateurs
-
-3- Retour d'expériences à l'insee
-
-- Webscrapping à l'Insee
-- Mobitic ? Cnis doit valider besoin
-- 
+{{< include sections/3-retex-insee.qmd >}}
 
 
 

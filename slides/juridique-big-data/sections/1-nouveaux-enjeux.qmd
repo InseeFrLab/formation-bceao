@@ -1,0 +1,48 @@
+## Collecte des données
+
+- Nombreux acteurs privés et publics peuvent collecter des données produites [**directement**] ou [**indirectement**] par les individus.
+- Collecte de données personnelles sans [**consentement**] explicite.
+- Possibilité de violation de la [**vie privée**] des utilisateurs.
+- Explication des [**motifs**] et [**intentions**] de collecte des données nécessaire.
+
+::: {.callout-tip title="Exemple de risque potentiel"}
+Application de santé collectant des données biométriques de ses utilisateurs sans leur consentement explicite.
+:::
+
+## Stockage et sécurité des données
+
+- [**Volume**] des données pose la difficulté du stockage
+- [**Coûts d'investissement**] importants et marché monopolisé par les GAFAM
+- Problématique de la [**souveraineté numérique**]
+- Mesures de [**sécurité**] essentielles pour la protection des données.
+
+::: {.callout-tip title="Exemple de risque potentiel"}
+- Possibilité de violation de la sécurité des données ou de partage de données avec une entité gouvernementale.
+- Incendie OVH en janvier 2023.
+:::
+
+## Open Data et secteur publique
+
+- Mise à disposition de la société civile de la masse de données collectées par les [**autorités publiques**].
+- Améliorer le fonctionnement démocratique par la [**transparence**] et l'[**ouverture d’information**].
+- Proposer de nouvelles ressources pour l'[**innovation**] économique et sociale
+
+
+## Propriété intellectuelle
+
+- Gestion des licences : 
+    - Développement de l'[**open source**] et du partage de données
+    - Nécessité d'apposer et de respecter des licences claires 
+
+- Equilibre difficile entre la protection et l'innovation
+    - Les lois sur le droit d'auteur établies ont du mal à prendre en compte les nouvelles technologies
+    - Développement de nouveaux outils d'Intelligence Artificielle (IA)
+
+## Problématiques des nouvelles méthodes d'IA
+
+- Les [**grands modèles de langage**] (LLM) et les [**modèle de génération d'images**] :
+    - Entraînement sur données avec droit d'auteurs
+    - Réponses non sourcées pour les LLM
+    - Failles de sécurité (Samsung-OpenAI)
+    - Poursuite d'artiste contre Stability AI et Midjourney pour avoir récupéré des données d'artistes sans consentement
+    - Quid des données générées ?
