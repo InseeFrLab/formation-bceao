@@ -32,7 +32,7 @@ Disclaimer
 
 Patrick rudor, patrick.redor@insee.fr,  Unité Affaires juridiques et contentieuses (UAJC)
 
-# :one: Les nouveaux enjeux juridiques du big data
+# :one: Les nouveaux enjeux juridiques lié au big data
 
 {{< include sections/1-nouveaux-enjeux.qmd >}}
 
