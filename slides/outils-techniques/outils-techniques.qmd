@@ -1,5 +1,5 @@
 ---
-title: 'Besoins techniques et organisationnels pour la big data'
+title: 'Besoins techniques et organisationnels'
 subtitle: |
   **[BCEAO - Jour 2]{.orange}**
 author: "[Romain Avouac](https://github.com/avouacr), [Thomas Faria](https://github.com/ThomasFaria)"
@@ -92,57 +92,255 @@ execute:
 
 # Infrastructure
 
-## Comment construire une *data stack* cohérente ?
+## Comment construire une *data stack* pertinente ?
 
-- Répondre aux besoins des statisticiens publics
+- Répondre aux [**besoins**]{.orange} des statisticiens publics
   - [**Ressources**]{.blue2} (stockage, GPUs, services etc.) pour l'expérimentation
+  - Favoriser la [**reproductibilité**]{.blue2} des traitements
   - Permettre la [**mise en production**]{.blue2}
 
-- Choisir des technologies à l'[**état de l'art**]{.blue2}
+- Choisir des technologies à l'[**état de l'art**]{.orange}
   - Faciliter l'[**adoption**]{.blue2} par les statisticiens
 
-## La base : le *data lake*
+## Notre *data stack*
 
+- [**Infrastructure cloud centralisée**]{.orange}
 
+- [**Stockage objet**]{.orange}
 
-- Stockage [**centralisé**]{.orange} pour données [**volumineuses**]{.blue2} et [**brutes**]{.blue2} provenant de [**sources variées**]{.blue2}
+- [**Conteneurisation**]{.orange}
 
-![](img/datalake.png){height="300" fig-align="center"}
+- [**Plateforme**]{.orange} web de data science
 
-- 
+## Infrastructure cloud
 
+- Poste de travail comme point d'accès à une [**infrastructure centralisée**]{.orange} de calcul
+  - [**Evolutivité**]{.blue2} (*scaling* horizontal)
+  - [**Sécurité**]{.blue2} (pas de dissemination des données)
 
-- Data Lake : central location that holds a large amount of data in its native, raw format
-  - Standard in the data industry : object storage (our choice : open-source implementation of S3 -> MinIO)
-- Principles of object storage
-- Object storage > Hadooop : co-localisation plus nécessaire car difficile à maintenir (coût), cloud computing (capacités réseaux ++ -> déplcaements de donnéeds massibes bien moins coûteuse : 1 Gb/S débuts 2000's -> 100 Gb/s ajd), difficile à adapter à la conteneurisation (choses évoluent vite mais ), big big big data pas dans l'aire du temps, plus besoin de puissance/IA que de big storage -> découplage qui apporte souplesse et scaling
-- Conteneurisation -> standard pour la reproductibilité
-- Onyxia
+- [***On-premise***]{.orange} vs. [***full-cloud***]{.orange}
+  - Maîtrise des [**coûts**]{.blue2}
+  - [**Compétences**]{.blue2} de maintenance
+
+## Stockage : le *data lake*
+
+- Un stockage [**peu coûteux**]{.orange} fait pour des [**données**]{.orange}
+  - [**volumineuses**]{.blue2}
+  - [**brutes**]{.blue2}
+  - issues de [**sources variées**]{.blue2}
+
+. . .
+
+![](img/datalake.png){height="400" fig-align="center"}
+
+## Le choix du stockage objet
+
+- Choix du [**stockage objet**]{.orange} (type [**S3**]{.orange}) vs. [**Hadoop**]{.orange}
+
+- La [**co-localisation**]{.orange} des traitements n'est plus justifiée
+  - Plus besoin de [**puissance/IA**]{.blue2} que de [***big storage***]{.blue2}
+  - [**Découplage**]{.blue2} stockage/traitement -> [**évolutivité**]{.blue2}
+  - Coûts de maintenance
+
+. . .
+
+![](img/minio.svg){height="300" fig-align="center"}
+
+## Le choix de la conteneurisation
+
+![](img/containers.png){height="250" fig-align="center"}
+
+- [**Standard**]{.orange} pour la data science
+  - [**autonomie**]{.blue2}
+  - [**reproductibilité**]{.blue2}
+  - [**scalabilité**]{.blue2}
+
+- [**Orchestrateur**]{.orange} : [**Kubernetes**]{.blue2}
+
+## Une plateforme de data science
+
+- Les choix techniques ne suffisent pas
+   - Les technologies *cloud* sont [**difficiles d'accès**]{.blue2}
+   - Une [**interface web**]{.blue2} comme liant technique
+
+. . .
+
+![](img/bricks.png){height="400" fig-align="center"}
+
+## SSP Cloud / Onyxia
+
+- [SSP Cloud](https://datalab.sspcloud.fr/) : [**instance publique**]{.blue2} d'[**Onyxia**]{.orange}
+  - Dédiée à l'[**expérimentation**]{.blue2} sur [**données ouvertes**]{.blue2}
+  - Base des [**tutoriels**]{.blue2} de cette formation
+
+- [Onyxia](https://www.onyxia.sh/) : une [**plateforme de data science**]{.blue2} moderne
+  - Projet [**open-source**]{.blue2} : [https://github.com/InseeFrLab/onyxia-web](https://github.com/InseeFrLab/onyxia-web)
+  - Possibilité de créer une [**instance interne**]{.blue2}
 
 
 
 
 # Outils informatiques
 
-- Parquet
-- Arrow
-- DuckDB
-- Spark
-- Outils de workflows (argo-workflow, airflow)
-- Outils de déploiement industrialisé (Kubernetes, argo-cd)
+## Motivation
 
+- Une [**infrastructure**]{.orange} adaptée au *big data* est nécessaire.. mais pas suffisante !
+
+- Nécessité d'adapter les pratiques
+  - [**Langages**]{.blue2} de programmation
+  - [**Formats**]{.blue2} de données
+  - [**Librairies**]{.blue2} informatiques spécifiques
+
+## Langages de programmation
+
+![](img/skills.png)
+
+[Source](https://towardsdatascience.com/most-in-demand-tech-skills-for-data-engineers-58f4c1ca25ab)
+
+## Limites des formats de données usuels
+
+- Les formats usuels (CSV, JSON, XML) sont inadaptés à la *big data*
+  - [**Non-compressés**]{.blue2} : *human readable* mais espace disque élevé
+  - [**Orientés ligne**]{.blue2} : un traitement sur une/des colonne(s) implique une lecture complète du fichier
+
+## Formats de données pour la big data
+
+- [**Propriétés souhaitées**]{.orange} 
+  - Orientés colonne
+  - Efficients en stockage disque
+  - Efficients en RAM
+  - Interopérables et open-source
+
+- Deux formats 
+  - `Parquet` : stockage disque
+  - `Arrow` : traitement en mémoire
+
+## Modes de stockage
+
+- Le [**stockage hybride**]{.orange} optimise la lecture
+  - Projection (`SELECT`) : orientation colonne
+  - Predicates (`WHERE`) : orientation ligne
+
+![](img/row-column.png)
+
+[Source](https://towardsdatascience.com/demystifying-the-parquet-file-format-13adb0206705)
+
+## Le format `Parquet`
+
+- [**Orienté colonne**]{.orange} (hybride)
+  - Adapté aux traitements [**analytiques**]{.blue2}
+  - Conçu pour être écrit une fois mais lu fréquemment
+
+- [**Optimisé**]{.orange}
+  - Compression (jusqu'à 87 % moins d'espace qu'un CSV)
+  - Parcours du fichier (jusqu'à 34x plus rapide qu'un CSV)
+
+- [**Interopérable**]{.blue2} et open-source
+
+## Traitement en mémoire
+
+- `Parquet` ne résout pas tout
+  - L'espace disque est optimisé
+  - Les données décompressées doivent passer en RAM
+
+- Comment analyser 100 GB de données sur un PC avec 16 GB de RAM ?
+
+## Arrow
+
+- Format de données [**en mémoire, orienté colonne**]{.orange}
+  - Optimisé pour les traitements [**analytiques**]{.blue2}
+  - Pas nécessaire de charger toutes les données en RAM
+  - [**Interopérable**]{.blue2} et standardisé
+
+![](img/arrow.png)
+
+## Traitement des données massives
+
+- `Arrow` ne résout pas tout
+  - Les données massives nécessitent des infrastuctures big data
+  - Les algorithmes aussi doivent être adaptés
+
+- Solution : [**calcul distribué**]{.orange}
+
+## Hadoop MapReduce
+
+- Développé par Google (2004)
+
+- Popularisé par l'implémentation open-source d'[**Hadoop**]{.orange}
+
+![](img/mapreduce.png)
+
+## Apache Spark
+
+- Démocratisation du [**calcul distribué**]{.orange}
+  - Abstraction des opérations MapReduce
+  - Vitesse d'exécution ++ (RAM vs. disque)
+
+![](img/spark.png)
+
+## Outils pour la mise en production
+
+- Traitements automatisés (*workflows*)
+  - `argo-workflow`
+
+- Déploiement (*batch*, *workflow*, application)
+  - `Kubernetes`
+  - `ArgoCD`
+
+## En résumé
+
+- Utiliser un [**format**]{.orange} de données adapté (`Parquet`)
+
+- Utiliser des [**outils**]{.orange} informatiques adaptés
+  - Données [**volumineuses**]{.blue2} : calcul [**en mémoire**]{.blue2} optimisé  (`Arrow` / `DuckDB`)
+  - Données [**massives**]{.blue2} : calcul [**distribué**]{.blue2} (`Spark`)
+
+## Catalogue de services d'Onyxia
+
+![](img/catalog.png)
 
 
 
 # Organisation et compétences
 
-- Data science
-- Data engineering
-- Insee : SSP Lab (innovation méthodo DS) + DIIT (innovation info data ingé / data architect)
+## Labs
 
+- L'innovation [**méthodologie**]{.orange} ET [**informatique**]{.orange} sont complémentaires
+  - Pas de big data sans [**infrastructure**]{.blue2} adaptée
+  - Pas de big data sans [**outils**]{.blue2} et [**algorithmes**]{.blue2} adaptés
 
+- Insee : deux [**labs**]{.orange} qui travaillent en synérgie
+  - [**SSP Lab**]{.orange} : innovation méthodologique en data science
+  - [**DIIT**]{.orange} : innovation informatique (Onyxia / SSP Cloud)
+
+## Approche MLOps
+
+- Besoin de trouver des [**organisations hybrides**]{.orange}
+
+![](img/mlops.png)
+
+## Organisation d'un projet
+
+![](img/competences.png){height="600" fig-align="center"}
+
+## Formation
+
+- Toutes nos [formations](https://www.sspcloud.fr/formation) sont [**open-source**]{.blue2}
+  - Parcours de formation à R / Python
+  - Formation à Spark
+  - Tutoriels de Machine Learning
+  - Mise en production
+  - etc.
 
 
 # Conclusion
 
-# 
+- Donner les [**moyens d'innover**]{.orange}
+  - Une [**infrastructure**]{.blue2} moderne est primordiale
+  - Adopter une [**organisation**]{.blue2} souple favorisant l'[**autonomie**]{.blue2}
+  - Investir dans la [**formation**]{.blue2}
+
+- Adopter les [**bonnes pratiques**]{.orange} de développement
+  - [**Formats**]{.blue2} de données et [**librairies**]{.blue2} logicielles adaptés
+  - Passer de l'[**expérimentation**]{.blue2} à la [**production**]{.blue2}
+
