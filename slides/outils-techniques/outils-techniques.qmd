@@ -270,15 +270,13 @@ execute:
 
 ![](img/mapreduce.png)
 
-## Spark
+## Apache Spark
 
-## En résumé
+- Démocratisation du calcul distribué
+  - Abstraction des opérations MapReduce
+  - Vitesse d'exécution ++ (RAM vs. disque)
 
-- Utiliser un format de données adapté (`Parquet`)
-
-- Utiliser des outils informatiques adaptés
-  - Données volumineuses : calcul en mémoire optimisé  (`Arrow` / `DuckDB`)
-  - Données massives : calcul distribué (`Spark`)
+![](img/spark.png)
 
 ## Outils pour la mise en production
 
@@ -288,6 +286,16 @@ execute:
 - Déploiement (*batch*, *workflow*, application)
   - `Kubernetes`
   - `ArgoCD`
+
+## En résumé
+
+- Utiliser un format de données adapté (`Parquet`)
+
+- Utiliser des outils informatiques adaptés
+  - Données volumineuses : calcul en mémoire optimisé  (`Arrow` / `DuckDB`)
+  - Données massives : calcul distribué (`Spark`)
+
+- Passer de l'expérimentation à la production
 
 ## Catalogue de services d'Onyxia
 
