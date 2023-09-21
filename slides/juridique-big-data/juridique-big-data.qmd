@@ -2,7 +2,7 @@
 title: "Aspects juridiques et réglementaires du big data : un retour d'expérience"
 subtitle: |
   **[BCEAO - Jour 4]{.orange}**
-author: "[Romain Avouac](https://github.com/avouacr), [Thomas Faria](https://github.com/ThomasFaria)", [Antoine Palazzolo ](https://github.com/antoine-palazz)"
+author: "[Romain Avouac](https://github.com/avouacr), [Thomas Faria](https://github.com/ThomasFaria), [Antoine Palazzolo](https://github.com/antoine-palazz)
 date: "09/28/2023"
 date-format: "D MMMM YYYY"
 slide-number: true
