@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Romain Avouac, Thomas Faria">
-  <title>Formation BCEAO - Besoins techniques et organisationnels pour la big data</title>
+  <title>Formation BCEAO - Besoins techniques et organisationnels</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -324,7 +324,7 @@
     }
   </style>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<meta property="og:title" content="Formation BCEAO - Besoins techniques et organisationnels pour la big data">
+<meta property="og:title" content="Formation BCEAO - Besoins techniques et organisationnels">
 <meta property="og:description" content="BCEAO - Jour 2">
 <meta property="og:site-name" content="Formation BCEAO">
 </head>
@@ -333,7 +333,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="../_extensions/InseeFrLab/onyxia/background.svg" data-background-size="contain" class="quarto-title-block center">
-  <h1 class="title">Besoins techniques et organisationnels pour la big data</h1>
+  <h1 class="title">Besoins techniques et organisationnels</h1>
   <p class="subtitle"></p><p><strong><span class="orange">BCEAO - Jour 2</span></strong></p><p></p>
 
 <div class="quarto-title-authors">
@@ -436,70 +436,353 @@
 <h1>Infrastructure</h1>
 
 </section>
-<section id="comment-construire-une-data-stack-cohérente" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Comment construire une <em>data stack</em> cohérente ?</h2>
+<section id="comment-construire-une-data-stack-pertinente" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Comment construire une <em>data stack</em> pertinente ?</h2>
 <ul>
-<li class="fragment">Répondre aux besoins des statisticiens publics
+<li class="fragment">Répondre aux <span class="orange"><strong>besoins</strong></span> des statisticiens publics
 <ul>
 <li class="fragment"><span class="blue2"><strong>Ressources</strong></span> (stockage, GPUs, services etc.) pour l’expérimentation</li>
+<li class="fragment">Favoriser la <span class="blue2"><strong>reproductibilité</strong></span> des traitements</li>
 <li class="fragment">Permettre la <span class="blue2"><strong>mise en production</strong></span></li>
 </ul></li>
-<li class="fragment">Choisir des technologies à l’<span class="blue2"><strong>état de l’art</strong></span>
+<li class="fragment">Choisir des technologies à l’<span class="orange"><strong>état de l’art</strong></span>
 <ul>
 <li class="fragment">Faciliter l’<span class="blue2"><strong>adoption</strong></span> par les statisticiens</li>
 </ul></li>
 </ul>
 </section>
-<section id="la-base-le-data-lake" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>La base : le <em>data lake</em></h2>
+<section id="notre-data-stack" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Notre <em>data stack</em></h2>
 <ul>
-<li class="fragment">Stockage <span class="orange"><strong>centralisé</strong></span> pour données <span class="blue2"><strong>volumineuses</strong></span> et <span class="blue2"><strong>brutes</strong></span> provenant de <span class="blue2"><strong>sources variées</strong></span></li>
+<li class="fragment"><p><span class="orange"><strong>Infrastructure cloud centralisée</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong>Stockage objet</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong>Conteneurisation</strong></span></p></li>
+<li class="fragment"><p><span class="orange"><strong>Plateforme</strong></span> web de data science</p></li>
 </ul>
+</section>
+<section id="infrastructure-cloud" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Infrastructure cloud</h2>
+<ul>
+<li class="fragment">Poste de travail comme point d’accès à une <span class="orange"><strong>infrastructure centralisée</strong></span> de calcul
+<ul>
+<li class="fragment"><span class="blue2"><strong>Evolutivité</strong></span> (<em>scaling</em> horizontal)</li>
+<li class="fragment"><span class="blue2"><strong>Sécurité</strong></span> (pas de dissemination des données)</li>
+</ul></li>
+<li class="fragment"><span class="orange"><strong><em>On-premise</em></strong></span> vs.&nbsp;<span class="orange"><strong><em>full-cloud</em></strong></span>
+<ul>
+<li class="fragment">Maîtrise des <span class="blue2"><strong>coûts</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>Compétences</strong></span> de maintenance</li>
+</ul></li>
+</ul>
+</section>
+<section id="stockage-le-data-lake" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Stockage : le <em>data lake</em></h2>
+<ul>
+<li class="fragment">Un stockage <span class="orange"><strong>peu coûteux</strong></span> fait pour des <span class="orange"><strong>données</strong></span>
+<ul>
+<li class="fragment"><span class="blue2"><strong>volumineuses</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>brutes</strong></span></li>
+<li class="fragment">issues de <span class="blue2"><strong>sources variées</strong></span></li>
+</ul></li>
+</ul>
+<div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/datalake.png" height="300"></p>
+<p><img data-src="img/datalake.png" height="400"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="le-choix-du-stockage-objet" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Le choix du stockage objet</h2>
+<ul>
+<li class="fragment"><p>Choix du <span class="orange"><strong>stockage objet</strong></span> (type <span class="orange"><strong>S3</strong></span>) vs.&nbsp;<span class="orange"><strong>Hadoop</strong></span></p></li>
+<li class="fragment"><p>La <span class="orange"><strong>co-localisation</strong></span> des traitements n’est plus justifiée</p>
+<ul>
+<li class="fragment">Plus besoin de <span class="blue2"><strong>puissance/IA</strong></span> que de <span class="blue2"><strong><em>big storage</em></strong></span></li>
+<li class="fragment"><span class="blue2"><strong>Découplage</strong></span> stockage/traitement -&gt; <span class="blue2"><strong>évolutivité</strong></span></li>
+<li class="fragment">Coûts de maintenance</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/minio.svg" height="300"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="le-choix-de-la-conteneurisation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Le choix de la conteneurisation</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/containers.png" height="250"></p>
 </figure>
 </div>
 <ul>
-<li class="fragment"></li>
-<li class="fragment">Data Lake : central location that holds a large amount of data in its native, raw format
+<li class="fragment"><span class="orange"><strong>Standard</strong></span> pour la data science
 <ul>
-<li class="fragment">Standard in the data industry : object storage (our choice : open-source implementation of S3 -&gt; MinIO)</li>
+<li class="fragment"><span class="blue2"><strong>autonomie</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>reproductibilité</strong></span></li>
+<li class="fragment"><span class="blue2"><strong>scalabilité</strong></span></li>
 </ul></li>
-<li class="fragment">Principles of object storage</li>
-<li class="fragment">Object storage &gt; Hadooop : co-localisation plus nécessaire car difficile à maintenir (coût), cloud computing (capacités réseaux ++ -&gt; déplcaements de donnéeds massibes bien moins coûteuse : 1 Gb/S débuts 2000’s -&gt; 100 Gb/s ajd), difficile à adapter à la conteneurisation (choses évoluent vite mais ), big big big data pas dans l’aire du temps, plus besoin de puissance/IA que de big storage -&gt; découplage qui apporte souplesse et scaling</li>
-<li class="fragment">Conteneurisation -&gt; standard pour la reproductibilité</li>
-<li class="fragment">Onyxia</li>
+<li class="fragment"><span class="orange"><strong>Orchestrateur</strong></span> : <span class="blue2"><strong>Kubernetes</strong></span></li>
+</ul>
+</section>
+<section id="une-plateforme-de-data-science" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Une plateforme de data science</h2>
+<ul>
+<li class="fragment">Les choix techniques ne suffisent pas
+<ul>
+<li class="fragment">Les technologies <em>cloud</em> sont <span class="blue2"><strong>difficiles d’accès</strong></span></li>
+<li class="fragment">Une <span class="blue2"><strong>interface web</strong></span> comme liant technique</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/bricks.png" height="400"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="ssp-cloud-onyxia" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>SSP Cloud / Onyxia</h2>
+<ul>
+<li class="fragment"><a href="https://datalab.sspcloud.fr/">SSP Cloud</a> : <span class="blue2"><strong>instance publique</strong></span> d’<span class="orange"><strong>Onyxia</strong></span>
+<ul>
+<li class="fragment">Dédiée à l’<span class="blue2"><strong>expérimentation</strong></span> sur <span class="blue2"><strong>données ouvertes</strong></span></li>
+<li class="fragment">Base des <span class="blue2"><strong>tutoriels</strong></span> de cette formation</li>
+</ul></li>
+<li class="fragment"><a href="https://www.onyxia.sh/">Onyxia</a> : une <span class="blue2"><strong>plateforme de data science</strong></span> moderne
+<ul>
+<li class="fragment">Projet <span class="blue2"><strong>open-source</strong></span> : <a href="https://github.com/InseeFrLab/onyxia-web">https://github.com/InseeFrLab/onyxia-web</a></li>
+<li class="fragment">Possibilité de créer une <span class="blue2"><strong>instance interne</strong></span></li>
+</ul></li>
 </ul>
 </section></section>
+<section>
 <section id="outils-informatiques" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>Outils informatiques</h1>
+
+</section>
+<section id="motivation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Motivation</h2>
 <ul>
-<li class="fragment">Parquet</li>
-<li class="fragment">Arrow</li>
-<li class="fragment">DuckDB</li>
-<li class="fragment">Spark</li>
-<li class="fragment">Outils de workflows (argo-workflow, airflow)</li>
-<li class="fragment">Outils de déploiement industrialisé (Kubernetes, argo-cd)</li>
+<li class="fragment"><p>Une <span class="orange"><strong>infrastructure</strong></span> adaptée au <em>big data</em> est nécessaire.. mais pas suffisante !</p></li>
+<li class="fragment"><p>Nécessité d’adapter les pratiques</p>
+<ul>
+<li class="fragment"><span class="blue2"><strong>Langages</strong></span> de programmation</li>
+<li class="fragment"><span class="blue2"><strong>Formats</strong></span> de données</li>
+<li class="fragment"><span class="blue2"><strong>Librairies</strong></span> informatiques spécifiques</li>
+</ul></li>
 </ul>
 </section>
+<section id="langages-de-programmation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Langages de programmation</h2>
 
+<img data-src="img/skills.png" class="r-stretch"><p><a href="https://towardsdatascience.com/most-in-demand-tech-skills-for-data-engineers-58f4c1ca25ab">Source</a></p>
+</section>
+<section id="limites-des-formats-de-données-usuels" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Limites des formats de données usuels</h2>
+<ul>
+<li class="fragment">Les formats usuels (CSV, JSON, XML) sont inadaptés à la <em>big data</em>
+<ul>
+<li class="fragment"><span class="blue2"><strong>Non-compressés</strong></span> : <em>human readable</em> mais espace disque élevé</li>
+<li class="fragment"><span class="blue2"><strong>Orientés ligne</strong></span> : un traitement sur une/des colonne(s) implique une lecture complète du fichier</li>
+</ul></li>
+</ul>
+</section>
+<section id="formats-de-données-pour-la-big-data" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Formats de données pour la big data</h2>
+<ul>
+<li class="fragment"><span class="orange"><strong>Propriétés souhaitées</strong></span>
+<ul>
+<li class="fragment">Orientés colonne</li>
+<li class="fragment">Efficients en stockage disque</li>
+<li class="fragment">Efficients en RAM</li>
+<li class="fragment">Interopérables et open-source</li>
+</ul></li>
+<li class="fragment">Deux formats
+<ul>
+<li class="fragment"><code>Parquet</code> : stockage disque</li>
+<li class="fragment"><code>Arrow</code> : traitement en mémoire</li>
+</ul></li>
+</ul>
+</section>
+<section id="modes-de-stockage" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Modes de stockage</h2>
+<ul>
+<li class="fragment">Le <span class="orange"><strong>stockage hybride</strong></span> optimise la lecture
+<ul>
+<li class="fragment">Projection (<code>SELECT</code>) : orientation colonne</li>
+<li class="fragment">Predicates (<code>WHERE</code>) : orientation ligne</li>
+</ul></li>
+</ul>
+
+<img data-src="img/row-column.png" class="r-stretch"><p><a href="https://towardsdatascience.com/demystifying-the-parquet-file-format-13adb0206705">Source</a></p>
+</section>
+<section id="le-format-parquet" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Le format <code>Parquet</code></h2>
+<ul>
+<li class="fragment"><span class="orange"><strong>Orienté colonne</strong></span> (hybride)
+<ul>
+<li class="fragment">Adapté aux traitements <span class="blue2"><strong>analytiques</strong></span></li>
+<li class="fragment">Conçu pour être écrit une fois mais lu fréquemment</li>
+</ul></li>
+<li class="fragment"><span class="orange"><strong>Optimisé</strong></span>
+<ul>
+<li class="fragment">Compression (jusqu’à 87 % moins d’espace qu’un CSV)</li>
+<li class="fragment">Parcours du fichier (jusqu’à 34x plus rapide qu’un CSV)</li>
+</ul></li>
+<li class="fragment"><span class="blue2"><strong>Interopérable</strong></span> et open-source</li>
+</ul>
+</section>
+<section id="traitement-en-mémoire" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Traitement en mémoire</h2>
+<ul>
+<li class="fragment"><code>Parquet</code> ne résout pas tout
+<ul>
+<li class="fragment">L’espace disque est optimisé</li>
+<li class="fragment">Les données décompressées doivent passer en RAM</li>
+</ul></li>
+<li class="fragment">Comment analyser 100 GB de données sur un PC avec 16 GB de RAM ?</li>
+</ul>
+</section>
+<section id="arrow" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Arrow</h2>
+<ul>
+<li class="fragment">Format de données <span class="orange"><strong>en mémoire, orienté colonne</strong></span>
+<ul>
+<li class="fragment">Optimisé pour les traitements <span class="blue2"><strong>analytiques</strong></span></li>
+<li class="fragment">Pas nécessaire de charger toutes les données en RAM</li>
+<li class="fragment"><span class="blue2"><strong>Interopérable</strong></span> et standardisé</li>
+</ul></li>
+</ul>
+
+<img data-src="img/arrow.png" class="r-stretch"></section>
+<section id="traitement-des-données-massives" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Traitement des données massives</h2>
+<ul>
+<li class="fragment"><code>Arrow</code> ne résout pas tout
+<ul>
+<li class="fragment">Les données massives nécessitent des infrastuctures big data</li>
+<li class="fragment">Les algorithmes aussi doivent être adaptés</li>
+</ul></li>
+<li class="fragment">Solution : <span class="orange"><strong>calcul distribué</strong></span></li>
+</ul>
+</section>
+<section id="hadoop-mapreduce" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Hadoop MapReduce</h2>
+<ul>
+<li class="fragment"><p>Développé par Google (2004)</p></li>
+<li class="fragment"><p>Popularisé par l’implémentation open-source d’<span class="orange"><strong>Hadoop</strong></span></p></li>
+</ul>
+
+<img data-src="img/mapreduce.png" class="r-stretch"></section>
+<section id="apache-spark" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Apache Spark</h2>
+<ul>
+<li class="fragment">Démocratisation du <span class="orange"><strong>calcul distribué</strong></span>
+<ul>
+<li class="fragment">Abstraction des opérations MapReduce</li>
+<li class="fragment">Vitesse d’exécution ++ (RAM vs.&nbsp;disque)</li>
+</ul></li>
+</ul>
+
+<img data-src="img/spark.png" class="r-stretch"></section>
+<section id="outils-pour-la-mise-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Outils pour la mise en production</h2>
+<ul>
+<li class="fragment">Traitements automatisés (<em>workflows</em>)
+<ul>
+<li class="fragment"><code>argo-workflow</code></li>
+</ul></li>
+<li class="fragment">Déploiement (<em>batch</em>, <em>workflow</em>, application)
+<ul>
+<li class="fragment"><code>Kubernetes</code></li>
+<li class="fragment"><code>ArgoCD</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="en-résumé" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>En résumé</h2>
+<ul>
+<li class="fragment"><p>Utiliser un <span class="orange"><strong>format</strong></span> de données adapté (<code>Parquet</code>)</p></li>
+<li class="fragment"><p>Utiliser des <span class="orange"><strong>outils</strong></span> informatiques adaptés</p>
+<ul>
+<li class="fragment">Données <span class="blue2"><strong>volumineuses</strong></span> : calcul <span class="blue2"><strong>en mémoire</strong></span> optimisé (<code>Arrow</code> / <code>DuckDB</code>)</li>
+<li class="fragment">Données <span class="blue2"><strong>massives</strong></span> : calcul <span class="blue2"><strong>distribué</strong></span> (<code>Spark</code>)</li>
+</ul></li>
+</ul>
+</section>
+<section id="catalogue-de-services-donyxia" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Catalogue de services d’Onyxia</h2>
+
+<img data-src="img/catalog.png" class="r-stretch"></section></section>
+<section>
 <section id="organisation-et-compétences" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>Organisation et compétences</h1>
+
+</section>
+<section id="labs" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Labs</h2>
 <ul>
-<li class="fragment">Data science</li>
-<li class="fragment">Data engineering</li>
-<li class="fragment">Insee : SSP Lab (innovation méthodo DS) + DIIT (innovation info data ingé / data architect)</li>
+<li class="fragment">L’innovation <span class="orange"><strong>méthodologie</strong></span> ET <span class="orange"><strong>informatique</strong></span> sont complémentaires
+<ul>
+<li class="fragment">Pas de big data sans <span class="blue2"><strong>infrastructure</strong></span> adaptée</li>
+<li class="fragment">Pas de big data sans <span class="blue2"><strong>outils</strong></span> et <span class="blue2"><strong>algorithmes</strong></span> adaptés</li>
+</ul></li>
+<li class="fragment">Insee : deux <span class="orange"><strong>labs</strong></span> qui travaillent en synérgie
+<ul>
+<li class="fragment"><span class="orange"><strong>SSP Lab</strong></span> : innovation méthodologique en data science</li>
+<li class="fragment"><span class="orange"><strong>DIIT</strong></span> : innovation informatique (Onyxia / SSP Cloud)</li>
+</ul></li>
 </ul>
 </section>
+<section id="approche-mlops" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Approche MLOps</h2>
+<ul>
+<li class="fragment">Besoin de trouver des <span class="orange"><strong>organisations hybrides</strong></span></li>
+</ul>
 
+<img data-src="img/mlops.png" class="r-stretch"></section>
+<section id="organisation-dun-projet" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Organisation d’un projet</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/competences.png" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="formation" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Formation</h2>
+<ul>
+<li class="fragment">Toutes nos <a href="https://www.sspcloud.fr/formation">formations</a> sont <span class="blue2"><strong>open-source</strong></span>
+<ul>
+<li class="fragment">Parcours de formation à R / Python</li>
+<li class="fragment">Formation à Spark</li>
+<li class="fragment">Tutoriels de Machine Learning</li>
+<li class="fragment">Mise en production</li>
+<li class="fragment">etc.</li>
+</ul></li>
+</ul>
+</section></section>
 <section id="conclusion" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>Conclusion</h1>
-
-</section>
-
-<section id="section" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
-<h1></h1>
+<ul>
+<li class="fragment">Donner les <span class="orange"><strong>moyens d’innover</strong></span>
+<ul>
+<li class="fragment">Une <span class="blue2"><strong>infrastructure</strong></span> moderne est primordiale</li>
+<li class="fragment">Adopter une <span class="blue2"><strong>organisation</strong></span> souple favorisant l’<span class="blue2"><strong>autonomie</strong></span></li>
+<li class="fragment">Investir dans la <span class="blue2"><strong>formation</strong></span></li>
+</ul></li>
+<li class="fragment">Adopter les <span class="orange"><strong>bonnes pratiques</strong></span> de développement
+<ul>
+<li class="fragment"><span class="blue2"><strong>Formats</strong></span> de données et <span class="blue2"><strong>librairies</strong></span> logicielles adaptés</li>
+<li class="fragment">Passer de l’<span class="blue2"><strong>expérimentation</strong></span> à la <span class="blue2"><strong>production</strong></span></li>
+</ul></li>
+</ul>
 
 <div class="footer footer-default">
 

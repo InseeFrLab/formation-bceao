@@ -2,58 +2,226 @@
   {
     "objectID": "slides/outils-techniques/index.html#linformatique-dans-le-ssp",
     "href": "slides/outils-techniques/index.html#linformatique-dans-le-ssp",
-    "title": "Besoins techniques et organisationnels pour la big data",
+    "title": "Besoins techniques et organisationnels",
     "section": "L’informatique dans le SSP",
     "text": "L’informatique dans le SSP\n\nUne “communauté d’artisans”\n\nDiversité des langages de programmation\nDiversité des environnements de travail"
   },
   {
     "objectID": "slides/outils-techniques/index.html#le-poste-de-travail",
     "href": "slides/outils-techniques/index.html#le-poste-de-travail",
-    "title": "Besoins techniques et organisationnels pour la big data",
+    "title": "Besoins techniques et organisationnels",
     "section": "Le poste de travail",
     "text": "Le poste de travail\n\n\nAvantages :\n\nSimplicité\n\nInconvénients :\n\nPuissance limitée\nReproductibilité limitée\nSécurité faible"
   },
   {
     "objectID": "slides/outils-techniques/index.html#les-infrastructures-mutualisées-traditionnelles",
     "href": "slides/outils-techniques/index.html#les-infrastructures-mutualisées-traditionnelles",
-    "title": "Besoins techniques et organisationnels pour la big data",
+    "title": "Besoins techniques et organisationnels",
     "section": "Les infrastructures mutualisées traditionnelles",
     "text": "Les infrastructures mutualisées traditionnelles\n\n\nAvantages :\n\nSimplicité\nPuissance\nSécurité des données\nCouvre la majorité des usages\n\nInconvénients :\n\nReproductibilité faible\nDifficultés à innover"
   },
   {
     "objectID": "slides/outils-techniques/index.html#lenjeu-de-la-reproductibilité",
     "href": "slides/outils-techniques/index.html#lenjeu-de-la-reproductibilité",
-    "title": "Besoins techniques et organisationnels pour la big data",
+    "title": "Besoins techniques et organisationnels",
     "section": "L’enjeu de la reproductibilité",
     "text": "L’enjeu de la reproductibilité\n\n\n\n\n\nSource : Peng R., Reproducible Research in Computational Science, Science (2011)"
   },
   {
     "objectID": "slides/outils-techniques/index.html#donner-les-moyens-dinnover",
     "href": "slides/outils-techniques/index.html#donner-les-moyens-dinnover",
-    "title": "Besoins techniques et organisationnels pour la big data",
+    "title": "Besoins techniques et organisationnels",
     "section": "Donner les moyens d’innover",
     "text": "Donner les moyens d’innover\n\n\nFournir des ressources adaptées aux nouveaux usages\n\nStockage adapté aux données massives et non-structurées\nOutils modernes de data science (R, Python, calcul distribué,…)\nGPUs pour l’entraînement de modèles de machine learning\n\nPasser du développement à la mise en production\n\nOutils de déploiement et d’automatisation"
   },
   {
     "objectID": "slides/outils-techniques/index.html#des-besoins-à-différents-niveaux",
     "href": "slides/outils-techniques/index.html#des-besoins-à-différents-niveaux",
-    "title": "Besoins techniques et organisationnels pour la big data",
+    "title": "Besoins techniques et organisationnels",
     "section": "Des besoins à différents niveaux",
     "text": "Des besoins à différents niveaux\n\nInfrastructure\nOutils informatiques\nChangements organisationnels"
   },
   {
-    "objectID": "slides/outils-techniques/index.html#comment-construire-une-data-stack-cohérente",
-    "href": "slides/outils-techniques/index.html#comment-construire-une-data-stack-cohérente",
-    "title": "Besoins techniques et organisationnels pour la big data",
-    "section": "Comment construire une data stack cohérente ?",
-    "text": "Comment construire une data stack cohérente ?\n\nRépondre aux besoins des statisticiens publics\n\nRessources (stockage, GPUs, services etc.) pour l’expérimentation\nPermettre la mise en production\n\nChoisir des technologies à l’état de l’art\n\nFaciliter l’adoption par les statisticiens"
+    "objectID": "slides/outils-techniques/index.html#comment-construire-une-data-stack-pertinente",
+    "href": "slides/outils-techniques/index.html#comment-construire-une-data-stack-pertinente",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Comment construire une data stack pertinente ?",
+    "text": "Comment construire une data stack pertinente ?\n\nRépondre aux besoins des statisticiens publics\n\nRessources (stockage, GPUs, services etc.) pour l’expérimentation\nFavoriser la reproductibilité des traitements\nPermettre la mise en production\n\nChoisir des technologies à l’état de l’art\n\nFaciliter l’adoption par les statisticiens"
   },
   {
-    "objectID": "slides/outils-techniques/index.html#la-base-le-data-lake",
-    "href": "slides/outils-techniques/index.html#la-base-le-data-lake",
-    "title": "Besoins techniques et organisationnels pour la big data",
-    "section": "La base : le data lake",
-    "text": "La base : le data lake\n\nStockage centralisé pour données volumineuses et brutes provenant de sources variées\n\n\n\n\n\n\n\n\nData Lake : central location that holds a large amount of data in its native, raw format\n\nStandard in the data industry : object storage (our choice : open-source implementation of S3 -&gt; MinIO)\n\nPrinciples of object storage\nObject storage &gt; Hadooop : co-localisation plus nécessaire car difficile à maintenir (coût), cloud computing (capacités réseaux ++ -&gt; déplcaements de donnéeds massibes bien moins coûteuse : 1 Gb/S débuts 2000’s -&gt; 100 Gb/s ajd), difficile à adapter à la conteneurisation (choses évoluent vite mais ), big big big data pas dans l’aire du temps, plus besoin de puissance/IA que de big storage -&gt; découplage qui apporte souplesse et scaling\nConteneurisation -&gt; standard pour la reproductibilité\nOnyxia"
+    "objectID": "slides/outils-techniques/index.html#notre-data-stack",
+    "href": "slides/outils-techniques/index.html#notre-data-stack",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Notre data stack",
+    "text": "Notre data stack\n\nInfrastructure cloud centralisée\nStockage objet\nConteneurisation\nPlateforme web de data science"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#infrastructure-cloud",
+    "href": "slides/outils-techniques/index.html#infrastructure-cloud",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Infrastructure cloud",
+    "text": "Infrastructure cloud\n\nPoste de travail comme point d’accès à une infrastructure centralisée de calcul\n\nEvolutivité (scaling horizontal)\nSécurité (pas de dissemination des données)\n\nOn-premise vs. full-cloud\n\nMaîtrise des coûts\nCompétences de maintenance"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#stockage-le-data-lake",
+    "href": "slides/outils-techniques/index.html#stockage-le-data-lake",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Stockage : le data lake",
+    "text": "Stockage : le data lake\n\nUn stockage peu coûteux fait pour des données\n\nvolumineuses\nbrutes\nissues de sources variées"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#le-choix-du-stockage-objet",
+    "href": "slides/outils-techniques/index.html#le-choix-du-stockage-objet",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Le choix du stockage objet",
+    "text": "Le choix du stockage objet\n\nChoix du stockage objet (type S3) vs. Hadoop\nLa co-localisation des traitements n’est plus justifiée\n\nPlus besoin de puissance/IA que de big storage\nDécouplage stockage/traitement -&gt; évolutivité\nCoûts de maintenance"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#le-choix-de-la-conteneurisation",
+    "href": "slides/outils-techniques/index.html#le-choix-de-la-conteneurisation",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Le choix de la conteneurisation",
+    "text": "Le choix de la conteneurisation\n\n\n\n\n\n\nStandard pour la data science\n\nautonomie\nreproductibilité\nscalabilité\n\nOrchestrateur : Kubernetes"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#une-plateforme-de-data-science",
+    "href": "slides/outils-techniques/index.html#une-plateforme-de-data-science",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Une plateforme de data science",
+    "text": "Une plateforme de data science\n\nLes choix techniques ne suffisent pas\n\nLes technologies cloud sont difficiles d’accès\nUne interface web comme liant technique"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#ssp-cloud-onyxia",
+    "href": "slides/outils-techniques/index.html#ssp-cloud-onyxia",
+    "title": "Besoins techniques et organisationnels",
+    "section": "SSP Cloud / Onyxia",
+    "text": "SSP Cloud / Onyxia\n\nSSP Cloud : instance publique d’Onyxia\n\nDédiée à l’expérimentation sur données ouvertes\nBase des tutoriels de cette formation\n\nOnyxia : une plateforme de data science moderne\n\nProjet open-source : https://github.com/InseeFrLab/onyxia-web\nPossibilité de créer une instance interne"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#motivation",
+    "href": "slides/outils-techniques/index.html#motivation",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Motivation",
+    "text": "Motivation\n\nUne infrastructure adaptée au big data est nécessaire.. mais pas suffisante !\nNécessité d’adapter les pratiques\n\nLangages de programmation\nFormats de données\nLibrairies informatiques spécifiques"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#langages-de-programmation",
+    "href": "slides/outils-techniques/index.html#langages-de-programmation",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Langages de programmation",
+    "text": "Langages de programmation\n\nSource"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#limites-des-formats-de-données-usuels",
+    "href": "slides/outils-techniques/index.html#limites-des-formats-de-données-usuels",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Limites des formats de données usuels",
+    "text": "Limites des formats de données usuels\n\nLes formats usuels (CSV, JSON, XML) sont inadaptés à la big data\n\nNon-compressés : human readable mais espace disque élevé\nOrientés ligne : un traitement sur une/des colonne(s) implique une lecture complète du fichier"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#formats-de-données-pour-la-big-data",
+    "href": "slides/outils-techniques/index.html#formats-de-données-pour-la-big-data",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Formats de données pour la big data",
+    "text": "Formats de données pour la big data\n\nPropriétés souhaitées\n\nOrientés colonne\nEfficients en stockage disque\nEfficients en RAM\nInteropérables et open-source\n\nDeux formats\n\nParquet : stockage disque\nArrow : traitement en mémoire"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#modes-de-stockage",
+    "href": "slides/outils-techniques/index.html#modes-de-stockage",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Modes de stockage",
+    "text": "Modes de stockage\n\nLe stockage hybride optimise la lecture\n\nProjection (SELECT) : orientation colonne\nPredicates (WHERE) : orientation ligne\n\n\n\nSource"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#le-format-parquet",
+    "href": "slides/outils-techniques/index.html#le-format-parquet",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Le format Parquet",
+    "text": "Le format Parquet\n\nOrienté colonne (hybride)\n\nAdapté aux traitements analytiques\nConçu pour être écrit une fois mais lu fréquemment\n\nOptimisé\n\nCompression (jusqu’à 87 % moins d’espace qu’un CSV)\nParcours du fichier (jusqu’à 34x plus rapide qu’un CSV)\n\nInteropérable et open-source"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#traitement-en-mémoire",
+    "href": "slides/outils-techniques/index.html#traitement-en-mémoire",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Traitement en mémoire",
+    "text": "Traitement en mémoire\n\nParquet ne résout pas tout\n\nL’espace disque est optimisé\nLes données décompressées doivent passer en RAM\n\nComment analyser 100 GB de données sur un PC avec 16 GB de RAM ?"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#arrow",
+    "href": "slides/outils-techniques/index.html#arrow",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Arrow",
+    "text": "Arrow\n\nFormat de données en mémoire, orienté colonne\n\nOptimisé pour les traitements analytiques\nPas nécessaire de charger toutes les données en RAM\nInteropérable et standardisé"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#traitement-des-données-massives",
+    "href": "slides/outils-techniques/index.html#traitement-des-données-massives",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Traitement des données massives",
+    "text": "Traitement des données massives\n\nArrow ne résout pas tout\n\nLes données massives nécessitent des infrastuctures big data\nLes algorithmes aussi doivent être adaptés\n\nSolution : calcul distribué"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#hadoop-mapreduce",
+    "href": "slides/outils-techniques/index.html#hadoop-mapreduce",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Hadoop MapReduce",
+    "text": "Hadoop MapReduce\n\nDéveloppé par Google (2004)\nPopularisé par l’implémentation open-source d’Hadoop"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#apache-spark",
+    "href": "slides/outils-techniques/index.html#apache-spark",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Apache Spark",
+    "text": "Apache Spark\n\nDémocratisation du calcul distribué\n\nAbstraction des opérations MapReduce\nVitesse d’exécution ++ (RAM vs. disque)"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#outils-pour-la-mise-en-production",
+    "href": "slides/outils-techniques/index.html#outils-pour-la-mise-en-production",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Outils pour la mise en production",
+    "text": "Outils pour la mise en production\n\nTraitements automatisés (workflows)\n\nargo-workflow\n\nDéploiement (batch, workflow, application)\n\nKubernetes\nArgoCD"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#en-résumé",
+    "href": "slides/outils-techniques/index.html#en-résumé",
+    "title": "Besoins techniques et organisationnels",
+    "section": "En résumé",
+    "text": "En résumé\n\nUtiliser un format de données adapté (Parquet)\nUtiliser des outils informatiques adaptés\n\nDonnées volumineuses : calcul en mémoire optimisé (Arrow / DuckDB)\nDonnées massives : calcul distribué (Spark)"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#catalogue-de-services-donyxia",
+    "href": "slides/outils-techniques/index.html#catalogue-de-services-donyxia",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Catalogue de services d’Onyxia",
+    "text": "Catalogue de services d’Onyxia"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#labs",
+    "href": "slides/outils-techniques/index.html#labs",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Labs",
+    "text": "Labs\n\nL’innovation méthodologie ET informatique sont complémentaires\n\nPas de big data sans infrastructure adaptée\nPas de big data sans outils et algorithmes adaptés\n\nInsee : deux labs qui travaillent en synérgie\n\nSSP Lab : innovation méthodologique en data science\nDIIT : innovation informatique (Onyxia / SSP Cloud)"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#approche-mlops",
+    "href": "slides/outils-techniques/index.html#approche-mlops",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Approche MLOps",
+    "text": "Approche MLOps\n\nBesoin de trouver des organisations hybrides"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#organisation-dun-projet",
+    "href": "slides/outils-techniques/index.html#organisation-dun-projet",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Organisation d’un projet",
+    "text": "Organisation d’un projet"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#formation",
+    "href": "slides/outils-techniques/index.html#formation",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Formation",
+    "text": "Formation\n\nToutes nos formations sont open-source\n\nParcours de formation à R / Python\nFormation à Spark\nTutoriels de Machine Learning\nMise en production\netc."
   },
   {
     "objectID": "slides/juridique-big-data/index.html#quest-ce-que-le-web-scraping",
