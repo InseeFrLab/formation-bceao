@@ -1,14 +1,14 @@
 
 ---
-title: Nouvelles sources de données à l'Insee
-image: https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230221093715/Data-Collection.png
+title: Outils techniques et changements organisationnels 
+image: https://onyxia.sh/static/media/Dragoon.8d89504cc3a892bf56ee9e7412df7d43.svg
 date: "2023-09-01"
 description: |
-  <b>Description :</b> Blabla 
+  <b>Description :</b> De nouveaux outils et des organisations plus souples pour favoriser l'innovation autour des technologies big data
 categories:
-  - NLP
+  - SSP Cloud
 slides:
   text: Slides
-  url: /slides/new-sources-donnees/index.html
-order: 3
+  url: /slides/outils-techniques/index.html
+order: 2
 ---
