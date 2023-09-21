@@ -172,14 +172,7 @@
     "href": "slides/outils-techniques/index.html#apache-spark",
     "title": "Besoins techniques et organisationnels",
     "section": "Apache Spark",
-    "text": "Apache Spark\n\nDémocratisation du calcul distribué\n\nAbstraction des opérations MapReduce\nVitesse d’exécution ++ (RAM vs. disque)"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#outils-pour-la-mise-en-production",
-    "href": "slides/outils-techniques/index.html#outils-pour-la-mise-en-production",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Outils pour la mise en production",
-    "text": "Outils pour la mise en production\n\nTraitements automatisés (workflows)\n\nargo-workflow\n\nDéploiement (batch, workflow, application)\n\nKubernetes\nArgoCD"
+    "text": "Apache Spark\n\nDémocratisation du calcul distribué\n\nAbstraction des opérations MapReduce\nVitesse d’exécution (RAM vs. disque)"
   },
   {
     "objectID": "slides/outils-techniques/index.html#en-résumé",
@@ -187,6 +180,13 @@
     "title": "Besoins techniques et organisationnels",
     "section": "En résumé",
     "text": "En résumé\n\nUtiliser un format de données adapté (Parquet)\nUtiliser des outils informatiques adaptés\n\nDonnées volumineuses : calcul en mémoire optimisé (Arrow / DuckDB)\nDonnées massives : calcul distribué (Spark)"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#outils-pour-la-mise-en-production",
+    "href": "slides/outils-techniques/index.html#outils-pour-la-mise-en-production",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Outils pour la mise en production",
+    "text": "Outils pour la mise en production\n\nTraitements automatisés (workflows)\n\nargo-workflow\n\nDéploiement (batch, workflow, application)\n\nKubernetes\nArgoCD"
   },
   {
     "objectID": "slides/outils-techniques/index.html#catalogue-de-services-donyxia",
@@ -221,7 +221,7 @@
     "href": "slides/outils-techniques/index.html#formation",
     "title": "Besoins techniques et organisationnels",
     "section": "Formation",
-    "text": "Formation\n\nToutes nos formations sont open-source (catalogue)\n\nParcours de formation à R / Python\nFormation à Spark\nTutoriels de Machine Learning\nMise en production\netc."
+    "text": "Formation\n\nToutes nos formations sont open-source (catalogue)\n\nParcours de formation à R / Python\nFormation à Spark\nTutoriels de machine learning\nMLOps\netc."
   },
   {
     "objectID": "slides/juridique-big-data/index.html#quest-ce-que-le-web-scraping",

@@ -690,19 +690,42 @@
 <li class="fragment"><p>Développé par Google (2004)</p></li>
 <li class="fragment"><p>Popularisé par l’implémentation open-source d’<span class="orange"><strong>Hadoop</strong></span></p></li>
 </ul>
-
-<img data-src="img/mapreduce.png" class="r-stretch quarto-figure-center"></section>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/mapreduce.png"></p>
+</figure>
+</div>
+</div>
+</section>
 <section id="apache-spark" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Apache Spark</h2>
 <ul>
 <li class="fragment">Démocratisation du <span class="orange"><strong>calcul distribué</strong></span>
 <ul>
-<li class="fragment">Abstraction des opérations MapReduce</li>
-<li class="fragment">Vitesse d’exécution ++ (RAM vs.&nbsp;disque)</li>
+<li class="fragment"><span class="blue2"><strong>Abstraction</strong></span> des opérations MapReduce</li>
+<li class="fragment"><span class="blue2"><strong>Vitesse d’exécution</strong></span> (RAM vs.&nbsp;disque)</li>
 </ul></li>
 </ul>
-
-<img data-src="img/spark.png" class="r-stretch quarto-figure-center"></section>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/spark.png"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="en-résumé" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>En résumé</h2>
+<ul>
+<li class="fragment"><p>Utiliser un <span class="orange"><strong>format</strong></span> de données adapté (<code>Parquet</code>)</p></li>
+<li class="fragment"><p>Utiliser des <span class="orange"><strong>outils</strong></span> informatiques adaptés</p>
+<ul>
+<li class="fragment">Données <span class="blue2"><strong>volumineuses</strong></span> : calcul <span class="blue2"><strong>en mémoire</strong></span> optimisé (<code>Arrow</code> / <code>DuckDB</code>)</li>
+<li class="fragment">Données <span class="blue2"><strong>massives</strong></span> : calcul <span class="blue2"><strong>distribué</strong></span> (<code>Spark</code>)</li>
+</ul></li>
+</ul>
+</section>
 <section id="outils-pour-la-mise-en-production" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Outils pour la mise en production</h2>
 <ul>
@@ -714,17 +737,6 @@
 <ul>
 <li class="fragment"><code>Kubernetes</code></li>
 <li class="fragment"><code>ArgoCD</code></li>
-</ul></li>
-</ul>
-</section>
-<section id="en-résumé" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>En résumé</h2>
-<ul>
-<li class="fragment"><p>Utiliser un <span class="orange"><strong>format</strong></span> de données adapté (<code>Parquet</code>)</p></li>
-<li class="fragment"><p>Utiliser des <span class="orange"><strong>outils</strong></span> informatiques adaptés</p>
-<ul>
-<li class="fragment">Données <span class="blue2"><strong>volumineuses</strong></span> : calcul <span class="blue2"><strong>en mémoire</strong></span> optimisé (<code>Arrow</code> / <code>DuckDB</code>)</li>
-<li class="fragment">Données <span class="blue2"><strong>massives</strong></span> : calcul <span class="blue2"><strong>distribué</strong></span> (<code>Spark</code>)</li>
 </ul></li>
 </ul>
 </section>
@@ -745,10 +757,10 @@
 <li class="fragment">Pas de big data sans <span class="blue2"><strong>infrastructure</strong></span> adaptée</li>
 <li class="fragment">Pas de big data sans <span class="blue2"><strong>outils</strong></span> et <span class="blue2"><strong>algorithmes</strong></span> adaptés</li>
 </ul></li>
-<li class="fragment">Insee : deux <span class="orange"><strong>labs</strong></span> qui travaillent en synérgie
+<li class="fragment">Insee : deux <span class="orange"><strong>labs</strong></span> qui travaillent en <span class="blue2"><strong>synérgie</strong></span>
 <ul>
-<li class="fragment"><span class="orange"><strong>SSP Lab</strong></span> : innovation méthodologique en data science</li>
-<li class="fragment"><span class="orange"><strong>DIIT</strong></span> : innovation informatique (Onyxia / SSP Cloud)</li>
+<li class="fragment"><span class="orange"><strong>SSP Lab</strong></span> : innovation <span class="blue2"><strong>méthodologique</strong></span> en data science</li>
+<li class="fragment"><span class="orange"><strong>DIIT</strong></span> : innovation <span class="blue2"><strong>informatique</strong></span> (Onyxia / SSP Cloud)</li>
 </ul></li>
 </ul>
 </section>
@@ -778,10 +790,10 @@
 <ul>
 <li class="fragment">Toutes nos formations sont <span class="blue2"><strong>open-source</strong></span> (<a href="[formations](https://www.sspcloud.fr/formation)">catalogue</a>)
 <ul>
-<li class="fragment">Parcours de formation à R / Python</li>
-<li class="fragment">Formation à Spark</li>
-<li class="fragment">Tutoriels de Machine Learning</li>
-<li class="fragment">Mise en production</li>
+<li class="fragment">Parcours de formation à <code>R</code> / <code>Python</code></li>
+<li class="fragment">Formation à <code>Spark</code></li>
+<li class="fragment">Tutoriels de <span class="orange">machine learning</span></li>
+<li class="fragment"><span class="orange">MLOps</span></li>
 <li class="fragment">etc.</li>
 </ul></li>
 </ul>
