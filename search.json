@@ -224,67 +224,39 @@
     "text": "Formation\n\nToutes nos formations sont open-source (catalogue)\n\nParcours de formation à R / Python\nFormation à Spark\nTutoriels de machine learning\nMLOps\netc."
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#quest-ce-que-le-web-scraping",
-    "href": "slides/juridique-big-data/index.html#quest-ce-que-le-web-scraping",
+    "objectID": "slides/juridique-big-data/index.html#collecte-des-données",
+    "href": "slides/juridique-big-data/index.html#collecte-des-données",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Qu’est-ce que le web scraping ?",
-    "text": "Qu’est-ce que le web scraping ?\n\nLe web scraping désigne un ensemble de techniques d’extraction de contenu sur des sites internet.\nLe terme fait généralement référence à l’usage de bots pour collecter ces contenus automatiquement."
+    "section": "Collecte des données",
+    "text": "Collecte des données\n\nNombreux acteurs privés et publics peuvent collecter des données produites directement ou indirectement par les individus.\nCollecte de données personnelles sans consentement explicite.\nPossibilité de violation de la vie privée des utilisateurs.\nExplication des motifs et intentions de collecte des données nécessaire.\n\n\n\n\n\n\n\nExemple de risque potentiel\n\n\nApplication de santé collectant des données biométriques de ses utilisateurs sans leur consentement explicite."
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#exemples-introductifs",
-    "href": "slides/juridique-big-data/index.html#exemples-introductifs",
+    "objectID": "slides/juridique-big-data/index.html#stockage-et-sécurité-des-données",
+    "href": "slides/juridique-big-data/index.html#stockage-et-sécurité-des-données",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Exemples introductifs",
-    "text": "Exemples introductifs\n\nOn souhaite accéder à la liste des présidents des États-Unis et réunir les dates de mandat dans un Excel.\nOn souhaite télécharger le classement QS 2023 des universités et filtrer les universités italiennes.\nOn souhaite accéder à un répertoire d’expressions idiomatiques et trouver toutes celles contenant le mot “nez”."
+    "section": "Stockage et sécurité des données",
+    "text": "Stockage et sécurité des données\n\nVolume des données pose la difficulté du stockage\nCoûts d’investissement importants et marché monopolisé par les GAFAM\nProblématique de la souveraineté numérique\nMesures de sécurité essentielles pour la protection des données.\n\n\n\n\n\n\n\nExemple de risque potentiel\n\n\n\nPossibilité de violation de la sécurité des données ou de partage de données avec une entité gouvernementale.\nIncendie OVH en janvier 2023."
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#web-scraping-web-crawling-screen-scraping-quelles-différences",
-    "href": "slides/juridique-big-data/index.html#web-scraping-web-crawling-screen-scraping-quelles-différences",
+    "objectID": "slides/juridique-big-data/index.html#open-data-et-secteur-public",
+    "href": "slides/juridique-big-data/index.html#open-data-et-secteur-public",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Web scraping, web crawling, screen scraping, quelles différences ?",
-    "text": "Web scraping, web crawling, screen scraping, quelles différences ?\n\nLe web scraping se réfère à l’extraction des données, ou captation d’informations, sur une ou plusieurs pages web.\nLe web crawling, ou spidering, correspond à la recherche (ou la navigation parmi) de nouveaux URLs sur Internet ou sur un site spécifique.\nQuant au screen scraping, proche du web scraping, il consiste plutôt à extraire le contenu visuel d’un site apparaissant à l’écran, comme des images.\n\n\n\n\n\n\n\nNote\n\n\nWeb scraping et web crawling peuvent aller ensemble :\n\nOn utile d’abord un crawler pour récupérer tous les urls d’un site …\n… Puis on scrape chacune des pages les unes après les autres"
+    "section": "Open Data et secteur public",
+    "text": "Open Data et secteur public\n\nMise à disposition de la société civile de la masse de données collectées par les autorités publiques.\nAméliorer le fonctionnement démocratique par la transparence et l’ouverture d’information.\nProposer de nouvelles ressources pour l’innovation économique et sociale"
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#cas-dusage-pratiques",
-    "href": "slides/juridique-big-data/index.html#cas-dusage-pratiques",
+    "objectID": "slides/juridique-big-data/index.html#propriété-intellectuelle",
+    "href": "slides/juridique-big-data/index.html#propriété-intellectuelle",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Cas d’usage pratiques",
-    "text": "Cas d’usage pratiques\nÉtudes de marché et intelligence économique\n\nFaire un suivi des prix sur des sites de ventes (possiblement concurrents) en les scrapant régulièrement\n\nOn peut alors parler de price scraping\n\nGlaner des informations sur les sites d’entreprises concurrentes\n\n\n\n\n\n\n\nExemple\n\n\nDans les répertoires d’expressions idiomatiques, il est facile de “dérober” les contenus les uns des autres (Expressio, Expressions Françaises, L’internaute…)"
+    "section": "Propriété intellectuelle",
+    "text": "Propriété intellectuelle\n\nGestion des licences :\n\nDéveloppement de l’open source et du partage de données\nNécessité d’apposer et de respecter des licences claires\n\nEquilibre difficile entre la protection et l’innovation ⚖️ :\n\nLes lois sur le droit d’auteur établies ont du mal à prendre en compte les nouvelles technologies\nDéveloppement de nouveaux outils d’Intelligence Artificielle (IA)"
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#cas-dusage-pratiques-1",
-    "href": "slides/juridique-big-data/index.html#cas-dusage-pratiques-1",
+    "objectID": "slides/juridique-big-data/index.html#problématiques-des-nouvelles-méthodes-dia",
+    "href": "slides/juridique-big-data/index.html#problématiques-des-nouvelles-méthodes-dia",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Cas d’usage pratiques",
-    "text": "Cas d’usage pratiques\nAnalyses de sentiment et génération de leads\n\nRécupérer les commentaires d’un produit ou d’une entreprise sur un site tiers afin d’analyser les retours obtenus et faire du sentiment analysis\n\nUn papier de recherche sur le sujet\n\nObtenir une liste de clients potentiels ou répondant à des critères spécifiques\n\nÀ partir de sites comme les Pages Jaunes ou Google Maps pour les entreprises"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#cas-dusage-pratiques-2",
-    "href": "slides/juridique-big-data/index.html#cas-dusage-pratiques-2",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Cas d’usage pratiques",
-    "text": "Cas d’usage pratiques\nObtenir des données pour alimenter des modèles de ML\n\nRegrouper divers indicateurs et séries temporelles via les Google Trends pour améliorer les performances de modèles de prédiction\n\nEn phase expérimentale à l’INSEE, par exemple pour des problématiques de nowcasting\n\nSurveiller les valeurs de stocks boursiers et mouvements de marché sur Yahoo Finance et les inclure dans des modèles\n\nEn l’occurrence, Yahoo Finance offre aussi une API pour l’extraction de données"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#cas-dusage-pratiques-3",
-    "href": "slides/juridique-big-data/index.html#cas-dusage-pratiques-3",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Cas d’usage pratiques",
-    "text": "Cas d’usage pratiques\nDans des domaines spécifiques\n\nDans le domaine immobilier, de nombreuses agences utilisent le scraping pour alimenter leur propre base de biens à vendre ou à louer.\n\nOn peut aussi trouver de nombreux agrégateurs d’annonces en ligne.\n\nDans le domaine aérien, nombreux sont les comparateurs en ligne qui ont recours au scraping pour présenter des offres de trajets issues de plusieurs compagnies.\n\nEx : kiwi.com, lastminute.com…\nCe n’est d’ailleurs pas le cas que dans le domaine du transport (ex: hébergement touristique).\n\nDans le domaine des paris sportifs, il est courant de scraper les sites de statistiques sportives afin d’adapter l’offre des paris."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#cas-dusage-pratiques-4",
-    "href": "slides/juridique-big-data/index.html#cas-dusage-pratiques-4",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Cas d’usage pratiques",
-    "text": "Cas d’usage pratiques\nDans le domaine de la recherche\n\nPour des chercheurs, le web scraping peut représenter une importante source de données, et ce dans des domaines très variés.\n\nUn exemple ici avec une équipe ayant scrapé Wikipedia pour compléter des données extraites de Wikidata, afin d’établir une base de données de tous les individus ayant leur propre page, pour ensuite établir des statistiques par période, par domaine ou par sexe.\nUn code en open source"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#cas-dusage-pour-un-ins",
-    "href": "slides/juridique-big-data/index.html#cas-dusage-pour-un-ins",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Cas d’usage pour un INS",
-    "text": "Cas d’usage pour un INS\n\nScraper divers sites de ventes afin d’obtenir des données de prix pour le calcul de l’indice des prix à la consommation (IPC)\nCompléter des données de statistiques d’entreprises avec des informations disponibles en ligne\nMinimiser la charge de réponse lors des enquêtes en favorisant le scraping\nConstruire des bases de sondages, par exemple en scrapant les annuaires d’enseignes"
+    "section": "Problématiques des nouvelles méthodes d’IA",
+    "text": "Problématiques des nouvelles méthodes d’IA\n\nLes grands modèles de langage (LLM) et les modèle de génération d’images :\n\nEntraînement sur données avec droit d’auteurs\nRéponses non sourcées pour les LLM\nFailles de sécurité (Samsung-OpenAI)\nPoursuite d’artiste contre Stability AI et Midjourney pour avoir récupéré des données d’artistes sans consentement\nQuid des données générées ?"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#le-web-scraping-est-ce-légal",
@@ -420,221 +392,11 @@
     "text": "Avertissements\n\nSelon les pays, il existe des données qui sont publiques mais dont le scraping est illégal.\n\nIl faut donc bien se renseigner sur les lois locales.\nPar exemple, la collecte d’adresses mail par scraping est illégale en Australie, en raison du Spam Act de 2003.\n\nDans le doute, ne pas hésiter à se documenter davantage.\n\nExemples de ressources : Carpentries, Rubyroidlabs…\n\nIl existe parfois des structures dont le rôle est justement d’évaluer l’aspect juridique de pratiques comme le web scraping.\n\nA l’INSEE, c’est la responsabilité de l’UAJC\n\nOutre l’aspect juridique, il faut bien passer en revue les impacts méthodologiques liés aux risques techniques du web scraping (collecte incomplète, rupture de collecte)."
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#linkedin-v.-hiq-labs-2019",
-    "href": "slides/juridique-big-data/index.html#linkedin-v.-hiq-labs-2019",
+    "objectID": "slides/juridique-big-data/index.html#collecte-des-données-1",
+    "href": "slides/juridique-big-data/index.html#collecte-des-données-1",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "LinkedIn v. HiQ Labs (2019)",
-    "text": "LinkedIn v. HiQ Labs (2019)\nLe litige\n\nContexte : HiQ scrape les données des utilisateurs LinkedIn (accessibles publiquement) pour nourrir un outil de prédiction de l’attrition, commercialisé ensuite.\nCas :\n\nLinkedIn tente d’interdire la collecte au nom du CFAA et d’une violation des conditions d’utilisation du site.\nHiQ saisit la justice pour se défendre.\n\nVerdict : Deux victoires (tribunal californien et Cour Suprême) pour HiQ, dont le maintien de l’activité de scraping est autorisé."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#linkedin-v.-hiq-labs-2019-1",
-    "href": "slides/juridique-big-data/index.html#linkedin-v.-hiq-labs-2019-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "LinkedIn v. HiQ Labs (2019)",
-    "text": "LinkedIn v. HiQ Labs (2019)\nLes conclusions\n\nLinkedIn n’est pas propriétaire des données : ce sont en réalité les membres eux-mêmes. Les utilisateurs qui choisissent un profil public attendent « évidemment » qu’il soit accessible par des tiers.\nLaisser à LinkedIn le contrôle sur l’utilisation des données publiques pourrait engendrer un « monopole de l’information » préjudiciable à l’intérêt public.\nLe CFAA est inadapté pour ce type de cas.\nHiQ n’a scrapé que des données auxquelles n’importe quel utilisateur a accès, et LinkedIn ne peut pas les leur interdire spécifiquement."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#ryanair-v.-opodo-2010",
-    "href": "slides/juridique-big-data/index.html#ryanair-v.-opodo-2010",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Ryanair v. Opodo (2010)",
-    "text": "Ryanair v. Opodo (2010)\nLe litige\n\nContexte : Opodo scrape (entre autres) les données du site de Ryanair pour les agréger en un comparateur de prix de billets.\nCas : Ryanair attaque Opodo en justice dans plusieurs pays européens, notamment en France, pour non respect des CGU, concurrence déloyale et parasitisme.\nVerdict : Différent selon les pays, mais en France Ryanair a été débouté à deux reprises."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#ryanair-v.-opodo-2010-1",
-    "href": "slides/juridique-big-data/index.html#ryanair-v.-opodo-2010-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Ryanair v. Opodo (2010)",
-    "text": "Ryanair v. Opodo (2010)\nLes conclusions\nLe Tribunal de Paris :\n\nRejette l’intégralité des demandes de Ryanair\nCondamne Ryanair à d’importantes sommes à Opodo pour préjudice\nMaintient le droit d’Opodo à scraper les données publiques du site de Ryanair"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#ryanair-v.-pr-aviation-2015",
-    "href": "slides/juridique-big-data/index.html#ryanair-v.-pr-aviation-2015",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Ryanair v. PR Aviation (2015)",
-    "text": "Ryanair v. PR Aviation (2015)\nLe litige\n\nContexte : PR Aviation scrape (entre autres) les données du site de Ryanair pour les agréger en un comparateur de prix de billets.\nCas : Ryanair attaque PR Aviation en justice aux Pays-Bas pour ne pas avoir respecté les termes contractuels d’utilisation du site et pour infraction aux directives européennes de protection des données."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#ryanair-v.-pr-aviation-2015-1",
-    "href": "slides/juridique-big-data/index.html#ryanair-v.-pr-aviation-2015-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Ryanair v. PR Aviation (2015)",
-    "text": "Ryanair v. PR Aviation (2015)\nLes conclusions\nDécision préliminaire de la CJEU :\n\nLa Directive 96/9/EC ne s’applique pas dans ce cas, car les bases de données ne qualifient pas :\n\nPour le droit au copyright\nPour la protection sui generis\n\nEn revanche, Ryanair est autorisé à instaurer des limitations contractuelles sur l’utilisation de son site, tant qu’elles ne contredisent pas le droit national\n\nOn notera que pour pouvoir lancer une recherche et visualiser les vols Ryanair disponibles en ligne, il faut explicitement accepter les CGU du site en cliquant sur un bouton"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#ryanair-v.-expedia-2019",
-    "href": "slides/juridique-big-data/index.html#ryanair-v.-expedia-2019",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Ryanair v. Expedia (2019)",
-    "text": "Ryanair v. Expedia (2019)\n\nContexte : Expedia scrape (entre autres) les données du site de Ryanair pour les agréger sur son comparateur en ligne.\nCas : Ryanair attaque PR Aviation en justice aux Etats-Unis et en Irlande pour ne pas avoir respecté les termes contractuels d’utilisation du site et au nom du CFAA aux Etats-Unis.\nVerdict : Accord “à l’amiable” entre les deux géants, mais les vols de Ryanair n’apparaissent plus sur le site d’Expedia."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#ryanair-v.-kiwi.com-2021",
-    "href": "slides/juridique-big-data/index.html#ryanair-v.-kiwi.com-2021",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Ryanair v. Kiwi.com (2021)",
-    "text": "Ryanair v. Kiwi.com (2021)\nLe litige\n\nContexte : Kiwi.com scrape (entre autres) les données du site de Ryanair pour les agréger sur son comparateur en ligne.\nCas : Ryanair attaque Kiwi.com en justice en République Tchèque pour ne pas avoir respecté les termes contractuels d’utilisation du site.\nVerdict : Première défaite de Kiwi.com, puis victoire en appel auprès de la Cour Constitutionnelle Tchèque."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#ryanair-v.-kiwi.com-2021-1",
-    "href": "slides/juridique-big-data/index.html#ryanair-v.-kiwi.com-2021-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Ryanair v. Kiwi.com (2021)",
-    "text": "Ryanair v. Kiwi.com (2021)\nLes conclusions\n\nLa cour régionale de Brno avait imposé à Kiwi.com de se plier aux CGU de Ryanair. Cela impliquait notamment que Kiwi.com devait transmettre à Ryanair plusieurs données personnelles sur ses clients ayant acheté un billet de la compagnie sur la plateforme (dont par exemple leurs coordonnées).\nEn cour d’appel, la décision avait été révoquée pour les raisons suivantes :\n\nDroit national à la protection judiciaire\nLiberté de conduire son entreprise\nLe procès initial n’aurait pas suffisamment tenu compte du contexte"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#ryanair-v.-lastminute---italie-2019",
-    "href": "slides/juridique-big-data/index.html#ryanair-v.-lastminute---italie-2019",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Ryanair v. Lastminute - Italie (2019)",
-    "text": "Ryanair v. Lastminute - Italie (2019)\n\nContexte : Lastminute scrape (entre autres) les données du site de Ryanair pour les agréger sur son comparateur en ligne.\nCas :\n\nRyanair attaque Lastminute en justice en Italie pour ne pas avoir respecté les CGU du site et le droit à la propriété intellectuelle.\nRyanair demande également un accès aux données de Lastminute liées aux tickets de la compagnie.\n\nVerdict : La Cour Suprême prend le parti de Lastminute et n’autorise pas l’aspect contractuel des CGU de Ryanair ni l’accès aux données demandées."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#ryanair-v.-lastminute---france-2022",
-    "href": "slides/juridique-big-data/index.html#ryanair-v.-lastminute---france-2022",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Ryanair v. Lastminute - France (2022)",
-    "text": "Ryanair v. Lastminute - France (2022)\n\nContexte : Lastminute scrape (entre autres) les données du site de Ryanair pour les agréger sur son comparateur en ligne.\nCas : Ryanair attaque Lastminute en justice en France pour ne pas avoir respecté les termes contractuels d’utilisation du site.\nVerdict : La cour d’appel de Paris prend le parti de Ryanair et ordonne la cessation immédiate des activités de scraping de Lastminute, en plus de lourds dommages et intérêts."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#affaire-bluetouff---france-2015",
-    "href": "slides/juridique-big-data/index.html#affaire-bluetouff---france-2015",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Affaire “Bluetouff” - France (2015)",
-    "text": "Affaire “Bluetouff” - France (2015)\n\nCour de cassation, Chambre criminelle, 20 mai 2015, 14-81.336\n\nUn exemple de décryptage\n\nOlivier Laurelli, alias Bluetouff, condamné à 3000 euros d’amende pour avoir téléchargé et réutilisé en 2012 (pour diffusion) des données de l’Anses accessibles publiquement sur leur site, là où elles n’auraient pas dû l’être.\nBluetoof relaxé par le tribunal de Créteil en 2012 puis condamné auprès de la Cour d’appel de Paris en 2015."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#leboncoin-v.-entreparticuliers-2021",
-    "href": "slides/juridique-big-data/index.html#leboncoin-v.-entreparticuliers-2021",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "LeBonCoin v. Entreparticuliers (2021)",
-    "text": "LeBonCoin v. Entreparticuliers (2021)\nLe litige\n\nContexte : Entreparticuliers.com scrape quotidiennement les annonces immobilières présentes sur leboncoin.fr afin de les republier sur son propre site\nCas : LeBonCoin attaque en justice Entreparticuliers.com en France pour non respect du droit sui generis de ses bases de données\nVerdict : Entreparticuliers.com condamné à deux reprises (par le Tribunal puis la Cour d’appel de Paris)"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#leboncoin-v.-entreparticuliers-2021-1",
-    "href": "slides/juridique-big-data/index.html#leboncoin-v.-entreparticuliers-2021-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "LeBonCoin v. Entreparticuliers (2021)",
-    "text": "LeBonCoin v. Entreparticuliers (2021)\nLes conclusions (1/2)\n\nAccéder au contenu du site LeBonCoin.fr ne nécessite pas d’accepter explicitement les CGU, LeBonCoin n’a donc pas invoqué le côté contractuel de ces dernières mais seulement le droit sui generis.\nPour en bénéficier, LeBonCoin a dû témoigner d’un investissement substantiel dans la constitution, la vérification ou la présentation de ses bases de données.\n\nEn pratique, c’est un point bloquant pour nombre de producteurs de données dans de telles affaires.\nEn l’occurrence, il a été prouvé que les moyens humains et financiers investis dans ces bases étaient bien substantiels.\n\nEntreparticuliers a donc été condamné à deux reprises :\n\nPar le tribunal au nom de l’article L. 342-1 du Code de la propriété intellectuelle\nPar la Cour d’appel au nom de l’article L. 342-2 du même Code"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#leboncoin-v.-entreparticuliers-2021-2",
-    "href": "slides/juridique-big-data/index.html#leboncoin-v.-entreparticuliers-2021-2",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "LeBonCoin v. Entreparticuliers (2021)",
-    "text": "LeBonCoin v. Entreparticuliers (2021)\nLes conclusions (2/2)\n\nLa Cour d’appel souligne que le but poursuivi lors du scraping est sans incidence pour caractériser l’atteinte au droit sui generis.\nEntreparticuliers.com condamné à verser d’importants dommages et intérêts à leboncoin.fr pour :\n\nPréjudice financier : LeBonCoin témoignant d’importants investissements dans la lutte contre le web scraping\nPréjudice d’image : LeBonCoin démontrait un nombre important de plaintes de ses utilisateurs"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#dautres-litiges-légaux-en-europe",
-    "href": "slides/juridique-big-data/index.html#dautres-litiges-légaux-en-europe",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "D’autres litiges légaux en Europe",
-    "text": "D’autres litiges légaux en Europe\n\nAutoTrack v. GasPedaal (2013 - Pays-Bas)\n\nAussi connu sous le nom de Innoweb BV v. Wegener ICT Media BV\nLe méta-moteur de recherche GasPedaal est interdit de scraper GasPedaal, notamment car :\n\nLes données scrapées sont réutilisées sans modification notoire\nAutoTrack bénéficie du droit sui generis sur ses données"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#dautres-litiges-légaux-aux-etats-unis",
-    "href": "slides/juridique-big-data/index.html#dautres-litiges-légaux-aux-etats-unis",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "D’autres litiges légaux aux Etats-Unis",
-    "text": "D’autres litiges légaux aux Etats-Unis\n\nCraigslist Inc. v. 3Taps Inc. ( 2013 - Etats-Unis)\n\nSuite à un accord mutuel, 3Taps et PadMapper ne pourront plus scraper les données de Craiglist et devront lui verser une somme importante d’argent.\nLe CFAA a été invoqué par Craiglist et accepté par la Cour suite au blocage des adresses IP des deux entreprises et les multiples mises en demeure envoyées pour faire cesser les activités de collecte. 3Taps avait continué ses activités de scraping en utilisant un VPN (et PadMapper les leur avait scrapées)."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#conclusions-des-jurisprudences",
-    "href": "slides/juridique-big-data/index.html#conclusions-des-jurisprudences",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Conclusions des jurisprudences",
-    "text": "Conclusions des jurisprudences\nEn Europe (1/2)\n\nLes CGU d’un site sont juridiquement contractuelles pour interdire toute pratique de web scraping …\n\n… au moins dès lors qu’elles sont acceptées explicitement (par exemple en appuyant sur un bouton) …\n… sauf si mention contraire par les lois nationales (ex : si supériorité du droit à la concurrence, déjà invoqué en Italie ou en République Tchèque).\n\nRepublier des données scrapées …\n\nau moins à des fins commerciales\nsans qu’un travail notable de réutilisation soit fait\npar exemple pour un méta-moteur de recherche\npouvant créer un préjudice pour le site initial\n\n… n’est pas autorisé."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#conclusions-des-jurisprudences-1",
-    "href": "slides/juridique-big-data/index.html#conclusions-des-jurisprudences-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Conclusions des jurisprudences",
-    "text": "Conclusions des jurisprudences\nEn Europe (2/2)\n\nUn contenu accessible publiquement, mais sans que ce ne soit manifestement un choix du site, ne peut pas forcément être légalement scrapé.\nLe droit sui generis protège les bases de données nécessitant des investissements substantiels par les producteurs, indépendamment de l’intention des scrapeurs.\n\nEn revanche, prouver la qualification à ce droit n’est pas tâche aisée."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#conclusions-des-jurisprudences---aux-etats-unis",
-    "href": "slides/juridique-big-data/index.html#conclusions-des-jurisprudences---aux-etats-unis",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Conclusions des jurisprudences - Aux Etats-Unis",
-    "text": "Conclusions des jurisprudences - Aux Etats-Unis\n\nUn site affichant des données publiques dont il n’est pas propriétaire ne peut pas en empêcher le scraping.\nL’activité de web scraping en elle-même ne viole pas le Computer Fraud and Abuse Act.\nLors d’un litige, bloquer l’adresse IP d’un utilisateur et lui adresser une mise en demeure interdisant le scraping du site peuvent éventuellement suffire à invoquer le CFAA pour protéger les bases de données du site."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#et-pour-un-ins-alors",
-    "href": "slides/juridique-big-data/index.html#et-pour-un-ins-alors",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Et pour un INS alors ?",
-    "text": "Et pour un INS alors ?\nQuid des prérogatives de puissance publique pour recueillir de l’information ?\n\nEn Europe, la loi n° 633 du 22 avril 1941, pour la protection du droit d’auteur, prévoit une exception en cas d’utilisation d’une base de données à des fins de recherche scientifique à but non lucratif (art. 64-sexies de la loi n° 633/1941 modifié).\n\nBien que la recherche et la production statistiques ne soient pas explicitement mentionnées, ces dispositions apportent un cadre raisonnable pour permettre aux statisticiens publics d’accéder aux informations des bases de données en ligne et pour traiter ces informations afin de produire des résultats statistiques anonymisés."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#scraping-à-linsee",
-    "href": "slides/juridique-big-data/index.html#scraping-à-linsee",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Scraping à l’INSEE",
-    "text": "Scraping à l’INSEE\nQuand ?\n\nLe web scraping est utilisé en dernier recours, l’INSEE favorisera :\n\nLes accords avec des partenaires (ex : seloger.com)\nL’utilisation d’API (ex : Qwant, Yahoo Finance)\nLes sources de données publiques\n\nLe web scraping devient cependant une source de données grandissante."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#scraping-à-linsee-1",
-    "href": "slides/juridique-big-data/index.html#scraping-à-linsee-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Scraping à l’INSEE",
-    "text": "Scraping à l’INSEE\nUtilisation\nLe scraping est notamment utilisé pour le calcul des indices des prix :\n\nPrix des transports (trains via site de la SNCF, domaine maritime) ;\nPrix de produits divers (surtout de l’électronique) ;\nPrix dans le domaine de l’hôtellerie (avec booking.com).\n\nD’autres utilisations ponctuelles peuvent également être faites."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#scraping-à-linsee-2",
-    "href": "slides/juridique-big-data/index.html#scraping-à-linsee-2",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Scraping à l’INSEE",
-    "text": "Scraping à l’INSEE\nOrganisation\n\nUn scraping encore par cas d’usage, avec une gestion plus globale en cours de maturité\n\nObjectif de mutualisation entre les équipes statistiques\nLa logique open source comme moyen de mutualisation\n\nBeaucoup de Python, un peu de R et de Java"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com",
-    "href": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les prix dans le domaine de l’hôtellerie (Booking.com)",
-    "text": "Les prix dans le domaine de l’hôtellerie (Booking.com)\nRéférences\n\nUn travail ayant donné lieu à une publication\n\nAdrien Montbroussous, Camille Freppel and Ombéline Guillon, “Web scraping of a booking platform: exploring new data and methodology for the hotel service consumer price index”, Paper for the 17th International Conference of the Ottawa Group, Rome\n\nUne présentation plus accessible ici"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com-1",
-    "href": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les prix dans le domaine de l’hôtellerie (Booking.com)",
-    "text": "Les prix dans le domaine de l’hôtellerie (Booking.com)\nLe code\n\nBut : collecter davantage de données pour calculer au mieux les indices d’évolution de prix pour l’hôtellerie.\nLa partie ‘scraping’ du projet est disponible ici.\nPour plus d’informations, contacter Adrien Montbroussous (adrien.montbroussous at insee dot fr) (INSEE).\nLa conférence associée aux présentations : ici\n\nD’autres projets similaires de scraping mentionnés"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#ventes-darticles-électroniques",
-    "href": "slides/juridique-big-data/index.html#ventes-darticles-électroniques",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Ventes d’articles électroniques",
-    "text": "Ventes d’articles électroniques\n\nBut : collecter davantage de données pour calculer au mieux les indices de prix associés au secteur\n\nProjet encore à une étape expérimentale\n\nScraping de Boulanger : ici\nScraping de Rue du Commerce : ici\nPour plus d’informations, contacter Adrien Montbroussous (adrien.montbroussous at insee dot fr) (INSEE)."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#scraping-de-la-sncf",
-    "href": "slides/juridique-big-data/index.html#scraping-de-la-sncf",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Scraping de la SNCF",
-    "text": "Scraping de la SNCF\nContexte\n\nLe calcul de l’IPC tient compte de :\n\nL’indice des prix des trains Grandes Lignes\nLe transport des passagers en train\n\nLes prix utilisés étaient fondés sur un document publié annuellement par la SNCF. Mais cette méthode :\n\nNe reflète pas les variations infra-annuelles réelles, en particulier pour les TGV\nNe reflète pas les prix effectivement payés par les consommateurs\nNe suit pas les recommandations des institutions internationales"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#scraping-de-la-sncf-1",
-    "href": "slides/juridique-big-data/index.html#scraping-de-la-sncf-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Scraping de la SNCF",
-    "text": "Scraping de la SNCF\nIntroduction du webscraping\n\nSous forme expérimentale depuis 2018, indices publiés depuis 2020\nCollecte quotidienne pour capter la volatilité des prix\nRequêtes effectuées pour plusieurs couples origine-destination, types de train, antériorités, profils passagers et horaires\nPrès de 23 000 requêtes par nuit\nUn important travail statistique avec les données ainsi obtenues s’ensuit.\n\nStratification en cellules homogènes de prix\nUn micro-indice calculé par cellule\nAgrégation des micro-indices avec un indice de Laspeyres arithmétique"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#scraping-de-la-sncf-2",
-    "href": "slides/juridique-big-data/index.html#scraping-de-la-sncf-2",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Scraping de la SNCF",
-    "text": "Scraping de la SNCF\nComparaison des résultats"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#dautres-ressources-pour-le-scraping-lié-à-lipc",
-    "href": "slides/juridique-big-data/index.html#dautres-ressources-pour-le-scraping-lié-à-lipc",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "D’autres ressources pour le scraping lié à l’IPC",
-    "text": "D’autres ressources pour le scraping lié à l’IPC\n\nGuidelines d’Eurostat sur le scraping lié à l’indice des prix à la consommation\n\nAnnexe 3 consacrée aux travaux de l’INSEE sur Boulanger et Rue du Commerce\n\n\nPatrick rudor UAJC voir avec eux\nWebscrapping + attention RGPD slide sur les LLM avec les contentieux en cours (OpenAI) + modele de diffusion avec les artistes questions des données générées\n1- Les nouveaux enjeux juridiques du big data\nCollecte des données Stockage des données (souveraineté) Traitements des données Partage de données\nData Ownership Open Data & Public Sector Database Licensing Copyright Infringement Security Breaches le cas du webscrapping Aujourd’hui : cas des LLM (contentieux en cours avec OpenAI) + cas des modèles de diffusion avec les artistes + cas données générées (pb Amazon)\n2- Réglementations clés\nLoi modernisation du numérque 2016 : https://www.vie-publique.fr/eclairage/20301-loi-republique-numerique-7-octobre-2016-loi-lemaire-quels-changements\nRèglement Général sur la Protection des Données (RGPD) de l’UE : https://fr.wikipedia.org/wiki/R%C3%A8glement_g%C3%A9n%C3%A9ral_sur_la_protection_des_donn%C3%A9es# Loi sur la Protection de la Vie Privée en Ligne (CCPA) de Californie : https://fr.wikipedia.org/wiki/Loi_californienne_sur_la_protection_de_la_vie_priv%C3%A9e_des_consommateurs\n3- Retour d’expériences à l’insee\n\nWebscrapping à l’Insee\nMobitic ? Cnis doit valider besoin\n\n\nI. Introduction\nDéfinition du Big Data et son importance croissante dans notre société.\nObjectif de la présentation : Examiner les questions légales soulevées par le Big Data et illustrer ces problèmes par des exemples concrets.\n\nCollecte de Données\nRisque : Consentement et Confidentialité Exemple : Une application de fitness collecte des données biométriques sans le consentement explicite de ses utilisateurs, ce qui peut violer les réglementations sur la protection des données.\nStockage de Données\n\nRisque : Sécurité des Données\n    Exemple : Une entreprise de stockage en nuage subit une violation de données, exposant ainsi les informations sensibles de ses clients, ce qui peut entraîner des poursuites pour négligence.\n\nTraitement de Données\nRisque : Discrimination et Biais Algorithmiques Exemple : Un algorithme de recrutement favorise systématiquement un certain groupe démographique, ce qui peut entraîner des accusations de discrimination.\n\nV. Partage de Données\nRisque : Partage Non Autorisé ou Illégal\n    Exemple : Une entreprise partage des données client avec des tiers sans obtenir l'autorisation appropriée, ce qui peut violer les lois sur la protection des données.\n\nAnalyse de Données et Profilage\nRisque : Violation de la Vie Privée Exemple : Une société de médias sociaux analyse les comportements en ligne de ses utilisateurs pour vendre des publicités ciblées, suscitant des préoccupations quant à la vie privée des individus.\nRèglementations Clés\n\nRèglement Général sur la Protection des Données (RGPD) de l'UE\nLoi sur la Protection de la Vie Privée en Ligne (CCPA) de Californie\nLoi sur la Protection des Données Personnelles du Brésil (LGPD)\n\nMesures de Conformité\n\nCollecte de consentements appropriés\nSécurisation des données\nÉvaluation et réduction des biais algorithmiques\nContrôles d'accès et de partage de données\n\nConclusion\nRécapitulation des risques et problèmes juridiques liés au Big Data. Appel à l’importance de la conformité réglementaire et de l’éthique dans l’utilisation du Big Data.\n\nX. Questions et Discussion"
+    "section": "Collecte des données",
+    "text": "Collecte des données\n\nWebscrapping à l’Insee\nMobitic ? Cnis doit valider besoin\n\nle cas du webscrapping\nI. Introduction\nDéfinition du Big Data et son importance croissante dans notre société.\nObjectif de la présentation : Examiner les questions légales soulevées par le Big Data et illustrer ces problèmes par des exemples concrets.\n\nCollecte de Données\nRisque : Consentement et Confidentialité Exemple : Une application de fitness collecte des données biométriques sans le consentement explicite de ses utilisateurs, ce qui peut violer les réglementations sur la protection des données.\nStockage de Données\n\nRisque : Sécurité des Données\n    Exemple : Une entreprise de stockage en nuage subit une violation de données, exposant ainsi les informations sensibles de ses clients, ce qui peut entraîner des poursuites pour négligence.\n\nTraitement de Données\nRisque : Discrimination et Biais Algorithmiques Exemple : Un algorithme de recrutement favorise systématiquement un certain groupe démographique, ce qui peut entraîner des accusations de discrimination.\n\nV. Partage de Données\nRisque : Partage Non Autorisé ou Illégal\n    Exemple : Une entreprise partage des données client avec des tiers sans obtenir l'autorisation appropriée, ce qui peut violer les lois sur la protection des données.\n\nAnalyse de Données et Profilage\nRisque : Violation de la Vie Privée Exemple : Une société de médias sociaux analyse les comportements en ligne de ses utilisateurs pour vendre des publicités ciblées, suscitant des préoccupations quant à la vie privée des individus.\nRèglementations Clés\n\nRèglement Général sur la Protection des Données (RGPD) de l'UE\nLoi sur la Protection de la Vie Privée en Ligne (CCPA) de Californie\nLoi sur la Protection des Données Personnelles du Brésil (LGPD)\n\nMesures de Conformité\n\nCollecte de consentements appropriés\nSécurisation des données\nÉvaluation et réduction des biais algorithmiques\nContrôles d'accès et de partage de données\n\nConclusion\nRécapitulation des risques et problèmes juridiques liés au Big Data. Appel à l’importance de la conformité réglementaire et de l’éthique dans l’utilisation du Big Data.\n\nX. Questions et Discussion"
   },
   {
     "objectID": "slides/codif-auto/index.html#context",
