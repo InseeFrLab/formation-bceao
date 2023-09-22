@@ -1,5 +1,5 @@
 ---
-title: 'Besoins techniques et organisationnels'
+title: "Besoins techniques et organisationnels"
 subtitle: |
   **[BCEAO - Jour 2]{.orange}**
 author: "[Romain Avouac](https://github.com/avouacr), [Thomas Faria](https://github.com/ThomasFaria)"
@@ -211,7 +211,7 @@ execute:
   - Efficients en [**RAM**]{.blue2}
   - [**Interopérables**]{.blue2} et open-source
 
-- Formats [**candidatsd**]{.orange} 
+- Formats [**candidats**]{.orange} 
   - `Parquet` : [**stockage disque**]{.blue2}
   - `Arrow` : traitement en [**mémoire**]{.blue2}
 
@@ -227,7 +227,7 @@ execute:
 
 [Source](https://towardsdatascience.com/demystifying-the-parquet-file-format-13adb0206705)
 
-## Le format `Parquet`
+## Le format `Parquet` : propriétés
 
 - [**Orienté colonne**]{.orange} (hybride)
   - Adapté aux traitements [**analytiques**]{.blue2}
@@ -238,6 +238,13 @@ execute:
   - Parcours du fichier (jusqu'à 34x plus rapide qu'un CSV)
 
 - [**Interopérable**]{.blue2} et open-source
+
+## Le format `Parquet` : partionnement
+
+- [**Division en blocs**]{.orange} des données selon un [**critère**]{.orange}
+  - [**Optimise la lecture**]{.blue2} pour certaines *queries*
+
+![](img/partitions.png){fig-align="center"}
 
 ## Traitement en mémoire
 
