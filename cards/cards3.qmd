@@ -4,7 +4,7 @@ title: Outils techniques et changements organisationnels
 image: https://onyxia.sh/static/media/Dragoon.8d89504cc3a892bf56ee9e7412df7d43.svg
 date: "2023-09-01"
 description: |
-  <b>Description :</b> De nouveaux outils et des organisations plus souples pour favoriser l'innovation autour des technologies big data
+  <b>Description :</b> Cette présentation met en lumière de nouveaux outils et méthodologies agiles pour stimuler l'innovation en Big Data. Découvrez comment ils simplifient la gestion des données massives, favorisant ainsi la transformation numérique et ouvrant de nouvelles perspectives pour vos projets.
 categories:
   - SSP Cloud
 slides:

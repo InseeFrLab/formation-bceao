@@ -4,7 +4,7 @@ title: Codification automatique de l’APE avec de l'apprentissage statistique
 image: https://ec.europa.eu/eurostat/documents/4187653/16022092/NACE_poster.png/0ee793cc-d901-b92e-e08b-b9a40408f8a7?t=1675930627209
 date: "2023-09-01"
 description: |
-  <b>Description :</b> Blabla 
+  <b>Description :</b> Cette présentation dévoile un projet de codification automatique du code APE grâce à des techniques de machine learning, mis en production à l'Insee. Explorez comment cette initiative transforme le processus de codification, apportant des améliorations significatives en termes d'efficacité et de précision. 
 categories:
   - NLP
 slides:

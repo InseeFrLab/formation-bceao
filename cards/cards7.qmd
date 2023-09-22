@@ -4,7 +4,7 @@ title: Aspects juridiques et réglementaires du big data
 image: https://www.johndcook.com/computer_law_g.jpg
 date: "2023-09-01"
 description: |
-  <b>Description :</b> Blabla 
+  <b>Description :</b> Cette présentation examine les enjeux juridiques du Big Data, ainsi que les réglementations en vigueur, à travers le prisme du retour d'expérience de l'Insee. Découvrez comment l'Insee s'est adapté à ces défis tout en garantissant la conformité légale dans la gestion de données massives. 
 categories:
   - NLP
 slides:

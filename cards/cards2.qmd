@@ -4,9 +4,9 @@ title: Nouvelles sources de données à l'Insee
 image: https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230221093715/Data-Collection.png
 date: "2023-09-01"
 description: |
-  <b>Description :</b> Blabla 
+  <b>Description :</b> Cette présentation approfondie explore la multitude de sources de données utilisées par l'Insee. Elle met également en lumière les défis liés à l'intégration de nouvelles sources de données souvent massives dans le cadre des opérations de collecte et d'analyse de données de l'Insee. Explorez les stratégies et les pratiques essentielles pour gérer efficacement ces flux de données en constante évolution. 
 categories:
-  - NLP
+  - Données émergentes
 slides:
   text: Slides
   url: /slides/new-sources-donnees/index.html

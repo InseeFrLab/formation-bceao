@@ -4,9 +4,9 @@ title: Place et enjeux du Big Data à l'Insee
 image: https://www.addictgroup.fr/wp-content/uploads/2017/09/definition-Big-Data.jpg
 date: "2023-09-01"
 description: |
-  <b>Description :</b> Blabla 
+  <b>Description :</b> Cette présentation met en lumière les enjeux et la place essentielle du Big Data au sein de l'Insee. Explorez comment les données massives contribuent à enrichir les analyses et à affiner les statistiques.
 categories:
-  - NLP
+  - Big Data
 slides:
   text: Slides
   url: /slides/intro-big-data/index.html

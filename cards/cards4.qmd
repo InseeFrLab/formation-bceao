@@ -1,14 +1,19 @@
 
 ---
-title: Calcul d’un indice de prix avec des données bancaires
-image: https://i0.wp.com/therealnews.com/wp-content/uploads/2019/06/cpi.jpg?fit=657%2C425&ssl=1
+title: Manipulation de données massives
+image: https://intelligence-artificielle.com/wp-content/uploads/2022/02/Data-management-7.jpg
 date: "2023-09-01"
 description: |
-  <b>Description :</b> Blabla 
+  <b>Description :</b> Ce notebook vous initie à la manipulation de données volumineuses, qu'elles soient locales ou stockées dans le Cloud. Découvrez des techniques essentielles pour gérer efficacement des ensembles de données massives, du stockage à l'analyse.
 categories:
+  - R
+  - Parquet
+  - Arrow
+  - DuckDB
   - Spark
 slides:
-  text: Slides
-  url: /slides/intro-big-data/index.html
+  text: Notebook
+  url: https://github.com/InseeFrLab/formation-bceao/blob/main/tp/tp-manip-donnees-massives.qmd 
 order: 4
 ---
+<!-- TODO: mettre le lien d'un launch de service avec assez de mémoire  -->
