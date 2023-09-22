@@ -27,7 +27,10 @@ execute:
 
 ## ⚠️ Disclaimer ⚠️
 
-Nous ne sommes pas des experts juridiques. Cette présentation ne vise qu'à introduire des concepts généraux. Pour des questions juridiques précises, veuillez contacter l'Unité Affaires Juridiques et Contentieuses (UAJC) dirigée par Patrick Redor à patrick.redor@insee.fr.
+- Nous ne sommes pas des [**experts juridiques**]{.orange}. 
+- Cette présentation ne vise qu'à introduire des concepts généraux. 
+- ❓ Pour des questions juridiques précises, veuillez contacter l'Unité Affaires Juridiques et Contentieuses (UAJC) :
+  -  Dirigée par Patrick Redor à [patrick.redor@insee.fr]{.orange}
 
 # :one: Les nouveaux enjeux juridiques lié au big data
 

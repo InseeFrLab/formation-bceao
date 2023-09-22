@@ -1,4 +1,34 @@
-## Loi modernisation du numérique 2016 : 
+## Loi pour une République Numérique
+
+- Contexte :
+  - Loi Française, promulguée en 2016.
+  - Réponse à l'expansion rapide du numérique dans la société.
+  - Equilibre entre innovation, inclusion, protection et confiance.
+
+## Circulation des données et du savoir
+
+- L'[**ouverture des données publiques**] par défaut : 
+  - L'État, les collectivités locales... et l'Insee !
+  - Code sources et bases de données, sous condition d'anonymisation.
+  - [CADA](https://www.cada.fr) et [CNIL](https://www.cnil.fr/fr) pour la mise en oeuvre des règles.
+
+- Création d'un service public de la données (Etalab).
+- [**Libre accès**] des papiers académique financés à +50% par fond public.
+- Ouverture des données d'intérêt général (transports, eau, déchets, consommation d'énergie...).
+
+## La protection des droits dans la société numérique
+
+- Principe de la [**neutralité de l’internet**] inscrit dans le droit français ➡️ [Arcep](https://www.arcep.fr)
+- 3 obligations des plateformes en ligne : loyauté, clarté et transparence
+- Protection de la vie privée sur internet :
+  - Droit à l'oubli numérique
+  - Droit à la mort numérique
+  - Règle du secret des correspondances privées (https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000034307602)
+
+## L’accès au numérique pour tous
+
+- Le numérique dans tous les territoires
+- Le numérique au bénéfice des publics fragiles
 
 https://www.vie-publique.fr/eclairage/20301-loi-republique-numerique-7-octobre-2016-loi-lemaire-quels-changements
 

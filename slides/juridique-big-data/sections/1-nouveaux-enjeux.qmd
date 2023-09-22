@@ -3,7 +3,7 @@
 - Nombreux acteurs privés et publics peuvent collecter des données produites [**directement**]{.orange} ou [**indirectement**]{.orange} par les individus.
 - Collecte de données personnelles sans [**consentement**]{.orange} explicite.
 - Possibilité de violation de la [**vie privée**]{.orange} des utilisateurs.
-- Explication des [**motifs**]{.orange} et [**intentions**]{.orange} de collecte des données nécessaire.
+- ➡️ Explication des [**motifs**]{.orange} et [**intentions**]{.orange} de collecte des données nécessaire.
 
 ::: {.callout-tip title="Exemple de risque potentiel"}
 Application de santé collectant des données biométriques de ses utilisateurs sans leur consentement explicite.
@@ -14,19 +14,24 @@ Application de santé collectant des données biométriques de ses utilisateurs 
 - [**Volume**]{.orange} des données pose la difficulté du stockage
 - [**Coûts d'investissement**]{.orange} importants et marché monopolisé par les GAFAM
 - Problématique de la [**souveraineté numérique**]{.orange}
-- Mesures de [**sécurité**]{.orange} essentielles pour la protection des données.
+- ➡️ Mesures de [**sécurité**]{.orange} essentielles pour la protection des données.
 
 ::: {.callout-tip title="Exemple de risque potentiel"}
 - Possibilité de violation de la sécurité des données ou de partage de données avec une entité gouvernementale.
 - [Incendie OVH](https://fr.wikipedia.org/wiki/Incendie_du_centre_de_donn%C3%A9es_d%27OVHcloud_%C3%A0_Strasbourg) en janvier 2023.
 :::
 
-## Open Data et secteur public
+## Open Data
 
-- Mise à disposition de la société civile de la masse de données collectées par les [**autorités publiques**]{.orange}.
+- Open Data : mise à disposition publiquement et gratuitement de données numériques.
+- En France, loi Lemaire 2016 :
+  - Ouverture des données publiques produitent par [**autorités publiques**]{.orange} dans un cadre reglementé.
 - Améliorer le fonctionnement démocratique par la [**transparence**]{.orange} et l'[**ouverture d’information**]{.orange}.
 - Proposer de nouvelles ressources pour l'[**innovation**]{.orange} économique et sociale
-
+- 
+ ::: {.callout-tip title="Exemple de risque potentiel"}
+- L'Open Data tend à devenir la norme dans le secteur public mais devient de plus en plus courant dans le secteur privé aussi.
+:::
 
 ## Propriété intellectuelle
 
@@ -41,8 +46,8 @@ Application de santé collectant des données biométriques de ses utilisateurs 
 ## Problématiques des nouvelles méthodes d'IA
 
 - Les [**grands modèles de langage**]{.orange} (LLM) et les [**modèle de génération d'images**]{.orange} :
-    - Entraînement sur données avec droit d'auteurs
+    - Entraînement sur données avec droit d'auteurs ([GoT-OpenAI](https://www.liberation.fr/economie/medias/droits-dauteur-lauteur-de-game-of-thrones-attaque-openai-et-chatgpt-en-justice-20230921_Y2CMN4CKKVCOLHRDNS7W6ZA2AA/))
     - Réponses non sourcées pour les LLM
-    - Failles de sécurité (Samsung-OpenAI)
+    - Failles de sécurité ([Samsung-OpenAI](https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak?embedded-checkout=true))
     - Poursuite d'artiste contre Stability AI et Midjourney pour avoir récupéré des données d'artistes sans consentement
     - Quid des données générées ?
