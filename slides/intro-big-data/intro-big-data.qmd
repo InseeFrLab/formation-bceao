@@ -33,9 +33,7 @@ execute:
   - images satellites
   - etc.
 
-- à partir desquelles de nouveaux opérateurs (privés) produisent des indicateurs statistiques
-
-- Quel potentiel pour la statistique publique ?
+- Un phénomène pérenne porté par la croissance du numérique et des capacités techniques
 
 ## Big data : une définition
 
@@ -57,8 +55,7 @@ execute:
 
 - Fin XXe et début XXIe siècles : retour en grâce de l'exhaustif ?
 
-
-
+- Ni collectées ni conceptualisées à des fins de statistiques publiques
 ## Le big data au service de la Statistique Publique
 
 - Pourquoi s'intéresser au [**big data**]{.orange} dans la statistique publique ?
@@ -66,7 +63,6 @@ execute:
 - Plusieurs bénéfices peuvent en être retirer en matière d'[**efficience économique**]{.orange}, de [**qualité statistique**]{.orange}, de [**méthodologie statistique**]{.orange} ou encore d'[**exhaustivité**]{.orange}
 
 ## Le big data au service de la Statistique Publique
-
 
 - [**Efficience économique**]{.orange} : Accès plus rapide à la données, réduction du coût des enquêtes...
 - [**Qualité statistique**]{.orange} : Données plus localisées, plus précises sur des sous-population, plus fréquentes...
@@ -83,7 +79,7 @@ execute:
 
 ::: {.callout-important}
 ## Différence centrale
-Les données massives ne sont ni collectées ni conceptualisées à des fins de statistiques publiques !
+
 :::
 
 ## Innovations nécessaires pour traiter ces données
