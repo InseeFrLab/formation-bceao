@@ -78,6 +78,22 @@ execute:
   - Projets pilotes sur une variété de sujets
   - Nombreuses [ressources](https://cros-legacy.ec.europa.eu/content/essnet-big-data-1_en)
 
+## Début des expérimentations à l'Insee
+
+- 2015 : projet données de caisse 
+  - Groupe CNIS sur l'accès aux données privées
+
+- 2016 : poste de statisticien sur les big data
+
+- 2016 : début de l'exploitation des données mobiles
+  - Partenariat informel avec l'opérateur Orange
+  - Travaux méthodologiques
+
+- 2018 : premiers développements d'une plateforme big data
+
+
+
+
 # Défis
 
 ## Limites des sources big data
@@ -106,6 +122,8 @@ execute:
 - [**Organisationnelles**]{.orange} : partenariats avec de nouveaux acteurs privés ou publics pour le partage de données
 
 # Conclusion
+
+## 
 
 ## Une construction collective
 
