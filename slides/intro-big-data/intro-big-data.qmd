@@ -25,7 +25,7 @@ execute:
   warning: false
 ---
 
-# Introduction
+# Le potentiel des big data
 
 ## Big data : de quoi parle-t-on ?
 
@@ -96,10 +96,15 @@ execute:
 
 # Défis
 
-## Limites des sources big data
+## De multiples dimensions
 
-- Ni collectées ni conceptualisées à des fins de statistiques publiques
-  - Le processus de génération des données n'est pas maîtrisé !
+- [**Législatif**]{.orange}
+
+- [**Économique**]{.orange}
+
+- [**Méthodologique**]{.orange}
+
+- [**Technique**]{.orange}
 
 
 ## Des données très différentes des statistiques publiques usuelles
@@ -130,5 +135,6 @@ execute:
 - Des sources et des sujets variés qui impliquent de nombreuses dimensions (juridique, technique, méthodologique, organisationnelle, ...)
 
 - Le statisticien public (data scientist?) ne peut incarner tous ces aspects
+  - Besoins de formation considérables
 
 - Développer une synérgie entre toutes les parties prenantes (directions métiers, informatique, partenaires, ...)
