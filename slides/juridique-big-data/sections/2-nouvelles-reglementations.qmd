@@ -1,10 +1,16 @@
-## Loi modernisation du numérque 2016 : 
+## Loi modernisation du numérique 2016 : 
 
 https://www.vie-publique.fr/eclairage/20301-loi-republique-numerique-7-octobre-2016-loi-lemaire-quels-changements
 
 ## Règlement Général sur la Protection des Données (RGPD) de l'UE : 
 
 https://fr.wikipedia.org/wiki/R%C3%A8glement_g%C3%A9n%C3%A9ral_sur_la_protection_des_donn%C3%A9es#
+
+
+## Big Data Act : 
+
+https://digital-strategy.ec.europa.eu/fr/policies/data-act
+
 
 ## Loi sur la Protection de la Vie Privée en Ligne (CCPA) de Californie : 
 

@@ -1,6 +1,8 @@
-## Collecte des données
+## :one: Le cas du webscrapping
 
-- Webscrapping à l'Insee
-- Mobitic ? Cnis doit valider besoin
 
-le cas du webscrapping
+## :two: Les données de téléphonie mobiles
+
+
+## :three: Les données de carte bancaire
+
