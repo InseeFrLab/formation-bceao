@@ -65,11 +65,20 @@ execute:
 
 - Fin XXe et début XXIe siècles : retour en grâce de l'exhaustif ?
 
-## Début des réflexions
+## Début des réflexions des INS européens
 
+- Mémorandum de Scheveningen (2013) : task force européenne sur le potentiel des big data
+
+- Groupe de travail de l'UNECE (2014-2015) : "sandbox" pour manipuler des données concrètes
+
+- ESSNET Big Data I (2016-2018) et II (2019-2021)
+  - Préparer l'intégration des big data à la production statistique officielle
+  - Projets pilotes sur une variété de sujets
+  - Nombreuses [ressources](https://cros-legacy.ec.europa.eu/content/essnet-big-data-1_en)
 
 
 - Ni collectées ni conceptualisées à des fins de statistiques publiques
+
 ## Le big data au service de la Statistique Publique
 
 - Pourquoi s'intéresser au [**big data**]{.orange} dans la statistique publique ?
