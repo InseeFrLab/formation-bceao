@@ -25,14 +25,26 @@ execute:
   warning: false
 ---
 
-## Big Data : quelles caractéristiques ?
+## Big data : de quoi parle-t-on ?
 
-- [**Big Data**]{.orange} : [*"Gestion et analyse d'un volume massif de données, souvent à une échelle bien supérieure à ce que les systèmes traditionnels peuvent traiter efficacement."*]{.blue2}
+- De "nouvelles" données
+  - enregistrements automatiques (GSM, géolocalisation, capteurs..)
+  - contenus internet (webscraping, réseaux sociaux..)
+  - images satellites
+  - etc.
 
-- [**Les 3 V**]{.orange} qui caractérise le Big Data :
-    - [**Volume**]{.blue2} : le Big Data se réfère à des [**quantités énormes**]{.green2} de données [**générées en continu**]{.green2} ($\geq 10^{12} bits$)
-    - [**Vitesse**]{.blue2} : vitesse à laquelle les données sont générées, collectées et traitées
-    - [**Variété**]{.blue2} : le Big Data est généralement caractérisé par une [**diversité de sources**]{.green2} et de [**formats de données**]{.green2}
+- à partir desquelles de nouveaux opérateurs (privés) produisent des indicateurs statistiques
+
+- Quel potentiel pour la statistique publique ?
+
+## Big data : une définition
+
+- [**Big data**]{.orange} : [*"Gestion et analyse d'un volume massif de données, souvent à une échelle bien supérieure à ce que les systèmes traditionnels peuvent traiter efficacement."*]{.blue2}
+
+- [**Les 3 V**]{.orange} qui caractérisent les big data :
+    - [**Volume**]{.orange} : quantités [**massives**]{.blue2} de données
+    - [**Vitesse**]{.orange} : [**haute fréquence**]{.blue2}, jusqu'au temps réel
+    - [**Variété**]{.orange} : [**diversité**]{.blue2} de [**sources**]{.blue2} et de [**formats**]{.blue2}
 
 ## Un retour de l'exhaustif ?
 
@@ -47,13 +59,13 @@ execute:
 
 
 
-## Le Big Data au service de la Statistique Publique
+## Le big data au service de la Statistique Publique
 
-- Pourquoi s'intéresser au [**Big Data**]{.orange} dans la statistique publique ?
+- Pourquoi s'intéresser au [**big data**]{.orange} dans la statistique publique ?
 
 - Plusieurs bénéfices peuvent en être retirer en matière d'[**efficience économique**]{.orange}, de [**qualité statistique**]{.orange}, de [**méthodologie statistique**]{.orange} ou encore d'[**exhaustivité**]{.orange}
 
-## Le Big Data au service de la Statistique Publique
+## Le big data au service de la Statistique Publique
 
 
 - [**Efficience économique**]{.orange} : Accès plus rapide à la données, réduction du coût des enquêtes...
