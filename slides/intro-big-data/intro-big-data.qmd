@@ -44,6 +44,16 @@ execute:
     - [**Vitesse**]{.orange} : [**haute fréquence**]{.blue2}, jusqu'au temps réel
     - [**Variété**]{.orange} : [**diversité**]{.blue2} de [**sources**]{.blue2} et de [**formats**]{.blue2}
 
+## Pourquoi s'intéresser à ces données ?
+
+- [**Disponibilité**]{.orange} : réduction du coût et de la charge des enquêtes, des délais de publication (ex : nowcasting)
+
+- [**Finesse**]{.orange} : statistiques localisées, sur des sous-population, plus fréquentes...
+
+- [**Avancées méthodologiques**]{.orange} : convergence entre statistique et informatique (data science, machine learning)
+
+- [**Exhaustivité**]{.orange} : compléter des déclarations d'enquêtes, créer de nouveaux indicateurs...
+
 ## Un retour de l'exhaustif ?
 
 - Pré-XXe siècle : règne quasi-exclusif de l'exhaustivité
@@ -55,19 +65,16 @@ execute:
 
 - Fin XXe et début XXIe siècles : retour en grâce de l'exhaustif ?
 
+## Début des réflexions
+
+
+
 - Ni collectées ni conceptualisées à des fins de statistiques publiques
 ## Le big data au service de la Statistique Publique
 
 - Pourquoi s'intéresser au [**big data**]{.orange} dans la statistique publique ?
 
 - Plusieurs bénéfices peuvent en être retirer en matière d'[**efficience économique**]{.orange}, de [**qualité statistique**]{.orange}, de [**méthodologie statistique**]{.orange} ou encore d'[**exhaustivité**]{.orange}
-
-## Le big data au service de la Statistique Publique
-
-- [**Efficience économique**]{.orange} : Accès plus rapide à la données, réduction du coût des enquêtes...
-- [**Qualité statistique**]{.orange} : Données plus localisées, plus précises sur des sous-population, plus fréquentes...
-- [**Méthodologie statistique**]{.orange} : Applications de nouvelles méthodes statistiques performantes sur des données massives (ML, deeplearning)... 
-- [**Exhaustivité**]{.orange} : Données pouvant compléter des déclarations d'enquêtes, créer de nouveaux indicateurs...
 
 ## Des données très différentes des statistiques publiques usuelles
 
