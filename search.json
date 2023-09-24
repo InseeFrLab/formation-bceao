@@ -123,7 +123,7 @@
     "href": "slides/outils-techniques/index.html#formats-de-données-pour-la-big-data",
     "title": "Besoins techniques et organisationnels",
     "section": "Formats de données pour la big data",
-    "text": "Formats de données pour la big data\n\nPropriétés souhaitées\n\nOrientés colonne\nEfficients en stockage disque\nEfficients en RAM\nInteropérables et open-source\n\nFormats candidatsd\n\nParquet : stockage disque\nArrow : traitement en mémoire"
+    "text": "Formats de données pour la big data\n\nPropriétés souhaitées\n\nOrientés colonne\nEfficients en stockage disque\nEfficients en RAM\nInteropérables et open-source\n\nFormats candidats\n\nParquet : stockage disque\nArrow : traitement en mémoire"
   },
   {
     "objectID": "slides/outils-techniques/index.html#modes-de-stockage",
@@ -133,11 +133,18 @@
     "text": "Modes de stockage\n\nLe stockage hybride optimise la lecture\n\nProjection (SELECT) : orientation colonne\nPredicates (WHERE) : orientation ligne\n\n\n\n\n\n\n\n\nSource"
   },
   {
-    "objectID": "slides/outils-techniques/index.html#le-format-parquet",
-    "href": "slides/outils-techniques/index.html#le-format-parquet",
+    "objectID": "slides/outils-techniques/index.html#le-format-parquet-propriétés",
+    "href": "slides/outils-techniques/index.html#le-format-parquet-propriétés",
     "title": "Besoins techniques et organisationnels",
-    "section": "Le format Parquet",
-    "text": "Le format Parquet\n\nOrienté colonne (hybride)\n\nAdapté aux traitements analytiques\nConçu pour être écrit une fois mais lu fréquemment\n\nOptimisé\n\nCompression (jusqu’à 87 % moins d’espace qu’un CSV)\nParcours du fichier (jusqu’à 34x plus rapide qu’un CSV)\n\nInteropérable et open-source"
+    "section": "Le format Parquet : propriétés",
+    "text": "Le format Parquet : propriétés\n\nOrienté colonne (hybride)\n\nAdapté aux traitements analytiques\nConçu pour être écrit une fois mais lu fréquemment\n\nOptimisé\n\nCompression (jusqu’à 87 % moins d’espace qu’un CSV)\nParcours du fichier (jusqu’à 34x plus rapide qu’un CSV)\n\nInteropérable et open-source"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#le-format-parquet-partionnement",
+    "href": "slides/outils-techniques/index.html#le-format-parquet-partionnement",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Le format Parquet : partionnement",
+    "text": "Le format Parquet : partionnement\n\nDivision en blocs des données selon un critère\n\nOptimise la lecture pour certaines queries"
   },
   {
     "objectID": "slides/outils-techniques/index.html#traitement-en-mémoire",
@@ -224,25 +231,32 @@
     "text": "Formation\n\nToutes nos formations sont open-source (catalogue)\n\nParcours de formation à R / Python\nFormation à Spark\nTutoriels de machine learning\nMLOps\netc."
   },
   {
+    "objectID": "slides/juridique-big-data/index.html#disclaimer",
+    "href": "slides/juridique-big-data/index.html#disclaimer",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "⚠️ Disclaimer ⚠️",
+    "text": "⚠️ Disclaimer ⚠️\n\nNous ne sommes pas des experts juridiques.\nCette présentation ne vise qu’à introduire des concepts généraux.\n❓ Pour des questions juridiques précises, veuillez contacter l’Unité Affaires Juridiques et Contentieuses (UAJC) :\n\nDirigée par Patrick Redor à patrick.redor@insee.fr"
+  },
+  {
     "objectID": "slides/juridique-big-data/index.html#collecte-des-données",
     "href": "slides/juridique-big-data/index.html#collecte-des-données",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "Collecte des données",
-    "text": "Collecte des données\n\nNombreux acteurs privés et publics peuvent collecter des données produites directement ou indirectement par les individus.\nCollecte de données personnelles sans consentement explicite.\nPossibilité de violation de la vie privée des utilisateurs.\nExplication des motifs et intentions de collecte des données nécessaire.\n\n\n\n\n\n\n\nExemple de risque potentiel\n\n\nApplication de santé collectant des données biométriques de ses utilisateurs sans leur consentement explicite."
+    "text": "Collecte des données\n\nNombreux acteurs privés et publics peuvent collecter des données produites directement ou indirectement par les individus.\nCollecte de données personnelles sans consentement explicite.\nPossibilité de violation de la vie privée des utilisateurs.\n➡️ Explication des motifs et intentions de collecte des données nécessaire.\n\n\n\n\n\n\n\nExemple de risque potentiel\n\n\nApplication de santé collectant des données biométriques de ses utilisateurs sans leur consentement explicite."
   },
   {
     "objectID": "slides/juridique-big-data/index.html#stockage-et-sécurité-des-données",
     "href": "slides/juridique-big-data/index.html#stockage-et-sécurité-des-données",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "Stockage et sécurité des données",
-    "text": "Stockage et sécurité des données\n\nVolume des données pose la difficulté du stockage\nCoûts d’investissement importants et marché monopolisé par les GAFAM\nProblématique de la souveraineté numérique\nMesures de sécurité essentielles pour la protection des données.\n\n\n\n\n\n\n\nExemple de risque potentiel\n\n\n\nPossibilité de violation de la sécurité des données ou de partage de données avec une entité gouvernementale.\nIncendie OVH en janvier 2023."
+    "text": "Stockage et sécurité des données\n\nVolume des données pose la difficulté du stockage\nCoûts d’investissement importants et marché monopolisé par les GAFAM\nProblématique de la souveraineté numérique\n➡️ Mesures de sécurité essentielles pour la protection des données.\n\n\n\n\n\n\n\nExemple de risque potentiel\n\n\n\nPossibilité de violation de la sécurité des données ou de partage de données avec une entité gouvernementale.\nIncendie OVH en janvier 2023."
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#open-data-et-secteur-public",
-    "href": "slides/juridique-big-data/index.html#open-data-et-secteur-public",
+    "objectID": "slides/juridique-big-data/index.html#open-data",
+    "href": "slides/juridique-big-data/index.html#open-data",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Open Data et secteur public",
-    "text": "Open Data et secteur public\n\nMise à disposition de la société civile de la masse de données collectées par les autorités publiques.\nAméliorer le fonctionnement démocratique par la transparence et l’ouverture d’information.\nProposer de nouvelles ressources pour l’innovation économique et sociale"
+    "section": "Open Data",
+    "text": "Open Data\n\nOpen Data : mise à disposition publiquement et gratuitement de données numériques.\nEn France, loi Lemaire 2016 :\n\nOuverture des données publiques produitent par autorités publiques dans un cadre reglementé.\n\nAméliorer le fonctionnement démocratique par la transparence et l’ouverture d’information.\nProposer de nouvelles ressources pour l’innovation économique et sociale\n::: {.callout-tip title=“Exemple de risque potentiel”}\nL’Open Data tend à devenir la norme dans le secteur public mais devient de plus en plus courant dans le secteur privé aussi. :::"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#propriété-intellectuelle",
@@ -256,7 +270,7 @@
     "href": "slides/juridique-big-data/index.html#problématiques-des-nouvelles-méthodes-dia",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "Problématiques des nouvelles méthodes d’IA",
-    "text": "Problématiques des nouvelles méthodes d’IA\n\nLes grands modèles de langage (LLM) et les modèle de génération d’images :\n\nEntraînement sur données avec droit d’auteurs\nRéponses non sourcées pour les LLM\nFailles de sécurité (Samsung-OpenAI)\nPoursuite d’artiste contre Stability AI et Midjourney pour avoir récupéré des données d’artistes sans consentement\nQuid des données générées ?"
+    "text": "Problématiques des nouvelles méthodes d’IA\n\nLes grands modèles de langage (LLM) et les modèle de génération d’images :\n\nEntraînement sur données avec droit d’auteurs (GoT-OpenAI)\nRéponses non sourcées pour les LLM\nFailles de sécurité (Samsung-OpenAI)\nPoursuite d’artiste contre Stability AI et Midjourney pour avoir récupéré des données d’artistes sans consentement\nQuid des données générées ?"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#le-web-scraping-est-ce-légal",
@@ -392,11 +406,25 @@
     "text": "Avertissements\n\nSelon les pays, il existe des données qui sont publiques mais dont le scraping est illégal.\n\nIl faut donc bien se renseigner sur les lois locales.\nPar exemple, la collecte d’adresses mail par scraping est illégale en Australie, en raison du Spam Act de 2003.\n\nDans le doute, ne pas hésiter à se documenter davantage.\n\nExemples de ressources : Carpentries, Rubyroidlabs…\n\nIl existe parfois des structures dont le rôle est justement d’évaluer l’aspect juridique de pratiques comme le web scraping.\n\nA l’INSEE, c’est la responsabilité de l’UAJC\n\nOutre l’aspect juridique, il faut bien passer en revue les impacts méthodologiques liés aux risques techniques du web scraping (collecte incomplète, rupture de collecte)."
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#collecte-des-données-1",
-    "href": "slides/juridique-big-data/index.html#collecte-des-données-1",
+    "objectID": "slides/juridique-big-data/index.html#le-cas-du-webscrapping",
+    "href": "slides/juridique-big-data/index.html#le-cas-du-webscrapping",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Collecte des données",
-    "text": "Collecte des données\n\nWebscrapping à l’Insee\nMobitic ? Cnis doit valider besoin\n\nle cas du webscrapping\nI. Introduction\nDéfinition du Big Data et son importance croissante dans notre société.\nObjectif de la présentation : Examiner les questions légales soulevées par le Big Data et illustrer ces problèmes par des exemples concrets.\n\nCollecte de Données\nRisque : Consentement et Confidentialité Exemple : Une application de fitness collecte des données biométriques sans le consentement explicite de ses utilisateurs, ce qui peut violer les réglementations sur la protection des données.\nStockage de Données\n\nRisque : Sécurité des Données\n    Exemple : Une entreprise de stockage en nuage subit une violation de données, exposant ainsi les informations sensibles de ses clients, ce qui peut entraîner des poursuites pour négligence.\n\nTraitement de Données\nRisque : Discrimination et Biais Algorithmiques Exemple : Un algorithme de recrutement favorise systématiquement un certain groupe démographique, ce qui peut entraîner des accusations de discrimination.\n\nV. Partage de Données\nRisque : Partage Non Autorisé ou Illégal\n    Exemple : Une entreprise partage des données client avec des tiers sans obtenir l'autorisation appropriée, ce qui peut violer les lois sur la protection des données.\n\nAnalyse de Données et Profilage\nRisque : Violation de la Vie Privée Exemple : Une société de médias sociaux analyse les comportements en ligne de ses utilisateurs pour vendre des publicités ciblées, suscitant des préoccupations quant à la vie privée des individus.\nRèglementations Clés\n\nRèglement Général sur la Protection des Données (RGPD) de l'UE\nLoi sur la Protection de la Vie Privée en Ligne (CCPA) de Californie\nLoi sur la Protection des Données Personnelles du Brésil (LGPD)\n\nMesures de Conformité\n\nCollecte de consentements appropriés\nSécurisation des données\nÉvaluation et réduction des biais algorithmiques\nContrôles d'accès et de partage de données\n\nConclusion\nRécapitulation des risques et problèmes juridiques liés au Big Data. Appel à l’importance de la conformité réglementaire et de l’éthique dans l’utilisation du Big Data.\n\nX. Questions et Discussion"
+    "section": "1️⃣ Le cas du webscrapping",
+    "text": "1️⃣ Le cas du webscrapping"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#les-données-de-téléphonie-mobiles",
+    "href": "slides/juridique-big-data/index.html#les-données-de-téléphonie-mobiles",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "2️⃣ Les données de téléphonie mobiles",
+    "text": "2️⃣ Les données de téléphonie mobiles"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#les-données-de-carte-bancaire",
+    "href": "slides/juridique-big-data/index.html#les-données-de-carte-bancaire",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "3️⃣ Les données de carte bancaire",
+    "text": "3️⃣ Les données de carte bancaire\nI. Introduction\nDéfinition du Big Data et son importance croissante dans notre société.\nObjectif de la présentation : Examiner les questions légales soulevées par le Big Data et illustrer ces problèmes par des exemples concrets.\n\nCollecte de Données\nRisque : Consentement et Confidentialité Exemple : Une application de fitness collecte des données biométriques sans le consentement explicite de ses utilisateurs, ce qui peut violer les réglementations sur la protection des données.\nStockage de Données\n\nRisque : Sécurité des Données\n    Exemple : Une entreprise de stockage en nuage subit une violation de données, exposant ainsi les informations sensibles de ses clients, ce qui peut entraîner des poursuites pour négligence.\n\nTraitement de Données\nRisque : Discrimination et Biais Algorithmiques Exemple : Un algorithme de recrutement favorise systématiquement un certain groupe démographique, ce qui peut entraîner des accusations de discrimination.\n\nV. Partage de Données\nRisque : Partage Non Autorisé ou Illégal\n    Exemple : Une entreprise partage des données client avec des tiers sans obtenir l'autorisation appropriée, ce qui peut violer les lois sur la protection des données.\n\nAnalyse de Données et Profilage\nRisque : Violation de la Vie Privée Exemple : Une société de médias sociaux analyse les comportements en ligne de ses utilisateurs pour vendre des publicités ciblées, suscitant des préoccupations quant à la vie privée des individus.\nRèglementations Clés\n\nRèglement Général sur la Protection des Données (RGPD) de l'UE\nLoi sur la Protection de la Vie Privée en Ligne (CCPA) de Californie\nLoi sur la Protection des Données Personnelles du Brésil (LGPD)\n\nMesures de Conformité\n\nCollecte de consentements appropriés\nSécurisation des données\nÉvaluation et réduction des biais algorithmiques\nContrôles d'accès et de partage de données\n\nConclusion\nRécapitulation des risques et problèmes juridiques liés au Big Data. Appel à l’importance de la conformité réglementaire et de l’éthique dans l’utilisation du Big Data.\n\nX. Questions et Discussion"
   },
   {
     "objectID": "slides/codif-auto/index.html#context",

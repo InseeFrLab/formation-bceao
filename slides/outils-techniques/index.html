@@ -603,7 +603,7 @@
 <li class="fragment">Efficients en <span class="blue2"><strong>RAM</strong></span></li>
 <li class="fragment"><span class="blue2"><strong>Interopérables</strong></span> et open-source</li>
 </ul></li>
-<li class="fragment">Formats <span class="orange"><strong>candidatsd</strong></span>
+<li class="fragment">Formats <span class="orange"><strong>candidats</strong></span>
 <ul>
 <li class="fragment"><code>Parquet</code> : <span class="blue2"><strong>stockage disque</strong></span></li>
 <li class="fragment"><code>Arrow</code> : traitement en <span class="blue2"><strong>mémoire</strong></span></li>
@@ -628,8 +628,8 @@
 <p><a href="https://towardsdatascience.com/demystifying-the-parquet-file-format-13adb0206705">Source</a></p>
 </div>
 </section>
-<section id="le-format-parquet" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>Le format <code>Parquet</code></h2>
+<section id="le-format-parquet-propriétés" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Le format <code>Parquet</code> : propriétés</h2>
 <ul>
 <li class="fragment"><span class="orange"><strong>Orienté colonne</strong></span> (hybride)
 <ul>
@@ -644,6 +644,16 @@
 <li class="fragment"><span class="blue2"><strong>Interopérable</strong></span> et open-source</li>
 </ul>
 </section>
+<section id="le-format-parquet-partionnement" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Le format <code>Parquet</code> : partionnement</h2>
+<ul>
+<li class="fragment"><span class="orange"><strong>Division en blocs</strong></span> des données selon un <span class="orange"><strong>critère</strong></span>
+<ul>
+<li class="fragment"><span class="blue2"><strong>Optimise la lecture</strong></span> pour certaines <em>queries</em></li>
+</ul></li>
+</ul>
+
+<img data-src="img/partitions.png" class="r-stretch quarto-figure-center"></section>
 <section id="traitement-en-mémoire" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Traitement en mémoire</h2>
 <ul>
