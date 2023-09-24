@@ -245,165 +245,102 @@
     "text": "Collecte des données\n\nNombreux acteurs privés et publics peuvent collecter des données produites directement ou indirectement par les individus.\nCollecte de données personnelles sans consentement explicite.\nPossibilité de violation de la vie privée des utilisateurs.\n➡️ Explication des motifs et intentions de collecte des données nécessaire.\n\n\n\n\n\n\n\nExemple de risque potentiel\n\n\nApplication de santé collectant des données biométriques de ses utilisateurs sans leur consentement explicite."
   },
   {
+    "objectID": "slides/juridique-big-data/index.html#croissance-du-numérique",
+    "href": "slides/juridique-big-data/index.html#croissance-du-numérique",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Croissance du numérique",
+    "text": "Croissance du numérique\n\nimage de l’intro pour trnasition sur le stockage"
+  },
+  {
     "objectID": "slides/juridique-big-data/index.html#stockage-et-sécurité-des-données",
     "href": "slides/juridique-big-data/index.html#stockage-et-sécurité-des-données",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "Stockage et sécurité des données",
-    "text": "Stockage et sécurité des données\n\nVolume des données pose la difficulté du stockage\nCoûts d’investissement importants et marché monopolisé par les GAFAM\nProblématique de la souveraineté numérique\n➡️ Mesures de sécurité essentielles pour la protection des données.\n\n\n\n\n\n\n\nExemple de risque potentiel\n\n\n\nPossibilité de violation de la sécurité des données ou de partage de données avec une entité gouvernementale.\nIncendie OVH en janvier 2023."
+    "text": "Stockage et sécurité des données\n\nVolume des données pose la difficulté du stockage.\nCoûts d’investissement importants et marché monopolisé par les GAFAM.\nProblématique de la souveraineté numérique.\n➡️ Mesures de sécurité essentielles pour la protection des données.\n\n\n\n\n\n\n\nExemple de risque potentiel\n\n\n\nPossibilité de violation de la sécurité des données ou de partage de données avec une entité gouvernementale.\nIncendie OVH en janvier 2023."
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#open-data",
-    "href": "slides/juridique-big-data/index.html#open-data",
+    "objectID": "slides/juridique-big-data/index.html#open-data-et-secteur-public",
+    "href": "slides/juridique-big-data/index.html#open-data-et-secteur-public",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Open Data",
-    "text": "Open Data\n\nOpen Data : mise à disposition publiquement et gratuitement de données numériques.\nEn France, loi Lemaire 2016 :\n\nOuverture des données publiques produitent par autorités publiques dans un cadre reglementé.\n\nAméliorer le fonctionnement démocratique par la transparence et l’ouverture d’information.\nProposer de nouvelles ressources pour l’innovation économique et sociale\n::: {.callout-tip title=“Exemple de risque potentiel”}\nL’Open Data tend à devenir la norme dans le secteur public mais devient de plus en plus courant dans le secteur privé aussi. :::"
+    "section": "Open Data et secteur public",
+    "text": "Open Data et secteur public\n\nMise à disposition publiquement et gratuitement des données.\n\nEn France, loi Lemaire 2016 : \nOpen Data des autorités publiques dans un cadre reglementé.\n\nObjectif double :cible: :\n\n1️⃣ Transparence démocratique et ouverture d’information.\n2️⃣ Favoriser l’innovation économique et sociale.\n\nL’Open Data se démocratise aussi dans le secteur privé !"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#propriété-intellectuelle",
     "href": "slides/juridique-big-data/index.html#propriété-intellectuelle",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "Propriété intellectuelle",
-    "text": "Propriété intellectuelle\n\nGestion des licences :\n\nDéveloppement de l’open source et du partage de données\nNécessité d’apposer et de respecter des licences claires\n\nEquilibre difficile entre la protection et l’innovation ⚖️ :\n\nLes lois sur le droit d’auteur établies ont du mal à prendre en compte les nouvelles technologies\nDéveloppement de nouveaux outils d’Intelligence Artificielle (IA)"
+    "text": "Propriété intellectuelle\n\nGestion des licences ©️ :\n\nDéveloppement de l’open source et du partage de données.\nNécessité d’apposer et de respecter des licences claires.\n\nEquilibre difficile entre protection et innovation ⚖️ :\n\nLes lois sur le droit d’auteur établies ont du mal à prendre en compte les nouvelles technologies\nDéveloppement de nouveaux outils d’Intelligence Artificielle (IA)"
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#problématiques-des-nouvelles-méthodes-dia",
-    "href": "slides/juridique-big-data/index.html#problématiques-des-nouvelles-méthodes-dia",
+    "objectID": "slides/juridique-big-data/index.html#des-méthodologies-toujours-plus-innovantes",
+    "href": "slides/juridique-big-data/index.html#des-méthodologies-toujours-plus-innovantes",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Problématiques des nouvelles méthodes d’IA",
-    "text": "Problématiques des nouvelles méthodes d’IA\n\nLes grands modèles de langage (LLM) et les modèle de génération d’images :\n\nEntraînement sur données avec droit d’auteurs (GoT-OpenAI)\nRéponses non sourcées pour les LLM\nFailles de sécurité (Samsung-OpenAI)\nPoursuite d’artiste contre Stability AI et Midjourney pour avoir récupéré des données d’artistes sans consentement\nQuid des données générées ?"
+    "section": "Des méthodologies toujours plus innovantes…",
+    "text": "Des méthodologies toujours plus innovantes…\n\nGrands modèles de langage (LLM)\n\nChatGPT, LLama2, Bard…\n\nModèles de génération d’images\n\nMidjourney, Stable Diffusion, Dall-E\n\nModèles Deep fake :\n\nExemple"
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#le-web-scraping-est-ce-légal",
-    "href": "slides/juridique-big-data/index.html#le-web-scraping-est-ce-légal",
+    "objectID": "slides/juridique-big-data/index.html#créant-de-nouvelles-problématiques",
+    "href": "slides/juridique-big-data/index.html#créant-de-nouvelles-problématiques",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Le web scraping, est-ce légal ?",
-    "text": "Le web scraping, est-ce légal ?\n\nLe web scraping en lui-même n’est pas une pratique illégale …\n\n… Mais l’utilisation faite des données scrapées peut être soumise à réglementation.\nCes règles dépendent alors du pays dans lequel on se trouve ainsi que des données scrapées.\n\n\n\n\n\n\n\n\nAttention\n\n\nDiffuser ou commercialiser des données scrapées ou un quelconque travail réutilisant ces données n’est pas sans conséquence."
+    "section": "… créant de nouvelles problématiques",
+    "text": "… créant de nouvelles problématiques\n\nDéfi démocratique\nGestions des droits d’auteurs :\n\nLitige GoT-OpenAI\nPoursuites Stability AI/ Midjourney\n\nFailles de sécurité (Samsung-OpenAI)\nRéponses non sourcées\nQuid des données générées ?"
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#une-frontière-floue",
-    "href": "slides/juridique-big-data/index.html#une-frontière-floue",
+    "objectID": "slides/juridique-big-data/index.html#juin-1951",
+    "href": "slides/juridique-big-data/index.html#juin-1951",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Une frontière floue",
-    "text": "Une frontière floue\n\nLes législations spécifiques au web scraping sont peu nombreuses et différentes d’un pays à l’autre.\nEn revanche, la réutilisation des données est encadrée.\n\nPar exemple par le code de la propriété intellectuelle ou par le RGPD.\n\nLes cas portés en justice ont des dénouements parfois différents les uns des autres, notamment d’un pays à l’autre, montrant bien qu’il s’agit là d’une zone parfois grise."
+    "section": "7 juin 1951",
+    "text": "7 juin 1951\n\nContexte :\n\n:drapeau: Loi Française, promulguée en 1951."
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#une-pratique-pourtant-très-répandue",
-    "href": "slides/juridique-big-data/index.html#une-pratique-pourtant-très-répandue",
+    "objectID": "slides/juridique-big-data/index.html#loi-informatique-et-liberté-1978",
+    "href": "slides/juridique-big-data/index.html#loi-informatique-et-liberté-1978",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Une pratique pourtant très répandue",
-    "text": "Une pratique pourtant très répandue\n\nLes cas d’usage, y compris dans de grandes entreprises, sont très nombreux.\nLes articles discutant de web scraping et de leur légalité sont tout aussi proliférants, mais pas toujours d’accord les uns avec les autres.\n\nQuelques ressources : Imperva, Islean Consulting, TechCrunch…"
+    "section": "Loi informatique et liberté 1978",
+    "text": "Loi informatique et liberté 1978\n\nContexte :\n\n:drapeau: Loi Française, promulguée en 1978."
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#les-principales-réglementations-autour-du-web-scraping",
-    "href": "slides/juridique-big-data/index.html#les-principales-réglementations-autour-du-web-scraping",
+    "objectID": "slides/juridique-big-data/index.html#loi-pour-une-république-numérique",
+    "href": "slides/juridique-big-data/index.html#loi-pour-une-république-numérique",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les principales réglementations autour du web scraping",
-    "text": "Les principales réglementations autour du web scraping\nEn France\n\nL’article L. 342-1 du code de la propriété intellectuelle\nL’article L. 342-2 du code de la propriété intellectuelle\nL’article 323-3 du code pénal : “Le fait […] d’extraire, de détenir, de reproduire […] frauduleusement les données qu’il [le site] contient est puni de cinq ans d’emprisonnement et de 150 000 € d’amende”\nEn termes de droit de la concurrence, on pourra aussi parler de concurrence déloyale avec l’article L. 121-1 du code de la consommation\nIl serait même possible de parler de parasitisme et invoquer l’article 1240 du code civil\nLa CNIL a également publié en 2020 un ensemble de nouvelles directives, limitant l’usage de données personnelles, même si publiques, à usage commercial"
+    "section": "Loi pour une République Numérique",
+    "text": "Loi pour une République Numérique\n\nContexte :\n\n:drapeau: Loi Française, promulguée en 2016.\n:emojy croissance: Réponse à l’expansion rapide du numérique dans la société.\n⚖️ Equilibre entre innovation, inclusion, protection et confiance."
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#les-principales-réglementations-autour-du-web-scraping-1",
-    "href": "slides/juridique-big-data/index.html#les-principales-réglementations-autour-du-web-scraping-1",
+    "objectID": "slides/juridique-big-data/index.html#circulation-des-données-et-du-savoir",
+    "href": "slides/juridique-big-data/index.html#circulation-des-données-et-du-savoir",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les principales réglementations autour du web scraping",
-    "text": "Les principales réglementations autour du web scraping\nEn Europe (1/2)\n\nLa Directive 96/9/CE du Parlement Européen et du conseil\n\nElle introduit notamment le droit sui generis, protégeant les bases de données ayant nécessité un “investissement substantiel”\n\nLe fabricant d’une base de données [a] le droit d’interdire l’extraction et/ou la réutilisation de la totalité ou d’une partie substantielle, évaluée de façon qualitative ou quantitative, du contenu de celle-ci, lorsque l’obtention, la vérification ou la présentation de ce contenu attestent un investissement substantiel du point de vue qualitatif ou quantitatif\n\n\nL’extraction et/ou la réutilisation répétées et systématiques de parties non substantielles du contenu de la base de données qui supposeraient des actes contraires à une exploitation normale de cette base, ou qui causeraient un préjudice injustifié aux intérêts légitimes du fabricant de la base, ne sont pas autorisées"
+    "section": "Circulation des données et du savoir",
+    "text": "Circulation des données et du savoir\n\nL’ouverture des données publiques par défaut :\n\nL’État, les collectivités locales… et l’Insee !\nCode sources et bases de données, sous condition d’anonymisation.\nCADA et CNIL pour la mise en oeuvre des règles.\n\nCréation d’un service public de la données Etalab.\nLibre accès des papiers académique financés à +50% par fond public.\nOuverture des données d’intérêt général (transports, eau, déchets, consommation d’énergie…)."
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#les-principales-réglementations-autour-du-web-scraping-2",
-    "href": "slides/juridique-big-data/index.html#les-principales-réglementations-autour-du-web-scraping-2",
+    "objectID": "slides/juridique-big-data/index.html#la-protection-des-droits-dans-la-société-numérique",
+    "href": "slides/juridique-big-data/index.html#la-protection-des-droits-dans-la-société-numérique",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les principales réglementations autour du web scraping",
-    "text": "Les principales réglementations autour du web scraping\nEn Europe (2/2)\n\nLe RGPD, sur l’utilisation des données à caractère personnel\n\nRèglement européen mais d’application extraterritoriale\n5 grands principes :\n\nLe principe de finalité\nLe principe de proportionnalité et de pertinence\nLe principe d’une durée de conservation limitée\nLe principe de sécurité et de confidentialité\nLes droits des personnes\n\n\nLe Data Governance Act, prévu pour septembre 2023"
+    "section": "La protection des droits dans la société numérique",
+    "text": "La protection des droits dans la société numérique\n\nPrincipe de la neutralité de l’internet inscrit dans le droit français ➡️ Arcep\n3 obligations des plateformes en ligne : loyauté, clarté et transparence\nProtection de la vie privée sur internet :\n\nDroit à l’oubli numérique\nDroit à la mort numérique\nRègle du secret des correspondances privées (https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000034307602)"
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#les-principales-réglementations-autour-du-web-scraping-3",
-    "href": "slides/juridique-big-data/index.html#les-principales-réglementations-autour-du-web-scraping-3",
+    "objectID": "slides/juridique-big-data/index.html#laccès-au-numérique-pour-tous",
+    "href": "slides/juridique-big-data/index.html#laccès-au-numérique-pour-tous",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les principales réglementations autour du web scraping",
-    "text": "Les principales réglementations autour du web scraping\nEncore d’autres\n\nLes jurisprudences issues des procès d’entreprises liés au web scraping\nLes mentions légales, conditions d’utilisation et autres consignes des sites concernés\n\nD’autant plus engageantes quand accéder au contenu nécessite d’accepter explicitement les conditions du site (par exemple en appuyant sur un bouton)\n\nAux États-Unis, plusieurs textes peuvent s’appliquer, entre autres :\n\nLe California Consumer Privacy Act\nLe Computer Fraud and Abuse Act"
+    "section": "L’accès au numérique pour tous",
+    "text": "L’accès au numérique pour tous\n\nLe numérique dans tous les territoires :\n\nCouverture 4G + sanctions opérateurs\n\nLe numérique au bénéfice des publics fragiles\n\nhttps://www.vie-publique.fr/eclairage/20301-loi-republique-numerique-7-octobre-2016-loi-lemaire-quels-changements"
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#les-sites-se-protègent-aussi-eux-mêmes",
-    "href": "slides/juridique-big-data/index.html#les-sites-se-protègent-aussi-eux-mêmes",
+    "objectID": "slides/juridique-big-data/index.html#règlement-général-sur-la-protection-des-données-rgpd-de-lue",
+    "href": "slides/juridique-big-data/index.html#règlement-général-sur-la-protection-des-données-rgpd-de-lue",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les sites se protègent aussi eux-mêmes",
-    "text": "Les sites se protègent aussi eux-mêmes\n\nAfin d’éviter la réutilisation de leurs contenus par des concurrents et lutter contre l’espionnage\nAfin de bloquer les bots qui occupent une partie significative du trafic, ralentissant ainsi l’accès au site\n\nUn scraping mal fait peut s’assimiler à une attaque par déni de service (DoS)"
+    "section": "Règlement Général sur la Protection des Données (RGPD) de l’UE :",
+    "text": "Règlement Général sur la Protection des Données (RGPD) de l’UE :\nhttps://fr.wikipedia.org/wiki/R%C3%A8glement_g%C3%A9n%C3%A9ral_sur_la_protection_des_donn%C3%A9es#\ne-privacy =&gt; loi spéciale"
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#les-méthodes-mises-en-place-pour-se-protéger-du-scraping-12",
-    "href": "slides/juridique-big-data/index.html#les-méthodes-mises-en-place-pour-se-protéger-du-scraping-12",
+    "objectID": "slides/juridique-big-data/index.html#big-data-act",
+    "href": "slides/juridique-big-data/index.html#big-data-act",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les méthodes mises en place pour se protéger du scraping (1/2)",
-    "text": "Les méthodes mises en place pour se protéger du scraping (1/2)\n\nMettre en place des conditions d’utilisation contraignantes et instructions explicites pour se protéger d’un point de vue légal\nRepérer les adresses IP suspectes et bloquer leur accès au site, temporairement ou de façon permanente\nIdentifier les bots et leur afficher un contenu différent des utilisateurs classiques, pour par exemple renvoyer de fausses données\nLimiter les requêtes ou la bande passante consommée par une même source, pouvant ainsi conduire à des collectes partielles ou interrompues"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#les-méthodes-mises-en-place-pour-se-protéger-du-scraping-22",
-    "href": "slides/juridique-big-data/index.html#les-méthodes-mises-en-place-pour-se-protéger-du-scraping-22",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les méthodes mises en place pour se protéger du scraping (2/2)",
-    "text": "Les méthodes mises en place pour se protéger du scraping (2/2)\n\nModifier régulièrement le format HTML du contenu pour empêcher l’automatisation du scraping par autrui\nCréer des pages Honeypot qu’un humain ne visiterait jamais pour identifier puis bloquer des bots\nUtiliser des CAPTCHAs lorsqu’une activité suspecte est repérée\nNécessiter une identification pour accéder au contenu du site"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#les-limites-du-web-scraping",
-    "href": "slides/juridique-big-data/index.html#les-limites-du-web-scraping",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les limites du web scraping",
-    "text": "Les limites du web scraping\n\nLa qualité des données obtenues par scraping n’est pas toujours au rendez-vous.\n\nDe plus, vérification manuelle à faire pour vérifier qu’un faux contenu n’a pas été renvoyé par le site.\n\nIl faut ‘lutter’ contre les sites qui se défendent contre le scraping, ce qui n’est pas sans effort.\n\nModifications manuelles des codes à faire régulièrement, rendant l’automatisation très difficile.\nPérennité de la collecte au fil du temps incertaine.\n\nLes risques légaux sont existants, et plus généralement cela peut nuire à l’image d’un INS.\n\nIl vaut mieux favoriser des relations de confiance avec les sites concernés.\n\n\n\n\n\n\n\n\nRemarque\n\n\nIl est préférable de privilégier d’autres modes d’accès aux données lorsque cela est possible."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#dans-ces-conditions-quand-envisager-le-web-scraping",
-    "href": "slides/juridique-big-data/index.html#dans-ces-conditions-quand-envisager-le-web-scraping",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Dans ces conditions, quand envisager le web scraping ?",
-    "text": "Dans ces conditions, quand envisager le web scraping ?\nLa politique de l’INSEE est de garder le web scraping comme dernière option. Les premières étapes recommandées sont d’abord de :\n\nDemander directement aux sites concernés l’accès à leurs données et nouer d’éventuels partenariats, par exemple modulo une contrepartie\nChercher s’il existe une API du site permettant d’accéder aux données (ou la demander)\nChercher des alternatives, comme accéder à des données similaires via un moyen moins contraignant"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#pour-un-scraping-éthique-et-légal",
-    "href": "slides/juridique-big-data/index.html#pour-un-scraping-éthique-et-légal",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Pour un scraping éthique (et légal !)",
-    "text": "Pour un scraping éthique (et légal !)\n\nLe web scraping reste malgré tout une nouvelle source de données très pratique dans le cas où aucune meilleure alternative ne se présente.\n\nIl ne faut donc pas s’en priver lorsque c’est techniquement et juridiquement propice.\n\nCependant, il existe des moyens de scraper de façon honnête, “éthique” et en minimisant la charge sur le site scrapé.\n\nCela passe par exemple par demander la permission aux sites à scraper, ce qui peut aussi conduire à un éventuel partenariat."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#les-guidelines-du-système-statistique-européen",
-    "href": "slides/juridique-big-data/index.html#les-guidelines-du-système-statistique-européen",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les guidelines du Système Statistique Européen",
-    "text": "Les guidelines du Système Statistique Européen\n\nUn ensemble de recommandations principalement à destination des INS publié durant l’été 2022\nLa version précédente datant de février 2020 également disponible\n\n\nIn the context of the work on Big Data and Trusted Smart Statistics, the European Statistical System (ESS) increasingly utilises information published on the World Wide Web. To ensure that web scraping activities of European Statistical System (ESS) members, namely Eurostat and the national statistical institutes (NSIs) are carried out transparently, and in line with ethical and legal provision, this document proposes guidelines for an ESS wide web scraping policy. Once adopted, these guidelines not only foster nationally sound practices but also ensure a consistent approach across the ESS."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#les-guidelines-du-système-statistique-européen-1",
-    "href": "slides/juridique-big-data/index.html#les-guidelines-du-système-statistique-européen-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les guidelines du Système Statistique Européen",
-    "text": "Les guidelines du Système Statistique Européen\nTransparence\n\nRendre publique la liste des collectes de données par scraping de l’INS, autrement dit être transparent\nSi l’impact sur site va être important (par exemple un scraping fait très fréquemment), informer spécifiquement le site concerné\n\nPlus généralement, prendre le réflexe de demander la permission\n\nS’identifier auprès du site lors de l’opération de scraping"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#les-guidelines-du-système-statistique-européen-2",
-    "href": "slides/juridique-big-data/index.html#les-guidelines-du-système-statistique-européen-2",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les guidelines du Système Statistique Européen",
-    "text": "Les guidelines du Système Statistique Européen\nMinimiser l’impact\n\nToujours chercher à minimiser l’impact sur les serveurs du site scrapé\n\nNotamment en limitant les requêtes effectuées au minimum requis\n\nPrivilégier les heures creuses du site pour les opérations automatisées de scraping\nÉtaler les requêtes en laissant un temps de ‘pause’ entre chaque requête, surtout sur un même domaine"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#les-guidelines-du-système-statistique-européen-3",
-    "href": "slides/juridique-big-data/index.html#les-guidelines-du-système-statistique-européen-3",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les guidelines du Système Statistique Européen",
-    "text": "Les guidelines du Système Statistique Européen\nConfiance\n\nFavoriser les échanges avec les propriétaires des sites : partenariats, échanges de données, requêtes d’API…\nSe plier aux conditions d’utilisation des sites concernés et aux réglementations de la zone concernée\nManipuler de façon sécurisée les données scrapées, notamment les données personnelles\n\nEx : Respecter le RGPD, d’application extraterritoriale"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#ce-quil-ne-faut-pas-faire",
-    "href": "slides/juridique-big-data/index.html#ce-quil-ne-faut-pas-faire",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "⚠️ Ce qu’il ne faut pas faire !",
-    "text": "⚠️ Ce qu’il ne faut pas faire !\n\nConsciemment déroger aux réglementations applicables et manquer de transparence\nSurcharger les requêtes sur le site concerné (assimilable à une attaque DoS) ou multiplier les mêmes requêtes plusieurs fois\nScraper un site entier lorsque l’on a seulement besoin d’une portion de son contenu\nParalléliser les requêtes sur un site ou faire ces dernières en heures pleines\nDiffuser de façon non autorisée des données scrapées non publiques ou soumises à droit d’auteur\nPour un INS, utiliser le scraping à des fins non statistiques ou hors du champ légal"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#avertissements",
-    "href": "slides/juridique-big-data/index.html#avertissements",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Avertissements",
-    "text": "Avertissements\n\nSelon les pays, il existe des données qui sont publiques mais dont le scraping est illégal.\n\nIl faut donc bien se renseigner sur les lois locales.\nPar exemple, la collecte d’adresses mail par scraping est illégale en Australie, en raison du Spam Act de 2003.\n\nDans le doute, ne pas hésiter à se documenter davantage.\n\nExemples de ressources : Carpentries, Rubyroidlabs…\n\nIl existe parfois des structures dont le rôle est justement d’évaluer l’aspect juridique de pratiques comme le web scraping.\n\nA l’INSEE, c’est la responsabilité de l’UAJC\n\nOutre l’aspect juridique, il faut bien passer en revue les impacts méthodologiques liés aux risques techniques du web scraping (collecte incomplète, rupture de collecte)."
+    "section": "Big Data Act :",
+    "text": "Big Data Act :\nhttps://digital-strategy.ec.europa.eu/fr/policies/data-act"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#le-cas-du-webscrapping",
