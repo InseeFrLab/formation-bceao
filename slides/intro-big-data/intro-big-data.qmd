@@ -254,14 +254,13 @@ execute:
 
 - Développer des synergies entre toutes les parties prenantes (directions métiers, informatique, partenaires, ...)
 
-## Plan de la formation {.scrollable}
+## Plan de la formation{.scrollable}
 
-Lundi 25 septembre 2023
 
-| Horaires             | Activités                                                    |
+| Horaires            | Activités                 |
 |-------------------|-------------------------------------------------------------|
 | 8 h 30 - 9 h 00   | Accueil et installation                                     |
-| 9 h 00 - 9 h 15   | Cérémonie d'ouverture Directeur des Statistiques            |
+| 9 h 00 - 9 h 15   | Cérémonie d'ouverture par le Directeur des Statistiques            |
 | 9 h 15 - 9 h 30   | Pause-café                                                  |
 | 9 h 30 - 10 h 45  | Introduction sur la place et les enjeux liés au big data à l’Insee |
 | 10 h 45 - 11 h 00 | Pause-café                                                  |
@@ -271,9 +270,10 @@ Lundi 25 septembre 2023
 | 16 h 00 - 16 h 15 | Pause-café                                                  |
 | 16 h 15 - 17 h 30 | Prise en main du SSP Cloud                                 |
 
-## Plan de la formation {.scrollable}
+: Lundi 25 septembre 2023 {tbl-colwidths="[35,65]" .striped .hover .responsive}
 
-Mardi 26 septembre 2023
+
+## Plan de la formation {.scrollable}
 
 | Horaires             | Activités                                                    |
 |-------------------|-------------------------------------------------------------|
@@ -285,9 +285,10 @@ Mardi 26 septembre 2023
 | 16 h 00 - 16 h 15 | Pause-café                                                  |
 | 16 h 15 - 17 h 30 | Retour sur des projets de Machine Learning mis en production à l’Insee |
 
+: Mardi 26 septembre 2023 {tbl-colwidths="[35,65]" .striped .hover .responsive}
+
 ## Plan de la formation {.scrollable}
 
-Mercredi 27 septembre 2023
 
 | Horaires             | Activités                                                    |
 |-------------------|-------------------------------------------------------------|
@@ -295,13 +296,15 @@ Mercredi 27 septembre 2023
 | 10 h 30 - 10 h 45 | Pause-café                                                  |
 | 10 h 45 - 12 h 45 | TP 2 : Déployer un modèle de machine learning               |
 
-## Plan de la formation {.scrollable}
+: Mercredi 27 septembre 2023 {tbl-colwidths="[35,65]" .striped .hover .responsive}
 
-Vendredi 29 septembre 2023
+## Plan de la formation {.scrollable}
 
 | Horaires             | Activités                                                    |
 |-------------------|-------------------------------------------------------------|
 | 8 h 30 - 10 h 00  | Aspects juridiques et réglementaires du big data : un retour d’expérience |
 | 10 h 00 - 10 h 15 | Pause-café                                                  |
 | 10 h 15 - 12 h 00 | Retour sur la formation et échange sur la stratégie big data de la BCEAO |
-| 12 h 00 - 13 h 00 | Cérémonie de clôture de l'atelier Directeur des Statistiques |
+| 12 h 00 - 13 h 00 | Cérémonie de clôture de l'atelier par le Directeur des Statistiques |
+
+: Vendredi 29 septembre 2023 {tbl-colwidths="[35,65]" .striped .hover .responsive}
