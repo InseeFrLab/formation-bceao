@@ -655,7 +655,28 @@
     "href": "slides/intro-big-data/index.html#plan-de-la-formation",
     "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Plan de la formation",
-    "text": "Plan de la formation\n\nCalendrier prévisionnel"
+    "text": "Plan de la formation\nLundi 25 septembre 2023\n\n\n\n\n\n\n\nHoraires\nActivités\n\n\n\n\n8 h 30 - 9 h 00\nAccueil et installation\n\n\n9 h 00 - 9 h 15\nCérémonie d’ouverture Directeur des Statistiques\n\n\n9 h 15 - 9 h 30\nPause-café\n\n\n9 h 30 - 10 h 45\nIntroduction sur la place et les enjeux liés au big data à l’Insee\n\n\n10 h 45 - 11 h 00\nPause-café\n\n\n11 h 00 - 12 h 30\nIntroduction sur la place et les enjeux liés au big data à l’Insee\n\n\n12 h 30 - 14 h 30\nPause-déjeuner\n\n\n14 h 30 - 16 h 00\nPrésentation Infra / Outils\n\n\n16 h 00 - 16 h 15\nPause-café\n\n\n16 h 15 - 17 h 30\nPrise en main du SSP Cloud"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#plan-de-la-formation-1",
+    "href": "slides/intro-big-data/index.html#plan-de-la-formation-1",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
+    "section": "Plan de la formation",
+    "text": "Plan de la formation\nMardi 26 septembre 2023\n\n\n\n\n\n\n\nHoraires\nActivités\n\n\n\n\n8 h 30 - 10 h 30\nSources big data à l’Insee\n\n\n10 h 30 - 10 h 45\nPause-café\n\n\n10 h 45 - 12 h 30\nTP 1 : Manipulation des données volumineuses\n\n\n12 h 30 - 14 h 30\nPause-déjeuner\n\n\n14 h 30 - 16 h 00\nTP 1 : Manipulation des données massives\n\n\n16 h 00 - 16 h 15\nPause-café\n\n\n16 h 15 - 17 h 30\nRetour sur des projets de Machine Learning mis en production à l’Insee"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#plan-de-la-formation-2",
+    "href": "slides/intro-big-data/index.html#plan-de-la-formation-2",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
+    "section": "Plan de la formation",
+    "text": "Plan de la formation\nMercredi 27 septembre 2023\n\n\n\n\n\n\n\nHoraires\nActivités\n\n\n\n\n8 h 30 - 10 h 30\nTP 2 : Introduction à la mise en production et au MLOps\n\n\n10 h 30 - 10 h 45\nPause-café\n\n\n10 h 45 - 12 h 45\nTP 2 : Déployer un modèle de machine learning"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#plan-de-la-formation-3",
+    "href": "slides/intro-big-data/index.html#plan-de-la-formation-3",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
+    "section": "Plan de la formation",
+    "text": "Plan de la formation\nVendredi 29 septembre 2023\n\n\n\n\n\n\n\nHoraires\nActivités\n\n\n\n\n8 h 30 - 10 h 00\nAspects juridiques et réglementaires du big data : un retour d’expérience\n\n\n10 h 00 - 10 h 15\nPause-café\n\n\n10 h 15 - 12 h 00\nRetour sur la formation et échange sur la stratégie big data de la BCEAO\n\n\n12 h 00 - 13 h 00\nCérémonie de clôture de l’atelier Directeur des Statistiques"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#big-data-késako",
