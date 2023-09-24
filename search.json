@@ -567,163 +567,156 @@
     "text": "Organisation visée à l’Insee"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html",
-    "href": "slides/intro-big-data/intro-big-data.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "Thomas Faria\n\nSSP Lab : innovation en méthodologie statistique\nthomas.faria@insee.fr\n\nRomain Avouac\n\nDIIT : innovation informatique\nromain.avouac@insee.fr\n\n\n\n\n\n\nCoopération internationale\nDiscussion autour de la stratégie big data de l’Insee\n\nRetours d’expérience\n“learning by doing”\n\nPartage de connaissances sur le long terme"
+    "objectID": "slides/intro-big-data/index.html#qui-sommes-nous",
+    "href": "slides/intro-big-data/index.html#qui-sommes-nous",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
+    "section": "Qui sommes-nous ?",
+    "text": "Qui sommes-nous ?\n\nThomas Faria\n\nSSP Lab : innovation en méthodologie statistique\nthomas.faria@insee.fr\n\nRomain Avouac\n\nDIIT : innovation informatique\nromain.avouac@insee.fr"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#qui-sommes-nous",
-    "href": "slides/intro-big-data/intro-big-data.html#qui-sommes-nous",
-    "title": "Introduction",
-    "section": "",
-    "text": "Thomas Faria\n\nSSP Lab : innovation en méthodologie statistique\nthomas.faria@insee.fr\n\nRomain Avouac\n\nDIIT : innovation informatique\nromain.avouac@insee.fr"
+    "objectID": "slides/intro-big-data/index.html#contexte-de-cette-formation",
+    "href": "slides/intro-big-data/index.html#contexte-de-cette-formation",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
+    "section": "Contexte de cette formation",
+    "text": "Contexte de cette formation\n\nCoopération internationale\nDiscussion autour de la stratégie big data de l’Insee\n\nRetours d’expérience\n“learning by doing”\n\nPartage de connaissances sur le long terme"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#contexte-de-cette-formation",
-    "href": "slides/intro-big-data/intro-big-data.html#contexte-de-cette-formation",
-    "title": "Introduction",
-    "section": "",
-    "text": "Coopération internationale\nDiscussion autour de la stratégie big data de l’Insee\n\nRetours d’expérience\n“learning by doing”\n\nPartage de connaissances sur le long terme"
-  },
-  {
-    "objectID": "slides/intro-big-data/intro-big-data.html#big-data-de-quoi-parle-t-on",
-    "href": "slides/intro-big-data/intro-big-data.html#big-data-de-quoi-parle-t-on",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#big-data-de-quoi-parle-t-on",
+    "href": "slides/intro-big-data/index.html#big-data-de-quoi-parle-t-on",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Big data : de quoi parle-t-on ?",
     "text": "Big data : de quoi parle-t-on ?\n\nDe “nouvelles” données\n\nenregistrements automatiques (GSM, géolocalisation, capteurs..)\ncontenus internet (webscraping, réseaux sociaux..)\nimages satellites\netc."
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#un-phénomène-pérenne",
-    "href": "slides/intro-big-data/intro-big-data.html#un-phénomène-pérenne",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#un-phénomène-pérenne",
+    "href": "slides/intro-big-data/index.html#un-phénomène-pérenne",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Un phénomène pérenne",
     "text": "Un phénomène pérenne\n\nCroissance du numérique\nCroissance des capacités techniques"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#big-data-une-définition",
-    "href": "slides/intro-big-data/intro-big-data.html#big-data-une-définition",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#big-data-une-définition",
+    "href": "slides/intro-big-data/index.html#big-data-une-définition",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Big data : une définition",
     "text": "Big data : une définition\n\nBig data : “Gestion et analyse d’un volume massif de données, souvent à une échelle bien supérieure à ce que les systèmes traditionnels peuvent traiter efficacement.”\nLes 3 V qui caractérisent les big data :\n\nVolume : quantités massives de données\nVitesse : haute fréquence, jusqu’au temps réel\nVariété : diversité de sources et de formats"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#pourquoi-sintéresser-à-ces-données",
-    "href": "slides/intro-big-data/intro-big-data.html#pourquoi-sintéresser-à-ces-données",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#pourquoi-sintéresser-à-ces-données",
+    "href": "slides/intro-big-data/index.html#pourquoi-sintéresser-à-ces-données",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Pourquoi s’intéresser à ces données ?",
     "text": "Pourquoi s’intéresser à ces données ?\n\nDisponibilité : réduction du coût et de la charge des enquêtes, des délais de publication (ex : nowcasting)\nFinesse : statistiques localisées, sur des sous-population, plus fréquentes…\nAvancées méthodologiques : convergence entre statistique et informatique (data science, machine learning)\nExhaustivité : compléter des déclarations d’enquêtes, créer de nouveaux indicateurs…"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#un-retour-de-lexhaustif",
-    "href": "slides/intro-big-data/intro-big-data.html#un-retour-de-lexhaustif",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#un-retour-de-lexhaustif",
+    "href": "slides/intro-big-data/index.html#un-retour-de-lexhaustif",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Un retour de l’exhaustif ?",
     "text": "Un retour de l’exhaustif ?\n\nPré-XXe siècle : règne quasi-exclusif de l’exhaustivité\n\nRecensements agricole, démographique, industriel\n\nXXe siècle : lent recul de l’exhaustivité au profit de l’échantillonnage\n\n1934 : article de référence sur la théorie des sondages (Neyman)\nDéveloppement des panels, études d’opinion, grandes enquêtes\n\nFin XXe et début XXIe siècles : retour en grâce de l’exhaustif ?"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#début-des-réflexions-des-ins-européens",
-    "href": "slides/intro-big-data/intro-big-data.html#début-des-réflexions-des-ins-européens",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#début-des-réflexions-des-ins-européens",
+    "href": "slides/intro-big-data/index.html#début-des-réflexions-des-ins-européens",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Début des réflexions des INS européens",
     "text": "Début des réflexions des INS européens\n\nMémorandum de Scheveningen (2013) : task force européenne sur le potentiel des big data\nGroupe de travail de l’UNECE (2014-2015) : “sandbox” pour manipuler des données concrètes\nESSNET Big Data I (2016-2018) et II (2019-2021)\n\nPréparer l’intégration des big data à la production statistique officielle\nProjets pilotes sur une variété de sujets\nNombreuses ressources"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#début-des-expérimentations-à-linsee",
-    "href": "slides/intro-big-data/intro-big-data.html#début-des-expérimentations-à-linsee",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#début-des-expérimentations-à-linsee",
+    "href": "slides/intro-big-data/index.html#début-des-expérimentations-à-linsee",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Début des expérimentations à l’Insee",
     "text": "Début des expérimentations à l’Insee\n\n2015 : projet données de caisse\n\nGroupe CNIS sur l’accès aux données privées\n\n2016 : poste de statisticien sur les big data\n2016 : début de l’exploitation des données mobiles\n\nPartenariat informel avec l’opérateur Orange\nTravaux méthodologiques\n\n2018 : labs et premiers développements d’une plateforme big data"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#des-enjeux-multiples",
-    "href": "slides/intro-big-data/intro-big-data.html#des-enjeux-multiples",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#des-enjeux-multiples",
+    "href": "slides/intro-big-data/index.html#des-enjeux-multiples",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Des enjeux multiples",
     "text": "Des enjeux multiples\n\nDémocratique\nLégislatif\nÉconomique\nMéthodologique\nTechnique"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#confiance",
-    "href": "slides/intro-big-data/intro-big-data.html#confiance",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#confiance",
+    "href": "slides/intro-big-data/index.html#confiance",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Confiance",
     "text": "Confiance\n\nDes données généralement recueillies par des acteurs privés\nDeux approches complémentaires\n\nJuridique : établir des garde-fous juridiques\nTechnique : méthodes de confidentialité"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#cadre-législatif",
-    "href": "slides/intro-big-data/intro-big-data.html#cadre-législatif",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#cadre-législatif",
+    "href": "slides/intro-big-data/index.html#cadre-législatif",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Cadre législatif",
     "text": "Cadre législatif\n\nUn cadre législatif largement existant\n\nSecret statistique (1951)\nTraitement des données personnelles et sensibles (1978)\nGénéralisation européenne : RGPD (2016) et directive e-privacy\n\nDe nécessaires adaptations\n\nLa quantité et la variété des données facilite les ré-identifications\nBig data act (2021)"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#confidentialité-des-données",
-    "href": "slides/intro-big-data/intro-big-data.html#confidentialité-des-données",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#confidentialité-des-données",
+    "href": "slides/intro-big-data/index.html#confidentialité-des-données",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Confidentialité des données",
     "text": "Confidentialité des données\n\nUn arbitrage complexe à trouver\n\nGarantir le respect de la vie privée\nConserver un maximum d’information statistique\n\nLes possibilités d’identification croissent avec les volumes de données\n\nEvolution des techniques de confidentialité"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#techniques-de-confidentialité",
-    "href": "slides/intro-big-data/intro-big-data.html#techniques-de-confidentialité",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#techniques-de-confidentialité",
+    "href": "slides/intro-big-data/index.html#techniques-de-confidentialité",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Techniques de confidentialité",
     "text": "Techniques de confidentialité\n\nAnonymisation\n\nDe plus en plus complexe à assurer\n\nDestruction\n\nAgrégation pour limiter la perte d’information\n\nObfuscation\n\nPotentiel des données synthétiques\n\nConfidentialité différentielle\n\nQuantifier le risque d’une faille de confidentialité"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#enjeux-économiques",
-    "href": "slides/intro-big-data/intro-big-data.html#enjeux-économiques",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#enjeux-économiques",
+    "href": "slides/intro-big-data/index.html#enjeux-économiques",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Enjeux économiques",
     "text": "Enjeux économiques\n\nLes big data sont souvent collectées par des acteurs privés\n\nVolonté d’accès à des fins de statistique publique\nRespect du secret des affaires\n\nVolonté des acteurs privés de valoriser ces données\n\nExemple de FluxVision\n\nStratégie : nouer des partenariats “au cas par cas”\n\nDifficultés à pérenniser l’approvisionnement de données"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#limites-des-modes-de-collecte",
-    "href": "slides/intro-big-data/intro-big-data.html#limites-des-modes-de-collecte",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#limites-des-modes-de-collecte",
+    "href": "slides/intro-big-data/index.html#limites-des-modes-de-collecte",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Limites des modes de collecte",
     "text": "Limites des modes de collecte\n\nProcessus de génération des données non contrôlé\nReprésentativité généralement limitée\nFormats complexes et souvent changeants\nDifficultés d’acheminement entre infrastructures\n\nCoûts de transfert"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#enjeux-techniques",
-    "href": "slides/intro-big-data/intro-big-data.html#enjeux-techniques",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#enjeux-techniques",
+    "href": "slides/intro-big-data/index.html#enjeux-techniques",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Enjeux techniques",
     "text": "Enjeux techniques\n\nStockage adapté : les data lakes\nCalcul distribué\n\nRessources\n\nServices data science\nImportance d’une “sandbox”"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#enjeux-méthodologiques",
-    "href": "slides/intro-big-data/intro-big-data.html#enjeux-méthodologiques",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#enjeux-méthodologiques",
+    "href": "slides/intro-big-data/index.html#enjeux-méthodologiques",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Enjeux méthodologiques",
     "text": "Enjeux méthodologiques\n\nTraitement des données massives\n\nAlgorithmes distribués\nStatistique en grande dimension\n\nTraitement de formats non-structurés\n\nTraitement du langage naturel\nAnalyse d’images\n\nMéthodes de machine learning"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#limportance-de-la-formation",
-    "href": "slides/intro-big-data/intro-big-data.html#limportance-de-la-formation",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#limportance-de-la-formation",
+    "href": "slides/intro-big-data/index.html#limportance-de-la-formation",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "L’importance de la formation",
     "text": "L’importance de la formation\n\nDe statisticien à data scientist\n\nFormalisation des besoins métiers\nVeille méthodologique\nAcculturation aux techniques informatiques\n\nDe l’expérimentation à la mise en production\n\nAutomatisation des traitements\nBonnes pratiques de développement"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#des-innovations-croisées",
-    "href": "slides/intro-big-data/intro-big-data.html#des-innovations-croisées",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#des-innovations-croisées",
+    "href": "slides/intro-big-data/index.html#des-innovations-croisées",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Des innovations croisées",
     "text": "Des innovations croisées\n\nTechniques\nMéthodologiques\nOrganisationnelles"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#une-construction-collective",
-    "href": "slides/intro-big-data/intro-big-data.html#une-construction-collective",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#une-construction-collective",
+    "href": "slides/intro-big-data/index.html#une-construction-collective",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Une construction collective",
     "text": "Une construction collective\n\nDes sources et des sujets variés qui impliquent de nombreuses dimensions (juridique, technique, méthodologique, organisationnelle, …)\nLe statisticien public ne peut incarner tous ces aspects\nDévelopper des synergies entre toutes les parties prenantes (directions métiers, informatique, partenaires, …)"
   },
   {
-    "objectID": "slides/intro-big-data/intro-big-data.html#plan-de-la-formation",
-    "href": "slides/intro-big-data/intro-big-data.html#plan-de-la-formation",
-    "title": "Introduction",
+    "objectID": "slides/intro-big-data/index.html#plan-de-la-formation",
+    "href": "slides/intro-big-data/index.html#plan-de-la-formation",
+    "title": "Introduction sur la place et les enjeux liées au big data à l’Insee",
     "section": "Plan de la formation",
     "text": "Plan de la formation\n\nCalendrier prévisionnel"
   },
