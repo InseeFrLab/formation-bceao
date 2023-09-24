@@ -1,5 +1,5 @@
 ---
-title: Introduction sur la place et les enjeux liées au *big data* à l'Insee
+title: Place et enjeux liés au *big data* à l'Insee
 subtitle: |
   **[BCEAO - Jour 1]{.orange}**
 author: "[Romain Avouac](https://github.com/avouacr), [Thomas Faria](https://github.com/ThomasFaria)"
@@ -29,27 +29,29 @@ execute:
 
 ## Qui sommes-nous ?
 
-- Thomas Faria
-  - SSP Lab : innovation en méthodologie statistique
-  - thomas.faria@insee.fr
+- [**Thomas Faria**]{.orange}
+  - [**SSP Lab**]{.blue2} : innovation en méthodologie statistique
+  - [thomas.faria@insee.fr](thomas.faria@insee.fr)
 
-- Romain Avouac
-  - DIIT : innovation informatique
-  - romain.avouac@insee.fr
+- [**Romain Avouac**]{.orange}
+  - [**DIIT**]{.blue2} : innovation informatique
+  - [romain.avouac@insee.fr](romain.avouac@insee.fr)
 
 ## Contexte de cette formation
 
 - Coopération internationale
-- Discussion autour de la stratégie big data de l'Insee
-  - Retours d'expérience
-  - "learning by doing"
+
+- Discussion autour de la [**stratégie big data**]{.orange} de l'Insee
+  - [**Retours d'expérience**]{.blue2}
+  - [**"learning by doing"**]{.blue2}
+
 - Partage de connaissances sur le long terme
 
 # Le potentiel des big data
 
 ## Big data : de quoi parle-t-on ?
 
-- De "nouvelles" données
+- Des données "nouvelles" aux [**contours flous**]{.orange}
   - enregistrements automatiques (GSM, géolocalisation, capteurs..)
   - contenus internet (webscraping, réseaux sociaux..)
   - images satellites
@@ -57,8 +59,11 @@ execute:
 
 ## Un phénomène pérenne
 
-- Croissance du numérique
-- Croissance des capacités techniques
+- Un phénomène en [**expansion constante**]{.orange}
+  - Part du numérique 
+  - Capacités techniques
+
+![](img/growth.png){height="400" fig-align="center"}
 
 ## Big data : une définition
 
@@ -81,38 +86,38 @@ execute:
 
 ## Un retour de l'exhaustif ?
 
-- Pré-XXe siècle : règne quasi-exclusif de l'exhaustivité
+- [**Pré-XXe siècle**]{.orange} : règne quasi-exclusif de [**l'exhaustivité**]{.blue2}
   - Recensements agricole, démographique, industriel
 
-- XXe siècle : lent recul de l’exhaustivité au profit de l'échantillonnage
+- [**XXe siècle**]{.orange} : lent recul de l’exhaustivité au profit de [**l'échantillonnage**]{.blue2}
   - 1934 : article de référence sur la théorie des sondages (Neyman)
   - Développement des panels, études d'opinion, grandes enquêtes
 
-- Fin XXe et début XXIe siècles : retour en grâce de l'exhaustif ?
+- [**Fin XXe et début XXIe siècles**]{.orange} : retour en grâce de [**l'exhaustif**]{.blue2} ?
 
 ## Début des réflexions des INS européens
 
-- Mémorandum de Scheveningen (2013) : task force européenne sur le potentiel des big data
+- Mémorandum de Scheveningen (2013) : [**task force européenne**]{.orange} sur le potentiel des big data
 
-- Groupe de travail de l'UNECE (2014-2015) : "sandbox" pour manipuler des données concrètes
+- Groupe de travail de l'[**UNECE**]{.orange} (2014-2015) : [**"sandbox"**]{.blue2} pour manipuler des données concrètes
 
-- ESSNET Big Data I (2016-2018) et II (2019-2021)
+- [**ESSNET Big Data**]{.orange} I (2016-2018) et II (2019-2021)
   - Préparer l'intégration des big data à la production statistique officielle
-  - Projets pilotes sur une variété de sujets
+  - [**"Projets pilotes"**]{.blue2} sur une variété de sujets
   - Nombreuses [ressources](https://cros-legacy.ec.europa.eu/content/essnet-big-data-1_en)
 
 ## Début des expérimentations à l'Insee
 
-- 2015 : projet données de caisse 
+- 2015 : projet [**données de caisses**]{.orange} 
   - Groupe CNIS sur l'accès aux données privées
 
 - 2016 : poste de statisticien sur les big data
 
-- 2016 : début de l'exploitation des données mobiles
-  - Partenariat informel avec l'opérateur Orange
-  - Travaux méthodologiques
+- 2016 : début de l'exploitation des [**données mobiles**]{.orange}
+  - [**"Partenariat"**]{.blue2} informel avec l'opérateur Orange
+  - [**"Travaux méthodologiques"**]{.blue2}
 
-- 2018 : labs et premiers développements d'une plateforme big data
+- 2018 : [**labs**]{.orange} et premiers développements d'une [**"plateforme big data"**]{.blue2}
 
 
 
@@ -133,22 +138,23 @@ execute:
 
 ## Confiance
 
-- Des données généralement recueillies par des acteurs privés
+- Des données généralement recueillies par des [**acteurs privés**]{.orange}
+  - Comment garantir la [**confiance**]{.blue2} des citoyens ?
 
 - Deux approches complémentaires
-  - Juridique : établir des garde-fous juridiques
-  - Technique : méthodes de confidentialité
+  - [**Juridique**]{.orange} : établir des garde-fous juridiques
+  - [**Technique**]{.orange} : méthodes de confidentialité
 
 ## Cadre législatif
 
-- Un cadre législatif largement existant
-  - Secret statistique (1951)
-  - Traitement des données personnelles et sensibles (1978) 
-  - Généralisation européenne : RGPD (2016) et directive e-privacy
+- Un cadre législatif largement [**existant**]{.orange}
+  - [**Secret statistique**]{.blue2} (1951)
+  - Traitement des [**données personnelles**]{.blue2} et [**sensibles**]{.blue2} (1978) 
+  - Généralisation européenne : [**RGPD**]{.blue2} (2016) et directive [**e-privacy**]{.blue2}
 
-- De nécessaires adaptations
-  - La quantité et la variété des données facilite les ré-identifications
-  - Big data act (2021)
+- De nécessaires [**adaptations**]{.orange}
+  - La quantité et la variété des données facilite les [**ré-identifications**]{.blue2}
+  - [**Big data act**]{.blue2} (2021)
 
 ## Confidentialité des données
 
