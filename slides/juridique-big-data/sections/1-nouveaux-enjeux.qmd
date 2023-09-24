@@ -9,11 +9,16 @@
 Application de santé collectant des données biométriques de ses utilisateurs sans leur consentement explicite.
 :::
 
+## Croissance du numérique
+
+- image de l'intro pour trnasition sur le stockage
+
+
 ## Stockage et sécurité des données
 
-- [**Volume**]{.orange} des données pose la difficulté du stockage
-- [**Coûts d'investissement**]{.orange} importants et marché monopolisé par les GAFAM
-- Problématique de la [**souveraineté numérique**]{.orange}
+- [**Volume**]{.orange} des données pose la difficulté du stockage.
+- [**Coûts d'investissement**]{.orange} importants et marché monopolisé par les GAFAM.
+- Problématique de la [**souveraineté numérique**]{.orange}.
 - ➡️ Mesures de [**sécurité**]{.orange} essentielles pour la protection des données.
 
 ::: {.callout-tip title="Exemple de risque potentiel"}
@@ -21,33 +26,43 @@ Application de santé collectant des données biométriques de ses utilisateurs 
 - [Incendie OVH](https://fr.wikipedia.org/wiki/Incendie_du_centre_de_donn%C3%A9es_d%27OVHcloud_%C3%A0_Strasbourg) en janvier 2023.
 :::
 
-## Open Data
+## Open Data et secteur public
 
-- Open Data : mise à disposition publiquement et gratuitement de données numériques.
-- En France, loi Lemaire 2016 :
-  - Ouverture des données publiques produitent par [**autorités publiques**]{.orange} dans un cadre reglementé.
-- Améliorer le fonctionnement démocratique par la [**transparence**]{.orange} et l'[**ouverture d’information**]{.orange}.
-- Proposer de nouvelles ressources pour l'[**innovation**]{.orange} économique et sociale
-- 
- ::: {.callout-tip title="Exemple de risque potentiel"}
-- L'Open Data tend à devenir la norme dans le secteur public mais devient de plus en plus courant dans le secteur privé aussi.
-:::
+- Mise à disposition [**publiquement**]{.orange} et [**gratuitement**]{.orange} des données.
+  - En France, [loi Lemaire 2016](https://) : <!-- TODO:  -->
+  - Open Data des [**autorités publiques**]{.orange} dans un cadre reglementé.
+- Objectif double :cible: :
+  - :one: [**Transparence**]{.orange} démocratique et [**ouverture d’information**]{.orange}.
+  - :two: Favoriser l'[**innovation**]{.orange} économique et sociale.
+- L'Open Data se démocratise aussi dans le secteur privé !
+
 
 ## Propriété intellectuelle
 
-- Gestion des [**licences**]{.orange} : 
-    - Développement de l'[**open source**]{.blue2} et du partage de données
-    - Nécessité d'apposer et de respecter des licences claires 
+- Gestion des [**licences**]{.orange} :copyright: : 
+    - Développement de l'[**open source**]{.blue2} et du partage de données.
+    - Nécessité d'apposer et de respecter des licences claires.
 
-- Equilibre difficile entre la [**protection**]{.orange} et l'[**innovation**]{.orange} ⚖️ :
+- Equilibre difficile entre [**protection**]{.orange} et [**innovation**]{.orange} ⚖️ :
     - Les lois sur le [**droit d'auteur**]{.blue2} établies ont du mal à prendre en compte les nouvelles technologies
     - Développement de [**nouveaux outils**]{.blue2} d'Intelligence Artificielle (IA)
 
-## Problématiques des nouvelles méthodes d'IA
+## Des méthodologies toujours plus innovantes...
 
-- Les [**grands modèles de langage**]{.orange} (LLM) et les [**modèle de génération d'images**]{.orange} :
-    - Entraînement sur données avec droit d'auteurs ([GoT-OpenAI](https://www.liberation.fr/economie/medias/droits-dauteur-lauteur-de-game-of-thrones-attaque-openai-et-chatgpt-en-justice-20230921_Y2CMN4CKKVCOLHRDNS7W6ZA2AA/))
-    - Réponses non sourcées pour les LLM
-    - Failles de sécurité ([Samsung-OpenAI](https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak?embedded-checkout=true))
-    - Poursuite d'artiste contre Stability AI et Midjourney pour avoir récupéré des données d'artistes sans consentement
-    - Quid des données générées ?
+- [**Grands modèles de langage**]{.orange} (LLM)
+  - ChatGPT, LLama2, Bard...
+- Modèles de [**génération d'images**]{.orange}
+  - Midjourney, Stable Diffusion, Dall-E
+- Modèles [**Deep fake**]{.orange} : 
+  - Exemple  <!-- TODO: trouver exemples -->
+
+
+## ... créant de nouvelles problématiques
+
+- Défi démocratique
+- Gestions des droits d'auteurs :
+  - Litige [GoT-OpenAI](https://www.liberation.fr/economie/medias/droits-dauteur-lauteur-de-game-of-thrones-attaque-openai-et-chatgpt-en-justice-20230921_Y2CMN4CKKVCOLHRDNS7W6ZA2AA/)
+  - Poursuites [Stability AI/ Midjourney]()
+- Failles de sécurité ([Samsung-OpenAI](https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak?embedded-checkout=true))
+- Réponses non sourcées
+- Quid des données générées ?

@@ -38,7 +38,7 @@ execute:
 
 # :two: Réglementations clés
 
-{{< include sections/2-juridique.qmd >}}
+{{< include sections/2-nouvelles-reglementations.qmd >}}
 
 # :three: Retour d'expériences à l'Insee
 
