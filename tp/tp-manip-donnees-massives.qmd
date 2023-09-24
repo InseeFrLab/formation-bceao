@@ -30,9 +30,7 @@ options(arrow.use_threads = TRUE)
 
 Lorsque l'on parle de *Big Data*, le choix du format de stockage est essentiel pour optimiser l'efficacité et la performance des opérations. Le format le plus couramment utilisé pour le stockage de données est le `.csv`. Ce format présente l'avantage d'être lisible facilement, à la fois par les humains et par les différents langages et systèmes informatiques. Cependant, il a quelques inconvénients majeurs : il n'est pas compressé, ce qui signifie qu'il occupe beaucoup d'espace disque, et il doit être chargé intégralement en mémoire, même lorsque nous souhaitons analyser uniquement un sous-échantillon des données. Cette exigence a des implications à la fois en termes de stockage et de temps de calcul.
 
-
 Dans ce TP, nous explorerons une alternative de plus en plus répandue au format `.csv` : le format `.parquet`. Ce format a été choisi comme format de stockage et de diffusion par défaut pour les prochaines années par l'Insee.
-
 
 Pour commencer, nous importerons le fichier `tp/data/data_recensement_2017.csv` mis à votre disposition, qui contient les données du recensement de 2017. Nous utiliserons trois méthodes différentes pour l'importation, et nous analyserons leurs performances respectives :
 
@@ -41,7 +39,6 @@ Pour commencer, nous importerons le fichier `tp/data/data_recensement_2017.csv` 
 -   importation via le package `data.table`, qui est une extension au data.frame de R base.
 
 -   importation via le package `arrow`.
-
 
 L'objectif est de comprendre comment chaque méthode gère efficacement les données (massives), en tenant compte de l'occupation de la mémoire et du temps nécessaire pour effectuer l'importation. Cette étape est cruciale pour travailler avec des données massives de manière efficiente. Commencez par l'importation des données à l'aide de ces trois approches différentes.
 
@@ -88,7 +85,6 @@ head(df_arrow, 6)
 
 Il est judicieux de supprimer les objets lourds dont on n'a plus besoin dans l'environnement R. En effet, lorsque vous créez des objets dans R, ils occupent de l'espace en mémoire. Si vous accumulez de nombreux objets sans les supprimer, cela peut rapidement saturer la mémoire disponible, ce qui peut entraîner des ralentissements ou des crash de votre session R. En supprimant les objets inutiles à l'aide de la fonction `rm()`, vous libérez de l'espace mémoire pour d'autres tâches ou analyses. De plus, moins la mémoire est encombrée plus les performances seront rapides. Supprimons donc les deux objets issus de l'importation via `readr` et `data.table`.
 
-
 ```{r}
 # On libère de la mémoire
 rm(df_readr, df_datatable)
@@ -96,7 +92,6 @@ gc()
 ```
 
 On utilise également la fonction `gc()`, qui sert à déclencher la collecte des ordures (garbage collection) dans R. La collecte des ordures est un processus par lequel R identifie et libère la mémoire occupée par des objets qui ne sont plus référencés ni utilisés. Bien que R effectue généralement la collecte des ordures automatiquement, l'appel manuel à `gc()` peut être utile dans les situations où vous souhaitez vous assurer que la mémoire est correctement nettoyée, notamment après avoir supprimé de gros objets à l'aide de `rm()`.
-
 
 Analysons les différences de temps d'import du CSV entre les 3 méthodes.
 
@@ -118,11 +113,10 @@ performance |>
        y = "Temps d'import en secondes")+
   theme_light()
 ```
+
 A la vue des résultats, il est évident que les bibliothèques `data.table` et `arrow` se révèlent être des choix particulièrement adaptés pour l'importation de fichiers CSV de grande taille dans R. En effet, l'utilisation de `data.table` permet de diviser pratiquement par deux le temps nécessaire à l'importation, tandis que l'impact positif de la bibliothèque `arrow` sur les performances est encore plus spectaculaire.
 
-
 Comme nous l'avons mentionné précédemment, le format `.csv` n'est pas l'option idéale pour la manipulation de données massives. Par conséquent, il est fortement recommandé de travailler avec des données au format .parquet ou de les stocker dans une base de données, en fonction des besoins spécifiques de votre projet. Il convient de noter que, selon les cas d'utilisation, il peut être judicieux de travailler avec des fichiers parquet partitionnés plutôt qu'avec un seul gros fichier .parquet. Cette approche permet une gestion plus efficace des données massives tout en améliorant les performances de traitement.
-
 
 #### Stockage
 
@@ -210,7 +204,6 @@ gc()
 ### B - Comparaison des performances de requêtes
 
 Pour comparer différentes méthodes, nous allons exécuter une requête relativement simple, dont l'objectif est de déterminer le pourcentage de logements dits de "fortune" dans chaque commune de France. Dans notre jeu de données, les logements de fortune sont codés sur la variable `TYPL` avec la modalité 5. Nous allons également utiliser une table de correspondance des communes pour associer le nom de la commune à un code commune Insee, de sorte à rajouter une jointure à notre requête.
-
 
 #### 1) In-memory
 
@@ -344,7 +337,6 @@ DBI::dbListTables(con)
 
 Pour le moment, seule la table "dataset" est présente dans notre base de données. Nous devons ajouter notre table de correspondance des communes. Pour éviter de télécharger la base de données localement, nous la lisons directement depuis le cloud où elle est sauvegardée. Pour cela, nous avons besoin d'installer l'extension `httpfs` dans DuckDB.
 
-
 ```{r}
 DBI::dbSendQuery(con, "INSTALL httpfs;")
 ```
@@ -471,7 +463,6 @@ aws.s3::get_bucket("projet-formation", prefix = "diffusion/bceao", region = "")
 
 Nous pouvons constater que plusieurs fichiers sont présents dans le bucket, dont le dossier `data_partition` qui contient les fichiers Parquet partitionnés. Pour accéder au dossier directement sur le Cloud sans avoir à les importer localement, nous pouvons utiliser la même fonction `open_dataset()` que précédemment. Cependant, il est nécessaire de lui fournir le chemin vers notre bucket, de la même manière que l'on spécifie le chemin d'un fichier local.
 
-
 ```{r}
 bucket <- arrow::s3_bucket(
   "projet-formation/diffusion/bceao/data_partition",
@@ -484,7 +475,7 @@ data_cloud <- arrow::open_dataset(
 
 ```
 
-De manière tout à fait similaire, nous pouvons définir une requête, puis la calculer. (Il est important de noter que l'exécution de la requête peut prendre plus de temps, car les données sont lues directement depuis le cloud) C'EST VRAI CA OU PAS @ROMAIN??. Vous pouvez également observer l'évolution de l'utilisation de la RAM lors de l'exécution de la requête.
+De manière tout à fait similaire, nous pouvons définir une requête, puis la calculer. Il est important de noter que l'exécution de la requête peut prendre plus de temps, puisque les fichiers n'étant pas stockés localement il peut y avoir des flux réseaux intra-cluster. Vous pouvez également observer l'évolution de l'utilisation de la RAM lors de l'exécution de la requête.
 
 ```{r}
 query <- data_cloud |> 
