@@ -1,30 +1,226 @@
----
-title: Introduction sur la place et les enjeux liées au *big data* à l'Insee
-subtitle: |
-  **[BCEAO - Jour 1]{.orange}**
-author: "[Romain Avouac](https://github.com/avouacr), [Thomas Faria](https://github.com/ThomasFaria)"
-date: "09/25/2023"
-date-format: "D MMMM YYYY"
-slide-number: true
-lang: fr-FR
-# for blind readers:
-slide-tone: false
-chalkboard: # press the B key to toggle chalkboard
-  theme: whiteboard
-# uncomment to use the multiplex mode:
-# multiplex: true
-format:
-  onyxia-revealjs:
-    output-file: index.html
-controls: true
-css: ../custom.css
-from: markdown+emoji
-ascii: true
-execute: 
-  echo: false
-  warning: false
----
+# Introduction
 
-# Coucou
+## Qui sommes-nous ?
+
+- Thomas Faria
+  - SSP Lab : innovation en méthodologie statistique
+  - thomas.faria@insee.fr
+
+- Romain Avouac
+  - DIIT : innovation informatique
+  - romain.avouac@insee.fr
+
+## Contexte de cette formation
+
+- Coopération internationale
+- Discussion autour de la stratégie big data de l'Insee
+  - Retours d'expérience
+  - "learning by doing"
+- Partage de connaissances sur le long terme
+
+# Le potentiel des big data
+
+## Big data : de quoi parle-t-on ?
+
+- De "nouvelles" données
+  - enregistrements automatiques (GSM, géolocalisation, capteurs..)
+  - contenus internet (webscraping, réseaux sociaux..)
+  - images satellites
+  - etc.
+
+## Un phénomène pérenne
+
+- Croissance du numérique
+- Croissance des capacités techniques
+
+## Big data : une définition
+
+- [**Big data**]{.orange} : [*"Gestion et analyse d'un volume massif de données, souvent à une échelle bien supérieure à ce que les systèmes traditionnels peuvent traiter efficacement."*]{.blue2}
+
+- [**Les 3 V**]{.orange} qui caractérisent les big data :
+  - [**Volume**]{.orange} : quantités [**massives**]{.blue2} de données
+  - [**Vitesse**]{.orange} : [**haute fréquence**]{.blue2}, jusqu'au temps réel
+  - [**Variété**]{.orange} : [**diversité**]{.blue2} de [**sources**]{.blue2} et de [**formats**]{.blue2}
+
+## Pourquoi s'intéresser à ces données ?
+
+- [**Disponibilité**]{.orange} : réduction du coût et de la charge des enquêtes, des délais de publication (ex : nowcasting)
+
+- [**Finesse**]{.orange} : statistiques localisées, sur des sous-population, plus fréquentes...
+
+- [**Avancées méthodologiques**]{.orange} : convergence entre statistique et informatique (data science, machine learning)
+
+- [**Exhaustivité**]{.orange} : compléter des déclarations d'enquêtes, créer de nouveaux indicateurs...
+
+## Un retour de l'exhaustif ?
+
+- Pré-XXe siècle : règne quasi-exclusif de l'exhaustivité
+  - Recensements agricole, démographique, industriel
+
+- XXe siècle : lent recul de l’exhaustivité au profit de l'échantillonnage
+  - 1934 : article de référence sur la théorie des sondages (Neyman)
+  - Développement des panels, études d'opinion, grandes enquêtes
+
+- Fin XXe et début XXIe siècles : retour en grâce de l'exhaustif ?
+
+## Début des réflexions des INS européens
+
+- Mémorandum de Scheveningen (2013) : task force européenne sur le potentiel des big data
+
+- Groupe de travail de l'UNECE (2014-2015) : "sandbox" pour manipuler des données concrètes
+
+- ESSNET Big Data I (2016-2018) et II (2019-2021)
+  - Préparer l'intégration des big data à la production statistique officielle
+  - Projets pilotes sur une variété de sujets
+  - Nombreuses [ressources](https://cros-legacy.ec.europa.eu/content/essnet-big-data-1_en)
+
+## Début des expérimentations à l'Insee
+
+- 2015 : projet données de caisse 
+  - Groupe CNIS sur l'accès aux données privées
+
+- 2016 : poste de statisticien sur les big data
+
+- 2016 : début de l'exploitation des données mobiles
+  - Partenariat informel avec l'opérateur Orange
+  - Travaux méthodologiques
+
+- 2018 : labs et premiers développements d'une plateforme big data
 
 
+
+
+# De nouveaux (?) défis 
+
+## Des enjeux multiples
+
+- [**Démocratique**]{.orange}
+
+- [**Législatif**]{.orange}
+
+- [**Économique**]{.orange}
+
+- [**Méthodologique**]{.orange}
+
+- [**Technique**]{.orange}
+
+## Confiance
+
+- Des données généralement recueillies par des acteurs privés
+
+- Deux approches complémentaires
+  - Juridique : établir des garde-fous juridiques
+  - Technique : méthodes de confidentialité
+
+## Cadre législatif
+
+- Un cadre législatif largement existant
+  - Secret statistique (1951)
+  - Traitement des données personnelles et sensibles (1978) 
+  - Généralisation européenne : RGPD (2016) et directive e-privacy
+
+- De nécessaires adaptations
+  - La quantité et la variété des données facilite les ré-identifications
+  - Big data act (2021)
+
+## Confidentialité des données
+
+- Un arbitrage complexe à trouver
+  - Garantir le respect de la vie privée
+  - Conserver un maximum d'information statistique
+
+- Les possibilités d'identification croissent avec les volumes de données
+  - Evolution des techniques de confidentialité 
+
+## Techniques de confidentialité
+
+- Anonymisation
+  - De plus en plus complexe à assurer
+
+- Destruction
+  - Agrégation pour limiter la perte d'information
+
+- Obfuscation
+  - Potentiel des données synthétiques
+
+- Confidentialité différentielle
+  - Quantifier le risque d’une faille de confidentialité
+
+## Enjeux économiques
+
+- Les big data sont souvent collectées par des acteurs privés
+  - Volonté d'accès à des fins de statistique publique
+  - Respect du secret des affaires
+
+- Volonté des acteurs privés de valoriser ces données
+  - Exemple de FluxVision
+
+- Stratégie : nouer des partenariats "au cas par cas"
+  - Difficultés à pérenniser l'approvisionnement de données
+
+## Limites des modes de collecte
+
+- [**Processus de génération**]{.orange} des données non contrôlé
+
+- [**Représentativité**]{.orange} généralement limitée
+
+- Formats [**complexes**]{.orange} et souvent [**changeants**]{.orange}
+
+- Difficultés d'acheminement entre infrastructures
+  - Coûts de transfert
+
+## Enjeux techniques
+
+- Stockage adapté : les *data lakes*
+
+- Calcul distribué 
+  - Ressources
+
+- Services data science
+
+- Importance d'une "sandbox"
+
+## Enjeux méthodologiques
+
+- Traitement des données massives
+  - Algorithmes distribués
+  - Statistique en grande dimension
+
+- Traitement de formats non-structurés
+  - Traitement du langage naturel
+  - Analyse d'images
+
+- Méthodes de machine learning
+
+## L'importance de la formation
+
+- De statisticien à data scientist
+  - Formalisation des besoins métiers
+  - Veille méthodologique
+  - Acculturation aux techniques informatiques
+
+- De l'expérimentation à la mise en production
+  - Automatisation des traitements
+  - Bonnes pratiques de développement
+
+# Conclusion
+
+## Des innovations croisées
+
+- [**Techniques**]{.orange}
+
+- [**Méthodologiques**]{.orange}
+
+- [**Organisationnelles**]{.orange}
+
+## Une construction collective
+
+- Des sources et des sujets variés qui impliquent de nombreuses dimensions (juridique, technique, méthodologique, organisationnelle, ...)
+
+- Le statisticien public ne peut incarner tous ces aspects
+
+- Développer des synergies entre toutes les parties prenantes (directions métiers, informatique, partenaires, ...)
+
+## Plan de la formation
+
+- Calendrier prévisionnel
