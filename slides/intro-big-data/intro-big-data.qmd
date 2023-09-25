@@ -39,7 +39,7 @@ execute:
 
 ## Contexte de cette formation
 
-- Coopération internationale
+- [**Coopération internationale**]{.orange}
 
 - Discussion autour de la [**stratégie big data**]{.orange} de l'Insee
   - [**Retours d'expérience**]{.blue2}
@@ -206,7 +206,7 @@ execute:
 
 - Stockage adapté : les [***data lakes***]{.orange}
 
-- Calcul distribué[***data lakes***]{.orange}
+- [***Calcul distribué***]{.orange}
   - Ressources computationnelles
 
 - [**Services data science**]{.orange}
