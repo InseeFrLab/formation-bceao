@@ -620,7 +620,7 @@
     "href": "slides/intro-big-data/index.html#enjeux-techniques",
     "title": "Place et enjeux liés au big data à l’Insee",
     "section": "Enjeux techniques",
-    "text": "Enjeux techniques\n\nStockage adapté : les data lakes\nCalcul distribuédata lakes\n\nRessources computationnelles\n\nServices data science\n\nRendre accessible les ressources\n\nImportance d’une “sandbox”"
+    "text": "Enjeux techniques\n\nStockage adapté : les data lakes\nCalcul distribué\n\nRessources computationnelles\n\nServices data science\n\nRendre accessible les ressources\n\nImportance d’une “sandbox”"
   },
   {
     "objectID": "slides/intro-big-data/index.html#enjeux-méthodologiques",
