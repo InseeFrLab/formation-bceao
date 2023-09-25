@@ -234,13 +234,47 @@ Plusieurs caps identifiés :
 
 # E. Données carte bancaire
 
+## Descriptions des données
+
 - Données [Carte bancaire CB](https://www.cartes-bancaires.com/) recouvrent [**82% des opérations**]{.orange}
 - [**Données agrégées**]{.orange} par jour, type de paiement ou département
-- Plusieurs exploitations réalisées : 
-  - [**conjoncture agrégée**]{.blue2} (consommation des ménages)
-  - [**conjoncture désagrégée**]{.blue2} (consommation par secteurs)
-  - [**comportements des consommateurs**]{.blue2} liés à des chocs (confinement)
-  - [**production statistique**]{.blue2} (réduction de la volatilité des estimations)
+- [**2 types**]{.orange} de données :
+  - [**Interbancaire**]{.blue2} : J+10, quotidienne, non exhaustive
+  - [**Mensuelles**]{.blue2} : M+20, mensuelle, exhaustive
+
+## Conjoncture agrégée : consommation des ménages
+
+![Montant total de transactions par carte bancaire CB pendant les trois mois entièrement confinés (en écart au mois comparable de 2019) et consommation des ménages (en écart au T4 2019](img/cb-conso-menage.png)
+
+
+## Conjoncture désagrégée : consommation par secteurs
+
+![Glissement à 2019 des montants mensuels de transactions par carte bancaire relatives aux dépenses d’hébergement](img/cb-conso-secteur.png)
+
+
+## Production statistique
+
+- [**Indicateur de CA**]{.orange} :
+  - [**Standard**]{.blue2} : remontées mensuelles TVA
+  - [**Précode**]{.blue2} : Estimations à partir d'enquêtes
+
+- Les données CB :
+  - ➡️ limite la [**volatilité**]{.blue2} des estimations dans certaines composantes (commerce de carburants, commerce non alimentaire)
+
+## Limites des données bancaires
+
+- Évolution [**tendancielle**]{.orange}
+- [**Réglementation**]{.orange} changeante (sans contact)
+- [**Aggrégation**]{.orange} par nomenclature MCC ($\neq$ NAF, COICOP...)
+- Données [**domestiques**]{.orange}
+
+## Conclusion
+
+- Source [**précieuse**]{.orange}
+- [**Mise en production**]{.orange} pas si évidente :
+  - Non conçues pour la statistique publique
+  - Fournies par une entité privée, pérénité ?
+- [**Travaux en cours**]{.orange} pour optimiser l'utilisation
 
 <!-- http://jms-insee.fr/jms2022s04_3/ -->
 
