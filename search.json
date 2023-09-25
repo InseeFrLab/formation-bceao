@@ -536,14 +536,14 @@
     "href": "slides/intro-big-data/index.html#un-phénomène-pérenne",
     "title": "Place et enjeux liés au big data à l’Insee",
     "section": "Un phénomène pérenne",
-    "text": "Un phénomène pérenne\n\nUn phénomène en expansion constante\n\nPart du numérique\nCapacités techniques"
+    "text": "Un phénomène pérenne\n\nUn phénomène en expansion constante\n\nPart du secteur numérique\nCapacités techniques"
   },
   {
     "objectID": "slides/intro-big-data/index.html#pourquoi-sintéresser-à-ces-données",
     "href": "slides/intro-big-data/index.html#pourquoi-sintéresser-à-ces-données",
     "title": "Place et enjeux liés au big data à l’Insee",
     "section": "Pourquoi s’intéresser à ces données ?",
-    "text": "Pourquoi s’intéresser à ces données ?\n\nDisponibilité : réduction du coût et de la charge des enquêtes, des délais de publication (ex : nowcasting)\nFinesse : statistiques localisées, sur des sous-population, plus fréquentes…\nAvancées méthodologiques : convergence entre statistique et informatique (data science, machine learning)\nExhaustivité : compléter des déclarations d’enquêtes, créer de nouveaux indicateurs…"
+    "text": "Pourquoi s’intéresser à ces données ?\n\nDisponibilité : réduction du coût et de la charge des enquêtes, des délais de publication (ex : nowcasting)\nFinesse : statistiques localisées, sur des sous-population, plus fréquentes…\nAvancées méthodologiques : convergence entre statistique et informatique (machine learning)\nExhaustivité : compléter des déclarations d’enquêtes, créer de nouveaux indicateurs…"
   },
   {
     "objectID": "slides/intro-big-data/index.html#un-retour-de-lexhaustif",
@@ -585,7 +585,7 @@
     "href": "slides/intro-big-data/index.html#cadre-législatif",
     "title": "Place et enjeux liés au big data à l’Insee",
     "section": "Cadre législatif",
-    "text": "Cadre législatif\n\nUn cadre législatif largement existant\n\nSecret statistique (1951)\nTraitement des données personnelles et sensibles (1978)\nGénéralisation européenne : RGPD (2016) et directive e-privacy\n\nDe nécessaires adaptations\n\nLa quantité et la variété des données facilite les ré-identifications\nBig data act (2021)"
+    "text": "Cadre législatif\n\nUn cadre législatif largement existant\n\nSecret statistique (1951)\nTraitement des données personnelles et sensibles (1978)\nGénéralisation européenne : RGPD (2016) et directive e-privacy\n\nDe nécessaires adaptations\n\nLa quantité et la variété des données facilite les ré-identifications\nData act (2021)"
   },
   {
     "objectID": "slides/intro-big-data/index.html#confidentialité-des-données",
