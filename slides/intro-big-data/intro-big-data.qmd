@@ -241,11 +241,15 @@ execute:
 
 ## Des innovations croisées
 
+- [**Organisationnelles**]{.orange}
+  - Structure en [**labs**]{.blue2}
+  - Investissement dans la [**formation**]{.blue2}
+
 - [**Techniques**]{.orange}
+  - Mettre à disposition une [**"sandbox"**]{.blue2}
 
 - [**Méthodologiques**]{.orange}
-
-- [**Organisationnelles**]{.orange}
+  - [**Expérimentation**]{.blue2} : nouvelles sources, méthodes
 
 ## Une construction collective
 
