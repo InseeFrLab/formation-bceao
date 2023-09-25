@@ -127,7 +127,7 @@ Comme nous l'avons mentionné précédemment, le format `.csv` n'est pas l'optio
 arrow::write_parquet(df_arrow, "data/data_recensement_2017.parquet")
 ```
 
-On peut également créer le un dossier `data/data_partition` dans lequel sont enregistrés nos fichiers parquet partitionnés par région.
+On peut également choisir de partitionner notre fichier parquet, par exemple par région. On exporte le fichier partionné dans un dossier `data/data_partition`.
 
 ```{r}
 # Ecriture d'un dossier contenant des fichiers parquet partitionnés par la région
@@ -143,7 +143,7 @@ Prenez le temps d'examiner la manière dont les fichiers parquet sont sauvegard�
 fs::dir_tree("data/data_partition")
 ```
 
-Une autre méthode efficace pour stocker nos données consiste à les intégrer dans une base de données DuckDB, ce qui nous permettra ensuite d'effectuer plusieurs requêtes. Bien que DuckDB ne puisse pas encore ouvrir des fichiers multi-niveau créés par partition, il offre la possibilité de lire directement des fichiers CSV ou Parquet. Cependant, il est important de noter que, comme toute base de données, le format `.duckdb` peut contenir plusieurs tables et exécuter toutes les opérations standards de gestion de base de données.
+Une autre méthode efficace pour stocker nos données consiste à les intégrer dans une base de données DuckDB, ce qui nous permettra ensuite d'effectuer des requêtes SQL. Bien que DuckDB ne puisse pas encore ouvrir des fichiers multi-niveau créés par partition, il offre la possibilité de lire directement des fichiers CSV ou Parquet. Cependant, il est important de noter que, comme toute base de données, le format `.duckdb` peut contenir plusieurs tables et exécuter toutes les opérations standards de gestion de base de données.
 
 Pour créer une database depuis R, il suffit d'utiliser la fonction `duckdb()` en spécifiant le chemin où vous souhaitez l'enregistrer.
 
@@ -451,7 +451,7 @@ performance |>
 
 ## II - Manipulation de données sur le Cloud
 
-Le Cloud offre de nombreux avantages, notamment la possibilité de manipuler des données sans avoir à les stocker localement, ainsi qu'une puissance de calcul accrue.
+Le Cloud offre de nombreux avantages, notamment la possibilité de manipuler des données sans avoir à les stocker localement, ainsi qu'une puissance de calcul accrue. Sur le SSP Cloud, les données sont stockées sur MinIO, une implémentation open-source du stockage objet de type S3.
 
 ### A - Arrow
 
@@ -497,6 +497,70 @@ query <- data_cloud |>
 query |> collect()
 ```
 
-C'est plus long à run, mais c'est normal ? comment expliquer ? flux intra cluster ? @romain
-
 ### B - Spark
+
+Nous allons comme auparavant créer un SparkContext sur un notebook R. Ensuite ce programme "driver" se connectera à un cluster manager de type Kubernetes pour pouvoir lancer des workers. Le schéma traditionnel pour comprendre l'architecture est le suivant :
+
+![](img/spark-on-kube.png){fig-align="center"}
+
+Onyxia injecte une configuration par défaut pour votre configuration Spark. Tous ces éléments sont ceux qu'Onyxia injecte à votre place. Vous pouvez les surcharger au runtime.
+
+```{r}
+system("cat /opt/spark/conf/spark-defaults.conf")
+```
+
+```{r}
+library(sparklyr)
+```
+
+```{r}
+conf <- spark_config()
+conf$sparklyr.defaultPackages <- "org.apache.hadoop:hadoop-aws:3.3.6"
+sc <- spark_connect(master = "k8s://https://kubernetes.default.svc:443", 
+                    config = conf)
+```
+
+```{bash , echo=TRUE}
+kubectl get pods -l spark-role=executor
+```
+
+```{r}
+data_spark <- spark_read_parquet(sc,
+                                 path = "s3a://projet-formation/diffusion/bceao/data_partition",
+                                 infer_schema = TRUE,
+                                 memory = FALSE
+)
+```
+
+```{r}
+table_communes_spark <- spark_read_parquet(sc,
+                                 path = "s3a://projet-formation/diffusion/bceao/table_communes.parquet",
+                                 infer_schema = TRUE,
+                                 memory = FALSE
+)
+```
+
+```{r}
+query <- data_spark |> 
+  select(REGION, COMMUNE, TYPL) |> 
+  mutate(is_logement_fortune = ifelse(TYPL == "5", 1, 0)) |>
+  group_by(COMMUNE) |>
+  summarise(
+    nb_logements_fortune = sum(is_logement_fortune),
+    nb_logements_commune = n()
+  ) |>
+  mutate(
+    part_logements_fortune = nb_logements_fortune / nb_logements_commune
+  ) |> 
+  left_join(table_communes_spark, by=c("COMMUNE"="Code INSEE")) |>
+  select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune) |>
+  arrange(-part_logements_fortune)
+```
+
+```{r}
+data_final <- collect(query)
+```
+
+```{bash , echo=TRUE}
+kubectl get pods -l spark-role=executor
+```

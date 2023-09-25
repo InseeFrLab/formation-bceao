@@ -10,7 +10,7 @@ mc cp s3/projet-formation/diffusion/bceao/data_recensement_2017.csv $FORMATION_D
 chown -R onyxia:users $FORMATION_DIR
 
 # Install dependencies
-# Rscript -e "remotes::install_deps(pkgdir = '${TUTO_DIR}', dependencies = TRUE, upgrade = FALSE)"
+install2.r here
 
 # Open the project
 echo \
