@@ -679,48 +679,6 @@
     "text": "Plan de la formation\n\n\nVendredi 29 septembre 2023\n\n\n\n\n\n\nHoraires\nActivités\n\n\n\n\n8 h 30 - 10 h 00\nAspects juridiques et réglementaires du big data : un retour d’expérience\n\n\n10 h 00 - 10 h 15\nPause-café\n\n\n10 h 15 - 12 h 00\nRetour sur la formation et échange sur la stratégie big data de la BCEAO\n\n\n12 h 00 - 13 h 00\nCérémonie de clôture de l’atelier par le Directeur des Statistiques"
   },
   {
-    "objectID": "slides/new-sources-donnees/index.html#big-data-késako",
-    "href": "slides/new-sources-donnees/index.html#big-data-késako",
-    "title": "Présentation des sources big data à l’Insee",
-    "section": "Big Data, késako ?",
-    "text": "Big Data, késako ?\n\nBig Data : “Gestion et analyse d’un volume massif de données, souvent à une échelle bien supérieure à ce que les systèmes traditionnels peuvent traiter efficacement.”\nLes 3 V qui caractérise le Big Data :\n\nVolume : le Big Data se réfère à des quantités énormes de données générées en continu (\\(\\geq 10^{12} bits\\))\nVitesse : vitesse à laquelle les données sont générées, collectées et traitées\nVariété : le Big Data est généralement caractérisé par une diversité de sources et de formats de données"
-  },
-  {
-    "objectID": "slides/new-sources-donnees/index.html#big-data-késako-1",
-    "href": "slides/new-sources-donnees/index.html#big-data-késako-1",
-    "title": "Présentation des sources big data à l’Insee",
-    "section": "Big Data, késako ?",
-    "text": "Big Data, késako ?\n\n2 autres V caractéristiques du Big Data :\n\nVéracité : cela concerne la qualité, la fiabilité et l’authenticité des données\nValeur : quelle valeur peut-elle être créer de l’analyse de ces données ?"
-  },
-  {
-    "objectID": "slides/new-sources-donnees/index.html#le-big-data-au-service-de-la-statistique-publique",
-    "href": "slides/new-sources-donnees/index.html#le-big-data-au-service-de-la-statistique-publique",
-    "title": "Présentation des sources big data à l’Insee",
-    "section": "Le Big Data au service de la Statistique Publique",
-    "text": "Le Big Data au service de la Statistique Publique\n\nPourquoi s’intéresser au Big Data dans la statistique publique ?\nPlusieurs bénéfices peuvent en être retirer en matière d’efficience économique, de qualité statistique, de méthodologie statistique ou encore d’exhaustivité"
-  },
-  {
-    "objectID": "slides/new-sources-donnees/index.html#le-big-data-au-service-de-la-statistique-publique-1",
-    "href": "slides/new-sources-donnees/index.html#le-big-data-au-service-de-la-statistique-publique-1",
-    "title": "Présentation des sources big data à l’Insee",
-    "section": "Le Big Data au service de la Statistique Publique",
-    "text": "Le Big Data au service de la Statistique Publique\n\nEfficience économique : Accès plus rapide à la données, réduction du coût des enquêtes…\nQualité statistique : Données plus localisées, plus précises sur des sous-population, plus fréquentes…\nMéthodologie statistique : Applications de nouvelles méthodes statistiques performantes sur des données massives (ML, deeplearning)…\nExhaustivité : Données pouvant compléter des déclarations d’enquêtes, créer de nouveaux indicateurs…"
-  },
-  {
-    "objectID": "slides/new-sources-donnees/index.html#des-données-très-différentes-des-statistiques-publiques-usuelles",
-    "href": "slides/new-sources-donnees/index.html#des-données-très-différentes-des-statistiques-publiques-usuelles",
-    "title": "Présentation des sources big data à l’Insee",
-    "section": "Des données très différentes des statistiques publiques usuelles",
-    "text": "Des données très différentes des statistiques publiques usuelles\n\nProcessus de génération des données non contrôlé\nProblème de représentativité des différentes sous population\nFormats généralement complexes et souvent changeants ou non pérennes\nPertinence et complétude parfois douteuses\n\n\n\n\n\n\n\nDifférence centrale\n\n\nLes données massives ne sont ni collectées ni conceptualisées à des fins de statistiques publiques !"
-  },
-  {
-    "objectID": "slides/new-sources-donnees/index.html#innovations-nécessaires-pour-traiter-ces-données",
-    "href": "slides/new-sources-donnees/index.html#innovations-nécessaires-pour-traiter-ces-données",
-    "title": "Présentation des sources big data à l’Insee",
-    "section": "Innovations nécessaires pour traiter ces données",
-    "text": "Innovations nécessaires pour traiter ces données\n\nTechniques : nouveaux langages de programmation, nouvelles infrastructures informatiques\nMéthodologiques : économétrie en grande dimension, analyse de données textuelles, analyse d’images\nOrganisationnelles : partenariats avec de nouveaux acteurs privés ou publics pour le partage de données"
-  },
-  {
     "objectID": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes",
     "href": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes",
     "title": "Présentation des sources big data à l’Insee",
@@ -746,7 +704,7 @@
     "href": "slides/new-sources-donnees/index.html#les-sources-administratives",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Les sources administratives",
-    "text": "Les sources administratives\n\nInformations collectées via les registres administratifs ou comptables\nDe plus en plus utilisées par les agences de statistiques publiques\nLeurs volumes, leurs vitesses et leurs véracité peuvent souvent être caractéristique de Big Data\nExemples : la déclaration sociale nominative (DSN), le Système National des Données de Santé (SNDS)…"
+    "text": "Les sources administratives\n\nInformations collectées via les registres administratifs ou comptables\nDe plus en plus utilisées par les agences de statistiques publiques\nLeurs volumes, leurs vélocités sont souvent caractéristiques de Big Data\nExemples : la déclaration sociale nominative (DSN), le Système National des Données de Santé (SNDS)…"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#la-déclaration-sociale-nominative-dsn",
@@ -788,14 +746,14 @@
     "href": "slides/new-sources-donnees/index.html#les-données-émergentes",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Les données émergentes",
-    "text": "Les données émergentes\n\nEnsemble de données non traditionnelles à la statistique publique\nComplètent, enrichissent ou renouvèlent les statistiques publiques\nDe + en + de données privées  l’État ne détient plus le monopole de la production de la données"
+    "text": "Les données émergentes\n\nEnsemble de données non traditionnelles à la statistique publique\nComplètent, enrichissent ou renouvèlent les statistiques publiques\nDe + en + de données privées ➡️ l’État ne détient plus le monopole de la production de la données"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#les-données-émergentes-1",
     "href": "slides/new-sources-donnees/index.html#les-données-émergentes-1",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Les données émergentes",
-    "text": "Les données émergentes\n\nExemples :\n\nDonnées transactionnelles ou comportementales : transactions CB, téléphonie mobile, données de géolocalisation…\nDonnées issues d’internet (webscrapping) : offres d’emploi, google trends…\nImages satellites\n\n\n\n\n\n\n\n\nNote\n\n\nDonnées émergentes  plus souvent les caractéristiques Big Data"
+    "text": "Les données émergentes\n\nExemples :\n\nDonnées transactionnelles ou comportementales : transactions CB, téléphonie mobile, données de géolocalisation…\nDonnées issues d’internet (webscrapping) : offres d’emploi, google trends…\nImages satellites\n\n\n\n\n\n\n\n\nNote\n\n\nDonnées émergentes ➡️ souvent caractéristiques du Big Data"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#les-données-émergentes-à-linsee",
@@ -837,14 +795,14 @@
     "href": "slides/new-sources-donnees/index.html#a-quoi-ressemblent-les-données",
     "title": "Présentation des sources big data à l’Insee",
     "section": "A quoi ressemblent les données ?",
-    "text": "A quoi ressemblent les données ?\n\nCollectée en continu et centralisées selon un pas journalier\nQuantités vendues et prix du produit pour chaque code barre enregistré\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nID Point de vente\nDate\nHeure\nProduit\nEAN\nPrix unitaire (€)\nQuantité\nTotal (€)\n\n\n\n\n123\n2023-08-01\n10:15\nPommes\n1234567890123\n1.50\n3\n4.50\n\n\n123\n2023-08-01\n11:30\nBacon (150G)\n2345678901234\n2.00\n2\n4.00\n\n\n234\n2023-08-01\n13:45\nYaourt nature\n3456789012345\n1.25\n5\n6.25\n\n\n345\n2023-08-02\n09:20\nFeuilles A4\n4567890123456\n0.75\n2\n1.50\n\n\n456\n2023-08-02\n12:00\nJus d’orange\n5678901234567\n3.50\n1\n3.50\n\n\n234\n2023-08-02\n15:30\nChips au maïs\n6789012345678\n1.00\n3\n3.00\n\n\n123\n2023-08-03\n11:10\nCrayon de couleur\n7890123456789\n1.50\n1\n1.50\n\n\n345\n2023-08-03\n14:20\nSoda cola (1.5L)\n8901234567890\n2.00\n3\n6.00\n\n\n456\n2023-08-03\n16:45\nPâtes fusilli\n9012345678901\n0.90\n4\n3.60"
+    "text": "A quoi ressemblent les données ?\n\nCollectée en continu et centralisées selon un pas journalier\nQuantités vendues et prix du produit pour chaque code barre enregistré\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nID Point de vente\nDate\nHeure\nProduit\nEAN\nPrix unitaire (€)\nQuantité\nTotal (€)\n\n\n\n\n123\n2023-08-01\n10:15\nPommes\n1234567890123\n1.50\n3\n4.50\n\n\n123\n2023-08-01\n11:30\nBacon (150G)\n2345678901234\n2.00\n2\n4.00\n\n\n234\n2023-08-01\n13:45\nYaourt nature\n3456789012345\n1.25\n5\n6.25\n\n\n345\n2023-08-02\n09:20\nFeuilles A4\n4567890123456\n0.75\n2\n1.50\n\n\n456\n2023-08-02\n12:00\nJus d’orange\n5678901234567\n3.50\n1\n3.50\n\n\n234\n2023-08-02\n15:30\nChips au maïs\n6789012345678\n1.00\n3\n3.00"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#des-statistiques-plus-précises-et-plus-détaillées",
     "href": "slides/new-sources-donnees/index.html#des-statistiques-plus-précises-et-plus-détaillées",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Des statistiques plus précises et plus détaillées",
-    "text": "Des statistiques plus précises et plus détaillées\n\nDisponibilité journalière très utile : contrainte de publications de l’IPC\nProduction d’indices sur des segments de consommation très spécifique\nEchantillons sur des espaces géographiques très fins : vers des indices régionaux\nIdentification les effets de substitution\nProduction d’indices de prix plus proches du ressenti des ménages\nUne réduction des coûts importante pour l’Insee !"
+    "text": "Des statistiques plus précises et plus détaillées\n\nDisponibilité journalière très utile : contrainte de publications de l’IPC\nProduction d’indices sur des segments de consommation très spécifiques\nÉchantillons sur des espaces géographiques très fins ➡️ vers des indices régionaux\nIdentification des effets de substitution\nProduction d’indices de prix plus proches du ressenti des ménages\n💲 Une réduction des coûts importante pour l’Insee !"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#un-long-chemin-pour-accéder-aux-données-de-caisse",
@@ -858,7 +816,7 @@
     "href": "slides/new-sources-donnees/index.html#retour-dexpérience",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Retour d’expérience",
-    "text": "Retour d’expérience\n\nSources parmi les plus prometteuses car substituables \nNouveaux partenariats noués pour assurer la pérénité\nDonnées de caisse : 2 V (Vélocité, Volume) sur 3\nDes contraintes fortes :\n\nAccès long et difficile aux données\nNouvelle architecture informatique indispensable\nAutomatisation des processus statistiques nécessaire (la classification, l’identification des relances, le remplacement des produits)"
+    "text": "Retour d’expérience\n\nSources parmi les plus prometteuses car substituables \nNouveaux partenariats noués pour assurer la pérénité\nDonnées de caisse : 2 V (Vélocité, Volume)\nDes contraintes fortes :\n\nAccès long et difficile aux données\nNouvelle architecture informatique indispensable\nAutomatisation des processus statistiques nécessaire (la classification, l’identification des relances, le remplacement des produits)"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#contexte-1",
@@ -896,11 +854,11 @@
     "text": "D’autres expérimentations\n\nIndice des prix des articles électroniques : webscrapping de Boulanger et rue du commerce\n\nCode open-source\n\nIndice des prix du transport en train : webscrapping de la SNCF\n\nPris en compte dans l’indice de l’IPC depuis 2020"
   },
   {
-    "objectID": "slides/new-sources-donnees/index.html#quelques-limites-au-webscrapping",
-    "href": "slides/new-sources-donnees/index.html#quelques-limites-au-webscrapping",
+    "objectID": "slides/new-sources-donnees/index.html#limites-du-webscrapping",
+    "href": "slides/new-sources-donnees/index.html#limites-du-webscrapping",
     "title": "Présentation des sources big data à l’Insee",
-    "section": "Quelques limites au webscrapping",
-    "text": "Quelques limites au webscrapping\n\nDépendance au site internet\n\nDes interruptions de collecte dûes à des changements des sites web\nMaintenance des codes coûteux\n\nFondements juridiques importants :\n\nVoir slides du jour 4"
+    "section": "Limites du webscrapping",
+    "text": "Limites du webscrapping\n\nDépendance au site internet\n\nDes interruptions de collecte dûes à des changements des sites web\nMaintenance des codes coûteux\n\nFondements juridiques importants"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#contexte-2",
@@ -942,14 +900,14 @@
     "href": "slides/new-sources-donnees/index.html#pourquoi-estimer-la-répartition-de-la-population",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Pourquoi estimer la répartition de la population ?",
-    "text": "Pourquoi estimer la répartition de la population ?\n\nRépondre au besoin des acteurs publics locaux : avis du Cnis sur les statistiques de population présente et non plus résidente\nUn champ de recherche prometteur : utilité pour la statistique publique reconnue par le SSE\nNouveaux partenariats créés : Orange, ANR, Eurostat, l’université Gustave Eiffel (Ifsttar), l’UMR Géographie-Cités du CNRS…\nLe contexte d’urgence : production de statistiques très rapide (8 avril pour un confinement le 17 mars)"
+    "text": "Pourquoi estimer la répartition de la population ?\n\nRépondre au besoin des acteurs publics locaux : avis du Cnis sur les statistiques de population présente et non plus résidente\nUn champ de recherche prometteur : utilité pour la statistique publique reconnue par le SSE\nNouveaux partenariats créés\nLe contexte d’urgence : production de statistiques très rapide (8 avril pour un confinement le 17 mars)"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#les-données-utilisées",
     "href": "slides/new-sources-donnees/index.html#les-données-utilisées",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Les données utilisées",
-    "text": "Les données utilisées\n\nDonnées fournies par un unique opérateur : Orange\n\nDonnées massives (&gt; 1To par jour)\n\nComptages de présence dans chaque département croisés avec le département de résidence\nLocalisation à partir des antennes auxquelles un mobile se connecte\n\n\n\n\n\n\n\nImportant\n\n\nLes données utilisées par l’Insee ne sont ni des données GPS ni des données provenant d’applications installées sur les mobiles. Elles ne permettent pas de suivre le déplacement des personnes, mais seulement d’effectuer des comptages par zones à différentes dates."
+    "text": "Les données utilisées\n\nDonnées fournies par un unique opérateur : Orange\n\nDonnées massives (&gt; 1To par jour)\n\nComptages de présence dans chaque département croisés avec le département de résidence\nLocalisation à partir des antennes auxquelles un mobile se connecte\n\n\n\n\n\n\n\nImportant\n\n\nLes données utilisées permettent seulement d’effectuer des comptages par zones à différentes dates."
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#résultat",
@@ -963,14 +921,14 @@
     "href": "slides/new-sources-donnees/index.html#confidentialité",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Confidentialité",
-    "text": "Confidentialité\n\nAucune information directement identifiante présente dans les données\nMéthodologie de l’opérateur connue et validée par l’Insee :\n\nEchanges confidentiels et transparents\nL’Insee s’assure de la validité du secret statistique"
+    "text": "Confidentialité\n\nAucune information directement identifiante présente dans les données\nMéthodologie de l’opérateur connue et validée par l’Insee :\n\nÉchanges confidentiels et transparents\nL’Insee s’assure de la validité du secret statistique"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#et-maintenant",
     "href": "slides/new-sources-donnees/index.html#et-maintenant",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Et maintenant ?",
-    "text": "Et maintenant ?\nPlusieurs caps identifiés :\n\nIndépendance vis-à-vis des opérateurs : biais statistique ?\nCadre européen sur l’exploitation des données mobiles :\n\nla qualité des statistiques publiées\nrespect de la vie privée des détenteurs de mobiles\n\nApprofondir la méthodologie : projet Mobitic\nProduction de nouvelles statistiques (déplacements domicile-travail, accroissement du télétravail…)\n\n\n\n\n\n\n\nNote\n\n\nD’autres études ont été menées à l’Insee utilisant les données de téléphonie mobile, pour analyser la ségrégation urbaine notamment (voir Galiana et al.)."
+    "text": "Et maintenant ?\nPlusieurs caps identifiés :\n\nIndépendance vis-à-vis des opérateurs : biais statistique ?\nCadre européen sur l’exploitation des données mobiles :\n\nla qualité des statistiques publiées\nrespect de la vie privée des détenteurs de mobiles\n\nApprofondir la méthodologie : projet Mobitic\nProduction de nouvelles statistiques (déplacements domicile-travail, accroissement du télétravail…)"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#améliorer-le-recensement-à-laide-de-images-satellites",
@@ -978,20 +936,6 @@
     "title": "Présentation des sources big data à l’Insee",
     "section": "Améliorer le recensement à l’aide de images satellites",
     "text": "Améliorer le recensement à l’aide de images satellites\n\nUtilisation d’images satellites (Pleiades, Sentinel)\nDétecter les apparitions/disparitions d’habitations\nMéthodes de deep-learning :\n\nSegmentation d’image\nDétection de changements\nDétection d’objets"
-  },
-  {
-    "objectID": "slides/new-sources-donnees/index.html#données-carte-bancaire",
-    "href": "slides/new-sources-donnees/index.html#données-carte-bancaire",
-    "title": "Présentation des sources big data à l’Insee",
-    "section": "Données carte bancaire",
-    "text": "Données carte bancaire\n\nDonnées Carte bancaire CB recouvrent 82% des opérations\nDonnées agrégées par jour, type de paiement ou département\nPlusieurs exploitations réalisées :\n\nconjoncture agrégée (consommation des ménages)\nconjoncture désagrégée (consommation par secteurs)\ncomportements des consommateurs liés à des chocs (confinement)\nproduction statistique (réduction de la volatilité des estimations)"
-  },
-  {
-    "objectID": "slides/new-sources-donnees/index.html#fidélimmo-prédire-le-patrimoine-immobilier-des-ménages",
-    "href": "slides/new-sources-donnees/index.html#fidélimmo-prédire-le-patrimoine-immobilier-des-ménages",
-    "title": "Présentation des sources big data à l’Insee",
-    "section": "Fidélimmo : prédire le patrimoine immobilier des ménages",
-    "text": "Fidélimmo : prédire le patrimoine immobilier des ménages\n\nXGboost"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#indice-de-prix-des-loyers-grâce-aux-site-dannonces",
