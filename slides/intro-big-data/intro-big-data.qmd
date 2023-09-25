@@ -253,11 +253,11 @@ execute:
 
 ## Une construction collective
 
-- Des sources et des sujets variés qui impliquent de [**nombreuses dimensions**]{.orange} (juridique, technique, méthodologique, organisationnelle, ...)
+- Des changements qui impliquent de [**nombreuses dimensions**]{.orange} (juridique, technique, méthodologique, organisationnelle, ...)
 
 - Le [**statisticien public**]{.orange} ne peut incarner tous ces aspects
 
-- Développer des [**synergies**]{.orange} entre toutes les parties prenantes (directions métiers, informatique, partenaires, ...)
+- Développer des [**synergies**]{.orange} entre toutes les parties prenantes (métiers, informatique, partenaires, ...)
 
 ## Plan de la formation{.scrollable}
 
