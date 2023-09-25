@@ -45,25 +45,17 @@ execute:
   - [**Retours d'expérience**]{.blue2}
   - [**"learning by doing"**]{.blue2}
 
-- Partage de connaissances sur le long terme
+- [**Partage de connaissances**]{.orange} sur le long terme
 
 # Le potentiel des big data
 
 ## Big data : de quoi parle-t-on ?
 
-- Des données "nouvelles" aux [**contours flous**]{.orange}
+- Des données [**"nouvelles"**]{.orange} aux [**contours flous**]{.orange}
   - enregistrements automatiques (GSM, géolocalisation, capteurs..)
   - contenus internet (webscraping, réseaux sociaux..)
   - images satellites
   - etc.
-
-## Un phénomène pérenne
-
-- Un phénomène en [**expansion constante**]{.orange}
-  - Part du numérique 
-  - Capacités techniques
-
-![](img/growth.png){height="400" fig-align="center"}
 
 ## Big data : une définition
 
@@ -73,6 +65,14 @@ execute:
   - [**Volume**]{.orange} : quantités [**massives**]{.blue2} de données
   - [**Vitesse**]{.orange} : [**haute fréquence**]{.blue2}, jusqu'au temps réel
   - [**Variété**]{.orange} : [**diversité**]{.blue2} de [**sources**]{.blue2} et de [**formats**]{.blue2}
+
+## Un phénomène pérenne
+
+- Un phénomène en [**expansion constante**]{.orange}
+  - Part du numérique 
+  - Capacités techniques
+
+![](img/growth.png){height="400" fig-align="center"}
 
 ## Pourquoi s'intéresser à ces données ?
 
