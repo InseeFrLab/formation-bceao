@@ -204,13 +204,13 @@ execute:
 
 ## Enjeux techniques
 
-- Stockage adapté : les [***data lakes***]{.orange}
+- Infrastructures de [**stockage**]{.orange} : les [***data lakes***]{.blue2}
 
-- [***Calcul distribué***]{.orange}
-  - Ressources computationnelles
+- [**Calcul distribué**]{.orange}
+  - [**Ressources computationnelles**]{.blue2}
 
-- [**Services data science**]{.orange}
-  - Rendre accessible les ressources
+- [**Services de data science**]{.orange}
+  - Rendre [**accessibles**]{.blue2} les ressources
 
 - Importance d'une [**"sandbox"**]{.orange}
 
