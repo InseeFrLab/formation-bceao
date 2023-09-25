@@ -217,12 +217,12 @@ execute:
 ## Enjeux méthodologiques
 
 - Traitement des [**données massives**]{.orange}
-  - Algorithmes distribués
-  - Statistique en grande dimension
+  - Algorithmes [**distribués**]{.blue2}
+  - Statistique en [**grande dimension**]{.blue2}
 
 - Traitement de [**formats non-structurés**]{.orange}
-  - Traitement du langage naturel
-  - Analyse d'images
+  - Traitement du [**langage naturel**]{.blue2}
+  - [**Analyse d'images**]{.blue2}
 
 - Méthodes de [**machine learning**]{.orange}
 
