@@ -52,9 +52,9 @@ execute:
 ## Big data : de quoi parle-t-on ?
 
 - Des données [**"nouvelles"**]{.orange} aux [**contours flous**]{.orange}
-  - enregistrements automatiques (GSM, géolocalisation, capteurs..)
-  - contenus internet (webscraping, réseaux sociaux..)
-  - images satellites
+  - [**enregistrements automatiques**]{.blue2} (GSM, géolocalisation, capteurs..)
+  - [**contenus internet**]{.blue2} (webscraping, réseaux sociaux..)
+  - [**images satellites**]{.blue2}
   - etc.
 
 ## Big data : une définition
@@ -69,20 +69,20 @@ execute:
 ## Un phénomène pérenne
 
 - Un phénomène en [**expansion constante**]{.orange}
-  - Part du numérique 
-  - Capacités techniques
+  - Part du [**secteur numérique**]{.blue2}
+  - [**Capacités techniques**]{.blue2}
 
 ![](img/growth.png){height="400" fig-align="center"}
 
 ## Pourquoi s'intéresser à ces données ?
 
-- [**Disponibilité**]{.orange} : réduction du coût et de la charge des enquêtes, des délais de publication (ex : nowcasting)
+- [**Disponibilité**]{.orange} : réduction du [**coût**]{.blue2} et de la [**charge**]{.blue2} des enquêtes, des [**délais**]{.blue2} de publication (ex : nowcasting)
 
-- [**Finesse**]{.orange} : statistiques localisées, sur des sous-population, plus fréquentes...
+- [**Finesse**]{.orange} : statistiques [**localisées**]{.blue2}, sur des sous-population, plus [**fréquentes**]{.blue2}...
 
-- [**Avancées méthodologiques**]{.orange} : convergence entre statistique et informatique (data science, machine learning)
+- [**Avancées méthodologiques**]{.orange} : convergence entre statistique et informatique ([**machine learning**]{.blue2})
 
-- [**Exhaustivité**]{.orange} : compléter des déclarations d'enquêtes, créer de nouveaux indicateurs...
+- [**Exhaustivité**]{.orange} : [**compléter**]{.blue2} des déclarations d'enquêtes, créer de [**nouveaux indicateurs**]{.blue2}...
 
 ## Un retour de l'exhaustif ?
 
@@ -154,7 +154,7 @@ execute:
 
 - De nécessaires [**adaptations**]{.orange}
   - La quantité et la variété des données facilite les [**ré-identifications**]{.blue2}
-  - [**Big data act**]{.blue2} (2021)
+  - [**Data act**]{.blue2} (2021)
 
 ## Confidentialité des données
 
