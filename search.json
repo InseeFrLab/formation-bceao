@@ -525,18 +525,18 @@
     "text": "Big data : de quoi parle-t-on ?\n\nDes données “nouvelles” aux contours flous\n\nenregistrements automatiques (GSM, géolocalisation, capteurs..)\ncontenus internet (webscraping, réseaux sociaux..)\nimages satellites\netc."
   },
   {
-    "objectID": "slides/intro-big-data/index.html#un-phénomène-pérenne",
-    "href": "slides/intro-big-data/index.html#un-phénomène-pérenne",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Un phénomène pérenne",
-    "text": "Un phénomène pérenne\n\nUn phénomène en expansion constante\n\nPart du numérique\nCapacités techniques"
-  },
-  {
     "objectID": "slides/intro-big-data/index.html#big-data-une-définition",
     "href": "slides/intro-big-data/index.html#big-data-une-définition",
     "title": "Place et enjeux liés au big data à l’Insee",
     "section": "Big data : une définition",
     "text": "Big data : une définition\n\nBig data : “Gestion et analyse d’un volume massif de données, souvent à une échelle bien supérieure à ce que les systèmes traditionnels peuvent traiter efficacement.”\nLes 3 V qui caractérisent les big data :\n\nVolume : quantités massives de données\nVitesse : haute fréquence, jusqu’au temps réel\nVariété : diversité de sources et de formats"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#un-phénomène-pérenne",
+    "href": "slides/intro-big-data/index.html#un-phénomène-pérenne",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Un phénomène pérenne",
+    "text": "Un phénomène pérenne\n\nUn phénomène en expansion constante\n\nPart du numérique\nCapacités techniques"
   },
   {
     "objectID": "slides/intro-big-data/index.html#pourquoi-sintéresser-à-ces-données",
