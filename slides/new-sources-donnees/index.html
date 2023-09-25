@@ -894,22 +894,67 @@ table {
 </ol>
 <!-- https://blog.insee.fr/que-peut-faire-linsee-a-partir-des-donnees-de-telephonie-mobile-mesure-de-population-presente-en-temps-de-confinement-et-statistiques-experimentales/ -->
 </section></section>
+<section>
 <section id="e.-données-carte-bancaire" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>E. Données carte bancaire</h1>
+
+</section>
+<section id="descriptions-des-données" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Descriptions des données</h2>
 <ul>
 <li>Données <a href="https://www.cartes-bancaires.com/">Carte bancaire CB</a> recouvrent <span class="orange"><strong>82% des opérations</strong></span></li>
 <li><span class="orange"><strong>Données agrégées</strong></span> par jour, type de paiement ou département</li>
-<li>Plusieurs exploitations réalisées :
+<li><span class="orange"><strong>2 types</strong></span> de données :
 <ul>
-<li><span class="blue2"><strong>conjoncture agrégée</strong></span> (consommation des ménages)</li>
-<li><span class="blue2"><strong>conjoncture désagrégée</strong></span> (consommation par secteurs)</li>
-<li><span class="blue2"><strong>comportements des consommateurs</strong></span> liés à des chocs (confinement)</li>
-<li><span class="blue2"><strong>production statistique</strong></span> (réduction de la volatilité des estimations)</li>
+<li><span class="blue2"><strong>Interbancaire</strong></span> : J+10, quotidienne, non exhaustive</li>
+<li><span class="blue2"><strong>Mensuelles</strong></span> : M+20, mensuelle, exhaustive</li>
 </ul></li>
 </ul>
-<!-- http://jms-insee.fr/jms2022s04_3/ -->
 </section>
+<section id="conjoncture-agrégée-consommation-des-ménages" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Conjoncture agrégée : consommation des ménages</h2>
 
+<img data-src="img/cb-conso-menage.png" class="r-stretch quarto-figure-center"><p class="caption">Montant total de transactions par carte bancaire CB pendant les trois mois entièrement confinés (en écart au mois comparable de 2019) et consommation des ménages (en écart au T4 2019</p></section>
+<section id="conjoncture-désagrégée-consommation-par-secteurs" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Conjoncture désagrégée : consommation par secteurs</h2>
+
+<img data-src="img/cb-conso-secteur.png" class="r-stretch quarto-figure-center"><p class="caption">Glissement à 2019 des montants mensuels de transactions par carte bancaire relatives aux dépenses d’hébergement</p></section>
+<section id="production-statistique" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Production statistique</h2>
+<ul>
+<li><span class="orange"><strong>Indicateur de CA</strong></span> :
+<ul>
+<li><span class="blue2"><strong>Standard</strong></span> : remontées mensuelles TVA</li>
+<li><span class="blue2"><strong>Précode</strong></span> : Estimations à partir d’enquêtes</li>
+</ul></li>
+<li>Les données CB :
+<ul>
+<li>➡️ limite la <span class="blue2"><strong>volatilité</strong></span> des estimations dans certaines composantes (commerce de carburants, commerce non alimentaire)</li>
+</ul></li>
+</ul>
+</section>
+<section id="limites-des-données-bancaires" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Limites des données bancaires</h2>
+<ul>
+<li>Évolution <span class="orange"><strong>tendancielle</strong></span></li>
+<li><span class="orange"><strong>Réglementation</strong></span> changeante (sans contact)</li>
+<li><span class="orange"><strong>Aggrégation</strong></span> par nomenclature MCC (<span class="math inline">\(\neq\)</span> NAF, COICOP…)</li>
+<li>Données <span class="orange"><strong>domestiques</strong></span></li>
+</ul>
+</section>
+<section id="conclusion" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Conclusion</h2>
+<ul>
+<li>Source <span class="orange"><strong>précieuse</strong></span></li>
+<li><span class="orange"><strong>Mise en production</strong></span> pas si évidente :
+<ul>
+<li>Non conçues pour la statistique publique</li>
+<li>Fournies par une entité privée, pérénité ?</li>
+</ul></li>
+<li><span class="orange"><strong>Travaux en cours</strong></span> pour optimiser l’utilisation</li>
+</ul>
+<!-- http://jms-insee.fr/jms2022s04_3/ -->
+</section></section>
 <section>
 <section id="autres-sources-émergentes-étudiées-à-linsee" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1>Autres sources émergentes étudiées à l’Insee</h1>
@@ -938,7 +983,7 @@ table {
 <!-- https://www.cnis.fr/wp-content/uploads/2018/05/CR_2018_Cnis_RENCONTRE_Nouvelles_sources.pdf -->
 </section></section>
 <section>
-<section id="conclusion" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
+<section id="conclusion-1" class="title-slide slide level1 center" data-background-image="background.svg" data-background-size="contain">
 <h1><span class="emoji" data-emoji="three">3️⃣</span> Conclusion</h1>
 
 </section>

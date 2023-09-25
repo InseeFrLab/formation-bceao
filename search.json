@@ -931,6 +931,48 @@
     "text": "Et maintenant ?\nPlusieurs caps identifiés :\n\nIndépendance vis-à-vis des opérateurs : biais statistique ?\nCadre européen sur l’exploitation des données mobiles :\n\nla qualité des statistiques publiées\nrespect de la vie privée des détenteurs de mobiles\n\nApprofondir la méthodologie : projet Mobitic\nProduction de nouvelles statistiques (déplacements domicile-travail, accroissement du télétravail…)"
   },
   {
+    "objectID": "slides/new-sources-donnees/index.html#descriptions-des-données",
+    "href": "slides/new-sources-donnees/index.html#descriptions-des-données",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Descriptions des données",
+    "text": "Descriptions des données\n\nDonnées Carte bancaire CB recouvrent 82% des opérations\nDonnées agrégées par jour, type de paiement ou département\n2 types de données :\n\nInterbancaire : J+10, quotidienne, non exhaustive\nMensuelles : M+20, mensuelle, exhaustive"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#conjoncture-agrégée-consommation-des-ménages",
+    "href": "slides/new-sources-donnees/index.html#conjoncture-agrégée-consommation-des-ménages",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Conjoncture agrégée : consommation des ménages",
+    "text": "Conjoncture agrégée : consommation des ménages\n\nMontant total de transactions par carte bancaire CB pendant les trois mois entièrement confinés (en écart au mois comparable de 2019) et consommation des ménages (en écart au T4 2019"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#conjoncture-désagrégée-consommation-par-secteurs",
+    "href": "slides/new-sources-donnees/index.html#conjoncture-désagrégée-consommation-par-secteurs",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Conjoncture désagrégée : consommation par secteurs",
+    "text": "Conjoncture désagrégée : consommation par secteurs\n\nGlissement à 2019 des montants mensuels de transactions par carte bancaire relatives aux dépenses d’hébergement"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#production-statistique",
+    "href": "slides/new-sources-donnees/index.html#production-statistique",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Production statistique",
+    "text": "Production statistique\n\nIndicateur de CA :\n\nStandard : remontées mensuelles TVA\nPrécode : Estimations à partir d’enquêtes\n\nLes données CB :\n\n➡️ limite la volatilité des estimations dans certaines composantes (commerce de carburants, commerce non alimentaire)"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#limites-des-données-bancaires",
+    "href": "slides/new-sources-donnees/index.html#limites-des-données-bancaires",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Limites des données bancaires",
+    "text": "Limites des données bancaires\n\nÉvolution tendancielle\nRéglementation changeante (sans contact)\nAggrégation par nomenclature MCC (\\(\\neq\\) NAF, COICOP…)\nDonnées domestiques"
+  },
+  {
+    "objectID": "slides/new-sources-donnees/index.html#conclusion",
+    "href": "slides/new-sources-donnees/index.html#conclusion",
+    "title": "Présentation des sources big data à l’Insee",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nSource précieuse\nMise en production pas si évidente :\n\nNon conçues pour la statistique publique\nFournies par une entité privée, pérénité ?\n\nTravaux en cours pour optimiser l’utilisation"
+  },
+  {
     "objectID": "slides/new-sources-donnees/index.html#améliorer-le-recensement-à-laide-de-images-satellites",
     "href": "slides/new-sources-donnees/index.html#améliorer-le-recensement-à-laide-de-images-satellites",
     "title": "Présentation des sources big data à l’Insee",
