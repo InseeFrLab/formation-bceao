@@ -174,9 +174,15 @@ les moteurs de recherche, données des réseaux sociaux)
 
 ## Contexte
 
-- Epidémie de coronavirus et [**confinement généralisé**]{.orange}
-- [**Mouvements de population**]{.orange} importants au sein du territoire
-- [**Objectif**]{.orange} : [**estimer la répartition de la population**]{.blue2} pour organiser la réponse sanitaire et sociale
+- Difficultés à estimer la [**population présente**]{.orange} sur le territoire
+
+- Les données mobiles permettent d'inférer des [**positions probables**]{.orange}
+  - [**Comptages agrégés**]{.orange} sur le territoire
+
+- Plusieurs applications
+  - Mesure de la ségrégation [**spatiale**]{.blue2}
+  - [**Adaptation**]{.blue2} de l'offre sanitaire et sociale
+  - [**Mouvements de population**]{.blue2} au moment du confinement (covid)
 
 ## Pourquoi estimer la répartition de la population ?
 
@@ -192,8 +198,11 @@ les moteurs de recherche, données des réseaux sociaux)
 ## Les données utilisées
 
 - Données fournies par un [**unique opérateur**]{.orange} : [Orange](https://www.orange.fr)
+  - [**Données massives**]{.blue2} (> 1To par jour)
+
 - [**Comptages de présence**]{.orange} dans chaque département croisés avec le département de résidence
-- Localisation à partir des antennes auxquelles un mobile se connecte
+
+- Localisation à partir des [**antennes**]{.orange} auxquelles un mobile se connecte
 
 ::: {.callout-important}
 Les données utilisées par l’Insee ne sont ni des données GPS ni des données provenant d’applications installées sur les mobiles. Elles ne permettent pas de suivre le déplacement des personnes, mais seulement d’effectuer des comptages par zones à différentes dates.
@@ -203,9 +212,10 @@ Les données utilisées par l’Insee ne sont ni des données GPS ni des donnée
 
 ![Taux d'évolution du total des nuitées par département de présence avant et après le début du confinement](img/evol_confinement.png){fig-align="center"}
 
-## Confidentialité garantie
+## Confidentialité
 
-- Aucune [**information personnelle**]{.orange} présentent dans les données
+- Aucune [**information directement identifiante**]{.orange} présente dans les données
+
 - [**Méthodologie**]{.orange} de l'opérateur connue et validée par l'Insee :
   - Echanges [**confidentiels**]{.blue2} et [**transparents**]{.blue2}
   - L'Insee s'assure de la validité du [**secret statistique**]{.blue2}
@@ -219,7 +229,7 @@ Plusieurs caps identifiés :
 2. [**Cadre européen**]{.orange} sur l'exploitation des données mobiles :
    a. la [**qualité**]{.blue2} des statistiques publiées
    b. [**respect de la vie privée**]{.blue2} des détenteurs de mobiles
-3. [**Approfondir la méthodologie**]{.orange} : partenariat avec le projet Mobitic
+3. [**Approfondir la méthodologie**]{.orange} : projet Mobitic
 4. Production de [**nouvelles statistiques**]{.orange} (déplacements domicile-travail, accroissement du télétravail...)
 
 ::: {.callout-note}
