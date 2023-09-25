@@ -935,7 +935,7 @@
     "href": "slides/new-sources-donnees/index.html#contexte-3",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Contexte",
-    "text": "Contexte\n\nEpidémie de coronavirus et confinement généralisé\nMouvements de population importants au sein du territoire\nObjectif : estimer la répartition de la population pour organiser la réponse sanitaire et sociale"
+    "text": "Contexte\n\nDifficultés à estimer la population présente sur le territoire\nLes données mobiles permettent d’inférer des positions probables\n\nComptages agrégés sur le territoire\n\nPlusieurs applications\n\nMesure de la ségrégation spatiale\nAdaptation de l’offre sanitaire et sociale\nMouvements de population au moment du confinement (covid)"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#pourquoi-estimer-la-répartition-de-la-population",
@@ -949,7 +949,7 @@
     "href": "slides/new-sources-donnees/index.html#les-données-utilisées",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Les données utilisées",
-    "text": "Les données utilisées\n\nDonnées fournies par un unique opérateur : Orange\nComptages de présence dans chaque département croisés avec le département de résidence\nLocalisation à partir des antennes auxquelles un mobile se connecte\n\n\n\n\n\n\n\nImportant\n\n\nLes données utilisées par l’Insee ne sont ni des données GPS ni des données provenant d’applications installées sur les mobiles. Elles ne permettent pas de suivre le déplacement des personnes, mais seulement d’effectuer des comptages par zones à différentes dates."
+    "text": "Les données utilisées\n\nDonnées fournies par un unique opérateur : Orange\n\nDonnées massives (&gt; 1To par jour)\n\nComptages de présence dans chaque département croisés avec le département de résidence\nLocalisation à partir des antennes auxquelles un mobile se connecte\n\n\n\n\n\n\n\nImportant\n\n\nLes données utilisées par l’Insee ne sont ni des données GPS ni des données provenant d’applications installées sur les mobiles. Elles ne permettent pas de suivre le déplacement des personnes, mais seulement d’effectuer des comptages par zones à différentes dates."
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#résultat",
@@ -959,18 +959,18 @@
     "text": "Résultat\n\nTaux d’évolution du total des nuitées par département de présence avant et après le début du confinement"
   },
   {
-    "objectID": "slides/new-sources-donnees/index.html#confidentialité-garantie",
-    "href": "slides/new-sources-donnees/index.html#confidentialité-garantie",
+    "objectID": "slides/new-sources-donnees/index.html#confidentialité",
+    "href": "slides/new-sources-donnees/index.html#confidentialité",
     "title": "Présentation des sources big data à l’Insee",
-    "section": "Confidentialité garantie",
-    "text": "Confidentialité garantie\n\nAucune information personnelle présentent dans les données\nMéthodologie de l’opérateur connue et validée par l’Insee :\n\nEchanges confidentiels et transparents\nL’Insee s’assure de la validité du secret statistique"
+    "section": "Confidentialité",
+    "text": "Confidentialité\n\nAucune information directement identifiante présente dans les données\nMéthodologie de l’opérateur connue et validée par l’Insee :\n\nEchanges confidentiels et transparents\nL’Insee s’assure de la validité du secret statistique"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#et-maintenant",
     "href": "slides/new-sources-donnees/index.html#et-maintenant",
     "title": "Présentation des sources big data à l’Insee",
     "section": "Et maintenant ?",
-    "text": "Et maintenant ?\nPlusieurs caps identifiés :\n\nIndépendance vis-à-vis des opérateurs : biais statistique ?\nCadre européen sur l’exploitation des données mobiles :\n\nla qualité des statistiques publiées\nrespect de la vie privée des détenteurs de mobiles\n\nApprofondir la méthodologie : partenariat avec le projet Mobitic\nProduction de nouvelles statistiques (déplacements domicile-travail, accroissement du télétravail…)\n\n\n\n\n\n\n\nNote\n\n\nD’autres études ont été menées à l’Insee utilisant les données de téléphonie mobile, pour analyser la ségrégation urbaine notamment (voir Galiana et al.)."
+    "text": "Et maintenant ?\nPlusieurs caps identifiés :\n\nIndépendance vis-à-vis des opérateurs : biais statistique ?\nCadre européen sur l’exploitation des données mobiles :\n\nla qualité des statistiques publiées\nrespect de la vie privée des détenteurs de mobiles\n\nApprofondir la méthodologie : projet Mobitic\nProduction de nouvelles statistiques (déplacements domicile-travail, accroissement du télétravail…)\n\n\n\n\n\n\n\nNote\n\n\nD’autres études ont été menées à l’Insee utilisant les données de téléphonie mobile, pour analyser la ségrégation urbaine notamment (voir Galiana et al.)."
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#améliorer-le-recensement-à-laide-de-images-satellites",
