@@ -28,7 +28,7 @@
 
 - Informations collectées via les registres [**administratifs**]{.orange} ou [**comptables**]{.orange} 
 - De plus en plus utilisées par les agences de statistiques publiques
-- Leurs [**volumes**]{.orange}, leurs [**vitesses**]{.orange} et leurs [**véracité**]{.orange} peuvent souvent être caractéristique de *Big Data*
+- Leurs [**volumes**]{.orange}, leurs [**vélocités**]{.orange} sont souvent caractéristiques de *Big Data*
 - [**Exemples**]{.blue2} : la déclaration sociale nominative (DSN), le Système National des Données de Santé (SNDS)...
 
 ## La Déclaration Sociale Nominative (DSN)
@@ -71,7 +71,7 @@
 ## Les données émergentes
 - Ensemble de données [**non traditionnelles**]{.orange} à la statistique publique
 - [**Complètent**]{.orange}, [**enrichissent**]{.orange} ou [**renouvèlent**]{.orange} les statistiques publiques
-- De + en + de [**données privées**]{.orange} {{< fa arrow-right >}} l'État ne détient plus le [**monopole**]{.orange} de la production de la données
+- De + en + de [**données privées**]{.orange} ➡️ l'État ne détient plus le [**monopole**]{.orange} de la production de la données
 
 ## Les données émergentes
 
@@ -81,7 +81,7 @@
     - [**Images satellites**]{.blue2}
 
 ::: {.callout-note}
-Données émergentes {{< fa arrow-right >}} plus souvent les caractéristiques Big Data
+Données émergentes ➡️ souvent caractéristiques du Big Data
 :::
 
 ## Les données émergentes à l'Insee
