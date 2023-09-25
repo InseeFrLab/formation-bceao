@@ -158,38 +158,38 @@ execute:
 
 ## Confidentialité des données
 
-- Un arbitrage complexe à trouver
-  - Garantir le respect de la vie privée
-  - Conserver un maximum d'information statistique
+- Un [**arbitrage**]{.orange} complexe à trouver
+  - Garantir le respect de la [**vie privée**]{.blue2}
+  - Conserver un maximum d'[**information statistique**]{.blue2}
 
-- Les possibilités d'identification croissent avec les volumes de données
-  - Evolution des techniques de confidentialité 
+- Les [**possibilités d'identification**]{.orange} croissent avec les volumes de données
+  - Evolution des [**techniques de confidentialité**]{.blue2} 
 
 ## Techniques de confidentialité
 
-- Anonymisation
-  - De plus en plus complexe à assurer
+- [**Anonymisation**]{.orange}
+  - De plus en plus [**complexe**]{.blue2}  à assurer
 
-- Destruction
-  - Agrégation pour limiter la perte d'information
+- [**Destruction**]{.orange}
+  - [**Agrégation**]{.blue2}  pour limiter la perte d'information
 
-- Obfuscation
-  - Potentiel des données synthétiques
+- [**Obfuscation**]{.orange}
+  - Potentiel des [**données synthétiques**]{.blue2} 
 
-- Confidentialité différentielle
-  - Quantifier le risque d’une faille de confidentialité
+- [**Confidentialité différentielle**]{.orange}
+  - Quantifier le [**risque**]{.blue2}  d’une faille de confidentialité
 
 ## Enjeux économiques
 
-- Les big data sont souvent collectées par des acteurs privés
-  - Volonté d'accès à des fins de statistique publique
-  - Respect du secret des affaires
+- Les big data sont souvent collectées par des [**acteurs privés**]{.orange}
+  - Volonté d'accès à des fins de [**statistique publique**]{.blue2}
+  - Respect du [**secret des affaires**]{.blue2}
 
-- Volonté des acteurs privés de valoriser ces données
+- Volonté des acteurs privés de [**valoriser**]{.orange} ces données
   - Exemple de FluxVision
 
-- Stratégie : nouer des partenariats "au cas par cas"
-  - Difficultés à pérenniser l'approvisionnement de données
+- Stratégie : nouer des [**partenariats**]{.orange} "au cas par cas"
+  - Difficultés à [**pérenniser**]{.blue2} l'approvisionnement de données
 
 ## Limites des modes de collecte
 
@@ -199,42 +199,43 @@ execute:
 
 - Formats [**complexes**]{.orange} et souvent [**changeants**]{.orange}
 
-- Difficultés d'acheminement entre infrastructures
-  - Coûts de transfert
+- [**Difficultés d'acheminement**]{.orange} entre infrastructures
+  - [**Coûts de transfert**]{.blue2}
 
 ## Enjeux techniques
 
-- Stockage adapté : les *data lakes*
+- Stockage adapté : les [***data lakes***]{.orange}
 
-- Calcul distribué 
-  - Ressources
+- Calcul distribué[***data lakes***]{.orange}
+  - Ressources computationnelles
 
-- Services data science
+- [**Services data science**]{.orange}
+  - Rendre accessible les ressources
 
-- Importance d'une "sandbox"
+- Importance d'une [**"sandbox"**]{.orange}
 
 ## Enjeux méthodologiques
 
-- Traitement des données massives
+- Traitement des [**données massives**]{.orange}
   - Algorithmes distribués
   - Statistique en grande dimension
 
-- Traitement de formats non-structurés
+- Traitement de [**formats non-structurés**]{.orange}
   - Traitement du langage naturel
   - Analyse d'images
 
-- Méthodes de machine learning
+- Méthodes de [**machine learning**]{.orange}
 
 ## L'importance de la formation
 
-- De statisticien à data scientist
+- De [**statisticien**]{.orange} à [**data scientist**]{.orange}
   - Formalisation des besoins métiers
-  - Veille méthodologique
-  - Acculturation aux techniques informatiques
+  - [**Veille méthodologique**]{.blue2}
+  - Acculturation aux [**techniques informatiques**]{.blue2}
 
-- De l'expérimentation à la mise en production
-  - Automatisation des traitements
-  - Bonnes pratiques de développement
+- De l'[**expérimentation**]{.orange} à la [**mise en production**]{.orange}
+  - [**Automatisation**]{.blue2} des traitements
+  - [**Bonnes pratiques**]{.blue2} de développement
 
 # Conclusion
 
