@@ -31,7 +31,7 @@ Text | NAT | TYP | EVT | SUR |
 Cours de musique | NaN | X | 01P |NaN
 
 <center>
-&#129155;
+⬇️
 </center>
 
 "Cours de musique [NAT]{.green2}\_[NaN]{.blue2} [TYP]{.green2}\_[X]{.blue2} [EVT]{.green2}\_[01P]{.blue2} [SUR]{.green2}\_[NaN]{.blue2}"
