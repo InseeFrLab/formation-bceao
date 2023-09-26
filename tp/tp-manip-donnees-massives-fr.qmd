@@ -603,5 +603,3 @@ path_out <- bucket$path("diffusion/bceao/data_post_query.parquet")
 arrow::write_dataset(data_final, path_out)
 
 ```
-
-
