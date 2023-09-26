@@ -506,16 +506,17 @@ Nous allons comme auparavant créer un SparkContext sur un notebook R. Ensuite c
 Onyxia injecte une configuration par défaut pour votre configuration Spark. Tous ces éléments sont ceux qu'Onyxia injecte à votre place. Vous pouvez les surcharger au runtime.
 
 ```{r}
-system("cat /opt/spark/conf/spark-defaults.conf")
-```
-
-```{r}
 library(sparklyr)
 ```
 
 ```{r}
 conf <- spark_config()
 conf$sparklyr.defaultPackages <- "org.apache.hadoop:hadoop-aws:3.3.6"
+
+conf$spark.executor.instances <- "10"
+conf$spark.driver.memory <- "2GB"
+conf$spark.executor.memory <- "2GB"
+
 sc <- spark_connect(master = "k8s://https://kubernetes.default.svc:443", 
                     config = conf)
 ```
@@ -559,8 +560,4 @@ query <- data_spark |>
 
 ```{r}
 data_final <- collect(query)
-```
-
-```{bash , echo=TRUE}
-kubectl get pods -l spark-role=executor
 ```
