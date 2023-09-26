@@ -529,9 +529,13 @@ sc <- spark_connect(master = "k8s://https://kubernetes.default.svc:443",
                     config = conf)
 ```
 
+On peut vérifier que `Kubernetes` a bien lancé les 10 exécuteurs demandés. Très concrètement, il s'agit de 10 "clones" qui sont prêts à effectuer chacun les calculs qu'on leur attribue.
+
 ```{bash , echo=TRUE}
 kubectl get pods -l spark-role=executor
 ```
+
+La première étape est de charger les données sur les différents exécuteurs. On va utiliser les données partitionnées qui sont disponibles sur le bucket MinIO de la formation. Les données ne sont donc jamais en local : si l'on travaillait sur des données très volumineuses, on ne pourrait de toute manière pas les charger dans le stockage local. Elles sont chargées directement à partir de notre stockage MinIO.
 
 ```{r}
 data_spark <- spark_read_parquet(sc,
@@ -539,15 +543,17 @@ data_spark <- spark_read_parquet(sc,
                                  infer_schema = TRUE,
                                  memory = FALSE
 )
-```
 
-```{r}
 table_communes_spark <- spark_read_parquet(sc,
                                  path = "s3a://projet-formation/diffusion/bceao/table_communes.parquet",
                                  infer_schema = TRUE,
                                  memory = FALSE
 )
 ```
+
+Plusieurs choses sont intéressantes à noter à ce stade :
+- le paramètre `infer_schema = TRUE` signifie que le schéma (nom et type des variables) va être inféré automatiquement à partir des données. C'est une grande force de `Parquet` : le schéma est directement stocké dans les méta-données du fichier ;
+- le paramètre `memory = FALSE` signifie que les données ne sont pas chargées en cache sur les exécuteurs. Par conséquent, le chargement des données est immédiat car il est `lazy` : elles seront chargées à la volée lorsqu'une requête sera effectivement lancée. Si l'on prévoyait de faire de nombreuses requêtes successives avec ces données (et que notre infrastructure nous le permet), on pourrait préférer les mettre en cache. Dans ce cas, l'import des données prendait beaucoup plus de temps, mais les requêtes par la suite seraient très rapides. Un arbitrage à faire selon votre cas d'usage !
 
 ```{r}
 query <- data_spark |> 
