@@ -592,7 +592,7 @@ Plutôt rapide, mais moins qu'avec `Arrow`. C'est logique ! Avec `Arrow`, on fai
 Enfin, il est possible d'enregistrer le résultat de nos différents calculs directement dans notre propre espace de stockage dans le cloud.
 
 ```{r}
-MYBUCKET <- "tfaria"
+MYBUCKET <- "MY_USERNAME"
 
 bucket <- arrow::s3_bucket(
   MYBUCKET,
