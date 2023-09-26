@@ -13,15 +13,11 @@ Au cours de ce TP, nous explorerons deux approches principales. Tout d'abord, no
 
 ## I - Manipulation de données en local
 
-Avant de commencer, chargeons quelques librairies qui nous seront utiles ultérieurement et définissons quelques réglages.
+Avant de commencer, chargeons quelques librairies qui nous seront utiles tout au long du TP.
 
 ```{r}
 library(ggplot2)
 library(dplyr)
-
-# Réglages arrow
-arrow:::set_cpu_count(30)
-options(arrow.use_threads = TRUE)
 ```
 
 ### A - Importation et stockage de données massives
