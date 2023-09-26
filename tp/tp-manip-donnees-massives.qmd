@@ -505,21 +505,22 @@ Dans notre cas, nous allons effectuer du `Spark` sur `Kubernetes`. Le schéma su
 
 ![](img/spark-on-kube.png){fig-align="center"}
 
-
-
-Nous allons comme auparavant créer un SparkContext sur un notebook R. Ensuite ce programme "driver" se connectera à un cluster manager de type Kubernetes pour pouvoir lancer des workers. Le schéma traditionnel pour comprendre l'architecture est le suivant :
-
-
-Onyxia injecte une configuration par défaut pour votre configuration Spark. Tous ces éléments sont ceux qu'Onyxia injecte à votre place. Vous pouvez les surcharger au runtime.
+L'instance de `RStudio` sur laquelle on se trouve a `Spark` d'installé, et est pré-configuré pour qu'il soit accessible depuis `R`. Pour faire la liaison, on va utiliser le package `sparklyr`.
 
 ```{r}
 library(sparklyr)
 ```
 
+On va commencer par configurer `Spark`, en s'inspirant de la [documentation](https://spark.rstudio.com/guides/connections.html). Voici la signification des différentes configurations en question :
+- `conf$sparklyr.defaultPackages` : on configure `Spark` pour pouvoir récupérer directement les données sur du stockage S3 (`MinIO` sur le SSP Cloud) ;
+- `conf$spark.executor.instances` : le nombre d'exécuteurs sur lesquels vont être distribués les calculs ;
+- `conf$spark.driver.memory` : la quantité de RAM pour le driver
+- `conf$spark.executor.memory` : la quantité de RAM pour chaque exécuteur
+
 ```{r}
 conf <- spark_config()
-conf$sparklyr.defaultPackages <- "org.apache.hadoop:hadoop-aws:3.3.6"
 
+conf$sparklyr.defaultPackages <- "org.apache.hadoop:hadoop-aws:3.3.6"
 conf$spark.executor.instances <- "10"
 conf$spark.driver.memory <- "2GB"
 conf$spark.executor.memory <- "2GB"
