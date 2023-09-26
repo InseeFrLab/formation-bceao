@@ -410,7 +410,7 @@
     "href": "slides/codif-auto/index.html#prise-en-compte-des-variables-catégorielles",
     "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
     "section": "Prise en compte des variables catégorielles",
-    "text": "Prise en compte des variables catégorielles\n\nConcaténation du libellé avec les noms et valeurs des variables annexes :\n\n\n\n\nText\nNAT\nTYP\nEVT\nSUR\n\n\n\n\nCours de musique\nNaN\nX\n01P\nNaN\n\n\n\n\n🢃\n\n“Cours de musique NAT_NaN TYP_X EVT_01P SUR_NaN”\n\nMéthode imparfaite : 3-grams “AT_” ou “T_0” utilisés."
+    "text": "Prise en compte des variables catégorielles\n\nConcaténation du libellé avec les noms et valeurs des variables annexes :\n\n\n\n\nText\nNAT\nTYP\nEVT\nSUR\n\n\n\n\nCours de musique\nNaN\nX\n01P\nNaN\n\n\n\n\n⬇️\n\n“Cours de musique NAT_NaN TYP_X EVT_01P SUR_NaN”\n\nMéthode imparfaite : 3-grams “AT_” ou “T_0” utilisés."
   },
   {
     "objectID": "slides/codif-auto/index.html#prétraitements-effectués",
