@@ -499,9 +499,16 @@ query |> collect()
 
 ### B - Spark
 
-Nous allons comme auparavant créer un SparkContext sur un notebook R. Ensuite ce programme "driver" se connectera à un cluster manager de type Kubernetes pour pouvoir lancer des workers. Le schéma traditionnel pour comprendre l'architecture est le suivant :
+Lorsque les volumes de données dépassent les capacités de machines standards (ex : > 100Go), il faut passer sur des infrastructures distribuées, et adapter les méthodes de traitement pour pouvoir distribuer les calculs. Le framework de calcul distribué est `Spark`, qui a largement démocratisé le calcul distribué en créant des couches d'abstraction simples sur le calcul Map-Reduce, base du calcul distribué.
+
+Dans notre cas, nous allons effectuer du `Spark` sur `Kubernetes`. Le schéma suivant illustre ce processus. Le service `RStudio` dans lequel on se trouve va jouer à la fois le rôle de client et de driver. Lorsqu'un calcul distribué sera demandé, le driver va demander à l'API server de `Kubernetes` de lancer un nombre pré-configuré d'exécuteurs (dans notre cas, 10) qui vont chacun réaliser les tâches demandées sur une partie des données. Une fois que les agrégations voulues ont été calculées, on pourra les récupérer sur le driver (le `RStudio`) pour les traiter en `R`, leur volumétrie étant à présent gérable.
 
 ![](img/spark-on-kube.png){fig-align="center"}
+
+
+
+Nous allons comme auparavant créer un SparkContext sur un notebook R. Ensuite ce programme "driver" se connectera à un cluster manager de type Kubernetes pour pouvoir lancer des workers. Le schéma traditionnel pour comprendre l'architecture est le suivant :
+
 
 Onyxia injecte une configuration par défaut pour votre configuration Spark. Tous ces éléments sont ceux qu'Onyxia injecte à votre place. Vous pouvez les surcharger au runtime.
 
