@@ -44,6 +44,7 @@ L'objectif est de comprendre comment chaque méthode gère efficacement les donn
 
 ```{r}
 # Importation avec readr
+# Assez long (~4-5min)
 t <- Sys.time()
 df_readr <- readr::read_delim(
   "data/data_recensement_2017.csv",
@@ -52,6 +53,8 @@ df_readr <- readr::read_delim(
 )
 elapsed_readr <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
+
+L'import via `readr` est particulièrement long. Par ailleurs, il est intéressant de noter l'usage mémoire : les données ne font "que" 4,4 Go, mais l'usage mémoire atteint 30 Go lors de la lecture ! On voit par là qu'il est généralement nécessaire de prévoir largement la RAM par rapport aux données utilisées. Et qu'il faut s'intéresser à des méthodes plus efficientes de chargement des données, comme dans la suite de ce TP. 
 
 ```{r}
 # Importation avec data.table

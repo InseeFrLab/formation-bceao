@@ -13,6 +13,6 @@ categories:
   - Spark
 slides:
   text: Notebook
-  url: https://datalab.sspcloud.fr/launcher/ide/rstudio-sparkr?autoLaunch=true&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2FInseeFrLab%2Fformation-bceao%2Fmain%2Ftp%2Finit-tp.sh»&resources.limits.memory=«100Gi»persistence.size=«40Gi» 
+  url: https://datalab.sspcloud.fr/launcher/ide/rstudio-sparkr?autoLaunch=true&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2FInseeFrLab%2Fformation-bceao%2Fmain%2Ftp%2Finit-tp.sh»&resources.limits.memory=«100Gi»&persistence.size=«40Gi»
 order: 4
 ---
