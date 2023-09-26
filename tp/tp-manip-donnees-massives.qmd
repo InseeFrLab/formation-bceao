@@ -56,6 +56,13 @@ elapsed_readr <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 
 L'import via `readr` est particulièrement long. Par ailleurs, il est intéressant de noter l'usage mémoire : les données ne font "que" 4,4 Go, mais l'usage mémoire atteint 30 Go lors de la lecture ! On voit par là qu'il est généralement nécessaire de prévoir largement la RAM par rapport aux données utilisées. Et qu'il faut s'intéresser à des méthodes plus efficientes de chargement des données, comme dans la suite de ce TP. 
 
+Il est judicieux de supprimer les objets lourds dont on n'a plus besoin dans l'environnement R. En effet, lorsque vous créez des objets dans R, ils occupent de l'espace en mémoire. Si vous accumulez de nombreux objets sans les supprimer, cela peut rapidement saturer la mémoire disponible, ce qui peut entraîner des ralentissements ou des crash de votre session R. En supprimant les objets inutiles à l'aide de la fonction `rm()`, vous libérez de l'espace mémoire pour d'autres tâches ou analyses. De plus, moins la mémoire est encombrée plus les performances seront rapides.
+
+```{r}
+# On libère de la mémoire
+rm(df_readr)
+```
+
 ```{r}
 # Importation avec data.table
 t <- Sys.time()
@@ -70,6 +77,8 @@ df_datatable <- data.table::fread(
 elapsed_datatable <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
+L'import est beaucoup plus rapide. Par ailleurs, l'usage RAM maximal atteint est d'environ 20 Go. On voit l'intérêt d'utiliser des outils adaptés aux données volumineuses. Néanmoins, `data.table` a une grosse limite : il utilise une syntaxe très différente de celle de `dplyr`. Dans ce TP, on va donc principalement utiliser le package `arrow`, qui a le double avantage d'être très efficient en mémoire et d'être largement compatible avec la syntaxe `dplyr`.
+
 ```{r}
 # Importer avec arrow
 t <- Sys.time()
@@ -82,26 +91,24 @@ df_arrow <- arrow::read_delim_arrow(
 elapsed_arrow <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
+Avec `arrow`, l'import est non seulement extrêmement rapide, l'usage mémoire est également minimal (environ 13Go). Pas étonnant que ce package soit en train de devenir une référence pour le traitement des données volumineuses !
+
 ```{r}
 head(df_arrow, 6)
 ```
 
-Il est judicieux de supprimer les objets lourds dont on n'a plus besoin dans l'environnement R. En effet, lorsque vous créez des objets dans R, ils occupent de l'espace en mémoire. Si vous accumulez de nombreux objets sans les supprimer, cela peut rapidement saturer la mémoire disponible, ce qui peut entraîner des ralentissements ou des crash de votre session R. En supprimant les objets inutiles à l'aide de la fonction `rm()`, vous libérez de l'espace mémoire pour d'autres tâches ou analyses. De plus, moins la mémoire est encombrée plus les performances seront rapides. Supprimons donc les deux objets issus de l'importation via `readr` et `data.table`.
+On libère de la mémoire.
 
 ```{r}
-# On libère de la mémoire
-rm(df_readr, df_datatable)
-gc()
+rm(df_datatable)
 ```
-
-On utilise également la fonction `gc()`, qui sert à déclencher la collecte des ordures (garbage collection) dans R. La collecte des ordures est un processus par lequel R identifie et libère la mémoire occupée par des objets qui ne sont plus référencés ni utilisés. Bien que R effectue généralement la collecte des ordures automatiquement, l'appel manuel à `gc()` peut être utile dans les situations où vous souhaitez vous assurer que la mémoire est correctement nettoyée, notamment après avoir supprimé de gros objets à l'aide de `rm()`.
 
 Analysons les différences de temps d'import du CSV entre les 3 méthodes.
 
 ```{r}
 performance <- tibble(format_text = c("readr", "data.table", "arrow"),
-                             elapse_time = round(c(elapsed_readr, elapsed_datatable, elapsed_arrow),3))
-
+                      elapse_time = round(c(elapsed_readr, elapsed_datatable, elapsed_arrow),3)
+                      )
 
 performance |> 
   mutate(format_text = forcats::fct_reorder(format_text, elapse_time)) |> 
@@ -117,9 +124,7 @@ performance |>
   theme_light()
 ```
 
-A la vue des résultats, il est évident que les bibliothèques `data.table` et `arrow` se révèlent être des choix particulièrement adaptés pour l'importation de fichiers CSV de grande taille dans R. En effet, l'utilisation de `data.table` permet de diviser pratiquement par deux le temps nécessaire à l'importation, tandis que l'impact positif de la bibliothèque `arrow` sur les performances est encore plus spectaculaire.
-
-Comme nous l'avons mentionné précédemment, le format `.csv` n'est pas l'option idéale pour la manipulation de données massives. Par conséquent, il est fortement recommandé de travailler avec des données au format .parquet ou de les stocker dans une base de données, en fonction des besoins spécifiques de votre projet. Il convient de noter que, selon les cas d'utilisation, il peut être judicieux de travailler avec des fichiers parquet partitionnés plutôt qu'avec un seul gros fichier .parquet. Cette approche permet une gestion plus efficace des données massives tout en améliorant les performances de traitement.
+Comme nous l'avons mentionné précédemment, le format `csv` n'est pas l'option idéale pour la manipulation de données massives. Par conséquent, il est fortement recommandé de travailler avec des données au format `parquet` ou de les stocker dans une base de données, en fonction des besoins spécifiques de votre projet. Il convient de noter que, selon les cas d'utilisation, il peut être judicieux de travailler avec des fichiers `parquet` partitionnés plutôt qu'avec un seul gros fichier. Cette approche permet une gestion plus efficace des données massives tout en améliorant les performances de traitement.
 
 #### Stockage
 
@@ -201,7 +206,6 @@ On libère de la mémoire.
 
 ```{r}
 rm(df_arrow)
-gc()
 ```
 
 ### B - Comparaison des performances de requêtes
@@ -260,7 +264,6 @@ Ensuite, nous libérons la mémoire utilisée par les objets.
 
 ```{r}
 rm(data)
-gc()
 ```
 
 #### 2) Lazy evaluation avec Arrow
@@ -397,7 +400,6 @@ On libère de la mémoire.
 
 ```{r}
 rm(con)
-gc()
 ```
 
 Si vous préférez ne pas utiliser SQL, vous pouvez toujours profiter de la rapidité de DuckDB tout en conservant la même requête dplyr. Pour cela, utilisez la fonction `to_duckdb`.
