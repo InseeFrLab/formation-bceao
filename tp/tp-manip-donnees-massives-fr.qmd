@@ -50,7 +50,7 @@ df_readr <- readr::read_delim(
 elapsed_readr <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
-L'import via `readr` est particulièrement long. Par ailleurs, il est intéressant de noter l'usage mémoire : les données ne font "que" 4,4 Go, mais l'usage mémoire atteint 30 Go lors de la lecture ! On voit par là qu'il est généralement nécessaire de prévoir largement la RAM par rapport aux données utilisées. Et qu'il faut s'intéresser à des méthodes plus efficientes de chargement des données, comme dans la suite de ce TP. 
+L'import via `readr` est particulièrement long. Par ailleurs, il est intéressant de noter l'usage mémoire : les données ne font "que" 4,4 Go, mais l'usage mémoire atteint 30 Go lors de la lecture ! On voit par là qu'il est généralement nécessaire de prévoir largement la RAM par rapport aux données utilisées. Et qu'il faut s'intéresser à des méthodes plus efficientes de chargement des données, comme dans la suite de ce TP.
 
 Il est judicieux de supprimer les objets lourds dont on n'a plus besoin dans l'environnement R. En effet, lorsque vous créez des objets dans R, ils occupent de l'espace en mémoire. Si vous accumulez de nombreux objets sans les supprimer, cela peut rapidement saturer la mémoire disponible, ce qui peut entraîner des ralentissements ou des crash de votre session R. En supprimant les objets inutiles à l'aide de la fonction `rm()`, vous libérez de l'espace mémoire pour d'autres tâches ou analyses. De plus, moins la mémoire est encombrée plus les performances seront rapides.
 
@@ -504,7 +504,7 @@ query |> collect()
 
 ### B - Spark
 
-Lorsque les volumes de données dépassent les capacités de machines standards (ex : > 100Go), il faut passer sur des infrastructures distribuées, et adapter les méthodes de traitement pour pouvoir distribuer les calculs. Le framework de calcul distribué est `Spark`, qui a largement démocratisé le calcul distribué en créant des couches d'abstraction simples sur le calcul Map-Reduce, base du calcul distribué.
+Lorsque les volumes de données dépassent les capacités de machines standards (ex : \> 100Go), il faut passer sur des infrastructures distribuées, et adapter les méthodes de traitement pour pouvoir distribuer les calculs. Le framework de calcul distribué est `Spark`, qui a largement démocratisé le calcul distribué en créant des couches d'abstraction simples sur le calcul Map-Reduce, base du calcul distribué.
 
 Dans notre cas, nous allons effectuer du `Spark` sur `Kubernetes`. Le schéma suivant illustre ce processus. Le service `RStudio` dans lequel on se trouve va jouer à la fois le rôle de client et de driver. Lorsqu'un calcul distribué sera demandé, le driver va demander à l'API server de `Kubernetes` de lancer un nombre pré-configuré d'exécuteurs (dans notre cas, 10) qui vont chacun réaliser les tâches demandées sur une partie des données. Une fois que les agrégations voulues ont été calculées, on pourra les récupérer sur le driver (le `RStudio`) pour les traiter en `R`, leur volumétrie étant à présent gérable.
 
@@ -589,7 +589,7 @@ data_final <- collect(query)
 
 Plutôt rapide, mais moins qu'avec `Arrow`. C'est logique ! Avec `Arrow`, on fait du calcul en mémoire sur une seule machine. Avec `Spark`, on fait des calculs en mémoire également, mais de manière distribuée sur plusieurs machines, ce qui implique des coûts de parallélisation en amont et en aval de la requête. `Spark` ne montre pas tout son potentiel parce qu'on reste sur des données de taille volumineuses, mais pas massives. Dans le cas de données réellement massives (plusieurs dizaines ou centaines de Go de données), seul `Spark` aurait été capable de traiter ces données.
 
-Enfin, il est possible d'enregistrer le résultat de nos différents calculs directement dans notre propre espace de stockage dans le cloud. 
+Enfin, il est possible d'enregistrer le résultat de nos différents calculs directement dans notre propre espace de stockage dans le cloud.
 
 ```{r}
 MYBUCKET <- "tfaria"
@@ -599,7 +599,7 @@ bucket <- arrow::s3_bucket(
   endpoint_override = "minio.lab.sspcloud.fr"
 )
 
-path_out <- bucket$path("diffusion/bceao/data_post_query.parquet")
+path_out <- bucket$path("data_post_query.parquet")
 arrow::write_dataset(data_final, path_out)
 
 ```
