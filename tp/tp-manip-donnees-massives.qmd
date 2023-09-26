@@ -220,12 +220,14 @@ data <- arrow::read_parquet(
 ```
 
 ```{r}
-# table de correspondance au format parquet
-table_communes <- arrow::read_parquet(
-  file = arrow::s3_bucket(
-    "projet-formation/diffusion/bceao/table_communes.parquet",
+bucket <- arrow::s3_bucket(
+    "projet-formation",
     endpoint_override = "minio.lab.sspcloud.fr"
   )
+
+# table de correspondance au format parquet
+table_communes <- arrow::read_parquet(
+  file = bucket$path("diffusion/bceao/table_communes.parquet")
 )
 ```
 
@@ -466,12 +468,14 @@ Nous pouvons constater que plusieurs fichiers sont présents dans le bucket, don
 
 ```{r}
 bucket <- arrow::s3_bucket(
-  "projet-formation/diffusion/bceao/data_partition",
+  "projet-formation",
   endpoint_override = "minio.lab.sspcloud.fr"
 )
 
+path <- bucket$path("diffusion/bceao/data_partition")
+
 data_cloud <- arrow::open_dataset(
-  source = bucket,
+  source = path,
   partitioning = arrow::schema(REGION = arrow::utf8()))
 
 ```
@@ -513,10 +517,11 @@ library(sparklyr)
 ```
 
 On va commencer par configurer `Spark`, en s'inspirant de la [documentation](https://spark.rstudio.com/guides/connections.html). Voici la signification des différentes configurations en question :
-- `conf$sparklyr.defaultPackages` : on configure `Spark` pour pouvoir récupérer directement les données sur du stockage S3 (`MinIO` sur le SSP Cloud) ;
-- `conf$spark.executor.instances` : le nombre d'exécuteurs sur lesquels vont être distribués les calculs ;
-- `conf$spark.driver.memory` : la quantité de RAM pour le driver
-- `conf$spark.executor.memory` : la quantité de RAM pour chaque exécuteur
+
+-   `conf$sparklyr.defaultPackages` : on configure `Spark` pour pouvoir récupérer directement les données sur du stockage S3 (`MinIO` sur le SSP Cloud) ;
+-   `conf$spark.executor.instances` : le nombre d'exécuteurs sur lesquels vont être distribués les calculs ;
+-   `conf$spark.driver.memory` : la quantité de RAM pour le driver
+-   `conf$spark.executor.memory` : la quantité de RAM pour chaque exécuteur
 
 ```{r}
 conf <- spark_config()
@@ -553,8 +558,9 @@ table_communes_spark <- spark_read_parquet(sc,
 ```
 
 Plusieurs choses sont intéressantes à noter à ce stade :
-- le paramètre `infer_schema = TRUE` signifie que le schéma (nom et type des variables) va être inféré automatiquement à partir des données. C'est une grande force de `Parquet` : le schéma est directement stocké dans les méta-données du fichier ;
-- le paramètre `memory = FALSE` signifie que les données ne sont pas chargées en cache sur les exécuteurs. Par conséquent, le chargement des données est immédiat car il est `lazy` : elles seront chargées à la volée lorsqu'une requête sera effectivement lancée. Si l'on prévoyait de faire de nombreuses requêtes successives avec ces données (et que notre infrastructure nous le permet), on pourrait préférer les mettre en cache. Dans ce cas, l'import des données prendait beaucoup plus de temps, mais les requêtes par la suite seraient très rapides. Un arbitrage à faire selon votre cas d'usage !
+
+-   le paramètre `infer_schema = TRUE` signifie que le schéma (nom et type des variables) va être inféré automatiquement à partir des données. C'est une grande force de `Parquet` : le schéma est directement stocké dans les méta-données du fichier ;
+-   le paramètre `memory = FALSE` signifie que les données ne sont pas chargées en cache sur les exécuteurs. Par conséquent, le chargement des données est immédiat car il est `lazy` : elles seront chargées à la volée lorsqu'une requête sera effectivement lancée. Si l'on prévoyait de faire de nombreuses requêtes successives avec ces données (et que notre infrastructure nous le permet), on pourrait préférer les mettre en cache. Dans ce cas, l'import des données prendait beaucoup plus de temps, mais les requêtes par la suite seraient très rapides. Un arbitrage à faire selon votre cas d'usage !
 
 Définissons à présent la requête que vont devoir effectuer nos exécuteurs. On reprend la même requête que précédemment - en l'ajustant très légèrement. On voit là la très grande force du package `sparklyr` : on fait du `Spark` sans même s'en rendre compte, puisque la syntaxe est celle de `dyplr`.
 
@@ -582,3 +588,20 @@ data_final <- collect(query)
 ```
 
 Plutôt rapide, mais moins qu'avec `Arrow`. C'est logique ! Avec `Arrow`, on fait du calcul en mémoire sur une seule machine. Avec `Spark`, on fait des calculs en mémoire également, mais de manière distribuée sur plusieurs machines, ce qui implique des coûts de parallélisation en amont et en aval de la requête. `Spark` ne montre pas tout son potentiel parce qu'on reste sur des données de taille volumineuses, mais pas massives. Dans le cas de données réellement massives (plusieurs dizaines ou centaines de Go de données), seul `Spark` aurait été capable de traiter ces données.
+
+Enfin, il est possible d'enregistrer le résultat de nos différents calculs directement dans notre propre espace de stockage dans le cloud. 
+
+```{r}
+MYBUCKET <- "tfaria"
+
+bucket <- arrow::s3_bucket(
+  MYBUCKET,
+  endpoint_override = "minio.lab.sspcloud.fr"
+)
+
+path_out <- bucket$path("diffusion/bceao/data_post_query.parquet")
+arrow::write_dataset(data_final, path_out)
+
+```
+
+
