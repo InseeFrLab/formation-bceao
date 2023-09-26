@@ -555,6 +555,8 @@ Plusieurs choses sont intéressantes à noter à ce stade :
 - le paramètre `infer_schema = TRUE` signifie que le schéma (nom et type des variables) va être inféré automatiquement à partir des données. C'est une grande force de `Parquet` : le schéma est directement stocké dans les méta-données du fichier ;
 - le paramètre `memory = FALSE` signifie que les données ne sont pas chargées en cache sur les exécuteurs. Par conséquent, le chargement des données est immédiat car il est `lazy` : elles seront chargées à la volée lorsqu'une requête sera effectivement lancée. Si l'on prévoyait de faire de nombreuses requêtes successives avec ces données (et que notre infrastructure nous le permet), on pourrait préférer les mettre en cache. Dans ce cas, l'import des données prendait beaucoup plus de temps, mais les requêtes par la suite seraient très rapides. Un arbitrage à faire selon votre cas d'usage !
 
+Définissons à présent la requête que vont devoir effectuer nos exécuteurs. On reprend la même requête que précédemment - en l'ajustant très légèrement. On voit là la très grande force du package `sparklyr` : on fait du `Spark` sans même s'en rendre compte, puisque la syntaxe est celle de `dyplr`.
+
 ```{r}
 query <- data_spark |> 
   select(REGION, COMMUNE, TYPL) |> 
@@ -572,6 +574,10 @@ query <- data_spark |>
   arrange(-part_logements_fortune)
 ```
 
+Déjà ? Attention, là encore les requêtes effectuées par `Spark` sont `lazy` : `Spark` va lire la requête, et la convertir en un plan logique et physique afin d'optimiser les traitements (sélection des colonnes et lignes pertinentes du fichier `Parquet`, optimisation des étapes de traitement, etc.). Comme précédemment, ce n'est qu'au moment de l'opération `collect` que la requête est effectivement lancée sur le cluster.
+
 ```{r}
 data_final <- collect(query)
 ```
+
+Plutôt rapide, mais moins qu'avec `Arrow`. C'est logique ! Avec `Arrow`, on fait du calcul en mémoire sur une seule machine. Avec `Spark`, on fait des calculs en mémoire également, mais de manière distribuée sur plusieurs machines, ce qui implique des coûts de parallélisation en amont et en aval de la requête. `Spark` ne montre pas tout son potentiel parce qu'on reste sur des données de taille volumineuses, mais pas massives. Dans le cas de données réellement massives (plusieurs dizaines ou centaines de Go de données), seul `Spark` aurait été capable de traiter ces données.
