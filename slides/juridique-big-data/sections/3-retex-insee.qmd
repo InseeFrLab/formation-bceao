@@ -1,5 +1,103 @@
 ## :one: Le cas du webscrapping
 
+Quid des prérogatives de puissance publique pour recueillir de l'information ?
+
+- En Europe, la [loi n° 633 du 22 avril 1941](https://wipolex-res.wipo.int/edocs/lexdocs/laws/fr/it/it099fr.html), pour la protection du droit d’auteur, prévoit une exception en cas d’utilisation d’une base de données à des fins de recherche scientifique à but non lucratif (art. 64-sexies de la loi n° 633/1941 modifié).
+    + Bien que la recherche et la production statistiques ne soient pas explicitement mentionnées, ces dispositions apportent un cadre raisonnable pour permettre aux statisticiens publics d’accéder aux informations des bases de données en ligne et pour traiter ces informations afin de produire des résultats statistiques anonymisés.
+
+## Scraping à l'INSEE
+
+#### Quand ? 
+
+- Le web scraping est utilisé en __dernier recours__, l'INSEE favorisera :
+    + Les [__accords__]{.blue2} avec des partenaires (ex : seloger.com)
+    + L'utilisation d'[__API__]{.blue2} (ex : Qwant, Yahoo Finance)
+    + Les sources de [__données publiques__]{.blue2}
+- Le web scraping devient cependant une source de données grandissante.
+
+## Scraping à l'INSEE
+
+#### Utilisation
+
+Le scraping est notamment utilisé pour le calcul des [__indices des prix__]{.blue2} :
+
+- Prix des __transports__ (trains via site de la `SNCF`, domaine maritime) ;
+- Prix de __produits divers__ (surtout de l'électronique) ;
+- Prix dans le domaine de l'__hôtellerie__ (avec `booking.com`).
+D'autres utilisations ponctuelles peuvent également être faites.
+
+## Scraping à l'INSEE
+
+#### Organisation
+
+- Un scraping encore par cas d'usage, avec une gestion plus globale en cours de maturité
+    + Objectif de mutualisation entre les équipes statistiques
+    + La logique open source comme moyen de mutualisation
+- Beaucoup de `Python`, un peu de `R` et de `Java`
+
+## Les prix dans le domaine de l'hôtellerie (`Booking.com`)
+
+#### Références
+
+- Un travail ayant donné lieu à une [publication](https://www.ottawagroup.org/Ottawa/ottawagroup.nsf/4a256353001af3ed4b2562bb00121564/90eefd961765454eca25886a00042203/$FILE/Web%20scraping%20of%20booking.com_Paper.pdf)
+    + Adrien [Montbroussous]{.blue2}, Camille [Freppel]{.blue2} and Ombéline [Guillon]{.blue2}, *"Web scraping of a booking platform: exploring new data and methodology for the hotel service consumer price index"*, _Paper for the 17th International Conference of the Ottawa Group, Rome_
+- Une présentation plus accessible [ici](http://www.jms-insee.fr/2022/S14_1_PPT_MONTBROUSSOUS_JMS2022.pdf)
+
+## Les prix dans le domaine de l'hôtellerie (`Booking.com`)
+
+#### Le code
+
+- [__But__]{.blue2} : collecter davantage de données pour calculer au mieux les indices d'évolution de prix pour l'hôtellerie.
+- La partie 'scraping' du projet est disponible [ici](https://git.lab.sspcloud.fr/methodo-ipc/webscraping-hotel).
+- Pour plus d'informations, contacter [Adrien Montbroussous](mailto:adrien.montbroussous@insee.fr) (INSEE).
+- La conférence associée aux présentations : [ici](https://www.ottawagroup.org/ottawa/ottawagroup.nsf/4a256353001af3ed4b2562bb00121564/c7e600e0bec85d82ca25888400059a93?OpenDocument#Meeting%2017%20Rome)
+    + D'autres projets similaires de scraping mentionnés
+
+## Ventes d'articles électroniques
+
+- [__But__]{.blue2} : collecter davantage de données pour calculer au mieux les indices de prix associés au secteur
+    + Projet encore à une étape expérimentale
+- Scraping de [Boulanger](https://www.boulanger.com/) : [ici](https://git.lab.sspcloud.fr/methodo-ipc/webscraping-biens-electroniques/-/tree/master/boulanger)
+- Scraping de [Rue du Commerce](https://www.rueducommerce.fr/) : [ici](https://git.lab.sspcloud.fr/methodo-ipc/webscraping-biens-electroniques/-/tree/master/rue-du-commerce)
+- Pour plus d'informations, contacter [Adrien Montbroussous](mailto:adrien.montbroussous@insee.fr) (INSEE).
+
+## Scraping de la SNCF {.smaller}
+
+#### Contexte
+
+- Le calcul de l'IPC tient compte de :
+    + L’indice des prix des trains Grandes Lignes
+    + Le transport des passagers en train
+- Les prix utilisés étaient fondés sur un document publié annuellement par la SNCF. Mais cette méthode :
+    + Ne reflète pas les variations infra-annuelles réelles, en particulier pour les TGV
+    + Ne reflète pas les prix effectivement payés par les consommateurs
+    + Ne suit pas les recommandations des institutions internationales
+
+## Scraping de la SNCF {.smaller}
+
+#### Introduction du webscraping
+
+- Sous forme expérimentale depuis 2018, indices publiés depuis 2020
+- Collecte quotidienne pour capter la volatilité des prix
+- Requêtes effectuées pour plusieurs couples origine-destination, types de train, antériorités, profils passagers et horaires
+- Près de 23 000 requêtes par nuit
+- Un important travail statistique avec les données ainsi obtenues s'ensuit.
+    + Stratification en cellules homogènes de prix
+    + Un micro-indice calculé par cellule
+    + Agrégation des micro-indices avec un indice de Laspeyres arithmétique
+
+## Scraping de la SNCF {.smaller}
+
+#### Comparaison des résultats
+
+![](img/scraping_sncf.png){fig-align="center"}
+
+## D'autres ressources pour le scraping lié à l'`IPC`
+
+- [Guidelines d'Eurostat](https://ec.europa.eu/eurostat/documents/272892/12032198/Guidelines-web-scraping-HICP-11-2020.pdf/) sur le scraping lié à l'indice des prix à la consommation
+    + Annexe 3 consacrée aux travaux de l'INSEE sur Boulanger et Rue du Commerce
+
+
 
 ## :two: Les données de téléphonie mobiles
 
