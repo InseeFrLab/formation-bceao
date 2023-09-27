@@ -249,7 +249,7 @@
     "href": "slides/juridique-big-data/index.html#croissance-du-numérique",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "Croissance du numérique",
-    "text": "Croissance du numérique\n\nimage de l’intro pour trnasition sur le stockage"
+    "text": "Croissance du numérique"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#stockage-et-sécurité-des-données",
@@ -263,21 +263,21 @@
     "href": "slides/juridique-big-data/index.html#open-data-et-secteur-public",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "Open Data et secteur public",
-    "text": "Open Data et secteur public\n\nMise à disposition publiquement et gratuitement des données.\n\nEn France, loi Lemaire 2016 : \nOpen Data des autorités publiques dans un cadre reglementé.\n\nObjectif double :cible: :\n\n1️⃣ Transparence démocratique et ouverture d’information.\n2️⃣ Favoriser l’innovation économique et sociale.\n\nL’Open Data se démocratise aussi dans le secteur privé !"
+    "text": "Open Data et secteur public\n\nMise à disposition publiquement et gratuitement des données.\n\nEn France, loi Lemaire 2016 :\nOpen Data des autorités publiques dans un cadre reglementé.\n\nObjectif double 🎯 :\n\n1️⃣ Transparence démocratique et ouverture d’information.\n2️⃣ Favoriser l’innovation économique et sociale.\n\nL’Open Data se démocratise aussi dans le secteur privé !"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#propriété-intellectuelle",
     "href": "slides/juridique-big-data/index.html#propriété-intellectuelle",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "Propriété intellectuelle",
-    "text": "Propriété intellectuelle\n\nGestion des licences ©️ :\n\nDéveloppement de l’open source et du partage de données.\nNécessité d’apposer et de respecter des licences claires.\n\nEquilibre difficile entre protection et innovation ⚖️ :\n\nLes lois sur le droit d’auteur établies ont du mal à prendre en compte les nouvelles technologies\nDéveloppement de nouveaux outils d’Intelligence Artificielle (IA)"
+    "text": "Propriété intellectuelle\n\nGestion des licences ©️ :\n\nDéveloppement de l’open source et du partage de données.\nNécessité d’apposer et de respecter des licences claires.\n\nÉquilibre difficile entre protection et innovation ⚖️ :\n\nLes lois sur le droit d’auteur établies ont du mal à prendre en compte les nouvelles technologies\nDéveloppement de nouveaux outils d’Intelligence Artificielle (IA)"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#des-méthodologies-toujours-plus-innovantes",
     "href": "slides/juridique-big-data/index.html#des-méthodologies-toujours-plus-innovantes",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "Des méthodologies toujours plus innovantes…",
-    "text": "Des méthodologies toujours plus innovantes…\n\nGrands modèles de langage (LLM)\n\nChatGPT, LLama2, Bard…\n\nModèles de génération d’images\n\nMidjourney, Stable Diffusion, Dall-E\n\nModèles Deep fake :\n\nExemple"
+    "text": "Des méthodologies toujours plus innovantes…\n\nGrands modèles de langage (LLM)\n\nChatGPT, LLama2, Bard…\n\nModèles de génération d’images\n\nMidjourney, Stable Diffusion, Dall-E\n\nModèles Deep fake :\n\nFakeApp"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#créant-de-nouvelles-problématiques",
@@ -287,25 +287,39 @@
     "text": "… créant de nouvelles problématiques\n\nDéfi démocratique\nGestions des droits d’auteurs :\n\nLitige GoT-OpenAI\nPoursuites Stability AI/ Midjourney\n\nFailles de sécurité (Samsung-OpenAI)\nRéponses non sourcées\nQuid des données générées ?"
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#juin-1951",
-    "href": "slides/juridique-big-data/index.html#juin-1951",
+    "objectID": "slides/juridique-big-data/index.html#loi-sur-le-secret-statistique-7-juin-1951",
+    "href": "slides/juridique-big-data/index.html#loi-sur-le-secret-statistique-7-juin-1951",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "7 juin 1951",
-    "text": "7 juin 1951\n\nContexte :\n\n:drapeau: Loi Française, promulguée en 1951."
+    "section": "Loi sur le secret statistique 7 juin 1951",
+    "text": "Loi sur le secret statistique 7 juin 1951\n\nContexte :\n\n🇫🇷 Loi Française, promulguée en 1951.\nProtéger les personnes physiques et morales\nGarantir la confiance des citoyens envers l’Insee"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#loi-sur-le-secret-statistique-7-juin-1951-1",
+    "href": "slides/juridique-big-data/index.html#loi-sur-le-secret-statistique-7-juin-1951-1",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Loi sur le secret statistique 7 juin 1951",
+    "text": "Loi sur le secret statistique 7 juin 1951\n\nCommunication strictement interdite des données individuelles :\n\n🚫 Réutilisation à des fins de contrôle fiscal ou de répression économique\n\nS’applique à la diffusion de statistiques :\n\n🚫 Diffusion de données permettant la réidentification\n\nCréation du Cnis, du comité du Label et de l’ASP"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#loi-informatique-et-liberté-1978",
     "href": "slides/juridique-big-data/index.html#loi-informatique-et-liberté-1978",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "Loi informatique et liberté 1978",
-    "text": "Loi informatique et liberté 1978\n\nContexte :\n\n:drapeau: Loi Française, promulguée en 1978."
+    "text": "Loi informatique et liberté 1978\n\nContexte :\n\n🇫🇷 Loi Française, promulguée en 1978.\n🤖 Concerne les traitements automatisés de données personnelles"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#loi-informatique-et-liberté-1978-1",
+    "href": "slides/juridique-big-data/index.html#loi-informatique-et-liberté-1978-1",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Loi informatique et liberté 1978",
+    "text": "Loi informatique et liberté 1978\n\nDéclaration à la CNIL des fichiers contenant des données personnelles\n🚫 Collection de données à caractère sensible (religion, la santé, la politique, etc) interdite\nPrincipe de collecte loyale de données\nAssurer la sécurité des données collectées\nObligation d’informer les individus concernés de la collecte de leurs données\nDroit à l’accès, la modification et la suppression des données en question"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#loi-pour-une-république-numérique",
     "href": "slides/juridique-big-data/index.html#loi-pour-une-république-numérique",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "Loi pour une République Numérique",
-    "text": "Loi pour une République Numérique\n\nContexte :\n\n:drapeau: Loi Française, promulguée en 2016.\n:emojy croissance: Réponse à l’expansion rapide du numérique dans la société.\n⚖️ Equilibre entre innovation, inclusion, protection et confiance."
+    "text": "Loi pour une République Numérique\n\nContexte :\n\n🇫🇷 Loi Française, promulguée en 2016.\n📈 Réponse à l’expansion rapide du numérique dans la société.\n⚖️ Equilibre entre innovation, inclusion, protection et confiance."
   },
   {
     "objectID": "slides/juridique-big-data/index.html#circulation-des-données-et-du-savoir",
@@ -326,21 +340,42 @@
     "href": "slides/juridique-big-data/index.html#laccès-au-numérique-pour-tous",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "L’accès au numérique pour tous",
-    "text": "L’accès au numérique pour tous\n\nLe numérique dans tous les territoires :\n\nCouverture 4G + sanctions opérateurs\n\nLe numérique au bénéfice des publics fragiles\n\nhttps://www.vie-publique.fr/eclairage/20301-loi-republique-numerique-7-octobre-2016-loi-lemaire-quels-changements"
+    "text": "L’accès au numérique pour tous\n\nLe numérique dans tous les territoires :\n\nCouverture 4G + sanctions opérateurs\n\nLe numérique au bénéfice des publics fragiles"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#règlement-général-sur-la-protection-des-données-rgpd-de-lue",
     "href": "slides/juridique-big-data/index.html#règlement-général-sur-la-protection-des-données-rgpd-de-lue",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "Règlement Général sur la Protection des Données (RGPD) de l’UE :",
-    "text": "Règlement Général sur la Protection des Données (RGPD) de l’UE :\nhttps://fr.wikipedia.org/wiki/R%C3%A8glement_g%C3%A9n%C3%A9ral_sur_la_protection_des_donn%C3%A9es#\ne-privacy =&gt; loi spéciale"
+    "text": "Règlement Général sur la Protection des Données (RGPD) de l’UE :\n\nContexte :\n\n🇪🇺 Loi Européenne, promulguée en 2016.\nHarmonisation des règles de protection des données\nLe pendant de la Loi informatique et liberté 1978 française"
   },
   {
-    "objectID": "slides/juridique-big-data/index.html#big-data-act",
-    "href": "slides/juridique-big-data/index.html#big-data-act",
+    "objectID": "slides/juridique-big-data/index.html#champ-daction-du-rgpd",
+    "href": "slides/juridique-big-data/index.html#champ-daction-du-rgpd",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Big Data Act :",
-    "text": "Big Data Act :\nhttps://digital-strategy.ec.europa.eu/fr/policies/data-act"
+    "section": "Champ d’action du RGPD :",
+    "text": "Champ d’action du RGPD :\n\nTout organisme peut être concerné\nRGPD s’applique à toute organisation qui traite des données personnelles dès lors que :\n\nÉtablie sur le territoire de l’Union européenne\nActivité cible directement des résidents européens"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#data-act",
+    "href": "slides/juridique-big-data/index.html#data-act",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Data Act :",
+    "text": "Data Act :\n\nContexte :\n\n🇪🇺 Loi Européenne, adoptée en 2022.\nClarifie que peut créer de la valeur à partir des données et sous quelles conditions"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#une-répartition-équitable-de-la-valeur-issue-des-données",
+    "href": "slides/juridique-big-data/index.html#une-répartition-équitable-de-la-valeur-issue-des-données",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Une répartition équitable de la valeur issue des données",
+    "text": "Une répartition équitable de la valeur issue des données\n\nInternet of Things (IoT) génère beaucoup de données personnelles\nPotentiel économique est contrôlé par quelques acteurs dominants\nFavoriser l’ouverture des données IoT :\n\nAccès aux fournisseurs de service d’après vente"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#lever-les-obstacles-à-la-concurrence-du-cloud",
+    "href": "slides/juridique-big-data/index.html#lever-les-obstacles-à-la-concurrence-du-cloud",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Lever les obstacles à la concurrence du Cloud",
+    "text": "Lever les obstacles à la concurrence du Cloud\n\nSupprimer les principales barrières érigées par les fournisseurs dominants pour accéder à un cloud concurrent :\n\nSuppression des frais de transfert de données et de migration\n\n🎯 Préserver la liberté de choix des utilisateurs et à stimuler l’innovation sur le marché"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#le-cas-du-webscrapping",
@@ -361,7 +396,7 @@
     "href": "slides/juridique-big-data/index.html#les-données-de-carte-bancaire",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "3️⃣ Les données de carte bancaire",
-    "text": "3️⃣ Les données de carte bancaire\nI. Introduction\nDéfinition du Big Data et son importance croissante dans notre société.\nObjectif de la présentation : Examiner les questions légales soulevées par le Big Data et illustrer ces problèmes par des exemples concrets.\n\nCollecte de Données\nRisque : Consentement et Confidentialité Exemple : Une application de fitness collecte des données biométriques sans le consentement explicite de ses utilisateurs, ce qui peut violer les réglementations sur la protection des données.\nStockage de Données\n\nRisque : Sécurité des Données\n    Exemple : Une entreprise de stockage en nuage subit une violation de données, exposant ainsi les informations sensibles de ses clients, ce qui peut entraîner des poursuites pour négligence.\n\nTraitement de Données\nRisque : Discrimination et Biais Algorithmiques Exemple : Un algorithme de recrutement favorise systématiquement un certain groupe démographique, ce qui peut entraîner des accusations de discrimination.\n\nV. Partage de Données\nRisque : Partage Non Autorisé ou Illégal\n    Exemple : Une entreprise partage des données client avec des tiers sans obtenir l'autorisation appropriée, ce qui peut violer les lois sur la protection des données.\n\nAnalyse de Données et Profilage\nRisque : Violation de la Vie Privée Exemple : Une société de médias sociaux analyse les comportements en ligne de ses utilisateurs pour vendre des publicités ciblées, suscitant des préoccupations quant à la vie privée des individus.\nRèglementations Clés\n\nRèglement Général sur la Protection des Données (RGPD) de l'UE\nLoi sur la Protection de la Vie Privée en Ligne (CCPA) de Californie\nLoi sur la Protection des Données Personnelles du Brésil (LGPD)\n\nMesures de Conformité\n\nCollecte de consentements appropriés\nSécurisation des données\nÉvaluation et réduction des biais algorithmiques\nContrôles d'accès et de partage de données\n\nConclusion\nRécapitulation des risques et problèmes juridiques liés au Big Data. Appel à l’importance de la conformité réglementaire et de l’éthique dans l’utilisation du Big Data.\n\nX. Questions et Discussion"
+    "text": "3️⃣ Les données de carte bancaire"
   },
   {
     "objectID": "slides/codif-auto/index.html#context",
