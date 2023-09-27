@@ -382,7 +382,77 @@
     "href": "slides/juridique-big-data/index.html#le-cas-du-webscrapping",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "1️⃣ Le cas du webscrapping",
-    "text": "1️⃣ Le cas du webscrapping"
+    "text": "1️⃣ Le cas du webscrapping\nQuid des prérogatives de puissance publique pour recueillir de l’information ?\n\nEn Europe, la loi n° 633 du 22 avril 1941, pour la protection du droit d’auteur, prévoit une exception en cas d’utilisation d’une base de données à des fins de recherche scientifique à but non lucratif (art. 64-sexies de la loi n° 633/1941 modifié).\n\nBien que la recherche et la production statistiques ne soient pas explicitement mentionnées, ces dispositions apportent un cadre raisonnable pour permettre aux statisticiens publics d’accéder aux informations des bases de données en ligne et pour traiter ces informations afin de produire des résultats statistiques anonymisés."
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#scraping-à-linsee",
+    "href": "slides/juridique-big-data/index.html#scraping-à-linsee",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Scraping à l’INSEE",
+    "text": "Scraping à l’INSEE\nQuand ?\n\nLe web scraping est utilisé en dernier recours, l’INSEE favorisera :\n\nLes accords avec des partenaires (ex : seloger.com)\nL’utilisation d’API (ex : Qwant, Yahoo Finance)\nLes sources de données publiques\n\nLe web scraping devient cependant une source de données grandissante."
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#scraping-à-linsee-1",
+    "href": "slides/juridique-big-data/index.html#scraping-à-linsee-1",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Scraping à l’INSEE",
+    "text": "Scraping à l’INSEE\nUtilisation\nLe scraping est notamment utilisé pour le calcul des indices des prix :\n\nPrix des transports (trains via site de la SNCF, domaine maritime) ;\nPrix de produits divers (surtout de l’électronique) ;\nPrix dans le domaine de l’hôtellerie (avec booking.com). D’autres utilisations ponctuelles peuvent également être faites."
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#scraping-à-linsee-2",
+    "href": "slides/juridique-big-data/index.html#scraping-à-linsee-2",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Scraping à l’INSEE",
+    "text": "Scraping à l’INSEE\nOrganisation\n\nUn scraping encore par cas d’usage, avec une gestion plus globale en cours de maturité\n\nObjectif de mutualisation entre les équipes statistiques\nLa logique open source comme moyen de mutualisation\n\nBeaucoup de Python, un peu de R et de Java"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com",
+    "href": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Les prix dans le domaine de l’hôtellerie (Booking.com)",
+    "text": "Les prix dans le domaine de l’hôtellerie (Booking.com)\nRéférences\n\nUn travail ayant donné lieu à une publication\n\nAdrien Montbroussous, Camille Freppel and Ombéline Guillon, “Web scraping of a booking platform: exploring new data and methodology for the hotel service consumer price index”, Paper for the 17th International Conference of the Ottawa Group, Rome\n\nUne présentation plus accessible ici"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com-1",
+    "href": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com-1",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Les prix dans le domaine de l’hôtellerie (Booking.com)",
+    "text": "Les prix dans le domaine de l’hôtellerie (Booking.com)\nLe code\n\nBut : collecter davantage de données pour calculer au mieux les indices d’évolution de prix pour l’hôtellerie.\nLa partie ‘scraping’ du projet est disponible ici.\nPour plus d’informations, contacter Adrien Montbroussous (adrien.montbroussous at insee dot fr) (INSEE).\nLa conférence associée aux présentations : ici\n\nD’autres projets similaires de scraping mentionnés"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#ventes-darticles-électroniques",
+    "href": "slides/juridique-big-data/index.html#ventes-darticles-électroniques",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Ventes d’articles électroniques",
+    "text": "Ventes d’articles électroniques\n\nBut : collecter davantage de données pour calculer au mieux les indices de prix associés au secteur\n\nProjet encore à une étape expérimentale\n\nScraping de Boulanger : ici\nScraping de Rue du Commerce : ici\nPour plus d’informations, contacter Adrien Montbroussous (adrien.montbroussous at insee dot fr) (INSEE)."
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#scraping-de-la-sncf",
+    "href": "slides/juridique-big-data/index.html#scraping-de-la-sncf",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Scraping de la SNCF",
+    "text": "Scraping de la SNCF\nContexte\n\nLe calcul de l’IPC tient compte de :\n\nL’indice des prix des trains Grandes Lignes\nLe transport des passagers en train\n\nLes prix utilisés étaient fondés sur un document publié annuellement par la SNCF. Mais cette méthode :\n\nNe reflète pas les variations infra-annuelles réelles, en particulier pour les TGV\nNe reflète pas les prix effectivement payés par les consommateurs\nNe suit pas les recommandations des institutions internationales"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#scraping-de-la-sncf-1",
+    "href": "slides/juridique-big-data/index.html#scraping-de-la-sncf-1",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Scraping de la SNCF",
+    "text": "Scraping de la SNCF\nIntroduction du webscraping\n\nSous forme expérimentale depuis 2018, indices publiés depuis 2020\nCollecte quotidienne pour capter la volatilité des prix\nRequêtes effectuées pour plusieurs couples origine-destination, types de train, antériorités, profils passagers et horaires\nPrès de 23 000 requêtes par nuit\nUn important travail statistique avec les données ainsi obtenues s’ensuit.\n\nStratification en cellules homogènes de prix\nUn micro-indice calculé par cellule\nAgrégation des micro-indices avec un indice de Laspeyres arithmétique"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#scraping-de-la-sncf-2",
+    "href": "slides/juridique-big-data/index.html#scraping-de-la-sncf-2",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Scraping de la SNCF",
+    "text": "Scraping de la SNCF\nComparaison des résultats"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#dautres-ressources-pour-le-scraping-lié-à-lipc",
+    "href": "slides/juridique-big-data/index.html#dautres-ressources-pour-le-scraping-lié-à-lipc",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "D’autres ressources pour le scraping lié à l’IPC",
+    "text": "D’autres ressources pour le scraping lié à l’IPC\n\nGuidelines d’Eurostat sur le scraping lié à l’indice des prix à la consommation\n\nAnnexe 3 consacrée aux travaux de l’INSEE sur Boulanger et Rue du Commerce"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#les-données-de-téléphonie-mobiles",
