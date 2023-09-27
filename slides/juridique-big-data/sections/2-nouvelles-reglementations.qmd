@@ -58,9 +58,9 @@
 
 ## L’accès au numérique pour tous
 
-- Le numérique dans tous les territoires :
+- Le numérique dans [**tous les territoires**]{.orange} :
   - Couverture 4G + sanctions opérateurs
-- Le numérique au bénéfice des publics fragiles
+- Le numérique au bénéfice des [**publics fragiles**]{.orange}
 
 ## Règlement Général sur la Protection des Données (RGPD) de l'UE : 
 
