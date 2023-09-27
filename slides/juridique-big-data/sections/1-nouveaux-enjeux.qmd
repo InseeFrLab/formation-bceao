@@ -11,7 +11,7 @@ Application de santé collectant des données biométriques de ses utilisateurs 
 
 ## Croissance du numérique
 
-- image de l'intro pour trnasition sur le stockage
+![](img/growth.png){height="400" fig-align="center"}
 
 
 ## Stockage et sécurité des données
@@ -29,9 +29,9 @@ Application de santé collectant des données biométriques de ses utilisateurs 
 ## Open Data et secteur public
 
 - Mise à disposition [**publiquement**]{.orange} et [**gratuitement**]{.orange} des données.
-  - En France, [loi Lemaire 2016](https://) : <!-- TODO:  -->
+  - En France, [loi Lemaire 2016]([https://](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033202746)) :
   - Open Data des [**autorités publiques**]{.orange} dans un cadre reglementé.
-- Objectif double :cible: :
+- Objectif double 🎯 :
   - :one: [**Transparence**]{.orange} démocratique et [**ouverture d’information**]{.orange}.
   - :two: Favoriser l'[**innovation**]{.orange} économique et sociale.
 - L'Open Data se démocratise aussi dans le secteur privé !
@@ -43,7 +43,7 @@ Application de santé collectant des données biométriques de ses utilisateurs 
     - Développement de l'[**open source**]{.blue2} et du partage de données.
     - Nécessité d'apposer et de respecter des licences claires.
 
-- Equilibre difficile entre [**protection**]{.orange} et [**innovation**]{.orange} ⚖️ :
+- Équilibre difficile entre [**protection**]{.orange} et [**innovation**]{.orange} ⚖️ :
     - Les lois sur le [**droit d'auteur**]{.blue2} établies ont du mal à prendre en compte les nouvelles technologies
     - Développement de [**nouveaux outils**]{.blue2} d'Intelligence Artificielle (IA)
 
@@ -54,7 +54,7 @@ Application de santé collectant des données biométriques de ses utilisateurs 
 - Modèles de [**génération d'images**]{.orange}
   - Midjourney, Stable Diffusion, Dall-E
 - Modèles [**Deep fake**]{.orange} : 
-  - Exemple  <!-- TODO: trouver exemples -->
+  - FakeApp
 
 
 ## ... créant de nouvelles problématiques

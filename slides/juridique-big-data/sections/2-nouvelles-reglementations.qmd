@@ -1,21 +1,40 @@
-## 7 juin 1951
+## Loi sur le secret statistique 7 juin 1951
 
-- Contexte :
-  - :drapeau: Loi Française, promulguée en 1951.
+- [Contexte]{.orange} :
+  - 🇫🇷 Loi Française, promulguée en 1951.
+  - [**Protéger**]{.blue2} les personnes physiques et morales
+  - Garantir la [**confiance**]{.blue2} des citoyens envers l'Insee
+
+## Loi sur le secret statistique 7 juin 1951
+
+- [**Communication strictement interdite**]{.orange} des données individuelles :
+  - 🚫 Réutilisation à des fins de contrôle fiscal ou de répression économique 
+- S'applique à la [**diffusion**]{.orange} de statistiques :
+  - 🚫 Diffusion de données permettant la réidentification
+- Création du Cnis, du comité du Label et de l'ASP
 
 
 ## Loi informatique et liberté 1978
 
-- Contexte :
-  - :drapeau: Loi Française, promulguée en 1978.
+- [**Contexte**]{.orange} :
+  - 🇫🇷 Loi Française, promulguée en 1978.
+  - 🤖 Concerne les [**traitements automatisés**]{.blue2} de données personnelles
 
+## Loi informatique et liberté 1978
+
+- [**Déclaration à la CNIL**]{.orange} des fichiers contenant des données personnelles
+- 🚫 Collection de données à [**caractère sensible**]{.orange} (religion, la santé, la politique, etc) interdite
+- Principe de [**collecte loyale**]{.orange} de données
+- Assurer la [**sécurité**]{.orange} des données collectées
+- Obligation [**d’informer**]{.orange} les individus concernés de la collecte de leurs données
+- Droit à [**l’accès**]{.orange}, la [**modification**]{.orange} et la [**suppression**]{.orange} des données en question
 
 ## Loi pour une République Numérique
 
-- Contexte :
-  - :drapeau: Loi Française, promulguée en 2016.
-  - :emojy croissance: Réponse à l'expansion rapide du numérique dans la société.
-  - ⚖️ Equilibre entre innovation, inclusion, protection et confiance.
+- [**Contexte**]{.orange} :
+  - 🇫🇷 Loi Française, promulguée en 2016.
+  - 📈 Réponse à l'expansion rapide du numérique dans la société.
+  - ⚖️ Equilibre entre [**innovation**]{.blue2}, [**inclusion**]{.blue2}, [**protection**]{.blue2} et [**confiance**]{.blue2}.
 
 ## Circulation des données et du savoir
 
@@ -43,15 +62,36 @@
   - Couverture 4G + sanctions opérateurs
 - Le numérique au bénéfice des publics fragiles
 
-https://www.vie-publique.fr/eclairage/20301-loi-republique-numerique-7-octobre-2016-loi-lemaire-quels-changements
-
 ## Règlement Général sur la Protection des Données (RGPD) de l'UE : 
 
-https://fr.wikipedia.org/wiki/R%C3%A8glement_g%C3%A9n%C3%A9ral_sur_la_protection_des_donn%C3%A9es#
+- [**Contexte**]{.orange} :
+  - 🇪🇺 Loi Européenne, promulguée en 2016.
+  - [**Harmonisation**]{.blue2} des règles de protection des données
+  - Le pendant de la Loi informatique et liberté 1978 française
 
-e-privacy => loi spéciale
+## Champ d'action du RGPD :
 
-## Big Data Act : 
+- [**Tout organisme**]{.orange} peut être concerné 
+- RGPD s'applique à toute organisation qui traite des [**données personnelles**]{.orange} dès lors que :
+  - Établie sur le [**territoire de l’Union européenne**]{.blue2}
+  - Activité cible directement des [**résidents européens**]{.blue2}
 
-https://digital-strategy.ec.europa.eu/fr/policies/data-act
+## Data Act : 
 
+- [**Contexte**]{.orange} :
+  - 🇪🇺 Loi Européenne, adoptée en 2022.
+  - Clarifie que peut créer de la valeur à partir des données et sous quelles conditions
+
+## Une répartition équitable de la valeur issue des données 
+
+- [**Internet of Things**]{.orange}  (IoT) génère beaucoup de données personnelles
+- Potentiel économique est contrôlé par quelques [**acteurs dominants**]{.orange} 
+- Favoriser l'[**ouverture des données**]{.orange} IoT :
+  - Accès aux fournisseurs de service d'après vente
+  
+
+## Lever les obstacles à la concurrence du Cloud
+
+- Supprimer les principales [**barrières**]{.orange}  érigées par les fournisseurs dominants pour accéder à un cloud concurrent :
+  - Suppression des [**frais de transfert**]{.blue2}  de données et de migration
+- 🎯 Préserver la [**liberté de choix**]{.orange}  des utilisateurs et à stimuler l'[**innovation**]{.orange}  sur le marché

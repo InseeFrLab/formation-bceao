@@ -2,7 +2,7 @@
 title: "Aspects juridiques et réglementaires du big data : un retour d'expérience"
 subtitle: |
   **[BCEAO - Jour 4]{.orange}**
-author: "[Romain Avouac](https://github.com/avouacr), [Thomas Faria](https://github.com/ThomasFaria), [Antoine Palazzolo](https://github.com/antoine-palazz)"
+author: "[Romain Avouac](https://github.com/avouacr), [Thomas Faria](https://github.com/ThomasFaria)"
 date: "09/28/2023"
 date-format: "D MMMM YYYY"
 slide-number: true
@@ -43,80 +43,3 @@ execute:
 # :three: Retour d'expériences à l'Insee
 
 {{< include sections/3-retex-insee.qmd >}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-I. Introduction
-
-    Définition du Big Data et son importance croissante dans notre société.
-    Objectif de la présentation : Examiner les questions légales soulevées par le Big Data et illustrer ces problèmes par des exemples concrets.
-
-II. Collecte de Données
-
-    Risque : Consentement et Confidentialité
-        Exemple : Une application de fitness collecte des données biométriques sans le consentement explicite de ses utilisateurs, ce qui peut violer les réglementations sur la protection des données.
-
-III. Stockage de Données
-
-    Risque : Sécurité des Données
-        Exemple : Une entreprise de stockage en nuage subit une violation de données, exposant ainsi les informations sensibles de ses clients, ce qui peut entraîner des poursuites pour négligence.
-
-IV. Traitement de Données
-
-    Risque : Discrimination et Biais Algorithmiques
-        Exemple : Un algorithme de recrutement favorise systématiquement un certain groupe démographique, ce qui peut entraîner des accusations de discrimination.
-
-V. Partage de Données
-
-    Risque : Partage Non Autorisé ou Illégal
-        Exemple : Une entreprise partage des données client avec des tiers sans obtenir l'autorisation appropriée, ce qui peut violer les lois sur la protection des données.
-
-VI. Analyse de Données et Profilage
-
-    Risque : Violation de la Vie Privée
-        Exemple : Une société de médias sociaux analyse les comportements en ligne de ses utilisateurs pour vendre des publicités ciblées, suscitant des préoccupations quant à la vie privée des individus.
-
-VII. Règlementations Clés
-
-    Règlement Général sur la Protection des Données (RGPD) de l'UE
-    Loi sur la Protection de la Vie Privée en Ligne (CCPA) de Californie
-    Loi sur la Protection des Données Personnelles du Brésil (LGPD)
-
-VIII. Mesures de Conformité
-
-    Collecte de consentements appropriés
-    Sécurisation des données
-    Évaluation et réduction des biais algorithmiques
-    Contrôles d'accès et de partage de données
-
-IX. Conclusion
-
-    Récapitulation des risques et problèmes juridiques liés au Big Data.
-    Appel à l'importance de la conformité réglementaire et de l'éthique dans l'utilisation du Big Data.
-
-X. Questions et Discussion
-
-
-
-
-
