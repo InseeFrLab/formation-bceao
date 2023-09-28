@@ -351,9 +351,14 @@
 <ul>
 <li>Nous ne sommes pas des <span class="orange"><strong>experts juridiques</strong></span>.</li>
 <li>Cette présentation ne vise qu’à introduire des concepts généraux.</li>
-<li>❓ Pour des questions juridiques précises, veuillez contacter l’Unité Affaires Juridiques et Contentieuses (UAJC) :
+<li>❓ Pour des questions juridiques précises, veuillez contacter l’<span class="orange"><strong>Unité Affaires Juridiques et Contentieuses</strong></span> (UAJC) :
 <ul>
-<li>Dirigée par Patrick Redor à <span class="orange">patrick.redor@insee.fr</span></li>
+<li>Dirigée par Patrick Redor à <script type="text/javascript">
+<!--
+h='&#x69;&#110;&#x73;&#x65;&#x65;&#46;&#102;&#114;';a='&#64;';n='&#112;&#x61;&#116;&#114;&#x69;&#x63;&#x6b;&#46;&#114;&#x65;&#100;&#x6f;&#114;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>patrick.redor at insee dot fr</noscript></li>
 </ul></li>
 </ul>
 </section>
@@ -638,63 +643,178 @@
 </section>
 <section id="le-cas-du-webscrapping" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2><span class="emoji" data-emoji="one">1️⃣</span> Le cas du webscrapping</h2>
-<p>Quid des prérogatives de puissance publique pour recueillir de l’information ?</p>
 <ul>
-<li>En Europe, la <a href="https://wipolex-res.wipo.int/edocs/lexdocs/laws/fr/it/it099fr.html">loi n° 633 du 22 avril 1941</a>, pour la protection du droit d’auteur, prévoit une exception en cas d’utilisation d’une base de données à des fins de recherche scientifique à but non lucratif (art. 64-sexies de la loi n° 633/1941 modifié).
+<li><span class="orange"><strong>Webscraping</strong></span> : techniques d’extraction de contenu sur des sites internet.</li>
+<li>Usage de <span class="orange"><strong>bots</strong></span> pour collecter ces contenus automatiquement.</li>
+</ul>
+</section>
+<section id="le-webscraping-est-ce-légal" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Le webscraping, est-ce légal ?</h2>
 <ul>
-<li>Bien que la recherche et la production statistiques ne soient pas explicitement mentionnées, ces dispositions apportent un cadre raisonnable pour permettre aux statisticiens publics d’accéder aux informations des bases de données en ligne et pour traiter ces informations afin de produire des résultats statistiques anonymisés.</li>
+<li>Le webscraping en lui-même n’est pas une pratique illégale …
+<ul>
+<li>… Mais l’utilisation faite des données scrapées peut être <span class="blue2"><strong>soumise à réglementation</strong></span></li>
+<li>Ces règles dépendent alors du [<strong>pays</strong>] dans lequel on se trouve ainsi que des <span class="blue2"><strong>données scrapées</strong></span></li>
 </ul></li>
+</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Attention</strong></p>
+</div>
+<div class="callout-content">
+<p>Diffuser ou commercialiser des données scrapées ou un quelconque travail réutilisant ces données n’est pas sans conséquence.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="une-frontière-floue" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Une frontière floue</h2>
+<ul>
+<li><span class="orange"><strong>Peu de cadre juridique</strong></span> sur le webscrapping et différent par pays.
+<ul>
+<li>Mais la <span class="blue2"><strong>réutilisation</strong></span> des données est encadrée (<span class="blue2"><strong>RGPD</strong></span>).</li>
+</ul></li>
+<li>Résultats différents sur les cas portés en <span class="orange"><strong>justice</strong></span>:
+<ul>
+<li><a href="">https://devm.io/law-net-culture/data-scraping-cases-165385</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="une-pratique-pourtant-très-répandue" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Une pratique pourtant très répandue</h2>
+<ul>
+<li>Cas d’usage très <span class="orange"><strong>nombreux</strong></span>, même à l’Insee !</li>
+<li><span class="orange"><strong>Pas de concensus</strong></span> sur la légalité de la pratique.
+<ul>
+<li>Quelques discussions sur le sujet : <a href="https://www.imperva.com/blog/is-web-scraping-illegal/">Imperva</a>, <a href="https://islean-consulting.fr/fr/transformation-digitale/scraping-pages-web-legal/">Islean Consulting</a>, <a href="https://techcrunch.com/2022/04/18/web-scraping-legal-court/">TechCrunch</a>…</li>
+</ul></li>
+</ul>
+</section>
+<section id="les-sites-se-protègent-aussi-eux-mêmes" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Les sites se protègent aussi eux-mêmes</h2>
+<ul>
+<li>Éviter la <span class="orange"><strong>réutilisation</strong></span> de leurs contenus par des concurrents et lutter contre l’<span class="orange"><strong>espionnage</strong></span>.</li>
+<li>Blocage des <span class="orange"><strong>bots</strong></span> (ralentissement du site)</li>
+</ul>
+</section>
+<section id="les-méthodes-de-protection" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Les méthodes de protection</h2>
+<ol type="1">
+<li>Mise en place de <span class="orange"><strong>conditions d’utilisation</strong></span> contraignantes</li>
+<li>Bloquer les <span class="orange"><strong>adresses IP suspectes</strong></span></li>
+<li><span class="orange"><strong>Renvoyer de fausses données</strong></span></li>
+<li><span class="orange"><strong>Limiter les requêtes</strong></span> ou la bande passante consommée par une même source</li>
+<li><span class="orange"><strong>Modifier régulièrement le format <code>HTML</code></strong></span></li>
+<li>Utiliser des <span class="orange"><strong>CAPTCHAs</strong></span> lorsqu’une activité suspecte est repérée</li>
+<li>Créer des pages<span class="orange"><strong>Honeypot</strong></span></li>
+<li>Nécessiter une <span class="orange"><strong>identification</strong></span> pour accéder au site</li>
+</ol>
+</section>
+<section id="les-limites-du-webscraping" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Les limites du webscraping</h2>
+<ul>
+<li>La <span class="orange"><strong>qualité</strong></span> des données souvent douteuse.</li>
+<li>Besoin de contrecarrer les <span class="orange"><strong>protections</strong></span> :
+<ul>
+<li><span class="blue2"><strong>Automatisation</strong></span> compliquée</li>
+<li>Question sur la <span class="blue2"><strong>pérennité</strong></span> de la collecte</li>
+</ul></li>
+<li>Les risques <span class="orange"><strong>légaux</strong></span></li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Remarque</strong></p>
+</div>
+<div class="callout-content">
+<p>Il est préférable de privilégier d’autres modes d’accès aux données (API) lorsque cela est possible.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="les-guidelines-du-système-statistique-européen" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Les guidelines du Système Statistique Européen</h2>
+<h4 data-background-image="background.svg" data-background-size="contain" id="transparence"><span class="orange"><strong>Transparence</strong></span></h4>
+<ul>
+<li><span class="blue2"><strong>Publier</strong></span> la liste des collectes de données par scraping de l’INS</li>
+<li><span class="blue2"><strong>Informer</strong></span> spécifiquement le site concerné</li>
+<li><span class="blue2"><strong>S’identifier</strong></span> auprès du site lors de l’opération de scraping</li>
+</ul>
+</section>
+<section id="les-guidelines-du-système-statistique-européen-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Les guidelines du Système Statistique Européen</h2>
+<h4 data-background-image="background.svg" data-background-size="contain" id="minimiser-limpact"><span class="orange"><strong>Minimiser l’impact</strong></span></h4>
+<ul>
+<li><span class="blue2"><strong>Limiter les requêtes</strong></span> effectuées au minimum requis</li>
+<li>Privilégier les <span class="blue2"><strong>heures creuses</strong></span> du site</li>
+<li><span class="blue2"><strong>Étaler les requêtes</strong></span> dans le temps</li>
+</ul>
+</section>
+<section id="les-guidelines-du-système-statistique-européen-2" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Les guidelines du Système Statistique Européen</h2>
+<h4 data-background-image="background.svg" data-background-size="contain" id="confiance"><span class="orange"><strong>Confiance</strong></span></h4>
+<ul>
+<li><span class="blue2"><strong>Favoriser les échanges</strong></span> avec les propriétaires des sites : partenariats, échanges de données, requêtes d’API…</li>
+<li><span class="blue2"><strong>Se plier aux conditions d’utilisation</strong></span> des sites concernés</li>
+<li>Manipuler de façon sécurisée les données scrapées, notamment les données personnelles i.e.&nbsp;<span class="blue2"><strong>respecter le RGPD</strong></span></li>
 </ul>
 </section>
 <section id="scraping-à-linsee" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Scraping à l’INSEE</h2>
 <h4 data-background-image="background.svg" data-background-size="contain" id="quand">Quand ?</h4>
 <ul>
-<li>Le web scraping est utilisé en <strong>dernier recours</strong>, l’INSEE favorisera :
+<li>Le webscraping est utilisé en <span class="orange"><strong>dernier recours</strong></span>, l’INSEE favorisera :
 <ul>
 <li>Les <span class="blue2"><strong>accords</strong></span> avec des partenaires (ex : seloger.com)</li>
 <li>L’utilisation d’<span class="blue2"><strong>API</strong></span> (ex : Qwant, Yahoo Finance)</li>
 <li>Les sources de <span class="blue2"><strong>données publiques</strong></span></li>
 </ul></li>
-<li>Le web scraping devient cependant une source de données grandissante.</li>
+<li>Le webscraping devient cependant une source de données <span class="orange"><strong>grandissante</strong></span>.</li>
 </ul>
 </section>
 <section id="scraping-à-linsee-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Scraping à l’INSEE</h2>
-<h4 data-background-image="background.svg" data-background-size="contain" id="utilisation">Utilisation</h4>
+<h4 data-background-image="background.svg" data-background-size="contain" id="utilisation"><span class="orange">Utilisation</span></h4>
 <p>Le scraping est notamment utilisé pour le calcul des <span class="blue2"><strong>indices des prix</strong></span> :</p>
 <ul>
-<li>Prix des <strong>transports</strong> (trains via site de la <code>SNCF</code>, domaine maritime) ;</li>
-<li>Prix de <strong>produits divers</strong> (surtout de l’électronique) ;</li>
-<li>Prix dans le domaine de l’<strong>hôtellerie</strong> (avec <code>booking.com</code>). D’autres utilisations ponctuelles peuvent également être faites.</li>
+<li>Prix des <span class="orange"><strong>transports</strong></span> (trains via site de la <code>SNCF</code>, domaine maritime) ;</li>
+<li>Prix de <span class="blue2"><strong>produits divers</strong></span> (surtout de l’électronique) ;</li>
+<li>Prix dans le domaine de l’<span class="blue2"><strong>hôtellerie</strong></span> (avec <code>booking.com</code>). D’autres utilisations ponctuelles peuvent également être faites.</li>
 </ul>
 </section>
 <section id="scraping-à-linsee-2" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Scraping à l’INSEE</h2>
-<h4 data-background-image="background.svg" data-background-size="contain" id="organisation">Organisation</h4>
+<h4 data-background-image="background.svg" data-background-size="contain" id="organisation"><span class="orange">Organisation</span></h4>
 <ul>
 <li>Un scraping encore par cas d’usage, avec une gestion plus globale en cours de maturité
 <ul>
-<li>Objectif de mutualisation entre les équipes statistiques</li>
-<li>La logique open source comme moyen de mutualisation</li>
+<li>Objectif de <span class="orange"><strong>mutualisation</strong></span> entre les équipes statistiques</li>
+<li>La logique <span class="orange"><strong>open source</strong></span> comme moyen de mutualisation</li>
 </ul></li>
 <li>Beaucoup de <code>Python</code>, un peu de <code>R</code> et de <code>Java</code></li>
 </ul>
 </section>
 <section id="les-prix-dans-le-domaine-de-lhôtellerie-booking.com" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Les prix dans le domaine de l’hôtellerie (<code>Booking.com</code>)</h2>
-<h4 data-background-image="background.svg" data-background-size="contain" id="références">Références</h4>
+<h4 data-background-image="background.svg" data-background-size="contain" id="références"><span class="orange">Références</span></h4>
 <ul>
 <li>Un travail ayant donné lieu à une <a href="https://www.ottawagroup.org/Ottawa/ottawagroup.nsf/4a256353001af3ed4b2562bb00121564/90eefd961765454eca25886a00042203/$FILE/Web%20scraping%20of%20booking.com_Paper.pdf">publication</a>
 <ul>
-<li>Adrien <span class="blue2">Montbroussous</span>, Camille <span class="blue2">Freppel</span> and Ombéline <span class="blue2">Guillon</span>, <em>“Web scraping of a booking platform: exploring new data and methodology for the hotel service consumer price index”</em>, <em>Paper for the 17th International Conference of the Ottawa Group, Rome</em></li>
+<li>Adrien <span class="blue2">Montbroussous</span>, Camille <span class="blue2">Freppel</span> and Ombéline <span class="blue2">Guillon</span>, <em>“webscraping of a booking platform: exploring new data and methodology for the hotel service consumer price index”</em>, <em>Paper for the 17th International Conference of the Ottawa Group, Rome</em></li>
 </ul></li>
 <li>Une présentation plus accessible <a href="http://www.jms-insee.fr/2022/S14_1_PPT_MONTBROUSSOUS_JMS2022.pdf">ici</a></li>
 </ul>
 </section>
 <section id="les-prix-dans-le-domaine-de-lhôtellerie-booking.com-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Les prix dans le domaine de l’hôtellerie (<code>Booking.com</code>)</h2>
-<h4 data-background-image="background.svg" data-background-size="contain" id="le-code">Le code</h4>
+<h4 data-background-image="background.svg" data-background-size="contain" id="le-code"><span class="orange">Le code</span></h4>
 <ul>
 <li><span class="blue2"><strong>But</strong></span> : collecter davantage de données pour calculer au mieux les indices d’évolution de prix pour l’hôtellerie.</li>
 <li>La partie ‘scraping’ du projet est disponible <a href="https://git.lab.sspcloud.fr/methodo-ipc/webscraping-hotel">ici</a>.</li>
@@ -712,10 +832,11 @@ document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+'&#x4
 </section>
 <section id="ventes-darticles-électroniques" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Ventes d’articles électroniques</h2>
+<h4 data-background-image="background.svg" data-background-size="contain" id="références-1"><span class="orange">Références</span></h4>
 <ul>
 <li><span class="blue2"><strong>But</strong></span> : collecter davantage de données pour calculer au mieux les indices de prix associés au secteur
 <ul>
-<li>Projet encore à une étape expérimentale</li>
+<li>Projet encore à une étape <span class="blue2"><strong>expérimentale</strong></span></li>
 </ul></li>
 <li>Scraping de <a href="https://www.boulanger.com/">Boulanger</a> : <a href="https://git.lab.sspcloud.fr/methodo-ipc/webscraping-biens-electroniques/-/tree/master/boulanger">ici</a></li>
 <li>Scraping de <a href="https://www.rueducommerce.fr/">Rue du Commerce</a> : <a href="https://git.lab.sspcloud.fr/methodo-ipc/webscraping-biens-electroniques/-/tree/master/rue-du-commerce">ici</a></li>
@@ -725,53 +846,6 @@ h='&#x69;&#110;&#x73;&#x65;&#x65;&#46;&#102;&#114;';a='&#64;';n='&#x61;&#100;&#1
 document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+'&#x41;&#100;&#114;&#x69;&#x65;&#110;&#32;&#x4d;&#x6f;&#110;&#116;&#98;&#114;&#x6f;&#x75;&#x73;&#x73;&#x6f;&#x75;&#x73;'+'<\/'+'a'+'>');
 // -->
 </script><noscript>Adrien Montbroussous (adrien.montbroussous at insee dot fr)</noscript> (INSEE).</li>
-</ul>
-</section>
-<section id="scraping-de-la-sncf" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
-<h2>Scraping de la SNCF</h2>
-<h4 data-background-image="background.svg" data-background-size="contain" id="contexte">Contexte</h4>
-<ul>
-<li>Le calcul de l’IPC tient compte de :
-<ul>
-<li>L’indice des prix des trains Grandes Lignes</li>
-<li>Le transport des passagers en train</li>
-</ul></li>
-<li>Les prix utilisés étaient fondés sur un document publié annuellement par la SNCF. Mais cette méthode :
-<ul>
-<li>Ne reflète pas les variations infra-annuelles réelles, en particulier pour les TGV</li>
-<li>Ne reflète pas les prix effectivement payés par les consommateurs</li>
-<li>Ne suit pas les recommandations des institutions internationales</li>
-</ul></li>
-</ul>
-</section>
-<section id="scraping-de-la-sncf-1" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
-<h2>Scraping de la SNCF</h2>
-<h4 data-background-image="background.svg" data-background-size="contain" id="introduction-du-webscraping">Introduction du webscraping</h4>
-<ul>
-<li>Sous forme expérimentale depuis 2018, indices publiés depuis 2020</li>
-<li>Collecte quotidienne pour capter la volatilité des prix</li>
-<li>Requêtes effectuées pour plusieurs couples origine-destination, types de train, antériorités, profils passagers et horaires</li>
-<li>Près de 23 000 requêtes par nuit</li>
-<li>Un important travail statistique avec les données ainsi obtenues s’ensuit.
-<ul>
-<li>Stratification en cellules homogènes de prix</li>
-<li>Un micro-indice calculé par cellule</li>
-<li>Agrégation des micro-indices avec un indice de Laspeyres arithmétique</li>
-</ul></li>
-</ul>
-</section>
-<section id="scraping-de-la-sncf-2" class="slide level2 smaller" data-background-image="background.svg" data-background-size="contain">
-<h2>Scraping de la SNCF</h2>
-<h4 data-background-image="background.svg" data-background-size="contain" id="comparaison-des-résultats">Comparaison des résultats</h4>
-
-<img data-src="img/scraping_sncf.png" class="r-stretch quarto-figure-center"></section>
-<section id="dautres-ressources-pour-le-scraping-lié-à-lipc" class="slide level2" data-background-image="background.svg" data-background-size="contain">
-<h2>D’autres ressources pour le scraping lié à l’<code>IPC</code></h2>
-<ul>
-<li><a href="https://ec.europa.eu/eurostat/documents/272892/12032198/Guidelines-web-scraping-HICP-11-2020.pdf/">Guidelines d’Eurostat</a> sur le scraping lié à l’indice des prix à la consommation
-<ul>
-<li>Annexe 3 consacrée aux travaux de l’INSEE sur Boulanger et Rue du Commerce</li>
-</ul></li>
 </ul>
 </section>
 <section id="les-données-de-téléphonie-mobiles" class="slide level2" data-background-image="background.svg" data-background-size="contain">
