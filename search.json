@@ -935,7 +935,7 @@
     "href": "slides/juridique-big-data/index.html#scraping-à-linsee-1",
     "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
     "section": "Scraping à l’INSEE",
-    "text": "Scraping à l’INSEE\nUtilisation\nLe scraping est notamment utilisé pour le calcul des indices des prix :\n\nPrix des transports (trains via site de la SNCF, domaine maritime) ;\nPrix de produits divers (surtout de l’électronique) ;\nPrix dans le domaine de l’hôtellerie (avec booking.com). D’autres utilisations ponctuelles peuvent également être faites."
+    "text": "Scraping à l’INSEE\nUtilisation\nLe scraping est notamment utilisé pour le calcul des indices des prix :\n\nPrix des transports (trains via site de la SNCF, domaine maritime)\nPrix de produits divers (surtout de l’électronique)\nPrix dans le domaine de l’hôtellerie (avec booking.com)\nD’autres utilisations ponctuelles peuvent également être faites"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#scraping-à-linsee-2",
