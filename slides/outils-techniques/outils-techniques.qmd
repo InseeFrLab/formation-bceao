@@ -1,7 +1,7 @@
 ---
 title: "Besoins techniques et organisationnels"
 subtitle: |
-  **[BCEAO - Jour 2]{.orange}**
+  **[BCEAO - Jour 1]{.orange}**
 author: "[Romain Avouac](https://github.com/avouacr), [Thomas Faria](https://github.com/ThomasFaria)"
 date: "09/25/2023"
 date-format: "D MMMM YYYY"

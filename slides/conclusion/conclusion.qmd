@@ -1,0 +1,68 @@
+---
+title: Conclusion et discussion
+subtitle: |
+  **[BCEAO - Jour 4]{.orange}**
+author: "[Romain Avouac](https://github.com/avouacr), [Thomas Faria](https://github.com/ThomasFaria)"
+date: "09/25/2023"
+date-format: "D MMMM YYYY"
+slide-number: true
+lang: fr-FR
+# for blind readers:
+slide-tone: false
+chalkboard: # press the B key to toggle chalkboard
+  theme: whiteboard
+# uncomment to use the multiplex mode:
+# multiplex: true
+format:
+  onyxia-revealjs:
+    output-file: index.html
+controls: true
+css: ../custom.css
+from: markdown+emoji
+ascii: true
+execute: 
+  echo: false
+  warning: false
+---
+
+# Conclusion
+
+## Big data : une définition simple...
+
+## Mais des 
+
+## Retours d'expérience de l'Insee
+
+- Des sources et des projets très variés
+- Mais des principes généraux
+
+## Source et pérenniser
+
+- Nouer des partenariats
+- Ressources ESSNET Big Data I et II
+
+## Infrastructure
+
+- Visio avec DIIT
+
+## Des outils à adapter
+
+- TP outils big data
+
+## De statisticien à data scientist
+
+- TP mise en prod
+- Formations : 
+  - écoles de formation
+  - catalogue SSP Cloud
+- Labs
+
+## Cadre juridique
+
+# Discussion
+
+- Retours sur la formation : durée, format des supports, répartition théorie/pratique, etc.
+- Sujets où besoins de documentation (SIREN)
+- Sujets prioritaires pour la BCEAO
+- Appui technique : lien avec la DSI Insee et le projet Onyxia
+- Perspectives de collaboration : modalités, fréquences, ..
