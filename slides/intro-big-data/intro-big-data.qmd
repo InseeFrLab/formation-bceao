@@ -31,11 +31,11 @@ execute:
 
 - [**Thomas Faria**]{.orange}
   - [**SSP Lab**]{.blue2} : innovation en méthodologie statistique
-  - [thomas.faria@insee.fr](thomas.faria@insee.fr)
+  - [thomas.faria@insee.fr](mailto:thomas.faria@insee.fr)
 
 - [**Romain Avouac**]{.orange}
   - [**DIIT**]{.blue2} : innovation informatique
-  - [romain.avouac@insee.fr](romain.avouac@insee.fr)
+  - [romain.avouac@insee.fr](mailto:romain.avouac@insee.fr)
 
 ## Contexte de cette formation
 

@@ -1,101 +1,146 @@
 ## :one: Le cas du webscrapping
 
-Quid des prérogatives de puissance publique pour recueillir de l'information ?
+- [**Webscraping**]{.orange} : techniques d'extraction de contenu sur des sites internet.
+- Usage de [**bots**]{.orange} pour collecter ces contenus automatiquement.
 
-- En Europe, la [loi n° 633 du 22 avril 1941](https://wipolex-res.wipo.int/edocs/lexdocs/laws/fr/it/it099fr.html), pour la protection du droit d’auteur, prévoit une exception en cas d’utilisation d’une base de données à des fins de recherche scientifique à but non lucratif (art. 64-sexies de la loi n° 633/1941 modifié).
-    + Bien que la recherche et la production statistiques ne soient pas explicitement mentionnées, ces dispositions apportent un cadre raisonnable pour permettre aux statisticiens publics d’accéder aux informations des bases de données en ligne et pour traiter ces informations afin de produire des résultats statistiques anonymisés.
+## Le webscraping, est-ce légal ?
+
+- Le webscraping en lui-même n'est pas une pratique illégale ...
+    - ... Mais l'utilisation faite des données scrapées peut être [**soumise à réglementation**]{.blue2}
+    - Ces règles dépendent alors du [**pays**] dans lequel on se trouve ainsi que des [**données scrapées**]{.blue2}
+
+::: {.callout-important}
+## Attention
+
+Diffuser ou commercialiser des données scrapées ou un quelconque travail réutilisant ces données n'est pas sans conséquence.
+:::
+
+## Une frontière floue
+
+- [**Peu de cadre juridique**]{.orange} sur le webscrapping et différent par pays. 
+  - Mais la [**réutilisation**]{.blue2} des données est encadrée ([**RGPD**]{.blue2}).
+- Résultats différents sur les cas portés en [**justice**]{.orange}:
+  - [https://devm.io/law-net-culture/data-scraping-cases-165385]()
+
+
+## Une pratique pourtant très répandue
+
+- Cas d'usage très [**nombreux**]{.orange}, même à l'Insee !
+- [**Pas de concensus**]{.orange} sur la légalité de la pratique.
+    - Quelques discussions sur le sujet : [Imperva](https://www.imperva.com/blog/is-web-scraping-illegal/), [Islean Consulting](https://islean-consulting.fr/fr/transformation-digitale/scraping-pages-web-legal/), [TechCrunch](https://techcrunch.com/2022/04/18/web-scraping-legal-court/)...
+
+## Les sites se protègent aussi eux-mêmes
+
+- Éviter la [**réutilisation**]{.orange} de leurs contenus par des concurrents et lutter contre l'[**espionnage**]{.orange}.
+- Blocage des [**bots**]{.orange} (ralentissement du site)
+
+## Les méthodes de protection
+
+1. Mise en place de [**conditions d'utilisation**]{.orange} contraignantes
+2. Bloquer les [**adresses IP suspectes**]{.orange}
+3. [**Renvoyer de fausses données**]{.orange} 
+4. [**Limiter les requêtes**]{.orange} ou la bande passante consommée par une même source
+5. [**Modifier régulièrement le format `HTML`**]{.orange}
+6. Utiliser des [**CAPTCHAs**]{.orange} lorsqu'une activité suspecte est repérée
+7. Créer des pages[**Honeypot**]{.orange}
+8. Nécessiter une [**identification**]{.orange} pour accéder au site
+
+## Les limites du webscraping
+
+- La [**qualité**]{.orange} des données souvent douteuse.
+- Besoin de contrecarrer les [**protections**]{.orange} :
+  - [**Automatisation**]{.blue2} compliquée
+  - Question sur la [**pérennité**]{.blue2} de la collecte
+- Les risques [**légaux**]{.orange}
+
+::: {.callout-tip}
+## Remarque
+
+Il est préférable de privilégier d'autres modes d'accès aux données (API) lorsque cela est possible.
+:::
+
+## Les guidelines du Système Statistique Européen
+
+#### [**Transparence**]{.orange}
+
+- [**Publier**]{.blue2} la liste des collectes de données par scraping de l'INS
+- [**Informer**]{.blue2} spécifiquement le site concerné
+- [**S'identifier**]{.blue2} auprès du site lors de l'opération de scraping
+
+## Les guidelines du Système Statistique Européen
+
+#### [**Minimiser l'impact**]{.orange}
+
+- [**Limiter les requêtes**]{.blue2} effectuées au minimum requis
+- Privilégier les [**heures creuses**]{.blue2} du site
+- [**Étaler les requêtes**]{.blue2} dans le temps
+
+## Les guidelines du Système Statistique Européen
+
+#### [**Confiance**]{.orange}
+
+- [**Favoriser les échanges**]{.blue2} avec les propriétaires des sites : partenariats, échanges de données, requêtes d'API...
+- [**Se plier aux conditions d'utilisation**]{.blue2} des sites concernés
+- Manipuler de façon sécurisée les données scrapées, notamment les données personnelles i.e. [**respecter le RGPD**]{.blue2}
+
 
 ## Scraping à l'INSEE
 
 #### Quand ? 
 
-- Le web scraping est utilisé en __dernier recours__, l'INSEE favorisera :
-    + Les [__accords__]{.blue2} avec des partenaires (ex : seloger.com)
-    + L'utilisation d'[__API__]{.blue2} (ex : Qwant, Yahoo Finance)
-    + Les sources de [__données publiques__]{.blue2}
-- Le web scraping devient cependant une source de données grandissante.
+- Le webscraping est utilisé en [**dernier recours**]{.orange}, l'INSEE favorisera :
+    - Les [**accords**]{.blue2} avec des partenaires (ex : seloger.com)
+    - L'utilisation d'[**API**]{.blue2} (ex : Qwant, Yahoo Finance)
+    - Les sources de [**données publiques**]{.blue2}
+- Le webscraping devient cependant une source de données [**grandissante**]{.orange}.
 
 ## Scraping à l'INSEE
 
-#### Utilisation
+#### [Utilisation]{.orange}
 
-Le scraping est notamment utilisé pour le calcul des [__indices des prix__]{.blue2} :
+Le scraping est notamment utilisé pour le calcul des [**indices des prix**]{.blue2} :
 
-- Prix des __transports__ (trains via site de la `SNCF`, domaine maritime) ;
-- Prix de __produits divers__ (surtout de l'électronique) ;
-- Prix dans le domaine de l'__hôtellerie__ (avec `booking.com`).
+- Prix des [**transports**]{.orange} (trains via site de la `SNCF`, domaine maritime) ;
+- Prix de [**produits divers**]{.blue2} (surtout de l'électronique) ;
+- Prix dans le domaine de l'[**hôtellerie**]{.blue2} (avec `booking.com`).
 D'autres utilisations ponctuelles peuvent également être faites.
 
 ## Scraping à l'INSEE
 
-#### Organisation
+#### [Organisation]{.orange}
 
 - Un scraping encore par cas d'usage, avec une gestion plus globale en cours de maturité
-    + Objectif de mutualisation entre les équipes statistiques
-    + La logique open source comme moyen de mutualisation
+    - Objectif de [**mutualisation**]{.orange} entre les équipes statistiques
+    - La logique [**open source**]{.orange} comme moyen de mutualisation
 - Beaucoup de `Python`, un peu de `R` et de `Java`
 
 ## Les prix dans le domaine de l'hôtellerie (`Booking.com`)
 
-#### Références
+#### [Références]{.orange}
 
 - Un travail ayant donné lieu à une [publication](https://www.ottawagroup.org/Ottawa/ottawagroup.nsf/4a256353001af3ed4b2562bb00121564/90eefd961765454eca25886a00042203/$FILE/Web%20scraping%20of%20booking.com_Paper.pdf)
-    + Adrien [Montbroussous]{.blue2}, Camille [Freppel]{.blue2} and Ombéline [Guillon]{.blue2}, *"Web scraping of a booking platform: exploring new data and methodology for the hotel service consumer price index"*, _Paper for the 17th International Conference of the Ottawa Group, Rome_
+    - Adrien [Montbroussous]{.blue2}, Camille [Freppel]{.blue2} and Ombéline [Guillon]{.blue2}, *"webscraping of a booking platform: exploring new data and methodology for the hotel service consumer price index"*, _Paper for the 17th International Conference of the Ottawa Group, Rome_
 - Une présentation plus accessible [ici](http://www.jms-insee.fr/2022/S14_1_PPT_MONTBROUSSOUS_JMS2022.pdf)
 
 ## Les prix dans le domaine de l'hôtellerie (`Booking.com`)
 
-#### Le code
+#### [Le code]{.orange}
 
-- [__But__]{.blue2} : collecter davantage de données pour calculer au mieux les indices d'évolution de prix pour l'hôtellerie.
+- [**But**]{.blue2} : collecter davantage de données pour calculer au mieux les indices d'évolution de prix pour l'hôtellerie.
 - La partie 'scraping' du projet est disponible [ici](https://git.lab.sspcloud.fr/methodo-ipc/webscraping-hotel).
 - Pour plus d'informations, contacter [Adrien Montbroussous](mailto:adrien.montbroussous@insee.fr) (INSEE).
 - La conférence associée aux présentations : [ici](https://www.ottawagroup.org/ottawa/ottawagroup.nsf/4a256353001af3ed4b2562bb00121564/c7e600e0bec85d82ca25888400059a93?OpenDocument#Meeting%2017%20Rome)
-    + D'autres projets similaires de scraping mentionnés
+    - D'autres projets similaires de scraping mentionnés
 
 ## Ventes d'articles électroniques
 
-- [__But__]{.blue2} : collecter davantage de données pour calculer au mieux les indices de prix associés au secteur
-    + Projet encore à une étape expérimentale
+#### [Références]{.orange}
+
+- [**But**]{.blue2} : collecter davantage de données pour calculer au mieux les indices de prix associés au secteur
+    - Projet encore à une étape [**expérimentale**]{.blue2}
 - Scraping de [Boulanger](https://www.boulanger.com/) : [ici](https://git.lab.sspcloud.fr/methodo-ipc/webscraping-biens-electroniques/-/tree/master/boulanger)
 - Scraping de [Rue du Commerce](https://www.rueducommerce.fr/) : [ici](https://git.lab.sspcloud.fr/methodo-ipc/webscraping-biens-electroniques/-/tree/master/rue-du-commerce)
 - Pour plus d'informations, contacter [Adrien Montbroussous](mailto:adrien.montbroussous@insee.fr) (INSEE).
-
-## Scraping de la SNCF {.smaller}
-
-#### Contexte
-
-- Le calcul de l'IPC tient compte de :
-    + L’indice des prix des trains Grandes Lignes
-    + Le transport des passagers en train
-- Les prix utilisés étaient fondés sur un document publié annuellement par la SNCF. Mais cette méthode :
-    + Ne reflète pas les variations infra-annuelles réelles, en particulier pour les TGV
-    + Ne reflète pas les prix effectivement payés par les consommateurs
-    + Ne suit pas les recommandations des institutions internationales
-
-## Scraping de la SNCF {.smaller}
-
-#### Introduction du webscraping
-
-- Sous forme expérimentale depuis 2018, indices publiés depuis 2020
-- Collecte quotidienne pour capter la volatilité des prix
-- Requêtes effectuées pour plusieurs couples origine-destination, types de train, antériorités, profils passagers et horaires
-- Près de 23 000 requêtes par nuit
-- Un important travail statistique avec les données ainsi obtenues s'ensuit.
-    + Stratification en cellules homogènes de prix
-    + Un micro-indice calculé par cellule
-    + Agrégation des micro-indices avec un indice de Laspeyres arithmétique
-
-## Scraping de la SNCF {.smaller}
-
-#### Comparaison des résultats
-
-![](img/scraping_sncf.png){fig-align="center"}
-
-## D'autres ressources pour le scraping lié à l'`IPC`
-
-- [Guidelines d'Eurostat](https://ec.europa.eu/eurostat/documents/272892/12032198/Guidelines-web-scraping-HICP-11-2020.pdf/) sur le scraping lié à l'indice des prix à la consommation
-    + Annexe 3 consacrée aux travaux de l'INSEE sur Boulanger et Rue du Commerce
 
 
 
