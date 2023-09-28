@@ -1,787 +1,17 @@
 [
   {
-    "objectID": "slides/outils-techniques/index.html#linformatique-dans-le-ssp",
-    "href": "slides/outils-techniques/index.html#linformatique-dans-le-ssp",
-    "title": "Besoins techniques et organisationnels",
-    "section": "L’informatique dans le SSP",
-    "text": "L’informatique dans le SSP\n\nUne “communauté d’artisans”\n\nDiversité des langages de programmation\nDiversité des environnements de travail"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#le-poste-de-travail",
-    "href": "slides/outils-techniques/index.html#le-poste-de-travail",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Le poste de travail",
-    "text": "Le poste de travail\n\n\nAvantages :\n\nSimplicité\n\nInconvénients :\n\nPuissance limitée\nReproductibilité limitée\nSécurité faible"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#les-infrastructures-mutualisées-traditionnelles",
-    "href": "slides/outils-techniques/index.html#les-infrastructures-mutualisées-traditionnelles",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Les infrastructures mutualisées traditionnelles",
-    "text": "Les infrastructures mutualisées traditionnelles\n\n\nAvantages :\n\nSimplicité\nPuissance\nSécurité des données\nCouvre la majorité des usages\n\nInconvénients :\n\nReproductibilité faible\nDifficultés à innover"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#lenjeu-de-la-reproductibilité",
-    "href": "slides/outils-techniques/index.html#lenjeu-de-la-reproductibilité",
-    "title": "Besoins techniques et organisationnels",
-    "section": "L’enjeu de la reproductibilité",
-    "text": "L’enjeu de la reproductibilité\n\n\n\n\n\nSource : Peng R., Reproducible Research in Computational Science, Science (2011)"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#donner-les-moyens-dinnover",
-    "href": "slides/outils-techniques/index.html#donner-les-moyens-dinnover",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Donner les moyens d’innover",
-    "text": "Donner les moyens d’innover\n\n\nFournir des ressources adaptées aux nouveaux usages\n\nStockage adapté aux données massives et non-structurées\nOutils modernes de data science (R, Python, calcul distribué,…)\nGPUs pour l’entraînement de modèles de machine learning\n\nPasser du développement à la mise en production\n\nOutils de déploiement et d’automatisation"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#des-besoins-à-différents-niveaux",
-    "href": "slides/outils-techniques/index.html#des-besoins-à-différents-niveaux",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Des besoins à différents niveaux",
-    "text": "Des besoins à différents niveaux\n\nInfrastructure\nOutils informatiques\nChangements organisationnels"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#comment-construire-une-data-stack-pertinente",
-    "href": "slides/outils-techniques/index.html#comment-construire-une-data-stack-pertinente",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Comment construire une data stack pertinente ?",
-    "text": "Comment construire une data stack pertinente ?\n\nRépondre aux besoins des statisticiens publics\n\nRessources (stockage, GPUs, services etc.) pour l’expérimentation\nFavoriser la reproductibilité des traitements\nPermettre la mise en production\n\nChoisir des technologies à l’état de l’art\n\nFaciliter l’adoption par les statisticiens"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#notre-data-stack",
-    "href": "slides/outils-techniques/index.html#notre-data-stack",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Notre data stack",
-    "text": "Notre data stack\n\nInfrastructure cloud centralisée\nStockage objet\nConteneurisation\nPlateforme web de data science"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#infrastructure-cloud",
-    "href": "slides/outils-techniques/index.html#infrastructure-cloud",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Infrastructure cloud",
-    "text": "Infrastructure cloud\n\nPoste de travail comme point d’accès à une infrastructure centralisée de calcul\n\nEvolutivité (scaling horizontal)\nSécurité (pas de dissemination des données)\n\nOn-premise vs. full-cloud\n\nMaîtrise des coûts\nCompétences de maintenance"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#stockage-le-data-lake",
-    "href": "slides/outils-techniques/index.html#stockage-le-data-lake",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Stockage : le data lake",
-    "text": "Stockage : le data lake\n\nUn stockage peu coûteux fait pour des données\n\nvolumineuses\nbrutes\nissues de sources variées"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#le-choix-du-stockage-objet",
-    "href": "slides/outils-techniques/index.html#le-choix-du-stockage-objet",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Le choix du stockage objet",
-    "text": "Le choix du stockage objet\n\nChoix du stockage objet (type S3) vs. Hadoop\nLa co-localisation des traitements n’est plus justifiée\n\nPlus besoin de puissance/IA que de big storage\nDécouplage stockage/traitement -&gt; évolutivité\nCoûts de maintenance"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#le-choix-de-la-conteneurisation",
-    "href": "slides/outils-techniques/index.html#le-choix-de-la-conteneurisation",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Le choix de la conteneurisation",
-    "text": "Le choix de la conteneurisation\n\n\n\n\n\n\nStandard pour la data science\n\nautonomie\nreproductibilité\nscalabilité\n\nOrchestrateur : Kubernetes"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#une-plateforme-de-data-science",
-    "href": "slides/outils-techniques/index.html#une-plateforme-de-data-science",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Une plateforme de data science",
-    "text": "Une plateforme de data science\n\nLes choix techniques ne suffisent pas\n\nLes technologies cloud sont difficiles d’accès\nUne interface web comme liant technique"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#ssp-cloud-onyxia",
-    "href": "slides/outils-techniques/index.html#ssp-cloud-onyxia",
-    "title": "Besoins techniques et organisationnels",
-    "section": "SSP Cloud / Onyxia",
-    "text": "SSP Cloud / Onyxia\n\nSSP Cloud : instance publique d’Onyxia\n\nDédiée à l’expérimentation sur données ouvertes\nBase des tutoriels de cette formation\n\nOnyxia : une plateforme de data science moderne\n\nProjet open-source : https://github.com/InseeFrLab/onyxia-web\nPossibilité de créer une instance interne"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#motivation",
-    "href": "slides/outils-techniques/index.html#motivation",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Motivation",
-    "text": "Motivation\n\nUne infrastructure adaptée au big data est nécessaire.. mais pas suffisante !\nNécessité d’adapter les pratiques\n\nLangages de programmation\nFormats de données\nLibrairies informatiques spécifiques"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#langages-de-programmation",
-    "href": "slides/outils-techniques/index.html#langages-de-programmation",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Langages de programmation",
-    "text": "Langages de programmation\n\nSource"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#limites-des-formats-de-données-usuels",
-    "href": "slides/outils-techniques/index.html#limites-des-formats-de-données-usuels",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Limites des formats de données usuels",
-    "text": "Limites des formats de données usuels\n\nLes formats usuels (CSV, JSON, XML) sont inadaptés à la big data\n\nNon-compressés : human readable mais espace disque élevé\nOrientés ligne : un traitement sur une/des colonne(s) implique une lecture complète du fichier"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#formats-de-données-pour-la-big-data",
-    "href": "slides/outils-techniques/index.html#formats-de-données-pour-la-big-data",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Formats de données pour la big data",
-    "text": "Formats de données pour la big data\n\nPropriétés souhaitées\n\nOrientés colonne\nEfficients en stockage disque\nEfficients en RAM\nInteropérables et open-source\n\nFormats candidats\n\nParquet : stockage disque\nArrow : traitement en mémoire"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#modes-de-stockage",
-    "href": "slides/outils-techniques/index.html#modes-de-stockage",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Modes de stockage",
-    "text": "Modes de stockage\n\nLe stockage hybride optimise la lecture\n\nProjection (SELECT) : orientation colonne\nPredicates (WHERE) : orientation ligne\n\n\n\n\n\n\n\n\nSource"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#le-format-parquet-propriétés",
-    "href": "slides/outils-techniques/index.html#le-format-parquet-propriétés",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Le format Parquet : propriétés",
-    "text": "Le format Parquet : propriétés\n\nOrienté colonne (hybride)\n\nAdapté aux traitements analytiques\nConçu pour être écrit une fois mais lu fréquemment\n\nOptimisé\n\nCompression (jusqu’à 87 % moins d’espace qu’un CSV)\nParcours du fichier (jusqu’à 34x plus rapide qu’un CSV)\n\nInteropérable et open-source"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#le-format-parquet-partionnement",
-    "href": "slides/outils-techniques/index.html#le-format-parquet-partionnement",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Le format Parquet : partionnement",
-    "text": "Le format Parquet : partionnement\n\nDivision en blocs des données selon un critère\n\nOptimise la lecture pour certaines queries"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#traitement-en-mémoire",
-    "href": "slides/outils-techniques/index.html#traitement-en-mémoire",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Traitement en mémoire",
-    "text": "Traitement en mémoire\n\nParquet ne résout pas tout\n\nL’espace disque est optimisé\nLes données décompressées doivent passer en RAM\n\nComment analyser 100 GB de données sur un PC avec 16 GB de RAM ?"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#arrow",
-    "href": "slides/outils-techniques/index.html#arrow",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Arrow",
-    "text": "Arrow\n\nFormat de données en mémoire, orienté colonne\n\nOptimisé pour les traitements analytiques\nPas nécessaire de charger toutes les données en RAM\nInteropérable et standardisé"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#traitement-des-données-massives",
-    "href": "slides/outils-techniques/index.html#traitement-des-données-massives",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Traitement des données massives",
-    "text": "Traitement des données massives\n\nArrow ne résout pas tout\n\nLes données massives nécessitent des infrastructures big data\nLes algorithmes aussi doivent être adaptés\n\nSolution : calcul distribué"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#hadoop-mapreduce",
-    "href": "slides/outils-techniques/index.html#hadoop-mapreduce",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Hadoop MapReduce",
-    "text": "Hadoop MapReduce\n\nDéveloppé par Google (2004)\nPopularisé par l’implémentation open-source d’Hadoop"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#apache-spark",
-    "href": "slides/outils-techniques/index.html#apache-spark",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Apache Spark",
-    "text": "Apache Spark\n\nDémocratisation du calcul distribué\n\nAbstraction des opérations MapReduce\nVitesse d’exécution (RAM vs. disque)"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#en-résumé",
-    "href": "slides/outils-techniques/index.html#en-résumé",
-    "title": "Besoins techniques et organisationnels",
-    "section": "En résumé",
-    "text": "En résumé\n\nUtiliser un format de données adapté (Parquet)\nUtiliser des outils informatiques adaptés\n\nDonnées volumineuses : calcul en mémoire optimisé (Arrow / DuckDB)\nDonnées massives : calcul distribué (Spark)"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#outils-pour-la-mise-en-production",
-    "href": "slides/outils-techniques/index.html#outils-pour-la-mise-en-production",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Outils pour la mise en production",
-    "text": "Outils pour la mise en production\n\nTraitements automatisés (workflows)\n\nargo-workflow\n\nDéploiement (batch, workflow, application)\n\nKubernetes\nArgoCD"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#catalogue-de-services-donyxia",
-    "href": "slides/outils-techniques/index.html#catalogue-de-services-donyxia",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Catalogue de services d’Onyxia",
-    "text": "Catalogue de services d’Onyxia"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#labs",
-    "href": "slides/outils-techniques/index.html#labs",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Labs",
-    "text": "Labs\n\nL’innovation méthodologie ET informatique sont complémentaires\n\nPas de big data sans infrastructure adaptée\nPas de big data sans outils et algorithmes adaptés\n\nInsee : deux labs qui travaillent en synérgie\n\nSSP Lab : innovation méthodologique en data science\nDIIT : innovation informatique (Onyxia / SSP Cloud)"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#approche-mlops",
-    "href": "slides/outils-techniques/index.html#approche-mlops",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Approche MLOps",
-    "text": "Approche MLOps\n\nBesoin de trouver des organisations hybrides"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#organisation-dun-projet",
-    "href": "slides/outils-techniques/index.html#organisation-dun-projet",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Organisation d’un projet",
-    "text": "Organisation d’un projet"
-  },
-  {
-    "objectID": "slides/outils-techniques/index.html#formation",
-    "href": "slides/outils-techniques/index.html#formation",
-    "title": "Besoins techniques et organisationnels",
-    "section": "Formation",
-    "text": "Formation\n\nToutes nos formations sont open-source (catalogue)\n\nParcours de formation à R / Python\nFormation à Spark\nTutoriels de machine learning\nMLOps\netc."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#disclaimer",
-    "href": "slides/juridique-big-data/index.html#disclaimer",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "⚠️ Disclaimer ⚠️",
-    "text": "⚠️ Disclaimer ⚠️\n\nNous ne sommes pas des experts juridiques.\nCette présentation ne vise qu’à introduire des concepts généraux.\n❓ Pour des questions juridiques précises, veuillez contacter l’Unité Affaires Juridiques et Contentieuses (UAJC) :\n\nDirigée par Patrick Redor à patrick.redor@insee.fr"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#collecte-des-données",
-    "href": "slides/juridique-big-data/index.html#collecte-des-données",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Collecte des données",
-    "text": "Collecte des données\n\nNombreux acteurs privés et publics peuvent collecter des données produites directement ou indirectement par les individus.\nCollecte de données personnelles sans consentement explicite.\nPossibilité de violation de la vie privée des utilisateurs.\n➡️ Explication des motifs et intentions de collecte des données nécessaire.\n\n\n\n\n\n\n\nExemple de risque potentiel\n\n\nApplication de santé collectant des données biométriques de ses utilisateurs sans leur consentement explicite."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#croissance-du-numérique",
-    "href": "slides/juridique-big-data/index.html#croissance-du-numérique",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Croissance du numérique",
-    "text": "Croissance du numérique"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#stockage-et-sécurité-des-données",
-    "href": "slides/juridique-big-data/index.html#stockage-et-sécurité-des-données",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Stockage et sécurité des données",
-    "text": "Stockage et sécurité des données\n\nVolume des données pose la difficulté du stockage.\nCoûts d’investissement importants et marché monopolisé par les GAFAM.\nProblématique de la souveraineté numérique.\n➡️ Mesures de sécurité essentielles pour la protection des données.\n\n\n\n\n\n\n\nExemple de risque potentiel\n\n\n\nPossibilité de violation de la sécurité des données ou de partage de données avec une entité gouvernementale.\nIncendie OVH en janvier 2023."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#open-data-et-secteur-public",
-    "href": "slides/juridique-big-data/index.html#open-data-et-secteur-public",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Open Data et secteur public",
-    "text": "Open Data et secteur public\n\nMise à disposition publiquement et gratuitement des données.\n\nEn France, loi Lemaire 2016 :\nOpen Data des autorités publiques dans un cadre reglementé.\n\nObjectif double 🎯 :\n\n1️⃣ Transparence démocratique et ouverture d’information.\n2️⃣ Favoriser l’innovation économique et sociale.\n\nL’Open Data se démocratise aussi dans le secteur privé !"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#propriété-intellectuelle",
-    "href": "slides/juridique-big-data/index.html#propriété-intellectuelle",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Propriété intellectuelle",
-    "text": "Propriété intellectuelle\n\nGestion des licences ©️ :\n\nDéveloppement de l’open source et du partage de données.\nNécessité d’apposer et de respecter des licences claires.\n\nÉquilibre difficile entre protection et innovation ⚖️ :\n\nLes lois sur le droit d’auteur établies ont du mal à prendre en compte les nouvelles technologies\nDéveloppement de nouveaux outils d’Intelligence Artificielle (IA)"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#des-méthodologies-toujours-plus-innovantes",
-    "href": "slides/juridique-big-data/index.html#des-méthodologies-toujours-plus-innovantes",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Des méthodologies toujours plus innovantes…",
-    "text": "Des méthodologies toujours plus innovantes…\n\nGrands modèles de langage (LLM)\n\nChatGPT, LLama2, Bard…\n\nModèles de génération d’images\n\nMidjourney, Stable Diffusion, Dall-E\n\nModèles Deep fake :\n\nFakeApp"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#créant-de-nouvelles-problématiques",
-    "href": "slides/juridique-big-data/index.html#créant-de-nouvelles-problématiques",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "… créant de nouvelles problématiques",
-    "text": "… créant de nouvelles problématiques\n\nDéfi démocratique\nGestions des droits d’auteurs :\n\nLitige GoT-OpenAI\nPoursuites Stability AI/ Midjourney\n\nFailles de sécurité (Samsung-OpenAI)\nRéponses non sourcées\nQuid des données générées ?"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#loi-sur-le-secret-statistique-7-juin-1951",
-    "href": "slides/juridique-big-data/index.html#loi-sur-le-secret-statistique-7-juin-1951",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Loi sur le secret statistique 7 juin 1951",
-    "text": "Loi sur le secret statistique 7 juin 1951\n\nContexte :\n\n🇫🇷 Loi Française, promulguée en 1951.\nProtéger les personnes physiques et morales\nGarantir la confiance des citoyens envers l’Insee"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#loi-sur-le-secret-statistique-7-juin-1951-1",
-    "href": "slides/juridique-big-data/index.html#loi-sur-le-secret-statistique-7-juin-1951-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Loi sur le secret statistique 7 juin 1951",
-    "text": "Loi sur le secret statistique 7 juin 1951\n\nCommunication strictement interdite des données individuelles :\n\n🚫 Réutilisation à des fins de contrôle fiscal ou de répression économique\n\nS’applique à la diffusion de statistiques :\n\n🚫 Diffusion de données permettant la réidentification\n\nCréation du Cnis, du comité du Label et de l’ASP"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#loi-informatique-et-liberté-1978",
-    "href": "slides/juridique-big-data/index.html#loi-informatique-et-liberté-1978",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Loi informatique et liberté 1978",
-    "text": "Loi informatique et liberté 1978\n\nContexte :\n\n🇫🇷 Loi Française, promulguée en 1978.\n🤖 Concerne les traitements automatisés de données personnelles"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#loi-informatique-et-liberté-1978-1",
-    "href": "slides/juridique-big-data/index.html#loi-informatique-et-liberté-1978-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Loi informatique et liberté 1978",
-    "text": "Loi informatique et liberté 1978\n\nDéclaration à la CNIL des fichiers contenant des données personnelles\n🚫 Collection de données à caractère sensible (religion, la santé, la politique, etc) interdite\nPrincipe de collecte loyale de données\nAssurer la sécurité des données collectées\nObligation d’informer les individus concernés de la collecte de leurs données\nDroit à l’accès, la modification et la suppression des données en question"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#loi-pour-une-république-numérique",
-    "href": "slides/juridique-big-data/index.html#loi-pour-une-république-numérique",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Loi pour une République Numérique",
-    "text": "Loi pour une République Numérique\n\nContexte :\n\n🇫🇷 Loi Française, promulguée en 2016.\n📈 Réponse à l’expansion rapide du numérique dans la société.\n⚖️ Equilibre entre innovation, inclusion, protection et confiance."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#circulation-des-données-et-du-savoir",
-    "href": "slides/juridique-big-data/index.html#circulation-des-données-et-du-savoir",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Circulation des données et du savoir",
-    "text": "Circulation des données et du savoir\n\nL’ouverture des données publiques par défaut :\n\nL’État, les collectivités locales… et l’Insee !\nCode sources et bases de données, sous condition d’anonymisation.\nCADA et CNIL pour la mise en oeuvre des règles.\n\nCréation d’un service public de la données Etalab.\nLibre accès des papiers académique financés à +50% par fond public.\nOuverture des données d’intérêt général (transports, eau, déchets, consommation d’énergie…)."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#la-protection-des-droits-dans-la-société-numérique",
-    "href": "slides/juridique-big-data/index.html#la-protection-des-droits-dans-la-société-numérique",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "La protection des droits dans la société numérique",
-    "text": "La protection des droits dans la société numérique\n\nPrincipe de la neutralité de l’internet inscrit dans le droit français ➡️ Arcep\n3 obligations des plateformes en ligne : loyauté, clarté et transparence\nProtection de la vie privée sur internet :\n\nDroit à l’oubli numérique\nDroit à la mort numérique\nRègle du secret des correspondances privées (https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000034307602)"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#laccès-au-numérique-pour-tous",
-    "href": "slides/juridique-big-data/index.html#laccès-au-numérique-pour-tous",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "L’accès au numérique pour tous",
-    "text": "L’accès au numérique pour tous\n\nLe numérique dans tous les territoires :\n\nCouverture 4G + sanctions opérateurs\n\nLe numérique au bénéfice des publics fragiles"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#règlement-général-sur-la-protection-des-données-rgpd-de-lue",
-    "href": "slides/juridique-big-data/index.html#règlement-général-sur-la-protection-des-données-rgpd-de-lue",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Règlement Général sur la Protection des Données (RGPD) de l’UE :",
-    "text": "Règlement Général sur la Protection des Données (RGPD) de l’UE :\n\nContexte :\n\n🇪🇺 Loi Européenne, promulguée en 2016.\nHarmonisation des règles de protection des données\nLe pendant de la Loi informatique et liberté 1978 française"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#champ-daction-du-rgpd",
-    "href": "slides/juridique-big-data/index.html#champ-daction-du-rgpd",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Champ d’action du RGPD :",
-    "text": "Champ d’action du RGPD :\n\nTout organisme peut être concerné\nRGPD s’applique à toute organisation qui traite des données personnelles dès lors que :\n\nÉtablie sur le territoire de l’Union européenne\nActivité cible directement des résidents européens"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#data-act",
-    "href": "slides/juridique-big-data/index.html#data-act",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Data Act :",
-    "text": "Data Act :\n\nContexte :\n\n🇪🇺 Loi Européenne, adoptée en 2022.\nClarifie que peut créer de la valeur à partir des données et sous quelles conditions"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#une-répartition-équitable-de-la-valeur-issue-des-données",
-    "href": "slides/juridique-big-data/index.html#une-répartition-équitable-de-la-valeur-issue-des-données",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Une répartition équitable de la valeur issue des données",
-    "text": "Une répartition équitable de la valeur issue des données\n\nInternet of Things (IoT) génère beaucoup de données personnelles\nPotentiel économique est contrôlé par quelques acteurs dominants\nFavoriser l’ouverture des données IoT :\n\nAccès aux fournisseurs de service d’après vente"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#lever-les-obstacles-à-la-concurrence-du-cloud",
-    "href": "slides/juridique-big-data/index.html#lever-les-obstacles-à-la-concurrence-du-cloud",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Lever les obstacles à la concurrence du Cloud",
-    "text": "Lever les obstacles à la concurrence du Cloud\n\nSupprimer les principales barrières érigées par les fournisseurs dominants pour accéder à un cloud concurrent :\n\nSuppression des frais de transfert de données et de migration\n\n🎯 Préserver la liberté de choix des utilisateurs et à stimuler l’innovation sur le marché"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#le-cas-du-webscrapping",
-    "href": "slides/juridique-big-data/index.html#le-cas-du-webscrapping",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "1️⃣ Le cas du webscrapping",
-    "text": "1️⃣ Le cas du webscrapping\nQuid des prérogatives de puissance publique pour recueillir de l’information ?\n\nEn Europe, la loi n° 633 du 22 avril 1941, pour la protection du droit d’auteur, prévoit une exception en cas d’utilisation d’une base de données à des fins de recherche scientifique à but non lucratif (art. 64-sexies de la loi n° 633/1941 modifié).\n\nBien que la recherche et la production statistiques ne soient pas explicitement mentionnées, ces dispositions apportent un cadre raisonnable pour permettre aux statisticiens publics d’accéder aux informations des bases de données en ligne et pour traiter ces informations afin de produire des résultats statistiques anonymisés."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#scraping-à-linsee",
-    "href": "slides/juridique-big-data/index.html#scraping-à-linsee",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Scraping à l’INSEE",
-    "text": "Scraping à l’INSEE\nQuand ?\n\nLe web scraping est utilisé en dernier recours, l’INSEE favorisera :\n\nLes accords avec des partenaires (ex : seloger.com)\nL’utilisation d’API (ex : Qwant, Yahoo Finance)\nLes sources de données publiques\n\nLe web scraping devient cependant une source de données grandissante."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#scraping-à-linsee-1",
-    "href": "slides/juridique-big-data/index.html#scraping-à-linsee-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Scraping à l’INSEE",
-    "text": "Scraping à l’INSEE\nUtilisation\nLe scraping est notamment utilisé pour le calcul des indices des prix :\n\nPrix des transports (trains via site de la SNCF, domaine maritime) ;\nPrix de produits divers (surtout de l’électronique) ;\nPrix dans le domaine de l’hôtellerie (avec booking.com). D’autres utilisations ponctuelles peuvent également être faites."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#scraping-à-linsee-2",
-    "href": "slides/juridique-big-data/index.html#scraping-à-linsee-2",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Scraping à l’INSEE",
-    "text": "Scraping à l’INSEE\nOrganisation\n\nUn scraping encore par cas d’usage, avec une gestion plus globale en cours de maturité\n\nObjectif de mutualisation entre les équipes statistiques\nLa logique open source comme moyen de mutualisation\n\nBeaucoup de Python, un peu de R et de Java"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com",
-    "href": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les prix dans le domaine de l’hôtellerie (Booking.com)",
-    "text": "Les prix dans le domaine de l’hôtellerie (Booking.com)\nRéférences\n\nUn travail ayant donné lieu à une publication\n\nAdrien Montbroussous, Camille Freppel and Ombéline Guillon, “Web scraping of a booking platform: exploring new data and methodology for the hotel service consumer price index”, Paper for the 17th International Conference of the Ottawa Group, Rome\n\nUne présentation plus accessible ici"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com-1",
-    "href": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Les prix dans le domaine de l’hôtellerie (Booking.com)",
-    "text": "Les prix dans le domaine de l’hôtellerie (Booking.com)\nLe code\n\nBut : collecter davantage de données pour calculer au mieux les indices d’évolution de prix pour l’hôtellerie.\nLa partie ‘scraping’ du projet est disponible ici.\nPour plus d’informations, contacter Adrien Montbroussous (adrien.montbroussous at insee dot fr) (INSEE).\nLa conférence associée aux présentations : ici\n\nD’autres projets similaires de scraping mentionnés"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#ventes-darticles-électroniques",
-    "href": "slides/juridique-big-data/index.html#ventes-darticles-électroniques",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Ventes d’articles électroniques",
-    "text": "Ventes d’articles électroniques\n\nBut : collecter davantage de données pour calculer au mieux les indices de prix associés au secteur\n\nProjet encore à une étape expérimentale\n\nScraping de Boulanger : ici\nScraping de Rue du Commerce : ici\nPour plus d’informations, contacter Adrien Montbroussous (adrien.montbroussous at insee dot fr) (INSEE)."
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#scraping-de-la-sncf",
-    "href": "slides/juridique-big-data/index.html#scraping-de-la-sncf",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Scraping de la SNCF",
-    "text": "Scraping de la SNCF\nContexte\n\nLe calcul de l’IPC tient compte de :\n\nL’indice des prix des trains Grandes Lignes\nLe transport des passagers en train\n\nLes prix utilisés étaient fondés sur un document publié annuellement par la SNCF. Mais cette méthode :\n\nNe reflète pas les variations infra-annuelles réelles, en particulier pour les TGV\nNe reflète pas les prix effectivement payés par les consommateurs\nNe suit pas les recommandations des institutions internationales"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#scraping-de-la-sncf-1",
-    "href": "slides/juridique-big-data/index.html#scraping-de-la-sncf-1",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Scraping de la SNCF",
-    "text": "Scraping de la SNCF\nIntroduction du webscraping\n\nSous forme expérimentale depuis 2018, indices publiés depuis 2020\nCollecte quotidienne pour capter la volatilité des prix\nRequêtes effectuées pour plusieurs couples origine-destination, types de train, antériorités, profils passagers et horaires\nPrès de 23 000 requêtes par nuit\nUn important travail statistique avec les données ainsi obtenues s’ensuit.\n\nStratification en cellules homogènes de prix\nUn micro-indice calculé par cellule\nAgrégation des micro-indices avec un indice de Laspeyres arithmétique"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#scraping-de-la-sncf-2",
-    "href": "slides/juridique-big-data/index.html#scraping-de-la-sncf-2",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "Scraping de la SNCF",
-    "text": "Scraping de la SNCF\nComparaison des résultats"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#dautres-ressources-pour-le-scraping-lié-à-lipc",
-    "href": "slides/juridique-big-data/index.html#dautres-ressources-pour-le-scraping-lié-à-lipc",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "D’autres ressources pour le scraping lié à l’IPC",
-    "text": "D’autres ressources pour le scraping lié à l’IPC\n\nGuidelines d’Eurostat sur le scraping lié à l’indice des prix à la consommation\n\nAnnexe 3 consacrée aux travaux de l’INSEE sur Boulanger et Rue du Commerce"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#les-données-de-téléphonie-mobiles",
-    "href": "slides/juridique-big-data/index.html#les-données-de-téléphonie-mobiles",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "2️⃣ Les données de téléphonie mobiles",
-    "text": "2️⃣ Les données de téléphonie mobiles"
-  },
-  {
-    "objectID": "slides/juridique-big-data/index.html#les-données-de-carte-bancaire",
-    "href": "slides/juridique-big-data/index.html#les-données-de-carte-bancaire",
-    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
-    "section": "3️⃣ Les données de carte bancaire",
-    "text": "3️⃣ Les données de carte bancaire"
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#context",
-    "href": "slides/codif-auto/index.html#context",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Context",
-    "text": "Context\n\nPlusieurs changements majeurs:\n\nInterne: Refonte du répertoire Sirene 4.\nExterne: Mise en place d’un guichet unique pour déclarer les créations d’entreprises.\n\nConstat: Sicore n’est plus l’outil adapté ➨ seulement 30% de codification automatique.\nConséquence: moment idéal pour proposer une nouvelle méthodologie de codification automatique de l’APE."
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#données",
-    "href": "slides/codif-auto/index.html#données",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Données",
-    "text": "Données\n\n\\(\\approx\\) 10 million de liasses d’entreprises issues de Sirene 3 couvrant la période 2014-2022.\nDonnées labellisées par Sicore ou par un gestionnaire.\nUne observation consiste en :\n\nUn descriptif textuel de l’activité\nLa nature de l’activité – NAT (23 modalités)\nLe type de la liasse – TYP (15 modalités)\nLe type d’évènement – EVT (24 modalités)\nLa surface (\\(m^2\\)) – SUR (4 modalités)"
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#la-nomenclature-hiérarchique-de-lape",
-    "href": "slides/codif-auto/index.html#la-nomenclature-hiérarchique-de-lape",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "La nomenclature hiérarchique de l’APE",
-    "text": "La nomenclature hiérarchique de l’APE\n\n\n\n\n\n\n\n\n\nNiveau\nCode\nLibellé\nTaille\n\n\n\n\nSection\nH\nTransports et entreposage\n21\n\n\nDivision\n52\nEntreposage et services auxiliaires des transports\n88\n\n\nGroupe\n522\nServices auxiliaires des transports\n272\n\n\nClasse\n5224\nManutention\n615\n\n\nSous-classe\n5224A\nManutention portuaire\n732"
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#feature-extraction",
-    "href": "slides/codif-auto/index.html#feature-extraction",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Feature extraction",
-    "text": "Feature extraction\n\nPlongements lexicaux: méthode de vectorisation.\nPlongements pré-entrainé disponibles en open-source.\nNous apprenons nos propres plongements de mots.\nMais aussi des plogements de :\n\nn-grams de mots et de n-grams de caractères."
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#classifieur-linéaire",
-    "href": "slides/codif-auto/index.html#classifieur-linéaire",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Classifieur linéaire",
-    "text": "Classifieur linéaire\n\n2 méthodes pour la classification :\n\nSoftmax : un unique classifieur multiclasse.\nOne-vs-all : de multiples classifieurs binaires.\n\nOptimisation : algorithme de type descente de gradient stochastique.\nFonction de perte : entropie croisée."
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#le-modèle-fasttext",
-    "href": "slides/codif-auto/index.html#le-modèle-fasttext",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Le modèle fastText",
-    "text": "Le modèle fastText\n\nfastText: Modèle de type “bag of n-grams” très simple et rapide (C++)."
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#prise-en-compte-des-variables-catégorielles",
-    "href": "slides/codif-auto/index.html#prise-en-compte-des-variables-catégorielles",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Prise en compte des variables catégorielles",
-    "text": "Prise en compte des variables catégorielles\n\nConcaténation du libellé avec les noms et valeurs des variables annexes :\n\n\n\n\nText\nNAT\nTYP\nEVT\nSUR\n\n\n\n\nCours de musique\nNaN\nX\n01P\nNaN\n\n\n\n\n⬇️\n\n“Cours de musique NAT_NaN TYP_X EVT_01P SUR_NaN”\n\nMéthode imparfaite : 3-grams “AT_” ou “T_0” utilisés."
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#prétraitements-effectués",
-    "href": "slides/codif-auto/index.html#prétraitements-effectués",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Prétraitements effectués",
-    "text": "Prétraitements effectués\n\nNettoyage indispensable pour l’analyse textuelle.\nContrainte : simple, léger et facilement reproductible en Java .\n\n\n\n\n\n\n\n\nTransformation\nText description\n\n\n\n\nInput\n3 D: La Deratisation - La Desinsectisation - La Desinfection\n\n\nLower-case conversion\n3 d: la deratisation - la desinsectisation - la desinfection\n\n\nPunctuations removal\n3 d la deratisation la desinsectisation la desinfection"
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#preprocessing",
-    "href": "slides/codif-auto/index.html#preprocessing",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Preprocessing",
-    "text": "Preprocessing\n\n\n\n\n\n\n\nTransformation\nLibellé\n\n\n\n\nInput\n3 D: La Deratisation - La Desinsectisation - La Desinfection\n\n\n…\n…\n\n\nNumbers removal\nd la deratisation la desinsectisation la desinfection\n\n\nOne-letter word removal\nla deratisation la desinsectisation la desinfection\n\n\nStopwords removal\nderatisation desinsectisation desinfection"
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#preprocessing-1",
-    "href": "slides/codif-auto/index.html#preprocessing-1",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Preprocessing",
-    "text": "Preprocessing\n\n\n\nTransformation\nLibellé\n\n\n\n\nInput\n3 D: La Deratisation - La Desinsectisation - La Desinfection\n\n\n…\n…\n\n\nNaN removal\nderatisation desinsectisation desinfection\n\n\nStemming\nderatis desinsectis desinfect"
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#une-bonne-performance-globale",
-    "href": "slides/codif-auto/index.html#une-bonne-performance-globale",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Une bonne performance globale",
-    "text": "Une bonne performance globale\n\nFigure 1: Taux de précision pour chaque niveau de la nomenclature du code APE\nPrès de 80% des libellés issus du guichet unique sont correctement codifiés.\nErreurs de prédiction proches dans la nomenclature."
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#fludifier-le-processus-de-codification-manuel",
-    "href": "slides/codif-auto/index.html#fludifier-le-processus-de-codification-manuel",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Fludifier le processus de codification manuel",
-    "text": "Fludifier le processus de codification manuel\n\nFigure 2: Top-\\(k\\) accuracy pour chaque jeu de données.\nConnaissance des probabilités pour chaque classe.\nDans 94% des cas, la bonne classification se trouve dans les 5 prédictions les plus probables."
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#construction-dun-indice-de-confiance",
-    "href": "slides/codif-auto/index.html#construction-dun-indice-de-confiance",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Construction d’un indice de confiance",
-    "text": "Construction d’un indice de confiance\n\n\nObjectif : discriminer les mauvaises des bonnes prédictions.\nIndice de confiance retenu : différence entre les deux probabilités les plus élevées."
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#améliorer-lefficacité-de-la-reprise-manuelle",
-    "href": "slides/codif-auto/index.html#améliorer-lefficacité-de-la-reprise-manuelle",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Améliorer l’efficacité de la reprise manuelle",
-    "text": "Améliorer l’efficacité de la reprise manuelle\n\nFigure 3: Précision en fonction du taux de reprise manuelle effectuée.\nOptimisation de la reprise manuelle ➨ gain de performance."
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#la-notion-de-mise-en-production",
-    "href": "slides/codif-auto/index.html#la-notion-de-mise-en-production",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "La notion de mise en production",
-    "text": "La notion de mise en production\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\n\nNotion simple mais mise en oeuvre compliquée !\n\nDépasser le stade de l’expérimentation\n\nBonnes pratiques de développement\nTechniques informatiques d’industrialisation\n\nEnjeu : pouvoir jouer le rôle d’interface entre métier et équipes techniques"
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#retour-dexpérience-à-linsee",
-    "href": "slides/codif-auto/index.html#retour-dexpérience-à-linsee",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Retour d’expérience à l’Insee",
-    "text": "Retour d’expérience à l’Insee\n\nContrainte temporelle forte :\n\n\nMise en place du Guichet Unique + refonte Sirene 4\nÉquipe en charge de la codification surchargée\n\n\nInfrastructure de production rigide :\n\n\nUn seul langage disponible, Java\nPas de modèle de ML en production\n\n\nConfiance des équipes à acquérir :\n\n\nAppréhension concernant la performance du modèle une fois en production\nObjectif : Déployer un modèle à la fois rapidement et progressivement"
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#organisation-actuelle-avant-la-mise-en-production",
-    "href": "slides/codif-auto/index.html#organisation-actuelle-avant-la-mise-en-production",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Organisation actuelle avant la mise en production",
-    "text": "Organisation actuelle avant la mise en production\n\n\n3 parties prenantes"
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#organisation-actuelle-une-fois-le-modèle-déployé-en-production",
-    "href": "slides/codif-auto/index.html#organisation-actuelle-une-fois-le-modèle-déployé-en-production",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Organisation actuelle une fois le modèle déployé en production",
-    "text": "Organisation actuelle une fois le modèle déployé en production"
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#inefficacité-organisationelle",
-    "href": "slides/codif-auto/index.html#inefficacité-organisationelle",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Inefficacité organisationelle",
-    "text": "Inefficacité organisationelle\n\nProblèmes rencontrés :\n\nMéconnaissance des problèmes métier côté Lab pour la maintenance\nContrôle de version et transmission des modèles\nOrganisation inefficace entre les parties prenantes\n\nDéfis à anticiper :\n\nSurveillance du modèle en temps réel\nRé-entrainement régulier\n\nConséquence : Besoin d’adopter les bonnes pratiques d’un point de vue technique (MLOps) et organisationel"
-  },
-  {
-    "objectID": "slides/codif-auto/index.html#organisation-visée-à-linsee",
-    "href": "slides/codif-auto/index.html#organisation-visée-à-linsee",
-    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
-    "section": "Organisation visée à l’Insee",
-    "text": "Organisation visée à l’Insee"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#qui-sommes-nous",
-    "href": "slides/intro-big-data/index.html#qui-sommes-nous",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Qui sommes-nous ?",
-    "text": "Qui sommes-nous ?\n\nThomas Faria\n\nSSP Lab : innovation en méthodologie statistique\nthomas.faria@insee.fr\n\nRomain Avouac\n\nDIIT : innovation informatique\nromain.avouac@insee.fr"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#contexte-de-cette-formation",
-    "href": "slides/intro-big-data/index.html#contexte-de-cette-formation",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Contexte de cette formation",
-    "text": "Contexte de cette formation\n\nCoopération internationale\nDiscussion autour de la stratégie big data de l’Insee\n\nRetours d’expérience\n“learning by doing”\n\nPartage de connaissances sur le long terme"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#big-data-de-quoi-parle-t-on",
-    "href": "slides/intro-big-data/index.html#big-data-de-quoi-parle-t-on",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Big data : de quoi parle-t-on ?",
-    "text": "Big data : de quoi parle-t-on ?\n\nDes données “nouvelles” aux contours flous\n\nenregistrements automatiques (GSM, géolocalisation, capteurs..)\ncontenus internet (webscraping, réseaux sociaux..)\nimages satellites\netc."
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#big-data-une-définition",
-    "href": "slides/intro-big-data/index.html#big-data-une-définition",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Big data : une définition",
-    "text": "Big data : une définition\n\nBig data : “Gestion et analyse d’un volume massif de données, souvent à une échelle bien supérieure à ce que les systèmes traditionnels peuvent traiter efficacement.”\nLes 3 V qui caractérisent les big data :\n\nVolume : quantités massives de données\nVitesse : haute fréquence, jusqu’au temps réel\nVariété : diversité de sources et de formats"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#un-phénomène-pérenne",
-    "href": "slides/intro-big-data/index.html#un-phénomène-pérenne",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Un phénomène pérenne",
-    "text": "Un phénomène pérenne\n\nUn phénomène en expansion constante\n\nPart du secteur numérique\nCapacités techniques"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#pourquoi-sintéresser-à-ces-données",
-    "href": "slides/intro-big-data/index.html#pourquoi-sintéresser-à-ces-données",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Pourquoi s’intéresser à ces données ?",
-    "text": "Pourquoi s’intéresser à ces données ?\n\nDisponibilité : réduction du coût et de la charge des enquêtes, des délais de publication (ex : nowcasting)\nFinesse : statistiques localisées, sur des sous-population, plus fréquentes…\nAvancées méthodologiques : convergence entre statistique et informatique (machine learning)\nExhaustivité : compléter des déclarations d’enquêtes, créer de nouveaux indicateurs…"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#un-retour-de-lexhaustif",
-    "href": "slides/intro-big-data/index.html#un-retour-de-lexhaustif",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Un retour de l’exhaustif ?",
-    "text": "Un retour de l’exhaustif ?\n\nPré-XXe siècle : règne quasi-exclusif de l’exhaustivité\n\nRecensements agricole, démographique, industriel\n\nXXe siècle : lent recul de l’exhaustivité au profit de l’échantillonnage\n\n1934 : article de référence sur la théorie des sondages (Neyman)\nDéveloppement des panels, études d’opinion, grandes enquêtes\n\nFin XXe et début XXIe siècles : retour en grâce de l’exhaustif ?"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#début-des-réflexions-des-ins-européens",
-    "href": "slides/intro-big-data/index.html#début-des-réflexions-des-ins-européens",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Début des réflexions des INS européens",
-    "text": "Début des réflexions des INS européens\n\nMémorandum de Scheveningen (2013) : task force européenne sur le potentiel des big data\nGroupe de travail de l’UNECE (2014-2015) : “sandbox” pour manipuler des données concrètes\nESSNET Big Data I (2016-2018) et II (2019-2021)\n\nPréparer l’intégration des big data à la production statistique officielle\n“Projets pilotes” sur une variété de sujets\nNombreuses ressources"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#début-des-expérimentations-à-linsee",
-    "href": "slides/intro-big-data/index.html#début-des-expérimentations-à-linsee",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Début des expérimentations à l’Insee",
-    "text": "Début des expérimentations à l’Insee\n\n2015 : projet données de caisses\n\nGroupe CNIS sur l’accès aux données privées\n\n2016 : poste de statisticien sur les big data\n2016 : début de l’exploitation des données mobiles\n\n“Partenariat” informel avec l’opérateur Orange\n“Travaux méthodologiques”\n\n2018 : labs et premiers développements d’une “plateforme big data”"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#des-enjeux-multiples",
-    "href": "slides/intro-big-data/index.html#des-enjeux-multiples",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Des enjeux multiples",
-    "text": "Des enjeux multiples\n\nDémocratique\nLégislatif\nÉconomique\nMéthodologique\nTechnique"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#confiance",
-    "href": "slides/intro-big-data/index.html#confiance",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Confiance",
-    "text": "Confiance\n\nDes données généralement recueillies par des acteurs privés\n\nComment garantir la confiance des citoyens ?\n\nDeux approches complémentaires\n\nJuridique : établir des garde-fous juridiques\nTechnique : méthodes de confidentialité"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#cadre-législatif",
-    "href": "slides/intro-big-data/index.html#cadre-législatif",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Cadre législatif",
-    "text": "Cadre législatif\n\nUn cadre législatif largement existant\n\nSecret statistique (1951)\nTraitement des données personnelles et sensibles (1978)\nGénéralisation européenne : RGPD (2016) et directive e-privacy\n\nDe nécessaires adaptations\n\nLa quantité et la variété des données facilite les ré-identifications\nData act (2021)"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#confidentialité-des-données",
-    "href": "slides/intro-big-data/index.html#confidentialité-des-données",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Confidentialité des données",
-    "text": "Confidentialité des données\n\nUn arbitrage complexe à trouver\n\nGarantir le respect de la vie privée\nConserver un maximum d’information statistique\n\nLes possibilités d’identification croissent avec les volumes de données\n\nEvolution des techniques de confidentialité"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#techniques-de-confidentialité",
-    "href": "slides/intro-big-data/index.html#techniques-de-confidentialité",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Techniques de confidentialité",
-    "text": "Techniques de confidentialité\n\nAnonymisation\n\nDe plus en plus complexe à assurer\n\nDestruction\n\nAgrégation pour limiter la perte d’information\n\nObfuscation\n\nPotentiel des données synthétiques\n\nConfidentialité différentielle\n\nQuantifier le risque d’une faille de confidentialité"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#enjeux-économiques",
-    "href": "slides/intro-big-data/index.html#enjeux-économiques",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Enjeux économiques",
-    "text": "Enjeux économiques\n\nLes big data sont souvent collectées par des acteurs privés\n\nVolonté d’accès à des fins de statistique publique\nRespect du secret des affaires\n\nVolonté des acteurs privés de valoriser ces données\n\nExemple de FluxVision\n\nStratégie : nouer des partenariats “au cas par cas”\n\nDifficultés à pérenniser l’approvisionnement de données"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#limites-des-modes-de-collecte",
-    "href": "slides/intro-big-data/index.html#limites-des-modes-de-collecte",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Limites des modes de collecte",
-    "text": "Limites des modes de collecte\n\nProcessus de génération des données non contrôlé\nReprésentativité généralement limitée\nFormats complexes et souvent changeants\nDifficultés d’acheminement entre infrastructures\n\nCoûts de transfert"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#enjeux-techniques",
-    "href": "slides/intro-big-data/index.html#enjeux-techniques",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Enjeux techniques",
-    "text": "Enjeux techniques\n\nInfrastructures de stockage : les data lakes\nCalcul distribué\n\nRessources computationnelles\n\nServices de data science\n\nRendre accessibles les ressources\n\nImportance d’une “sandbox”"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#enjeux-méthodologiques",
-    "href": "slides/intro-big-data/index.html#enjeux-méthodologiques",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Enjeux méthodologiques",
-    "text": "Enjeux méthodologiques\n\nTraitement des données massives\n\nAlgorithmes distribués\nStatistique en grande dimension\n\nTraitement de formats non-structurés\n\nTraitement du langage naturel\nAnalyse d’images\n\nMéthodes de machine learning"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#limportance-de-la-formation",
-    "href": "slides/intro-big-data/index.html#limportance-de-la-formation",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "L’importance de la formation",
-    "text": "L’importance de la formation\n\nDe statisticien à data scientist\n\nFormalisation des besoins métiers\nVeille méthodologique\nAcculturation aux techniques informatiques\n\nDe l’expérimentation à la mise en production\n\nAutomatisation des traitements\nBonnes pratiques de développement"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#des-innovations-croisées",
-    "href": "slides/intro-big-data/index.html#des-innovations-croisées",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Des innovations croisées",
-    "text": "Des innovations croisées\n\nOrganisationnelles\n\nStructure en labs\nInvestissement dans la formation\n\nTechniques\n\nMettre à disposition une “sandbox”\n\nMéthodologiques\n\nExpérimentation : nouvelles sources, méthodes"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#une-construction-collective",
-    "href": "slides/intro-big-data/index.html#une-construction-collective",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Une construction collective",
-    "text": "Une construction collective\n\nDes changements qui impliquent de nombreuses dimensions (juridique, technique, méthodologique, organisationnelle, …)\nLe statisticien public ne peut incarner tous ces aspects\nDévelopper des synergies entre toutes les parties prenantes (métiers, informatique, partenaires, …)"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#plan-de-la-formation",
-    "href": "slides/intro-big-data/index.html#plan-de-la-formation",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Plan de la formation",
-    "text": "Plan de la formation\n\n\nLundi 25 septembre 2023\n\n\n\n\n\n\nHoraires\nActivités\n\n\n\n\n8 h 30 - 9 h 00\nAccueil et installation\n\n\n9 h 00 - 9 h 15\nCérémonie d’ouverture par le Directeur des Statistiques\n\n\n9 h 15 - 9 h 30\nPause-café\n\n\n9 h 30 - 10 h 45\nIntroduction sur la place et les enjeux liés au big data à l’Insee\n\n\n10 h 45 - 11 h 00\nPause-café\n\n\n11 h 00 - 12 h 30\nIntroduction sur la place et les enjeux liés au big data à l’Insee\n\n\n12 h 30 - 14 h 30\nPause-déjeuner\n\n\n14 h 30 - 16 h 00\nPrésentation Infra / Outils\n\n\n16 h 00 - 16 h 15\nPause-café\n\n\n16 h 15 - 17 h 30\nPrise en main du SSP Cloud"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#plan-de-la-formation-1",
-    "href": "slides/intro-big-data/index.html#plan-de-la-formation-1",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Plan de la formation",
-    "text": "Plan de la formation\n\n\nMardi 26 septembre 2023\n\n\n\n\n\n\nHoraires\nActivités\n\n\n\n\n8 h 30 - 10 h 30\nSources big data à l’Insee\n\n\n10 h 30 - 10 h 45\nPause-café\n\n\n10 h 45 - 12 h 30\nTP 1 : Manipulation des données volumineuses\n\n\n12 h 30 - 14 h 30\nPause-déjeuner\n\n\n14 h 30 - 16 h 00\nTP 1 : Manipulation des données massives\n\n\n16 h 00 - 16 h 15\nPause-café\n\n\n16 h 15 - 17 h 30\nRetour sur des projets de Machine Learning mis en production à l’Insee"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#plan-de-la-formation-2",
-    "href": "slides/intro-big-data/index.html#plan-de-la-formation-2",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Plan de la formation",
-    "text": "Plan de la formation\n\n\nMercredi 27 septembre 2023\n\n\n\n\n\n\nHoraires\nActivités\n\n\n\n\n8 h 30 - 10 h 30\nTP 2 : Introduction à la mise en production et au MLOps\n\n\n10 h 30 - 10 h 45\nPause-café\n\n\n10 h 45 - 12 h 45\nTP 2 : Déployer un modèle de machine learning"
-  },
-  {
-    "objectID": "slides/intro-big-data/index.html#plan-de-la-formation-3",
-    "href": "slides/intro-big-data/index.html#plan-de-la-formation-3",
-    "title": "Place et enjeux liés au big data à l’Insee",
-    "section": "Plan de la formation",
-    "text": "Plan de la formation\n\n\nVendredi 29 septembre 2023\n\n\n\n\n\n\nHoraires\nActivités\n\n\n\n\n8 h 30 - 10 h 00\nAspects juridiques et réglementaires du big data : un retour d’expérience\n\n\n10 h 00 - 10 h 15\nPause-café\n\n\n10 h 15 - 12 h 00\nRetour sur la formation et échange sur la stratégie big data de la BCEAO\n\n\n12 h 00 - 13 h 00\nCérémonie de clôture de l’atelier par le Directeur des Statistiques"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Formation BCEAO",
+    "section": "",
+    "text": "Un parcours de formation construit par l’Insee.\nTous les supports sont sur le Github InseeFrLab \n\n\n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation met en lumière les enjeux et la place essentielle du Big Data au sein de l'Insee. Explorez comment les données massives contribuent à enrichir les analyses et à affiner les statistiques.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation met en lumière de nouveaux outils et méthodologies agiles pour stimuler l'innovation en Big Data. Découvrez comment ils simplifient la gestion des données massives, favorisant ainsi la transformation numérique et ouvrant de nouvelles perspectives pour vos projets.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation approfondie explore la multitude de sources de données utilisées par l'Insee. Elle met également en lumière les défis liés à l'intégration de nouvelles sources de données souvent massives dans le cadre des opérations de collecte et d'analyse de données de l'Insee. Explorez les stratégies et les pratiques essentielles pour gérer efficacement ces flux de données en constante évolution.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Ce notebook vous initie à la manipulation de données volumineuses, qu'elles soient locales ou stockées dans le Cloud. Découvrez des techniques essentielles pour gérer efficacement des ensembles de données massives, du stockage à l'analyse.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Notebook\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation dévoile un projet de codification automatique du code APE grâce à des techniques de machine learning, mis en production à l'Insee. Explorez comment cette initiative transforme le processus de codification, apportant des améliorations significatives en termes d'efficacité et de précision.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description :  Cette présentation complète explore les principes fondamentaux du MLOps et vous guide à travers leur application pratique en utilisant MLflow. Vous découvrirez une pipeline MLOps complète, décrivant le processus d'entraînement et de déploiement d'un modèle de machine learning, vous préparant ainsi à maîtriser la gestion des modèles en production de manière efficace et évolutive.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation examine les enjeux juridiques du Big Data, ainsi que les réglementations en vigueur, à travers le prisme du retour d'expérience de l'Insee. Découvrez comment l'Insee s'est adapté à ces défis tout en garantissant la conformité légale dans la gestion de données massives.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Retour sur les points essentiels de la formation et ouverture de la discussion concernant la stratégie big data de la BCEAO.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#formation-bceao",
+    "href": "index.html#formation-bceao",
+    "title": "Formation BCEAO",
+    "section": "",
+    "text": "Un parcours de formation construit par l’Insee.\nTous les supports sont sur le Github InseeFrLab \n\n\n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation met en lumière les enjeux et la place essentielle du Big Data au sein de l'Insee. Explorez comment les données massives contribuent à enrichir les analyses et à affiner les statistiques.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation met en lumière de nouveaux outils et méthodologies agiles pour stimuler l'innovation en Big Data. Découvrez comment ils simplifient la gestion des données massives, favorisant ainsi la transformation numérique et ouvrant de nouvelles perspectives pour vos projets.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation approfondie explore la multitude de sources de données utilisées par l'Insee. Elle met également en lumière les défis liés à l'intégration de nouvelles sources de données souvent massives dans le cadre des opérations de collecte et d'analyse de données de l'Insee. Explorez les stratégies et les pratiques essentielles pour gérer efficacement ces flux de données en constante évolution.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Ce notebook vous initie à la manipulation de données volumineuses, qu'elles soient locales ou stockées dans le Cloud. Découvrez des techniques essentielles pour gérer efficacement des ensembles de données massives, du stockage à l'analyse.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Notebook\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation dévoile un projet de codification automatique du code APE grâce à des techniques de machine learning, mis en production à l'Insee. Explorez comment cette initiative transforme le processus de codification, apportant des améliorations significatives en termes d'efficacité et de précision.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description :  Cette présentation complète explore les principes fondamentaux du MLOps et vous guide à travers leur application pratique en utilisant MLflow. Vous découvrirez une pipeline MLOps complète, décrivant le processus d'entraînement et de déploiement d'un modèle de machine learning, vous préparant ainsi à maîtriser la gestion des modèles en production de manière efficace et évolutive.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation examine les enjeux juridiques du Big Data, ainsi que les réglementations en vigueur, à travers le prisme du retour d'expérience de l'Insee. Découvrez comment l'Insee s'est adapté à ces défis tout en garantissant la conformité légale dans la gestion de données massives.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Retour sur les points essentiels de la formation et ouverture de la discussion concernant la stratégie big data de la BCEAO.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n\n\nNo matching items"
   },
   {
     "objectID": "slides/new-sources-donnees/index.html#la-collecte-directe-les-enquêtes",
@@ -1106,17 +336,843 @@
     "text": "Big Data et secret statistique\n\nLa vie privée et le secret des affaires nécessitent une attention particulière\nL’accès aux données doit être encadré par un cadre légal clair et durable\nEn France, la loi pour la République numérique offre ce cadre juridique  les données privées susceptibles de se substituer aux données d’enquêtes peuvent être réquisitionnées par l’Insee"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Formation BCEAO",
-    "section": "",
-    "text": "Un parcours de formation construit par l’Insee.\nTous les supports sont sur le Github InseeFrLab \n\n\n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation met en lumière les enjeux et la place essentielle du Big Data au sein de l'Insee. Explorez comment les données massives contribuent à enrichir les analyses et à affiner les statistiques.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation met en lumière de nouveaux outils et méthodologies agiles pour stimuler l'innovation en Big Data. Découvrez comment ils simplifient la gestion des données massives, favorisant ainsi la transformation numérique et ouvrant de nouvelles perspectives pour vos projets.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation approfondie explore la multitude de sources de données utilisées par l'Insee. Elle met également en lumière les défis liés à l'intégration de nouvelles sources de données souvent massives dans le cadre des opérations de collecte et d'analyse de données de l'Insee. Explorez les stratégies et les pratiques essentielles pour gérer efficacement ces flux de données en constante évolution.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Ce notebook vous initie à la manipulation de données volumineuses, qu'elles soient locales ou stockées dans le Cloud. Découvrez des techniques essentielles pour gérer efficacement des ensembles de données massives, du stockage à l'analyse.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Notebook\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation dévoile un projet de codification automatique du code APE grâce à des techniques de machine learning, mis en production à l'Insee. Explorez comment cette initiative transforme le processus de codification, apportant des améliorations significatives en termes d'efficacité et de précision.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description :  Cette présentation complète explore les principes fondamentaux du MLOps et vous guide à travers leur application pratique en utilisant MLflow. Vous découvrirez une pipeline MLOps complète, décrivant le processus d'entraînement et de déploiement d'un modèle de machine learning, vous préparant ainsi à maîtriser la gestion des modèles en production de manière efficace et évolutive.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation examine les enjeux juridiques du Big Data, ainsi que les réglementations en vigueur, à travers le prisme du retour d'expérience de l'Insee. Découvrez comment l'Insee s'est adapté à ces défis tout en garantissant la conformité légale dans la gestion de données massives.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n\n\nNo matching items"
+    "objectID": "slides/intro-big-data/index.html#qui-sommes-nous",
+    "href": "slides/intro-big-data/index.html#qui-sommes-nous",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Qui sommes-nous ?",
+    "text": "Qui sommes-nous ?\n\nThomas Faria\n\nSSP Lab : innovation en méthodologie statistique\nthomas.faria@insee.fr\n\nRomain Avouac\n\nDIIT : innovation informatique\nromain.avouac@insee.fr"
   },
   {
-    "objectID": "index.html#formation-bceao",
-    "href": "index.html#formation-bceao",
-    "title": "Formation BCEAO",
-    "section": "",
-    "text": "Un parcours de formation construit par l’Insee.\nTous les supports sont sur le Github InseeFrLab \n\n\n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation met en lumière les enjeux et la place essentielle du Big Data au sein de l'Insee. Explorez comment les données massives contribuent à enrichir les analyses et à affiner les statistiques.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation met en lumière de nouveaux outils et méthodologies agiles pour stimuler l'innovation en Big Data. Découvrez comment ils simplifient la gestion des données massives, favorisant ainsi la transformation numérique et ouvrant de nouvelles perspectives pour vos projets.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation approfondie explore la multitude de sources de données utilisées par l'Insee. Elle met également en lumière les défis liés à l'intégration de nouvelles sources de données souvent massives dans le cadre des opérations de collecte et d'analyse de données de l'Insee. Explorez les stratégies et les pratiques essentielles pour gérer efficacement ces flux de données en constante évolution.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Ce notebook vous initie à la manipulation de données volumineuses, qu'elles soient locales ou stockées dans le Cloud. Découvrez des techniques essentielles pour gérer efficacement des ensembles de données massives, du stockage à l'analyse.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Notebook\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation dévoile un projet de codification automatique du code APE grâce à des techniques de machine learning, mis en production à l'Insee. Explorez comment cette initiative transforme le processus de codification, apportant des améliorations significatives en termes d'efficacité et de précision.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description :  Cette présentation complète explore les principes fondamentaux du MLOps et vous guide à travers leur application pratique en utilisant MLflow. Vous découvrirez une pipeline MLOps complète, décrivant le processus d'entraînement et de déploiement d'un modèle de machine learning, vous préparant ainsi à maîtriser la gestion des modèles en production de manière efficace et évolutive.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n  \n     \n      \n          \n            \n          \n          \n            \n            \n              Description : Cette présentation examine les enjeux juridiques du Big Data, ainsi que les réglementations en vigueur, à travers le prisme du retour d'expérience de l'Insee. Découvrez comment l'Insee s'est adapté à ces défis tout en garantissant la conformité légale dans la gestion de données massives.\n\n              \n                \n              \n            \n            \n                \n                    \n                        Slides\n                    \n                \n            \n          \n        \n      \n     \n  \n\n\nNo matching items"
+    "objectID": "slides/intro-big-data/index.html#contexte-de-cette-formation",
+    "href": "slides/intro-big-data/index.html#contexte-de-cette-formation",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Contexte de cette formation",
+    "text": "Contexte de cette formation\n\nCoopération internationale\nDiscussion autour de la stratégie big data de l’Insee\n\nRetours d’expérience\n“learning by doing”\n\nPartage de connaissances sur le long terme"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#big-data-de-quoi-parle-t-on",
+    "href": "slides/intro-big-data/index.html#big-data-de-quoi-parle-t-on",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Big data : de quoi parle-t-on ?",
+    "text": "Big data : de quoi parle-t-on ?\n\nDes données “nouvelles” aux contours flous\n\nenregistrements automatiques (GSM, géolocalisation, capteurs..)\ncontenus internet (webscraping, réseaux sociaux..)\nimages satellites\netc."
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#big-data-une-définition",
+    "href": "slides/intro-big-data/index.html#big-data-une-définition",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Big data : une définition",
+    "text": "Big data : une définition\n\nBig data : “Gestion et analyse d’un volume massif de données, souvent à une échelle bien supérieure à ce que les systèmes traditionnels peuvent traiter efficacement.”\nLes 3 V qui caractérisent les big data :\n\nVolume : quantités massives de données\nVitesse : haute fréquence, jusqu’au temps réel\nVariété : diversité de sources et de formats"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#un-phénomène-pérenne",
+    "href": "slides/intro-big-data/index.html#un-phénomène-pérenne",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Un phénomène pérenne",
+    "text": "Un phénomène pérenne\n\nUn phénomène en expansion constante\n\nPart du secteur numérique\nCapacités techniques"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#pourquoi-sintéresser-à-ces-données",
+    "href": "slides/intro-big-data/index.html#pourquoi-sintéresser-à-ces-données",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Pourquoi s’intéresser à ces données ?",
+    "text": "Pourquoi s’intéresser à ces données ?\n\nDisponibilité : réduction du coût et de la charge des enquêtes, des délais de publication (ex : nowcasting)\nFinesse : statistiques localisées, sur des sous-population, plus fréquentes…\nAvancées méthodologiques : convergence entre statistique et informatique (machine learning)\nExhaustivité : compléter des déclarations d’enquêtes, créer de nouveaux indicateurs…"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#un-retour-de-lexhaustif",
+    "href": "slides/intro-big-data/index.html#un-retour-de-lexhaustif",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Un retour de l’exhaustif ?",
+    "text": "Un retour de l’exhaustif ?\n\nPré-XXe siècle : règne quasi-exclusif de l’exhaustivité\n\nRecensements agricole, démographique, industriel\n\nXXe siècle : lent recul de l’exhaustivité au profit de l’échantillonnage\n\n1934 : article de référence sur la théorie des sondages (Neyman)\nDéveloppement des panels, études d’opinion, grandes enquêtes\n\nFin XXe et début XXIe siècles : retour en grâce de l’exhaustif ?"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#début-des-réflexions-des-ins-européens",
+    "href": "slides/intro-big-data/index.html#début-des-réflexions-des-ins-européens",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Début des réflexions des INS européens",
+    "text": "Début des réflexions des INS européens\n\nMémorandum de Scheveningen (2013) : task force européenne sur le potentiel des big data\nGroupe de travail de l’UNECE (2014-2015) : “sandbox” pour manipuler des données concrètes\nESSNET Big Data I (2016-2018) et II (2019-2021)\n\nPréparer l’intégration des big data à la production statistique officielle\n“Projets pilotes” sur une variété de sujets\nNombreuses ressources"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#début-des-expérimentations-à-linsee",
+    "href": "slides/intro-big-data/index.html#début-des-expérimentations-à-linsee",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Début des expérimentations à l’Insee",
+    "text": "Début des expérimentations à l’Insee\n\n2015 : projet données de caisses\n\nGroupe CNIS sur l’accès aux données privées\n\n2016 : poste de statisticien sur les big data\n2016 : début de l’exploitation des données mobiles\n\n“Partenariat” informel avec l’opérateur Orange\n“Travaux méthodologiques”\n\n2018 : labs et premiers développements d’une “plateforme big data”"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#des-enjeux-multiples",
+    "href": "slides/intro-big-data/index.html#des-enjeux-multiples",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Des enjeux multiples",
+    "text": "Des enjeux multiples\n\nDémocratique\nLégislatif\nÉconomique\nMéthodologique\nTechnique"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#confiance",
+    "href": "slides/intro-big-data/index.html#confiance",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Confiance",
+    "text": "Confiance\n\nDes données généralement recueillies par des acteurs privés\n\nComment garantir la confiance des citoyens ?\n\nDeux approches complémentaires\n\nJuridique : établir des garde-fous juridiques\nTechnique : méthodes de confidentialité"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#cadre-législatif",
+    "href": "slides/intro-big-data/index.html#cadre-législatif",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Cadre législatif",
+    "text": "Cadre législatif\n\nUn cadre législatif largement existant\n\nSecret statistique (1951)\nTraitement des données personnelles et sensibles (1978)\nGénéralisation européenne : RGPD (2016) et directive e-privacy\n\nDe nécessaires adaptations\n\nLa quantité et la variété des données facilite les ré-identifications\nData act (2021)"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#confidentialité-des-données",
+    "href": "slides/intro-big-data/index.html#confidentialité-des-données",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Confidentialité des données",
+    "text": "Confidentialité des données\n\nUn arbitrage complexe à trouver\n\nGarantir le respect de la vie privée\nConserver un maximum d’information statistique\n\nLes possibilités d’identification croissent avec les volumes de données\n\nEvolution des techniques de confidentialité"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#techniques-de-confidentialité",
+    "href": "slides/intro-big-data/index.html#techniques-de-confidentialité",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Techniques de confidentialité",
+    "text": "Techniques de confidentialité\n\nAnonymisation\n\nDe plus en plus complexe à assurer\n\nDestruction\n\nAgrégation pour limiter la perte d’information\n\nObfuscation\n\nPotentiel des données synthétiques\n\nConfidentialité différentielle\n\nQuantifier le risque d’une faille de confidentialité"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#enjeux-économiques",
+    "href": "slides/intro-big-data/index.html#enjeux-économiques",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Enjeux économiques",
+    "text": "Enjeux économiques\n\nLes big data sont souvent collectées par des acteurs privés\n\nVolonté d’accès à des fins de statistique publique\nRespect du secret des affaires\n\nVolonté des acteurs privés de valoriser ces données\n\nExemple de FluxVision\n\nStratégie : nouer des partenariats “au cas par cas”\n\nDifficultés à pérenniser l’approvisionnement de données"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#limites-des-modes-de-collecte",
+    "href": "slides/intro-big-data/index.html#limites-des-modes-de-collecte",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Limites des modes de collecte",
+    "text": "Limites des modes de collecte\n\nProcessus de génération des données non contrôlé\nReprésentativité généralement limitée\nFormats complexes et souvent changeants\nDifficultés d’acheminement entre infrastructures\n\nCoûts de transfert"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#enjeux-techniques",
+    "href": "slides/intro-big-data/index.html#enjeux-techniques",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Enjeux techniques",
+    "text": "Enjeux techniques\n\nInfrastructures de stockage : les data lakes\nCalcul distribué\n\nRessources computationnelles\n\nServices de data science\n\nRendre accessibles les ressources\n\nImportance d’une “sandbox”"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#enjeux-méthodologiques",
+    "href": "slides/intro-big-data/index.html#enjeux-méthodologiques",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Enjeux méthodologiques",
+    "text": "Enjeux méthodologiques\n\nTraitement des données massives\n\nAlgorithmes distribués\nStatistique en grande dimension\n\nTraitement de formats non-structurés\n\nTraitement du langage naturel\nAnalyse d’images\n\nMéthodes de machine learning"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#limportance-de-la-formation",
+    "href": "slides/intro-big-data/index.html#limportance-de-la-formation",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "L’importance de la formation",
+    "text": "L’importance de la formation\n\nDe statisticien à data scientist\n\nFormalisation des besoins métiers\nVeille méthodologique\nAcculturation aux techniques informatiques\n\nDe l’expérimentation à la mise en production\n\nAutomatisation des traitements\nBonnes pratiques de développement"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#des-innovations-croisées",
+    "href": "slides/intro-big-data/index.html#des-innovations-croisées",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Des innovations croisées",
+    "text": "Des innovations croisées\n\nOrganisationnelles\n\nStructure en labs\nInvestissement dans la formation\n\nTechniques\n\nMettre à disposition une “sandbox”\n\nMéthodologiques\n\nExpérimentation : nouvelles sources, méthodes"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#une-construction-collective",
+    "href": "slides/intro-big-data/index.html#une-construction-collective",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Une construction collective",
+    "text": "Une construction collective\n\nDes changements qui impliquent de nombreuses dimensions (juridique, technique, méthodologique, organisationnelle, …)\nLe statisticien public ne peut incarner tous ces aspects\nDévelopper des synergies entre toutes les parties prenantes (métiers, informatique, partenaires, …)"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#plan-de-la-formation",
+    "href": "slides/intro-big-data/index.html#plan-de-la-formation",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Plan de la formation",
+    "text": "Plan de la formation\n\n\nLundi 25 septembre 2023\n\n\n\n\n\n\nHoraires\nActivités\n\n\n\n\n8 h 30 - 9 h 00\nAccueil et installation\n\n\n9 h 00 - 9 h 15\nCérémonie d’ouverture par le Directeur des Statistiques\n\n\n9 h 15 - 9 h 30\nPause-café\n\n\n9 h 30 - 10 h 45\nIntroduction sur la place et les enjeux liés au big data à l’Insee\n\n\n10 h 45 - 11 h 00\nPause-café\n\n\n11 h 00 - 12 h 30\nIntroduction sur la place et les enjeux liés au big data à l’Insee\n\n\n12 h 30 - 14 h 30\nPause-déjeuner\n\n\n14 h 30 - 16 h 00\nPrésentation Infra / Outils\n\n\n16 h 00 - 16 h 15\nPause-café\n\n\n16 h 15 - 17 h 30\nPrise en main du SSP Cloud"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#plan-de-la-formation-1",
+    "href": "slides/intro-big-data/index.html#plan-de-la-formation-1",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Plan de la formation",
+    "text": "Plan de la formation\n\n\nMardi 26 septembre 2023\n\n\n\n\n\n\nHoraires\nActivités\n\n\n\n\n8 h 30 - 10 h 30\nSources big data à l’Insee\n\n\n10 h 30 - 10 h 45\nPause-café\n\n\n10 h 45 - 12 h 30\nTP 1 : Manipulation des données volumineuses\n\n\n12 h 30 - 14 h 30\nPause-déjeuner\n\n\n14 h 30 - 16 h 00\nTP 1 : Manipulation des données massives\n\n\n16 h 00 - 16 h 15\nPause-café\n\n\n16 h 15 - 17 h 30\nRetour sur des projets de Machine Learning mis en production à l’Insee"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#plan-de-la-formation-2",
+    "href": "slides/intro-big-data/index.html#plan-de-la-formation-2",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Plan de la formation",
+    "text": "Plan de la formation\n\n\nMercredi 27 septembre 2023\n\n\n\n\n\n\nHoraires\nActivités\n\n\n\n\n8 h 30 - 10 h 30\nTP 2 : Introduction à la mise en production et au MLOps\n\n\n10 h 30 - 10 h 45\nPause-café\n\n\n10 h 45 - 12 h 45\nTP 2 : Déployer un modèle de machine learning"
+  },
+  {
+    "objectID": "slides/intro-big-data/index.html#plan-de-la-formation-3",
+    "href": "slides/intro-big-data/index.html#plan-de-la-formation-3",
+    "title": "Place et enjeux liés au big data à l’Insee",
+    "section": "Plan de la formation",
+    "text": "Plan de la formation\n\n\nVendredi 29 septembre 2023\n\n\n\n\n\n\nHoraires\nActivités\n\n\n\n\n8 h 30 - 10 h 00\nAspects juridiques et réglementaires du big data : un retour d’expérience\n\n\n10 h 00 - 10 h 15\nPause-café\n\n\n10 h 15 - 12 h 00\nRetour sur la formation et échange sur la stratégie big data de la BCEAO\n\n\n12 h 00 - 13 h 00\nCérémonie de clôture de l’atelier par le Directeur des Statistiques"
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#context",
+    "href": "slides/codif-auto/index.html#context",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Context",
+    "text": "Context\n\nPlusieurs changements majeurs:\n\nInterne: Refonte du répertoire Sirene 4.\nExterne: Mise en place d’un guichet unique pour déclarer les créations d’entreprises.\n\nConstat: Sicore n’est plus l’outil adapté ➨ seulement 30% de codification automatique.\nConséquence: moment idéal pour proposer une nouvelle méthodologie de codification automatique de l’APE."
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#données",
+    "href": "slides/codif-auto/index.html#données",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Données",
+    "text": "Données\n\n\\(\\approx\\) 10 million de liasses d’entreprises issues de Sirene 3 couvrant la période 2014-2022.\nDonnées labellisées par Sicore ou par un gestionnaire.\nUne observation consiste en :\n\nUn descriptif textuel de l’activité\nLa nature de l’activité – NAT (23 modalités)\nLe type de la liasse – TYP (15 modalités)\nLe type d’évènement – EVT (24 modalités)\nLa surface (\\(m^2\\)) – SUR (4 modalités)"
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#la-nomenclature-hiérarchique-de-lape",
+    "href": "slides/codif-auto/index.html#la-nomenclature-hiérarchique-de-lape",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "La nomenclature hiérarchique de l’APE",
+    "text": "La nomenclature hiérarchique de l’APE\n\n\n\n\n\n\n\n\n\nNiveau\nCode\nLibellé\nTaille\n\n\n\n\nSection\nH\nTransports et entreposage\n21\n\n\nDivision\n52\nEntreposage et services auxiliaires des transports\n88\n\n\nGroupe\n522\nServices auxiliaires des transports\n272\n\n\nClasse\n5224\nManutention\n615\n\n\nSous-classe\n5224A\nManutention portuaire\n732"
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#feature-extraction",
+    "href": "slides/codif-auto/index.html#feature-extraction",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Feature extraction",
+    "text": "Feature extraction\n\nPlongements lexicaux: méthode de vectorisation.\nPlongements pré-entrainé disponibles en open-source.\nNous apprenons nos propres plongements de mots.\nMais aussi des plogements de :\n\nn-grams de mots et de n-grams de caractères."
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#classifieur-linéaire",
+    "href": "slides/codif-auto/index.html#classifieur-linéaire",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Classifieur linéaire",
+    "text": "Classifieur linéaire\n\n2 méthodes pour la classification :\n\nSoftmax : un unique classifieur multiclasse.\nOne-vs-all : de multiples classifieurs binaires.\n\nOptimisation : algorithme de type descente de gradient stochastique.\nFonction de perte : entropie croisée."
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#le-modèle-fasttext",
+    "href": "slides/codif-auto/index.html#le-modèle-fasttext",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Le modèle fastText",
+    "text": "Le modèle fastText\n\nfastText: Modèle de type “bag of n-grams” très simple et rapide (C++)."
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#prise-en-compte-des-variables-catégorielles",
+    "href": "slides/codif-auto/index.html#prise-en-compte-des-variables-catégorielles",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Prise en compte des variables catégorielles",
+    "text": "Prise en compte des variables catégorielles\n\nConcaténation du libellé avec les noms et valeurs des variables annexes :\n\n\n\n\nText\nNAT\nTYP\nEVT\nSUR\n\n\n\n\nCours de musique\nNaN\nX\n01P\nNaN\n\n\n\n\n⬇️\n\n“Cours de musique NAT_NaN TYP_X EVT_01P SUR_NaN”\n\nMéthode imparfaite : 3-grams “AT_” ou “T_0” utilisés."
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#prétraitements-effectués",
+    "href": "slides/codif-auto/index.html#prétraitements-effectués",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Prétraitements effectués",
+    "text": "Prétraitements effectués\n\nNettoyage indispensable pour l’analyse textuelle.\nContrainte : simple, léger et facilement reproductible en Java .\n\n\n\n\n\n\n\n\nTransformation\nText description\n\n\n\n\nInput\n3 D: La Deratisation - La Desinsectisation - La Desinfection\n\n\nLower-case conversion\n3 d: la deratisation - la desinsectisation - la desinfection\n\n\nPunctuations removal\n3 d la deratisation la desinsectisation la desinfection"
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#preprocessing",
+    "href": "slides/codif-auto/index.html#preprocessing",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Preprocessing",
+    "text": "Preprocessing\n\n\n\n\n\n\n\nTransformation\nLibellé\n\n\n\n\nInput\n3 D: La Deratisation - La Desinsectisation - La Desinfection\n\n\n…\n…\n\n\nNumbers removal\nd la deratisation la desinsectisation la desinfection\n\n\nOne-letter word removal\nla deratisation la desinsectisation la desinfection\n\n\nStopwords removal\nderatisation desinsectisation desinfection"
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#preprocessing-1",
+    "href": "slides/codif-auto/index.html#preprocessing-1",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Preprocessing",
+    "text": "Preprocessing\n\n\n\nTransformation\nLibellé\n\n\n\n\nInput\n3 D: La Deratisation - La Desinsectisation - La Desinfection\n\n\n…\n…\n\n\nNaN removal\nderatisation desinsectisation desinfection\n\n\nStemming\nderatis desinsectis desinfect"
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#une-bonne-performance-globale",
+    "href": "slides/codif-auto/index.html#une-bonne-performance-globale",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Une bonne performance globale",
+    "text": "Une bonne performance globale\n\nFigure 1: Taux de précision pour chaque niveau de la nomenclature du code APE\nPrès de 80% des libellés issus du guichet unique sont correctement codifiés.\nErreurs de prédiction proches dans la nomenclature."
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#fludifier-le-processus-de-codification-manuel",
+    "href": "slides/codif-auto/index.html#fludifier-le-processus-de-codification-manuel",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Fludifier le processus de codification manuel",
+    "text": "Fludifier le processus de codification manuel\n\nFigure 2: Top-\\(k\\) accuracy pour chaque jeu de données.\nConnaissance des probabilités pour chaque classe.\nDans 94% des cas, la bonne classification se trouve dans les 5 prédictions les plus probables."
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#construction-dun-indice-de-confiance",
+    "href": "slides/codif-auto/index.html#construction-dun-indice-de-confiance",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Construction d’un indice de confiance",
+    "text": "Construction d’un indice de confiance\n\n\nObjectif : discriminer les mauvaises des bonnes prédictions.\nIndice de confiance retenu : différence entre les deux probabilités les plus élevées."
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#améliorer-lefficacité-de-la-reprise-manuelle",
+    "href": "slides/codif-auto/index.html#améliorer-lefficacité-de-la-reprise-manuelle",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Améliorer l’efficacité de la reprise manuelle",
+    "text": "Améliorer l’efficacité de la reprise manuelle\n\nFigure 3: Précision en fonction du taux de reprise manuelle effectuée.\nOptimisation de la reprise manuelle ➨ gain de performance."
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#la-notion-de-mise-en-production",
+    "href": "slides/codif-auto/index.html#la-notion-de-mise-en-production",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "La notion de mise en production",
+    "text": "La notion de mise en production\n\nMettre en production : faire vivre une application dans l’espace de ses utilisateurs\n\nNotion simple mais mise en oeuvre compliquée !\n\nDépasser le stade de l’expérimentation\n\nBonnes pratiques de développement\nTechniques informatiques d’industrialisation\n\nEnjeu : pouvoir jouer le rôle d’interface entre métier et équipes techniques"
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#retour-dexpérience-à-linsee",
+    "href": "slides/codif-auto/index.html#retour-dexpérience-à-linsee",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Retour d’expérience à l’Insee",
+    "text": "Retour d’expérience à l’Insee\n\nContrainte temporelle forte :\n\n\nMise en place du Guichet Unique + refonte Sirene 4\nÉquipe en charge de la codification surchargée\n\n\nInfrastructure de production rigide :\n\n\nUn seul langage disponible, Java\nPas de modèle de ML en production\n\n\nConfiance des équipes à acquérir :\n\n\nAppréhension concernant la performance du modèle une fois en production\nObjectif : Déployer un modèle à la fois rapidement et progressivement"
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#organisation-actuelle-avant-la-mise-en-production",
+    "href": "slides/codif-auto/index.html#organisation-actuelle-avant-la-mise-en-production",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Organisation actuelle avant la mise en production",
+    "text": "Organisation actuelle avant la mise en production\n\n\n3 parties prenantes"
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#organisation-actuelle-une-fois-le-modèle-déployé-en-production",
+    "href": "slides/codif-auto/index.html#organisation-actuelle-une-fois-le-modèle-déployé-en-production",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Organisation actuelle une fois le modèle déployé en production",
+    "text": "Organisation actuelle une fois le modèle déployé en production"
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#inefficacité-organisationelle",
+    "href": "slides/codif-auto/index.html#inefficacité-organisationelle",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Inefficacité organisationelle",
+    "text": "Inefficacité organisationelle\n\nProblèmes rencontrés :\n\nMéconnaissance des problèmes métier côté Lab pour la maintenance\nContrôle de version et transmission des modèles\nOrganisation inefficace entre les parties prenantes\n\nDéfis à anticiper :\n\nSurveillance du modèle en temps réel\nRé-entrainement régulier\n\nConséquence : Besoin d’adopter les bonnes pratiques d’un point de vue technique (MLOps) et organisationel"
+  },
+  {
+    "objectID": "slides/codif-auto/index.html#organisation-visée-à-linsee",
+    "href": "slides/codif-auto/index.html#organisation-visée-à-linsee",
+    "title": "Codification automatique de l’APE avec de l’apprentissage statistique",
+    "section": "Organisation visée à l’Insee",
+    "text": "Organisation visée à l’Insee"
+  },
+  {
+    "objectID": "slides/conclusion/index.html#big-data-une-définition-simple",
+    "href": "slides/conclusion/index.html#big-data-une-définition-simple",
+    "title": "Conclusion et discussion",
+    "section": "Big data : une définition simple…",
+    "text": "Big data : une définition simple…"
+  },
+  {
+    "objectID": "slides/conclusion/index.html#mais-des",
+    "href": "slides/conclusion/index.html#mais-des",
+    "title": "Conclusion et discussion",
+    "section": "Mais des",
+    "text": "Mais des"
+  },
+  {
+    "objectID": "slides/conclusion/index.html#retours-dexpérience-de-linsee",
+    "href": "slides/conclusion/index.html#retours-dexpérience-de-linsee",
+    "title": "Conclusion et discussion",
+    "section": "Retours d’expérience de l’Insee",
+    "text": "Retours d’expérience de l’Insee\n\nDes sources et des projets très variés\nMais des principes généraux"
+  },
+  {
+    "objectID": "slides/conclusion/index.html#source-et-pérenniser",
+    "href": "slides/conclusion/index.html#source-et-pérenniser",
+    "title": "Conclusion et discussion",
+    "section": "Source et pérenniser",
+    "text": "Source et pérenniser\n\nNouer des partenariats\nRessources ESSNET Big Data I et II"
+  },
+  {
+    "objectID": "slides/conclusion/index.html#infrastructure",
+    "href": "slides/conclusion/index.html#infrastructure",
+    "title": "Conclusion et discussion",
+    "section": "Infrastructure",
+    "text": "Infrastructure\n\nVisio avec DIIT"
+  },
+  {
+    "objectID": "slides/conclusion/index.html#des-outils-à-adapter",
+    "href": "slides/conclusion/index.html#des-outils-à-adapter",
+    "title": "Conclusion et discussion",
+    "section": "Des outils à adapter",
+    "text": "Des outils à adapter\n\nTP outils big data"
+  },
+  {
+    "objectID": "slides/conclusion/index.html#de-statisticien-à-data-scientist",
+    "href": "slides/conclusion/index.html#de-statisticien-à-data-scientist",
+    "title": "Conclusion et discussion",
+    "section": "De statisticien à data scientist",
+    "text": "De statisticien à data scientist\n\nTP mise en prod\nFormations :\n\nécoles de formation\ncatalogue SSP Cloud\n\nLabs"
+  },
+  {
+    "objectID": "slides/conclusion/index.html#cadre-juridique",
+    "href": "slides/conclusion/index.html#cadre-juridique",
+    "title": "Conclusion et discussion",
+    "section": "Cadre juridique",
+    "text": "Cadre juridique"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#disclaimer",
+    "href": "slides/juridique-big-data/index.html#disclaimer",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "⚠️ Disclaimer ⚠️",
+    "text": "⚠️ Disclaimer ⚠️\n\nNous ne sommes pas des experts juridiques.\nCette présentation ne vise qu’à introduire des concepts généraux.\n❓ Pour des questions juridiques précises, veuillez contacter l’Unité Affaires Juridiques et Contentieuses (UAJC) :\n\nDirigée par Patrick Redor à patrick.redor@insee.fr"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#collecte-des-données",
+    "href": "slides/juridique-big-data/index.html#collecte-des-données",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Collecte des données",
+    "text": "Collecte des données\n\nNombreux acteurs privés et publics peuvent collecter des données produites directement ou indirectement par les individus.\nCollecte de données personnelles sans consentement explicite.\nPossibilité de violation de la vie privée des utilisateurs.\n➡️ Explication des motifs et intentions de collecte des données nécessaire.\n\n\n\n\n\n\n\nExemple de risque potentiel\n\n\nApplication de santé collectant des données biométriques de ses utilisateurs sans leur consentement explicite."
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#croissance-du-numérique",
+    "href": "slides/juridique-big-data/index.html#croissance-du-numérique",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Croissance du numérique",
+    "text": "Croissance du numérique"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#stockage-et-sécurité-des-données",
+    "href": "slides/juridique-big-data/index.html#stockage-et-sécurité-des-données",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Stockage et sécurité des données",
+    "text": "Stockage et sécurité des données\n\nVolume des données pose la difficulté du stockage.\nCoûts d’investissement importants et marché monopolisé par les GAFAM.\nProblématique de la souveraineté numérique.\n➡️ Mesures de sécurité essentielles pour la protection des données.\n\n\n\n\n\n\n\nExemple de risque potentiel\n\n\n\nPossibilité de violation de la sécurité des données ou de partage de données avec une entité gouvernementale.\nIncendie OVH en janvier 2023."
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#open-data-et-secteur-public",
+    "href": "slides/juridique-big-data/index.html#open-data-et-secteur-public",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Open Data et secteur public",
+    "text": "Open Data et secteur public\n\nMise à disposition publiquement et gratuitement des données.\n\nEn France, loi Lemaire 2016 :\nOpen Data des autorités publiques dans un cadre reglementé.\n\nObjectif double 🎯 :\n\n1️⃣ Transparence démocratique et ouverture d’information.\n2️⃣ Favoriser l’innovation économique et sociale.\n\nL’Open Data se démocratise aussi dans le secteur privé !"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#propriété-intellectuelle",
+    "href": "slides/juridique-big-data/index.html#propriété-intellectuelle",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Propriété intellectuelle",
+    "text": "Propriété intellectuelle\n\nGestion des licences ©️ :\n\nDéveloppement de l’open source et du partage de données.\nNécessité d’apposer et de respecter des licences claires.\n\nÉquilibre difficile entre protection et innovation ⚖️ :\n\nLes lois sur le droit d’auteur établies ont du mal à prendre en compte les nouvelles technologies\nDéveloppement de nouveaux outils d’Intelligence Artificielle (IA)"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#des-méthodologies-toujours-plus-innovantes",
+    "href": "slides/juridique-big-data/index.html#des-méthodologies-toujours-plus-innovantes",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Des méthodologies toujours plus innovantes…",
+    "text": "Des méthodologies toujours plus innovantes…\n\nGrands modèles de langage (LLM)\n\nChatGPT, LLama2, Bard…\n\nModèles de génération d’images\n\nMidjourney, Stable Diffusion, Dall-E\n\nModèles Deep fake :\n\nFakeApp"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#créant-de-nouvelles-problématiques",
+    "href": "slides/juridique-big-data/index.html#créant-de-nouvelles-problématiques",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "… créant de nouvelles problématiques",
+    "text": "… créant de nouvelles problématiques\n\nDéfi démocratique\nGestions des droits d’auteurs :\n\nLitige GoT-OpenAI\nPoursuites Stability AI/ Midjourney\n\nFailles de sécurité (Samsung-OpenAI)\nRéponses non sourcées\nQuid des données générées ?"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#loi-sur-le-secret-statistique-7-juin-1951",
+    "href": "slides/juridique-big-data/index.html#loi-sur-le-secret-statistique-7-juin-1951",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Loi sur le secret statistique 7 juin 1951",
+    "text": "Loi sur le secret statistique 7 juin 1951\n\nContexte :\n\n🇫🇷 Loi Française, promulguée en 1951.\nProtéger les personnes physiques et morales\nGarantir la confiance des citoyens envers l’Insee"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#loi-sur-le-secret-statistique-7-juin-1951-1",
+    "href": "slides/juridique-big-data/index.html#loi-sur-le-secret-statistique-7-juin-1951-1",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Loi sur le secret statistique 7 juin 1951",
+    "text": "Loi sur le secret statistique 7 juin 1951\n\nCommunication strictement interdite des données individuelles :\n\n🚫 Réutilisation à des fins de contrôle fiscal ou de répression économique\n\nS’applique à la diffusion de statistiques :\n\n🚫 Diffusion de données permettant la réidentification\n\nCréation du Cnis, du comité du Label et de l’ASP"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#loi-informatique-et-liberté-1978",
+    "href": "slides/juridique-big-data/index.html#loi-informatique-et-liberté-1978",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Loi informatique et liberté 1978",
+    "text": "Loi informatique et liberté 1978\n\nContexte :\n\n🇫🇷 Loi Française, promulguée en 1978.\n🤖 Concerne les traitements automatisés de données personnelles"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#loi-informatique-et-liberté-1978-1",
+    "href": "slides/juridique-big-data/index.html#loi-informatique-et-liberté-1978-1",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Loi informatique et liberté 1978",
+    "text": "Loi informatique et liberté 1978\n\nDéclaration à la CNIL des fichiers contenant des données personnelles\n🚫 Collection de données à caractère sensible (religion, la santé, la politique, etc) interdite\nPrincipe de collecte loyale de données\nAssurer la sécurité des données collectées\nObligation d’informer les individus concernés de la collecte de leurs données\nDroit à l’accès, la modification et la suppression des données en question"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#loi-pour-une-république-numérique",
+    "href": "slides/juridique-big-data/index.html#loi-pour-une-république-numérique",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Loi pour une République Numérique",
+    "text": "Loi pour une République Numérique\n\nContexte :\n\n🇫🇷 Loi Française, promulguée en 2016.\n📈 Réponse à l’expansion rapide du numérique dans la société.\n⚖️ Equilibre entre innovation, inclusion, protection et confiance."
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#circulation-des-données-et-du-savoir",
+    "href": "slides/juridique-big-data/index.html#circulation-des-données-et-du-savoir",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Circulation des données et du savoir",
+    "text": "Circulation des données et du savoir\n\nL’ouverture des données publiques par défaut :\n\nL’État, les collectivités locales… et l’Insee !\nCode sources et bases de données, sous condition d’anonymisation.\nCADA et CNIL pour la mise en oeuvre des règles.\n\nCréation d’un service public de la données Etalab.\nLibre accès des papiers académique financés à +50% par fond public.\nOuverture des données d’intérêt général (transports, eau, déchets, consommation d’énergie…)."
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#la-protection-des-droits-dans-la-société-numérique",
+    "href": "slides/juridique-big-data/index.html#la-protection-des-droits-dans-la-société-numérique",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "La protection des droits dans la société numérique",
+    "text": "La protection des droits dans la société numérique\n\nPrincipe de la neutralité de l’internet inscrit dans le droit français ➡️ Arcep\n3 obligations des plateformes en ligne : loyauté, clarté et transparence\nProtection de la vie privée sur internet :\n\nDroit à l’oubli numérique\nDroit à la mort numérique\nRègle du secret des correspondances privées (https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000034307602)"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#laccès-au-numérique-pour-tous",
+    "href": "slides/juridique-big-data/index.html#laccès-au-numérique-pour-tous",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "L’accès au numérique pour tous",
+    "text": "L’accès au numérique pour tous\n\nLe numérique dans tous les territoires :\n\nCouverture 4G + sanctions opérateurs\n\nLe numérique au bénéfice des publics fragiles"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#règlement-général-sur-la-protection-des-données-rgpd-de-lue",
+    "href": "slides/juridique-big-data/index.html#règlement-général-sur-la-protection-des-données-rgpd-de-lue",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Règlement Général sur la Protection des Données (RGPD) de l’UE :",
+    "text": "Règlement Général sur la Protection des Données (RGPD) de l’UE :\n\nContexte :\n\n🇪🇺 Loi Européenne, promulguée en 2016.\nHarmonisation des règles de protection des données\nLe pendant de la Loi informatique et liberté 1978 française"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#champ-daction-du-rgpd",
+    "href": "slides/juridique-big-data/index.html#champ-daction-du-rgpd",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Champ d’action du RGPD :",
+    "text": "Champ d’action du RGPD :\n\nTout organisme peut être concerné\nRGPD s’applique à toute organisation qui traite des données personnelles dès lors que :\n\nÉtablie sur le territoire de l’Union européenne\nActivité cible directement des résidents européens"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#data-act",
+    "href": "slides/juridique-big-data/index.html#data-act",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Data Act :",
+    "text": "Data Act :\n\nContexte :\n\n🇪🇺 Loi Européenne, adoptée en 2022.\nClarifie que peut créer de la valeur à partir des données et sous quelles conditions"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#une-répartition-équitable-de-la-valeur-issue-des-données",
+    "href": "slides/juridique-big-data/index.html#une-répartition-équitable-de-la-valeur-issue-des-données",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Une répartition équitable de la valeur issue des données",
+    "text": "Une répartition équitable de la valeur issue des données\n\nInternet of Things (IoT) génère beaucoup de données personnelles\nPotentiel économique est contrôlé par quelques acteurs dominants\nFavoriser l’ouverture des données IoT :\n\nAccès aux fournisseurs de service d’après vente"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#lever-les-obstacles-à-la-concurrence-du-cloud",
+    "href": "slides/juridique-big-data/index.html#lever-les-obstacles-à-la-concurrence-du-cloud",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Lever les obstacles à la concurrence du Cloud",
+    "text": "Lever les obstacles à la concurrence du Cloud\n\nSupprimer les principales barrières érigées par les fournisseurs dominants pour accéder à un cloud concurrent :\n\nSuppression des frais de transfert de données et de migration\n\n🎯 Préserver la liberté de choix des utilisateurs et à stimuler l’innovation sur le marché"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#le-cas-du-webscrapping",
+    "href": "slides/juridique-big-data/index.html#le-cas-du-webscrapping",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "1️⃣ Le cas du webscrapping",
+    "text": "1️⃣ Le cas du webscrapping\nQuid des prérogatives de puissance publique pour recueillir de l’information ?\n\nEn Europe, la loi n° 633 du 22 avril 1941, pour la protection du droit d’auteur, prévoit une exception en cas d’utilisation d’une base de données à des fins de recherche scientifique à but non lucratif (art. 64-sexies de la loi n° 633/1941 modifié).\n\nBien que la recherche et la production statistiques ne soient pas explicitement mentionnées, ces dispositions apportent un cadre raisonnable pour permettre aux statisticiens publics d’accéder aux informations des bases de données en ligne et pour traiter ces informations afin de produire des résultats statistiques anonymisés."
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#scraping-à-linsee",
+    "href": "slides/juridique-big-data/index.html#scraping-à-linsee",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Scraping à l’INSEE",
+    "text": "Scraping à l’INSEE\nQuand ?\n\nLe web scraping est utilisé en dernier recours, l’INSEE favorisera :\n\nLes accords avec des partenaires (ex : seloger.com)\nL’utilisation d’API (ex : Qwant, Yahoo Finance)\nLes sources de données publiques\n\nLe web scraping devient cependant une source de données grandissante."
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#scraping-à-linsee-1",
+    "href": "slides/juridique-big-data/index.html#scraping-à-linsee-1",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Scraping à l’INSEE",
+    "text": "Scraping à l’INSEE\nUtilisation\nLe scraping est notamment utilisé pour le calcul des indices des prix :\n\nPrix des transports (trains via site de la SNCF, domaine maritime) ;\nPrix de produits divers (surtout de l’électronique) ;\nPrix dans le domaine de l’hôtellerie (avec booking.com). D’autres utilisations ponctuelles peuvent également être faites."
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#scraping-à-linsee-2",
+    "href": "slides/juridique-big-data/index.html#scraping-à-linsee-2",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Scraping à l’INSEE",
+    "text": "Scraping à l’INSEE\nOrganisation\n\nUn scraping encore par cas d’usage, avec une gestion plus globale en cours de maturité\n\nObjectif de mutualisation entre les équipes statistiques\nLa logique open source comme moyen de mutualisation\n\nBeaucoup de Python, un peu de R et de Java"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com",
+    "href": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Les prix dans le domaine de l’hôtellerie (Booking.com)",
+    "text": "Les prix dans le domaine de l’hôtellerie (Booking.com)\nRéférences\n\nUn travail ayant donné lieu à une publication\n\nAdrien Montbroussous, Camille Freppel and Ombéline Guillon, “Web scraping of a booking platform: exploring new data and methodology for the hotel service consumer price index”, Paper for the 17th International Conference of the Ottawa Group, Rome\n\nUne présentation plus accessible ici"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com-1",
+    "href": "slides/juridique-big-data/index.html#les-prix-dans-le-domaine-de-lhôtellerie-booking.com-1",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Les prix dans le domaine de l’hôtellerie (Booking.com)",
+    "text": "Les prix dans le domaine de l’hôtellerie (Booking.com)\nLe code\n\nBut : collecter davantage de données pour calculer au mieux les indices d’évolution de prix pour l’hôtellerie.\nLa partie ‘scraping’ du projet est disponible ici.\nPour plus d’informations, contacter Adrien Montbroussous (adrien.montbroussous at insee dot fr) (INSEE).\nLa conférence associée aux présentations : ici\n\nD’autres projets similaires de scraping mentionnés"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#ventes-darticles-électroniques",
+    "href": "slides/juridique-big-data/index.html#ventes-darticles-électroniques",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Ventes d’articles électroniques",
+    "text": "Ventes d’articles électroniques\n\nBut : collecter davantage de données pour calculer au mieux les indices de prix associés au secteur\n\nProjet encore à une étape expérimentale\n\nScraping de Boulanger : ici\nScraping de Rue du Commerce : ici\nPour plus d’informations, contacter Adrien Montbroussous (adrien.montbroussous at insee dot fr) (INSEE)."
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#scraping-de-la-sncf",
+    "href": "slides/juridique-big-data/index.html#scraping-de-la-sncf",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Scraping de la SNCF",
+    "text": "Scraping de la SNCF\nContexte\n\nLe calcul de l’IPC tient compte de :\n\nL’indice des prix des trains Grandes Lignes\nLe transport des passagers en train\n\nLes prix utilisés étaient fondés sur un document publié annuellement par la SNCF. Mais cette méthode :\n\nNe reflète pas les variations infra-annuelles réelles, en particulier pour les TGV\nNe reflète pas les prix effectivement payés par les consommateurs\nNe suit pas les recommandations des institutions internationales"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#scraping-de-la-sncf-1",
+    "href": "slides/juridique-big-data/index.html#scraping-de-la-sncf-1",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Scraping de la SNCF",
+    "text": "Scraping de la SNCF\nIntroduction du webscraping\n\nSous forme expérimentale depuis 2018, indices publiés depuis 2020\nCollecte quotidienne pour capter la volatilité des prix\nRequêtes effectuées pour plusieurs couples origine-destination, types de train, antériorités, profils passagers et horaires\nPrès de 23 000 requêtes par nuit\nUn important travail statistique avec les données ainsi obtenues s’ensuit.\n\nStratification en cellules homogènes de prix\nUn micro-indice calculé par cellule\nAgrégation des micro-indices avec un indice de Laspeyres arithmétique"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#scraping-de-la-sncf-2",
+    "href": "slides/juridique-big-data/index.html#scraping-de-la-sncf-2",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "Scraping de la SNCF",
+    "text": "Scraping de la SNCF\nComparaison des résultats"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#dautres-ressources-pour-le-scraping-lié-à-lipc",
+    "href": "slides/juridique-big-data/index.html#dautres-ressources-pour-le-scraping-lié-à-lipc",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "D’autres ressources pour le scraping lié à l’IPC",
+    "text": "D’autres ressources pour le scraping lié à l’IPC\n\nGuidelines d’Eurostat sur le scraping lié à l’indice des prix à la consommation\n\nAnnexe 3 consacrée aux travaux de l’INSEE sur Boulanger et Rue du Commerce"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#les-données-de-téléphonie-mobiles",
+    "href": "slides/juridique-big-data/index.html#les-données-de-téléphonie-mobiles",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "2️⃣ Les données de téléphonie mobiles",
+    "text": "2️⃣ Les données de téléphonie mobiles"
+  },
+  {
+    "objectID": "slides/juridique-big-data/index.html#les-données-de-carte-bancaire",
+    "href": "slides/juridique-big-data/index.html#les-données-de-carte-bancaire",
+    "title": "Aspects juridiques et réglementaires du big data : un retour d’expérience",
+    "section": "3️⃣ Les données de carte bancaire",
+    "text": "3️⃣ Les données de carte bancaire"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#linformatique-dans-le-ssp",
+    "href": "slides/outils-techniques/index.html#linformatique-dans-le-ssp",
+    "title": "Besoins techniques et organisationnels",
+    "section": "L’informatique dans le SSP",
+    "text": "L’informatique dans le SSP\n\nUne “communauté d’artisans”\n\nDiversité des langages de programmation\nDiversité des environnements de travail"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#le-poste-de-travail",
+    "href": "slides/outils-techniques/index.html#le-poste-de-travail",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Le poste de travail",
+    "text": "Le poste de travail\n\n\nAvantages :\n\nSimplicité\n\nInconvénients :\n\nPuissance limitée\nReproductibilité limitée\nSécurité faible"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#les-infrastructures-mutualisées-traditionnelles",
+    "href": "slides/outils-techniques/index.html#les-infrastructures-mutualisées-traditionnelles",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Les infrastructures mutualisées traditionnelles",
+    "text": "Les infrastructures mutualisées traditionnelles\n\n\nAvantages :\n\nSimplicité\nPuissance\nSécurité des données\nCouvre la majorité des usages\n\nInconvénients :\n\nReproductibilité faible\nDifficultés à innover"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#lenjeu-de-la-reproductibilité",
+    "href": "slides/outils-techniques/index.html#lenjeu-de-la-reproductibilité",
+    "title": "Besoins techniques et organisationnels",
+    "section": "L’enjeu de la reproductibilité",
+    "text": "L’enjeu de la reproductibilité\n\n\n\n\n\nSource : Peng R., Reproducible Research in Computational Science, Science (2011)"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#donner-les-moyens-dinnover",
+    "href": "slides/outils-techniques/index.html#donner-les-moyens-dinnover",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Donner les moyens d’innover",
+    "text": "Donner les moyens d’innover\n\n\nFournir des ressources adaptées aux nouveaux usages\n\nStockage adapté aux données massives et non-structurées\nOutils modernes de data science (R, Python, calcul distribué,…)\nGPUs pour l’entraînement de modèles de machine learning\n\nPasser du développement à la mise en production\n\nOutils de déploiement et d’automatisation"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#des-besoins-à-différents-niveaux",
+    "href": "slides/outils-techniques/index.html#des-besoins-à-différents-niveaux",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Des besoins à différents niveaux",
+    "text": "Des besoins à différents niveaux\n\nInfrastructure\nOutils informatiques\nChangements organisationnels"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#comment-construire-une-data-stack-pertinente",
+    "href": "slides/outils-techniques/index.html#comment-construire-une-data-stack-pertinente",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Comment construire une data stack pertinente ?",
+    "text": "Comment construire une data stack pertinente ?\n\nRépondre aux besoins des statisticiens publics\n\nRessources (stockage, GPUs, services etc.) pour l’expérimentation\nFavoriser la reproductibilité des traitements\nPermettre la mise en production\n\nChoisir des technologies à l’état de l’art\n\nFaciliter l’adoption par les statisticiens"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#notre-data-stack",
+    "href": "slides/outils-techniques/index.html#notre-data-stack",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Notre data stack",
+    "text": "Notre data stack\n\nInfrastructure cloud centralisée\nStockage objet\nConteneurisation\nPlateforme web de data science"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#infrastructure-cloud",
+    "href": "slides/outils-techniques/index.html#infrastructure-cloud",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Infrastructure cloud",
+    "text": "Infrastructure cloud\n\nPoste de travail comme point d’accès à une infrastructure centralisée de calcul\n\nEvolutivité (scaling horizontal)\nSécurité (pas de dissemination des données)\n\nOn-premise vs. full-cloud\n\nMaîtrise des coûts\nCompétences de maintenance"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#stockage-le-data-lake",
+    "href": "slides/outils-techniques/index.html#stockage-le-data-lake",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Stockage : le data lake",
+    "text": "Stockage : le data lake\n\nUn stockage peu coûteux fait pour des données\n\nvolumineuses\nbrutes\nissues de sources variées"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#le-choix-du-stockage-objet",
+    "href": "slides/outils-techniques/index.html#le-choix-du-stockage-objet",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Le choix du stockage objet",
+    "text": "Le choix du stockage objet\n\nChoix du stockage objet (type S3) vs. Hadoop\nLa co-localisation des traitements n’est plus justifiée\n\nPlus besoin de puissance/IA que de big storage\nDécouplage stockage/traitement -&gt; évolutivité\nCoûts de maintenance"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#le-choix-de-la-conteneurisation",
+    "href": "slides/outils-techniques/index.html#le-choix-de-la-conteneurisation",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Le choix de la conteneurisation",
+    "text": "Le choix de la conteneurisation\n\n\n\n\n\n\nStandard pour la data science\n\nautonomie\nreproductibilité\nscalabilité\n\nOrchestrateur : Kubernetes"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#une-plateforme-de-data-science",
+    "href": "slides/outils-techniques/index.html#une-plateforme-de-data-science",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Une plateforme de data science",
+    "text": "Une plateforme de data science\n\nLes choix techniques ne suffisent pas\n\nLes technologies cloud sont difficiles d’accès\nUne interface web comme liant technique"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#ssp-cloud-onyxia",
+    "href": "slides/outils-techniques/index.html#ssp-cloud-onyxia",
+    "title": "Besoins techniques et organisationnels",
+    "section": "SSP Cloud / Onyxia",
+    "text": "SSP Cloud / Onyxia\n\nSSP Cloud : instance publique d’Onyxia\n\nDédiée à l’expérimentation sur données ouvertes\nBase des tutoriels de cette formation\n\nOnyxia : une plateforme de data science moderne\n\nProjet open-source : https://github.com/InseeFrLab/onyxia-web\nPossibilité de créer une instance interne"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#motivation",
+    "href": "slides/outils-techniques/index.html#motivation",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Motivation",
+    "text": "Motivation\n\nUne infrastructure adaptée au big data est nécessaire.. mais pas suffisante !\nNécessité d’adapter les pratiques\n\nLangages de programmation\nFormats de données\nLibrairies informatiques spécifiques"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#langages-de-programmation",
+    "href": "slides/outils-techniques/index.html#langages-de-programmation",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Langages de programmation",
+    "text": "Langages de programmation\n\nSource"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#limites-des-formats-de-données-usuels",
+    "href": "slides/outils-techniques/index.html#limites-des-formats-de-données-usuels",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Limites des formats de données usuels",
+    "text": "Limites des formats de données usuels\n\nLes formats usuels (CSV, JSON, XML) sont inadaptés à la big data\n\nNon-compressés : human readable mais espace disque élevé\nOrientés ligne : un traitement sur une/des colonne(s) implique une lecture complète du fichier"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#formats-de-données-pour-la-big-data",
+    "href": "slides/outils-techniques/index.html#formats-de-données-pour-la-big-data",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Formats de données pour la big data",
+    "text": "Formats de données pour la big data\n\nPropriétés souhaitées\n\nOrientés colonne\nEfficients en stockage disque\nEfficients en RAM\nInteropérables et open-source\n\nFormats candidats\n\nParquet : stockage disque\nArrow : traitement en mémoire"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#modes-de-stockage",
+    "href": "slides/outils-techniques/index.html#modes-de-stockage",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Modes de stockage",
+    "text": "Modes de stockage\n\nLe stockage hybride optimise la lecture\n\nProjection (SELECT) : orientation colonne\nPredicates (WHERE) : orientation ligne\n\n\n\n\n\n\n\n\nSource"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#le-format-parquet-propriétés",
+    "href": "slides/outils-techniques/index.html#le-format-parquet-propriétés",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Le format Parquet : propriétés",
+    "text": "Le format Parquet : propriétés\n\nOrienté colonne (hybride)\n\nAdapté aux traitements analytiques\nConçu pour être écrit une fois mais lu fréquemment\n\nOptimisé\n\nCompression (jusqu’à 87 % moins d’espace qu’un CSV)\nParcours du fichier (jusqu’à 34x plus rapide qu’un CSV)\n\nInteropérable et open-source"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#le-format-parquet-partionnement",
+    "href": "slides/outils-techniques/index.html#le-format-parquet-partionnement",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Le format Parquet : partionnement",
+    "text": "Le format Parquet : partionnement\n\nDivision en blocs des données selon un critère\n\nOptimise la lecture pour certaines queries"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#traitement-en-mémoire",
+    "href": "slides/outils-techniques/index.html#traitement-en-mémoire",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Traitement en mémoire",
+    "text": "Traitement en mémoire\n\nParquet ne résout pas tout\n\nL’espace disque est optimisé\nLes données décompressées doivent passer en RAM\n\nComment analyser 100 GB de données sur un PC avec 16 GB de RAM ?"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#arrow",
+    "href": "slides/outils-techniques/index.html#arrow",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Arrow",
+    "text": "Arrow\n\nFormat de données en mémoire, orienté colonne\n\nOptimisé pour les traitements analytiques\nPas nécessaire de charger toutes les données en RAM\nInteropérable et standardisé"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#traitement-des-données-massives",
+    "href": "slides/outils-techniques/index.html#traitement-des-données-massives",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Traitement des données massives",
+    "text": "Traitement des données massives\n\nArrow ne résout pas tout\n\nLes données massives nécessitent des infrastructures big data\nLes algorithmes aussi doivent être adaptés\n\nSolution : calcul distribué"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#hadoop-mapreduce",
+    "href": "slides/outils-techniques/index.html#hadoop-mapreduce",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Hadoop MapReduce",
+    "text": "Hadoop MapReduce\n\nDéveloppé par Google (2004)\nPopularisé par l’implémentation open-source d’Hadoop"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#apache-spark",
+    "href": "slides/outils-techniques/index.html#apache-spark",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Apache Spark",
+    "text": "Apache Spark\n\nDémocratisation du calcul distribué\n\nAbstraction des opérations MapReduce\nVitesse d’exécution (RAM vs. disque)"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#en-résumé",
+    "href": "slides/outils-techniques/index.html#en-résumé",
+    "title": "Besoins techniques et organisationnels",
+    "section": "En résumé",
+    "text": "En résumé\n\nUtiliser un format de données adapté (Parquet)\nUtiliser des outils informatiques adaptés\n\nDonnées volumineuses : calcul en mémoire optimisé (Arrow / DuckDB)\nDonnées massives : calcul distribué (Spark)"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#outils-pour-la-mise-en-production",
+    "href": "slides/outils-techniques/index.html#outils-pour-la-mise-en-production",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Outils pour la mise en production",
+    "text": "Outils pour la mise en production\n\nTraitements automatisés (workflows)\n\nargo-workflow\n\nDéploiement (batch, workflow, application)\n\nKubernetes\nArgoCD"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#catalogue-de-services-donyxia",
+    "href": "slides/outils-techniques/index.html#catalogue-de-services-donyxia",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Catalogue de services d’Onyxia",
+    "text": "Catalogue de services d’Onyxia"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#labs",
+    "href": "slides/outils-techniques/index.html#labs",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Labs",
+    "text": "Labs\n\nL’innovation méthodologie ET informatique sont complémentaires\n\nPas de big data sans infrastructure adaptée\nPas de big data sans outils et algorithmes adaptés\n\nInsee : deux labs qui travaillent en synérgie\n\nSSP Lab : innovation méthodologique en data science\nDIIT : innovation informatique (Onyxia / SSP Cloud)"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#approche-mlops",
+    "href": "slides/outils-techniques/index.html#approche-mlops",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Approche MLOps",
+    "text": "Approche MLOps\n\nBesoin de trouver des organisations hybrides"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#organisation-dun-projet",
+    "href": "slides/outils-techniques/index.html#organisation-dun-projet",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Organisation d’un projet",
+    "text": "Organisation d’un projet"
+  },
+  {
+    "objectID": "slides/outils-techniques/index.html#formation",
+    "href": "slides/outils-techniques/index.html#formation",
+    "title": "Besoins techniques et organisationnels",
+    "section": "Formation",
+    "text": "Formation\n\nToutes nos formations sont open-source (catalogue)\n\nParcours de formation à R / Python\nFormation à Spark\nTutoriels de machine learning\nMLOps\netc."
   }
 ]
