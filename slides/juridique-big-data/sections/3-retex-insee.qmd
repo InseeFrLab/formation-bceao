@@ -86,7 +86,7 @@ Il est préférable de privilégier d'autres modes d'accès aux données (API) l
 
 ## Scraping à l'INSEE
 
-#### Quand ? 
+#### [Quand ?]{.orange}
 
 - Le webscraping est utilisé en [**dernier recours**]{.orange}, l'INSEE favorisera :
     - Les [**accords**]{.blue2} avec des partenaires (ex : seloger.com)
@@ -100,10 +100,10 @@ Il est préférable de privilégier d'autres modes d'accès aux données (API) l
 
 Le scraping est notamment utilisé pour le calcul des [**indices des prix**]{.blue2} :
 
-- Prix des [**transports**]{.orange} (trains via site de la `SNCF`, domaine maritime) ;
-- Prix de [**produits divers**]{.blue2} (surtout de l'électronique) ;
-- Prix dans le domaine de l'[**hôtellerie**]{.blue2} (avec `booking.com`).
-D'autres utilisations ponctuelles peuvent également être faites.
+- Prix des [**transports**]{.orange} (trains via site de la `SNCF`, domaine maritime)
+- Prix de [**produits divers**]{.blue2} (surtout de l'électronique)
+- Prix dans le domaine de l'[**hôtellerie**]{.blue2} (avec `booking.com`)
+- D'autres utilisations ponctuelles peuvent également être faites
 
 ## Scraping à l'INSEE
 
