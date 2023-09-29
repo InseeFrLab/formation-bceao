@@ -662,49 +662,49 @@
     "href": "slides/conclusion/index.html#une-transformation-continue",
     "title": "Conclusion et discussion",
     "section": "Une transformation continue",
-    "text": "Une transformation continue\n\nDe multiples dimensions (démocratique, juridique, économique, méthodologique, technique)\n\nDes défis souvent déjà existants !\n\nUne transformation continue plutôt qu’une rupture\n\nMontée en compétence collective\nInnover sur les modes d’organisation\n\nRecommendations :\n\ndonner les moyens d’innover\nprojets pilotes"
+    "text": "Une transformation continue\n\nDe multiples dimensions (démocratique, juridique, économique, méthodologique, technique)\n\nDes défis souvent déjà existants !\n\nUne transformation continue plutôt qu’une rupture\n\nMontée en compétence collective\nInnover sur les modes d’organisation\n\n\n\n\n\n\n\n\n\nRecommendations\n\n\n\nDonner les moyens d’innover\nCommencer par des projets pilotes pour prouver l’intérêt"
   },
   {
     "objectID": "slides/conclusion/index.html#enjeux-démocratiques-et-cadre-juridique",
     "href": "slides/conclusion/index.html#enjeux-démocratiques-et-cadre-juridique",
     "title": "Conclusion et discussion",
     "section": "Enjeux démocratiques et cadre juridique",
-    "text": "Enjeux démocratiques et cadre juridique\n\nArbitrage à trouver\n\nUtilisation de nouvelles sources statistiques prometteuses\nConserver la confiance des citoyens\n\nLe cadre juridique est garant de cette confiance\n\nLe rythme de l’innovation rend nécesaire des ajustements fréquents\n\nRecommendations : assurer une veille sur l’évolution de la législation"
+    "text": "Enjeux démocratiques et cadre juridique\n\nArbitrage à trouver\n\nDe nouvelles sources statistiques prometteuses\nConserver la confiance des citoyens\n\nLe cadre juridique est garant de cette confiance\n\nNécessité d’ajustements fréquents\n\n\n\n\n\n\n\n\n\nRecommendations\n\n\n\nAssurer une veille sur l’évolution de la législation\nFaire attention aux licences d’utilisation"
   },
   {
     "objectID": "slides/conclusion/index.html#enjeux-économiques",
     "href": "slides/conclusion/index.html#enjeux-économiques",
     "title": "Conclusion et discussion",
     "section": "Enjeux économiques",
-    "text": "Enjeux économiques\n\nDes données souvent produites par des acteurs privés\n\nPas toujours la main sur le mode de collecte\nVolonté des acteurs de valoriser ces données\n\nRecommendations :\n\nNouer des partenariats basés sur des intérêts réciproques\nRessources ESSNET Big Data"
+    "text": "Enjeux économiques\n\nDes données souvent produites par des acteurs privés\n\nPas toujours la main sur le mode de collecte\nVolonté des acteurs de valoriser ces données\n\n\n\n\n\n\n\n\n\nRecommendations\n\n\n\nNouer des partenariats basés sur des intérêts réciproques\nS’inspirer des expériences passées (cf. ressources ESSNET Big Data)"
   },
   {
     "objectID": "slides/conclusion/index.html#infrastructure",
     "href": "slides/conclusion/index.html#infrastructure",
     "title": "Conclusion et discussion",
     "section": "Infrastructure",
-    "text": "Infrastructure\n\nAdoption de technologies modernes et évolutives\n\nStockage objet centralisé\nConteneurisation\n\nFaciliter l’accès aux statisticiens\n\nProjet Onyxia\n\nRecommendations :\n\nMettre une sandbox à disposition pour l’innovation\nVisio à venir sur les choix d’architecture"
+    "text": "Infrastructure\n\nAdoption de technologies modernes et évolutives\n\nStockage objet centralisé\nConteneurisation\n\nFaciliter l’accès aux statisticiens\n\nProjet Onyxia\n\n\n\n\n\n\n\n\n\nRecommendations\n\n\n\nMettre une sandbox à disposition pour l’innovation\nVisio à venir sur les choix d’architecture"
   },
   {
     "objectID": "slides/conclusion/index.html#des-outils-à-adapter",
     "href": "slides/conclusion/index.html#des-outils-à-adapter",
     "title": "Conclusion et discussion",
     "section": "Des outils à adapter",
-    "text": "Des outils à adapter\n\nTransition vers des outils informatiques adaptés\n\nFormat de fichier : Parquet\nTraitement de données volumineuses : Arrow\nTraitement de données massives : Spark\n\nRecommendations :\n\nAppliquer ces technologies à un projet concret"
+    "text": "Des outils à adapter\n\nTransition vers des outils informatiques adaptés\n\nFormat de fichier : Parquet\nTraitement de données volumineuses : Arrow\nTraitement de données massives : Spark\n\n\n\n\n\n\n\n\n\nRecommendations\n\n\n\nTransitionner vers des langages et outils open-source (R, Python)\nAppliquer ces technologies à un projet concret"
   },
   {
     "objectID": "slides/conclusion/index.html#de-statisticien-à-data-scientist",
     "href": "slides/conclusion/index.html#de-statisticien-à-data-scientist",
     "title": "Conclusion et discussion",
     "section": "De statisticien à data scientist",
-    "text": "De statisticien à data scientist\n\nVeille méthodologique\n\nTraitement des données non-structurées\nMéthodes de machine learning\n\nAcculturation aux outils informatiques\n\nCalcul distribué\nOutils pour la mise en production\n\nRecommendations :\n\nFavoriser la formation et l’auto-formation\nLiens avec les écoles de formation\nCatalogue de formation du SSP Cloud"
+    "text": "De statisticien à data scientist\n\nVeille méthodologique\n\nTraitement des données non-structurées\nMéthodes de machine learning\n\nAcculturation aux outils informatiques\n\nCalcul distribué\nOutils pour la mise en production\n\n\n\n\n\n\n\n\n\nRecommendations\n\n\n\nFavoriser la formation et l’auto-formation\nLiens avec les écoles de formation\nCatalogue de formation du SSP Cloud"
   },
   {
     "objectID": "slides/conclusion/index.html#discussion",
     "href": "slides/conclusion/index.html#discussion",
     "title": "Conclusion et discussion",
     "section": "Discussion",
-    "text": "Discussion\n\nRetours sur la formation : durée, format des supports, répartition théorie/pratique, etc.\nIdentifier des besoins en documentation (SIREN)\nSujets prioritaires pour la BCEAO\nSuites de la collaboration"
+    "text": "Discussion\n\nRetours sur la formation : durée, format des supports, répartition théorie/pratique, etc.\nIdentifier des besoins en documentation\nDiscussion autour des sujets prioritaires pour la BCEAO\nSuites de la collaboration"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#disclaimer",
