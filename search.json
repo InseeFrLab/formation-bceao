@@ -651,60 +651,60 @@
     "text": "Organisation visée à l’Insee"
   },
   {
-    "objectID": "slides/conclusion/index.html#big-data-une-définition-simple",
-    "href": "slides/conclusion/index.html#big-data-une-définition-simple",
+    "objectID": "slides/conclusion/index.html#big-data-une-définition-pragmatique",
+    "href": "slides/conclusion/index.html#big-data-une-définition-pragmatique",
     "title": "Conclusion et discussion",
-    "section": "Big data : une définition simple…",
-    "text": "Big data : une définition simple…"
+    "section": "Big data : une définition pragmatique",
+    "text": "Big data : une définition pragmatique\n\nUne notion aux contours flous\nUne définition pragmatique\n\nVolumétrie : difficiles à traiter sur des environnements usuels\nVariété : nécessite des méthodes de traitement non-standard\nGénéralement non-collectée à des fins de statistique publique"
   },
   {
-    "objectID": "slides/conclusion/index.html#mais-des",
-    "href": "slides/conclusion/index.html#mais-des",
+    "objectID": "slides/conclusion/index.html#une-transformation-continue",
+    "href": "slides/conclusion/index.html#une-transformation-continue",
     "title": "Conclusion et discussion",
-    "section": "Mais des",
-    "text": "Mais des"
+    "section": "Une transformation continue",
+    "text": "Une transformation continue\n\nDe multiples dimensions (démocratique, juridique, économique, méthodologique, technique)\n\nDes défis souvent déjà existants !\n\nUne transformation continue plutôt qu’une rupture\n\nMontée en compétence collective\nInnover sur les modes d’organisation\n\nRecommendations :\n\ndonner les moyens d’innover\nprojets pilotes"
   },
   {
-    "objectID": "slides/conclusion/index.html#retours-dexpérience-de-linsee",
-    "href": "slides/conclusion/index.html#retours-dexpérience-de-linsee",
+    "objectID": "slides/conclusion/index.html#enjeux-démocratiques-et-cadre-juridique",
+    "href": "slides/conclusion/index.html#enjeux-démocratiques-et-cadre-juridique",
     "title": "Conclusion et discussion",
-    "section": "Retours d’expérience de l’Insee",
-    "text": "Retours d’expérience de l’Insee\n\nDes sources et des projets très variés\nMais des principes généraux"
+    "section": "Enjeux démocratiques et cadre juridique",
+    "text": "Enjeux démocratiques et cadre juridique\n\nArbitrage à trouver\n\nUtilisation de nouvelles sources statistiques prometteuses\nConserver la confiance des citoyens\n\nLe cadre juridique est garant de cette confiance\n\nLe rythme de l’innovation rend nécesaire des ajustements fréquents\n\nRecommendations : assurer une veille sur l’évolution de la législation"
   },
   {
-    "objectID": "slides/conclusion/index.html#source-et-pérenniser",
-    "href": "slides/conclusion/index.html#source-et-pérenniser",
+    "objectID": "slides/conclusion/index.html#enjeux-économiques",
+    "href": "slides/conclusion/index.html#enjeux-économiques",
     "title": "Conclusion et discussion",
-    "section": "Source et pérenniser",
-    "text": "Source et pérenniser\n\nNouer des partenariats\nRessources ESSNET Big Data I et II"
+    "section": "Enjeux économiques",
+    "text": "Enjeux économiques\n\nDes données souvent produites par des acteurs privés\n\nPas toujours la main sur le mode de collecte\nVolonté des acteurs de valoriser ces données\n\nRecommendations :\n\nNouer des partenariats basés sur des intérêts réciproques\nRessources ESSNET Big Data"
   },
   {
     "objectID": "slides/conclusion/index.html#infrastructure",
     "href": "slides/conclusion/index.html#infrastructure",
     "title": "Conclusion et discussion",
     "section": "Infrastructure",
-    "text": "Infrastructure\n\nVisio avec DIIT"
+    "text": "Infrastructure\n\nAdoption de technologies modernes et évolutives\n\nStockage objet centralisé\nConteneurisation\n\nFaciliter l’accès aux statisticiens\n\nProjet Onyxia\n\nRecommendations :\n\nMettre une sandbox à disposition pour l’innovation\nVisio à venir sur les choix d’architecture"
   },
   {
     "objectID": "slides/conclusion/index.html#des-outils-à-adapter",
     "href": "slides/conclusion/index.html#des-outils-à-adapter",
     "title": "Conclusion et discussion",
     "section": "Des outils à adapter",
-    "text": "Des outils à adapter\n\nTP outils big data"
+    "text": "Des outils à adapter\n\nTransition vers des outils informatiques adaptés\n\nFormat de fichier : Parquet\nTraitement de données volumineuses : Arrow\nTraitement de données massives : Spark\n\nRecommendations :\n\nAppliquer ces technologies à un projet concret"
   },
   {
     "objectID": "slides/conclusion/index.html#de-statisticien-à-data-scientist",
     "href": "slides/conclusion/index.html#de-statisticien-à-data-scientist",
     "title": "Conclusion et discussion",
     "section": "De statisticien à data scientist",
-    "text": "De statisticien à data scientist\n\nTP mise en prod\nFormations :\n\nécoles de formation\ncatalogue SSP Cloud\n\nLabs"
+    "text": "De statisticien à data scientist\n\nVeille méthodologique\n\nTraitement des données non-structurées\nMéthodes de machine learning\n\nAcculturation aux outils informatiques\n\nCalcul distribué\nOutils pour la mise en production\n\nRecommendations :\n\nFavoriser la formation et l’auto-formation\nLiens avec les écoles de formation\nCatalogue de formation du SSP Cloud"
   },
   {
-    "objectID": "slides/conclusion/index.html#cadre-juridique",
-    "href": "slides/conclusion/index.html#cadre-juridique",
+    "objectID": "slides/conclusion/index.html#discussion",
+    "href": "slides/conclusion/index.html#discussion",
     "title": "Conclusion et discussion",
-    "section": "Cadre juridique",
-    "text": "Cadre juridique"
+    "section": "Discussion",
+    "text": "Discussion\n\nRetours sur la formation : durée, format des supports, répartition théorie/pratique, etc.\nIdentifier des besoins en documentation (SIREN)\nSujets prioritaires pour la BCEAO\nSuites de la collaboration"
   },
   {
     "objectID": "slides/juridique-big-data/index.html#disclaimer",
