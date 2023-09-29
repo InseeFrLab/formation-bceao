@@ -20,7 +20,7 @@ Diffuser ou commercialiser des données scrapées ou un quelconque travail réut
 - [**Peu de cadre juridique**]{.orange} sur le webscrapping et différent par pays. 
   - Mais la [**réutilisation**]{.blue2} des données est encadrée ([**RGPD**]{.blue2}).
 - Résultats différents sur les cas portés en [**justice**]{.orange}:
-  - [https://devm.io/law-net-culture/data-scraping-cases-165385]()
+  - [Exemple de cas](https://devm.io/law-net-culture/data-scraping-cases-165385)
 
 
 ## Une pratique pourtant très répandue
