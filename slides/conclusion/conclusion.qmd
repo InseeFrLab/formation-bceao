@@ -15,6 +15,7 @@ chalkboard: # press the B key to toggle chalkboard
 # multiplex: true
 format:
   onyxia-revealjs:
+    incremental: true
     output-file: index.html
 controls: true
 css: ../custom.css
@@ -25,44 +26,93 @@ execute:
   warning: false
 ---
 
-# Conclusion
+## Big data : une définition pragmatique
 
-## Big data : une définition simple...
+- Une notion aux [**contours flous**]{.orange}
 
-## Mais des 
+- Une [**définition pragmatique**]{.orange}
+  - [**Volumétrie**]{.blue2} : difficiles à traiter sur des environnements usuels
+  - [**Variété**]{.blue2} : nécessite des méthodes de traitement non-standard
+  - Généralement non-collectée à des fins de statistique publique
 
-## Retours d'expérience de l'Insee
+## Une transformation continue
 
-- Des sources et des projets très variés
-- Mais des principes généraux
+- De [**multiples dimensions**]{.orange} (démocratique, juridique, économique, méthodologique, technique)
+  - Des défis souvent déjà [**existants**]{.blue2} !
 
-## Source et pérenniser
+- Une [**transformation continue**]{.orange} plutôt qu'une rupture
+  - Montée en compétence [**collective**]{.blue2}
+  - Innover sur les [**modes d'organisation**]{.blue2}
 
-- Nouer des partenariats
-- Ressources ESSNET Big Data I et II
+- [**Recommendations**]{.orange} : 
+  - donner les [**moyens d'innover**]{.blue2}
+  - [**projets pilotes**]{.blue2}
+
+## Enjeux démocratiques et cadre juridique
+
+- [**Arbitrage**]{.orange} à trouver
+  - Utilisation de [**nouvelles sources**]{.blue2} statistiques prometteuses
+  - Conserver la [**confiance**]{.blue2} des citoyens
+
+- Le [**cadre juridique**]{.orange} est garant de cette confiance
+  - Le rythme de l'innovation rend nécesaire des [**ajustements**]{.blue2} fréquents
+
+- [**Recommendations**]{.orange} : assurer une [**veille**]{.blue2} sur l'évolution de la législation
+
+## Enjeux économiques
+
+- Des données souvent produites par des [**acteurs privés**]{.orange}
+  - Pas toujours la main sur le mode de collecte
+  - Volonté des acteurs de valoriser ces données
+
+- [**Recommendations**]{.orange} :
+  - Nouer des [**partenariats**]{.blue2} basés sur des intérêts réciproques
+  - [Ressources ESSNET Big Data](https://cros-legacy.ec.europa.eu/content/essnet-big-data-0_en)
 
 ## Infrastructure
 
-- Visio avec DIIT
+- Adoption de [**technologies modernes et évolutives**]{.orange}
+  - [**Stockage objet**]{.blue2} centralisé
+  - [**Conteneurisation**]{.blue2}
+
+- [**Faciliter l'accès**]{.orange} aux statisticiens
+  - [Projet Onyxia](https://github.com/InseeFrLab/onyxia)
+
+- [**Recommendations**]{.orange} :
+  - Mettre une [***sandbox***]{.blue2} à disposition pour l'innovation
+  - Visio à venir sur les choix d'architecture
 
 ## Des outils à adapter
 
-- TP outils big data
+- Transition vers des [**outils informatiques adaptés**]{.orange}
+  - Format de fichier : [**Parquet**]{.blue2}
+  - Traitement de données volumineuses : [**Arrow**]{.blue2}
+  - Traitement de données massives : [**Spark**]{.blue2}
+
+- [**Recommendations**]{.orange} : 
+  - Appliquer ces technologies à un [**projet**]{.blue2} concret
 
 ## De statisticien à data scientist
 
-- TP mise en prod
-- Formations : 
-  - écoles de formation
-  - catalogue SSP Cloud
-- Labs
+- [**Veille méthodologique**]{.orange}
+  - Traitement des [**données non-structurées**]{.blue2}
+  - Méthodes de [**machine learning**]{.blue2}
 
-## Cadre juridique
+- Acculturation aux [**outils informatiques**]{.orange}
+  - [**Calcul distribué**]{.blue2}
+  - Outils pour la [**mise en production**]{.blue2}
 
-# Discussion
+- [**Recommendations**]{.orange} :
+  - Favoriser la [**formation**]{.blue2} et [**l'auto-formation**]{.blue2}
+  - Liens avec les [**écoles de formation**]{.blue2}
+  - [Catalogue de formation du SSP Cloud](https://www.sspcloud.fr/formation)
+
+## Discussion
 
 - Retours sur la formation : durée, format des supports, répartition théorie/pratique, etc.
-- Sujets où besoins de documentation (SIREN)
+
+- Identifier des besoins en documentation (SIREN)
+
 - Sujets prioritaires pour la BCEAO
-- Appui technique : lien avec la DSI Insee et le projet Onyxia
-- Perspectives de collaboration : modalités, fréquences, ..
+
+- Suites de la collaboration

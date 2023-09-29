@@ -15,6 +15,7 @@ chalkboard: # press the B key to toggle chalkboard
 # multiplex: true
 format:
   onyxia-revealjs:
+    incremental: true
     output-file: index.html
 controls: true
 css: ../custom.css
