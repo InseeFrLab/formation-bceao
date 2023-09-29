@@ -54,7 +54,7 @@
 - Protection de la vie privée sur internet :
   - Droit à l'[**oubli numérique**]{.blue2}
   - Droit à la [**mort numérique**]{.blue2}
-  - Règle du [**secret des correspondances privées**]{.blue2} (https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000034307602)
+  - Règle du [**secret des correspondances privées**]{.blue2} : [Décret](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000034307602)
 
 ## L’accès au numérique pour tous
 
