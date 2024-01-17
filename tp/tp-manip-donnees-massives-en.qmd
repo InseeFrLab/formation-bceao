@@ -3,44 +3,43 @@ title: "Manipulation de données massives"
 editor: visual
 ---
 
-# Manipulation de données massives avec R
+# Handling Massive Data with R
 
-L'objectif de cette session est de vous familiariser avec les principes et les techniques essentiels pour travailler avec des données massives. Les outils que nous allons explorer ont chacun leurs avantages et inconvénients, et le choix de les utiliser dépendra principalement des besoins spécifiques de vos projets. Il est important de noter que certains de ces outils nécessitent des infrastructures informatiques robustes qui peuvent ne pas être disponibles pour tous les projets.
+The objective of this session is to familiarize you with the essential principles and techniques for working with massive data. The tools we will explore each have their advantages and disadvantages, and the choice to use them will depend primarily on the specific needs of your projects. It is important to note that some of these tools require robust computer infrastructures that may not be available for all projects.
 
-Pour illustrer ces techniques, nous utiliserons les données du recensement de la population française de 2017. Bien que ces données ne soient pas considérées comme massives en soi, elles sont déjà assez volumineuses pour poser des défis de gestion de la mémoire sur certains ordinateurs. Notre objectif est de vous fournir les compétences nécessaires pour manipuler de grandes quantités de données, que vous pourrez ensuite appliquer à vos propres cas d'usage, qu'ils soient de grande ou de petite envergure.
+To illustrate these techniques, we will use data from the 2017 French population census. Although these data may not be considered massive in themselves, they are already voluminous enough to pose memory management challenges on some computers. Our goal is to provide you with the necessary skills to manipulate large quantities of data, which you can then apply to your own use cases, whether they are large or small in scale.
 
-Au cours de ce TP, nous explorerons deux approches principales. Tout d'abord, nous examinerons comment manipuler efficacement des ensembles de données massifs en utilisant des ressources **locales**, même lorsque la capacité de la mémoire RAM est inférieure à la taille des données analysées. Ensuite, nous plongerons dans la manipulation de données directement depuis le **cloud**, lorsque les ressources locales ne sont plus suffisantes pour répondre à vos besoins.
+During this practical session, we will explore two main approaches. First, we will examine how to efficiently manipulate massive datasets using **local** resources, even when the RAM capacity is less than the size of the analyzed data. Next, we will delve into data manipulation directly from the **cloud**, when local resources are no longer sufficient to meet your needs.
 
-## I - Manipulation de données en local
+## I - Local Data Manipulation
 
-Avant de commencer, chargeons quelques librairies qui nous seront utiles tout au long du TP.
+Before we begin, let's load some libraries that will be useful throughout the practical session.
 
 ```{r}
 library(ggplot2)
 library(dplyr)
 ```
 
-### A - Importation et stockage de données massives
+### A - Importing and Storing Massive Data
 
 #### Importation
 
-Lorsque l'on parle de *Big Data*, le choix du format de stockage est essentiel pour optimiser l'efficacité et la performance des opérations. Le format le plus couramment utilisé pour le stockage de données est le `.csv`. Ce format présente l'avantage d'être lisible facilement, à la fois par les humains et par les différents langages et systèmes informatiques. Cependant, il a quelques inconvénients majeurs : il n'est pas compressé, ce qui signifie qu'il occupe beaucoup d'espace disque, et il doit être chargé intégralement en mémoire, même lorsque nous souhaitons analyser uniquement un sous-échantillon des données. Cette exigence a des implications à la fois en termes de stockage et de temps de calcul.
+When dealing with *Big Data*, the choice of storage format is crucial to optimize the efficiency and performance of operations. The most commonly used format for data storage is `.csv`. This format has the advantage of being easily readable, both by humans and various computer languages and systems. However, it has some major drawbacks: it is not compressed, which means it occupies a lot of disk space, and it must be loaded entirely into memory even when we want to analyze only a subset of the data. This requirement has implications for both storage and computation time.
 
-Dans ce TP, nous explorerons une alternative de plus en plus répandue au format `.csv` : le format `.parquet`. Ce format a été choisi comme format de stockage et de diffusion par défaut pour les prochaines années par l'Insee.
+In this practical session, we will explore an increasingly popular alternative to the `.csv` format: the `.parquet` format. This format has been chosen as the default storage and distribution format for the coming years by INSEE.
 
-Pour commencer, nous importerons le fichier `tp/data/data_recensement_2017.csv` mis à votre disposition, qui contient les données du recensement de 2017. Nous utiliserons trois méthodes différentes pour l'importation, et nous analyserons leurs performances respectives :
+To start, we will import the `tp/data/data_recensement_2017.csv` file provided, which contains the 2017 census data. We will use three different methods for importing, and we will analyze their respective performances:
 
--   importation via le package standard `readr`.
+-   importation via the standard `readr` package.
+-   importation via the `data.table` package, which is an extension to the base R data.frame.
+-   importation via the `arrow` package.
 
--   importation via le package `data.table`, qui est une extension au data.frame de R base.
+The goal is to understand how each method efficiently handles (massive) data, considering memory occupancy and the time required for importation. This step is crucial for working with massive data efficiently. Start by importing the data using these three different approaches.
 
--   importation via le package `arrow`.
-
-L'objectif est de comprendre comment chaque méthode gère efficacement les données (massives), en tenant compte de l'occupation de la mémoire et du temps nécessaire pour effectuer l'importation. Cette étape est cruciale pour travailler avec des données massives de manière efficiente. Commencez par l'importation des données à l'aide de ces trois approches différentes.
 
 ```{r}
-# Importation avec readr
-# Assez long (~4-5min)
+# Importation with readr
+# quite long (~4-5min)
 t <- Sys.time()
 df_readr <- readr::read_delim(
   "data/data_recensement_2017.csv",
@@ -50,17 +49,18 @@ df_readr <- readr::read_delim(
 elapsed_readr <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
-L'import via `readr` est particulièrement long. Par ailleurs, il est intéressant de noter l'usage mémoire : les données ne font "que" 4,4 Go, mais l'usage mémoire atteint 30 Go lors de la lecture ! On voit par là qu'il est généralement nécessaire de prévoir largement la RAM par rapport aux données utilisées. Et qu'il faut s'intéresser à des méthodes plus efficientes de chargement des données, comme dans la suite de ce TP.
 
-Il est judicieux de supprimer les objets lourds dont on n'a plus besoin dans l'environnement R. En effet, lorsque vous créez des objets dans R, ils occupent de l'espace en mémoire. Si vous accumulez de nombreux objets sans les supprimer, cela peut rapidement saturer la mémoire disponible, ce qui peut entraîner des ralentissements ou des crash de votre session R. En supprimant les objets inutiles à l'aide de la fonction `rm()`, vous libérez de l'espace mémoire pour d'autres tâches ou analyses. De plus, moins la mémoire est encombrée plus les performances seront rapides.
+The import via `readr` is particularly time-consuming. Moreover, it is interesting to note the memory usage: the data is "only" 4.4 GB, but the memory usage reaches 30 GB during reading! This highlights the general need to allocate ample RAM compared to the size of the data. It emphasizes the importance of exploring more efficient methods for loading data, as we will in the following parts of this practical session.
+
+It is wise to remove heavy objects that are no longer needed in the R environment. When you create objects in R, they occupy space in memory. Accumulating numerous objects without removing them can quickly saturate the available memory, leading to slowdowns or crashes in your R session. By deleting unnecessary objects using the `rm()` function, you free up memory space for other tasks or analyses. Moreover, the less cluttered the memory, the faster the performance.
 
 ```{r}
-# On libère de la mémoire
+# Free up memory space
 rm(df_readr)
 ```
 
 ```{r}
-# Importation avec data.table
+# Importation with data.table
 t <- Sys.time()
 df_datatable <- data.table::fread(
   "data/data_recensement_2017.csv",
@@ -73,10 +73,10 @@ df_datatable <- data.table::fread(
 elapsed_datatable <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
-L'import est beaucoup plus rapide. Par ailleurs, l'usage RAM maximal atteint est d'environ 20 Go. On voit l'intérêt d'utiliser des outils adaptés aux données volumineuses. Néanmoins, `data.table` a une grosse limite : il utilise une syntaxe très différente de celle de `dplyr`. Dans ce TP, on va donc principalement utiliser le package `arrow`, qui a le double avantage d'être très efficient en mémoire et d'être largement compatible avec la syntaxe `dplyr`.
+The import is much faster. Additionally, the maximum RAM usage reached is about 20 GB. This highlights the benefit of using tools specifically designed for large datasets. However, `data.table` has a significant limitation: it uses a syntax very different from that of `dplyr`. In this practical session, we will primarily use the `arrow` package, which has the dual advantage of being very memory-efficient and widely compatible with the `dplyr` syntax.
 
 ```{r}
-# Importer avec arrow
+# Importer with arrow
 t <- Sys.time()
 df_arrow <- arrow::read_delim_arrow(
   "data/data_recensement_2017.csv",
@@ -87,19 +87,18 @@ df_arrow <- arrow::read_delim_arrow(
 elapsed_arrow <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
-Avec `arrow`, l'import est non seulement extrêmement rapide, l'usage mémoire est également minimal (environ 13Go). Pas étonnant que ce package soit en train de devenir une référence pour le traitement des données volumineuses !
+With `arrow`, the import is not only extremely fast, but the memory usage is also minimal (approximately 13 GB). It's not surprising that this package is becoming a reference for processing large datasets!
 
 ```{r}
 head(df_arrow, 6)
 ```
 
-On libère de la mémoire.
-
+We free up memory
 ```{r}
 rm(df_datatable)
 ```
 
-Analysons les différences de temps d'import du CSV entre les 3 méthodes.
+Let's analyze the differences in CSV import times between the 3 methods.
 
 ```{r}
 performance <- tibble(
@@ -115,29 +114,29 @@ performance |>
   expand_limits(y = c(0, 200)) +
   coord_flip() +
   labs(
-    title = "Performances de l'importation d'un fichier CSV",
-    subtitle = "entre readr, data.table et arrow",
+    title = "Performance of CSV File Import",
+    subtitle = "between readr, data.table, and arrow",
     x = "",
-    y = "Temps d'import en secondes"
+    y = "Import Time in Seconds"
   ) +
   theme_light()
 ```
 
-Comme nous l'avons mentionné précédemment, le format `csv` n'est pas l'option idéale pour la manipulation de données massives. Par conséquent, il est fortement recommandé de travailler avec des données au format `parquet` ou de les stocker dans une base de données, en fonction des besoins spécifiques de votre projet. Il convient de noter que, selon les cas d'utilisation, il peut être judicieux de travailler avec des fichiers `parquet` partitionnés plutôt qu'avec un seul gros fichier. Cette approche permet une gestion plus efficace des données massives tout en améliorant les performances de traitement.
+As mentioned earlier, the `csv` format is not the ideal option for handling massive data. Therefore, it is strongly recommended to work with data in `parquet` format or store them in a database, depending on the specific needs of your project. It's worth noting that, depending on use cases, working with partitioned `parquet` files rather than a single large file can be a wise choice. This approach allows for more efficient management of massive data while improving processing performance.
 
-#### Stockage
+#### Storage
 
-À présent que nous avons importé notre fichier CSV en mémoire, passons à l'étape suivante : écrire le fichier `data/data_recensement_2017.parquet`.
+Now that we have imported our CSV file into memory, let's move on to the next step: writing the file `data/data_recensement_2017.parquet`.
 
 ```{r}
-# Ecriture d'un fichier parquet unique
+# Writing of an unique parquet file
 arrow::write_parquet(df_arrow, "data/data_recensement_2017.parquet")
 ```
 
 On peut également choisir de partitionner notre fichier parquet, par exemple par région. On exporte le fichier partionné dans un dossier `data/data_partition`.
 
 ```{r}
-# Ecriture d'un dossier contenant des fichiers parquet partitionnés par la région
+# Writing a directory containing partitioned parquet files by region
 arrow::write_dataset(df_arrow,
   "data/data_partition",
   format = "parquet",
@@ -145,33 +144,33 @@ arrow::write_dataset(df_arrow,
 )
 ```
 
-Prenez le temps d'examiner la manière dont les fichiers parquet sont sauvegardés dans le dossier `data_partition`.
+Take the time to examine how the parquet files are saved in the `data_partition` folder.
 
 ```{r}
 fs::dir_tree("data/data_partition")
 ```
 
-Une autre méthode efficace pour stocker nos données consiste à les intégrer dans une base de données DuckDB, ce qui nous permettra ensuite d'effectuer des requêtes SQL. Bien que DuckDB ne puisse pas encore ouvrir des fichiers multi-niveau créés par partition, il offre la possibilité de lire directement des fichiers CSV ou Parquet. Cependant, il est important de noter que, comme toute base de données, le format `.duckdb` peut contenir plusieurs tables et exécuter toutes les opérations standards de gestion de base de données.
+Another effective method for storing our data is to integrate it into a DuckDB database, allowing us to perform SQL queries later on. Although DuckDB cannot yet open multi-level files created by partition, it has the capability to directly read CSV or Parquet files. However, it's important to note that, like any database, the `.duckdb` format can contain multiple tables and execute all standard database management operations.
 
-Pour créer une database depuis R, il suffit d'utiliser la fonction `duckdb()` en spécifiant le chemin où vous souhaitez l'enregistrer.
+To create a database from R, you can use the `duckdb()` function, specifying the path where you want to save it.
 
 ```{r}
 con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "data/data_recensement_2017.duckdb", read_only = FALSE)
 ```
 
-L'un des principaux avantages de DuckDB est son interopérabilité avec Arrow, ce qui permet de très facilement passer d'un object arrow à un object duckdb et vice-versa. Pour cela il suffit d'utiliser les fonctions `to_duckdb()` et `to_arrow()`.
+One of the main advantages of DuckDB is its interoperability with Arrow, making it very easy to switch between an Arrow object and a DuckDB object, and vice versa. To achieve this, you can use the `to_duckdb()` and `to_arrow()` functions.
 
 ```{r}
 arrow::to_duckdb(df_arrow, table_name = "RP2017", con = con)
 ```
 
-Maintenant que les données sont accessibles depuis DuckDB, nous pouvons créer une table dans notre base de données en utilisant une requête SQL standard.
+Now that the data is accessible from DuckDB, we can create a table in our database using a standard SQL query. 
 
 ```{r}
 DBI::dbSendQuery(con, "CREATE TABLE dataset AS SELECT * FROM RP2017")
 ```
 
-Avant de manipuler directement les données, regardons les performances de stockage des différents formats.
+Before directly manipulating the data, let's examine the storage performance of different formats.
 
 ```{r}
 disk_size <- fs::dir_info(here::here("tp", "data"), recurse = TRUE) |>
@@ -183,7 +182,7 @@ disk_size <- fs::dir_info(here::here("tp", "data"), recurse = TRUE) |>
   ungroup() |>
   mutate(
     name = case_when(
-      startsWith(name, "part-0") ~ "parquet partitionné",
+      startsWith(name, "part-0") ~ "partitioned parquet",
       TRUE ~ tools::file_ext(name)
     ),
     name = forcats::fct_reorder(name, total)
@@ -197,8 +196,8 @@ disk_size |>
   coord_flip() +
   scale_y_continuous(labels = scales::label_bytes(units = "auto_si", accuracy = 1)) +
   labs(
-    title = "Taille sur l'espace disque",
-    subtitle = "entre CSV, Parquet, Parquet partitionné et DuckDB",
+    title = "Disk Space Size",
+    subtitle = "between CSV, Parquet, Partitioned Parquet, and DuckDB",
     x = "Format",
     y = "Size"
   ) +
@@ -211,16 +210,16 @@ On libère de la mémoire.
 rm(df_arrow)
 ```
 
-### B - Comparaison des performances de requêtes
+### B - Query Performance Comparison
 
-Pour comparer différentes méthodes, nous allons exécuter une requête relativement simple, dont l'objectif est de déterminer le pourcentage de logements dits de "fortune" dans chaque commune de France. Dans notre jeu de données, les logements de fortune sont codés sur la variable `TYPL` avec la modalité 5. Nous allons également utiliser une table de correspondance des communes pour associer le nom de la commune à un code commune Insee, de sorte à rajouter une jointure à notre requête.
+To compare different methods, we will execute a relatively simple query, aiming to determine the percentage of makeshift accommodations in each commune in France. In our dataset, makeshift accommodations are coded on the variable `TYPL` with modality 5. We will also use a correspondence table of communes to associate the name of the commune with an Insee commune code, in order to add a join to our query.
 
 #### 1) In-memory
 
-La méthode traditionnelle pour manipuler des données non massives consiste à importer l'ensemble des données en mémoire et à effectuer ensuite différentes opérations. Commençons donc par importer les deux jeux de données en mémoire.
+The traditional method for handling non-massive data involves importing the entire dataset into memory and then performing various operations. Let's start by importing both datasets into memory.
 
 ```{r}
-# jeu de données au format parquet
+# Data in parquet format
 data <- arrow::read_parquet(
   file = "data/data_recensement_2017.parquet"
 )
@@ -232,19 +231,19 @@ bucket <- arrow::s3_bucket(
   endpoint_override = "minio.lab.sspcloud.fr"
 )
 
-# table de correspondance au format parquet
+# Correspondence table parquet format
 table_communes <- arrow::read_parquet(
   file = bucket$path("diffusion/bceao/table_communes.parquet")
 )
 ```
 
-Nous définissons ensuite notre requête qui réalise les opérations suivantes :
+We then define our query that performs the following operations:
 
--   Calcule le nombre de logements dans chaque communes.
--   Calcule le nombre de logements de fortune dans chaque communes.
--   Calcule la part de logement de fortune.
--   Réalise une jointure avec la table de correspondance des communes.
--   Sélectionne certaines de colonne
+-   Calculate the number of households in each commune.
+-   Calculate the number of makeshift accommodations in each commune.
+-   Calculate the percentage of makeshift accommodations.
+-   Perform a join with the commune correspondence table.
+-   Select certain columns.
 
 ```{r}
 t <- Sys.time()
@@ -265,15 +264,15 @@ data |>
 elapsed_in_memory <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
-Ensuite, nous libérons la mémoire utilisée par les objets.
+Next, we release the memory used by the objects.
 
 ```{r}
 rm(data)
 ```
 
-#### 2) Lazy evaluation avec Arrow
+#### 2) Lazy Evaluation with Arrow
 
-Arrow permet d'effectuer des évaluations en mode *"lazy"*. Cette méthode réalise les calculs uniquement lorsque c'est nécessaire, optimisant ainsi les performances. Arrow n'importe en mémoire que les données strictement nécessaires à l'exécution de la requête. Pour importer les données de manière *lazy* on peut utiliser la fonction `open_dataset()`
+Arrow allows for lazy evaluation, performing calculations only when necessary, thus optimizing performance. Arrow imports into memory only the data strictly required for executing the query. To import data lazily, we can use the `open_dataset()` function.
 
 ```{r}
 data_lazy <- arrow::open_dataset(
@@ -282,27 +281,26 @@ data_lazy <- arrow::open_dataset(
 )
 ```
 
-À ce stade, l'objet `data_lazy` contient des informations sur le jeu de données, mais pas les données elles-mêmes.
+At this stage, the `data_lazy` object contains information about the dataset but not the actual data.
 
-Nous pouvons obtenir le schéma du jeu de données,
+We can obtain the schema of the dataset,
 
 ```{r}
 data_lazy$schema
 ```
 
-la dimension du jeu de données,
-
+the dimension of the dataset,
 ```{r}
 dim(data_lazy)
 ```
 
-ainsi que les noms des colonnes.
+and the name of the columns.
 
 ```{r}
 names(data_lazy)
 ```
 
-Grâce à l'intégration d'Arrow avec dplyr on peut reprendre la même requête que précedemment.
+Thanks to the integration of Arrow with dplyr, we can use the same query as before.
 
 ```{r}
 query <- data_lazy |>
@@ -320,20 +318,20 @@ query <- data_lazy |>
   arrange(-part_logements_fortune)
 ```
 
-Comme vous pouvez le constater, lors de la définition de la requête, les calculs n'ont pas encore été réalisés. Cependant, arrow a d'ores et déjà identifié les colonnes nécessaires aux calculs.
+As you can see, when defining the query, the calculations have not been performed yet. However, Arrow has already identified the columns needed for the calculations.
 
 ```{r}
 query
 ```
 
-Pour enclencher les calculs il existe deux méthodes différentes, `collect()` et `compute()`. La première renvoie le résultat de la requête au format `tibble` tandis que la seconde renvoie le résultat sous la forme d'un objet Arrow.
+To trigger the calculations, there are two different methods, `collect()` and `compute()`. The first returns the result of the query in `tibble` format, while the second returns the result as an Arrow object.
 
 ```{r}
 query |>
   collect()
 ```
 
-Pour des soucis de comparaison, nous allons executer la requête en entière :
+For comparison purposes, we will execute the entire query:
 
 ```{r}
 t <- Sys.time()
@@ -361,7 +359,7 @@ elapsed_lazy <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 
 #### 3) DuckDB
 
-Une autre alternative à Arrow qui évite d'importer les données en mémoire est DuckDB. En effet, grâce à DuckDB on peut définir une requête SQL pour réaliser les calculs. Pour cela, on peut commencer par se reconnecter à la base de données précédemment créée.
+Another alternative to Arrow that avoids importing data into memory is DuckDB. With DuckDB, we can define an SQL query to perform the calculations. To do this, we can start by reconnecting to the previously created database.
 
 ```{r}
 con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "data/data_recensement_2017.duckdb", read_only = FALSE)
@@ -371,7 +369,7 @@ con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "data/data_recensement_2017.duck
 DBI::dbListTables(con)
 ```
 
-Pour le moment, seule la table "dataset" est présente dans notre base de données. Nous devons ajouter notre table de correspondance des communes. Pour éviter de télécharger la base de données localement, nous la lisons directement depuis le cloud où elle est sauvegardée. Pour cela, nous avons besoin d'installer l'extension `httpfs` dans DuckDB.
+We need to read our commune correspondence table, which is located on the internet at the following address: [https://minio.lab.sspcloud.fr/projet-formation/diffusion/bceao/table_communes.parquet](https://minio.lab.sspcloud.fr/projet-formation/diffusion/bceao/table_communes.parquet). To avoid downloading the database locally, we read it directly. However, for this, we need to install the `httpfs` extension in DuckDB.
 
 ```{r}
 DBI::dbSendQuery(con, "INSTALL httpfs; LOAD httpfs;")
@@ -396,13 +394,13 @@ SELECT
       ORDER BY part_logements_fortune DESC ;"
 ```
 
-Une fois la requête définie il ne reste plus qu'à l'exécuter et récupérer le résultat à l'aide de la fonction `dbGetQuery()`.
+Once the query is defined, all that's left is to execute it and retrieve the result using the `dbGetQuery()` function.
 
 ```{r}
 DBI::dbGetQuery(con, query_sql) |> as_tibble()
 ```
 
-De même que précedemment, exécutons la requête intégralement :
+Similarly to before, let's execute the query in its entirety:
 
 ```{r}
 t <- Sys.time()
@@ -429,19 +427,19 @@ DBI::dbGetQuery(con, query_sql) |> as_tibble()
 elapsed_duckdb_sql <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
-Lorsque les manipulations de données sont terminées, n'oubliez pas de fermer la connexion.
+When data manipulations are finished, don't forget to close the connection.
 
 ```{r}
 duckdb::dbDisconnect(con, shutdown = TRUE)
 ```
 
-On libère de la mémoire.
+We free up the memory
 
 ```{r}
 rm(con)
 ```
 
-Si vous préférez ne pas utiliser SQL, vous pouvez toujours profiter de la rapidité de DuckDB tout en conservant la même requête dplyr. Pour cela, utilisez la fonction `to_duckdb`.
+If you prefer not to use SQL, you can still leverage the speed of DuckDB while retaining the same dplyr query. To do this, use the `to_duckdb` function.
 
 ```{r}
 query <- data_lazy |>
@@ -467,7 +465,7 @@ query |>
   collect()
 ```
 
-On calcule le temps d'exécution de cette méthode :
+We calculate the execution time of this method:
 
 ```{r}
 t <- Sys.time()
@@ -495,14 +493,14 @@ arrow::open_dataset(
 elapsed_duckdb_dplyr <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
-Et si vous souhaitez connaître la requête SQL qui est utilisée sous le capot, vous pouvez toujours l'afficher grâce à la fonction `show_query()`.
+And if you want to know the underlying SQL query being used, you can always display it using the `show_query()` function.
 
 ```{r}
 query |>
   show_query()
 ```
 
-#### 4) Résultats
+#### 4) Results
 
 ```{r}
 performance <- tibble(
@@ -517,26 +515,27 @@ performance |>
   geom_text(aes(label = glue::glue("{elapse_time} sec")), hjust = 1, nudge_y = 0.1, nudge_x = 0.4, size = 4, fontface = "bold") +
   coord_flip() +
   labs(
-    title = "Performances des requêtes",
+    title = "Query Performances",
     x = "",
-    y = "Temps de calcul en secondes"
+    y = "Computation Time in Seconds"
   ) +
   theme_light()
 ```
 
-## II - Manipulation de données sur le Cloud
 
-Le Cloud offre de nombreux avantages, notamment la possibilité de manipuler des données sans avoir à les stocker localement, ainsi qu'une puissance de calcul accrue. Sur le SSP Cloud, les données sont stockées sur MinIO, une implémentation open-source du stockage objet de type S3.
+## II - Cloud Data Manipulation
+
+The Cloud offers many advantages, including the ability to manipulate data without storing it locally, as well as increased computing power. On the SSP Cloud, data is stored on MinIO, an open-source implementation of S3 object storage.
 
 ### A - Arrow
 
-Arrow permet d'accéder directement à des données stockées sur le cloud et d'y effectuer des requêtes. Commençons par accéder au bucket qui stocke les données nécessaires à cette formation en utilisant la fonction `get_bucket()`.
+Arrow allows direct access to data stored in the cloud and performing queries on it. Let's start by accessing the bucket that stores the data needed for this session using the `get_bucket()` function.
 
 ```{r}
 aws.s3::get_bucket("projet-formation", prefix = "diffusion/bceao", region = "")
 ```
 
-Nous pouvons constater que plusieurs fichiers sont présents dans le bucket, dont le dossier `data_partition` qui contient les fichiers Parquet partitionnés. Pour accéder au dossier directement sur le Cloud sans avoir à les importer localement, nous pouvons utiliser la même fonction `open_dataset()` que précédemment. Cependant, il est nécessaire de lui fournir le chemin vers notre bucket, de la même manière que l'on spécifie le chemin d'un fichier local.
+We can see that several files are present in the bucket, including the `data_partition` folder that contains the partitioned Parquet files. To access the folder directly in the cloud without having to import them locally, we can use the same `open_dataset()` function as before. However, it is necessary to provide it with the path to our bucket, similar to specifying the path of a local file.
 
 ```{r}
 bucket <- arrow::s3_bucket(
@@ -552,7 +551,7 @@ data_cloud <- arrow::open_dataset(
 )
 ```
 
-De manière tout à fait similaire, nous pouvons définir une requête, puis la calculer. Il est important de noter que l'exécution de la requête peut prendre plus de temps, puisque les fichiers n'étant pas stockés localement il peut y avoir des flux réseaux intra-cluster. Vous pouvez également observer l'évolution de l'utilisation de la RAM lors de l'exécution de la requête.
+Similarly, we can define a query and then compute it. It's important to note that executing the query may take longer since the files are not stored locally, and there may be intra-cluster network streams. You can also observe the evolution of RAM usage during the query execution.
 
 ```{r}
 query <- data_cloud |>
@@ -576,24 +575,24 @@ query |> collect()
 
 ### B - Spark
 
-Lorsque les volumes de données dépassent les capacités de machines standards (ex : \> 100Go), il faut passer sur des infrastructures distribuées, et adapter les méthodes de traitement pour pouvoir distribuer les calculs. Le framework de calcul distribué est `Spark`, qui a largement démocratisé le calcul distribué en créant des couches d'abstraction simples sur le calcul Map-Reduce, base du calcul distribué.
+When data volumes exceed the capacities of standard machines (e.g., > 100GB), it becomes necessary to move to distributed infrastructures and adapt processing methods to distribute calculations. The distributed computing framework is `Spark`, which has widely popularized distributed computing by creating simple abstraction layers on top of the Map-Reduce computation, the basis of distributed computing.
 
-Dans notre cas, nous allons effectuer du `Spark` sur `Kubernetes`. Le schéma suivant illustre ce processus. Le service `RStudio` dans lequel on se trouve va jouer à la fois le rôle de client et de driver. Lorsqu'un calcul distribué sera demandé, le driver va demander à l'API server de `Kubernetes` de lancer un nombre pré-configuré d'exécuteurs (dans notre cas, 10) qui vont chacun réaliser les tâches demandées sur une partie des données. Une fois que les agrégations voulues ont été calculées, on pourra les récupérer sur le driver (le `RStudio`) pour les traiter en `R`, leur volumétrie étant à présent gérable.
+In our case, we will perform `Spark` on `Kubernetes`. The following diagram illustrates this process. The `RStudio` service in which we are located will play the roles of both client and driver. When a distributed computation is requested, the driver will ask the `Kubernetes` API server to launch a pre-configured number of executors (in our case, 10), each of which will perform the requested tasks on a portion of the data. Once the desired aggregations have been calculated, we can retrieve them on the driver (the `RStudio`) for further processing in `R`, as their volume is now manageable.
 
-![](img/spark-on-kube.png){fig-align="center"}
+![Spark on Kubernetes](img/spark-on-kube.png)
 
-L'instance de `RStudio` sur laquelle on se trouve a `Spark` d'installé, et est pré-configuré pour qu'il soit accessible depuis `R`. Pour faire la liaison, on va utiliser le package `sparklyr`.
+The `RStudio` instance we are using has `Spark` installed and is pre-configured to be accessible from `R`. To establish the connection, we will use the `sparklyr` package.
 
 ```{r}
 library(sparklyr)
 ```
 
-On va commencer par configurer `Spark`, en s'inspirant de la [documentation](https://spark.rstudio.com/guides/connections.html). Voici la signification des différentes configurations en question :
+Let's start by configuring `Spark`, following the [documentation](https://spark.rstudio.com/guides/connections.html). Here is the meaning of the different configurations:
 
--   `conf$sparklyr.defaultPackages` : on configure `Spark` pour pouvoir récupérer directement les données sur du stockage S3 (`MinIO` sur le SSP Cloud) ;
--   `conf$spark.executor.instances` : le nombre d'exécuteurs sur lesquels vont être distribués les calculs ;
--   `conf$spark.driver.memory` : la quantité de RAM pour le driver
--   `conf$spark.executor.memory` : la quantité de RAM pour chaque exécuteur
+- `conf$sparklyr.defaultPackages`: Configuring `Spark` to directly retrieve data from S3 storage (`MinIO` on the SSP Cloud);
+- `conf$spark.executor.instances`: The number of executors on which calculations will be distributed;
+- `conf$spark.driver.memory`: The amount of RAM for the driver;
+- `conf$spark.executor.memory`: The amount of RAM for each executor.
 
 ```{r}
 conf <- spark_config()
@@ -609,13 +608,13 @@ sc <- spark_connect(
 )
 ```
 
-On peut vérifier que `Kubernetes` a bien lancé les 10 exécuteurs demandés. Très concrètement, il s'agit de 10 "clones" qui sont prêts à effectuer chacun les calculs qu'on leur attribue.
+We can check that `Kubernetes` has indeed launched the requested 10 executors. More concretely, these are 10 "clones" that are ready to perform the calculations assigned to them.
 
 ```{bash , echo=TRUE}
 kubectl get pods -l spark-role=executor
 ```
 
-La première étape est de charger les données sur les différents exécuteurs. On va utiliser les données partitionnées qui sont disponibles sur le bucket MinIO de la formation. Les données ne sont donc jamais en local : si l'on travaillait sur des données très volumineuses, on ne pourrait de toute manière pas les charger dans le stockage local. Elles sont chargées directement à partir de notre stockage MinIO.
+The first step is to load the data onto the various executors. We will use the partitioned data available on the training MinIO bucket. The data is never local; if we were working with very large data, we couldn't load it into local storage anyway. It is loaded directly from our MinIO storage.
 
 ```{r}
 data_spark <- spark_read_parquet(sc,
@@ -631,12 +630,12 @@ table_communes_spark <- spark_read_parquet(sc,
 )
 ```
 
-Plusieurs choses sont intéressantes à noter à ce stade :
+Several things are interesting to note at this stage:
 
--   le paramètre `infer_schema = TRUE` signifie que le schéma (nom et type des variables) va être inféré automatiquement à partir des données. C'est une grande force de `Parquet` : le schéma est directement stocké dans les méta-données du fichier ;
--   le paramètre `memory = FALSE` signifie que les données ne sont pas chargées en cache sur les exécuteurs. Par conséquent, le chargement des données est immédiat car il est `lazy` : elles seront chargées à la volée lorsqu'une requête sera effectivement lancée. Si l'on prévoyait de faire de nombreuses requêtes successives avec ces données (et que notre infrastructure nous le permet), on pourrait préférer les mettre en cache. Dans ce cas, l'import des données prendait beaucoup plus de temps, mais les requêtes par la suite seraient très rapides. Un arbitrage à faire selon votre cas d'usage !
+- The parameter `infer_schema = TRUE` means that the schema (name and type of variables) will be automatically inferred from the data. This is a great strength of `Parquet`: the schema is directly stored in the file's metadata;
+- The parameter `memory = FALSE` means that the data is not cached on the executors. Therefore, data loading is immediate as it is lazy: the data will be loaded on-the-fly when a query is actually launched. If we planned to make many successive queries with this data (and our infrastructure allows it), we could prefer to cache them. In this case, importing the data would take much longer, but subsequent queries would be very fast. A trade-off to make according to your use case!
 
-Définissons à présent la requête que vont devoir effectuer nos exécuteurs. On reprend la même requête que précédemment - en l'ajustant très légèrement. On voit là la très grande force du package `sparklyr` : on fait du `Spark` sans même s'en rendre compte, puisque la syntaxe est celle de `dyplr`.
+Let's now define the query that our executors will have to perform. We take the same query as before - adjusting it very slightly. This highlights the great strength of the `sparklyr` package: we do `Spark` without even realizing it, as the syntax is that of `dplyr`.
 
 ```{r}
 query <- data_spark |>
@@ -655,15 +654,16 @@ query <- data_spark |>
   arrange(-part_logements_fortune)
 ```
 
-Déjà ? Attention, là encore les requêtes effectuées par `Spark` sont `lazy` : `Spark` va lire la requête, et la convertir en un plan logique et physique afin d'optimiser les traitements (sélection des colonnes et lignes pertinentes du fichier `Parquet`, optimisation des étapes de traitement, etc.). Comme précédemment, ce n'est qu'au moment de l'opération `collect` que la requête est effectivement lancée sur le cluster.
+
+Already? Be careful, once again, the queries performed by `Spark` are `lazy`: `Spark` will read the query and convert it into a logical and physical plan to optimize the processing (selecting relevant columns and rows from the `Parquet` file, optimizing processing steps, etc.). As before, the query is only actually launched on the cluster at the time of the `collect` operation.
 
 ```{r}
 data_final <- collect(query)
 ```
 
-Plutôt rapide, mais moins qu'avec `Arrow`. C'est logique ! Avec `Arrow`, on fait du calcul en mémoire sur une seule machine. Avec `Spark`, on fait des calculs en mémoire également, mais de manière distribuée sur plusieurs machines, ce qui implique des coûts de parallélisation en amont et en aval de la requête. `Spark` ne montre pas tout son potentiel parce qu'on reste sur des données de taille volumineuses, mais pas massives. Dans le cas de données réellement massives (plusieurs dizaines ou centaines de Go de données), seul `Spark` aurait été capable de traiter ces données.
+Rather quick, but slower than with `Arrow`. That's logical! With `Arrow`, we perform in-memory computing on a single machine. With `Spark`, we also perform in-memory computing, but in a distributed manner across multiple machines, which implies parallelization costs upstream and downstream of the query. `Spark` doesn't show its full potential here because we are dealing with large-sized data, but not truly massive. In the case of truly massive data (several tens or hundreds of GB of data), only `Spark` would have been able to process such data.
 
-Enfin, il est possible d'enregistrer le résultat de nos différents calculs directement dans notre propre espace de stockage dans le cloud.
+Finally, it is possible to save the result of our various calculations directly in our own cloud storage space.
 
 ```{r}
 MYBUCKET <- "MY_USERNAME"

@@ -371,7 +371,7 @@ con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "data/data_recensement_2017.duck
 DBI::dbListTables(con)
 ```
 
-Pour le moment, seule la table "dataset" est présente dans notre base de données. Nous devons ajouter notre table de correspondance des communes. Pour éviter de télécharger la base de données localement, nous la lisons directement depuis le cloud où elle est sauvegardée. Pour cela, nous avons besoin d'installer l'extension `httpfs` dans DuckDB.
+Nous avons besoin de lire notre table de correspondance des communes qui se trouve sur internet à l'adresse suivante : https://minio.lab.sspcloud.fr/projet-formation/diffusion/bceao/table_communes.parquet. Pour éviter de télécharger la base de données localement, nous la lisons directement mais pour cela, nous avons besoin d'installer l'extension `httpfs` dans DuckDB.
 
 ```{r}
 DBI::dbSendQuery(con, "INSTALL httpfs; LOAD httpfs;")
