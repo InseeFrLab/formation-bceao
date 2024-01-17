@@ -102,21 +102,24 @@ rm(df_datatable)
 Analysons les différences de temps d'import du CSV entre les 3 méthodes.
 
 ```{r}
-performance <- tibble(format_text = c("readr", "data.table", "arrow"),
-                      elapse_time = round(c(elapsed_readr, elapsed_datatable, elapsed_arrow),3)
-                      )
+performance <- tibble(
+  format_text = c("readr", "data.table", "arrow"),
+  elapse_time = round(c(elapsed_readr, elapsed_datatable, elapsed_arrow), 3)
+)
 
-performance |> 
-  mutate(format_text = forcats::fct_reorder(format_text, elapse_time)) |> 
-  ggplot(aes(format_text, elapse_time))+
-  geom_col(fill = "#003299", width=0.6)+
+performance |>
+  mutate(format_text = forcats::fct_reorder(format_text, elapse_time)) |>
+  ggplot(aes(format_text, elapse_time)) +
+  geom_col(fill = "#003299", width = 0.6) +
   geom_text(aes(label = glue::glue("{elapse_time} sec")), hjust = -0.1, size = 4, fontface = "bold") +
   expand_limits(y = c(0, 200)) +
-  coord_flip()+
-  labs(title = "Performances de l'importation d'un fichier CSV",
-       subtitle ="entre readr, data.table et arrow",
-       x = "",
-       y = "Temps d'import en secondes")+
+  coord_flip() +
+  labs(
+    title = "Performances de l'importation d'un fichier CSV",
+    subtitle = "entre readr, data.table et arrow",
+    x = "",
+    y = "Temps d'import en secondes"
+  ) +
   theme_light()
 ```
 
@@ -136,9 +139,10 @@ On peut également choisir de partitionner notre fichier parquet, par exemple pa
 ```{r}
 # Ecriture d'un dossier contenant des fichiers parquet partitionnés par la région
 arrow::write_dataset(df_arrow,
-                     "data/data_partition", 
-                     format = "parquet",
-                     partitioning = c("REGION"))
+  "data/data_partition",
+  format = "parquet",
+  partitioning = c("REGION")
+)
 ```
 
 Prenez le temps d'examiner la manière dont les fichiers parquet sont sauvegardés dans le dossier `data_partition`.
@@ -152,7 +156,7 @@ Une autre méthode efficace pour stocker nos données consiste à les intégrer 
 Pour créer une database depuis R, il suffit d'utiliser la fonction `duckdb()` en spécifiant le chemin où vous souhaitez l'enregistrer.
 
 ```{r}
-con <- DBI::dbConnect(duckdb::duckdb(), dbdir="data/data_recensement_2017.duckdb", read_only=FALSE)
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "data/data_recensement_2017.duckdb", read_only = FALSE)
 ```
 
 L'un des principaux avantages de DuckDB est son interopérabilité avec Arrow, ce qui permet de très facilement passer d'un object arrow à un object duckdb et vice-versa. Pour cela il suffit d'utiliser les fonctions `to_duckdb()` et `to_arrow()`.
@@ -172,29 +176,32 @@ Avant de manipuler directement les données, regardons les performances de stock
 ```{r}
 disk_size <- fs::dir_info(here::here("tp", "data"), recurse = TRUE) |>
   filter(type == "file") |>
-  mutate(name = basename(path)) |> 
+  mutate(name = basename(path)) |>
   arrange(name) |>
-  group_by(name) |> 
-  summarise(total = sum(size)) |> 
+  group_by(name) |>
+  summarise(total = sum(size)) |>
   ungroup() |>
-  mutate(name = case_when(
-    startsWith(name, "part-0") ~ "parquet partitionné",
-    TRUE ~ tools::file_ext(name)
-  ),
-  name = forcats::fct_reorder(name, total)
-  ) |> 
+  mutate(
+    name = case_when(
+      startsWith(name, "part-0") ~ "parquet partitionné",
+      TRUE ~ tools::file_ext(name)
+    ),
+    name = forcats::fct_reorder(name, total)
+  ) |>
   filter(name != "wal")
 
-disk_size |> 
+disk_size |>
   ggplot(aes(name, total)) +
-  geom_col(fill = "#003299", width=0.6)+
+  geom_col(fill = "#003299", width = 0.6) +
   geom_text(aes(label = glue::glue("{total}B")), hjust = 1, nudge_x = 0.4, size = 3.5, fontface = "bold") +
-  coord_flip()+
-  scale_y_continuous(labels = scales::label_bytes(units = "auto_si", accuracy = 1))+
-  labs(title = "Taille sur l'espace disque",
-       subtitle ="entre CSV, Parquet, Parquet partitionné et DuckDB",
-       x = "Format",
-       y = "Size")+
+  coord_flip() +
+  scale_y_continuous(labels = scales::label_bytes(units = "auto_si", accuracy = 1)) +
+  labs(
+    title = "Taille sur l'espace disque",
+    subtitle = "entre CSV, Parquet, Parquet partitionné et DuckDB",
+    x = "Format",
+    y = "Size"
+  ) +
   theme_light()
 ```
 
@@ -221,9 +228,9 @@ data <- arrow::read_parquet(
 
 ```{r}
 bucket <- arrow::s3_bucket(
-    "projet-formation",
-    endpoint_override = "minio.lab.sspcloud.fr"
-  )
+  "projet-formation",
+  endpoint_override = "minio.lab.sspcloud.fr"
+)
 
 # table de correspondance au format parquet
 table_communes <- arrow::read_parquet(
@@ -241,8 +248,8 @@ Nous définissons ensuite notre requête qui réalise les opérations suivantes 
 
 ```{r}
 t <- Sys.time()
-data |> 
-  select(REGION, COMMUNE, TYPL) |> 
+data |>
+  select(REGION, COMMUNE, TYPL) |>
   group_by(COMMUNE) |>
   summarise(
     nb_logements_fortune = sum(TYPL %in% "5"),
@@ -252,7 +259,7 @@ data |>
     part_logements_fortune = nb_logements_fortune / nb_logements_commune
   ) |>
   arrange(-part_logements_fortune) |>
-  left_join(table_communes, by=c("COMMUNE"="Code INSEE")) |>
+  left_join(table_communes, by = c("COMMUNE" = "Code INSEE")) |>
   select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune)
 
 elapsed_in_memory <- as.numeric(difftime(Sys.time(), t, units = "secs"))
@@ -271,7 +278,8 @@ Arrow permet d'effectuer des évaluations en mode *"lazy"*. Cette méthode réal
 ```{r}
 data_lazy <- arrow::open_dataset(
   source = "data/data_partition",
-  partitioning = arrow::schema(REGION = arrow::utf8()))
+  partitioning = arrow::schema(REGION = arrow::utf8())
+)
 ```
 
 À ce stade, l'objet `data_lazy` contient des informations sur le jeu de données, mais pas les données elles-mêmes.
@@ -297,8 +305,8 @@ names(data_lazy)
 Grâce à l'intégration d'Arrow avec dplyr on peut reprendre la même requête que précedemment.
 
 ```{r}
-query <- data_lazy |> 
-  select(REGION, COMMUNE, TYPL) |> 
+query <- data_lazy |>
+  select(REGION, COMMUNE, TYPL) |>
   group_by(COMMUNE) |>
   summarise(
     nb_logements_fortune = sum(TYPL %in% "5"),
@@ -306,24 +314,48 @@ query <- data_lazy |>
   ) |>
   mutate(
     part_logements_fortune = nb_logements_fortune / nb_logements_commune
-  ) |> 
-  left_join(table_communes, by=c("COMMUNE"="Code INSEE")) |>
+  ) |>
+  left_join(table_communes, by = c("COMMUNE" = "Code INSEE")) |>
   select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune) |>
-  arrange(-part_logements_fortune) 
+  arrange(-part_logements_fortune)
 ```
 
 Comme vous pouvez le constater, lors de la définition de la requête, les calculs n'ont pas encore été réalisés. Cependant, arrow a d'ores et déjà identifié les colonnes nécessaires aux calculs.
 
 ```{r}
-query 
+query
 ```
 
 Pour enclencher les calculs il existe deux méthodes différentes, `collect()` et `compute()`. La première renvoie le résultat de la requête au format `tibble` tandis que la seconde renvoie le résultat sous la forme d'un objet Arrow.
 
 ```{r}
-t <- Sys.time()
-query |> 
+query |>
   collect()
+```
+
+Pour des soucis de comparaison, nous allons executer la requête en entière :
+
+```{r}
+t <- Sys.time()
+
+arrow::open_dataset(
+  source = "data/data_partition",
+  partitioning = arrow::schema(REGION = arrow::utf8())
+) |>
+  select(REGION, COMMUNE, TYPL) |>
+  group_by(COMMUNE) |>
+  summarise(
+    nb_logements_fortune = sum(TYPL %in% "5"),
+    nb_logements_commune = n()
+  ) |>
+  mutate(
+    part_logements_fortune = nb_logements_fortune / nb_logements_commune
+  ) |>
+  left_join(table_communes, by = c("COMMUNE" = "Code INSEE")) |>
+  select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune) |>
+  arrange(-part_logements_fortune) |>
+  collect()
+
 elapsed_lazy <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
@@ -332,7 +364,7 @@ elapsed_lazy <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 Une autre alternative à Arrow qui évite d'importer les données en mémoire est DuckDB. En effet, grâce à DuckDB on peut définir une requête SQL pour réaliser les calculs. Pour cela, on peut commencer par se reconnecter à la base de données précédemment créée.
 
 ```{r}
-con <- DBI::dbConnect(duckdb::duckdb(), dbdir="data/data_recensement_2017.duckdb", read_only=FALSE)
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "data/data_recensement_2017.duckdb", read_only = FALSE)
 ```
 
 ```{r}
@@ -342,56 +374,65 @@ DBI::dbListTables(con)
 Pour le moment, seule la table "dataset" est présente dans notre base de données. Nous devons ajouter notre table de correspondance des communes. Pour éviter de télécharger la base de données localement, nous la lisons directement depuis le cloud où elle est sauvegardée. Pour cela, nous avons besoin d'installer l'extension `httpfs` dans DuckDB.
 
 ```{r}
-DBI::dbSendQuery(con, "INSTALL httpfs;")
+DBI::dbSendQuery(con, "INSTALL httpfs; LOAD httpfs;")
 ```
-
-Nous pouvons maintenant ajouter la table que nous appelons `corres`.
 
 ```{r}
-DBI::dbSendQuery(con, "CREATE TABLE corres AS SELECT * FROM read_parquet('https://minio.lab.sspcloud.fr/projet-formation/diffusion/bceao/table_communes.parquet');")
-DBI::dbListTables(con)
+query_sql <- "
+WITH t1 as(
+  SELECT COMMUNE,
+       COUNT(*) FILTER (WHERE TYPL = '5') AS nb_logements_fortune,
+       COUNT(*) AS nb_logements_commune,
+       nb_logements_fortune / nb_logements_commune AS part_logements_fortune
+       FROM read_parquet('data/data_partition/*/*.parquet', hive_partitioning = 1)
+       GROUP BY ALL
+)
+SELECT
+      tc.Département, t1.*
+      FROM t1
+      LEFT JOIN (select Département, \"Code INSEE\" as codgeo
+                 from 'https://minio.lab.sspcloud.fr/projet-formation/diffusion/bceao/table_communes.parquet') tc
+      ON t1.COMMUNE = tc.codgeo
+      ORDER BY part_logements_fortune DESC ;"
 ```
 
-La table `corres` a bien été rajoutée à notre base de données ! Il ne manque plus qu'à traduire notre requête précedente au format SQL.
+Une fois la requête définie il ne reste plus qu'à l'exécuter et récupérer le résultat à l'aide de la fonction `dbGetQuery()`.
 
 ```{r}
-query_sql <- "SELECT
-                tc.Commune,
-                tc.Département,
-                nb_logements_fortune,
-                nb_logements_commune,
-                part_logements_fortune
-              FROM (
-                SELECT
-                  dataset.COMMUNE,
-                  SUM(CASE WHEN dataset.TYPL = '5' THEN 1 ELSE 0 END) AS nb_logements_fortune,
-                  COUNT(*) AS nb_logements_commune,
-                  SUM(CASE WHEN dataset.TYPL = '5' THEN 1 ELSE 0 END) / COUNT(*) AS part_logements_fortune
-                FROM
-                  dataset
-                GROUP BY
-                dataset.COMMUNE
-              ) AS subquery
-              LEFT JOIN
-                corres AS tc
-              ON
-                subquery.COMMUNE = tc.\"Code INSEE\"
-              ORDER BY
-                part_logements_fortune DESC;"
+DBI::dbGetQuery(con, query_sql) |> as_tibble()
 ```
 
-Une fois la requête définie il ne reste plus qu'à l'executer et récupérer le résultatà l'aide de la fonction `dbGetQuery()`.
+De même que précedemment, exécutons la requête intégralement :
 
 ```{r}
 t <- Sys.time()
+
+query_sql <- "
+WITH t1 as(
+  SELECT COMMUNE,
+       COUNT(*) FILTER (WHERE TYPL = '5') AS nb_logements_fortune,
+       COUNT(*) AS nb_logements_commune,
+       nb_logements_fortune / nb_logements_commune AS part_logements_fortune
+       FROM read_parquet('data/data_partition/*/*.parquet', hive_partitioning = 1)
+       GROUP BY ALL
+)
+SELECT
+      tc.Département, t1.*
+      FROM t1
+      LEFT JOIN (select Département, \"Code INSEE\" as codgeo
+                 from 'https://minio.lab.sspcloud.fr/projet-formation/diffusion/bceao/table_communes.parquet') tc
+      ON t1.COMMUNE = tc.codgeo
+      ORDER BY part_logements_fortune DESC ;"
+
 DBI::dbGetQuery(con, query_sql) |> as_tibble()
+
 elapsed_duckdb_sql <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
 Lorsque les manipulations de données sont terminées, n'oubliez pas de fermer la connexion.
 
 ```{r}
-duckdb::dbDisconnect(con, shutdown=TRUE)
+duckdb::dbDisconnect(con, shutdown = TRUE)
 ```
 
 On libère de la mémoire.
@@ -405,7 +446,7 @@ Si vous préférez ne pas utiliser SQL, vous pouvez toujours profiter de la rapi
 ```{r}
 query <- data_lazy |>
   arrow::to_duckdb() |>
-  select(REGION, COMMUNE, TYPL) |> 
+  select(REGION, COMMUNE, TYPL) |>
   group_by(COMMUNE) |>
   summarise(
     nb_logements_fortune = sum(as.integer(TYPL %in% "5")),
@@ -413,17 +454,44 @@ query <- data_lazy |>
   ) |>
   mutate(
     part_logements_fortune = nb_logements_fortune / nb_logements_commune
-  ) |> 
-  left_join(table_communes |> arrow::to_duckdb()
-            , by=c("COMMUNE"="Code INSEE")) |>
+  ) |>
+  left_join(table_communes |> arrow::to_duckdb(),
+    by = c("COMMUNE" = "Code INSEE")
+  ) |>
   select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune) |>
-  arrange(-part_logements_fortune) 
+  arrange(-part_logements_fortune)
 ```
 
 ```{r}
-t <- Sys.time()
-query |> 
+query |>
   collect()
+```
+
+On calcule le temps d'exécution de cette méthode :
+
+```{r}
+t <- Sys.time()
+
+arrow::open_dataset(
+  source = "data/data_partition",
+  partitioning = arrow::schema(REGION = arrow::utf8())
+) |>
+  arrow::to_duckdb() |>
+  select(REGION, COMMUNE, TYPL) |>
+  group_by(COMMUNE) |>
+  summarise(
+    nb_logements_fortune = sum(as.integer(TYPL %in% "5")),
+    nb_logements_commune = n()
+  ) |>
+  mutate(
+    part_logements_fortune = nb_logements_fortune / nb_logements_commune
+  ) |>
+  left_join(table_communes |> arrow::to_duckdb(),
+    by = c("COMMUNE" = "Code INSEE")
+  ) |>
+  select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune) |>
+  arrange(-part_logements_fortune)
+
 elapsed_duckdb_dplyr <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
@@ -437,18 +505,22 @@ query |>
 #### 4) Résultats
 
 ```{r}
-performance <- tibble(format_text = c("in memory", "arrow lazy", "duckDB SQL", "duckDB dplyr"),
-                             elapse_time = round(c(elapsed_in_memory, elapsed_lazy, elapsed_duckdb_sql, elapsed_duckdb_dplyr),3))
+performance <- tibble(
+  format_text = c("in memory", "arrow lazy", "duckDB SQL", "duckDB dplyr"),
+  elapse_time = round(c(elapsed_in_memory, elapsed_lazy, elapsed_duckdb_sql, elapsed_duckdb_dplyr), 3)
+)
 
-performance |> 
-  mutate(format_text = forcats::fct_reorder(format_text, elapse_time)) |> 
-  ggplot(aes(format_text, elapse_time))+
-  geom_col(fill = "#003299", width=0.6)+
+performance |>
+  mutate(format_text = forcats::fct_reorder(format_text, elapse_time)) |>
+  ggplot(aes(format_text, elapse_time)) +
+  geom_col(fill = "#003299", width = 0.6) +
   geom_text(aes(label = glue::glue("{elapse_time} sec")), hjust = 1, nudge_y = 0.1, nudge_x = 0.4, size = 4, fontface = "bold") +
-  coord_flip()+
-  labs(title = "Performances des requêtes",
-       x = "",
-       y = "Temps de calcul en secondes")+
+  coord_flip() +
+  labs(
+    title = "Performances des requêtes",
+    x = "",
+    y = "Temps de calcul en secondes"
+  ) +
   theme_light()
 ```
 
@@ -476,15 +548,15 @@ path <- bucket$path("diffusion/bceao/data_partition")
 
 data_cloud <- arrow::open_dataset(
   source = path,
-  partitioning = arrow::schema(REGION = arrow::utf8()))
-
+  partitioning = arrow::schema(REGION = arrow::utf8())
+)
 ```
 
 De manière tout à fait similaire, nous pouvons définir une requête, puis la calculer. Il est important de noter que l'exécution de la requête peut prendre plus de temps, puisque les fichiers n'étant pas stockés localement il peut y avoir des flux réseaux intra-cluster. Vous pouvez également observer l'évolution de l'utilisation de la RAM lors de l'exécution de la requête.
 
 ```{r}
-query <- data_cloud |> 
-  select(REGION, COMMUNE, TYPL) |> 
+query <- data_cloud |>
+  select(REGION, COMMUNE, TYPL) |>
   group_by(COMMUNE) |>
   summarise(
     nb_logements_fortune = sum(TYPL %in% "5"),
@@ -492,8 +564,8 @@ query <- data_cloud |>
   ) |>
   mutate(
     part_logements_fortune = nb_logements_fortune / nb_logements_commune
-  ) |> 
-  left_join(table_communes, by=c("COMMUNE"="Code INSEE")) |>
+  ) |>
+  left_join(table_communes, by = c("COMMUNE" = "Code INSEE")) |>
   select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune) |>
   arrange(-part_logements_fortune)
 ```
@@ -531,8 +603,10 @@ conf$spark.executor.instances <- "10"
 conf$spark.driver.memory <- "2GB"
 conf$spark.executor.memory <- "2GB"
 
-sc <- spark_connect(master = "k8s://https://kubernetes.default.svc:443", 
-                    config = conf)
+sc <- spark_connect(
+  master = "k8s://https://kubernetes.default.svc:443",
+  config = conf
+)
 ```
 
 On peut vérifier que `Kubernetes` a bien lancé les 10 exécuteurs demandés. Très concrètement, il s'agit de 10 "clones" qui sont prêts à effectuer chacun les calculs qu'on leur attribue.
@@ -545,15 +619,15 @@ La première étape est de charger les données sur les différents exécuteurs.
 
 ```{r}
 data_spark <- spark_read_parquet(sc,
-                                 path = "s3a://projet-formation/diffusion/bceao/data_partition",
-                                 infer_schema = TRUE,
-                                 memory = FALSE
+  path = "s3a://projet-formation/diffusion/bceao/data_partition",
+  infer_schema = TRUE,
+  memory = FALSE
 )
 
 table_communes_spark <- spark_read_parquet(sc,
-                                 path = "s3a://projet-formation/diffusion/bceao/table_communes.parquet",
-                                 infer_schema = TRUE,
-                                 memory = FALSE
+  path = "s3a://projet-formation/diffusion/bceao/table_communes.parquet",
+  infer_schema = TRUE,
+  memory = FALSE
 )
 ```
 
@@ -565,8 +639,8 @@ Plusieurs choses sont intéressantes à noter à ce stade :
 Définissons à présent la requête que vont devoir effectuer nos exécuteurs. On reprend la même requête que précédemment - en l'ajustant très légèrement. On voit là la très grande force du package `sparklyr` : on fait du `Spark` sans même s'en rendre compte, puisque la syntaxe est celle de `dyplr`.
 
 ```{r}
-query <- data_spark |> 
-  select(REGION, COMMUNE, TYPL) |> 
+query <- data_spark |>
+  select(REGION, COMMUNE, TYPL) |>
   mutate(is_logement_fortune = ifelse(TYPL == "5", 1, 0)) |>
   group_by(COMMUNE) |>
   summarise(
@@ -575,8 +649,8 @@ query <- data_spark |>
   ) |>
   mutate(
     part_logements_fortune = nb_logements_fortune / nb_logements_commune
-  ) |> 
-  left_join(table_communes_spark, by=c("COMMUNE"="Code INSEE")) |>
+  ) |>
+  left_join(table_communes_spark, by = c("COMMUNE" = "Code INSEE")) |>
   select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune) |>
   arrange(-part_logements_fortune)
 ```
@@ -601,5 +675,4 @@ bucket <- arrow::s3_bucket(
 
 path_out <- bucket$path("data_post_query.parquet")
 arrow::write_dataset(data_final, path_out)
-
 ```
