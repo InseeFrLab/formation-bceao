@@ -329,9 +329,33 @@ query
 Pour enclencher les calculs il existe deux méthodes différentes, `collect()` et `compute()`. La première renvoie le résultat de la requête au format `tibble` tandis que la seconde renvoie le résultat sous la forme d'un objet Arrow.
 
 ```{r}
-t <- Sys.time()
 query |>
   collect()
+```
+
+Pour des soucis de comparaison, nous allons executer la requête en entière :
+
+```{r}
+t <- Sys.time()
+
+arrow::open_dataset(
+  source = "data/data_partition",
+  partitioning = arrow::schema(REGION = arrow::utf8())
+) |>
+  select(REGION, COMMUNE, TYPL) |>
+  group_by(COMMUNE) |>
+  summarise(
+    nb_logements_fortune = sum(TYPL %in% "5"),
+    nb_logements_commune = n()
+  ) |>
+  mutate(
+    part_logements_fortune = nb_logements_fortune / nb_logements_commune
+  ) |>
+  left_join(table_communes, by = c("COMMUNE" = "Code INSEE")) |>
+  select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune) |>
+  arrange(-part_logements_fortune) |>
+  collect()
+
 elapsed_lazy <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
@@ -350,49 +374,58 @@ DBI::dbListTables(con)
 Pour le moment, seule la table "dataset" est présente dans notre base de données. Nous devons ajouter notre table de correspondance des communes. Pour éviter de télécharger la base de données localement, nous la lisons directement depuis le cloud où elle est sauvegardée. Pour cela, nous avons besoin d'installer l'extension `httpfs` dans DuckDB.
 
 ```{r}
-DBI::dbSendQuery(con, "INSTALL httpfs;")
+DBI::dbSendQuery(con, "INSTALL httpfs; LOAD httpfs;")
 ```
-
-Nous pouvons maintenant ajouter la table que nous appelons `corres`.
 
 ```{r}
-DBI::dbSendQuery(con, "CREATE TABLE corres AS SELECT * FROM read_parquet('https://minio.lab.sspcloud.fr/projet-formation/diffusion/bceao/table_communes.parquet');")
-DBI::dbListTables(con)
+query_sql <- "
+WITH t1 as(
+  SELECT COMMUNE,
+       COUNT(*) FILTER (WHERE TYPL = '5') AS nb_logements_fortune,
+       COUNT(*) AS nb_logements_commune,
+       nb_logements_fortune / nb_logements_commune AS part_logements_fortune
+       FROM read_parquet('data/data_partition/*/*.parquet', hive_partitioning = 1)
+       GROUP BY ALL
+)
+SELECT
+      tc.Département, t1.*
+      FROM t1
+      LEFT JOIN (select Département, \"Code INSEE\" as codgeo
+                 from 'https://minio.lab.sspcloud.fr/projet-formation/diffusion/bceao/table_communes.parquet') tc
+      ON t1.COMMUNE = tc.codgeo
+      ORDER BY part_logements_fortune DESC ;"
 ```
 
-La table `corres` a bien été rajoutée à notre base de données ! Il ne manque plus qu'à traduire notre requête précedente au format SQL.
+Une fois la requête définie il ne reste plus qu'à l'exécuter et récupérer le résultat à l'aide de la fonction `dbGetQuery()`.
 
 ```{r}
-query_sql <- "SELECT
-                tc.Commune,
-                tc.Département,
-                nb_logements_fortune,
-                nb_logements_commune,
-                part_logements_fortune
-              FROM (
-                SELECT
-                  dataset.COMMUNE,
-                  SUM(CASE WHEN dataset.TYPL = '5' THEN 1 ELSE 0 END) AS nb_logements_fortune,
-                  COUNT(*) AS nb_logements_commune,
-                  SUM(CASE WHEN dataset.TYPL = '5' THEN 1 ELSE 0 END) / COUNT(*) AS part_logements_fortune
-                FROM
-                  dataset
-                GROUP BY
-                dataset.COMMUNE
-              ) AS subquery
-              LEFT JOIN
-                corres AS tc
-              ON
-                subquery.COMMUNE = tc.\"Code INSEE\"
-              ORDER BY
-                part_logements_fortune DESC;"
+DBI::dbGetQuery(con, query_sql) |> as_tibble()
 ```
 
-Une fois la requête définie il ne reste plus qu'à l'executer et récupérer le résultatà l'aide de la fonction `dbGetQuery()`.
+De même que précedemment, exécutons la requête intégralement :
 
 ```{r}
 t <- Sys.time()
+
+query_sql <- "
+WITH t1 as(
+  SELECT COMMUNE,
+       COUNT(*) FILTER (WHERE TYPL = '5') AS nb_logements_fortune,
+       COUNT(*) AS nb_logements_commune,
+       nb_logements_fortune / nb_logements_commune AS part_logements_fortune
+       FROM read_parquet('data/data_partition/*/*.parquet', hive_partitioning = 1)
+       GROUP BY ALL
+)
+SELECT
+      tc.Département, t1.*
+      FROM t1
+      LEFT JOIN (select Département, \"Code INSEE\" as codgeo
+                 from 'https://minio.lab.sspcloud.fr/projet-formation/diffusion/bceao/table_communes.parquet') tc
+      ON t1.COMMUNE = tc.codgeo
+      ORDER BY part_logements_fortune DESC ;"
+
 DBI::dbGetQuery(con, query_sql) |> as_tibble()
+
 elapsed_duckdb_sql <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
@@ -430,9 +463,35 @@ query <- data_lazy |>
 ```
 
 ```{r}
-t <- Sys.time()
 query |>
   collect()
+```
+
+On calcule le temps d'exécution de cette méthode :
+
+```{r}
+t <- Sys.time()
+
+arrow::open_dataset(
+  source = "data/data_partition",
+  partitioning = arrow::schema(REGION = arrow::utf8())
+) |>
+  arrow::to_duckdb() |>
+  select(REGION, COMMUNE, TYPL) |>
+  group_by(COMMUNE) |>
+  summarise(
+    nb_logements_fortune = sum(as.integer(TYPL %in% "5")),
+    nb_logements_commune = n()
+  ) |>
+  mutate(
+    part_logements_fortune = nb_logements_fortune / nb_logements_commune
+  ) |>
+  left_join(table_communes |> arrow::to_duckdb(),
+    by = c("COMMUNE" = "Code INSEE")
+  ) |>
+  select(Commune, Département, nb_logements_fortune, nb_logements_commune, part_logements_fortune) |>
+  arrange(-part_logements_fortune)
+
 elapsed_duckdb_dplyr <- as.numeric(difftime(Sys.time(), t, units = "secs"))
 ```
 
